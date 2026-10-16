@@ -25,7 +25,7 @@
 
 在 Mac arm64 的项目隔离 venv 安装了 **ABA 锁定的 `claude-agent-sdk==0.2.148`**。`scripts/probe-nrp-claude-sdk-tool.py` 只暴露一个无副作用的本地 MCP 加法工具，`tools=[]` 禁用内建工具，`allowed_tools` 仅允许这个加法函数；最多 3 轮，120 秒内结束。令牌通过本机私密文件→stdin 进入进程，未出现在命令参数、源码或报告里。
 
-**通过：**使用 `qwen3-small` 时，SDK 收到一次 `mcp__calc__add_numbers` 工具调用，参数严格为 `a=7,b=8`，Python 函数确实执行 **1 次**，工具结果回到模型后最终回答 `15`；ResultMessage 存在且 `is_error=false`。运行结果见 `docs/verification/nrp-claude-sdk-tool-probe.json`。捕获的 stderr 为 78 字节，核验不含本机 NRP token。先前的 `end_turn` 差异**没有阻止这个具体 SDK 回路**；仍不能推广到更复杂工具、全部模型或 ABA 端到端。
+**通过：**使用 `qwen3-small` 时，SDK 收到一次 `mcp__calc__add_numbers` 工具调用，参数严格为 `a=7,b=8`，Python 函数确实执行 **1 次**，工具结果回到模型后最终回答 `15`；ResultMessage 存在且 `is_error=false`。运行结果见 `docs/verification/nrp-claude-sdk-tool-probe.json`。捕获的 stderr 为 78 字节，核验不含本机 NRP token；它仅提示 `unrecognized_model`，未中断调用。这意味着 SDK 本地模型目录未识别该 NRP 别名，后续上下文、预算和成本估算须单独核实。先前的 `end_turn` 差异**没有阻止这个具体 SDK 回路**；仍不能推广到更复杂工具、全部模型或 ABA 端到端。
 
 原计划在 Nautilus 的 Linux VM 上测试，但虚拟机在两个节点均出现对其 Pod IP 的 SSH `no route to host`，未能进入 guest。VM 已正常停止，临时 hostname 节点选择已移除，恢复原来的 `amd64` 选择；未安装 SDK 到 VM，也未运行领域任务。Mac SDK 结果证明接口/客户端的这一条路径可用，**不证明 Linux 上的 ABA 完整部署可用**。
 
