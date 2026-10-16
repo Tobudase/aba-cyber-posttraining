@@ -1,5 +1,7 @@
 # Feyospace-v1.1-small candidate preparation (2026-10-16)
 
+**Later engineering update:** A pinned full-weight BF16 load and benign generation succeeded on an A100-80GB; a synthetic QLoRA follow-up remained unscheduled and was cleaned. See [GPU validation](FEYOSPACE_GPU_VALIDATION.md). The earlier metadata-only state below records what was known before that GPU check.
+
 ## Decision
 
 Keep `Qwen/Qwen3.8-27B` as the licensed, reproducible **post-training starting point**. Treat `feyospace/feyospace-v1.1-small` as a higher-scoring **public-weight candidate/reference**, not yet an approved post-training base: the checked Hugging Face metadata has no license identifier and the repository has no license file. Public access to tensor files does not establish permission to fine-tune or redistribute derivatives. The original Qwen license cannot be assumed to cover this derivative.

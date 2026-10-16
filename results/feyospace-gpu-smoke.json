@@ -1,0 +1,21 @@
+{
+  "model_id": "feyospace/feyospace-v1.1-small",
+  "revision": "ab6a8372eceb18c10357e2683ce14808217bf5e9",
+  "scope": "benign_full_weight_load_only",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_memory_bytes": 85125496832,
+  "peak_gpu_allocated_bytes": 54912407552,
+  "weight_shards_present": 12,
+  "metadata_checksums_verified": 6,
+  "generated_tokens": 4,
+  "decoded_response": "OK",
+  "elapsed_seconds_including_download_and_load": 152.0,
+  "model_load_and_generation": "PASSED",
+  "kubernetes_job_complete": false,
+  "scheduler_preemption_recorded": true,
+  "cleanup_complete": true,
+  "synthetic_qlora_attempt": "UNSCHEDULED_CLEANED",
+  "synthetic_qlora_optimizer_steps": 0,
+  "official_benchmark_tasks_used": 0,
+  "domain_training": false
+}

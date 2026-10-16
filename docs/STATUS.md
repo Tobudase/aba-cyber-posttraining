@@ -2,7 +2,7 @@
 
 The main research objective is ABA-managed post-training of a good-performing, accessible model on a suitable cybersecurity benchmark. Model and benchmark selection remain open.
 
-Feyospace-v1.1-small is now pinned as a public-weight, high-scoring candidate. Six public configuration/tokenizer/processor files passed hash and benign chat/tool-template checks. The checkpoint's explicit license has not been verified, and full weights, GPU loading, domain training and official evaluation have not been run. Licensed Qwen3.8-27B remains the safer post-training starting point; see [candidate preparation](FEYOSPACE_MODEL_PREPARATION.md).
+Feyospace-v1.1-small is pinned as a public-weight, high-scoring candidate. Six public configuration/tokenizer/processor files passed hash and benign chat/tool-template checks. The full BF16 checkpoint then loaded on an A100-80GB and generated a benign short response. A two-step synthetic QLoRA follow-up could not schedule, so training compatibility remains unverified. No domain training or official evaluation has run. The public checkpoint repository still has no explicit license; see [candidate preparation](FEYOSPACE_MODEL_PREPARATION.md) and [GPU validation](FEYOSPACE_GPU_VALIDATION.md).
 
 The completed full-model validation uses VulnLLM-R-7B, CPU dynamic INT8 and a fixed output grammar. All 15 consistency checks passed. The four development predictions were all negative: two matched source labels and two did not. Format validity is imposed by decoding, not proof of unconstrained instruction following or benchmark capability.
 

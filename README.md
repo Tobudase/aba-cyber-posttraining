@@ -13,7 +13,7 @@ The current objective is to select a suitable benchmark/model pair and evaluate 
 - **197 Linear layers converted to dynamic INT8**, followed by four actual structured generations, parsing and independent metric recomputation.
 - Final engineering run: **4/4 parseable outputs, 2/4 label matches**, all predictions negative; 231.391 seconds including model download, loading, conversion and generation, excluding dependency installation.
 - A 2,562-record training-source audit, conservative grouping, test-marker quarantine and a 12-request annotation pilot. Three candidates remain under review; none is marked training-ready.
-- A fixed-revision Feyospace-v1.1-small public-metadata and tokenizer check. Its 27.8B checkpoint has a reported 84.41% CyberGym leaderboard entry, but the checked repository has no explicit license; weights, GPU inference and post-training were not run here. See [candidate preparation](docs/FEYOSPACE_MODEL_PREPARATION.md).
+- A fixed-revision Feyospace-v1.1-small check: full BF16 weights loaded on an A100-80GB and generated a benign short response. Its reported 84.41% CyberGym result was not reproduced; a synthetic QLoRA follow-up could not schedule. The checked repository has no explicit license. See [candidate preparation](docs/FEYOSPACE_MODEL_PREPARATION.md) and [GPU validation](docs/FEYOSPACE_GPU_VALIDATION.md).
 
 **These are engineering checks, not benchmark results.** The final run uses CPU INT8, a short output budget, an assistant prefill and a task-level answer grammar. A preceding unconstrained short-generation run produced 0/4 parseable outputs. No GPU training, domain post-training, ABA end-to-end optimization, published-score reproduction or performance improvement is claimed.
 
