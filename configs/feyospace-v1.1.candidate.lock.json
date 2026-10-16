@@ -1,0 +1,45 @@
+{
+  "status": "OPEN_WEIGHTS_CANDIDATE_LICENSE_UNVERIFIED",
+  "model_id": "feyospace/feyospace-v1.1-small",
+  "revision": "ab6a8372eceb18c10357e2683ce14808217bf5e9",
+  "architecture": [
+    "Qwen3_5ForConditionalGeneration"
+  ],
+  "model_type": "qwen3_5",
+  "parameters": 27781427952,
+  "public": true,
+  "license_id": null,
+  "license_files": [],
+  "license_verified_for_posttraining": false,
+  "local_metadata_dir": ".tools/model-tokenizer/feyospace-v1.1-ab6a8372eceb",
+  "files": {
+    "config.json": {
+      "bytes": 3711,
+      "sha256": "0ff1aac4882a47b5c32ca0a0ee0dedd1f33fb0ad00569193f9064a26bbc813cb"
+    },
+    "tokenizer_config.json": {
+      "bytes": 1165,
+      "sha256": "792fa3f0cb88b111e54ef3134c873531008c4df471d108da17903426e308aa7b"
+    },
+    "tokenizer.json": {
+      "bytes": 19989325,
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+    },
+    "chat_template.jinja": {
+      "bytes": 8952,
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+    },
+    "processor_config.json": {
+      "bytes": 1191,
+      "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1"
+    },
+    "preprocessor_config.json": {
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    }
+  },
+  "weights_downloaded_locally": false,
+  "training_executed": false,
+  "official_cybergym_evaluation_used": false,
+  "source": "https://huggingface.co/api/models/feyospace/feyospace-v1.1-small/revision/ab6a8372eceb18c10357e2683ce14808217bf5e9"
+}

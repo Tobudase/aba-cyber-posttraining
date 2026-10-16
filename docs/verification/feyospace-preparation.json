@@ -1,0 +1,16 @@
+{
+  "status": "PASSED_OFFLINE_METADATA_ONLY",
+  "model_id": "feyospace/feyospace-v1.1-small",
+  "revision": "ab6a8372eceb18c10357e2683ce14808217bf5e9",
+  "verified_file_count": 6,
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "vocab_size": 248077,
+  "assistant_prefix_tokens": 16,
+  "assistant_completion_tokens": 3,
+  "synthetic_tool_round_trip_serialized": true,
+  "weights_loaded": false,
+  "gpu_used": false,
+  "official_benchmark_tasks_used": 0,
+  "training_executed": false,
+  "license_verified_for_posttraining": false
+}

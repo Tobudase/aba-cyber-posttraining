@@ -20,6 +20,10 @@ Raw annotation JSONL, draft code manifests and Job ConfigMaps are not published 
 
 The result verifier expects the original collected local evidence under `docs/verification/`; this snapshot instead publishes selected summaries under `results/`. The evidence SHA256 in the summary identifies the original local artifact. To reproduce execution, regenerate inputs, inspect the bounded Job, run once, then collect its actual evidence with `collect-vulnllmr-evidence.py` and verify it. A script being present or a local summary being readable is not evidence that a new run succeeded.
 
+## Feyospace metadata-only candidate check
+
+With network access, run `python3 scripts/prepare-feyospace-metadata.py` to download only six pinned public metadata/tokenizer files into ignored `.tools/`. Install a tokenizer-capable Transformers environment, then run `python scripts/check-feyospace-preparation.py`. It verifies SHA256 and a benign chat/tool serialization example; no model tensors or benchmark tasks are used. The recorded local result is in `docs/verification/feyospace-preparation.json`. Its pinned lock deliberately marks license and full-model/GPU training unverified.
+
 ## Credentials and policy
 
 Create your own cluster access and API credentials through the provider. Never commit tokens, kubeconfig, private keys, login exports or notebook URLs with tokens. Existing local credential-setup UI helpers and VM account configuration are not part of this snapshot.
