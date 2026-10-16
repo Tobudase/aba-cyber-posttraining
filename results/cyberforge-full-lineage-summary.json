@@ -1,0 +1,20 @@
+{
+  "status": "METADATA_REVIEW_ONLY_NOT_TRAINING_APPROVED",
+  "teacher_dataset": "AmL-hug/cyberforge-teacher-traj-gemma4-31b",
+  "teacher_revision": "818851c1d8834b9e234f602e67268fc82a915755",
+  "project_huggingface_revision": "02d0191c28d322bd22db6c97f8cb0688e7b1cdcd",
+  "project_github_full_data_revision": "af0e78d177561ece9dc50bde7ecfced61ec35773",
+  "projects_checked": 27,
+  "nonmatching_project_name_records": 382,
+  "patch_total": 290,
+  "patch_matching_public_vulnerability_id": 63,
+  "patch_missing_public_vulnerability_id": 227,
+  "poc_san_total": 92,
+  "poc_san_matching_public_vulnerability_id": 22,
+  "poc_san_missing_public_vulnerability_id": 70,
+  "metadata_identity_and_base_commit_match": 85,
+  "matching_metadata_validation_status_present": 0,
+  "approved_training_records": 0,
+  "official_evaluation_tasks_used_for_training": 0,
+  "note": "Pinned project archives were inspected for filenames and public metadata JSON only. No vulnerability artifacts or trajectories were executed."
+}

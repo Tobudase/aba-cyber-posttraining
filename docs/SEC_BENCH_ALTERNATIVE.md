@@ -1,0 +1,7 @@
+# SEC-bench patch × Gemma 4 31B: alternative pair under review
+
+The original [Google Gemma 4 31B instruction checkpoint](https://huggingface.co/google/gemma-4-31B-it) is publicly available under Apache-2.0. The [CyberForge paper](https://cyb3rforge.github.io/assets/paper.pdf) reports 58.0% patch success for the **base model** on 150 SEC-bench cases from 24 projects under its own fixed agent scaffold; it reports 72.7% after its post-training. These are published results, **not** reproduced results or an independent official leaderboard entry from this project. The post-trained CyberForge checkpoint has not been established as publicly available; the candidate here is Google's base checkpoint.
+
+The [official SEC-bench repository](https://github.com/SEC-bench/SEC-bench) includes patch and PoC task modes, including `poc-san`. Its README recommends over 200GB of disk for Docker environments; the project's existing 64Gi development VM is below that recommendation. No SEC-bench evaluation, Gemma checkpoint inference, or Gemma post-training has been run here.
+
+CyberForge trajectories are a potential external supervision source, but the pinned 27-project audit finds only 63/290 patch records with a matching public vulnerability ID; the remaining 227 lack a mapping. Even those 63 have not passed per-record validation, source-license, benchmark-overlap, or tool-format review. Official SEC-bench cases would remain evaluation-only if this alternative is selected. Current decision: **research candidate, not selected**.
