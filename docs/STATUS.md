@@ -1,6 +1,6 @@
 # Current status
 
-NRP documents an Anthropic-compatible `/anthropic` endpoint for Claude Code. Bounded neutral probes of `qwen3-small` and `qwen3` passed streamed text, tool-use content blocks and tool-result follow-up. Both returned `end_turn` rather than `tool_use` as the tool-call stop reason. Actual Claude SDK execution and ABA end-to-end use remain untested; see [compatibility report](ABA_NRP_COMPAT.md).
+NRP documents an Anthropic-compatible `/anthropic` endpoint for Claude Code. Bounded neutral probes of `qwen3-small` and `qwen3` passed streamed text, tool-use content blocks and tool-result follow-up. Both returned `end_turn` rather than `tool_use` as the tool-call stop reason. A real Claude Agent SDK 0.2.148 round-trip on macOS arm64 nevertheless invoked one restricted local addition tool and returned the correct result. ABA end-to-end on Linux remains untested; see [compatibility report](ABA_NRP_COMPAT.md).
 
 The main research objective is ABA-managed post-training of a good-performing, accessible model on a suitable cybersecurity benchmark. Model and benchmark selection remain open.
 

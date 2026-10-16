@@ -1,0 +1,20 @@
+{
+  "allowed_tool": "mcp__calc__add_numbers",
+  "assistant_final_answer_is_15": true,
+  "assistant_tool_block_seen": true,
+  "benchmark_tasks_used": 0,
+  "checked_at_utc": "2026-10-16T21:37:05.097270+00:00",
+  "endpoint": "https://ellm.nrp-nautilus.io/anthropic",
+  "invalid_tool_input": false,
+  "max_turns": 3,
+  "model": "qwen3-small",
+  "passed": true,
+  "result_is_error": false,
+  "result_message_seen": true,
+  "sdk_version_pinned": "0.2.148",
+  "tool_invocations": 1,
+  "training_performed": false,
+  "valid_tool_input": true,
+  "execution_platform": "Darwin arm64",
+  "evidence_origin": "Captured stdout of a single successful bounded SDK run; transcribed verbatim fields plus execution_platform and evidence_origin. The transient stderr was 78 bytes and did not contain the locally stored NRP token."
+}
