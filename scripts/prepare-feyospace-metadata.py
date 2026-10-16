@@ -70,7 +70,8 @@ def main():
         "public": True,
         "license_id": license_id,
         "license_files": license_file_names,
-        "license_verified_for_posttraining": bool(license_id or license_file_names),
+        # Repository metadata alone cannot settle derivative-training rights.
+        "license_verified_for_posttraining": False,
         "local_metadata_dir": dest.relative_to(ROOT).as_posix(),
         "files": manifest,
         "weights_downloaded_locally": False,
