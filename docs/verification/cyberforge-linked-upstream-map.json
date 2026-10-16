@@ -1,0 +1,194 @@
+{
+  "checked_at_utc": "2026-10-16T21:27:08.960850+00:00",
+  "status": "UPSTREAM_MAP_ONLY_NOT_LICENSE_APPROVAL",
+  "project_dataset_revision": "02d0191c28d322bd22db6c97f8cb0688e7b1cdcd",
+  "linked_record_count": 85,
+  "linked_project_count": 23,
+  "rows": [
+    {
+      "project": "bluez",
+      "main_repo_url": "https://github.com/bluez/bluez",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "7cd27f4f66aa88194fbc1565bc13f24405acacd8",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "brotli",
+      "main_repo_url": "https://github.com/google/brotli",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "a413517b9419b68e2e3aff328dc967ed7c1e1712",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "c-blosc",
+      "main_repo_url": "https://github.com/Blosc/c-blosc.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "c8072c21dcce8daf6dd19a0bbae8c53458ad68cc",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "cgif",
+      "main_repo_url": "https://github.com/dloebl/cgif",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "436d5a4508ab09e960c7d140b935a4199dd1fb55",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "cjson",
+      "main_repo_url": "https://github.com/DaveGamble/cJSON.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "b2890c8d76bbb64e710585ebc0a917196b9c67e7",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "dnsmasq",
+      "main_repo_url": null,
+      "repository_url_status": "MISSING_OR_NON_HTTPS",
+      "secure_base_commit": "2d0e0c7a54f73d10d7afa15691c08cf5ec1e4ee2",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "double-conversion",
+      "main_repo_url": "https://github.com/google/double-conversion.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "3b30c09758cd21c7fae3173dbd62b11913c63a58",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "freerdp",
+      "main_repo_url": "https://github.com/FreeRDP/FreeRDP",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "29bd64ce08b212e485e38d99d515fc3ba537a2d7",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "grok",
+      "main_repo_url": "https://github.com/GrokImageCompression/grok.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "83542971330889744c0cb1d9c34b87978a066540",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "guetzli",
+      "main_repo_url": "https://github.com/google/guetzli",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "214f2bb42abf5a577c079d00add5d6cc470620d3",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "libpng",
+      "main_repo_url": "https://github.com/pnggroup/libpng.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "d5515b5b8be3901aac04e5bd8bd5c89f287bcd33",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "libsass",
+      "main_repo_url": "https://github.com/sass/libsass.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "9bb4ebcc1484dd2f3a94a0e735464993ecbae986",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "libsrtp",
+      "main_repo_url": "https://github.com/cisco/libsrtp",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "9073dfe9eea29ebd75ea747278e997924f3988bd",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "libzip",
+      "main_repo_url": "https://github.com/nih-at/libzip.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "e04cda2b035ad49f4a9c3b12fc791411bd7f1e65",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "open5gs",
+      "main_repo_url": "https://github.com/open5gs/open5gs",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "774ace0f7a9e1c83f31e092f466ed8571edc7955",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "openh264",
+      "main_repo_url": "https://github.com/cisco/openh264.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "cf568c83f71a18778f9a16e344effaf40c11b752",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "openjph",
+      "main_repo_url": "https://github.com/aous72/OpenJPH",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "4617a8fe34ca8e43a3611d3e0218d7b5dcaebb26",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "pupnp",
+      "main_repo_url": "https://github.com/pupnp/pupnp",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "fb0e6889e738af69a95413da0f28c991d38558c9",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "relic",
+      "main_repo_url": "https://github.com/relic-toolkit/relic",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "d5810fdbc3e2a2260c5ae55fb35255b24198704c",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "simdjson",
+      "main_repo_url": "https://github.com/simdjson/simdjson.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "4ec44e88c99a851131035cc11e387debfb18e950",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "systemd",
+      "main_repo_url": "https://github.com/systemd/systemd",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "b3c3a40b35e94806c590116e50e9c49929b20efc",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "wuffs",
+      "main_repo_url": "https://github.com/google/wuffs.git",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "b9145634fd0c39026a73aed601626616763f4a54",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    },
+    {
+      "project": "xz",
+      "main_repo_url": "https://github.com/tukaani-project/xz",
+      "repository_url_status": "PRESENT",
+      "secure_base_commit": "bfc5f12a84a2a9df774ed16cd6eb58fd5ab24646",
+      "archive_sha256_verified": true,
+      "upstream_license_status": "NOT_CHECKED"
+    }
+  ],
+  "limits": "Repository URLs and base commits are from project.json; upstream licenses and per-row validation have not been checked."
+}
