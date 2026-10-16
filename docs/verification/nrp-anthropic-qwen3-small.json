@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-16T21:22:59.378994+00:00",
+  "endpoint": "https://ellm.nrp-nautilus.io/anthropic",
+  "model": "qwen3-small",
+  "generation_requests_max": 3,
+  "max_tokens_per_request": [
+    64,
+    128,
+    64
+  ],
+  "task_execution": false,
+  "training_performed": false,
+  "stages": {
+    "streamed_text": {
+      "passed": true,
+      "event_types": [
+        "content_block_delta",
+        "content_block_start",
+        "content_block_stop",
+        "message_delta",
+        "message_start",
+        "message_stop"
+      ],
+      "answer_is_5": true
+    },
+    "tool_use": {
+      "passed": false,
+      "stop_reason": "end_turn"
+    },
+    "tool_result_followup": {
+      "passed": true,
+      "answer_is_15": true,
+      "stop_reason": "end_turn"
+    }
+  },
+  "passed": false,
+  "generation_requests_attempted": 3
+}
