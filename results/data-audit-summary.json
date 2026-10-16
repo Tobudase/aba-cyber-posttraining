@@ -1,0 +1,37 @@
+{
+  "status": "DRAFT_NOT_FROZEN",
+  "source_repository": "https://github.com/ucsb-mlsec/VulnLLM-R",
+  "source_commit": "5357371a2271df1048666220415a3bc937af5f9d",
+  "train_files": 20,
+  "records": 2562,
+  "class_counts": {
+    "1": 1281,
+    "0": 1281
+  },
+  "dataset_sources": {
+    "seccodeplt": 1868,
+    "sven": 694
+  },
+  "human_marked_records": 106,
+  "proxy_components": 739,
+  "assignments": {
+    "hold": 934,
+    "proposal_validation": 323,
+    "proposal_train": 1305
+  },
+  "inferred_adjacent_pair_edges": 934,
+  "grouping_limit": "Exact code, AST, record identity, inferred adjacent vulnerable/patched pairs, conservative function-name and identifier-normalized AST proxies. Original generation-seed IDs unavailable; over-merging is possible and semantic independence is not proven.",
+  "validation_limit": "Draft validation comes from published training corpus, possibly seen by the pretrained checkpoint; not a novel held-out evaluation.",
+  "annotation_pilot": {
+    "requests": 12,
+    "completion_tokens": 1382,
+    "automatic_candidates": 3,
+    "quarantined": 9,
+    "training_ready_records": 0,
+    "agent_content_reviewed_records": 3,
+    "human_review_complete": false
+  },
+  "raw_source_code_included": false,
+  "raw_annotations_included": false,
+  "official_test_file_contents_included": false
+}

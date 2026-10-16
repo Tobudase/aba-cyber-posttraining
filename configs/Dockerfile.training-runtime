@@ -1,0 +1,12 @@
+# Recipe only: this image has not been built or run with the training packages.
+FROM docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385
+WORKDIR /opt/cybergym-training
+COPY configs/requirements-linux-gpu.candidate.txt requirements.txt
+RUN python -m pip install --no-cache-dir -r requirements.txt && python -m pip check
+RUN python -c "import torch; from trl import SFTTrainer; from peft import LoraConfig; assert torch.version.cuda is not None; print(torch.__version__, torch.version.cuda)"
+COPY configs/templates/qwen3_training.jinja configs/templates/qwen3_training.jinja
+COPY configs/templates/TRL-LICENSE.txt configs/templates/TRL-LICENSE.txt
+COPY configs/student-model.lock.json configs/student-model.lock.json
+COPY configs/training-template.lock.json configs/training-template.lock.json
+RUN python -m pip freeze > requirements-gpu-resolved.txt
+CMD ["python", "-c", "import torch; print(torch.__version__, torch.version.cuda)"]

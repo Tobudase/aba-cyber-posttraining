@@ -1,0 +1,16 @@
+{
+  "status": "ACTIVE",
+  "benchmark": "CyberGym",
+  "official_tasks_are_evaluation_only": true,
+  "official_task_count": 1507,
+  "prohibit_official_tasks_in_training_or_validation": true,
+  "external_training_and_validation_required": true,
+  "old_splits_status": "SUPERSEDED_OFFICIAL_EVAL_RESERVED",
+  "old_pilot_status": "CANCELLED_OFFICIAL_EVAL_OVERLAP_NOT_EXECUTED",
+  "training_source_deduplication": [
+    "task IDs and source issue identifiers",
+    "repository identity and fix-commit aliases",
+    "same-vulnerability and source/artifact overlap where metadata permits"
+  ],
+  "authority": "Project evaluation protocol; official benchmark testing is reserved."
+}

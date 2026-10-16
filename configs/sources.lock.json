@@ -1,0 +1,17 @@
+{
+  "repositories": {
+    "aibuildai-llm-posttrain-agent": {
+      "url": "https://github.com/aibuildai-inc/aibuildai-llm-posttrain-agent.git",
+      "commit": "c8bd734cafd5a7cd609efb5f561594bde4107d5b"
+    },
+    "cybergym": {
+      "url": "https://github.com/sunblaze-ucb/cybergym.git",
+      "commit": "c6fe2027d39471375920b92cf1025e23a99ffda5"
+    }
+  },
+  "task_index": {
+    "url": "https://huggingface.co/datasets/sunblaze-ucb/cybergym/resolve/main/tasks.json",
+    "sha256": "9cea452cc1e1a3703e0f60c2dfc8642430aab9f50433f976581509de58c7048f"
+  },
+  "dataset_revision": "bde190ded494e52bc684b66073b436c9d992c7c6"
+}

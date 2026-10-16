@@ -1,0 +1,84 @@
+{
+  "status": "DRAFT_LINUX_CPU_ENGINEERING_VERIFIED_GPU_RUNTIME_PENDING",
+  "purpose": "Candidate single-GPU adapter training; not an executed experiment",
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "trust_remote_code": false,
+    "use_cache_during_training": false
+  },
+  "tokenizer": {
+    "model_lock": "configs/student-model.lock.json",
+    "training_template": "configs/templates/qwen3_training.jinja",
+    "template_lock": "configs/training-template.lock.json",
+    "eos_token": "<|im_end|>",
+    "enable_thinking": false,
+    "padding_side": "right"
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16"
+  },
+  "lora": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": "all-linear",
+    "bias": "none",
+    "task_type": "CAUSAL_LM"
+  },
+  "training": {
+    "assistant_only_loss": true,
+    "packing": false,
+    "gradient_checkpointing": true,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 0.0001,
+    "num_train_epochs": 1,
+    "warmup_ratio": 0.03,
+    "max_grad_norm": 1.0,
+    "seed": 42,
+    "bf16": true,
+    "report_to": "none",
+    "push_to_hub": false
+  },
+  "profiles": {
+    "engineering_smoke": {
+      "max_length": 2048,
+      "max_steps": 5,
+      "per_device_train_batch_size": 1,
+      "gradient_accumulation_steps": 1,
+      "data": null,
+      "benchmark_result": false
+    },
+    "domain_pilot": {
+      "initial_context_length_to_profile": 4096,
+      "data": null,
+      "reject_overlength_without_explicit_windowing_protocol": true,
+      "max_length_finalized": false
+    }
+  },
+  "runtime": {
+    "tokenizer_verified": {
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "jinja2": "3.1.6"
+    },
+    "template_source_trl_version": "1.16.0",
+    "full_linux_training_dependency_lock": null,
+    "gpu_type_memory_and_peak_usage_verified": false,
+    "linux_cpu_training_dependency_lock": "configs/requirements-linux-cpu.lock.txt",
+    "linux_cpu_lora_smoke": "docs/verification/tiny-lora-smoke.json",
+    "gpu_candidate_requirements": "configs/requirements-linux-gpu.candidate.txt",
+    "gpu_runtime_image_recipe": "configs/Dockerfile.training-runtime"
+  },
+  "preconditions": [
+    "Frozen split protocol and reviewed eligible training records for domain pilot",
+    "Actual trainer/collator checks that padding, user, system and tool output tokens have labels -100",
+    "Pinned and resolved Linux CUDA/PyTorch/PEFT/bitsandbytes/TRL training environment",
+    "Measured single-GPU memory and runtime; adapter save/reload comparison",
+    "Fixed pre/post evaluation framework, budget and original-model precision"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "model_id": "Virtue-AI-HUB/VulnLLM-R-7B",
+  "revision": "8cd13d7a35f13b187102dba166413d4450836a40",
+  "parameters": 7615616512,
+  "sample_sha256": "c695a917b07cee9654f48069b4b4aa26e5989bb71d7c1df575aeec90a65ffb46",
+  "device": "cpu",
+  "dtype": "qint8 linear weights / fp32 activations",
+  "quantization": "torch_dynamic_qint8_linear",
+  "output_grammar": "binary_judge_and_task_cwe",
+  "max_new_tokens": 32,
+  "assistant_prefill": "## Final Answer\n#judge:",
+  "formal_test_used": false,
+  "training_executed": false
+}

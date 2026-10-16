@@ -1,0 +1,22 @@
+{
+  "package": "trl",
+  "version": "1.16.0",
+  "wheel_url": "https://files.pythonhosted.org/packages/e1/4d/c5eaed26c16bfafc2f724e6be320f94a4f26bf4bb4ba62917114dd9b60c8/trl-1.16.0-py3-none-any.whl",
+  "wheel_sha256": "c4726e139dd40e1a41661511c639c8a68416782b2e3e8c0befebd77bb7ba0396",
+  "requires_python": ">=3.11",
+  "templates": {
+    "qwen3.jinja": {
+      "wheel_path": "trl/chat_templates/qwen3.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    "qwen3_training.jinja": {
+      "wheel_path": "trl/chat_templates/qwen3_training.jinja",
+      "sha256": "1d944ff8f268b611abb296cdd24d0f51981eef1c8647ac321c3a0258f61eb6c9"
+    }
+  },
+  "license_file": {
+    "local_path": "configs/templates/TRL-LICENSE.txt",
+    "wheel_path": "trl-1.16.0.dist-info/licenses/LICENSE",
+    "sha256": "1bf614b1fdc40fbd344aa58d00d17d5fd0d252ea333a05be018a38959c8b2998"
+  }
+}

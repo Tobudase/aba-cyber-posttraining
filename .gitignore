@@ -1,0 +1,17 @@
+.secrets/
+.tools/
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+vendor/
+data/
+artifacts/
+handoff/
+*.safetensors
+*.pt
+*.bin
+.kube/
+.DS_Store

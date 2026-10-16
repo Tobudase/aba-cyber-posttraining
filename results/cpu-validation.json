@@ -1,0 +1,70 @@
+{
+  "scope": "Engineering validation only. No official benchmark score or domain post-training claimed.",
+  "model": "Virtue-AI-HUB/VulnLLM-R-7B",
+  "revision": "8cd13d7a35f13b187102dba166413d4450836a40",
+  "parameters": 7615616512,
+  "runtime": {
+    "device": "cpu",
+    "dtype": "qint8 linear weights / fp32 activations",
+    "quantization": "torch_dynamic_qint8_linear",
+    "quantized_linear_layers": 197,
+    "torch": "2.8.0+cpu",
+    "transformers": "4.57.6",
+    "seconds": 231.391,
+    "output_grammar": "binary_judge_and_task_cwe",
+    "formal_test_used": false,
+    "training_executed": false,
+    "gpu_verified": false
+  },
+  "checks": {
+    "model_and_revision": true,
+    "complete_parameter_count": true,
+    "cpu_not_gpu": true,
+    "quantization_recorded": true,
+    "linear_layers_converted": true,
+    "no_training_or_formal_test": true,
+    "exact_sample_set": true,
+    "parsed_outputs_recomputed": true,
+    "source_labels_unchanged": true,
+    "generation_budget": true,
+    "metrics_recomputed": true,
+    "output_contract": true,
+    "all_outputs_parse": true,
+    "job_completed": true
+  },
+  "metrics": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 2,
+    "invalid": 0,
+    "typed_exact": 2,
+    "total": 4,
+    "valid_outputs": 4,
+    "format_valid_rate": 1.0,
+    "binary_accuracy_all_invalid_incorrect": 0.5,
+    "typed_exact_accuracy_all_invalid_incorrect": 0.5,
+    "binary_f1_valid_outputs_only": 0.0,
+    "scope": "development smoke only; invalid outputs excluded from confusion matrix and never counted correct"
+  },
+  "limitations": [
+    "CPU dynamic INT8 only; no BF16 equivalence or GPU verification",
+    "Four train-source examples, no independent benchmark",
+    "32-token budget with final-answer prefill; final attempt uses a fixed task-level answer grammar",
+    "Grammar validity is imposed, not evidence of unconstrained instruction following",
+    "No post-training executed"
+  ],
+  "prediction_summary": {
+    "samples": 4,
+    "format_valid": 4,
+    "label_matches": 2,
+    "all_predictions": "no / N/A"
+  },
+  "source_evidence_sha256": "ea3f5da8f4b68779e018f4ea629345f2676754256457d2c3ca1dfaac807acb96",
+  "temporary_resources_cleaned": true,
+  "unconstrained_32_token_run": {
+    "generated_samples": 4,
+    "parseable_samples": 0,
+    "note": "Separate earlier run retained locally; not hidden or treated as benchmark success."
+  }
+}

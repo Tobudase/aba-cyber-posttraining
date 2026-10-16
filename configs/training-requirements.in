@@ -1,0 +1,14 @@
+# Candidate Linux runtime. Resolve and freeze on Linux before using for research.
+# Install torch from the CPU-only index for the bounded CPU test;
+# GPU image must provide the matching CUDA-enabled torch instead.
+torch==2.8.0
+transformers==4.57.6
+trl==1.16.0
+peft==0.17.1
+accelerate==1.10.1
+datasets==4.7.0
+bitsandbytes==0.47.0
+jinja2==3.1.6
+numpy==2.2.6
+huggingface-hub==0.36.2
+tokenizers==0.22.2
