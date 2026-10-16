@@ -1,0 +1,20 @@
+{
+  "status": "METADATA_REVIEW_ONLY_NOT_TRAINING_APPROVED",
+  "teacher_dataset": "AmL-hug/cyberforge-teacher-traj-gemma4-31b",
+  "teacher_revision": "818851c1d8834b9e234f602e67268fc82a915755",
+  "project_github_revision": "9e09f4981a5a1a2bc99bd9a6f2b6788a994a5870",
+  "project_huggingface_revision": "02d0191c28d322bd22db6c97f8cb0688e7b1cdcd",
+  "project_count_checked": 18,
+  "poc_san_records_checked": 92,
+  "matching_public_vulnerability_id": 22,
+  "missing_public_vulnerability_id": 70,
+  "github_and_huggingface_results_agree": true,
+  "matching_record_metadata_identity_and_base_commit_match": 22,
+  "matching_record_metadata_validation_status_present": 0,
+  "matching_record_message_count": 796,
+  "matching_record_structured_tool_calls": 0,
+  "approved_training_records": 0,
+  "domain_training_started": false,
+  "official_cybergym_evaluation_tasks_used_for_training": 0,
+  "note": "Names and metadata were checked without executing artifacts. Missing IDs may reflect a release mismatch; no cause has been established."
+}
