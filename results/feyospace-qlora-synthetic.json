@@ -1,0 +1,21 @@
+{
+  "scope": "benign_synthetic_engineering_only",
+  "model_id": "feyospace/feyospace-v1.1-small",
+  "revision": "ab6a8372eceb18c10357e2683ce14808217bf5e9",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "quantization": "NF4 4-bit",
+  "optimizer_steps": 2,
+  "adapter_trainable_parameters": 1507328,
+  "adapter_tensors_changed": 64,
+  "adapter_reload_max_logit_difference": 0.0,
+  "synthetic_losses": [0.0026522763073444366, 0.000698722549714148],
+  "peak_pytorch_allocated_bytes": 25571381760,
+  "elapsed_seconds_including_download_and_load": 86.131,
+  "job_reached_complete": true,
+  "official_benchmark_tasks_used": 0,
+  "domain_training": false,
+  "official_evaluation": false,
+  "adapter_published": false,
+  "temporary_job_resources_cleaned": true,
+  "status": "PASSED_SYNTHETIC_ENGINEERING_CHECK"
+}
