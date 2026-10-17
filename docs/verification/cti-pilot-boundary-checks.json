@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-17T21:40:28.183141+00:00",
+  "status": "PASSED",
+  "checks": {
+    "valid_frozen_pilot_loads": true,
+    "changed_content_without_new_hash_rejected": true,
+    "official_benchmark_record_rejected": true,
+    "held_row_rejected": true,
+    "shared_train_dev_group_rejected": true,
+    "shared_train_dev_description_rejected": true
+  },
+  "count": 6,
+  "scope": "External pilot data boundaries only; not official-test execution"
+}

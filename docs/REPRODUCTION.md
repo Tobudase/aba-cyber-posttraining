@@ -1,5 +1,68 @@
 # Reproduction scope
 
+Updated October 17, 2026. Start with the CTI pilot instructions below. The later sections describe historical utilities and may require unpublished local inputs; they are not the current CTI entry point.
+
+## CTI pilot: no network or credentials required
+
+Use Python 3.12 or later:
+
+```sh
+python3 scripts/verify-cti-pilot-boundaries.py
+```
+
+This loads the released 47/16 source-silver split and exercises six provenance/leakage guards. It does not load model weights or official tests. Read the data notice and complete CVE terms next to the examples.
+
+## Restore pinned code and tokenizer metadata
+
+```sh
+python3 scripts/restore-cti-source.py
+```
+
+This fetches only the 249 explicitly allowed, hash-pinned public metadata/source files. It does not fetch official benchmark test bodies or model weight tensors. Upstream code and tokenizer licenses apply. `.tools/` stays ignored. Regenerating all original NVD/CNA intake snapshots is separate: the intake scripts require the recorded local source snapshots and grouping/exposure evidence, which are not all included. Re-querying a live database is not guaranteed to reproduce a historical snapshot; do not overwrite or silently change the frozen pilot hashes.
+
+## Reproduce the tiny CPU training-interface check
+
+On macOS, create a separate Python 3.12 venv and install `configs/requirements-cti-train-macos.lock.txt`, then run:
+
+```sh
+python scripts/test-cti-pilot-training.py
+```
+
+The Mac dependency lock is not a Linux/CUDA lock. This uses cached Qwen3.8 tokenizer metadata and a RANDOM TINY architecture, not pretrained 27B weights. It validates assistant-only masking, two actual updates on pilot train rows, changed adapter tensors and reload consistency. No performance improvement or benchmark score is implied. Runtime outputs go to ignored `artifacts/`; the tiny adapter cannot be applied to the full model.
+
+## Pretrained GPU pilot: prepared, not yet GPU-validated
+
+Check your authorized GPU environment without exposing account credentials:
+
+```sh
+python3 scripts/probe-cti-gpu.py
+```
+
+Create an isolated Linux environment using `configs/requirements-cti-gpu.candidate.txt`. Verify CUDA wheel/driver compatibility; this candidate file is not a proven complete lock. Do not replace a shared system Python. After verifying disk and GPU capacity, an example sequence is:
+
+```sh
+python scripts/run-cti-pretrained-pilot.py --model-key qwen14_model --phase baseline
+python scripts/run-cti-pretrained-pilot.py --model-key qwen14_model --phase sft --steps 8
+```
+
+Default total timeout: 1,800 seconds per command, including public weight download/hash checks. Exactly one GPU must be exposed. Weights and local cache are not committed. The eight default steps cover the eight pilot classes in round-robin order. No official tests are read; only the fixed pilot train rows enter optimization. Matching baseline/data/prompt/precision/environment contracts are required before SFT. Failed/partial runs must not be reported as complete.
+
+For native grading, create `.tools/cti-faith-venv` separately using `configs/requirements-cti-faith.lock.txt`. Its Transformers 4.57.6 is intentionally separate from the model runtime's 5.20.1:
+
+```sh
+.tools/cti-faith-venv/bin/python scripts/grade-cti-pretrained-pilot.py artifacts/cti-pretrained-pilot/qwen14_model/baseline.json
+.tools/cti-faith-venv/bin/python scripts/grade-cti-pretrained-pilot.py artifacts/cti-pretrained-pilot/qwen14_model/sft.json
+```
+
+These outputs would measure external silver-label DEVELOPMENT agreement, not official CTI-Bench accuracy. The full formal evaluation and ABA–CTI integration have not run. The current FAITH configuration expects 990 records after ten duplicate drops; paper-protocol equivalence is unverified.
+
+## Synthetic ABA evidence
+
+The reviewed generated trainer and its training inputs are under `examples/aba-bigram/`. Running that trainer alone does not rerun the ABA controller. The public result summary records the successful pinned/patched ABA run and independent reproduction. It is a toy integration result, not an LLM/cybersecurity score.
+
+## Historical reproduction notes
+
+
 This repository is a sanitized snapshot, not a one-command benchmark release. Configure `YOUR_NAMESPACE` and the `user-` Kubernetes name prefix before any cluster submission. Do not use an example manifest against a shared namespace without reviewing it.
 
 ## Local tools

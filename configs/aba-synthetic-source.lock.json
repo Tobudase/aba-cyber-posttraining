@@ -1,0 +1,13 @@
+{
+  "upstream_url": "https://github.com/aibuildai-inc/aibuildai-llm-posttrain-agent",
+  "upstream_commit": "c8bd734cafd5a7cd609efb5f561594bde4107d5b",
+  "runtime_release_version": "2026.9.8",
+  "requirements_sha256": "b1e3542bf5ba6a2af4fc6be25fc0fd5418d1a33815ce7dfb4075a9396f9a52ef",
+  "local_patches": [
+    {
+      "file": "patches/aba-nb-tree-no-request.patch",
+      "sha256": "51f5793b807f11b9184ddfce20608bcb745c41b7c52e7f9a4d17ace65e53740a",
+      "purpose": "Fix mismatched no-request Composite.run call; no validation bypass"
+    }
+  ]
+}

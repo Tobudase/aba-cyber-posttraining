@@ -1,0 +1,47 @@
+{
+  "checked_at_utc": "2026-10-17T21:40:49.351182+00:00",
+  "status": "PASSED_ENGINEERING_ONLY",
+  "weights": "RANDOM TINY Qwen3.5 architecture; NOT pretrained Qwen3.8-27B",
+  "domain_model_posttraining_completed": false,
+  "official_test_rows": 0,
+  "data_quality": "Assistant-reviewed SOURCE-SILVER, not expert gold",
+  "frozen_pilot_sha256": {
+    "train": "96e3f5576f7b5f5c376b78c9e08b0c963519ed32eb5d4c99e369e3a5db4826d5",
+    "dev": "d6b590a8c3a6d83f5f2e099fcf2734a84b143978665700edb4806484a44648b9"
+  },
+  "packed_counts": {
+    "train": 47,
+    "dev": 16
+  },
+  "max_sequence_tokens": 282,
+  "assistant_only_loss": true,
+  "silent_truncation": false,
+  "guards": {
+    "no_silent_truncation": true
+  },
+  "optimizer_steps": 2,
+  "training_ids": [
+    "CVE-2026-65122",
+    "CVE-2026-71451"
+  ],
+  "dev_optimizer_steps": 0,
+  "losses_different_examples_not_learning_curve": [
+    12.449121475219727,
+    12.48625659942627
+  ],
+  "changed_adapter_tensors": 4,
+  "adapter_reload_max_logit_difference": 0.0,
+  "adapter_sha256": "ab610451224791e2b8270366653494cb52c51e84da8c586eb40c9a0b37e1b772",
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "5.20.1",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0"
+  },
+  "elapsed_seconds": 6.719,
+  "limitations": [
+    "No trained-model accuracy is claimed.",
+    "Tiny random architecture verifies data/loss/adapter mechanics only.",
+    "No official benchmark evaluation or full pretrained-model training occurred."
+  ]
+}

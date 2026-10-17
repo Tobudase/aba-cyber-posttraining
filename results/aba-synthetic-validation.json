@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-10-17T00:54:59.089978+00:00",
+  "baseline": {
+    "score": -4.5371711105827135,
+    "dev_nll": 4.5371711105827135,
+    "accuracy": 0.0234375,
+    "parameter_l1_change": 0.0,
+    "optimizer_steps": 0
+  },
+  "adapted": {
+    "score": -0.7685650805449143,
+    "dev_nll": 0.7685650805449143,
+    "accuracy": 0.8515625,
+    "parameter_l1_change": 109.0291000698639,
+    "optimizer_steps": 8192
+  },
+  "synthetic_only": true,
+  "official_tasks_used": 0,
+  "domain_training": false,
+  "scoring_recomputed_locally": true,
+  "delivered_model_matches_selected": true,
+  "delivered_source_matches_executed_source": true,
+  "passed_artifact_checks": true,
+  "aba_terminal_success_independently_checked": true,
+  "aba_terminal_result": "completed",
+  "scope": "SYNTHETIC_BIGRAM_INTEGRATION_NOT_LLM_OR_CYBERSECURITY_SCORE",
+  "upstream_commit": "c8bd734cafd5a7cd609efb5f561594bde4107d5b",
+  "upstream_modification": "patches/aba-nb-tree-no-request.patch",
+  "source_evidence_sha256": "12e37bf515c6fdcb7f351ae080962ab262def7e27b2cdcfb76003d0ab06ea84b",
+  "independent_reproduction": {
+    "status": "PASSED",
+    "maximum_weight_difference": 1.7763568394002505e-15,
+    "metrics_reproduced": true,
+    "credentials_forwarded": false,
+    "judge_data_in_training_directory": false,
+    "source_sha256": "7c79ba22b1899b2ef2f3c7690426f923066bbb0287901e85005ff213b5017b00"
+  }
+}

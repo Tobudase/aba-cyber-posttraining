@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-10-17T21:14:16.712963+00:00",
+  "status": "SOURCE_STRUCTURAL_SCREEN_ONLY",
+  "cvelist_revision": "11dcf9dc70eb616a6d4ee95a893a282748a64ed5",
+  "requested": 128,
+  "fetched": 128,
+  "structural_matches": 109,
+  "selected_per_class": {
+    "CWE-787": 16,
+    "CWE-125": 16,
+    "CWE-502": 16,
+    "CWE-78": 16,
+    "CWE-918": 16,
+    "CWE-89": 16,
+    "CWE-22": 16,
+    "CWE-79": 16
+  },
+  "matched_per_class": {
+    "CWE-787": 12,
+    "CWE-125": 15,
+    "CWE-502": 14,
+    "CWE-78": 16,
+    "CWE-918": 14,
+    "CWE-89": 13,
+    "CWE-22": 15,
+    "CWE-79": 10
+  },
+  "excluded_prior_debug_group_records": 556,
+  "selection_rule": "Fixed hash order; at most16 per class, unique existing heuristic group, no prior debug-group exposure",
+  "candidate_sha256": "83bca4f8009c389ceb9c6d6d0fd79d5902ed28ec599a23c3f46783b81633908d",
+  "official_test_rows": 0,
+  "training_approved": 0,
+  "limitations": [
+    "CNA/NVD agreement is source consistency, not independent expert gold.",
+    "Selected eight classes are a narrow pilot, not representative CTI-Bench data.",
+    "No split is frozen and no source record is training-approved by this fetch."
+  ]
+}

@@ -1,0 +1,1247 @@
+{
+  "faith/LICENSE": {
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bytes": 11357,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/LICENSE"
+  },
+  "faith/pyproject.toml": {
+    "sha256": "114fc5610adabcfc2c824465bbdddcc08abdfae367eaf8c2543f95e5f170f341",
+    "bytes": 2707,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/pyproject.toml"
+  },
+  "faith/src/faith/__benchmarks__/ctibench-rcm/benchmark.yaml": {
+    "sha256": "3c87d8d54371b39434e9ebd1acd380fa9bcd80d0ab1d6d7339b519276cc4c7af",
+    "bytes": 3515,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__benchmarks__/ctibench-rcm/benchmark.yaml"
+  },
+  "faith/src/faith/__init__.py": {
+    "sha256": "c3400ea1e6acd85ce83cc71c3601c6fd5a83b9d89da407fe7ee2741647b22733",
+    "bytes": 405,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__init__.py"
+  },
+  "faith/src/faith/_internal/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/__init__.py"
+  },
+  "faith/src/faith/_internal/algo/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/algo/__init__.py"
+  },
+  "faith/src/faith/_internal/algo/graph.py": {
+    "sha256": "98f917f850603a8b07837a9c6719eb9c27143025cda4e4000ce68009164aaaf9",
+    "bytes": 1415,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/algo/graph.py"
+  },
+  "faith/src/faith/_internal/algo/hash.py": {
+    "sha256": "71dd0a1534f478215924c6781f0e23c65474af5d708d90dfd71484f6f93a0ef5",
+    "bytes": 474,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/algo/hash.py"
+  },
+  "faith/src/faith/_internal/algo/matching.py": {
+    "sha256": "9022ad5dc40037c6c270295830bfb7bf502a95232615b601d27b3b9bbbc7eb00",
+    "bytes": 7774,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/algo/matching.py"
+  },
+  "faith/src/faith/_internal/algo/sampling.py": {
+    "sha256": "b544265a4fad1d75f7108823774f77d6c01bed0450e9b2c56bf39cffb0c3b2cf",
+    "bytes": 3800,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/algo/sampling.py"
+  },
+  "faith/src/faith/_internal/collections/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/collections/__init__.py"
+  },
+  "faith/src/faith/_internal/collections/queue_iterable.py": {
+    "sha256": "ba5ae20eb6787250b8889c4734b7fd34926e266c038566c64bc5aed20304b1f0",
+    "bytes": 2358,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/collections/queue_iterable.py"
+  },
+  "faith/src/faith/_internal/collections/sequenced_buffer.py": {
+    "sha256": "62c72a1cf272d91336b5b235e5003cbed3874bea14d64f731ce1e352b67089be",
+    "bytes": 2116,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/collections/sequenced_buffer.py"
+  },
+  "faith/src/faith/_internal/functools/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/functools/__init__.py"
+  },
+  "faith/src/faith/_internal/functools/compose.py": {
+    "sha256": "a057cfb5a1b8216de2daf05ec2385644669ffea191477ca64b927de5f5e05a9b",
+    "bytes": 1658,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/functools/compose.py"
+  },
+  "faith/src/faith/_internal/functools/retriable.py": {
+    "sha256": "c601a5c06de15a6dd0f578d948b0109054ce64650c4ef5577e8dd50aa0e81168",
+    "bytes": 3631,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/functools/retriable.py"
+  },
+  "faith/src/faith/_internal/io/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/__init__.py"
+  },
+  "faith/src/faith/_internal/io/gcs.py": {
+    "sha256": "2065ef6decc053ba8dd1102e59c27fb99555b659be441fef5aba3ac6ed042b15",
+    "bytes": 2592,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/gcs.py"
+  },
+  "faith/src/faith/_internal/io/json.py": {
+    "sha256": "f0acb9d84279dbdf7405a98a4afd9ff5e98afb8bf62f952e35fd94dc572b1af8",
+    "bytes": 1907,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/json.py"
+  },
+  "faith/src/faith/_internal/io/logging.py": {
+    "sha256": "148b042de188839becb0befbb78a609df5e8366ae11116944e832f9a0b5bd2d0",
+    "bytes": 3401,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/logging.py"
+  },
+  "faith/src/faith/_internal/io/pandas.py": {
+    "sha256": "e7b0fbdb74f3a0f8cc4bb2087a4d835003029f32e382b1a241075525871c61b8",
+    "bytes": 543,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/pandas.py"
+  },
+  "faith/src/faith/_internal/io/resource_provider.py": {
+    "sha256": "23982dc885db6baf47d49e9c6002b280466954678b45f7a6c25a9f5011b6982f",
+    "bytes": 1949,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/resource_provider.py"
+  },
+  "faith/src/faith/_internal/io/resources.py": {
+    "sha256": "91c85c79dd97ad3df87d3b51e630c3c74ec3665fb6a80b745642b254b2600a98",
+    "bytes": 1044,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/resources.py"
+  },
+  "faith/src/faith/_internal/io/store.py": {
+    "sha256": "b3675b0e0d874d425c484a9b09e08f81086d5604b62ec973eb0722a63f43c851",
+    "bytes": 4331,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/store.py"
+  },
+  "faith/src/faith/_internal/io/yaml.py": {
+    "sha256": "a9305649b6d168391cc02cc74d9c07ee350074620f0b4d1425c58ecccbb8dd3e",
+    "bytes": 5368,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/io/yaml.py"
+  },
+  "faith/src/faith/_internal/iter/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/iter/__init__.py"
+  },
+  "faith/src/faith/_internal/iter/common.py": {
+    "sha256": "f44090bafbf80e134e4d8c13fecda7b7d59737854b438f4d58d2d8a8fe524ee1",
+    "bytes": 1211,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/iter/common.py"
+  },
+  "faith/src/faith/_internal/iter/fork_merge.py": {
+    "sha256": "672da14fbc7e3b5c467e259718a64cb95e85a4f488ead05eb720e58093ec58d7",
+    "bytes": 2031,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/iter/fork_merge.py"
+  },
+  "faith/src/faith/_internal/iter/join.py": {
+    "sha256": "31c6ec4fe776ba39955d84bed6db1f6b389ba9de96770a7cd7305e7ee08c2dcc",
+    "bytes": 4244,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/iter/join.py"
+  },
+  "faith/src/faith/_internal/iter/mux.py": {
+    "sha256": "b5f8683b9a100a76cb836a1830bed647dab75b4ca0c41c29d722b9b8c71565ff",
+    "bytes": 2394,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/iter/mux.py"
+  },
+  "faith/src/faith/_internal/iter/transform.py": {
+    "sha256": "6930fb2b7efef5f91c1d97fdecf26baa95d4bd60d86592a8c85d8bf10e100d4a",
+    "bytes": 3625,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/iter/transform.py"
+  },
+  "faith/src/faith/_internal/metrics/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/metrics/__init__.py"
+  },
+  "faith/src/faith/_internal/metrics/aggregations.py": {
+    "sha256": "4144056700d75cdae957b6ebe8d32d5b0f577ea9e9061a4328fac80be6c22a0e",
+    "bytes": 3341,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/metrics/aggregations.py"
+  },
+  "faith/src/faith/_internal/metrics/llm.py": {
+    "sha256": "fbf7457ddce7f25a1c956cd8424962b7b37f805a597904d41a61dfc504964d29",
+    "bytes": 7733,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/metrics/llm.py"
+  },
+  "faith/src/faith/_internal/metrics/multilabel.py": {
+    "sha256": "126fb4bc5c60bcf3e8867a09735fe9a422d07a80258290e12a2a186a99692609",
+    "bytes": 1366,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/metrics/multilabel.py"
+  },
+  "faith/src/faith/_internal/metrics/validation.py": {
+    "sha256": "d7240a863ef02f5f30702e588a90d88352abff04fd5c0eb77a672f3632dd002b",
+    "bytes": 828,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/metrics/validation.py"
+  },
+  "faith/src/faith/_internal/multiprocessing/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/multiprocessing/__init__.py"
+  },
+  "faith/src/faith/_internal/multiprocessing/gpu_scheduling.py": {
+    "sha256": "7b5b0ec4d1b3d9ce2aadc0eda47aab3bfd3af124be2993f457d1c4e1dd4422a0",
+    "bytes": 7360,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/multiprocessing/gpu_scheduling.py"
+  },
+  "faith/src/faith/_internal/parsing/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/parsing/__init__.py"
+  },
+  "faith/src/faith/_internal/parsing/expr.py": {
+    "sha256": "ea27889095658c156646d88b877822fb7566393e1aeac11d74a380502797fc5f",
+    "bytes": 2345,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/parsing/expr.py"
+  },
+  "faith/src/faith/_internal/threading/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/threading/__init__.py"
+  },
+  "faith/src/faith/_internal/threading/periodic.py": {
+    "sha256": "159c0daa89d33f3a83bc846a8a26a2a0e1468326a54e9c21703f2cbcf8cb62da",
+    "bytes": 1996,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_internal/threading/periodic.py"
+  },
+  "faith/src/faith/_types/benchmark/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/benchmark/__init__.py"
+  },
+  "faith/src/faith/_types/benchmark/sample_ratio.py": {
+    "sha256": "a1f724249562ab274b4c5a1e19baa08e4b3173db29d263ce58758f85b8759915",
+    "bytes": 2950,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/benchmark/sample_ratio.py"
+  },
+  "faith/src/faith/_types/benchmark/spec.py": {
+    "sha256": "56a4b727262cc5744aac1aa311649c7842261ab712b12ee165b587a241cb43e7",
+    "bytes": 890,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/benchmark/spec.py"
+  },
+  "faith/src/faith/_types/config/__init__.py": {
+    "sha256": "61a1af8e2a1408e394ad6ba67e1ea49649bdd02338e3927f83c6e9a4f84a00ca",
+    "bytes": 188,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/__init__.py"
+  },
+  "faith/src/faith/_types/config/agentic.py": {
+    "sha256": "97afb467d338f24254535937b12e271fe48df570da8f1f46bd1c451372c3170d",
+    "bytes": 17013,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/agentic.py"
+  },
+  "faith/src/faith/_types/config/benchmark.py": {
+    "sha256": "d5f387137e8d1c12be2c5ed23a75b9eb18f506d8e34523f8cd4b285fecd01ef8",
+    "bytes": 4173,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/benchmark.py"
+  },
+  "faith/src/faith/_types/config/format.py": {
+    "sha256": "bd7c85c2f5eba7a70aa9846ccd9063de62e3d1f80e2543472fcde364973e9d1d",
+    "bytes": 1515,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/format.py"
+  },
+  "faith/src/faith/_types/config/metadata.py": {
+    "sha256": "fc6e78da4c0fa8427b6c86d4a0560c7037bc33f1bfa8eb380a3732a1b2995ed6",
+    "bytes": 1230,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/metadata.py"
+  },
+  "faith/src/faith/_types/config/patterns.py": {
+    "sha256": "385bbb36059ece7438a869ae182bede9caa3b24d7b80c5c0528507b6a6abc17b",
+    "bytes": 1646,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/patterns.py"
+  },
+  "faith/src/faith/_types/config/scoring.py": {
+    "sha256": "8f6371f9416ab12ca026f0ce0b494aa8a2d0206e46ae31e140949a2f8f3e601b",
+    "bytes": 2677,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/scoring.py"
+  },
+  "faith/src/faith/_types/config/source.py": {
+    "sha256": "186b8e07322450395a586bd30e76c27c4d2eb6b3acb22778e0874c1ded16ddcd",
+    "bytes": 3483,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/config/source.py"
+  },
+  "faith/src/faith/_types/enums.py": {
+    "sha256": "5fda2e17de9234d5ea8d83e6369a169c28f3625a554006e7fa20525d2c74940a",
+    "bytes": 953,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/enums.py"
+  },
+  "faith/src/faith/_types/json_types.py": {
+    "sha256": "a3039679e5dbafbd450b01174549b774dd9111ac305da7bdc3dd83a9ddae4665",
+    "bytes": 265,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/json_types.py"
+  },
+  "faith/src/faith/_types/model/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/model/__init__.py"
+  },
+  "faith/src/faith/_types/model/engine.py": {
+    "sha256": "e2802b5691c206db7105ac9dbbbb184c3c570831fd385eb5d2489207c722d1fb",
+    "bytes": 2059,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/model/engine.py"
+  },
+  "faith/src/faith/_types/model/generation.py": {
+    "sha256": "1d1e30222484fb32b11147aa2b6bcda7dac7f96497c5045b84c6bff54848ea38",
+    "bytes": 1499,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/model/generation.py"
+  },
+  "faith/src/faith/_types/model/naming.py": {
+    "sha256": "9650c5c1d8bc6d008ad567a4b8a3f084b36a75375218e5943c5e17b2ce477892",
+    "bytes": 485,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/model/naming.py"
+  },
+  "faith/src/faith/_types/model/prompt.py": {
+    "sha256": "73068f6e79dbaca1a6e020ea9a6d34a90059cf71451482181c9d2c299011317b",
+    "bytes": 2351,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/model/prompt.py"
+  },
+  "faith/src/faith/_types/model/spec.py": {
+    "sha256": "b6670829f9b6c5c45dd4ec024de54eb990284a6e30a18435134ea57212a1f570",
+    "bytes": 2055,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/model/spec.py"
+  },
+  "faith/src/faith/_types/record/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/__init__.py"
+  },
+  "faith/src/faith/_types/record/agent.py": {
+    "sha256": "2aee10034eb0a4a093825b1f5cc45003b50a1f17b1c830180902bc4ee12e009d",
+    "bytes": 5051,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/agent.py"
+  },
+  "faith/src/faith/_types/record/model.py": {
+    "sha256": "7dd4c693646c1bac43e8ccd3d21bd93ebdac2e0b2a21a486a42fba09a394c3bd",
+    "bytes": 2184,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/model.py"
+  },
+  "faith/src/faith/_types/record/model_response.py": {
+    "sha256": "ff461831929360b86a7ad3070c010ba7380657c3f93f20952bc48ac3122fb192",
+    "bytes": 4220,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/model_response.py"
+  },
+  "faith/src/faith/_types/record/prompt.py": {
+    "sha256": "c31d0a0452f6934ea4b3c0665b567935d280930e81bc7f82cb9fe80e46bf9e28",
+    "bytes": 1230,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/prompt.py"
+  },
+  "faith/src/faith/_types/record/sample.py": {
+    "sha256": "cdf5f5c2b59648d8e0b1b1c0203f42ffe85629bdbd0b53cb8f64b11be4c8d243",
+    "bytes": 1422,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/sample.py"
+  },
+  "faith/src/faith/_types/record/score.py": {
+    "sha256": "547a846d0e03b8d1e16437dc77bd63756ed73cc888aa95d48975ec74dbc4fa83",
+    "bytes": 583,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/score.py"
+  },
+  "faith/src/faith/_types/record/stats.py": {
+    "sha256": "89a379300104bdb6de886f4234f2d420c29886eaab17f04cada5412161804d71",
+    "bytes": 2243,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/_types/record/stats.py"
+  },
+  "faith/src/faith/agentic/__init__.py": {
+    "sha256": "b193cfeecb4b00182da9c15c448722425ad3dde7e021c4b3ecc8e6b3c7b3ad55",
+    "bytes": 141,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/__init__.py"
+  },
+  "faith/src/faith/agentic/core/__init__.py": {
+    "sha256": "ed7b92baa0a5eac838248f7f678bf11b5129876b9c28ee297a4a7fd590210c44",
+    "bytes": 1163,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/__init__.py"
+  },
+  "faith/src/faith/agentic/core/answer_extractor.py": {
+    "sha256": "0958fda4a0a49465c07c4f6c1eb8155c770feb475b999946b801afd0c955afe2",
+    "bytes": 1785,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/answer_extractor.py"
+  },
+  "faith/src/faith/agentic/core/capabilities.py": {
+    "sha256": "6fac88de41625e0d35c298b5f6721383700c86ab0e43299418812e633490c32e",
+    "bytes": 2563,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/capabilities.py"
+  },
+  "faith/src/faith/agentic/core/environment.py": {
+    "sha256": "0f5036272899ea46b526bc17f5db4746c7320d86f468d0842e68225b3857e24b",
+    "bytes": 2077,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/environment.py"
+  },
+  "faith/src/faith/agentic/core/react_loop.py": {
+    "sha256": "1340bdbcb11de8621c49729a137ca4cd3f48f0f8017c8e392f9e2d95d6034f2b",
+    "bytes": 37332,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/react_loop.py"
+  },
+  "faith/src/faith/agentic/core/task.py": {
+    "sha256": "a788ffc6aa42be5cf835a7265257143404e1594600c5bdf7ae3003b9c78e64e7",
+    "bytes": 2003,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/task.py"
+  },
+  "faith/src/faith/agentic/core/task_loader.py": {
+    "sha256": "9f387d53b0c281ddd8a5b9eac0f24c1af1c5aef4b23f76cac90778224f863aa3",
+    "bytes": 1633,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/task_loader.py"
+  },
+  "faith/src/faith/agentic/core/tool.py": {
+    "sha256": "31ddfa879a9312c1794884e9bfc7b3fd8c7c57c4a53440404ac15e4bb64068ab",
+    "bytes": 5099,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/tool.py"
+  },
+  "faith/src/faith/agentic/core/tool_registry.py": {
+    "sha256": "40b531fec29f4ccdaa5dd588e69295ff5e59019b0a0696e95be5359f8b418392",
+    "bytes": 4689,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/core/tool_registry.py"
+  },
+  "faith/src/faith/agentic/environments/__init__.py": {
+    "sha256": "c9de0d216a8a26208a1ac28891933919f4acd85f11130bb1b4d6285a25612595",
+    "bytes": 354,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/__init__.py"
+  },
+  "faith/src/faith/agentic/environments/_archive.py": {
+    "sha256": "8b9ce120e50a4dc91ae2e1d5af0fae52868adbb99ebf5503fb90d40a49bd1ea3",
+    "bytes": 1663,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/_archive.py"
+  },
+  "faith/src/faith/agentic/environments/_build.py": {
+    "sha256": "042701c3bf8533715ed69f1edfe96ffabcbef9698e2ffd0485c9edff91e57c20",
+    "bytes": 3426,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/_build.py"
+  },
+  "faith/src/faith/agentic/environments/_command.py": {
+    "sha256": "8b9918fe6e44a7dc52fe68b77fea03c559c781d6686578d0e3155d2eb311c4b3",
+    "bytes": 2138,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/_command.py"
+  },
+  "faith/src/faith/agentic/environments/_kubernetes_transport.py": {
+    "sha256": "12524de277c8c7e35426d45b90d4d8bbe2b2bc54f88063143cf14b1932f88ad7",
+    "bytes": 3824,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/_kubernetes_transport.py"
+  },
+  "faith/src/faith/agentic/environments/_read_only.py": {
+    "sha256": "8dace1ea5444155cd1339308c08dfdb5256da84d22343b5f34f45950cf92dd80",
+    "bytes": 5592,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/_read_only.py"
+  },
+  "faith/src/faith/agentic/environments/_workspace.py": {
+    "sha256": "1e2d1b96bdb8f0daf8fa8b89888d55d657316c73c24487057a9356cd02c3088f",
+    "bytes": 976,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/_workspace.py"
+  },
+  "faith/src/faith/agentic/environments/docker.py": {
+    "sha256": "f59465b731d2ffb3f87d9999c411ea3991b01af49a5422b7a39f088673eb5b2e",
+    "bytes": 19893,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/docker.py"
+  },
+  "faith/src/faith/agentic/environments/kubernetes.py": {
+    "sha256": "01f9638738b41c0ae1f00b557c9c0bd75cd080ad1fa48e344fbc1f269685d6b6",
+    "bytes": 20938,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/environments/kubernetes.py"
+  },
+  "faith/src/faith/agentic/extractors/__init__.py": {
+    "sha256": "7a843bf69c44776b04bad9107e5c1d4121fba196af5b58849a457fd588320add",
+    "bytes": 473,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/extractors/__init__.py"
+  },
+  "faith/src/faith/agentic/extractors/vulnerability_localization.py": {
+    "sha256": "3430cb1ec4ef2303e959e1c06e147f88fcb44c45c91ab5faab440c912952d616",
+    "bytes": 1855,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/extractors/vulnerability_localization.py"
+  },
+  "faith/src/faith/agentic/loaders/__init__.py": {
+    "sha256": "c68764703f5eec57de3a5d090531935a7f1d3c38dd54dbd533605f4c98dee644",
+    "bytes": 438,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/loaders/__init__.py"
+  },
+  "faith/src/faith/agentic/loaders/_fetch.py": {
+    "sha256": "1b026c154dd927ea6f32f53f8ca369e492f1fe1228257f8d0a64e588fd948a13",
+    "bytes": 8230,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/loaders/_fetch.py"
+  },
+  "faith/src/faith/agentic/loaders/vulnerability_localization.py": {
+    "sha256": "29992aed58ec471c5e90b9725f4761bc0eab776e0ee830073692082131c79eff",
+    "bytes": 9487,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/loaders/vulnerability_localization.py"
+  },
+  "faith/src/faith/agentic/orchestration.py": {
+    "sha256": "35a91747474edccfc5e695abe6f92b2357e570a08cec4f9cf642d72b8958d273",
+    "bytes": 3697,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/orchestration.py"
+  },
+  "faith/src/faith/agentic/registries.py": {
+    "sha256": "075e83d6b29ade8d4dd8e22a31a8a5c62f08024e05d36f4688851d4d752bac97",
+    "bytes": 6425,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/registries.py"
+  },
+  "faith/src/faith/agentic/tools/__init__.py": {
+    "sha256": "e79de29763b14b78a874349c9cfa31c6116d16fb743706f52d74ae4edef8cf2d",
+    "bytes": 748,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/tools/__init__.py"
+  },
+  "faith/src/faith/agentic/tools/_truncate.py": {
+    "sha256": "81e3b65650336b66cc0e68c1d3d50f5b7a21b158188f16d4ca8733f89b1e8886",
+    "bytes": 645,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/tools/_truncate.py"
+  },
+  "faith/src/faith/agentic/tools/bash_exec.py": {
+    "sha256": "47a48ae79208ce5c3cfc944df28aae57fef7f5ea8f03a05dd29743bd013b9ecb",
+    "bytes": 2843,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/tools/bash_exec.py"
+  },
+  "faith/src/faith/agentic/tools/submit.py": {
+    "sha256": "7417188c34c88aaef715a9b959301dd4116e71c2afce462fd9a6d7ade1278f93",
+    "bytes": 1457,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/tools/submit.py"
+  },
+  "faith/src/faith/agentic/tools/vulnerability_localization.py": {
+    "sha256": "26c62b8a6a22e8c08e66eef1e3b4d634d8c8aabca4681755f62894ea3e1c6cf3",
+    "bytes": 4266,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/agentic/tools/vulnerability_localization.py"
+  },
+  "faith/src/faith/benchmark/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/__init__.py"
+  },
+  "faith/src/faith/benchmark/agentic.py": {
+    "sha256": "61ec82012638c7587e832d9ce97a706f79e22e186f8f68da12064babb84c03bf",
+    "bytes": 6274,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/agentic.py"
+  },
+  "faith/src/faith/benchmark/benchmark.py": {
+    "sha256": "d1d36c431f1951cde0e48da3d79d60d322c6b5ef90924584ac1687d687dc60bf",
+    "bytes": 6048,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/benchmark.py"
+  },
+  "faith/src/faith/benchmark/config.py": {
+    "sha256": "443ca108ac6759920c263eacb095dc85b135a75686804772b6502bfe65329dca",
+    "bytes": 4755,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/config.py"
+  },
+  "faith/src/faith/benchmark/dataset/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/dataset/__init__.py"
+  },
+  "faith/src/faith/benchmark/dataset/dataset.py": {
+    "sha256": "86fb90943d78267072cdf28f1b10677e149e815c4f05298c39488c2302356c54",
+    "bytes": 2838,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/dataset/dataset.py"
+  },
+  "faith/src/faith/benchmark/dataset/load.py": {
+    "sha256": "1ff1736f15f63549adebb336ec5639f4148574a1e651809abf2885c0072690b7",
+    "bytes": 9900,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/dataset/load.py"
+  },
+  "faith/src/faith/benchmark/formatting/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/formatting/__init__.py"
+  },
+  "faith/src/faith/benchmark/formatting/qa.py": {
+    "sha256": "a11206e015e6130e7cf89ccd39b12ad4be8cea57cb1da79dc6fabaa9ac1e7bd3",
+    "bytes": 5792,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/formatting/qa.py"
+  },
+  "faith/src/faith/benchmark/grading/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/grading/__init__.py"
+  },
+  "faith/src/faith/benchmark/grading/agentic_graders.py": {
+    "sha256": "638abad472885f062adf3b35d470b2c95f4c7ad87a119c957beb419709650168",
+    "bytes": 3457,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/grading/agentic_graders.py"
+  },
+  "faith/src/faith/benchmark/grading/common_graders.py": {
+    "sha256": "ce39a944d21d13bde77c5379b2889c996a3ef1b7afb47610104900ece05ab221",
+    "bytes": 6466,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/grading/common_graders.py"
+  },
+  "faith/src/faith/benchmark/grading/grade_aggregator.py": {
+    "sha256": "e8d9619031c43a187d77ae141e3389b3da8db2ccfd7a61c7885e4e06ae615d5a",
+    "bytes": 7298,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/grading/grade_aggregator.py"
+  },
+  "faith/src/faith/benchmark/grading/log_grader.py": {
+    "sha256": "40ce1196e8350528eaa8d531070d589e5860c4e1dee618fd7b5661ba985f8d40",
+    "bytes": 1730,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/grading/log_grader.py"
+  },
+  "faith/src/faith/benchmark/listing.py": {
+    "sha256": "7b89ada3e9d3754b9c78780ab2d26f71bccdc42cca49cd4cd8825b083df89aed",
+    "bytes": 3427,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/listing.py"
+  },
+  "faith/src/faith/benchmark/load.py": {
+    "sha256": "9d818e4edf57f295d46b2b0a10aa8c83af443127587522a411639e4f9049ef1a",
+    "bytes": 1213,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/load.py"
+  },
+  "faith/src/faith/benchmark/qa/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/qa/__init__.py"
+  },
+  "faith/src/faith/benchmark/qa/long_answer.py": {
+    "sha256": "ea5e3d9f8755988e843fc18755539d50d32b1af689a9b47890c7bc0446914fba",
+    "bytes": 6809,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/qa/long_answer.py"
+  },
+  "faith/src/faith/benchmark/qa/multiple_choice.py": {
+    "sha256": "576d55e88f4a16c4fcc121624e550968820b5e98f83d671c6b40384573523af7",
+    "bytes": 15218,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/qa/multiple_choice.py"
+  },
+  "faith/src/faith/benchmark/qa/short_answer.py": {
+    "sha256": "85fc7171b5943f12b4359aaa5e80d2cab116720ebb86fc723964ef74f813f163",
+    "bytes": 8286,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/qa/short_answer.py"
+  },
+  "faith/src/faith/benchmark/scores/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/scores/__init__.py"
+  },
+  "faith/src/faith/benchmark/scores/domain_specific.py": {
+    "sha256": "c14c95f1007b94aa1f81fbea02d2cdfa71bb0fb47a0879a0fa346fc9c9aea8e9",
+    "bytes": 22126,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/scores/domain_specific.py"
+  },
+  "faith/src/faith/benchmark/scores/scoring.py": {
+    "sha256": "96c4c87bce0f89509938bf82082c8f7508fa5051c85a95d713d34d663145056a",
+    "bytes": 2760,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/benchmark/scores/scoring.py"
+  },
+  "faith/src/faith/cli/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/__init__.py"
+  },
+  "faith/src/faith/cli/cli.py": {
+    "sha256": "1b05f189f98ca17ac2d548204ec346ca58620fa000bfb06419424ad7c3fd9c74",
+    "bytes": 23472,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/cli.py"
+  },
+  "faith/src/faith/cli/flags/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/flags/__init__.py"
+  },
+  "faith/src/faith/cli/flags/annotated_path.py": {
+    "sha256": "0b0b85a8ec2e7277979fcff6ec6b8e1a1bffe2fd413adaa96c284b5dd66b454e",
+    "bytes": 2737,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/flags/annotated_path.py"
+  },
+  "faith/src/faith/cli/flags/arg_value.py": {
+    "sha256": "60e22bd271ad1e17e1b0e7c13a213f8f8ad301f95fa8cbeb5a394fa5cb36f442",
+    "bytes": 2550,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/flags/arg_value.py"
+  },
+  "faith/src/faith/cli/flags/token_parsing.py": {
+    "sha256": "5062089ecab66458a07019c0bac598fc29e5eb46f57caee4fe64fd59966d17dc",
+    "bytes": 1858,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/flags/token_parsing.py"
+  },
+  "faith/src/faith/cli/subcmd/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/subcmd/__init__.py"
+  },
+  "faith/src/faith/cli/subcmd/eval.py": {
+    "sha256": "844501d53268605d23790501f68e6565303d0748b71e3eada10ce88adae4faf7",
+    "bytes": 4886,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/subcmd/eval.py"
+  },
+  "faith/src/faith/cli/subcmd/query.py": {
+    "sha256": "51660ecc5b6f9a391749d79faaba015d0ea587f5d2e2ae22282ab4e77d02bc7e",
+    "bytes": 24716,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/subcmd/query.py"
+  },
+  "faith/src/faith/cli/subcmd/summarize.py": {
+    "sha256": "01ed816f80c058bffea2333cc1a732492e4cd4d90616b55e4f9375387c46d213",
+    "bytes": 5572,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/cli/subcmd/summarize.py"
+  },
+  "faith/src/faith/experiment/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/experiment/__init__.py"
+  },
+  "faith/src/faith/experiment/experiment.py": {
+    "sha256": "8c1e27edb79a54a12c8fd5704e249a79f3739520e706cdf405e0c794773c675f",
+    "bytes": 5761,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/experiment/experiment.py"
+  },
+  "faith/src/faith/experiment/params.py": {
+    "sha256": "173f5f0481b80db73fe7a8fa9ec834af602735e8b18b907c44991799b94cecd0",
+    "bytes": 1668,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/experiment/params.py"
+  },
+  "faith/src/faith/experiment/summarize.py": {
+    "sha256": "a35153c4ea56b888377c95041211f63d024b78476afa69264258ff28e0cd959c",
+    "bytes": 2578,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/experiment/summarize.py"
+  },
+  "faith/src/faith/experiment/trial_runner.py": {
+    "sha256": "7b233a75a43f103691f6c061ecf3f0a61b6bf3deca96c2a9d0fccdb4c70d6e54",
+    "bytes": 7983,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/experiment/trial_runner.py"
+  },
+  "faith/src/faith/ingestion/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/ingestion/__init__.py"
+  },
+  "faith/src/faith/ingestion/parser.py": {
+    "sha256": "9876fe633dbf341e06bff3b38c0366f9d5e6faafc86635bf71ced88c2c154b09",
+    "bytes": 7902,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/ingestion/parser.py"
+  },
+  "faith/src/faith/ingestion/storage/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/ingestion/storage/__init__.py"
+  },
+  "faith/src/faith/ingestion/storage/bigquery.py": {
+    "sha256": "b103b293dd11f1e01b13f22edcb8bf0ad5b85de91c271af5cd692b883a0406cd",
+    "bytes": 6735,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/ingestion/storage/bigquery.py"
+  },
+  "faith/src/faith/model/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/__init__.py"
+  },
+  "faith/src/faith/model/api_model.py": {
+    "sha256": "f7b91f2a849cef42da488d6f8a04864962047558ec85bcffefcfe18cfae9a1d1",
+    "bytes": 4228,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/api_model.py"
+  },
+  "faith/src/faith/model/api_retry.py": {
+    "sha256": "70e23258959e23415a6b827038e180ec396c2208ed384784b62867fd535c1aaa",
+    "bytes": 7080,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/api_retry.py"
+  },
+  "faith/src/faith/model/base.py": {
+    "sha256": "cc3bd1a3c7371f71cfabdf5f979e0a63a8ce7b70fd48a6f59b96602c5831e0d4",
+    "bytes": 2934,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/base.py"
+  },
+  "faith/src/faith/model/config.py": {
+    "sha256": "ec3f104a9f28aebcddb464c213f769b8a3fa95f9ffb07acab80b37b50062fce2",
+    "bytes": 633,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/config.py"
+  },
+  "faith/src/faith/model/factory.py": {
+    "sha256": "ad8ee564a3aa4a30b5e7386f9c4d97b933de5474726bbbafc5cbbb9f2d3855c5",
+    "bytes": 3048,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/factory.py"
+  },
+  "faith/src/faith/model/listing.py": {
+    "sha256": "1a1469ab80849182ab7a174ffca511cb86f1e30accafd92dd54bb2ff1b94d77d",
+    "bytes": 1311,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/listing.py"
+  },
+  "faith/src/faith/model/open_router.py": {
+    "sha256": "53269887f8e66999841205c711c0e389276f80eb82d71adb30d5d69012d9f74c",
+    "bytes": 2692,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/open_router.py"
+  },
+  "faith/src/faith/model/openai.py": {
+    "sha256": "bb893087a9a85deb8684b95a5c7ab77a75c94f0fc06657336a9c2f3f881a135a",
+    "bytes": 3841,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/openai.py"
+  },
+  "faith/src/faith/model/resolver.py": {
+    "sha256": "1a2ef352c500907be78949c86d6dac1602ae80a1510d11e2da7b5451389d9c4a",
+    "bytes": 1252,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/resolver.py"
+  },
+  "faith/src/faith/model/sagemaker.py": {
+    "sha256": "e33ac755753b92c0b489f9623b4986c33f23b9057ec7b008f908407469024267",
+    "bytes": 5854,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/sagemaker.py"
+  },
+  "faith/src/faith/model/vllm.py": {
+    "sha256": "4be9cb7b680c7ac359dcd36d2f68c39b5ec8842169ef8614207a349fa9990b7d",
+    "bytes": 12424,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/model/vllm.py"
+  },
+  "faith/src/faith/record_pipelines/__init__.py": {
+    "sha256": "26fe31982fde283cb9d636c9128badde2e75838b97e88eba123fb8e1f77c6f22",
+    "bytes": 121,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/__init__.py"
+  },
+  "faith/src/faith/record_pipelines/agentic_execution.py": {
+    "sha256": "bc45fc12625315a7a67be39a005fdd58644af63ba6b69d2c78b243db58703b5d",
+    "bytes": 4479,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/agentic_execution.py"
+  },
+  "faith/src/faith/record_pipelines/agentic_formatting.py": {
+    "sha256": "796de6c2f23d28fb493b43481250c53e553df1e4bf776f37d54cca43c8d88c5e",
+    "bytes": 3350,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/agentic_formatting.py"
+  },
+  "faith/src/faith/record_pipelines/formatting.py": {
+    "sha256": "63c6d0f89882e01159d8dbded70d308e2ea0f9dd3752c0bb2a415da1ac57b450",
+    "bytes": 2479,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/formatting.py"
+  },
+  "faith/src/faith/record_pipelines/grading.py": {
+    "sha256": "a251f778d9ca0d6fbb6800cff79e8575e4b861a1076583c0f46407ddc2280d96",
+    "bytes": 1548,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/grading.py"
+  },
+  "faith/src/faith/record_pipelines/hashing.py": {
+    "sha256": "29fd81ef4467ddf8f01da491c301dfe6e652f4f54b90942c5fefdd030c13ee7e",
+    "bytes": 574,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/hashing.py"
+  },
+  "faith/src/faith/record_pipelines/params.py": {
+    "sha256": "3b99ade8f1c3acca1d5224e759d640212a43787199f3f4ec711165bb09a712ec",
+    "bytes": 383,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/params.py"
+  },
+  "faith/src/faith/record_pipelines/prediction.py": {
+    "sha256": "6802e9662ebbfcf991282e7348f087f3e4217494922378bbf9e609c76f35136e",
+    "bytes": 4812,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/prediction.py"
+  },
+  "faith/src/faith/record_pipelines/reconciliation.py": {
+    "sha256": "a8226c2d88fb419aa317cdc2c6482a36ea529a6bd5dc2d3a4f6645e21e6ec474",
+    "bytes": 5431,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/reconciliation.py"
+  },
+  "faith/src/faith/record_pipelines/screening.py": {
+    "sha256": "7782b0079df4fdf713f51475650dcce59067a55c50e023bd1894f4dc5119d045",
+    "bytes": 2089,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/screening.py"
+  },
+  "faith/src/faith/record_pipelines/sorting.py": {
+    "sha256": "cb417b5731cae889f6633ad0deae9345d6ce08e13bd6410a7a69e4b2a4f585a0",
+    "bytes": 1108,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/sorting.py"
+  },
+  "faith/src/faith/record_pipelines/trial_log.py": {
+    "sha256": "984d6ac83e4ab1c95488fd4c9855d91400e7bdb391ee1641bc29b60ed7dd2283",
+    "bytes": 3710,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/record_pipelines/trial_log.py"
+  },
+  "cisco_model/README.md": {
+    "sha256": "31a8183c29652ba8dedf63ef9d527e4890412ed44f74c8da21877df1b43d24b6",
+    "bytes": 13959,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/README.md"
+  },
+  "cisco_model/NOTICE.md": {
+    "sha256": "c880be8c49c67669487eb2395914ecc6f69546d0b757ba69a80d42e70ee496ec",
+    "bytes": 257,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/NOTICE.md"
+  },
+  "cisco_model/LICENSE_APACHE2.md": {
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "bytes": 11358,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/LICENSE_APACHE2.md"
+  },
+  "cisco_model/LICENSE_LLAMA31.md": {
+    "sha256": "8a9aa234c748b9831a209810962cb0401200a2458ab42e8b3809d96d3c71b7c6",
+    "bytes": 78,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/LICENSE_LLAMA31.md"
+  },
+  "cisco_model/config.json": {
+    "sha256": "319a3278ff78931b84188a99e419916e7ab6cae7eb4247e8b8a9dd30c9546278",
+    "bytes": 938,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/config.json"
+  },
+  "cisco_model/tokenizer_config.json": {
+    "sha256": "6929a5446c216be88f5341809f157ed5fb6bc30f64e2725488ddec9bd209a8a9",
+    "bytes": 57134,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/tokenizer_config.json"
+  },
+  "cisco_model/generation_config.json": {
+    "sha256": "06d977635ff4b730cb511ca110c547b949f43a01be83a93896154a0b57c35981",
+    "bytes": 260,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/generation_config.json"
+  },
+  "cisco_model/model.safetensors.index.json": {
+    "sha256": "79020a7cf0bc0ecb6370775ecb7397c9483954c89c9d0750263e3b9d61d56fe5",
+    "bytes": 23950,
+    "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/model.safetensors.index.json"
+  },
+  "qwen14_model/README.md": {
+    "sha256": "7ef503e68996a4e32007fedc7d8e198846e9b1f36620d38a79b89934100b1250",
+    "bytes": 16670,
+    "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/README.md"
+  },
+  "qwen14_model/LICENSE": {
+    "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "bytes": 11343,
+    "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/LICENSE"
+  },
+  "qwen14_model/config.json": {
+    "sha256": "e73c3664ca09b10a673fef0c22e8a6b456201d49bd4713c9691f775720e8857a",
+    "bytes": 728,
+    "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/config.json"
+  },
+  "qwen14_model/tokenizer_config.json": {
+    "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "bytes": 9732,
+    "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/tokenizer_config.json"
+  },
+  "qwen14_model/generation_config.json": {
+    "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "bytes": 239,
+    "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json"
+  },
+  "qwen14_model/model.safetensors.index.json": {
+    "sha256": "62d7ad35757bae5e7baa452cb1483178b7daa50e869e923226b8da10871f7ebc",
+    "bytes": 36514,
+    "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/model.safetensors.index.json"
+  },
+  "qwen8_model/README.md": {
+    "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6",
+    "bytes": 16660,
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/README.md"
+  },
+  "qwen8_model/LICENSE": {
+    "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "bytes": 11343,
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/LICENSE"
+  },
+  "qwen8_model/config.json": {
+    "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+    "bytes": 728,
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/config.json"
+  },
+  "qwen8_model/tokenizer_config.json": {
+    "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "bytes": 9732,
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json"
+  },
+  "qwen8_model/generation_config.json": {
+    "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "bytes": 239,
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json"
+  },
+  "qwen8_model/model.safetensors.index.json": {
+    "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+    "bytes": 32878,
+    "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model.safetensors.index.json"
+  },
+  "faith/README.md": {
+    "sha256": "b3c030413ef7c47eec4d47a05a391f94d1bf0c770cc058179e310c19731da4e9",
+    "bytes": 4185,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/README.md"
+  },
+  "faith/src/faith/__benchmarks__/base-template.yaml": {
+    "sha256": "a38626367b7281a8e5722049445f76c03a024fa6d9b29e35e96c89421d49bc80",
+    "bytes": 205,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__benchmarks__/base-template.yaml"
+  },
+  "faith/src/faith/__benchmarks__/instructions-template.yaml": {
+    "sha256": "7968caeb1d5363d6661a2fe7df9332b0dba70e74fe13a396a328a138f2af5d36",
+    "bytes": 284,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__benchmarks__/instructions-template.yaml"
+  },
+  "faith/src/faith/__benchmarks__/mcqa-template.yaml": {
+    "sha256": "c385656c9612d4f6b5d265f7496af54ee338bb50734af690e32347c2609d9540",
+    "bytes": 3657,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__benchmarks__/mcqa-template.yaml"
+  },
+  "faith/src/faith/__benchmarks__/output-processing-template.yaml": {
+    "sha256": "d139396514344dbc629b3d752acc731fdd092346960dc9c3f964b04ec3417f64",
+    "bytes": 301,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__benchmarks__/output-processing-template.yaml"
+  },
+  "faith/src/faith/__benchmarks__/prompting-template.yaml": {
+    "sha256": "9284ce22052772c1210c85817a7e4ba9caae85c83436d852bd24e48b69ec0d61",
+    "bytes": 366,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__benchmarks__/prompting-template.yaml"
+  },
+  "faith/src/faith/__benchmarks__/sources-template.yaml": {
+    "sha256": "9551699f53bcdf4d59ba2b5a58984f20d5810a6f0cdca50a1aa1c1653335b6e3",
+    "bytes": 592,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__benchmarks__/sources-template.yaml"
+  },
+  "faith/src/faith/__models__/default_engines.yaml": {
+    "sha256": "00179b23b9f7c132c4bac381a7b0ef78c24fdba2b22238d335638d984681a199",
+    "bytes": 254,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/default_engines.yaml"
+  },
+  "faith/src/faith/__models__/default_generation.yaml": {
+    "sha256": "4041a84be0114fde68181e5fb2312be996c978e2a73d9e571b9665ef8ecc28b9",
+    "bytes": 222,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/default_generation.yaml"
+  },
+  "faith/src/faith/__models__/instruct/deephat-v1-7b.yaml": {
+    "sha256": "5f4f4665e76d3db952781a28c3531326e5b24b3f612ae8bb37182653058f3656",
+    "bytes": 355,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/deephat-v1-7b.yaml"
+  },
+  "faith/src/faith/__models__/instruct/falcon3-10b-instruct.yaml": {
+    "sha256": "b3b0b534c978b7a79264935bd5ebd204d77d935faa13b76b6222d3067a9b80c3",
+    "bytes": 368,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/falcon3-10b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/falcon3-1b-instruct.yaml": {
+    "sha256": "94ee197dd70dee8d8da56429d9ff407471bebab7e5ebed48f9ad8263b532a554",
+    "bytes": 365,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/falcon3-1b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/falcon3-3b-instruct.yaml": {
+    "sha256": "724ac7be8b0e636b3ccdf1ebcf8ed37c2631424f8089341289de491591cf2cbd",
+    "bytes": 366,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/falcon3-3b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/falcon3-7b-instruct.yaml": {
+    "sha256": "26aa2e2eaeb3db3eb64809314ca38a5778177386729bf1f1016693d3a6dedcb9",
+    "bytes": 366,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/falcon3-7b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/foundation-sec-1.1-8b-instruct.yaml": {
+    "sha256": "aa3b7225e5a40a6c8220aaf3d3d3acc5719c45ee049552a8343471aa0db3b118",
+    "bytes": 356,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/foundation-sec-1.1-8b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/foundation-sec-8b-instruct.yaml": {
+    "sha256": "8c94e35a0c1b7c9500a92d5fbbb783971d0d9d8de0e6f90b86d4fa5504478be8",
+    "bytes": 348,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/foundation-sec-8b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/gemma-3-12b-it.yaml": {
+    "sha256": "3e77c387fc55c28e804c04834361bcdc4f903ddd3cfbbf1818e057207e11ae7a",
+    "bytes": 323,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/gemma-3-12b-it.yaml"
+  },
+  "faith/src/faith/__models__/instruct/gemma-3-1b-it.yaml": {
+    "sha256": "c34b00bae793af34bc9ddd50c76a7cb3902817fefa8ccf80f6dfa51a5cfebf9b",
+    "bytes": 354,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/gemma-3-1b-it.yaml"
+  },
+  "faith/src/faith/__models__/instruct/gemma-3-27b-it.yaml": {
+    "sha256": "cfecd580491812c04a6f15bae72b325575e9ef824a1033ecf5acf86d09c09508",
+    "bytes": 323,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/gemma-3-27b-it.yaml"
+  },
+  "faith/src/faith/__models__/instruct/gemma-3-4b-it.yaml": {
+    "sha256": "d0503d340b8063c4e357eede94ceef3e3f485bfcd606bd4f1b4b18916fabda18",
+    "bytes": 321,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/gemma-3-4b-it.yaml"
+  },
+  "faith/src/faith/__models__/instruct/gpt-4.1-2025-04-14.yaml": {
+    "sha256": "4eb8760e5a3cff24dd15202abd3bad45a93268c20572848bd8462ab42a4d92ae",
+    "bytes": 326,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/gpt-4.1-2025-04-14.yaml"
+  },
+  "faith/src/faith/__models__/instruct/gpt-4o-mini-2024-07-18.yaml": {
+    "sha256": "d2ca248169ee3a2bc69038de35fa8c978042ad888bf99b985832b6499b69703d",
+    "bytes": 334,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/gpt-4o-mini-2024-07-18.yaml"
+  },
+  "faith/src/faith/__models__/instruct/lily-cybersecurity-7b-v0.2.yaml": {
+    "sha256": "2ef7b252523fa37217b4fb97bbf49afb2aabb73b7df503f5a5b15565aa9074d4",
+    "bytes": 386,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/lily-cybersecurity-7b-v0.2.yaml"
+  },
+  "faith/src/faith/__models__/instruct/llama-3.1-70b-instruct.yaml": {
+    "sha256": "71a3bb8fe0ac657e1db45cd4bbe9ad57bf3cf47d9c518764c6ea2e0c1bd02ccd",
+    "bytes": 343,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/llama-3.1-70b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/llama-3.1-8b-instruct.yaml": {
+    "sha256": "c576fedc058cfe7e7551f0fbd0e55ecbe232227e7b7e0ba7afe4918cee5d2d42",
+    "bytes": 341,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/llama-3.1-8b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/llama-4-maverick-17b-128e-instruct-fp8.yaml": {
+    "sha256": "340e357f4b98aecf833b36c146021cd22cdf9378d54a04e170d8a46f1b0301f7",
+    "bytes": 375,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/llama-4-maverick-17b-128e-instruct-fp8.yaml"
+  },
+  "faith/src/faith/__models__/instruct/llama-4-scout-17b-16e-instruct.yaml": {
+    "sha256": "666ec145161d7e86cdb89de16d24ea575d57cc30dede1be83fa1af79c0e57855",
+    "bytes": 359,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/llama-4-scout-17b-16e-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/llama-primus-merged.yaml": {
+    "sha256": "3e53953b4313817f4df8f883bb7df3cd3c0b20a99d5282452450c7b70054ef67",
+    "bytes": 343,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/llama-primus-merged.yaml"
+  },
+  "faith/src/faith/__models__/instruct/llama-primus-reasoning.yaml": {
+    "sha256": "4a73caa7bcd435b5dcef8a14cfb21c533b9520393f82363284019ea321b0f5b1",
+    "bytes": 349,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/llama-primus-reasoning.yaml"
+  },
+  "faith/src/faith/__models__/instruct/mistral-7b-instruct-v0.2.yaml": {
+    "sha256": "64b204b74d98238fc672b748a1941eac7ab01872d39e66109c5791c54f1c5637",
+    "bytes": 379,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/mistral-7b-instruct-v0.2.yaml"
+  },
+  "faith/src/faith/__models__/instruct/mistral-7b-instruct-v0.3.yaml": {
+    "sha256": "434b4c70d38e59c257364559f27d3a0a21ed8ef7320058440ee101242530f7af",
+    "bytes": 379,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/mistral-7b-instruct-v0.3.yaml"
+  },
+  "faith/src/faith/__models__/instruct/mistral-nemo-instruct-2407.yaml": {
+    "sha256": "0b67ba851c2859bf03634dac6098c78dddb8e0a9f35d89617bb3673b4b6d9303",
+    "bytes": 350,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/mistral-nemo-instruct-2407.yaml"
+  },
+  "faith/src/faith/__models__/instruct/phi-4-mini-instruct.yaml": {
+    "sha256": "66bcda680acf76afd60b98472276a6b6b7a99bb48b26b6837fcbb3a2452904cc",
+    "bytes": 336,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/phi-4-mini-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/phi-4.yaml": {
+    "sha256": "e0ff6b2ade4dce43db62e4da58f68edcf13cf73e286c85552bc4dbe259f66c39",
+    "bytes": 341,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/phi-4.yaml"
+  },
+  "faith/src/faith/__models__/instruct/qwen2.5-1.5b-instruct.yaml": {
+    "sha256": "ef9b343c691f8a6d5b1d91285d3dcf1014b24aef93b6de66656349092b099fc7",
+    "bytes": 368,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/qwen2.5-1.5b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/qwen2.5-14b-instruct.yaml": {
+    "sha256": "6949ac15cef13e25fdad88dceb5b87f1c7558d0e6e888f12a159dcb4292fca8d",
+    "bytes": 366,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/qwen2.5-14b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/qwen2.5-32b-instruct.yaml": {
+    "sha256": "19869dd0ef0efe9eeef61d66d74ddb41068e8e4e5ca19fa71129f445ecc3e8e8",
+    "bytes": 366,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/qwen2.5-32b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/qwen2.5-3b-instruct.yaml": {
+    "sha256": "f512c63f5510c3c273f257b80869d7395b8543f499883ea0a33acd768d8b3fdb",
+    "bytes": 364,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/qwen2.5-3b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/qwen2.5-72b-instruct.yaml": {
+    "sha256": "561b299eeefa09d2d535f53257469abcfe5ec46f745faee16589065636e63f85",
+    "bytes": 366,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/qwen2.5-72b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/qwen2.5-7b-instruct.yaml": {
+    "sha256": "02581aea6401934d4ee29d8b47aed37c8b9f288ab742e0104eea4878bbc45453",
+    "bytes": 364,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/qwen2.5-7b-instruct.yaml"
+  },
+  "faith/src/faith/__models__/instruct/whiterabbitneo-2.5-qwen-2.5-coder-7b.yaml": {
+    "sha256": "541d76d895701845643249f25d9f618943fc6930d6f5d8cfc3f0c9cd02ff9b3d",
+    "bytes": 408,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/instruct/whiterabbitneo-2.5-qwen-2.5-coder-7b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/foundation-sec-8b-reasoning.yaml": {
+    "sha256": "98426b78d426c6b9ce6d5bb3685259252da243b58c459c1f542ae39dd320f50e",
+    "bytes": 422,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/foundation-sec-8b-reasoning.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/gpt-5-nano-2025-08-07.yaml": {
+    "sha256": "13424e7e9936005c7a98dcd283b5df7abaeb2b81229bd4fc37be36ae745c9dd1",
+    "bytes": 361,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/gpt-5-nano-2025-08-07.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/gpt-oss-120b.yaml": {
+    "sha256": "d41c12de51aee5f3bdbbf7d63edda7987221af76ac6467cfab035bbab55afae2",
+    "bytes": 461,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/gpt-oss-120b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/gpt-oss-20b.yaml": {
+    "sha256": "06007798f25556931367a651e0f8bbc6ec157698517f8eb5b0cea6c9f2854e30",
+    "bytes": 459,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/gpt-oss-20b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/o3-2025-04-16.yaml": {
+    "sha256": "b8bdb84e8b28bb638be325984b889d69a25899f71814b8deb199eb0a42a83fe3",
+    "bytes": 377,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/o3-2025-04-16.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-0.8b.yaml": {
+    "sha256": "b890d38e915db6b5040d247777ecfe5f331b271fbd940d26dcebaf739c26268b",
+    "bytes": 389,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-0.8b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-122b-a10b.yaml": {
+    "sha256": "b93710df2a0e45f09bf7150e9814edf97a7247485c0aeb5f730b72b419c01dc9",
+    "bytes": 399,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-122b-a10b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-27b.yaml": {
+    "sha256": "1f818579b3721b52630dfafec468efc53ac8c0efcec4b9cfa71c924e839fcd76",
+    "bytes": 387,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-27b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-2b.yaml": {
+    "sha256": "6f3d4335f0f5332aba5361d76791ce2e30c4b8e09d12358c196798db35589594",
+    "bytes": 385,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-2b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-35b-a3b.yaml": {
+    "sha256": "8f8be33d17f5cbccb9afc7ec78fee718f830bbd3096db8d3a7658d0c59194eb2",
+    "bytes": 395,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-35b-a3b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-397b-a17b-fp8.yaml": {
+    "sha256": "2dee9c5466bae7e18caef99e648b03f53efc0d61652b2e2a89ffb2cc58f02926",
+    "bytes": 407,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-397b-a17b-fp8.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-4b.yaml": {
+    "sha256": "e5b8b68e6ee730a5306b094908df1ab35f12a4794e2cb45212dfc8f41c03b672",
+    "bytes": 385,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-4b.yaml"
+  },
+  "faith/src/faith/__models__/reasoning/qwen3.5-9b.yaml": {
+    "sha256": "235cf5d8cdd241fc1a7f75b38c597f999e52cc6055ed320c842c93ca17be1ee4",
+    "bytes": 385,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/src/faith/__models__/reasoning/qwen3.5-9b.yaml"
+  },
+  "faith/version.txt": {
+    "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
+    "bytes": 6,
+    "url": "https://raw.githubusercontent.com/cisco-foundation-ai/faith/35e6a713108b7a6fe37ca14f5a9185b4b58a803a/version.txt"
+  },
+  "qwen14_model/tokenizer.json": {
+    "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/tokenizer.json",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "bytes": 11422654
+  },
+  "qwen38_model/README.md": {
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/README.md",
+    "sha256": "57e4bdb258ee1a7d2635c5174ebd4e56abe392505cdb5f8bbb356b0dc4293641",
+    "bytes": 65012
+  },
+  "qwen38_model/config.json": {
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/config.json",
+    "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+    "bytes": 4312
+  },
+  "qwen38_model/generation_config.json": {
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/generation_config.json",
+    "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+    "bytes": 202
+  },
+  "qwen38_model/tokenizer_config.json": {
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/tokenizer_config.json",
+    "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+    "bytes": 17928
+  },
+  "qwen38_model/LICENSE": {
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/LICENSE",
+    "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "bytes": 11544
+  },
+  "qwen38_model/tokenizer.json": {
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/tokenizer.json",
+    "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+    "bytes": 12809320
+  },
+  "qwen38_model/chat_template.jinja": {
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/chat_template.jinja",
+    "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "bytes": 8952
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "checked_at_utc": "2026-10-17T15:20:56.331574+00:00",
+  "status": "COMPLETED_ENGINEERING_CHECKS_FORMAL_PROTOCOL_NOT_FROZEN",
+  "official_test_rows": 0,
+  "domain_training_performed": false,
+  "benchmark_score": false,
+  "weight_sha256": "7a61e41b1ca1b339d41caf3001ea7832469d866e7c52a23980a1e95cbf5cd58b",
+  "initial_two_record_issue": "Duplicated BOS retained and disclosed in attempt1; excluded from canonical transport evidence.",
+  "canonical_bos_fix_verified": true,
+  "full_mechanism_check": {
+    "records": 24,
+    "output_budget": 512,
+    "reasoning_completed": 15,
+    "max_token_hits": 16,
+    "valid_format": 14,
+    "strict_label_matches": 12,
+    "elapsed_seconds": 402.03945174999535,
+    "latency_seconds": {
+      "median": 18.023515229462646,
+      "p95": 18.990646041277795,
+      "mean": 16.499486696188495
+    }
+  },
+  "disclosed_followup_subset": {
+    "records": 3,
+    "output_budget": 1024,
+    "reasoning_completed": 3,
+    "max_token_hits": 0,
+    "valid_format": 3,
+    "strict_label_matches": 3,
+    "elapsed_seconds": 80.13643116597086,
+    "pairs": [
+      {
+        "id": "synthetic-02-a",
+        "initial_reasoning_complete": false,
+        "followup_reasoning_complete": true,
+        "initial_output_tokens": 512,
+        "followup_output_tokens": 694,
+        "followup_truncated": false
+      },
+      {
+        "id": "synthetic-11-a",
+        "initial_reasoning_complete": false,
+        "followup_reasoning_complete": true,
+        "initial_output_tokens": 512,
+        "followup_output_tokens": 623,
+        "followup_truncated": false
+      },
+      {
+        "id": "synthetic-13-a",
+        "initial_reasoning_complete": false,
+        "followup_reasoning_complete": true,
+        "initial_output_tokens": 512,
+        "followup_output_tokens": 654,
+        "followup_truncated": false
+      }
+    ]
+  },
+  "all_private_services_reported_stopped": true,
+  "limitations": [
+    "Synthetic, author-labelled inputs; no independent gold review.",
+    "Follow-up was chosen after initial truncations; not an independent held-out evaluation.",
+    "Do not replace 24-record results with a mixed 512/1024 result.",
+    "1024 tokens helped this subset; adequacy for all development inputs remains unverified.",
+    "Mac Q4 timings do not establish NVIDIA BF16 throughput or paper-score reproduction."
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "checked_at_utc": "2026-10-17T07:38:45.986893+00:00",
+  "status": "PASSED",
+  "checks": 12,
+  "faith_revision": "35e6a713108b7a6fe37ca14f5a9185b4b58a803a",
+  "upstream_modified": false,
+  "official_records_used": 0,
+  "native_metrics": {
+    "mean_output_tokens": 0.0,
+    "rate_max_token_halt": 0.0,
+    "query_count": 12,
+    "format_breakdown_count": {
+      "improper": {
+        "incorrect": 0,
+        "correct": 1
+      },
+      "inferred": {
+        "incorrect": 0,
+        "correct": 0
+      },
+      "invalid": {
+        "incorrect": 5,
+        "correct": 0
+      },
+      "proper": {
+        "incorrect": 2,
+        "correct": 4
+      }
+    },
+    "format_count": {
+      "proper": 6,
+      "improper": 1,
+      "inferred": 0,
+      "invalid": 5
+    },
+    "format_rate": {
+      "proper": 0.5,
+      "improper": 0.08333333333333333,
+      "inferred": 0.0,
+      "invalid": 0.4166666666666667
+    },
+    "accuracy": 0.3333333333333333,
+    "lenient_accuracy": 0.4166666666666667,
+    "scored_count": 12,
+    "error_count": 0,
+    "error_rate": 0.0,
+    "attempted_record_accuracy": 0.3333333333333333
+  },
+  "cases": [
+    {
+      "id": "canonical",
+      "label": "CWE-89",
+      "prediction": "CWE-89",
+      "answer_format": "proper",
+      "strict_correct": true
+    },
+    {
+      "id": "unicode",
+      "label": "CWE-89",
+      "prediction": "CWE-89",
+      "answer_format": "proper",
+      "strict_correct": true
+    },
+    {
+      "id": "improper",
+      "label": "CWE-89",
+      "prediction": "CWE-89",
+      "answer_format": "improper",
+      "strict_correct": false
+    },
+    {
+      "id": "ambiguous",
+      "label": "CWE-89",
+      "prediction": null,
+      "answer_format": "invalid",
+      "strict_correct": false
+    },
+    {
+      "id": "repeated",
+      "label": "CWE-89",
+      "prediction": "CWE-89",
+      "answer_format": "proper",
+      "strict_correct": true
+    },
+    {
+      "id": "prefix_collision",
+      "label": "CWE-12",
+      "prediction": "CWE-125",
+      "answer_format": "proper",
+      "strict_correct": false
+    },
+    {
+      "id": "refusal",
+      "label": "CWE-89",
+      "prediction": null,
+      "answer_format": "invalid",
+      "strict_correct": false
+    },
+    {
+      "id": "suffix_collision",
+      "label": "CWE-89",
+      "prediction": null,
+      "answer_format": "invalid",
+      "strict_correct": false
+    },
+    {
+      "id": "leading_zero",
+      "label": "CWE-89",
+      "prediction": "CWE-089",
+      "answer_format": "proper",
+      "strict_correct": false
+    },
+    {
+      "id": "completed_reasoning",
+      "label": "CWE-89",
+      "prediction": "CWE-89",
+      "answer_format": "proper",
+      "strict_correct": true
+    },
+    {
+      "id": "unclosed_reasoning",
+      "label": "CWE-89",
+      "prediction": null,
+      "answer_format": "invalid",
+      "strict_correct": false
+    },
+    {
+      "id": "multiple_final",
+      "label": "CWE-89",
+      "prediction": null,
+      "answer_format": "invalid",
+      "strict_correct": false
+    }
+  ],
+  "current_rcm_config_drops_duplicate_rows": [
+    243,
+    453,
+    531,
+    600,
+    602,
+    681,
+    689,
+    691,
+    776,
+    788
+  ],
+  "current_config_expected_rows": 990,
+  "paper_denominator_equivalence_verified": false
+}

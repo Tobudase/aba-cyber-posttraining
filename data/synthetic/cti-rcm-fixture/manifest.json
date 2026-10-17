@@ -1,0 +1,13 @@
+{
+  "status": "ENGINEERING_ONLY_NOT_RESEARCH_TRAINING_OR_TEST",
+  "origin": "New descriptions authored in this project; no official benchmark rows",
+  "records": 48,
+  "mechanisms": 24,
+  "paraphrase_groups": 24,
+  "gold_labels_manually_reviewed": true,
+  "independent_expert_gold_validation": false,
+  "real_vulnerability_identifiers": 0,
+  "official_test_rows": 0,
+  "examples_sha256": "7e7629a3c773421ec9507d8ed8e4fdb801a402ddf9e41d5f3d0d42139e4c1f66",
+  "limitation": "Simple authored mechanisms, paired paraphrases and non-independent gold labels; no benchmark/generalization claim."
+}

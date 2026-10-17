@@ -1,0 +1,2 @@
+# Preserve the hash-pinned upstream licence text, including original line spaces.
+data/raw/cti-pilot-v1/CVE-TERMS.txt -whitespace

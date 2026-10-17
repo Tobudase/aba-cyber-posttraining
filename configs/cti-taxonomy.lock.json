@@ -1,0 +1,9 @@
+{
+  "version": "4.20",
+  "date": "2026-04-30",
+  "url": "https://cwe.mitre.org/data/xml/cwec_v4.20.xml.zip",
+  "zip_sha256": "3976f599e5e5200219a3108bb896d06e2a88fbb293369e1883cb423a5e9d7d50",
+  "xml_sha256": "1f5a78bd62e00f86436b4fe32d5034a57e8f0da88e4063b2072b664ae510912e",
+  "terms_url": "https://cwe.mitre.org/about/termsofuse.html",
+  "attribution": "CWE is Copyright 2006-2026 The MITRE Corporation. CWE is a trademark of The MITRE Corporation."
+}

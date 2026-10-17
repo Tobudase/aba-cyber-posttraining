@@ -1,0 +1,756 @@
+{
+  "created_at_utc": "2026-10-17T21:22:32.564532+00:00",
+  "status": "FROZEN_EXTERNAL_SOURCE_SILVER_EXPLORATORY_V1",
+  "reviewer": "AI assistant, not independent domain expert",
+  "source_candidate_sha256": "83bca4f8009c389ceb9c6d6d0fd79d5902ed28ec599a23c3f46783b81633908d",
+  "cvelist_revision": "11dcf9dc70eb616a6d4ee95a893a282748a64ed5",
+  "reviewed_accept": 69,
+  "reviewed_hold": 14,
+  "reviews": [
+    {
+      "id": "CVE-2026-0461",
+      "source_sha256": "bee6e8666e1720eb6f0c9e6ee485f17d85be20d09708c2154415121fbbc73d5a",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "DDR receive-buffer overflow crosses allocation boundary."
+    },
+    {
+      "id": "CVE-2026-0482",
+      "source_sha256": "e3647eb29f8ec98be1a8af3871c11d73314c59b263d0654fbe4bdd6ac35d1d68",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "USB buffer overflow overwrites a function pointer."
+    },
+    {
+      "id": "CVE-2026-103680",
+      "source_sha256": "482873ffd62ea683f02750fab407418f38bcececdc712461059a8ac9d0fb621d",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Counter causes writes past an allocated buffer."
+    },
+    {
+      "id": "CVE-2026-103416",
+      "source_sha256": "d9a5786398e916cdcc3fa0fed447d0b2b0cc42881d062e2ecbbc59e78e4d4b5d",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "TLS message writes past cache into control block."
+    },
+    {
+      "id": "CVE-2026-79900",
+      "source_sha256": "3bab6b50feed2e36c1a8deb2aa8213a387a080ff0b01c0fe939f5d0174ef526d",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Digest-name copy exceeds allocated heap field."
+    },
+    {
+      "id": "CVE-2026-84854",
+      "source_sha256": "28193c07226793e98152bf61dbc71e677665c98681971e3d021e3175fd779aa5",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Driver writes outside kernel buffer."
+    },
+    {
+      "id": "CVE-2026-104036",
+      "source_sha256": "52680a6e43cbfb1eba6ce724c58c7057a46781b6307ae01e25dd519a8040d6c8",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Oversized idmap copy continues after bounds failure."
+    },
+    {
+      "id": "CVE-2026-105838",
+      "source_sha256": "18a9e5ce42bcb9739485aa70308e2d617948b6dd25f9c1aafaa66163e939370f",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Oversized pattern parsing reads adjacent heap."
+    },
+    {
+      "id": "CVE-2026-104029",
+      "source_sha256": "68ff1f5eb10f484803ce907ada7c43405fdfe36d2550869446d0dc588ef01851",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Incorrect offset causes explicit out-of-bounds read."
+    },
+    {
+      "id": "CVE-2026-65122",
+      "source_sha256": "692901a071b4b9a185044fed73c35be84c5f11a03cdeac7b8fd557603caaa289",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies out-of-bounds read; terse source."
+    },
+    {
+      "id": "CVE-2026-79896",
+      "source_sha256": "84f5e56f3148f1e8a724b91137fc577d50666eb90084c48c93a96de4e920a3aa",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "TLS parser reads outside bounds."
+    },
+    {
+      "id": "CVE-2026-104030",
+      "source_sha256": "4827b708b118d495a54d29c7652360c49ab34b7d9cd555b4938de088b89d2cd7",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unterminated token read crosses buffer end."
+    },
+    {
+      "id": "CVE-2026-19029",
+      "source_sha256": "da332c50b2b113ecf0758149529638eedf2760e31261a5e923fdfb42e740290c",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Filter decoder overreads heap without chunk-bound checks."
+    },
+    {
+      "id": "CVE-2026-104042",
+      "source_sha256": "abcf4e587b0673d658a832cd28090836c97faf221189020675ce51c7869a7ca6",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Zero-length token processing reads beyond buffer."
+    },
+    {
+      "id": "CVE-2026-75819",
+      "source_sha256": "0d22f0731a92b3073ccd5e630b78f01728ed5947b828cbec4c1806e8fea65f78",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unchecked file-header offsets cause out-of-bounds read."
+    },
+    {
+      "id": "CVE-2026-106026",
+      "source_sha256": "6e2feb35eb2725a74c25545e21841581b5df66c4f1ec61112325fefe910f1368",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Rewrite-string routine has explicit out-of-bounds read."
+    },
+    {
+      "id": "CVE-2026-103641",
+      "source_sha256": "0786b3046eb49660431cec052a8697c37bd4192fd91b280da53f79b780aae633",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Truncated image scanline read passes mapped data end."
+    },
+    {
+      "id": "CVE-2026-95534",
+      "source_sha256": "5ce666575f7a59b647ac002c370f014a501b026fd7e771e6eae210b9e6cc2aef",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Untrusted PHP deserialization/object injection."
+    },
+    {
+      "id": "CVE-2026-100511",
+      "source_sha256": "0b5fc39130a81bed40f94a10c4b5bf0cf51ae78712e8bf33b396cd7129337218",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Untrusted deserialization."
+    },
+    {
+      "id": "CVE-2026-103349",
+      "source_sha256": "ceec22eb1f2b0df9d65b9a979bb53b80bb62c624767b6859c2caa4b6c01d2df1",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Untrusted deserialization."
+    },
+    {
+      "id": "CVE-2026-55083",
+      "source_sha256": "b2c50a9bad34923ba2f35bdf69684c68b0fa4fb9323607978353e1053e48f596",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unsafe Java deserialization."
+    },
+    {
+      "id": "CVE-2026-93617",
+      "source_sha256": "cdf29b10a2bff80c0daaff6e771fad4905ac616dd2a06b8ab3ed12ae8311d789",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Untrusted deserialization."
+    },
+    {
+      "id": "CVE-2026-107104",
+      "source_sha256": "48973a533742ba03604699e1f2f8f876214d0a638dae36a28b183f0dfef2340c",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "User-controlled unsafe deserialization."
+    },
+    {
+      "id": "CVE-2026-103831",
+      "source_sha256": "0ef15efba45c3ea5ba71ef7579b2b73b1d3f6d96767d487e6ce8c0e376d23bae",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unrestricted classes during PHP unserialize."
+    },
+    {
+      "id": "CVE-2026-103877",
+      "source_sha256": "aa3097ee28b3fe4801e943fba23c84fc174cd4886647e9e8d313616bdd7f47b2",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "LDAP parsing deserializes untrusted Java objects."
+    },
+    {
+      "id": "CVE-2026-71451",
+      "source_sha256": "3bd46c99d81a01a07631d6337e7e10e9e521fad433374395d9175d1e3f2a0d0d",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Explicit OS command injection; terse source."
+    },
+    {
+      "id": "CVE-2026-106059",
+      "source_sha256": "8ab7e2bdc7272efa1fdd9f328b8eb2c71dcb9f24a6ea8a2b5c9decc4b084e5a5",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped file name enters a shell command."
+    },
+    {
+      "id": "CVE-2026-75937",
+      "source_sha256": "cdbcf0594e13c0953b17cbc92961673f2a90211caeb4eefec9372414d26be2f1",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Explicit arbitrary OS command execution in web administration."
+    },
+    {
+      "id": "CVE-2026-91140",
+      "source_sha256": "2c049d0f0a859eeb43bdd24c896eb2384aeee46a28aad46f8ffd5d7a30c404ff",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Untrusted specification enters shell cleanup command."
+    },
+    {
+      "id": "CVE-2026-101207",
+      "source_sha256": "c42d0bcbd756737d5bdb0d7bc6d4f339ace0f2a8affd36509f0bcad651098605",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Explicit OS command injection."
+    },
+    {
+      "id": "CVE-2026-104859",
+      "source_sha256": "cc4a3798f449b78a11642560c1d7722159368b202e6b46615c2b89d52c52b475",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Untrusted configuration enters shell command strings."
+    },
+    {
+      "id": "CVE-2026-105793",
+      "source_sha256": "85a856c05f56588c02f6d0b44fbe6e0fcfcf63d45e6aa4e5113c45c5e52fa482",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Reparsed shell command on Android; not host/root execution."
+    },
+    {
+      "id": "CVE-2026-102160",
+      "source_sha256": "a0214d7a489ed7576929deca422b6b14444c5b090fe4920c95efeedf35259473",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Backup operation permits OS command injection."
+    },
+    {
+      "id": "CVE-2026-79898",
+      "source_sha256": "d3885bc14441e1da51b35ebd5aac911908b654e10932ca228db29b1100bf9562",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "CRL URL reaches shell substitution."
+    },
+    {
+      "id": "CVE-2026-82044",
+      "source_sha256": "74504d73ff3272b98b5063a6c6d00cdd7b38cad3694c31816eaaa8d7fbfd8c4d",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unvalidated server-side URL fetch reaches internal resources."
+    },
+    {
+      "id": "CVE-2026-105263",
+      "source_sha256": "9203c4d19ee2f92eb8763cf9bb058a9daa1c32f4529b52ff846d95b1d5b36456",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unvalidated metadata URL triggers server-side request."
+    },
+    {
+      "id": "CVE-2026-103757",
+      "source_sha256": "36816d7323375afd474991c80d342444f4db226585f4a37e5c04f5ba6615370e",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Attachment URL is passed to server-side fetch."
+    },
+    {
+      "id": "CVE-2026-76274",
+      "source_sha256": "6b87f3a9212b2dc13cd3964dc15549402b19e314abf61e141fea7e2f0a46d54c",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unvalidated outbound destination can disclose API token."
+    },
+    {
+      "id": "CVE-2026-105301",
+      "source_sha256": "5b8e918f9d7c49e48c36cedf1ec4768b573c704f8b3a837e4eb804e23e3ee7da",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "CRL/OCSP URL is fetched before certificate trust validation."
+    },
+    {
+      "id": "CVE-2026-80464",
+      "source_sha256": "f94503ffc60d6e7aaa917d9bf3df1db6dce94d7766abf090ec97ade5e6ff21ea",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Explicit server-side request forgery; terse source."
+    },
+    {
+      "id": "CVE-2026-55232",
+      "source_sha256": "b42d7cabacdac404f7a78361a95da2835ae9b3cb9b07ad4c9610027d76e4958e",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "IPv6 blacklist gap in server-side fetch."
+    },
+    {
+      "id": "CVE-2026-105122",
+      "source_sha256": "b0e8f779ed2faf8f7213a457d933cf5abe8e31713a5316ab5a9d09dbaee61875",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unvalidated jwks_uri causes server-side fetch."
+    },
+    {
+      "id": "CVE-2026-85215",
+      "source_sha256": "f5796a27e6b83fce1aaf134ac534e409073565d8559e952574c06beef8d92daf",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-42708",
+      "source_sha256": "efeebd86b1de4ee2ad330da686233f0a719e1c82dc82d5744d0cf79015355617",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-62059",
+      "source_sha256": "8db25603b81298c5de29ac7d73e6ead9bb73b1015ed6c228b2c8110a6b346edc",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-96267",
+      "source_sha256": "0b52befa27780d0665f9dd5653957a313ab882b79fa6a7f53c43bb99990eb1ca",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-42720",
+      "source_sha256": "ff269106d866469d8194b5d0ba3a86c1360bd63adb17fc91007d9082c166c720",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-62060",
+      "source_sha256": "c48b12bdd2cb06b15fc812c126e2e2dcdff59e6533871448fe7c618ef4871860",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-39785",
+      "source_sha256": "91beca06e5bf7a967c91d5f7477d8dffb4d8575f5c48ae0b129c38ac861fd49a",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-103766",
+      "source_sha256": "8b2dc4d1768c3f7a32c69c685ba6ea5abe7e4a6516a881fc5b67471388ee52bd",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-42721",
+      "source_sha256": "a0fc6e652d42694b5e43975689fc26aa7a6977b3a1d6e7a767a0c8ceac729ba9",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Description explicitly identifies SQL injection from untrusted input."
+    },
+    {
+      "id": "CVE-2026-105816",
+      "source_sha256": "249f5d43241e2b1e216777cf6379e7a8fe9a0d6c593bb3816f709021276ce00d",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-105834",
+      "source_sha256": "e8d37abb5fcd054196aa538fc1fb78c4d47e31c403e5c7e9a0de185bf5a0eeaa",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-105751",
+      "source_sha256": "4e0c59baaa8e49bfe8c3ed5233c311ae9bcd9a1ef83b89729f826339046a4652",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-87115",
+      "source_sha256": "6402ced4141ee38dc557ac076b85f12ae1f6054d595353f9a8b59a3420f56194",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-105174",
+      "source_sha256": "26cbcc65fcb239a2a2475384febbcd8aa79de84f21e47554220a0b7b181e8363",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-105286",
+      "source_sha256": "a0ccf781b600cd777e0c8f7de20bd6c66dfc12c875233fae8810880598ecb173",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-103648",
+      "source_sha256": "1ef5ac4a508653c3941701abf7dc0e1dfc3213ab94a55fc7bb2f3d7c255628d3",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-104871",
+      "source_sha256": "28fb6daecfd87e9821f9e91054e6bb502f6be7d58f080760ad8aeb1bae2335e3",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-41958",
+      "source_sha256": "3f517cc9fb055c876345c56bdce70ec34479c4a1c6574031b9fed7dd8cfad3be",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Missing path confinement permits traversal or access outside intended directory."
+    },
+    {
+      "id": "CVE-2026-92826",
+      "source_sha256": "6088c1068c09686afe3a1c4405a8d34039d7a6a4cdc8d9dc76e93475c012477e",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-105124",
+      "source_sha256": "3aa450cd2d3dc5eeea6842ac6680050e79e6e14ab07df95c1662512e06fd1002",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-102295",
+      "source_sha256": "88c2b6b5f18c0990f1efbdf1754762767b22054b6d8c0e373b4adf8bdef2bc4d",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-102576",
+      "source_sha256": "0bbab6420d22ddba8928d3f27bfa61fba6ef793ae9d3e495f0c0c9abd844a167",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-95595",
+      "source_sha256": "59240aaf43c3b4c6e20a3a21f679ee9eedab783226ddb6133e6981ae0da814a9",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-7174",
+      "source_sha256": "4d2a6dca49ced4c92e8469658cf7034fcd83c466398430d3b4c0236fafdd1a13",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-103063",
+      "source_sha256": "72423060503700187ebdb36821fac2855505c75b6bc4d2218196c600063a2f3f",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-59666",
+      "source_sha256": "e2087078d49a1fcc4afb5ad20231814d52b574e8c8099eae0a3bf43fa40bbc52",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-104673",
+      "source_sha256": "8d3cd6776f2df35b12e099af2718be28eaaf0edc1b2a535be3a5536f01943cbc",
+      "decision": "ACCEPT_SOURCE_SILVER_EXPLORATORY",
+      "rationale": "Unescaped or insufficiently sanitized web input enables script execution."
+    },
+    {
+      "id": "CVE-2026-25269",
+      "source_sha256": "19bb1ae33a7b61f93fb69c0f79fe00a225866456376f254dfc1749c8520e4ac3",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Excess allocation/memory corruption does not clearly distinguish write mechanism."
+    },
+    {
+      "id": "CVE-2026-59783",
+      "source_sha256": "c0fefdde5ce7b92047639cf98bbddbb67ab292bfc56ba1970ccebacb3252b553",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Null-byte input and crash do not establish out-of-bounds write."
+    },
+    {
+      "id": "CVE-2026-102163",
+      "source_sha256": "46e635a703e05da0b044042994734b5ef9b36b5da4b3a591b959a1afb3e305f7",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Crash/RCE consequence does not establish write mechanism."
+    },
+    {
+      "id": "CVE-2026-107221",
+      "source_sha256": "7491dfccb39a1cb24709960626a3e63358f1b174ecb3689136b2fd6b57abc30d",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Bounds-checked Go panic does not establish unsafe memory write."
+    },
+    {
+      "id": "CVE-2026-101258",
+      "source_sha256": "7406955b2466b6887d079543aeeb38cce4a83fef89fab0f1cf6f2153798007dd",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Memory corruption plus sandbox-bypass chain is ambiguous."
+    },
+    {
+      "id": "CVE-2026-59782",
+      "source_sha256": "e9c64a93ae69c58277a5c3a1cbe45277821d871b1d240aa13a749ba863790c3c",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Reading other heap data does not clearly establish out-of-bounds access."
+    },
+    {
+      "id": "CVE-2026-104037",
+      "source_sha256": "4d4701fb5d65f1632efa1dff94b63871acd027b8e6f6bf5bbc85f8dd2c619836",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Integer underflow/read chain: root versus consequence is ambiguous."
+    },
+    {
+      "id": "CVE-2026-104043",
+      "source_sha256": "03f11e192999d82b5144d800827b57180d84e47d5f1b9da374dc43a0839bcf32",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Integer underflow/read chain: root versus consequence is ambiguous."
+    },
+    {
+      "id": "CVE-2026-102164",
+      "source_sha256": "bebee6d2930ed705a67f61e8dc3713d3371cac3a51a9847ce127c8fc46f600cf",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Memory disclosure consequence does not establish read mechanism."
+    },
+    {
+      "id": "CVE-2026-106061",
+      "source_sha256": "e7b3413a628b90c24c45ec1cad7d6e4a0bdb56753e5abf5f3033f835bc7b06be",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Integer overflow/read chain: root versus consequence is ambiguous."
+    },
+    {
+      "id": "CVE-2026-106558",
+      "source_sha256": "9b51562e4f2c88d049ade45f7b29c26aad61445971b7fa012216b1de0aaacfaa",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Object import/instantiation is not a clear deserialization description."
+    },
+    {
+      "id": "CVE-2026-12544",
+      "source_sha256": "9583bdee6b5d536e7fe9a285b9449196f9b814ff6be732feb012b10f57f10f85",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Template injection and deserialization chain has multiple candidate roots."
+    },
+    {
+      "id": "CVE-2026-105697",
+      "source_sha256": "a7a7adaea8414d238d456677024680a8d25b368ab0469ce88a21d50ac71d7d37",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Compound command feature/misconfiguration is ambiguous for this pilot."
+    },
+    {
+      "id": "CVE-2026-103546",
+      "source_sha256": "0502cf31aaff671961adb252768a84dfa73b1d5d42a87df7e97a958508308d24",
+      "decision": "HOLD_AMBIGUOUS",
+      "rationale": "Administrative changes do not clearly describe an outbound request."
+    }
+  ],
+  "counts": {
+    "train": 47,
+    "dev": 16
+  },
+  "artifacts": {
+    "train": {
+      "path": "data/raw/cti-pilot-v1/train.jsonl",
+      "sha256": "96e3f5576f7b5f5c376b78c9e08b0c963519ed32eb5d4c99e369e3a5db4826d5",
+      "rows": 47,
+      "labels": {
+        "CWE-787": 5,
+        "CWE-125": 6,
+        "CWE-502": 6,
+        "CWE-78": 6,
+        "CWE-918": 6,
+        "CWE-89": 6,
+        "CWE-22": 6,
+        "CWE-79": 6
+      }
+    },
+    "dev": {
+      "path": "data/raw/cti-pilot-v1/dev.jsonl",
+      "sha256": "d6b590a8c3a6d83f5f2e099fcf2734a84b143978665700edb4806484a44648b9",
+      "rows": 16,
+      "labels": {
+        "CWE-787": 2,
+        "CWE-125": 2,
+        "CWE-502": 2,
+        "CWE-78": 2,
+        "CWE-918": 2,
+        "CWE-89": 2,
+        "CWE-22": 2,
+        "CWE-79": 2
+      }
+    }
+  },
+  "assignment_seed": 117,
+  "groups": {
+    "pilot-083f38b4656771d2": [
+      "CVE-2026-103349"
+    ],
+    "pilot-107f03bdbb56923f": [
+      "CVE-2026-104871"
+    ],
+    "pilot-1eed1cd6565ad0e4": [
+      "CVE-2026-82044"
+    ],
+    "pilot-1ef71f54e5f6df71": [
+      "CVE-2026-104673"
+    ],
+    "pilot-22b8479e537b6340": [
+      "CVE-2026-84854"
+    ],
+    "pilot-259cc3bee2ba1ace": [
+      "CVE-2026-75937"
+    ],
+    "pilot-2a4d3fe1b4c452d4": [
+      "CVE-2026-103648"
+    ],
+    "pilot-2c48fab51cdab63e": [
+      "CVE-2026-102295",
+      "CVE-2026-102576",
+      "CVE-2026-103641",
+      "CVE-2026-104029",
+      "CVE-2026-104030",
+      "CVE-2026-104036",
+      "CVE-2026-104042",
+      "CVE-2026-105301"
+    ],
+    "pilot-3161e547f415f127": [
+      "CVE-2026-76274"
+    ],
+    "pilot-35a37c6816fb55b7": [
+      "CVE-2026-42720"
+    ],
+    "pilot-3cd3689686a2d751": [
+      "CVE-2026-106059"
+    ],
+    "pilot-420aa3b2e17abe59": [
+      "CVE-2026-59666"
+    ],
+    "pilot-421b8b618faa5766": [
+      "CVE-2026-103766"
+    ],
+    "pilot-42858c0816225433": [
+      "CVE-2026-103416"
+    ],
+    "pilot-42d9a6af2f1d477f": [
+      "CVE-2026-96267"
+    ],
+    "pilot-45cfb6c2790fe33d": [
+      "CVE-2026-102160"
+    ],
+    "pilot-4688b28fd005d1c3": [
+      "CVE-2026-95534"
+    ],
+    "pilot-506df8636096f38b": [
+      "CVE-2026-42721"
+    ],
+    "pilot-5173e7d9e19be81e": [
+      "CVE-2026-103063"
+    ],
+    "pilot-58321d4642eb4b02": [
+      "CVE-2026-105122"
+    ],
+    "pilot-590556ef7d1c9bcc": [
+      "CVE-2026-62059"
+    ],
+    "pilot-5d079cd702ad3488": [
+      "CVE-2026-42708"
+    ],
+    "pilot-67a69f32850285dd": [
+      "CVE-2026-91140"
+    ],
+    "pilot-709fcb158e5eddf9": [
+      "CVE-2026-105286"
+    ],
+    "pilot-73be68f8ce7197ed": [
+      "CVE-2026-100511"
+    ],
+    "pilot-780b918ff9de7050": [
+      "CVE-2026-39785"
+    ],
+    "pilot-7bc3a89499bff756": [
+      "CVE-2026-105751"
+    ],
+    "pilot-7c12d8f95af77132": [
+      "CVE-2026-80464"
+    ],
+    "pilot-8fa4f83bd121b1ba": [
+      "CVE-2026-65122"
+    ],
+    "pilot-9563dcba27903ab7": [
+      "CVE-2026-7174"
+    ],
+    "pilot-96b28c92b1cdb398": [
+      "CVE-2026-106026"
+    ],
+    "pilot-9cd2d1e4c6090967": [
+      "CVE-2026-93617"
+    ],
+    "pilot-9f39dd652fe19566": [
+      "CVE-2026-105793"
+    ],
+    "pilot-a57d66dd8a2b4e6c": [
+      "CVE-2026-41958"
+    ],
+    "pilot-a5a6a8554b5dc979": [
+      "CVE-2026-75819"
+    ],
+    "pilot-a5ac5865c2b42d95": [
+      "CVE-2026-55083"
+    ],
+    "pilot-a6f0fd05d6764c36": [
+      "CVE-2026-101207"
+    ],
+    "pilot-a846981d8ad1f1cb": [
+      "CVE-2026-105263"
+    ],
+    "pilot-a8b6987f859a1735": [
+      "CVE-2026-107104"
+    ],
+    "pilot-a9153f4ee9b8e345": [
+      "CVE-2026-105174"
+    ],
+    "pilot-ab3b6367685c8ab0": [
+      "CVE-2026-62060"
+    ],
+    "pilot-ab8a43172db52219": [
+      "CVE-2026-71451"
+    ],
+    "pilot-ad1684d52a848419": [
+      "CVE-2026-87115"
+    ],
+    "pilot-b24f60cc678785d2": [
+      "CVE-2026-92826"
+    ],
+    "pilot-b294cb94921d7272": [
+      "CVE-2026-0461",
+      "CVE-2026-0482"
+    ],
+    "pilot-b2e2c0351f066716": [
+      "CVE-2026-103680"
+    ],
+    "pilot-bc33e06acc8b9551": [
+      "CVE-2026-104859"
+    ],
+    "pilot-bdac7379d0d83ff6": [
+      "CVE-2026-79896",
+      "CVE-2026-79898",
+      "CVE-2026-79900"
+    ],
+    "pilot-c599ae84c715463b": [
+      "CVE-2026-105834"
+    ],
+    "pilot-c7bec926c89205df": [
+      "CVE-2026-85215"
+    ],
+    "pilot-cf9e19e0eb0f7271": [
+      "CVE-2026-55232"
+    ],
+    "pilot-d45fb3add8f7cfc6": [
+      "CVE-2026-103831"
+    ],
+    "pilot-d6291b3029b2cf38": [
+      "CVE-2026-103757"
+    ],
+    "pilot-d66c5e711c09dca9": [
+      "CVE-2026-105816"
+    ],
+    "pilot-e1967c2287d3cdf0": [
+      "CVE-2026-105838"
+    ],
+    "pilot-e273d299099cdcae": [
+      "CVE-2026-19029"
+    ],
+    "pilot-e92bec75a50e6d59": [
+      "CVE-2026-95595"
+    ],
+    "pilot-f386d0d76f2c7346": [
+      "CVE-2026-105124"
+    ],
+    "pilot-fb3fc7b2330eab9f": [
+      "CVE-2026-103877"
+    ]
+  },
+  "training_scope": "Only the frozen pilot train file; original 1977-row intake remains HOLD.",
+  "official_test_rows": 0,
+  "model_predictions_used_for_selection": false,
+  "prior_debug_group_ids_excluded": 556,
+  "license": {
+    "source": "https://cveproject.github.io/docs/terms.html",
+    "source_html_sha256": "41702bb4a02d035017fe02f008928bb9dfd649ac58c628f95f41208bb5e7a473",
+    "plain_text_sha256": "18f2d6c19141f4fc89ef1f95d5affa816d0562883919451b644cd423c039f8fc",
+    "notice_files": [
+      "NOTICE.md",
+      "CVE-TERMS.txt"
+    ]
+  },
+  "limitations": [
+    "Eight-class convenience subset, not representative benchmark data.",
+    "CNA/NVD are related sources; agreement is not independent gold.",
+    "Assistant semantic review is not expert adjudication.",
+    "Vendor grouping intentionally overmerges products; hidden aliases may remain.",
+    "Development split guides engineering; it is not an independent final test.",
+    "No official CTI benchmark body was loaded."
+  ]
+}

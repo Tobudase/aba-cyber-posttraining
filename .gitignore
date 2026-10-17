@@ -7,7 +7,7 @@
 __pycache__/
 *.pyc
 vendor/
-data/
+data/*
 artifacts/
 handoff/
 *.safetensors
@@ -15,3 +15,19 @@ handoff/
 *.bin
 .kube/
 .DS_Store
+
+# Explicit public-data release allowlist; keep all other raw material ignored.
+!data/raw/
+data/raw/*
+!data/raw/cti-pilot-v1/
+data/raw/cti-pilot-v1/*
+!data/raw/cti-pilot-v1/train.jsonl
+!data/raw/cti-pilot-v1/dev.jsonl
+!data/raw/cti-pilot-v1/NOTICE.md
+!data/raw/cti-pilot-v1/CVE-TERMS.txt
+!data/manifests/
+data/manifests/*
+!data/manifests/cti-source-pilot-v1.json
+!data/synthetic/
+data/synthetic/*
+!data/synthetic/cti-rcm-fixture/

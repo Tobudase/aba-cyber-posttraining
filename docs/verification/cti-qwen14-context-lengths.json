@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-10-17T07:57:56.039605+00:00",
+  "status": "PASSED_LENGTH_ANALYSIS_ONLY",
+  "model_id": "Qwen/Qwen3-14B",
+  "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "records": 1977,
+  "intake_sha256": "6c24a29523c505b805dcdedc28d9fe6c7e9396397ae4ecc74bafefbe6bdd1980",
+  "enable_thinking": false,
+  "input_prompt_tokens": {
+    "min": 46,
+    "median": 98.0,
+    "p95": 207.0,
+    "max": 544,
+    "total": 226028,
+    "records_over_tokens": {
+      "256": 38,
+      "512": 1,
+      "1024": 0,
+      "2048": 0
+    }
+  },
+  "complete_label_only_chat_tokens": {
+    "min": 54,
+    "median": 106.0,
+    "p95": 215.0,
+    "max": 552,
+    "total": 241358,
+    "records_over_tokens": {
+      "256": 43,
+      "512": 2,
+      "1024": 0,
+      "2048": 0
+    }
+  },
+  "elapsed_seconds": 0.9693594169802964,
+  "remote_code": false,
+  "official_test_rows": 0,
+  "training_data_created": false,
+  "model_weights_loaded": false,
+  "limitations": [
+    "Classification-only, non-reasoning candidate template; research protocol not frozen.",
+    "These token counts do not measure GPU memory or training throughput.",
+    "All source descriptions and labels remain held for independent review."
+  ]
+}

@@ -1,0 +1,12 @@
+diff --git a/engine/builtin/nb_tree/search.py b/engine/builtin/nb_tree/search.py
+index e889b66..14c7ace 100644
+--- a/engine/builtin/nb_tree/search.py
++++ b/engine/builtin/nb_tree/search.py
+@@ -191,7 +191,6 @@ class NBTreeSearch(AIBuildAISearch[NBTreeSearchInput]):
+                     _CandidateHandle,
+                     await self.ctx.spawn(
+                         candidate.run,
+-                        "Start the assigned work.",
+                         upstream=(proposal.producer,),
+                         capture_failure=True,
+                     ),
