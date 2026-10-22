@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-18",
+  "repository": "Athena-Software-Group/athenabench",
+  "revision": "39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf",
+  "purpose": "Source review only; no official test examples, predictions, or weights downloaded",
+  "files": [
+    {
+      "path": "readme.md",
+      "bytes": 5872,
+      "sha256": "72c6fbddc26af2cf15a4ae614bf355747933afce6f683ca4f0a7a195eb2df135",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/readme.md"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 1432,
+      "sha256": "0668409d8a83703699b040c4ceebcb5c1d6dad9ec9b631b908e41e1e12abd8da",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/requirements.txt"
+    },
+    {
+      "path": "License.md",
+      "bytes": 3213,
+      "sha256": "bc1c0c70176e56b920171057fc2c410590162d1f918292d32faf57e0443fc0a1",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/License.md"
+    },
+    {
+      "path": "License.txt",
+      "bytes": 2574,
+      "sha256": "756f79c0f891067b84fb800de105cc45c38291bde430b21ca284fee77f1d494d",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/License.txt"
+    },
+    {
+      "path": "athena_eval/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/__init__.py"
+    },
+    {
+      "path": "athena_eval/evaluate.py",
+      "bytes": 17893,
+      "sha256": "ecb4f02c3f42351e48fd3199c30ac88f2507e258ced1263f345b69ccecb54e72",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/evaluate.py"
+    },
+    {
+      "path": "athena_eval/answer_extractors.py",
+      "bytes": 4136,
+      "sha256": "1562a339765b54433ca6302a4fc5d711a60e57967882d2e974dd079533adcef4",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/answer_extractors.py"
+    },
+    {
+      "path": "athena_eval/models.py",
+      "bytes": 8945,
+      "sha256": "4994ac9253986099abb4a7ef56a981e0f40bd14b159e2100afea7041659f535c",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/models.py"
+    },
+    {
+      "path": "athena_eval/run.py",
+      "bytes": 7653,
+      "sha256": "3e51b734f7d86437ce418ac95018a4edc73a7696b721de104eda1edb070ce5ed",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/run.py"
+    },
+    {
+      "path": "athena_eval/config.yaml",
+      "bytes": 1316,
+      "sha256": "ed56c1f966f80237c14d3479911a830c1cb2fa48b267aea957dac88d9ba47de6",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/config.yaml"
+    },
+    {
+      "path": "athena_eval/utils.py",
+      "bytes": 2186,
+      "sha256": "6cc83df89f2d0e7764b0a5ef562b00c75ae878f4fe40fc2c51ca5a3512767a44",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/utils.py"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-21T22:45:33.698512+00:00",
+  "upstream_heads": [
+    {
+      "repository": "Athena-Software-Group/athenabench",
+      "sha": "39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf",
+      "date": "2025-12-03T17:57:29Z",
+      "message": "readme update"
+    },
+    {
+      "repository": "RISys-Lab/KaliBench",
+      "sha": "0b5bf54c9e343f94e113874b98ff5de815780328",
+      "date": "2026-10-02T06:59:30Z",
+      "message": "Update arXiv link text in README.md"
+    }
+  ]
+}

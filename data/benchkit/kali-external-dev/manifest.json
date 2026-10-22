@@ -1,0 +1,32 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "kali",
+  "official_test": false,
+  "self_authored": true,
+  "splits": {
+    "dev_search": {
+      "file": "dev_search.jsonl",
+      "rows": 72,
+      "sha256": "28754b7786470f7def06bf2733fbf248f91c69861d6c73cc3715be21fbd60e21",
+      "quality": {
+        "AUTHORED_DOC_CHECKED_NARROW_SOURCE_SILVER_NOT_EXPERT_GOLD": 72
+      }
+    },
+    "dev_confirm": {
+      "file": "dev_confirm.jsonl",
+      "rows": 36,
+      "sha256": "fe254f3555202c440f8923f7ad26c82fc50ad1e36b915e0ac2692810cb3ad39a",
+      "quality": {
+        "AUTHORED_DOC_CHECKED_NARROW_SOURCE_SILVER_NOT_EXPERT_GOLD": 36
+      }
+    }
+  },
+  "limitations": [
+    "Self-authored defensive/readonly CLI examples, narrow tool coverage; not representative KaliBench validation.",
+    "Six filename variants per family are correlated, not independent cases; bootstrap by family.",
+    "Dev-confirm families are segregated, but same documentation/tools may occur across development splits.",
+    "Exact command/query overlap checked only against official TRAIN, not official TEST or historical model training.",
+    "No model predictions used to construct or split these rows; no commands executed.",
+    "These development labels require independent audit before strong research claims."
+  ]
+}

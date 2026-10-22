@@ -1,0 +1,297 @@
+{
+  "checked_at_utc": "2026-10-21T22:31:54.986515+00:00",
+  "status": "COMPLETE",
+  "code_revisions": {
+    "athena": "39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf",
+    "kali": "0b5bf54c9e343f94e113874b98ff5de815780328"
+  },
+  "models": {
+    "cisco": {
+      "id": "fdtn-ai/Foundation-Sec-8B-Reasoning",
+      "revision": "63c930c82d7646226d33502bec5870019738400e",
+      "license_card_field": "other",
+      "weight_files": [
+        "model-00001-of-00004.safetensors",
+        "model-00002-of-00004.safetensors",
+        "model-00003-of-00004.safetensors",
+        "model-00004-of-00004.safetensors"
+      ]
+    },
+    "redsage": {
+      "id": "RISys-Lab/RedSage-K-SFT-GRPO",
+      "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+      "license_card_field": null,
+      "weight_files": [
+        "model-00001-of-00004.safetensors",
+        "model-00002-of-00004.safetensors",
+        "model-00003-of-00004.safetensors",
+        "model-00004-of-00004.safetensors"
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": ".tools/benchkit/kali/src/model_score.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/model_score.py",
+      "sha256": "eba42588d692dfbe2a45d8dc22645fec5176664c85a46b15859dc805630460a9",
+      "bytes": 11746
+    },
+    {
+      "path": ".tools/benchkit/kali/src/prompt.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/prompt.py",
+      "sha256": "7f0b39d6ab9e9fa0fd86bede0a6476506c7b2d7e7095a9527738b2f367d25118",
+      "bytes": 10924
+    },
+    {
+      "path": ".tools/benchkit/kali/src/prompt_builder.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/prompt_builder.py",
+      "sha256": "5ba6ca501b78ab87229143a9ca55326c7efe71e8c8dc3f79075ba0643e365ecc",
+      "bytes": 9950
+    },
+    {
+      "path": ".tools/benchkit/kali/src/io_utils.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/io_utils.py",
+      "sha256": "d78555c23d08c2862a969e07b6c438b9de4bb77d070b9c6e1e96551dfbbb1605",
+      "bytes": 1485
+    },
+    {
+      "path": ".tools/benchkit/kali/src/evaluate.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/evaluate.py",
+      "sha256": "7c4c2a822dd84ec4e85c68a3226117d47a574911f430e657239d1cca8aed32de",
+      "bytes": 21142
+    },
+    {
+      "path": ".tools/benchkit/kali/src/vllm_inference.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/vllm_inference.py",
+      "sha256": "f1869e89ac5b553cfd49ebd11c5018776380f961ad437b3bcd63891fd5562886",
+      "bytes": 5861
+    },
+    {
+      "path": ".tools/benchkit/kali/src/vllm_runtime.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/vllm_runtime.py",
+      "sha256": "63632e2d7458064e6430b0db1fd80a96cecad1f41c98f38c662f6dd17fc5a31d",
+      "bytes": 2373
+    },
+    {
+      "path": ".tools/benchkit/kali/src/prediction_checkpoint.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/prediction_checkpoint.py",
+      "sha256": "e73fc6b13fa7ed1efd1d87a05dd133b711425717fc624a9353fd7e3c2556280d",
+      "bytes": 4286
+    },
+    {
+      "path": ".tools/benchkit/kali/src/train/sft_kalibench.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/train/sft_kalibench.py",
+      "sha256": "88062c2f540adc09347207bc45a092864fa09d4fbbf6fda454b3779352fe84cc",
+      "bytes": 30982
+    },
+    {
+      "path": ".tools/benchkit/kali/src/train/grpo_kalibench.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/train/grpo_kalibench.py",
+      "sha256": "3fa53f1c4a97ea4c379127654912afc4b99b76faaea584126314b67fa0f3dd47",
+      "bytes": 58503
+    },
+    {
+      "path": ".tools/benchkit/kali/Scoring/model_score.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/Scoring/model_score.py",
+      "sha256": "9457075531670ca45a3b384ae354877793e77102c69343260728d48fb855b1bd",
+      "bytes": 10285
+    },
+    {
+      "path": ".tools/benchkit/kali/src/scoring_pipeline.py",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/src/scoring_pipeline.py",
+      "sha256": "e418d6f5e8681ed0e178c6390466d63dcfa82c907c79913dc1df4ce4c331ed09",
+      "bytes": 6607
+    },
+    {
+      "path": ".tools/benchkit/kali/docs/evaluation.md",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/docs/evaluation.md",
+      "sha256": "ef5ae53fdb4a2e8d3b9b7da3bb1f0e995e80188931e798383d431e1c1d8e418e",
+      "bytes": 5486
+    },
+    {
+      "path": ".tools/benchkit/kali/docs/training.md",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/docs/training.md",
+      "sha256": "067f8e28e7ac2d4bb965292e928b3ed05a84228383404810d08dc715b9c4a50b",
+      "bytes": 6467
+    },
+    {
+      "path": ".tools/benchkit/kali/docs/reference.md",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/docs/reference.md",
+      "sha256": "ffd8369e1c738303320b015fc054a711c2588a085ca2e1dbdab6c610fb42770e",
+      "bytes": 4343
+    },
+    {
+      "path": ".tools/benchkit/kali/README.md",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/README.md",
+      "sha256": "9d0676f98874cb2ae79157c9d605f2b1baf4ea3d1757ffe6efde41953f2615ba",
+      "bytes": 4423
+    },
+    {
+      "path": ".tools/benchkit/kali/requirements.txt",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/requirements.txt",
+      "sha256": "a1fb64cd2110b47c6a6c32fc53d235266a9078edac8a0a2133ebb3cb7e0a01ba",
+      "bytes": 274
+    },
+    {
+      "path": ".tools/benchkit/kali/pages/README.md",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/pages/README.md",
+      "sha256": "86a35c3c370bfccf6eafbc36f58f352129f908ff4b95a1e9598388cc9c3b693f",
+      "bytes": 8708
+    },
+    {
+      "path": ".tools/benchkit/kali/KaliBench_data/kalibench_verified_train_3504.jsonl",
+      "url": "https://raw.githubusercontent.com/RISys-Lab/KaliBench/0b5bf54c9e343f94e113874b98ff5de815780328/KaliBench_data/kalibench_verified_train_3504.jsonl",
+      "sha256": "93dc4ddff6d9df73bed4b9e92716470e7a73df513f5ca2f1b201c85f2329f909",
+      "bytes": 12815231
+    },
+    {
+      "path": ".tools/benchkit/athena/athena_eval/taa/aliases.csv",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/taa/aliases.csv",
+      "sha256": "f6b3a56a3cdae1930a3af9dc2f35d452ebc315a97a794724f4c28a8e598a5ade",
+      "bytes": 33182
+    },
+    {
+      "path": ".tools/benchkit/athena/athena_eval/taa/related_groups.csv",
+      "url": "https://raw.githubusercontent.com/Athena-Software-Group/athenabench/39d3a74eaf84b93e21dde0a4b60ddd4f08620eaf/athena_eval/taa/related_groups.csv",
+      "sha256": "788815e7db4f7b1a4f2442db616c2ef9f564b7b56d90e79082e0932660babba4",
+      "bytes": 44155
+    },
+    {
+      "path": ".tools/benchkit/docs/openssl-dgst.html",
+      "url": "https://docs.openssl.org/3.5/man1/openssl-dgst/",
+      "sha256": "d9d078a6b3b43e3d762ed0cc3a374f8a485b4ea0e2e0b217b1785e759e380254",
+      "bytes": 45528
+    },
+    {
+      "path": ".tools/benchkit/docs/openssl-x509.html",
+      "url": "https://docs.openssl.org/3.5/man1/openssl-x509/",
+      "sha256": "0744a4338e9bc332376888551a6268cc203c8af57efe46a5bd1da3c39d2734c3",
+      "bytes": 72465
+    },
+    {
+      "path": ".tools/benchkit/docs/tshark.html",
+      "url": "https://www.wireshark.org/docs/man-pages/tshark.html",
+      "sha256": "35a040d9079272f014f616d48dea173ef7d3069ac47b22fb712171c8e3dd515c",
+      "bytes": 173588
+    },
+    {
+      "path": ".tools/benchkit/docs/tcpdump.html",
+      "url": "https://www.tcpdump.org/manpages/tcpdump.1.html",
+      "sha256": "d4ab5583445c6b69e4cd5013d539b8007e64d9705ffafe9a27f40b86da329a1a",
+      "bytes": 78435
+    },
+    {
+      "path": ".tools/benchkit/docs/jq.html",
+      "url": "https://jqlang.org/manual/",
+      "sha256": "20fac47d9ce06dee1f5fa40490ab6de81d4b306d7bccbe193f653766145f5f6a",
+      "bytes": 496215
+    },
+    {
+      "path": ".tools/benchkit/docs/coreutils.html",
+      "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html",
+      "sha256": "8fc1770aeea95420f200501549cd6aaef3cc4fd94a92e94b51510c67bbe0bcad",
+      "bytes": 2191744
+    },
+    {
+      "path": ".tools/benchkit/docs/ss.html",
+      "url": "https://man7.org/linux/man-pages/man8/ss.8.html",
+      "sha256": "0e077ba9125e0fcf017fd61a404599249ec5960b0af310d755225817849ca069",
+      "bytes": 29103
+    },
+    {
+      "path": ".tools/benchkit/docs/grep.html",
+      "url": "https://www.gnu.org/software/grep/manual/grep.html",
+      "sha256": "517177d02c39c446470c898273036a7616f705e4cbdcb6486b76a25700675f37",
+      "bytes": 248692
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/tokenizer.json",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/tokenizer.json",
+      "sha256": "88fb81f6493ea9017c2b2e25c95beab7b8d961a9aac5c6a5a5b5a01dc7be902d",
+      "bytes": 17213681
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/tokenizer_config.json",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/tokenizer_config.json",
+      "sha256": "6929a5446c216be88f5341809f157ed5fb6bc30f64e2725488ddec9bd209a8a9",
+      "bytes": 57134
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/config.json",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/config.json",
+      "sha256": "319a3278ff78931b84188a99e419916e7ab6cae7eb4247e8b8a9dd30c9546278",
+      "bytes": 938
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/generation_config.json",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/generation_config.json",
+      "sha256": "06d977635ff4b730cb511ca110c547b949f43a01be83a93896154a0b57c35981",
+      "bytes": 260
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/special_tokens_map.json",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/special_tokens_map.json",
+      "sha256": "8d06f85908b8165c544858d97b2ab6863c7ef18ad47fbb16df3dd2877e3415a2",
+      "bytes": 710
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/README.md",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/README.md",
+      "sha256": "31a8183c29652ba8dedf63ef9d527e4890412ed44f74c8da21877df1b43d24b6",
+      "bytes": 13959
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/LICENSE_APACHE2.md",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/LICENSE_APACHE2.md",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/LICENSE_LLAMA31.md",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/LICENSE_LLAMA31.md",
+      "sha256": "8a9aa234c748b9831a209810962cb0401200a2458ab42e8b3809d96d3c71b7c6",
+      "bytes": 78
+    },
+    {
+      "path": ".tools/benchkit/models/cisco/NOTICE.md",
+      "url": "https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning/resolve/63c930c82d7646226d33502bec5870019738400e/NOTICE.md",
+      "sha256": "c880be8c49c67669487eb2395914ecc6f69546d0b757ba69a80d42e70ee496ec",
+      "bytes": 257
+    },
+    {
+      "path": ".tools/benchkit/models/redsage/tokenizer.json",
+      "url": "https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO/resolve/843e2e3096e7de68f5c35eb16238f4909f21695a/tokenizer.json",
+      "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+      "bytes": 11422924
+    },
+    {
+      "path": ".tools/benchkit/models/redsage/tokenizer_config.json",
+      "url": "https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO/resolve/843e2e3096e7de68f5c35eb16238f4909f21695a/tokenizer_config.json",
+      "sha256": "9547e91b4d4682c40337c6f5af3cf8017b3910347f7ec9ca2ee551c1e4c823a6",
+      "bytes": 7831
+    },
+    {
+      "path": ".tools/benchkit/models/redsage/config.json",
+      "url": "https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO/resolve/843e2e3096e7de68f5c35eb16238f4909f21695a/config.json",
+      "sha256": "8729d2255cda98f506efc0bd6e68585bd1300af6a5715287f259c057cdcd43ef",
+      "bytes": 1814
+    },
+    {
+      "path": ".tools/benchkit/models/redsage/chat_template.jinja",
+      "url": "https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO/resolve/843e2e3096e7de68f5c35eb16238f4909f21695a/chat_template.jinja",
+      "sha256": "243e67343dd1cd38f29d779fc98d11f1a2edd097a6561882ca4aa77f8dbd1d1f",
+      "bytes": 2586
+    },
+    {
+      "path": ".tools/benchkit/models/redsage/README.md",
+      "url": "https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO/resolve/843e2e3096e7de68f5c35eb16238f4909f21695a/README.md",
+      "sha256": "9eff2f0bef6438a43daeb80e0566a60b2a52de3d49e36781229ffbf6554636eb",
+      "bytes": 11324
+    }
+  ],
+  "failures": [],
+  "official_test_files_downloaded": 0,
+  "model_weights_downloaded": 0,
+  "code_executed_by_fetcher": false,
+  "kali_train_status": "TRAIN_ONLY_SOURCE_LABELS_NOT_INDEPENDENTLY_AUDITED"
+}

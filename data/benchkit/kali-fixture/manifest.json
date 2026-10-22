@@ -1,0 +1,19 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "kali",
+  "official_test": false,
+  "synthetic_only": true,
+  "splits": {
+    "dev": {
+      "file": "dev.jsonl",
+      "rows": 3,
+      "sha256": "d0c1d8aae3489abc5c997bfaf25c39aa98db59ca06d7b0e03a16f78d91b4ae7c",
+      "quality": {
+        "AUTHORED_INTERFACE_ONLY": 3
+      }
+    }
+  },
+  "limitations": [
+    "Three harmless authored CLI cases; not cybersecurity research validation."
+  ]
+}

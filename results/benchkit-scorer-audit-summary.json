@@ -1,0 +1,201 @@
+{
+  "checked_at_utc": "2026-10-21T22:28:51.933003+00:00",
+  "status": "AUDIT_COMPLETE_NATIVE_SCORING_LIMITATIONS_CONFIRMED",
+  "kali_authored_cases": [
+    {
+      "name": "correct",
+      "label": {
+        "tool_name": "head",
+        "ground_truth_command": "head -n 5 notes.txt",
+        "optional_args": {
+          "--lines|-n": "5"
+        },
+        "positional_args": [
+          "notes.txt"
+        ]
+      },
+      "response": "<output>head -n 5 notes.txt</output>",
+      "native": {
+        "pred_cmd": "head -n 5 notes.txt",
+        "gt_cmd": "head -n 5 notes.txt",
+        "tool_score": 1.0,
+        "optional_f1": 1.0,
+        "positional_f1": 1.0,
+        "total_score": 1.0,
+        "exact_match": 1.0,
+        "format_error": 0.0
+      },
+      "strict_option_value_correct": true
+    },
+    {
+      "name": "wrong_value",
+      "label": {
+        "tool_name": "head",
+        "ground_truth_command": "head -n 5 notes.txt",
+        "optional_args": {
+          "--lines|-n": "5"
+        },
+        "positional_args": [
+          "notes.txt"
+        ]
+      },
+      "response": "<output>head -n 99 notes.txt</output>",
+      "native": {
+        "pred_cmd": "head -n 99 notes.txt",
+        "gt_cmd": "head -n 5 notes.txt",
+        "tool_score": 1.0,
+        "optional_f1": 1.0,
+        "positional_f1": 1.0,
+        "total_score": 1.0,
+        "exact_match": 1.0,
+        "format_error": 0.0
+      },
+      "strict_option_value_correct": false
+    },
+    {
+      "name": "wrong_alias_value",
+      "label": {
+        "tool_name": "head",
+        "ground_truth_command": "head -n 5 notes.txt",
+        "optional_args": {
+          "--lines|-n": "5"
+        },
+        "positional_args": [
+          "notes.txt"
+        ]
+      },
+      "response": "<output>head --lines=99 notes.txt</output>",
+      "native": {
+        "pred_cmd": "head --lines=99 notes.txt",
+        "gt_cmd": "head -n 5 notes.txt",
+        "tool_score": 1.0,
+        "optional_f1": 1.0,
+        "positional_f1": 1.0,
+        "total_score": 1.0,
+        "exact_match": 1.0,
+        "format_error": 0.0
+      },
+      "strict_option_value_correct": false
+    },
+    {
+      "name": "missing_option_value",
+      "label": {
+        "tool_name": "head",
+        "ground_truth_command": "head -n 5 notes.txt",
+        "optional_args": {
+          "--lines|-n": "5"
+        },
+        "positional_args": [
+          "notes.txt"
+        ]
+      },
+      "response": "<output>head -n notes.txt</output>",
+      "native": {
+        "pred_cmd": "head -n notes.txt",
+        "gt_cmd": "head -n 5 notes.txt",
+        "tool_score": 1.0,
+        "optional_f1": 1.0,
+        "positional_f1": 0.0,
+        "total_score": 0.6666666666666666,
+        "exact_match": 0.0,
+        "format_error": 0.0
+      },
+      "strict_option_value_correct": false
+    },
+    {
+      "name": "wrong_filename",
+      "label": {
+        "tool_name": "head",
+        "ground_truth_command": "head -n 5 notes.txt",
+        "optional_args": {
+          "--lines|-n": "5"
+        },
+        "positional_args": [
+          "notes.txt"
+        ]
+      },
+      "response": "<output>head -n 5 other.txt</output>",
+      "native": {
+        "pred_cmd": "head -n 5 other.txt",
+        "gt_cmd": "head -n 5 notes.txt",
+        "tool_score": 1.0,
+        "optional_f1": 1.0,
+        "positional_f1": 0.0,
+        "total_score": 0.6666666666666666,
+        "exact_match": 0.0,
+        "format_error": 0.0
+      },
+      "strict_option_value_correct": false
+    }
+  ],
+  "kali_train_gold_echo_rows": 3504,
+  "kali_train_gold_echo_nonperfect_rows": 128,
+  "athena_authored_six_task_summary": {
+    "tasks": {
+      "ATE": {
+        "rows": 1,
+        "native_metric": 100.0,
+        "native_valid_rows": 1,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_metric": 100.0
+      },
+      "CKT": {
+        "rows": 1,
+        "native_metric": 100.0,
+        "native_valid_rows": 1,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_metric": 100.0
+      },
+      "RCM": {
+        "rows": 1,
+        "native_metric": 100.0,
+        "native_valid_rows": 1,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_metric": 100.0
+      },
+      "RMS": {
+        "rows": 1,
+        "native_metric": 100.0,
+        "native_valid_rows": 1,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_metric": 100.0
+      },
+      "TAA": {
+        "rows": 1,
+        "native_metric": 100.0,
+        "native_valid_rows": 1,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_metric": 100.0
+      },
+      "VSP": {
+        "rows": 1,
+        "native_metric": 100.0,
+        "native_valid_rows": 1,
+        "runtime_failed_rows": 0,
+        "valid_only_MAE": 0.0,
+        "coverage": 1.0
+      }
+    },
+    "combined_native": 100.0,
+    "warning": "Native VSP excludes invalid outputs; inspect coverage. Not a benchmark score unless official full protocol is satisfied."
+  },
+  "athena_invalid_vsp_summary": {
+    "tasks": {
+      "VSP": {
+        "rows": 1,
+        "native_metric": 100.0,
+        "native_valid_rows": 0,
+        "runtime_failed_rows": 0,
+        "valid_only_MAE": null,
+        "coverage": 0.0
+      }
+    },
+    "combined_native": null,
+    "warning": "Native VSP excludes invalid outputs; inspect coverage. Not a benchmark score unless official full protocol is satisfied."
+  },
+  "commands_executed": 0,
+  "model_generation_calls": 0,
+  "official_test_files_downloaded": 0,
+  "published_scores_proven_affected": false,
+  "warning": "These are scorer/interface audits, not model baseline results. Strict option-value diagnostic is separately named, not a silent official scorer patch."
+}

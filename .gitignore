@@ -31,3 +31,11 @@ data/manifests/*
 !data/synthetic/
 data/synthetic/*
 !data/synthetic/cti-rcm-fixture/
+
+# Curated October21 release: licensed external CVE pilot and authored CLI dev.
+!data/benchkit/
+data/benchkit/*
+!data/benchkit/athena-v3/
+!data/benchkit/kali-external-dev/
+!data/benchkit/kali-fixture/
+docs/verification/athenabench-2026-10-18/source/

@@ -1,0 +1,90 @@
+{
+  "schema": "benchkit.protocol.v1",
+  "benchmark": "athena",
+  "model": {
+    "id": "fdtn-ai/Foundation-Sec-8B-Reasoning",
+    "revision": "63c930c82d7646226d33502bec5870019738400e",
+    "license_card_field": "other",
+    "weight_files": [
+      "model-00001-of-00004.safetensors",
+      "model-00002-of-00004.safetensors",
+      "model-00003-of-00004.safetensors",
+      "model-00004-of-00004.safetensors"
+    ]
+  },
+  "status": "DRAFT_DEV_PROTOCOL_NOT_OFFICIAL_LEADERBOARD_REPRODUCTION",
+  "train_manifest": "data/benchkit/athena-v3/manifest.json",
+  "train_manifest_sha256": "0d3eb9d263abd3512dbd53f5f2492ed0d8faa5294a3b1eab702eb199ccf5a066",
+  "dev_manifest": "data/benchkit/athena-v3/manifest.json",
+  "dev_manifest_sha256": "0d3eb9d263abd3512dbd53f5f2492ed0d8faa5294a3b1eab702eb199ccf5a066",
+  "dev_split": "dev",
+  "inference": {
+    "temperature": 0,
+    "seed": 42,
+    "max_output_tokens": 2048,
+    "batch_size": 1,
+    "dtype": "bfloat16",
+    "fix_mistral_regex": false,
+    "native_generation_template": true
+  },
+  "training": {
+    "method": "QLoRA",
+    "quantization": "NF4",
+    "compute_dtype": "bfloat16",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "learning_rate": 0.0001,
+    "max_length": 2048,
+    "seed": 42,
+    "initial_smoke_steps": 20,
+    "supervision": "native_full_chat_final_only_no_fabricated_reasoning"
+  },
+  "experiments": {
+    "E0": "pinned_pretrained_no_new_training",
+    "E1": "fixed_recipe_SFT",
+    "E2": "ABA_at_most_3_candidates_all_costs_recorded",
+    "E3_optional": "E2_data_with_E1_recipe"
+  },
+  "selection_objective": {
+    "status": "PROPOSED_EXTERNAL_DEV_ONLY_NOT_OFFICIAL_SCORER_REPLACEMENT",
+    "metric": "all_requested_strict_metric_RCM",
+    "report_native_metrics_alongside": true,
+    "reason": "Use full requested-set accuracy; native Kali exact can ignore wrong option values.",
+    "official_test_feedback_used": false
+  },
+  "budget": {
+    "concurrent_a100_per_person": 1,
+    "aba_max_candidates": 3,
+    "initial_engineering_gpu_hours_cap": 2,
+    "initial_total_gpu_hours_plan": 12,
+    "train_job_deadline_seconds": 7200,
+    "formal_eval_budget_measured": false
+  },
+  "official_final_evaluation": {
+    "enabled": false,
+    "freeze_required": true,
+    "scope": "950_six_task_mini",
+    "test_files_present": false,
+    "per_test_feedback_to_ABA": false
+  },
+  "blockers": [
+    "Nautilus namespace pods=0",
+    "Actual GPU model/runtime/throughput not validated",
+    "Reasoning vs final-only SFT behavior needs external-dev validation",
+    "Official-test overlap audit and final protocol freeze incomplete",
+    "Small source-silver RCM pilot only; additional tasks/training coverage incomplete",
+    "Native VSP invalid-output denominator issue; report coverage"
+  ],
+  "confirmation_split": {
+    "manifest": "data/benchkit/athena-v3/manifest.json",
+    "split": "dev_confirm",
+    "rows": 9,
+    "reserved_from_ABA_search": true,
+    "limitation": "Only8source groups/4classes; not a representative final test."
+  }
+}

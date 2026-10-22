@@ -1,0 +1,238 @@
+{
+  "checked_at_utc": "2026-10-22T01:24:52.291014+00:00",
+  "status": "ALL128_STATICALLY_TRIAGED_NO_SOURCE_EDITS",
+  "hold_sha256": "677bd6dd70cfd23146dfecbf60f70c67f51a7756b7518d8b5b58690d988128d9",
+  "rows": 128,
+  "primary_bucket_counts": {
+    "REPEATED_FLAG_COUNT_VS_ALIAS_GROUP_COUNT": 8,
+    "MULTIWORD_OPTION_VALUE_SCHEMA": 18,
+    "SUBCOMMAND_OR_ACTION_IN_POSITIONAL_PARSE": 10,
+    "COMMAND_FLAGS_NOT_IN_DECLARED_OPTION_SCHEMA": 15,
+    "OPTION_VALUE_STARTS_WITH_DASH": 24,
+    "PARSED_POSITIONALS_DIFFER_FROM_DECLARED_SCHEMA": 8,
+    "METADATA_TOOL_DIFFERS_FROM_EXECUTABLE": 26,
+    "MANPAGE_OPTION_GRAMMAR_NOT_EXPANDED": 5,
+    "NON_DASH_OPTION_PREFIX": 8,
+    "SHELL_COMPOSITION_OR_REDIRECTION": 4,
+    "LIST_VALUED_OR_REPEATED_OPTION_SCHEMA": 2
+  },
+  "feature_counts_nonexclusive": {
+    "REPEATED_FLAG_COUNT_VS_ALIAS_GROUP_COUNT": 11,
+    "MULTIWORD_OPTION_VALUE_SCHEMA": 22,
+    "PARSED_POSITIONALS_DIFFER_FROM_DECLARED_SCHEMA": 70,
+    "SUBCOMMAND_OR_ACTION_IN_POSITIONAL_PARSE": 15,
+    "COMMAND_FLAGS_NOT_IN_DECLARED_OPTION_SCHEMA": 43,
+    "OPTION_VALUE_STARTS_WITH_DASH": 25,
+    "METADATA_TOOL_DIFFERS_FROM_EXECUTABLE": 26,
+    "MANPAGE_OPTION_GRAMMAR_NOT_EXPANDED": 5,
+    "NON_DASH_OPTION_PREFIX": 13,
+    "SHELL_COMPOSITION_OR_REDIRECTION": 4,
+    "SHELL_BACKSLASH_TOKENIZATION": 2,
+    "LIST_VALUED_OR_REPEATED_OPTION_SCHEMA": 2,
+    "PACKAGE_QUALIFIED_TOOL_NAME": 13,
+    "INTERPRETER_OR_LAUNCHER_WRAPPER": 7
+  },
+  "native_exact_failed_rows": 57,
+  "authored_reproductions": [
+    {
+      "name": "duplicate-flag",
+      "label": {
+        "tool_name": "grep",
+        "ground_truth_command": "grep -n -n ERROR report.log",
+        "optional_args": {
+          "-n": null
+        },
+        "positional_args": [
+          "ERROR",
+          "report.log"
+        ]
+      },
+      "diagnosis": {
+        "primary_bucket": "REPEATED_FLAG_COUNT_VS_ALIAS_GROUP_COUNT",
+        "features": [
+          "REPEATED_FLAG_COUNT_VS_ALIAS_GROUP_COUNT"
+        ],
+        "metadata_tool": "grep",
+        "parsed_executable": "grep",
+        "declared_positionals": [
+          "ERROR",
+          "report.log"
+        ],
+        "native_parsed_positionals": [
+          "ERROR",
+          "report.log"
+        ],
+        "unexplained_parsed_flags": [],
+        "native_metrics": {
+          "tool_score": 1.0,
+          "optional_f1": 0.6666666666666666,
+          "positional_f1": 1.0,
+          "total_score": 0.8888888888888888,
+          "exact_match": 1.0
+        },
+        "training_eligible": false,
+        "disposition": "KEEP_HOLD_NO_AUTOMATIC_RELABEL"
+      }
+    },
+    {
+      "name": "negative-value",
+      "label": {
+        "tool_name": "demo",
+        "ground_truth_command": "demo --offset -1 report.txt",
+        "optional_args": {
+          "--offset": "-1"
+        },
+        "positional_args": [
+          "report.txt"
+        ]
+      },
+      "diagnosis": {
+        "primary_bucket": "OPTION_VALUE_STARTS_WITH_DASH",
+        "features": [
+          "OPTION_VALUE_STARTS_WITH_DASH",
+          "COMMAND_FLAGS_NOT_IN_DECLARED_OPTION_SCHEMA"
+        ],
+        "metadata_tool": "demo",
+        "parsed_executable": "demo",
+        "declared_positionals": [
+          "report.txt"
+        ],
+        "native_parsed_positionals": [
+          "report.txt"
+        ],
+        "unexplained_parsed_flags": [
+          "-1"
+        ],
+        "native_metrics": {
+          "tool_score": 1.0,
+          "optional_f1": 0.6666666666666666,
+          "positional_f1": 1.0,
+          "total_score": 0.8888888888888888,
+          "exact_match": 0.0
+        },
+        "training_eligible": false,
+        "disposition": "KEEP_HOLD_NO_AUTOMATIC_RELABEL"
+      }
+    },
+    {
+      "name": "action-not-listed",
+      "label": {
+        "tool_name": "demo",
+        "ground_truth_command": "demo inspect report.txt",
+        "optional_args": {},
+        "positional_args": [
+          "report.txt"
+        ]
+      },
+      "diagnosis": {
+        "primary_bucket": "SUBCOMMAND_OR_ACTION_IN_POSITIONAL_PARSE",
+        "features": [
+          "PARSED_POSITIONALS_DIFFER_FROM_DECLARED_SCHEMA",
+          "SUBCOMMAND_OR_ACTION_IN_POSITIONAL_PARSE"
+        ],
+        "metadata_tool": "demo",
+        "parsed_executable": "demo",
+        "declared_positionals": [
+          "report.txt"
+        ],
+        "native_parsed_positionals": [
+          "inspect",
+          "report.txt"
+        ],
+        "unexplained_parsed_flags": [],
+        "native_metrics": {
+          "tool_score": 1.0,
+          "optional_f1": 1.0,
+          "positional_f1": 0.6666666666666666,
+          "total_score": 0.8888888888888888,
+          "exact_match": 1.0
+        },
+        "training_eligible": false,
+        "disposition": "KEEP_HOLD_NO_AUTOMATIC_RELABEL"
+      }
+    },
+    {
+      "name": "qualified-tool",
+      "label": {
+        "tool_name": "package/tool",
+        "ground_truth_command": "tool report.txt",
+        "optional_args": {},
+        "positional_args": [
+          "report.txt"
+        ]
+      },
+      "diagnosis": {
+        "primary_bucket": "METADATA_TOOL_DIFFERS_FROM_EXECUTABLE",
+        "features": [
+          "METADATA_TOOL_DIFFERS_FROM_EXECUTABLE",
+          "PACKAGE_QUALIFIED_TOOL_NAME"
+        ],
+        "metadata_tool": "package/tool",
+        "parsed_executable": "tool",
+        "declared_positionals": [
+          "report.txt"
+        ],
+        "native_parsed_positionals": [
+          "report.txt"
+        ],
+        "unexplained_parsed_flags": [],
+        "native_metrics": {
+          "tool_score": 0.0,
+          "optional_f1": 1.0,
+          "positional_f1": 1.0,
+          "total_score": 0.6666666666666666,
+          "exact_match": 1.0
+        },
+        "training_eligible": false,
+        "disposition": "KEEP_HOLD_NO_AUTOMATIC_RELABEL"
+      }
+    },
+    {
+      "name": "slash-option",
+      "label": {
+        "tool_name": "demo",
+        "ground_truth_command": "demo /out report.txt",
+        "optional_args": {
+          "/out": null
+        },
+        "positional_args": [
+          "report.txt"
+        ]
+      },
+      "diagnosis": {
+        "primary_bucket": "NON_DASH_OPTION_PREFIX",
+        "features": [
+          "NON_DASH_OPTION_PREFIX",
+          "PARSED_POSITIONALS_DIFFER_FROM_DECLARED_SCHEMA"
+        ],
+        "metadata_tool": "demo",
+        "parsed_executable": "demo",
+        "declared_positionals": [
+          "report.txt"
+        ],
+        "native_parsed_positionals": [
+          "/out",
+          "report.txt"
+        ],
+        "unexplained_parsed_flags": [],
+        "native_metrics": {
+          "tool_score": 1.0,
+          "optional_f1": 0.0,
+          "positional_f1": 0.6666666666666666,
+          "total_score": 0.5555555555555555,
+          "exact_match": 0.0
+        },
+        "training_eligible": false,
+        "disposition": "KEEP_HOLD_NO_AUTOMATIC_RELABEL"
+      }
+    }
+  ],
+  "commands_executed": 0,
+  "official_test_rows_used": 0,
+  "source_labels_modified": false,
+  "limitations": [
+    "Static parser/schema incompatibility is not proof a command is semantically valid or a label wrong.",
+    "Primary buckets use explicit precedence; multiple causes can coexist.",
+    "All128remain held; no rows restored solely to improve native metrics."
+  ]
+}

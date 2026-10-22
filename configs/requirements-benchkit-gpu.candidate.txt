@@ -1,0 +1,14 @@
+# Isolated Linux/CUDA environment, NOT a verified complete GPU lock.
+# Torch CUDA wheel/driver compatibility must be checked on the actual GPU.
+# Avoid installing over the Datahub system Python or the FAITH grader environment.
+torch==2.8.0
+transformers==5.20.1
+peft==0.21.2
+accelerate==1.15.0
+bitsandbytes==0.47.0
+
+# Native scoring tools; validate in isolated Linux image before use.
+cvss==3.6
+python-dotenv==1.1.1
+PyYAML==6.0.3
+tqdm==4.70.1

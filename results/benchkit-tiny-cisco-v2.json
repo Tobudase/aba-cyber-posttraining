@@ -1,0 +1,40 @@
+{
+  "status": "PASSED_RANDOM_TINY_ENGINEERING_ONLY",
+  "checked_at_utc": "2026-10-21T22:42:12.549799+00:00",
+  "model_id": "fdtn-ai/Foundation-Sec-8B-Reasoning",
+  "intended_model_revision": "63c930c82d7646226d33502bec5870019738400e",
+  "actual_pretrained_weights_used": false,
+  "architecture": "llama",
+  "random_tiny": true,
+  "benchmark": "athena",
+  "dataset_manifest_sha256": "4b5d23f6abfa75026092f0a01647229077627c2f7e230519296243e63519b335",
+  "records_encoded": 2,
+  "records_used": 2,
+  "shuffle_seed": 42,
+  "optimizer_steps": 2,
+  "losses": [
+    11.7413911819458,
+    11.74135684967041
+  ],
+  "supervised_tokens_processed": 10,
+  "changed_parameter_tensors": 4,
+  "adapter_reload_max_abs_logit_delta": 0.0,
+  "generation_prefix_differs_from_final_only_training_rows": 2,
+  "supervision": "Native full-chat final-answer-only; no fabricated reasoning. Generation-prefix difference is disclosed.",
+  "cuda_used": false,
+  "official_test_rows": 0,
+  "official_benchmark_score": null,
+  "wall_seconds": 1.6853303341194987,
+  "adapter_files": {
+    "adapter_model.safetensors": "1ee87fa2ccf44dee6f8b1b40e1f083cebe92cd9e0c762589eaffe664fbb78dc3",
+    "tokenizer_config.json": "16884372675fc0061aec743517b514deb48d2b1ce657a3dfde1ad3775a0dafe8",
+    "tokenizer.json": "1dc76a118061ce69cbfb78e3f3f3d830a338d4a9ed9d847b5253834777bd7a05",
+    "README.md": "aff26565a1c670850a262ff41851881df13c74653b7e376d241f3c699f0e9afb",
+    "adapter_config.json": "328c3cce2e42fa8c4a4e04e2dda2c2c572b5171b5e8b86a599ffad9cb33d5457",
+    "chat_template.jinja": "918b048364b06365d86795b23f5e93130826bfffb511bd7638082fa3bf140439"
+  },
+  "torch": "2.8.0",
+  "limitations": [
+    "Tiny random-model checks establish optimizer/masking/reload plumbing only."
+  ]
+}

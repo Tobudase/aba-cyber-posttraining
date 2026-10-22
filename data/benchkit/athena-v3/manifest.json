@@ -1,0 +1,40 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "athena",
+  "official_test": false,
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "rows": 161,
+      "sha256": "a764d0f49c725b070074dc4843be7953e819571c2f62edd6d8a20a332f5e95da",
+      "quality": {
+        "SOURCE_SILVER_ASSISTANT_REVIEWED": 161
+      }
+    },
+    "dev": {
+      "file": "dev.jsonl",
+      "rows": 22,
+      "sha256": "b74ccf61d3d6b4a1d9a2e7494f32a3a5e422c0280b1594deb85c7e914d12c818",
+      "quality": {
+        "SOURCE_SILVER_ASSISTANT_REVIEWED": 22
+      }
+    },
+    "dev_confirm": {
+      "file": "dev_confirm.jsonl",
+      "rows": 9,
+      "sha256": "419683acf4e08e3a03b324466cd8b2bedff697fa3b56b7931230121ecdcf30bb",
+      "quality": {
+        "SOURCE_SILVER_ASSISTANT_REVIEWED": 9
+      }
+    }
+  },
+  "frozen_dev_origin": "data/benchkit/athena-v2/manifest.json",
+  "dev_sha256_preserved": "b74ccf61d3d6b4a1d9a2e7494f32a3a5e422c0280b1594deb85c7e914d12c818",
+  "limitations": [
+    "Eight-class source-silver data and AI review, not expert gold or representative Athena coverage.",
+    "Frozen22dev already has development use; not independent final test.",
+    "Confirm split comes only from groups not linked to old train/dev; small correlated convenience sample.",
+    "Entity/reference/exact-text/90%-5gram grouping is heuristic, not proof all aliases or unseen model data are excluded.",
+    "Official benchmark overlap audit remains incomplete; official test unused here."
+  ]
+}

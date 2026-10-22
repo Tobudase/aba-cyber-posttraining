@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-10-22T01:28:31.284814+00:00",
+  "models": {
+    "cisco": {
+      "model_id": "fdtn-ai/Foundation-Sec-8B-Reasoning",
+      "tokenizer_vocab": 128276,
+      "records": 192,
+      "encoded": 192,
+      "rejected": [],
+      "length_min": 372,
+      "length_max": 585,
+      "length_p95": 504,
+      "native_generation_prefix_differs_from_final_only_training": 192,
+      "reasoning_template_requires_protocol_decision": true,
+      "template_sha256": "918b048364b06365d86795b23f5e93130826bfffb511bd7638082fa3bf140439",
+      "supervision": "Native final-only full-chat, offsets masked; generation normally opens <think>."
+    },
+    "redsage": {
+      "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+      "tokenizer_vocab": 151669,
+      "records": 3484,
+      "encoded": 3484,
+      "rejected": [],
+      "length_min": 377,
+      "length_max": 529,
+      "length_p95": 452,
+      "native_generation_prefix_differs_from_final_only_training": 3484,
+      "reasoning_template_requires_protocol_decision": true,
+      "template_sha256": "243e67343dd1cd38f29d779fc98d11f1a2edd097a6561882ca4aa77f8dbd1d1f",
+      "supervision": "Native final-only full-chat, offsets masked; generation normally opens <think>."
+    }
+  },
+  "official_test_rows": 0,
+  "model_weights_loaded": false,
+  "status": "TOKENIZATION_AUDITED_WITH_EXPLICIT_REJECTIONS"
+}

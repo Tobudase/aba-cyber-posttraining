@@ -1,0 +1,84 @@
+{
+  "schema": "benchkit.protocol.v1",
+  "benchmark": "kali",
+  "model": {
+    "id": "RISys-Lab/RedSage-K-SFT-GRPO",
+    "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+    "license_card_field": null,
+    "weight_files": [
+      "model-00001-of-00004.safetensors",
+      "model-00002-of-00004.safetensors",
+      "model-00003-of-00004.safetensors",
+      "model-00004-of-00004.safetensors"
+    ]
+  },
+  "status": "DRAFT_DEV_PROTOCOL_NOT_OFFICIAL_LEADERBOARD_REPRODUCTION",
+  "train_manifest": "data/benchkit/kali-screened/manifest.json",
+  "train_manifest_sha256": "db813288d03660e21f434cd7fb36e2277b92484e03b0021d8812e763d0d8c7e3",
+  "dev_manifest": "data/benchkit/kali-external-dev/manifest.json",
+  "dev_manifest_sha256": "e9179f80569b68690e69eeced4d73decee52534e0b3e0af2cc3a684c8ebfb842",
+  "dev_split": "dev_search",
+  "inference": {
+    "temperature": 0,
+    "seed": 42,
+    "max_output_tokens": 2048,
+    "batch_size": 1,
+    "dtype": "bfloat16",
+    "fix_mistral_regex": false,
+    "native_generation_template": true
+  },
+  "training": {
+    "method": "QLoRA",
+    "quantization": "NF4",
+    "compute_dtype": "bfloat16",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "learning_rate": 0.0001,
+    "max_length": 2048,
+    "seed": 42,
+    "initial_smoke_steps": 20,
+    "supervision": "native_full_chat_final_only_no_fabricated_reasoning"
+  },
+  "experiments": {
+    "E0": "pinned_pretrained_no_new_training",
+    "E1": "fixed_recipe_SFT",
+    "E2": "ABA_at_most_3_candidates_all_costs_recorded",
+    "E3_optional": "E2_data_with_E1_recipe"
+  },
+  "selection_objective": {
+    "status": "PROPOSED_EXTERNAL_DEV_ONLY_NOT_OFFICIAL_SCORER_REPLACEMENT",
+    "metric": "strict_option_value_correct",
+    "report_native_metrics_alongside": true,
+    "reason": "Use full requested-set accuracy; native Kali exact can ignore wrong option values.",
+    "official_test_feedback_used": false
+  },
+  "budget": {
+    "concurrent_a100_per_person": 1,
+    "aba_max_candidates": 3,
+    "initial_engineering_gpu_hours_cap": 2,
+    "initial_total_gpu_hours_plan": 12,
+    "train_job_deadline_seconds": 7200,
+    "formal_eval_budget_measured": false
+  },
+  "official_final_evaluation": {
+    "enabled": false,
+    "freeze_required": true,
+    "scope": "5000_unrestricted",
+    "test_files_present": false,
+    "per_test_feedback_to_ABA": false
+  },
+  "blockers": [
+    "Nautilus namespace pods=0",
+    "Actual GPU model/runtime/throughput not validated",
+    "Reasoning vs final-only SFT behavior needs external-dev validation",
+    "Official-test overlap audit and final protocol freeze incomplete",
+    "RedSage model card has no license metadata; preserve usage/provenance evidence and resolve redistribution terms before publishing derivatives",
+    "External dev is 18 authored narrow template families, not representative validation",
+    "Native exact metric ignores some option values"
+  ]
+}

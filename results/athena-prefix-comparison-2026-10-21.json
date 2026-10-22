@@ -1,0 +1,159 @@
+{
+  "checked_at_utc": "2026-10-22T01:31:41.354761+00:00",
+  "status": "LOCAL_QUANTIZED_EXTERNAL_DEV_PREFIX_ABLATION_COMPLETE",
+  "runs": {
+    "native": {
+      "matching_source_labels": 19.0,
+      "rows": 22,
+      "output_tokens_total": 9938,
+      "output_tokens_median": 447.0,
+      "wall_seconds_total": 379.1573859588243,
+      "outputs_with_closing_think": 22,
+      "outputs_with_opening_think": 0,
+      "truncated_rows": 0,
+      "predictions_sha256": "8612db1772c650457668c1a0dfe5b57c18e4ad7aeef4b17b6666eca5e6dff88e"
+    },
+    "without_opening_think": {
+      "matching_source_labels": 20.0,
+      "rows": 22,
+      "output_tokens_total": 7480,
+      "output_tokens_median": 293.5,
+      "wall_seconds_total": 280.5647711234633,
+      "outputs_with_closing_think": 15,
+      "outputs_with_opening_think": 0,
+      "truncated_rows": 0,
+      "predictions_sha256": "26cbff9b005b109cf1f0370ab88cb7f1144d52c8186d39dbfc48fa79f30edc26"
+    }
+  },
+  "paired_results": [
+    {
+      "id": "CVE-2026-100506",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-103497",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-103648",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-103678",
+      "native": 0.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-103680",
+      "native": 0.0,
+      "without_opening_think": 0.0
+    },
+    {
+      "id": "CVE-2026-103831",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-104389",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-104859",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-104871",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-105838",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-106026",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-106058",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-106059",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-32574",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-42720",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-55083",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-76274",
+      "native": 1.0,
+      "without_opening_think": 0.0
+    },
+    {
+      "id": "CVE-2026-80464",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-84854",
+      "native": 0.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-85215",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-92826",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    },
+    {
+      "id": "CVE-2026-95595",
+      "native": 1.0,
+      "without_opening_think": 1.0
+    }
+  ],
+  "improved_ids": [
+    "CVE-2026-103678",
+    "CVE-2026-84854"
+  ],
+  "regressed_ids": [
+    "CVE-2026-76274"
+  ],
+  "dev_sha256": "b74ccf61d3d6b4a1d9a2e7494f32a3a5e422c0280b1594deb85c7e914d12c818",
+  "official_benchmark_score": false,
+  "training_executed": false,
+  "confirmation_rows_queried": 0,
+  "new_model_calls_by_comparison": 0,
+  "decision": "Keep native prefix as provisional primary baseline; no global protocol change from22 RCM silver rows.",
+  "limitations": [
+    "The final-only flag only removes the opening <think> suffix; it does not guarantee reasoning is disabled.",
+    "Small previously exposed source-silver RCM dev, not independent expert gold or six-task Athena evidence.",
+    "Quantized local inference, not BF16 or a matched post-training comparison.",
+    "Runtime totals are sequential observational measurements, not a controlled speed benchmark."
+  ]
+}

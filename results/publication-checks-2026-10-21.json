@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-10-22T02:15:35.380120+00:00",
+  "scope": "Public checkout checks, distinct from original workspace23-test receipt",
+  "upstream_hash_files": 54,
+  "athena_rows": {
+    "train": 161,
+    "dev": 22,
+    "dev_confirm": 9
+  },
+  "kali_external_rows": {
+    "dev_search": 72,
+    "dev_confirm": 36
+  },
+  "new_source_syntax": "passed",
+  "native_kali_wrong_option_value_reproduced": true,
+  "separate_diagnostic_rejects_wrong_value": true,
+  "athena_native_scorer_linkage": "passed_gold_echo_only_not_model_result",
+  "official_tests_read": 0,
+  "model_inference_calls": 0,
+  "training_executed": false,
+  "public_snapshot_check_status": "PASSED"
+}

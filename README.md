@@ -1,21 +1,38 @@
 # ABA Cybersecurity Post-training Research
 
-Research code, a small source-traceable data pilot, and engineering evidence for using an ABA agent to adapt an open-weight language model on cybersecurity tasks.
+Research code, traceable external pilot data, and engineering evidence for using an ABA agent to adapt open-weight language models on cybersecurity tasks.
 
-**Updated October 17, 2026:** the current candidate task is **CTI-Bench root-cause mapping (CTI-RCM)**: classify a vulnerability description into a CWE identifier. Final model selection and the formal evaluation protocol remain open. The real pretrained-model GPU baseline, domain SFT, ABA–CTI integration and official CTI evaluation have **not** run.
+**Updated October 21, 2026:** the current preparation covers **AthenaBench and KaliBench**, sharing training and evaluation interfaces before an eventual return to CyberGym. **Formal BF16 baselines, actual 8B domain post-training, and ABA domain experiments have not run.** GPU job admission remains blocked; no cluster GPU jobs were launched during this preparation.
 
 ## Latest verified progress
 
-| Component | Actual result | Scope |
+| Component | Actual result | Limits |
 | --- | --- | --- |
-| External pilot data | 47 train / 16 development records, eight CWE classes, frozen hashes and conservative group separation | Assistant-reviewed source-silver labels, not independent expert gold |
-| Training-data checks | Six boundary checks passed; assistant-only loss masks and explicit truncation rejection | Data and training-interface checks |
-| Local LoRA check | Two real optimizer steps on actual pilot training rows; four adapter tensors changed; save/reload maximum logit difference 0 | **Random tiny architecture**, not pretrained 27B weights |
-| Native CTI grading | 12 edge cases passed using pinned, unchanged FAITH extraction and aggregation | No official test records loaded |
-| ABA end-to-end integration | Generated and executed a toy trainer, scored it, delivered artifacts, independently reproduced the result | Synthetic eight-token bigram task, not an LLM or cybersecurity result |
-| Pretrained GPU runner | Pinned NF4 baseline → bounded SFT → development predictions → separate native grading | Code prepared; actual GPU execution pending |
+| Athena external RCM data | [161 train / 22 dev / 9 reserved confirmation](data/benchkit/athena-v3/) | AI-reviewed source-silver, eight training classes; not official Athena data or expert gold |
+| Additional candidate review | 177 candidates dispositioned: 133 accepted, 9 ambiguous holds, 35 structural/source holds | 142 complete descriptions reviewed; accepted rows undergo separate grouping/deduplication before splitting |
+| Kali training audit | 3,504 original train rows; 128 held, 3,376 screened | Original third-party train records are not redistributed; screening is not semantic gold validation |
+| Kali external dev | [72 search / 36 confirmation](data/benchkit/kali-external-dev/) | 18 authored template families, nine basic tools; not representative full-task evaluation |
+| Real local inference | Cisco official 8B Q4: native prefix 19/22 source-label matches; without opening `<think>` 20/22 | Same exposed RCM dev, no new training; not an official benchmark score or evidence of general improvement |
+| Training plumbing | Random tiny Llama and Qwen models: 2 optimizer steps, changed tensors, adapter save/reload delta 0 | Not pretrained 8B domain training |
+| Data/tokenizer/package checks | 192 Athena and 3,484 Kali rows tokenized; 23 targeted tests passed in the original workspace | Full original test suite depends on local audit inputs; candidate GPU environment remains unvalidated |
+| ABA domain setup | Draft protocols and worker interfaces prepared | Controlled GPU submission/private evaluator bridge has not run end to end |
 
-See [CTI progress and limitations](docs/CTI_RCM_PROGRESS.md), [current status](docs/STATUS.md), and [reproduction instructions](docs/REPRODUCTION.md).
+**Scoring caveat:** the pinned Kali scorer can give full Exact/Total credit to a prediction with an incorrect option value. We retain native metrics and add a separate diagnostic; it is not an official replacement or complete shell semantic checker. The audit does not establish the impact on published model rankings. Athena VSP also needs explicit valid-output coverage reporting.
+
+Start with the [current experiment preparation](docs/ATHENA_KALI_PROGRESS.md), [reproduction instructions](docs/REPRODUCTION.md), and [status](docs/STATUS.md). See [local prefix comparison](results/athena-prefix-comparison-2026-10-21.json) and [scoring evidence](results/benchkit-scorer-audit-summary.json).
+
+## Current provisional model pairs
+
+- Athena: [fdtn-ai/Foundation-Sec-8B-Reasoning](https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning), revision `63c930c82d7646226d33502bec5870019738400e`.
+- Kali: [RISys-Lab/RedSage-K-SFT-GRPO](https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO), revision `843e2e3096e7de68f5c35eb16238f4909f21695a`.
+
+Both are already specialized models; their additional training headroom is unproven. RedSage trained on the official 3,504 training examples, so a new split of those records is not unseen validation. Its model card did not declare a license field at the pinned revision; no unrestricted redistribution permission is inferred. No model tensors or derived adapters are released here.
+
+The [protocols](configs/benchkit/) are explicitly drafts. Plan: matched E0 pretrained baseline → E1 fixed SFT → E2 bounded ABA search, select using external dev only, freeze the protocol, then separately evaluate official tests. The official final-evaluation switch remains disabled. Athena preparation currently covers RCM only, not all six tasks.
+
+## Historical CTI pilot and earlier evidence
+
+The following sections preserve the October 17 pilot and earlier engineering work. Their defaults and next-step suggestions are historical, not the current Athena/Kali protocol.
 
 ## Public pilot data
 

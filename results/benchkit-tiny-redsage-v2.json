@@ -1,0 +1,40 @@
+{
+  "status": "PASSED_RANDOM_TINY_ENGINEERING_ONLY",
+  "checked_at_utc": "2026-10-21T22:42:12.105738+00:00",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "intended_model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "actual_pretrained_weights_used": false,
+  "architecture": "qwen3",
+  "random_tiny": true,
+  "benchmark": "kali",
+  "dataset_manifest_sha256": "db813288d03660e21f434cd7fb36e2277b92484e03b0021d8812e763d0d8c7e3",
+  "records_encoded": 2,
+  "records_used": 2,
+  "shuffle_seed": 42,
+  "optimizer_steps": 2,
+  "losses": [
+    11.948299407958984,
+    11.867185592651367
+  ],
+  "supervised_tokens_processed": 42,
+  "changed_parameter_tensors": 4,
+  "adapter_reload_max_abs_logit_delta": 0.0,
+  "generation_prefix_differs_from_final_only_training_rows": 2,
+  "supervision": "Native full-chat final-answer-only; no fabricated reasoning. Generation-prefix difference is disclosed.",
+  "cuda_used": false,
+  "official_test_rows": 0,
+  "official_benchmark_score": null,
+  "wall_seconds": 1.241196708055213,
+  "adapter_files": {
+    "adapter_model.safetensors": "46a2d40eba464074a9fb1a9a3cb91dfff1848d175a97c9f13f573d4bf3b7f39d",
+    "tokenizer_config.json": "96486e79619e36783f8f3328b51880aef4e3d5bebe644f94b6bd362ca5e8f616",
+    "tokenizer.json": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+    "README.md": "aff26565a1c670850a262ff41851881df13c74653b7e376d241f3c699f0e9afb",
+    "adapter_config.json": "798ff3ac9470b56c7b002b3a207dcdea9a51bd2184e6253426fd88aca7e4a7ba",
+    "chat_template.jinja": "243e67343dd1cd38f29d779fc98d11f1a2edd097a6561882ca4aa77f8dbd1d1f"
+  },
+  "torch": "2.8.0",
+  "limitations": [
+    "Tiny random-model checks establish optimizer/masking/reload plumbing only."
+  ]
+}

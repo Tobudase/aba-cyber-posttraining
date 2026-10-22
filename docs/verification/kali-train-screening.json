@@ -1,0 +1,8 @@
+{
+  "status": "TRAIN_SCREENED_WITH_HOLDS",
+  "original_train": 3504,
+  "screened_train": 3376,
+  "held": 128,
+  "source_records_edited": false,
+  "official_test_files_downloaded": 0
+}

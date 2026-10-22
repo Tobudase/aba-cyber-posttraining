@@ -1,6 +1,36 @@
 # Reproduction scope
 
-Updated October 17, 2026. Start with the CTI pilot instructions below. The later sections describe historical utilities and may require unpublished local inputs; they are not the current CTI entry point.
+Updated October 21, 2026. Start with [Athena/Kali preparation](ATHENA_KALI_PROGRESS.md). This is a curated research snapshot, not a one-command reproduction of official benchmark results. Model weights, official tests, raw Kali training records, private operational logs and account configuration are excluded.
+
+## Current Athena/Kali entry points
+
+The source/tokenizer receipts are published; the upstream files themselves remain ignored. Restore the exact recorded bytes under their upstream terms:
+
+```sh
+python3 scripts/restore-benchkit-sources.py --execute
+python3 scripts/restore-benchkit-sources.py
+```
+
+The second command verifies all hashes without downloads. This fetches code, scoring resources, tokenizer metadata, primary tool documentation and Kali TRAIN only; it fetches no official test examples or weight tensors. A changed unversioned documentation URL may fail its historical hash: obtain the original snapshot rather than accepting changed bytes. Model-card license fields are metadata, not blanket permission.
+
+Inspect the released data without third-party scoring dependencies:
+
+```sh
+python3 scripts/benchkit-cli.py audit-data --dataset data/benchkit/athena-v3/manifest.json
+python3 scripts/benchkit-cli.py audit-data --dataset data/benchkit/kali-external-dev/manifest.json
+```
+
+For scoring, use an isolated environment with the native scorer dependencies (`cvss`, `python-dotenv`, `PyYAML`, `tqdm`); the original grading environment used Transformers 4.57.6, while model training used 5.20.1. The candidate CUDA requirements are not a tested Linux lock. An example using YOUR completed predictions, with exactly the requested IDs:
+
+```sh
+python scripts/benchkit-cli.py score --dataset data/benchkit/athena-v3/manifest.json --split dev --predictions YOUR_PREDICTIONS.jsonl --output NEW_OUTPUT_DIRECTORY
+```
+
+`benchkit.py` checks hashes, ID coverage, group separation and runtime failures; commands are scored as strings, never executed. `train-benchkit.py` and `infer-benchkit.py` require explicit `--execute` and CUDA for actual large-model experiments. They use local caches only. `cache-benchkit-model.py --execute` is a separate CPU-only weight-download step, not run by source restoration. Do not hold GPUs idle while downloading.
+
+Kali normalization/screening utilities are included, but rebuilding the entire local screening pipeline also requires the audit receipts generated in that local sequence. The full 23-test workspace audit is recorded as historical evidence, not claimed to be runnable from this curated snapshot. Public preparation checks are recorded separately in `results/publication-checks-2026-10-21.json`. No adapters, worker image or GPU training outcomes are packaged.
+
+The sections below preserve historical October 17 instructions; CTI is no longer the primary experimental track.
 
 ## CTI pilot: no network or credentials required
 

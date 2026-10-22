@@ -1,0 +1,39 @@
+{
+  "status": "EXTERNAL_DEV_QUANTIZED_ENGINEERING_COMPLETE",
+  "model_id": "fdtn-ai/Foundation-Sec-8B-Reasoning-Q4_K_M-GGUF",
+  "revision": "4a04f7b19513ff9f672169b8fe4288000ab87b07",
+  "weight_sha256": "7a61e41b1ca1b339d41caf3001ea7832469d866e7c52a23980a1e95cbf5cd58b",
+  "quantization": "Official Cisco Q4_K_M GGUF",
+  "runtime": {
+    "version": "0.6.2"
+  },
+  "hardware": "Local Mac; no Nautilus GPU used",
+  "dataset_manifest_sha256": "4b5d23f6abfa75026092f0a01647229077627c2f7e230519296243e63519b335",
+  "requested_rows": 22,
+  "completed_rows": 22,
+  "reused_same_protocol_rows": 4,
+  "max_output_tokens": 1024,
+  "context_tokens": 4096,
+  "private_service_stopped": true,
+  "official_test_rows": 0,
+  "training_executed": false,
+  "official_benchmark_score": false,
+  "error": null,
+  "limitations": [
+    "Small external silver dev pool only; not BF16 baseline or formal Athena evaluation.",
+    "Quantized revision differs from the proposed BF16 checkpoint; no matched post-training comparison yet."
+  ],
+  "metrics": {
+    "tasks": {
+      "RCM": {
+        "rows": 22,
+        "native_metric": 86.36363636363636,
+        "native_valid_rows": 22,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_metric": 86.36363636363636
+      }
+    },
+    "combined_native": null,
+    "warning": "Native VSP excludes invalid outputs; inspect coverage. Not a benchmark score unless official full protocol is satisfied."
+  }
+}

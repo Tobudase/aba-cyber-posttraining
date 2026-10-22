@@ -1,0 +1,61 @@
+{
+  "status": "V3_EXPANDED_WITH_FROZEN_DEV",
+  "candidate_rows_dispositioned": 177,
+  "all177_have_disposition": true,
+  "counts": {
+    "train": 161,
+    "dev": 22,
+    "dev_confirm": 9
+  },
+  "train_growth_from_v2": 89,
+  "hold_counts": {
+    "EXACT_TEXT_DUPLICATE_SAME_LABEL": 2,
+    "RELATED_TO_FROZEN_DEV": 2
+  },
+  "removed_old_train_ids": [
+    "CVE-2026-93448"
+  ],
+  "dev22_byte_identical": true,
+  "dev_sha256": "b74ccf61d3d6b4a1d9a2e7494f32a3a5e422c0280b1594deb85c7e914d12c818",
+  "source_review_counts": {
+    "ACCEPT_SOURCE_SILVER_AI_REVIEWED": 133,
+    "HOLD_AMBIGUOUS": 9,
+    "HOLD_STRUCTURAL_SOURCE_CHECK": 35
+  },
+  "groups_per_split": {
+    "train": 103,
+    "dev": 20,
+    "dev_confirm": 8
+  },
+  "labels": {
+    "train": {
+      "CWE-787": 11,
+      "CWE-79": 36,
+      "CWE-502": 9,
+      "CWE-918": 28,
+      "CWE-22": 27,
+      "CWE-78": 18,
+      "CWE-89": 25,
+      "CWE-125": 7
+    },
+    "dev": {
+      "CWE-502": 3,
+      "CWE-918": 3,
+      "CWE-22": 2,
+      "CWE-125": 3,
+      "CWE-787": 2,
+      "CWE-89": 3,
+      "CWE-78": 3,
+      "CWE-79": 3
+    },
+    "dev_confirm": {
+      "CWE-22": 5,
+      "CWE-918": 1,
+      "CWE-79": 1,
+      "CWE-89": 2
+    }
+  },
+  "old_v1_v2_files_modified": false,
+  "official_test_rows_used": 0,
+  "existing_local19of22_result_reused": "Same dev bytes; original prediction/receipt files left untouched, no new model claims."
+}

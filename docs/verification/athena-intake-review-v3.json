@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-10-22T01:23:18.407367+00:00",
+  "status": "ALL177_CANDIDATES_HAVE_DISPOSITIONS",
+  "candidate_sha256": "00f64fab998788e3828fc7e3571e1ec2376233716b0144b95943b9b75ab23012",
+  "reviewer": "AI assistant reading complete source descriptions; not independent expert gold",
+  "candidate_rows": 177,
+  "new_full_description_reviews": 106,
+  "decision_counts": {
+    "ACCEPT_SOURCE_SILVER_AI_REVIEWED": 133,
+    "HOLD_AMBIGUOUS": 9,
+    "HOLD_STRUCTURAL_SOURCE_CHECK": 35
+  },
+  "semantic_review_rows": 142,
+  "official_test_rows_used": 0,
+  "model_predictions_used_for_decisions": false,
+  "all_candidates_dispositioned": true,
+  "limitations": [
+    "35 structural holds were not semantically approved.",
+    "Source agreement and AI mechanism review are not independent expert adjudication.",
+    "Review accepts a label mechanism, not a verified exploit, affected-version claim or training split."
+  ]
+}
