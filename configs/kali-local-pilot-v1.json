@@ -1,0 +1,50 @@
+{
+  "schema": "kali.local_pilot.v1",
+  "owner": "Minhao Wu",
+  "collaborator_track": "Xintong Liu owns AthenaBench; Athena baseline completion is collaborator-reported",
+  "model": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "source": "Official BF16 weights checked against each HF LFS SHA256, quantized locally",
+  "local_quantization": "MLX affine4 group64",
+  "train_manifest": "data/benchkit/kali-screened/manifest.json",
+  "development_manifest": "data/benchkit/kali-external-dev/manifest.json",
+  "development_split": "dev_search",
+  "development_rows": 72,
+  "reserved_confirmation_rows": 36,
+  "inference": {
+    "messages": "Frozen strict unrestricted prompts",
+    "assistant_generation_prefix": "Native opening<think>",
+    "temperature": 0,
+    "seed": 42,
+    "max_output_tokens": 1024,
+    "prefill_step_size": 256,
+    "batch_size": 1
+  },
+  "E1": {
+    "type": "Continued supervised LoRA on already-seen official TRAIN",
+    "steps": 20,
+    "batch_size": 1,
+    "learning_rate": 0.00005,
+    "rank": 8,
+    "mlx_scale": 2.0,
+    "last_transformer_layers": 4,
+    "target_modules": ["self_attn.q_proj", "self_attn.v_proj"],
+    "dropout": 0,
+    "loss": "Assistant target and EOS only; shifted labels, no prompt supervision",
+    "maximum_sequence_tokens": 2048,
+    "reasoning_targets": "None fabricated; existing final-only targets retained"
+  },
+  "E2_ABA": "Not represented by this local E1 runner; requires actual ABA controller integration",
+  "primary_development_diagnostic": "strict_option_value_correct",
+  "native_metrics_preserved": true,
+  "official_test_access": false,
+  "deadline_seconds_per_process": 2400,
+  "model_parameters_and_adapters_uploaded": false,
+  "limitations": [
+    "Local quick engineering pilot, not official BF16 evaluation or reproduction of published32.2percent.",
+    "TRAIN was already used by the released checkpoint; not newly unseen task adaptation.",
+    "External development has12search/6confirmation authored families, not72/36independent cases.",
+    "Final-only supervision differs from native thinking prefix; record format/reasoning regressions rather than hiding them.",
+    "Scorer diagnostic is not an official replacement or complete shell semantics."
+  ]
+}

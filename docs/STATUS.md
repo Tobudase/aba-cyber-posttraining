@@ -1,3 +1,11 @@
+# Current status — October 22, 2026
+
+Minhao owns KaliBench; the collaborator owns AthenaBench. The real local RedSage8B affine4 cycle completed:72externaldev E0 61/72 Exact →20continuedSFT optimizer steps→same72E1 62/72. NativeTotal93.75→93.52;5gains4regressions, no reliable improvement. Keep the base. Training changed16LoRA tensors, persistedadapter reload delta0, peakMetal5.72GB. Independent4case token/stream/replay audit passed.
+
+Official BF16/5,000-test evaluation and true ABA domain integration remain pending; the local fixed SFT is not ABA. The36reservedconfirm examples remain unused. Linux compute admission is still blocked at the last resource check. No weights/adapters or account configuration are published. See [current Kali details](KALI_MLX_PILOT.md).
+
+## Historical preparation snapshot
+
 # Current status
 
 Updated October 21, 2026. Current preparation covers AthenaBench and KaliBench, with eventual transfer to CyberGym. Models and experiment protocols remain provisional.

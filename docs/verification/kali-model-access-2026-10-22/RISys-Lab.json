@@ -1,0 +1,500 @@
+{
+  "_id": "6abcd23cdc2ce6bc6aafaa3e",
+  "id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "private": false,
+  "pipeline_tag": "text-generation",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "safetensors",
+    "qwen3",
+    "text-generation",
+    "redsage",
+    "kalibench",
+    "cybersecurity",
+    "kali-linux",
+    "tool-use",
+    "natural-language-to-command",
+    "sft",
+    "grpo",
+    "rlvr",
+    "conversational",
+    "en",
+    "dataset:RISys-Lab/KaliBench",
+    "arxiv:2610.02206",
+    "base_model:RISys-Lab/RedSage-K-SFT",
+    "base_model:finetune:RISys-Lab/RedSage-K-SFT",
+    "model-index",
+    "text-generation-inference",
+    "endpoints_compatible",
+    "region:us"
+  ],
+  "downloads": 541,
+  "likes": 0,
+  "modelId": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "author": "RISys-Lab",
+  "sha": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "lastModified": "2026-10-02T07:01:37.000Z",
+  "gated": false,
+  "disabled": false,
+  "widgetData": [
+    {
+      "text": "Hi, what can you help me with?"
+    },
+    {
+      "text": "What is 84 * 3 / 2?"
+    },
+    {
+      "text": "Tell me an interesting fact about the universe!"
+    },
+    {
+      "text": "Explain quantum computing in simple terms."
+    }
+  ],
+  "model-index": [
+    {
+      "name": "RedSage-K-SFT-GRPO",
+      "results": [
+        {
+          "task": {
+            "type": "text-generation",
+            "name": "Natural-language-to-command generation"
+          },
+          "dataset": {
+            "type": "RISys-Lab/KaliBench",
+            "name": "KaliBench",
+            "config": "default",
+            "split": "test"
+          },
+          "metrics": [
+            {
+              "type": "exact_match",
+              "name": "Unrestricted Exact command match (%)",
+              "value": 32.2,
+              "args": {
+                "mode": "unrestricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "tool_accuracy",
+              "name": "Unrestricted Tool accuracy (%)",
+              "value": 77.9,
+              "args": {
+                "mode": "unrestricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "optional_f1",
+              "name": "Unrestricted Optional-argument F1 (%)",
+              "value": 56.1,
+              "args": {
+                "mode": "unrestricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "positional_f1",
+              "name": "Unrestricted Positional-argument F1 (%)",
+              "value": 76.9,
+              "args": {
+                "mode": "unrestricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "total_score",
+              "name": "Unrestricted Total Score (%)",
+              "value": 70.3,
+              "args": {
+                "mode": "unrestricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "exact_match",
+              "name": "Restricted Exact command match (%)",
+              "value": 37.4,
+              "args": {
+                "mode": "restricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "tool_accuracy",
+              "name": "Restricted Tool accuracy (%)",
+              "value": 95,
+              "args": {
+                "mode": "restricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "optional_f1",
+              "name": "Restricted Optional-argument F1 (%)",
+              "value": 57.9,
+              "args": {
+                "mode": "restricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "positional_f1",
+              "name": "Restricted Positional-argument F1 (%)",
+              "value": 80.9,
+              "args": {
+                "mode": "restricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "total_score",
+              "name": "Restricted Total Score (%)",
+              "value": 77.9,
+              "args": {
+                "mode": "restricted"
+              },
+              "verified": false
+            },
+            {
+              "type": "exact_match",
+              "name": "Hinted Exact command match (%)",
+              "value": 69.4,
+              "args": {
+                "mode": "hinted"
+              },
+              "verified": false
+            },
+            {
+              "type": "tool_accuracy",
+              "name": "Hinted Tool accuracy (%)",
+              "value": 92.5,
+              "args": {
+                "mode": "hinted"
+              },
+              "verified": false
+            },
+            {
+              "type": "optional_f1",
+              "name": "Hinted Optional-argument F1 (%)",
+              "value": 86.5,
+              "args": {
+                "mode": "hinted"
+              },
+              "verified": false
+            },
+            {
+              "type": "positional_f1",
+              "name": "Hinted Positional-argument F1 (%)",
+              "value": 89.1,
+              "args": {
+                "mode": "hinted"
+              },
+              "verified": false
+            },
+            {
+              "type": "total_score",
+              "name": "Hinted Total Score (%)",
+              "value": 89.3,
+              "args": {
+                "mode": "hinted"
+              },
+              "verified": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "architectures": [
+      "Qwen3ForCausalLM"
+    ],
+    "model_type": "qwen3",
+    "tokenizer_config": {
+      "bos_token": null,
+      "eos_token": "<|im_end|>",
+      "pad_token": "<|endoftext|>",
+      "unk_token": null,
+      "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are REDSAGE, cybersecurity-tuned model developed by Khalifa University. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are REDSAGE, cybersecurity-tuned model developed by Khalifa University. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n<think>\\n' }}\n{%- endif %}\n"
+    },
+    "chat_template_jinja": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are REDSAGE, cybersecurity-tuned model developed by Khalifa University. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are REDSAGE, cybersecurity-tuned model developed by Khalifa University. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n<think>' }}\n{%- endif %}\n"
+  },
+  "cardData": {
+    "language": [
+      "en"
+    ],
+    "library_name": "transformers",
+    "pipeline_tag": "text-generation",
+    "base_model": "RISys-Lab/RedSage-K-SFT",
+    "base_model_relation": "finetune",
+    "datasets": [
+      "RISys-Lab/KaliBench"
+    ],
+    "tags": [
+      "qwen3",
+      "redsage",
+      "kalibench",
+      "cybersecurity",
+      "kali-linux",
+      "tool-use",
+      "natural-language-to-command",
+      "sft",
+      "grpo",
+      "rlvr"
+    ],
+    "model-index": [
+      {
+        "name": "RedSage-K-SFT-GRPO",
+        "results": [
+          {
+            "task": {
+              "type": "text-generation",
+              "name": "Natural-language-to-command generation"
+            },
+            "dataset": {
+              "type": "RISys-Lab/KaliBench",
+              "name": "KaliBench",
+              "config": "default",
+              "split": "test"
+            },
+            "metrics": [
+              {
+                "type": "exact_match",
+                "name": "Unrestricted Exact command match (%)",
+                "value": 32.2,
+                "args": {
+                  "mode": "unrestricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "tool_accuracy",
+                "name": "Unrestricted Tool accuracy (%)",
+                "value": 77.9,
+                "args": {
+                  "mode": "unrestricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "optional_f1",
+                "name": "Unrestricted Optional-argument F1 (%)",
+                "value": 56.1,
+                "args": {
+                  "mode": "unrestricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "positional_f1",
+                "name": "Unrestricted Positional-argument F1 (%)",
+                "value": 76.9,
+                "args": {
+                  "mode": "unrestricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "total_score",
+                "name": "Unrestricted Total Score (%)",
+                "value": 70.3,
+                "args": {
+                  "mode": "unrestricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "exact_match",
+                "name": "Restricted Exact command match (%)",
+                "value": 37.4,
+                "args": {
+                  "mode": "restricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "tool_accuracy",
+                "name": "Restricted Tool accuracy (%)",
+                "value": 95,
+                "args": {
+                  "mode": "restricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "optional_f1",
+                "name": "Restricted Optional-argument F1 (%)",
+                "value": 57.9,
+                "args": {
+                  "mode": "restricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "positional_f1",
+                "name": "Restricted Positional-argument F1 (%)",
+                "value": 80.9,
+                "args": {
+                  "mode": "restricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "total_score",
+                "name": "Restricted Total Score (%)",
+                "value": 77.9,
+                "args": {
+                  "mode": "restricted"
+                },
+                "verified": false
+              },
+              {
+                "type": "exact_match",
+                "name": "Hinted Exact command match (%)",
+                "value": 69.4,
+                "args": {
+                  "mode": "hinted"
+                },
+                "verified": false
+              },
+              {
+                "type": "tool_accuracy",
+                "name": "Hinted Tool accuracy (%)",
+                "value": 92.5,
+                "args": {
+                  "mode": "hinted"
+                },
+                "verified": false
+              },
+              {
+                "type": "optional_f1",
+                "name": "Hinted Optional-argument F1 (%)",
+                "value": 86.5,
+                "args": {
+                  "mode": "hinted"
+                },
+                "verified": false
+              },
+              {
+                "type": "positional_f1",
+                "name": "Hinted Positional-argument F1 (%)",
+                "value": 89.1,
+                "args": {
+                  "mode": "hinted"
+                },
+                "verified": false
+              },
+              {
+                "type": "total_score",
+                "name": "Hinted Total Score (%)",
+                "value": 89.3,
+                "args": {
+                  "mode": "hinted"
+                },
+                "verified": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModelForCausalLM",
+    "pipeline_tag": "text-generation",
+    "processor": "AutoTokenizer"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+      "size": 1570
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "2e5d3beb72850ca8250ce0b93e719617ada07e51",
+      "size": 11324
+    },
+    {
+      "rfilename": "chat_template.jinja",
+      "blobId": "889e0f89e624c6f8c5ff94abff051c6782f8dc95",
+      "size": 2586
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "5da603a7dd562987a0f236434a541a70dc57546b",
+      "size": 1814
+    },
+    {
+      "rfilename": "model-00001-of-00004.safetensors",
+      "blobId": "aee195e3b790885a9d79db3eaf2a80a50f8f5ec5",
+      "size": 4902257696,
+      "lfs": {
+        "sha256": "9cd06c8e8863149132149a2dfb0a10a06bbabdd79219c134aec2fc22ae6b937d",
+        "size": 4902257696,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00002-of-00004.safetensors",
+      "blobId": "ffa763b3d425812ae53f95718223ee4c8f825cb7",
+      "size": 4915960368,
+      "lfs": {
+        "sha256": "7661d054e4f1fb38cad64ca0adc4764c5a5a5f8db9a351499e355a80c644dca8",
+        "size": 4915960368,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00003-of-00004.safetensors",
+      "blobId": "8bffa65e8d88cfc2144eb5a1eda939a419040f06",
+      "size": 4983068496,
+      "lfs": {
+        "sha256": "b9b6b4921c78dc47cb1fab53684a9a41d6c028af0035dd374210373a3798bf52",
+        "size": 4983068496,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00004-of-00004.safetensors",
+      "blobId": "17c8249ac6ac6b712e51ed13b517e0818f7c11d9",
+      "size": 1580230264,
+      "lfs": {
+        "sha256": "35f8159241968f613d093d22220fd9a994698af3d8f365729b95ea7e185ee519",
+        "size": 1580230264,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model.safetensors.index.json",
+      "blobId": "10c7a17197289024c4b2801e53b9662e95f5ad83",
+      "size": 32878
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "10c92faad5c83222de0fbdcd704832cdf8b1499b",
+      "size": 11422924,
+      "lfs": {
+        "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+        "size": 11422924,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "65b25279f2d748247dd0d1be7afba0fc2ad31c01",
+      "size": 7831
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-09-30T09:11:24.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 8190735360
+    },
+    "total": 8190735360
+  },
+  "usedStorage": 16392939748
+}

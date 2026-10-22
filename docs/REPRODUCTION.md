@@ -1,3 +1,7 @@
+# Current entry point — October22 Kali pilot
+
+See [Kali MLX pilot reproduction](KALI_MLX_PILOT.md) for the actual8B local run and score-only replay from published predictions. Formal BF16 and ABA runs are still pending. The earlier preparation instructions below remain useful but do not describe a completed ABA domain experiment.
+
 # Reproduction scope
 
 Updated October 21, 2026. Start with [Athena/Kali preparation](ATHENA_KALI_PROGRESS.md). This is a curated research snapshot, not a one-command reproduction of official benchmark results. Model weights, official tests, raw Kali training records, private operational logs and account configuration are excluded.

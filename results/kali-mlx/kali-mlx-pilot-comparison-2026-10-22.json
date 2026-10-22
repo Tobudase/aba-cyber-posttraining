@@ -1,0 +1,249 @@
+{
+  "checked_at_utc": "2026-10-22T11:25:41.688466+00:00",
+  "status": "LOCAL_REAL8B_CONTINUED_SFT_CYCLE_COMPLETE",
+  "rows_per_evaluation": 72,
+  "search_template_families": 12,
+  "training_steps": 20,
+  "comparison": {
+    "E0": {
+      "native_metrics": {
+        "tool_score": 93.05555555555556,
+        "optional_f1": 91.66666666666666,
+        "positional_f1": 96.52777777777779,
+        "total_score": 93.75,
+        "exact_match": 84.72222222222221,
+        "format_error": 0.0,
+        "strict_option_value_correct": 84.72222222222221,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 84.72222222222221,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "option_diagnostic_correct_count": 61.0,
+      "complete_output_xml_rows": 0,
+      "xml_and_option_diagnostic_correct_count": 0,
+      "output_tokens": 1462,
+      "truncated_rows": 0,
+      "peak_metal_GB": 5.077282432,
+      "wall_seconds": 176.48739125020802,
+      "by_family": {
+        "authored-family:checksum-binary": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:head-five": {
+          "rows": 6,
+          "option_diagnostic_correct": 1.0
+        },
+        "authored-family:tail-seven": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:wc-lines": {
+          "rows": 6,
+          "option_diagnostic_correct": 0.0
+        },
+        "authored-family:dgst-hex": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:certificate-serial": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:offline-dns": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:offline-tls": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:offline-capture": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:json-event": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:json-compact": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:log-count": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        }
+      }
+    },
+    "E1": {
+      "native_metrics": {
+        "tool_score": 94.44444444444444,
+        "optional_f1": 91.66666666666666,
+        "positional_f1": 94.44444444444444,
+        "total_score": 93.5185185185185,
+        "exact_match": 86.11111111111111,
+        "format_error": 0.0,
+        "strict_option_value_correct": 86.11111111111111,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 86.11111111111111,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "option_diagnostic_correct_count": 62.0,
+      "complete_output_xml_rows": 2,
+      "xml_and_option_diagnostic_correct_count": 2,
+      "output_tokens": 1454,
+      "truncated_rows": 0,
+      "peak_metal_GB": 5.139025536,
+      "wall_seconds": 197.41701862495393,
+      "by_family": {
+        "authored-family:checksum-binary": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:head-five": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:tail-seven": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:wc-lines": {
+          "rows": 6,
+          "option_diagnostic_correct": 0.0
+        },
+        "authored-family:dgst-hex": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:certificate-serial": {
+          "rows": 6,
+          "option_diagnostic_correct": 2.0
+        },
+        "authored-family:offline-dns": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:offline-tls": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:offline-capture": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:json-event": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:json-compact": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        },
+        "authored-family:log-count": {
+          "rows": 6,
+          "option_diagnostic_correct": 6.0
+        }
+      }
+    }
+  },
+  "changed_diagnostic_outcomes": [
+    {
+      "id": "authored-doc-v1-head-five-02",
+      "family": "authored-family:head-five",
+      "E0_correct": false,
+      "E1_correct": true,
+      "gold_command": "head -n 5 local_evidence_02.txt",
+      "E0_command": "cat local_evidence_02.txt | head -n 5",
+      "E1_command": "head -n 5 local_evidence_02.txt"
+    },
+    {
+      "id": "authored-doc-v1-head-five-03",
+      "family": "authored-family:head-five",
+      "E0_correct": false,
+      "E1_correct": true,
+      "gold_command": "head -n 5 local_evidence_03.txt",
+      "E0_command": "cat local_evidence_03.txt | head -n 5",
+      "E1_command": "head -n 5 local_evidence_03.txt"
+    },
+    {
+      "id": "authored-doc-v1-head-five-04",
+      "family": "authored-family:head-five",
+      "E0_correct": false,
+      "E1_correct": true,
+      "gold_command": "head -n 5 local_evidence_04.txt",
+      "E0_command": "cat local_evidence_04.txt | head -n 5",
+      "E1_command": "head -n 5 local_evidence_04.txt"
+    },
+    {
+      "id": "authored-doc-v1-head-five-05",
+      "family": "authored-family:head-five",
+      "E0_correct": false,
+      "E1_correct": true,
+      "gold_command": "head -n 5 local_evidence_05.txt",
+      "E0_command": "cat local_evidence_05.txt | head -n 5",
+      "E1_command": "head -n 5 local_evidence_05.txt"
+    },
+    {
+      "id": "authored-doc-v1-head-five-06",
+      "family": "authored-family:head-five",
+      "E0_correct": false,
+      "E1_correct": true,
+      "gold_command": "head -n 5 local_evidence_06.txt",
+      "E0_command": "cat local_evidence_06.txt | head -n 5",
+      "E1_command": "head -n 5 local_evidence_06.txt"
+    },
+    {
+      "id": "authored-doc-v1-certificate-serial-03",
+      "family": "authored-family:certificate-serial",
+      "E0_correct": true,
+      "E1_correct": false,
+      "gold_command": "openssl x509 -in local_evidence_03.pem -noout -serial",
+      "E0_command": "openssl x509 -noout -serial -in local_evidence_03.pem",
+      "E1_command": "x509 -noout -serial -in local_evidence_03.pem"
+    },
+    {
+      "id": "authored-doc-v1-certificate-serial-04",
+      "family": "authored-family:certificate-serial",
+      "E0_correct": true,
+      "E1_correct": false,
+      "gold_command": "openssl x509 -in local_evidence_04.pem -noout -serial",
+      "E0_command": "openssl x509 -noout -serial -in local_evidence_04.pem",
+      "E1_command": "x509 -noout -serial -in local_evidence_04.pem"
+    },
+    {
+      "id": "authored-doc-v1-certificate-serial-05",
+      "family": "authored-family:certificate-serial",
+      "E0_correct": true,
+      "E1_correct": false,
+      "gold_command": "openssl x509 -in local_evidence_05.pem -noout -serial",
+      "E0_command": "openssl x509 -noout -serial -in local_evidence_05.pem",
+      "E1_command": "x509 -noout -serial -in local_evidence_05.pem"
+    },
+    {
+      "id": "authored-doc-v1-certificate-serial-06",
+      "family": "authored-family:certificate-serial",
+      "E0_correct": true,
+      "E1_correct": false,
+      "gold_command": "openssl x509 -in local_evidence_06.pem -noout -serial",
+      "E0_command": "openssl x509 -noout -serial -in local_evidence_06.pem",
+      "E1_command": "x509 -noout -serial -in local_evidence_06.pem"
+    }
+  ],
+  "gain_rows": 5,
+  "regression_rows": 4,
+  "official_test_rows": 0,
+  "confirmation_rows_queried": 0,
+  "ABA_executed": false,
+  "weights_redistributed": false,
+  "official_benchmark_result": false,
+  "training_receipt_sha256": "9606c1f28d9d17690b686b4156fe79aa9305ead6a38ef43f700235acdab7de83",
+  "limitations": [
+    "72rows are correlated variants in12authored families; no independence assumption or generalization/significance claim.",
+    "Native parser accepts a closing output tag without an opening tag; XML format diagnostic is separate.",
+    "Option diagnostic inherits native structural matching; possibly equivalent pipelines can still fail canonical comparison.",
+    "20steps continued TRAIN exposure with last4layers LoRA, not new-data adaptation or ABA.",
+    "Quantized local pilot differs from official BF16/thinking/sampled5,000-case protocol."
+  ]
+}

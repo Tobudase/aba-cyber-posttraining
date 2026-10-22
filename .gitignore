@@ -39,3 +39,5 @@ data/benchkit/*
 !data/benchkit/kali-external-dev/
 !data/benchkit/kali-fixture/
 docs/verification/athenabench-2026-10-18/source/
+
+.venv*/

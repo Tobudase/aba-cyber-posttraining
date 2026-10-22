@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-10-22T11:37:48.904604+00:00",
+  "status": "PUBLIC_SCORE_REPLAY_AND_SCAN_PASSED",
+  "public_evidence_score_recomputed_identically": true,
+  "new_model_calls": 0,
+  "new_training": false,
+  "syntax": "passed",
+  "credentials_and_account_paths_scan": "passed_no_values_exported",
+  "model_or_adapter_tensors_included": false,
+  "official_tests_included": false,
+  "baseline_correct": 61,
+  "post_correct": 62,
+  "native_total_before": 93.75,
+  "native_total_after": 93.5185185185185,
+  "improvement_claim": "not_reliable_gain",
+  "ABA_executed": false
+}

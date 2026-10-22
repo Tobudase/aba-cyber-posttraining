@@ -1,0 +1,32 @@
+{
+  "status": "OFFICIAL_WEIGHTS_LOCALLY_QUANTIZED",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "directory": ".tools/kali-models/redsage-843e2e3096e7-mlx-affine4-g64",
+  "source_weight_sha256": {
+    "model-00001-of-00004.safetensors": "9cd06c8e8863149132149a2dfb0a10a06bbabdd79219c134aec2fc22ae6b937d",
+    "model-00002-of-00004.safetensors": "7661d054e4f1fb38cad64ca0adc4764c5a5a5f8db9a351499e355a80c644dca8",
+    "model-00003-of-00004.safetensors": "b9b6b4921c78dc47cb1fab53684a9a41d6c028af0035dd374210373a3798bf52",
+    "model-00004-of-00004.safetensors": "35f8159241968f613d093d22220fd9a994698af3d8f365729b95ea7e185ee519"
+  },
+  "quantization": "MLX affine4 group64",
+  "files": {
+    "model.safetensors": "97328d1c3999bbb218e392caced2df3e45cc3d4d85a3c25969aee6c4fcf40fdb",
+    "tokenizer_config.json": "0042698153d38b66981a881e57418ffbed3c7e75e1c756f9fab3421a632cdb25",
+    "config.json": "9dfa1a0f65b011a50d193b48dca6d1dce88d71303697039acfb7980b17a5269d",
+    "tokenizer.json": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+    "README.md": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+    "chat_template.jinja": "243e67343dd1cd38f29d779fc98d11f1a2edd097a6561882ca4aa77f8dbd1d1f",
+    "model.safetensors.index.json": "846476a9b9fa9e801467338e37635ab6557596c289b9ec9eff4d48effe5f5dcf"
+  },
+  "conversion_device": "CPU",
+  "mlx": "0.32.4",
+  "mlx_lm": "0.32.2",
+  "official_test_rows": 0,
+  "not_BF16_leaderboard_reproduction": true,
+  "checked_at_utc": "2026-10-22T10:32:09.826138+00:00",
+  "wall_seconds": 35.31959862494841,
+  "directory_is_local_cache_not_in_git": true,
+  "original_local_receipt_sha256": "7e9a6095128afd230c90cd5ef9a7e3045c89859225c044fd02bd7e4cf83eaf83",
+  "public_directory_redacted": true
+}

@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import ssl
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--execute', action='store_true')
     args = parser.parse_args()
+    ctx = ssl.create_default_context(cafile='/etc/ssl/cert.pem') if Path('/etc/ssl/cert.pem').is_file() else ssl.create_default_context()
     receipt = json.loads((ROOT / 'docs/verification/benchkit-source-preparation.json').read_text())
     prior = json.loads((ROOT / 'docs/verification/athenabench-2026-10-18/source-manifest.json').read_text())
     tasks = [(f, ROOT / f['path'], ROOT / '.tools/benchkit') for f in receipt['files']]
@@ -33,7 +35,7 @@ def main():
         if raw is None:
             if not args.execute:
                 raise FileNotFoundError('Missing pinned source; review notices then use --execute: ' + entry['path'])
-            with urllib.request.urlopen(url, timeout=45) as response:
+            with urllib.request.urlopen(url, context=ctx, timeout=45) as response:
                 raw = response.read(32_000_001)
             fetched += 1
         if len(raw) > 32_000_000 or hashlib.sha256(raw).hexdigest() != entry['sha256']:

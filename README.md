@@ -2,9 +2,25 @@
 
 Research code, traceable external pilot data, and engineering evidence for using an ABA agent to adapt open-weight language models on cybersecurity tasks.
 
-**Updated October 21, 2026:** the current preparation covers **AthenaBench and KaliBench**, sharing training and evaluation interfaces before an eventual return to CyberGym. **Formal BF16 baselines, actual 8B domain post-training, and ABA domain experiments have not run.** GPU job admission remains blocked; no cluster GPU jobs were launched during this preparation.
+**October 21 preparation snapshot (historical):** the current preparation covers **AthenaBench and KaliBench**, sharing training and evaluation interfaces before an eventual return to CyberGym. **At that point, formal BF16 baselines, actual 8B domain post-training, and ABA domain experiments had not run.** GPU job admission remains blocked; no cluster GPU jobs were launched during this preparation.
 
-## Latest verified progress
+## October 22: KaliBench real 8B pilot
+
+Minhao's current track is **KaliBench**; AthenaBench is handled by the collaborator. Using hash-verified official RedSage-K-SFT-GRPO weights, locally quantized to MLX affine4/group64, the following cycle actually ran on an Apple M2 Pro with 16GiB memory:
+
+| Same 72 external dev examples | E0 unchanged base | E1 continued SFT, 20 steps |
+| --- | ---: | ---: |
+| Native Exact / option-value diagnostic | 61/72 (84.72%) | 62/72 (86.11%) |
+| Native Total Score | 93.75 | 93.52 |
+| Runtime failures / truncations | 0 / 0 | 0 / 0 |
+
+**This is not reliable improvement:** five cases improved and four regressed; the gains mainly canonicalize a `head` pipeline while the certificate task drops `openssl` in four cases. Total Score decreased. The 72 examples are correlated variants of 12 authored families. Keep the original base; the tiny adapter is not promoted as the final model.
+
+The model completed **20 real supervised optimizer updates**, changing 16 LoRA tensors (425,984 trainable parameters, last four layers q/v); persisted-adapter reload had zero logit difference. Training peak Metal memory was 5.72GB. These are actual pretrained 8B updates, distinct from earlier random tiny checks. No official tests or the 36 reserved confirmation examples were queried. This is a local quantized engineering pilot, **not official BF16 evaluation and not ABA**.
+
+Start with [Kali pilot results and reproduction](docs/KALI_MLX_PILOT.md), [paired results](results/kali-mlx/kali-mlx-pilot-comparison-2026-10-22.json), and [code](scripts/run-kali-mlx-pilot.py). Raw authored-dev predictions and text receipts are included; model and adapter tensors, account settings and private logs are excluded.
+
+## October 21 preparation evidence
 
 | Component | Actual result | Limits |
 | --- | --- | --- |

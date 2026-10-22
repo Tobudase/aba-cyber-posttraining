@@ -1,0 +1,21 @@
+{
+  "status": "OFFICIAL_PINNED_WEIGHTS_HASH_VERIFIED",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "directory": ".tools/kali-models/hf-cache/models--RISys-Lab--RedSage-K-SFT-GRPO/snapshots/843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "weight_sha256": {
+    "model-00001-of-00004.safetensors": "9cd06c8e8863149132149a2dfb0a10a06bbabdd79219c134aec2fc22ae6b937d",
+    "model-00002-of-00004.safetensors": "7661d054e4f1fb38cad64ca0adc4764c5a5a5f8db9a351499e355a80c644dca8",
+    "model-00003-of-00004.safetensors": "b9b6b4921c78dc47cb1fab53684a9a41d6c028af0035dd374210373a3798bf52",
+    "model-00004-of-00004.safetensors": "35f8159241968f613d093d22220fd9a994698af3d8f365729b95ea7e185ee519"
+  },
+  "weight_bytes": 16381516824,
+  "gpu_requested": 0,
+  "official_test_rows": 0,
+  "usage": "Local research; no redistribution rights inferred from public access.",
+  "checked_at_utc": "2026-10-22T10:31:25.380775+00:00",
+  "wall_seconds": 287.9309452502057,
+  "directory_is_local_cache_not_in_git": true,
+  "original_local_receipt_sha256": "feb8018b692055c4bd9dcb48e68d64e51b32a9b1cb3ee8096a877b4b03a152fd",
+  "public_directory_redacted": true
+}
