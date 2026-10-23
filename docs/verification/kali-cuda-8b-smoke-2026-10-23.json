@@ -1,0 +1,113 @@
+{
+  "result": {
+    "status": "PASS_REAL_8B_CUDA_TRAIN_SMOKE",
+    "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+    "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+    "gpu": "NVIDIA L4",
+    "gpu_total_bytes": 23745396736,
+    "quantization": "bitsandbytes NF4 BF16compute",
+    "lora": "rank16 alpha32 all q/v layers",
+    "steps": 20,
+    "train_rows": 2,
+    "train_ids": [
+      "kali-doc-train-v2-export-functions-1",
+      "kali-doc-train-v2-export-functions-2"
+    ],
+    "losses": [
+      1.725783109664917,
+      1.6990680694580078,
+      1.6275389194488525,
+      1.6266355514526367,
+      1.536171317100525,
+      1.5121240615844727,
+      1.4273592233657837,
+      1.3909438848495483,
+      1.3130519390106201,
+      1.2831484079360962,
+      1.1903456449508667,
+      1.1536489725112915,
+      1.0326906442642212,
+      1.0240017175674438,
+      0.9283429384231567,
+      0.8670363426208496,
+      0.7767044305801392,
+      0.7368510365486145,
+      0.6333979368209839,
+      0.6187192797660828
+    ],
+    "changed_parameter_tensors": 144,
+    "trainable_parameters": 7667712,
+    "reload_max_logit_delta": 0.0,
+    "peak_cuda_allocated_bytes": 10146335232,
+    "wall_seconds": 442.6649823290063,
+    "official_test_rows": 0,
+    "confirmation_rows": 0,
+    "development_rows": 0,
+    "ABA_executed": false,
+    "local_scratch_staging_seconds": 404.8322404520586,
+    "scope": "Runtime/persistence smoke on two training records, not domain evaluation or evidence of generalization",
+    "prefetch_receipt_sha256": "1118e6ce63f43eb35e4a7d459a42a2990e1b5922617d4eccd38fd78b3d629c02",
+    "gpu_samples": [
+      {
+        "seconds": 408.5,
+        "reading": "0, 3",
+        "returncode": 0
+      },
+      {
+        "seconds": 413.54,
+        "reading": "16, 7476",
+        "returncode": 0
+      },
+      {
+        "seconds": 418.57,
+        "reading": "15, 7514",
+        "returncode": 0
+      },
+      {
+        "seconds": 423.61,
+        "reading": "100, 12426",
+        "returncode": 0
+      },
+      {
+        "seconds": 428.65,
+        "reading": "98, 12456",
+        "returncode": 0
+      },
+      {
+        "seconds": 433.69,
+        "reading": "100, 12456",
+        "returncode": 0
+      },
+      {
+        "seconds": 438.73,
+        "reading": "97, 12456",
+        "returncode": 0
+      }
+    ]
+  },
+  "source_sha256": "fd7d1ca7c5765e641abbd45cd39c8b24c44e56bf880940f0e51ed99b1bf4b817",
+  "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+  "resources": {
+    "requests": {
+      "cpu": "2",
+      "memory": "12Gi",
+      "ephemeral-storage": "24Gi",
+      "nvidia.com/gpu": "1"
+    },
+    "limits": {
+      "cpu": "2",
+      "memory": "12Gi",
+      "ephemeral-storage": "24Gi",
+      "nvidia.com/gpu": "1"
+    }
+  },
+  "deadline_seconds": 1200,
+  "telemetry_scope": "Samples start after scratch staging; not full-lifecycle utilization or sustained-workload policy validation",
+  "not_a_third_domain_candidate": true,
+  "model_and_adapter_tensors_released": false,
+  "recorded_gpu_utilization_summary": {
+    "samples": 7,
+    "mean_percent": 60.857142857142854,
+    "max_percent": 100.0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "STOPPED_DURING_LOADING_FOR_STORAGE_IO",
+  "optimizer_steps_observed": 0,
+  "gpu": "NVIDIA L4",
+  "observation": {
+    "elapsed_seconds_at_sample": 275,
+    "gpu_utilization_percent": 0,
+    "gpu_memory_MiB": 7462,
+    "process_disk_read_bytes": 4886691840,
+    "wait_channel": "folio_wait_bit_common"
+  },
+  "source_sha256": "cb5782b501ad4448c443b47950aa6aebb071caa62091a46cb88163d731d5c79d",
+  "reason": "Slow remote block-storage mmap; no optimizer steps had been logged; job stopped to release GPU",
+  "fix": "Stage hash-verified model and dependencies to bounded emptyDir local scratch before model initialization",
+  "scope": "Engineering setup attempt, not model-score/candidate result"
+}

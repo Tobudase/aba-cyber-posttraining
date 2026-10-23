@@ -26,8 +26,9 @@
     },
     {
       "stage": "cpu_resume",
-      "status": "IN_PROGRESS",
-      "reason": "Explicit sizes, streaming hashes, retry/resume; no GPU held"
+      "status": "COMPLETE",
+      "reason": "Explicit sizes, streaming hashes, retry/resume; no GPU held",
+      "receipt": "kali-cuda-prefetch-complete-2026-10-23.json"
     }
   ],
   "scope": "Setup failures are recorded separately from benchmark/LoRA results"

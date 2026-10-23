@@ -11,13 +11,23 @@ Nautilus admission has recovered: the namespace accepted new jobs. A100 scheduli
 
 The pinned runtime image digest is in `verification/kali-cuda-runtime-2026-10-23.json`. Setup failures are preserved in `verification/kali-cpu-cache-preparation-attempts-2026-10-23.json`.
 
-## 8B preparation stage
+## Actual 8B CUDA training and persistence check — passed
 
-A bounded CPU-only model-cache stage is resuming the official RedSage checkpoint by pinned revision, exact file sizes and SHA256. Public reports will be refreshed with its final outcome. Dependencies and weights are prepared before any GPU model allocation. The 32 GiB project cache contains public model files and dependencies, not protected research data; it is not uploaded to GitHub. The existing VM root volume is left untouched.
+All four official RedSage weight shards (16,381,516,824 bytes) plus pinned metadata were prepared in a CPU-only job and SHA256-verified. A subsequent L4 job staged another checksum-verified copy to node-local scratch, loaded the real 8B checkpoint and completed 20 optimizer updates on two TRAIN records only.
 
-A finite 20-step NF4 LoRA smoke script is prepared. It uses two TRAIN records only and records genuine parameter changes, saved-adapter reload, memory and GPU telemetry. It has not yet established 8B GPU readiness. CUDA (NF4 / rank 16 / all q-v) and Mac (MLX affine4 / rank 8 / last 4 layers) use different recipes, so a future formal CUDA comparison needs its own matched baseline and frozen protocol.
+- Model: `RISys-Lab/RedSage-K-SFT-GRPO`, revision `843e2e3096e7de68f5c35eb16238f4909f21695a`.
+- Hardware: NVIDIA L4, 23,745,396,736 bytes total GPU memory.
+- Recipe: bitsandbytes NF4, BF16 compute; PEFT rank 16 / alpha 32 on all q/v layers; batch 1, LR 1e-5, AdamW weight decay 0, seed 42. This differs from the Mac recipe.
+- Genuine optimization: 144 changed trainable tensors, 7,667,712 trainable parameters; training loss 1.7258→0.6187 on the two repeated records. This demonstrates fitting, not generalization.
+- Adapter save/reload: maximum logit difference 0.0 after zeroing and restoring adapter tensors.
+- Peak CUDA allocation: 10,146,335,232 bytes. Recorded GPU memory usage reached 12,456 MiB; allocations and physical usage are different measures.
+- Wall time 442.7 seconds, including 404.8 seconds of local staging. After staging, the recorded computation samples reached 97–100% GPU utilization. Samples start after staging and do not establish full-lifecycle average utilization.
+- No domain dev, confirmation or official test rows were queried; no ABA controller ran. This runtime check was not a third candidate in the frozen development comparison.
+- Job finished and was deleted. No own Kali pods remained at cleanup. The 32 GiB public-model/dependency cache is retained for subsequent research; the old VM root volume was untouched. No weights or adapter tensors are published.
 
-Actual ABA domain training, private evaluator isolation and automatic GPU submission remain unvalidated. Do not enable ABA search or claim an official benchmark result from runtime preparation.
+The first real 8B attempt waited on remote block-storage mmap and was stopped before any optimizer step was observed. The retry used bounded 24 GiB `emptyDir` scratch and completed. Source and receipts are in `verification/kali-cuda-smoke-remote-storage-2026-10-23.json`, `kali-cuda-prefetch-complete-2026-10-23.json` and `kali-cuda-8b-smoke-2026-10-23.json`. The original stopped runner is also preserved. [NRP local scratch guidance](https://nrp.ai/documentation/userdocs/storage/local/) informed the change.
+
+Startup staging dominated the short GPU job. Before repeated ABA experiments, move dependency preparation into a validated immutable image and optimize checkpoint staging/reuse; do not treat this startup-heavy smoke as proof of an efficient long-running workload or scale it to eight GPUs. The actual CUDA recipe requires its own matched baseline/protocol for domain scores. Actual ABA domain training, private evaluator isolation and controlled submission remain unvalidated.
 
 ## Resource controls
 

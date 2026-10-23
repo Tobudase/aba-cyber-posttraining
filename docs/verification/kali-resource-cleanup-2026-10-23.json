@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-23T21:02:22.657548+00:00",
+  "own_kali_pods_remaining": 0,
+  "completed_job_deleted": true,
+  "GPU_allocation_held_after_completion": false,
+  "cache_retained": {
+    "requested_GiB": 32,
+    "purpose": "Pinned public model/dependency cache for subsequent research"
+  },
+  "other_users_resources_modified": false,
+  "quota_or_priority_changes": false,
+  "official_test_rows": 0,
+  "ABA_executed": false
+}

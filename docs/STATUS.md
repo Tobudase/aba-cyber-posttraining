@@ -12,7 +12,7 @@ Two predeclared128-step LoRA arms started from the original RedSage-K8B base. Bo
 
 **Keep the original base.** Neither candidate passed the frozen rule; this replay did not solve the regression. These are exposed development results from manual local SFT. Actual ABA, fresh independent validation and official benchmark evaluation remain pending.
 
-Read the [full ablation report](KALI_REPLAY_ABLATION_REPORT_2026-10-23.md) and [paired evidence](verification/kali-replay-v2/comparison.json). GPU access also progressed: an actual A10 CUDA/20-step synthetic optimizer check passed and was cleaned up; this alone does not establish8B GPU training. The [resource report](KALI_RESOURCE_VALIDATION_2026-10-23.md) records the precise stage reached.
+Read the [full ablation report](KALI_REPLAY_ABLATION_REPORT_2026-10-23.md) and [paired evidence](verification/kali-replay-v2/comparison.json). Nautilus now also passed a **real 20-step 8B NF4 LoRA runtime check on one L4**, including genuine parameter changes and adapter save/reload with zero logit difference. The finished job was cleaned up; this is training/persistence validation on two TRAIN records, not benchmark evaluation or actual ABA. Startup staging still needs optimization before repeated runs. The [resource report](KALI_RESOURCE_VALIDATION_2026-10-23.md) records the precise stage reached.
 
 ## October 23: fixed document-data SFT — negative result
 

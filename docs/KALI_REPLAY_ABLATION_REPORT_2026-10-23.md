@@ -4,10 +4,10 @@ Keep the original base; neither adapter passes the frozen acceptance rule.
 
 ## Completed data and semantic work
 
-- Domain training pool:156 rows / 80 correlated intent families, expanded from108 rows / 55 families. Six proposed overlapping operation families were excluded before training. Query/command exact and protected operation-signature overlap remain zero; this does not prove semantic or pretraining independence.
-- Independent-source general utility replay:32 authored records / 16 families grounded in pinned GNU Coreutils documentation. All 32 executable fixtures passed on Linux. Replay tools do not overlap the authored development/confirmation tool names. The rows retain their creation-time quality label; later Linux verification is in the separate hash-linked receipt.
-- Mandatory per-tool option coverage improved:34/36 domain queries had missing flags inV1, versus 12/36 with V2 (also 12/36 in the selected 96-row domain core). This is lexical coverage, not evidence of learning or comprehensive tool coverage.
-- Four fixed Linux fixture checks passed: tshark quiet mode suppresses packet output; editcap retains the selected packet range; YARA expects rules before target; netstat accepts the unique long-option abbreviation in this installed version. `pescan` exists and `pe-scan` does not in the installed package; that executable-name check is not fullPE semantic validation.
+- Domain training pool: 156 rows / 80 correlated intent families, expanded from 108 rows / 55 families. Six proposed overlapping operation families were excluded before training. Query/command exact and protected operation-signature overlap remain zero; this does not prove semantic or pretraining independence.
+- Independent-source general utility replay: 32 authored records / 16 families grounded in pinned GNU Coreutils documentation. All 32 executable fixtures passed on Linux. Replay tools do not overlap the authored development/confirmation tool names. The rows retain their creation-time quality label; later Linux verification is in the separate hash-linked receipt.
+- Mandatory per-tool option coverage improved: 34/36 domain queries had missing flags in V1, versus 12/36 with V2 (also 12/36 in the selected 96-row domain core). This is lexical coverage, not evidence of learning or comprehensive tool coverage.
+- Four fixed Linux fixture checks passed: tshark quiet mode suppresses packet output; editcap retains the selected packet range; YARA expects rules before target; netstat accepts the unique long-option abbreviation in this installed version. `pescan` exists and `pe-scan` does not in the installed package; that executable-name check is not full PE semantic validation.
 - Linux package versions differ from the pinned upstream Kali help snapshots. Native gold and scorer were not changed; no additional matches were silently credited.
 
 ## Frozen matched experiment
@@ -30,7 +30,7 @@ The original 72 CLI rows have repeated template variants; individual rows are no
 
 Both arms have zero new exact/option matches and the same 13 regressions: one `pescan`→`pe-scan` query and 12 correlated tshark DNS/TLS cases adding `-q`. See `verification/kali-replay-v2/error-family-review.json`. The independent-utility replay deliberately excluded tshark, so this result does not show that every kind of replay is ineffective. Compare both arms to the original base and disclose failures. A reduction in regression relative to the domain control would not by itself justify promotion if the base is still better. Better data coverage has not automatically established successful adaptation. Whole-domain semantic validation, fresh held-out development, multi-seed confirmation and actual ABA-controlled training/evaluation remain separate tasks. New confirmation bodies and official tests remain unqueried.
 
-This round is **manual SFT**, not actual ABA. A train-only 128-row Linux worker package is prepared and checked; the CUDA recipe(NF4 / rank 16 / all q-v layers) differs from MLX, so it requires its own matched baseline/protocol. The realABA controller, private evaluator isolation and controlled submission need end-to-end validation before search is enabled.
+This round is **manual SFT**, not actual ABA. A train-only 128-row Linux worker package is prepared and checked; the CUDA recipe (NF4 / rank 16 / all q-v layers) differs from MLX, so it requires its own matched baseline/protocol. The real ABA controller, private evaluator isolation and controlled submission need end-to-end validation before search is enabled.
 
 ## Evidence and score replay
 

@@ -1,0 +1,30 @@
+{
+  "submitted_at_utc": "2026-10-23T20:45:52Z",
+  "runner_sha256": "cb5782b501ad4448c443b47950aa6aebb071caa62091a46cb88163d731d5c79d",
+  "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+  "resources": {
+    "limits": {
+      "cpu": "2",
+      "ephemeral-storage": "2Gi",
+      "memory": "12Gi",
+      "nvidia.com/gpu": "1"
+    },
+    "requests": {
+      "cpu": "2",
+      "ephemeral-storage": "2Gi",
+      "memory": "12Gi",
+      "nvidia.com/gpu": "1"
+    }
+  },
+  "deadline_seconds": 1200,
+  "optimizer_steps": 20,
+  "train_ids": [
+    "kali-doc-train-v2-export-functions-1",
+    "kali-doc-train-v2-export-functions-2"
+  ],
+  "submitted_train_rows_sha256": "df82ee6c47df4ad3dff3a3403d9c9792264c9d7d20e6f2882d585cf4ff478298",
+  "official_test_rows": 0,
+  "confirmation_rows": 0,
+  "scope": "TwoTRAIN-record runtime validation, no domain candidate selection",
+  "CPU_prefetch_receipt_sha256": "1118e6ce63f43eb35e4a7d459a42a2990e1b5922617d4eccd38fd78b3d629c02"
+}

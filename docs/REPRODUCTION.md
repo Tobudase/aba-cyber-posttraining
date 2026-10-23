@@ -5,11 +5,12 @@ Follow the environment/source-restoration commands below, then run:
 ```sh
 python scripts/analyze-kali-replay-ablation-v2.py --output /tmp/kali-v2-score-replay
 python scripts/verify-kali-replay-artifacts-v2.py --output /tmp/kali-v2-token-audit.json
+python scripts/verify-kali-gpu-evidence.py
 python scripts/audit-kali-v2-coverage.py
 python -m unittest discover -s tests -v
 ```
 
-The V2 analyzer rechecks frozen data, protocol, baseline and prediction hashes and recomputes both arms without loading model tensors. A separate output directory preserves the released receipts. The public suite has15portable tests. `--verify-local-adapters` additionally hashes the unpublished adapters and works only in the original workspace. The original workspace passed42tests using its additional audit inputs/dependencies.
+The V2 analyzer rechecks frozen data, protocol, baseline and prediction hashes and recomputes both arms without loading model tensors. The GPU evidence verifier checks published receipt/source hashes and LoRA counts against the pinned architecture; it does not independently rerun training or inspect private tensors. A separate output directory preserves the released receipts. The public suite has15portable tests. `--verify-local-adapters` additionally hashes the unpublished adapters and works only in the original workspace. The original workspace passed42tests using its additional audit inputs/dependencies.
 
 V2 data-builder scripts require the private confirmation boundary audit and upstream training corpus; those inputs are not released. Published TRAIN files, recipes, original receipts and public score checks provide a partial research snapshot. Linux fixture verification only executes the authored benign fixed fixtures, never model-generated commands.
 
