@@ -1,0 +1,6 @@
+{
+  "status": "FAILED_BEFORE_MODEL_LOAD",
+  "reason": "Metal unavailable inside sandbox",
+  "optimizer_steps": 0,
+  "retry_is_same_frozen_candidate": true
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS_PUBLIC_TOKEN_PROMPT_ARTIFACT_AUDIT",
+  "prediction_rows_verified": 216,
+  "sets": {
+    "domain_control/domain": 36,
+    "domain_control/retention": 72,
+    "domain_plus_replay/domain": 36,
+    "domain_plus_replay/retention": 72
+  },
+  "new_model_calls": 0,
+  "checks": [
+    "Exact executed runner hash matches frozen protocol and receipt",
+    "Protocol snapshots match frozen bytes",
+    "Input prompt SHA and native tokenizer lengths",
+    "Raw native token decoding equals saved response",
+    "Stream-render policy, EOS accounting and completeXML",
+    "No truncations"
+  ],
+  "scope": "Published search predictions; no unpublished adapter/confirmation access or semantic gold review"
+}

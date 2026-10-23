@@ -1,0 +1,235 @@
+{
+  "status": "PASS",
+  "platform": "Linux",
+  "cases": 32,
+  "passed": 32,
+  "results": [
+    {
+      "id": "kali-replay-v2-000",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "records.csv\n",
+      "expected_stdout": "records.csv\n"
+    },
+    {
+      "id": "kali-replay-v2-001",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "audit\n",
+      "expected_stdout": "audit\n"
+    },
+    {
+      "id": "kali-replay-v2-002",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "/lab/amber\n",
+      "expected_stdout": "/lab/amber\n"
+    },
+    {
+      "id": "kali-replay-v2-003",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "alpha,gamma\ndelta,zeta\n",
+      "expected_stdout": "alpha,gamma\ndelta,zeta\n"
+    },
+    {
+      "id": "kali-replay-v2-004",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "BCD\n234\n",
+      "expected_stdout": "BCD\n234\n"
+    },
+    {
+      "id": "kali-replay-v2-005",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a:1\nb:2\n",
+      "expected_stdout": "a:1\nb:2\n"
+    },
+    {
+      "id": "kali-replay-v2-006",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "3\n5\n7\n",
+      "expected_stdout": "3\n5\n7\n"
+    },
+    {
+      "id": "kali-replay-v2-007",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "10\n",
+      "expected_stdout": "10\n"
+    },
+    {
+      "id": "kali-replay-v2-008",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a   b\n",
+      "expected_stdout": "a   b\n"
+    },
+    {
+      "id": "kali-replay-v2-009",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "abcd\nefgh\nij\n",
+      "expected_stdout": "abcd\nefgh\nij\n"
+    },
+    {
+      "id": "kali-replay-v2-010",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a\nc\n",
+      "expected_stdout": "a\nc\n"
+    },
+    {
+      "id": "kali-replay-v2-011",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "b\nd\n",
+      "expected_stdout": "b\nd\n"
+    },
+    {
+      "id": "kali-replay-v2-012",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a red 1\nb blue 2\n",
+      "expected_stdout": "a red 1\nb blue 2\n"
+    },
+    {
+      "id": "kali-replay-v2-013",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "10\n2\n1\n",
+      "expected_stdout": "10\n2\n1\n"
+    },
+    {
+      "id": "kali-replay-v2-014",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "amber\n",
+      "expected_stdout": "amber\n"
+    },
+    {
+      "id": "kali-replay-v2-015",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "21: 3 7\n",
+      "expected_stdout": "21: 3 7\n"
+    },
+    {
+      "id": "kali-replay-v2-016",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "records.csv\n",
+      "expected_stdout": "records.csv\n"
+    },
+    {
+      "id": "kali-replay-v2-017",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "audit\n",
+      "expected_stdout": "audit\n"
+    },
+    {
+      "id": "kali-replay-v2-018",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "/lab/cedar\n",
+      "expected_stdout": "/lab/cedar\n"
+    },
+    {
+      "id": "kali-replay-v2-019",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "alpha,gamma\ndelta,zeta\n",
+      "expected_stdout": "alpha,gamma\ndelta,zeta\n"
+    },
+    {
+      "id": "kali-replay-v2-020",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "BCD\n234\n",
+      "expected_stdout": "BCD\n234\n"
+    },
+    {
+      "id": "kali-replay-v2-021",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a:1\nb:2\n",
+      "expected_stdout": "a:1\nb:2\n"
+    },
+    {
+      "id": "kali-replay-v2-022",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "4\n6\n8\n",
+      "expected_stdout": "4\n6\n8\n"
+    },
+    {
+      "id": "kali-replay-v2-023",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "11\n",
+      "expected_stdout": "11\n"
+    },
+    {
+      "id": "kali-replay-v2-024",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a   b\n",
+      "expected_stdout": "a   b\n"
+    },
+    {
+      "id": "kali-replay-v2-025",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "abcd\nefgh\nij\n",
+      "expected_stdout": "abcd\nefgh\nij\n"
+    },
+    {
+      "id": "kali-replay-v2-026",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a\nc\n",
+      "expected_stdout": "a\nc\n"
+    },
+    {
+      "id": "kali-replay-v2-027",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "b\nd\n",
+      "expected_stdout": "b\nd\n"
+    },
+    {
+      "id": "kali-replay-v2-028",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "a red 1\nb blue 2\n",
+      "expected_stdout": "a red 1\nb blue 2\n"
+    },
+    {
+      "id": "kali-replay-v2-029",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "10\n2\n1\n",
+      "expected_stdout": "10\n2\n1\n"
+    },
+    {
+      "id": "kali-replay-v2-030",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "cedar\n",
+      "expected_stdout": "cedar\n"
+    },
+    {
+      "id": "kali-replay-v2-031",
+      "passed": true,
+      "returncode": 0,
+      "actual_stdout": "35: 5 7\n",
+      "expected_stdout": "35: 5 7\n"
+    }
+  ],
+  "scope": "Authored training fixtures only; no model/development command execution",
+  "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+  "training_file_sha256": "4a34255ad7575ab42f1cbf0606349a2621e8732a80301750227525683de1cb4d"
+}

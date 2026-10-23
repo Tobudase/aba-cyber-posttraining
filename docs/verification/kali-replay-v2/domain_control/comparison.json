@@ -1,0 +1,233 @@
+{
+  "status": "FIXED_LOCAL_REPLAY_ABLATION_ARM_COMPLETE",
+  "checked_at_utc": "2026-10-23T18:38:22.581954+00:00",
+  "protocol_sha256": "4a619a8695b6defa3c8bdc6896241f8ea57101267e4890913e6058dcab3f8867",
+  "train_rows": 128,
+  "training_steps": 128,
+  "arm": "domain_control",
+  "adapter_tensors_reverified": true,
+  "training_source": "AI_doc_reviewed_source_silver",
+  "independent_expert_review": false,
+  "comparisons": {
+    "domain": {
+      "rows": 36,
+      "baseline_correct": 6.0,
+      "post_correct": 5.0,
+      "baseline_native": {
+        "tool_score": 100.0,
+        "optional_f1": 37.24867724867725,
+        "positional_f1": 82.97619047619047,
+        "total_score": 73.40828924162257,
+        "exact_match": 16.666666666666664,
+        "format_error": 0.0,
+        "strict_option_value_correct": 16.666666666666664,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 16.666666666666664,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "post_native": {
+        "tool_score": 97.22222222222221,
+        "optional_f1": 41.732804232804234,
+        "positional_f1": 88.9021164021164,
+        "total_score": 75.95238095238095,
+        "exact_match": 13.88888888888889,
+        "format_error": 0.0,
+        "strict_option_value_correct": 13.88888888888889,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 13.88888888888889,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "gains": 0,
+      "regressions": 1,
+      "post_complete_XML": 36,
+      "post_truncated": 0
+    },
+    "retention": {
+      "rows": 72,
+      "baseline_correct": 66.0,
+      "post_correct": 54.0,
+      "baseline_native": {
+        "tool_score": 100.0,
+        "optional_f1": 91.66666666666666,
+        "positional_f1": 100.0,
+        "total_score": 97.22222222222221,
+        "exact_match": 91.66666666666666,
+        "format_error": 0.0,
+        "strict_option_value_correct": 91.66666666666666,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 91.66666666666666,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "post_native": {
+        "tool_score": 88.88888888888889,
+        "optional_f1": 88.33333333333333,
+        "positional_f1": 91.66666666666666,
+        "total_score": 89.62962962962962,
+        "exact_match": 75.0,
+        "format_error": 0.0,
+        "strict_option_value_correct": 75.0,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 75.0,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "gains": 0,
+      "regressions": 12,
+      "post_complete_XML": 72,
+      "post_truncated": 0
+    }
+  },
+  "changed_outcomes": {
+    "domain": [
+      {
+        "id": "kali-docdev-v1-pe-suspicious-verbose",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "pescan --verbose --format text isolated_delta.dll",
+        "baseline_command": "pescan --format=text --verbose isolated_delta.dll",
+        "post_command": "pe-scan --format=text --verbose isolated_delta.dll",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      }
+    ],
+    "retention": [
+      {
+        "id": "authored-doc-v1-offline-dns-01",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_01.pcap -Y dns",
+        "baseline_command": "tshark -r local_evidence_01.pcap -Y \"dns\"",
+        "post_command": "sudo tshark -r local_evidence_01.pcap -Y \"dns\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-dns-02",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_02.pcap -Y dns",
+        "baseline_command": "tshark -r local_evidence_02.pcap -Y \"dns\"",
+        "post_command": "tshark -r local_evidence_02.pcap -Y \"dns\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-dns-03",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_03.pcap -Y dns",
+        "baseline_command": "tshark -r local_evidence_03.pcap -Y \"dns\"",
+        "post_command": "tshark -r local_evidence_03.pcap -Y \"dns\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-dns-04",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_04.pcap -Y dns",
+        "baseline_command": "tshark -r local_evidence_04.pcap -Y \"dns\"",
+        "post_command": "tshark -r local_evidence_04.pcap -Y \"dns\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-dns-05",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_05.pcap -Y dns",
+        "baseline_command": "tshark -r local_evidence_05.pcap -Y \"dns\"",
+        "post_command": "tshark -r local_evidence_05.pcap -Y \"dns\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-dns-06",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_06.pcap -Y dns",
+        "baseline_command": "tshark -r local_evidence_06.pcap -Y \"dns\"",
+        "post_command": "tshark -r local_evidence_06.pcap -Y \"dns\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-tls-01",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_01.pcap -Y tls",
+        "baseline_command": "tshark -r local_evidence_01.pcap -Y \"tls\"",
+        "post_command": "tshark -r local_evidence_01.pcap -Y \"tls\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-tls-02",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_02.pcap -Y tls",
+        "baseline_command": "tshark -r local_evidence_02.pcap -Y \"tls\"",
+        "post_command": "tshark -r local_evidence_02.pcap -Y \"tls\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-tls-03",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_03.pcap -Y tls",
+        "baseline_command": "tshark -r local_evidence_03.pcap -Y \"tls\"",
+        "post_command": "sudo tshark -r local_evidence_03.pcap -Y \"tls\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-tls-04",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_04.pcap -Y tls",
+        "baseline_command": "tshark -r local_evidence_04.pcap -Y \"tls\"",
+        "post_command": "tshark -r local_evidence_04.pcap -Y \"tls\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-tls-05",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_05.pcap -Y tls",
+        "baseline_command": "tshark -r local_evidence_05.pcap -Y \"tls\"",
+        "post_command": "tshark -r local_evidence_05.pcap -Y \"tls\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      },
+      {
+        "id": "authored-doc-v1-offline-tls-06",
+        "base_correct": true,
+        "post_correct": false,
+        "reference_command": "tshark -r local_evidence_06.pcap -Y tls",
+        "baseline_command": "tshark -r local_evidence_06.pcap -Y \"tls\"",
+        "post_command": "tshark -r local_evidence_06.pcap -Y \"tls\" -q",
+        "semantic_equivalence_review": "PENDING_NOT_ALL_CANONICAL_CHANGES_ARE_NEW_SKILLS"
+      }
+    ]
+  },
+  "fixed_rule_checks": {
+    "domain_exact_strictly_improves": false,
+    "domain_option_diagnostic_strictly_improves": false,
+    "domain_total_not_decreased": true,
+    "retention_not_decreased": false,
+    "no_truncation_runtime_XML_failures": true
+  },
+  "fixed_rule_passed": false,
+  "decision": "KEEP_ORIGINAL_BASE_DO_NOT_PROMOTE_ADAPTER",
+  "train_probe_mean_loss_before": 1.91162109375,
+  "train_probe_mean_loss_after": 0.6107177734375,
+  "train_probe_scope": "Same8training records, not validation or evidence of generalization",
+  "train_peak_metal_bytes": 5832599646,
+  "eval_peak_metal_bytes": 5139025540,
+  "train_wall_seconds": 386.93826429196633,
+  "eval_wall_seconds": 261.87374524981715,
+  "adapter_reload_logit_delta": 0.0,
+  "training_receipt_sha256": "7e2655592e31881d887eef744f0b93dba76b599c69cc1c1503a659f7780cb9f2",
+  "evaluation_receipt_sha256": "3c7f88d2e3ee801fd4b6e5aca07349dd82498cc72d99d8e0ba18ea421138e769",
+  "official_test_rows": 0,
+  "confirmation_rows_queried": 0,
+  "actual_ABA_executed": false,
+  "limitations": [
+    "Two predeclared arms/one seed; equal optimizer steps, not equal token/FLOP budget.",
+    "Control extra32domain presentations versus treatment32replay records: measures replacement under fixed-step budget, not pure added-data effect.",
+    "Development already exposed; no independent generalization or significance claim.",
+    "Source-silver; 32replayfixtures verified onLinux, domain labels not comprehensively execution-validated.",
+    "ManualMLX ablation; not actual ABA, GPU baseline, or official benchmark.",
+    "Changes in canonical matching need semantic review; do not equate every gain with new tool competence.",
+    "This is one pre-frozen manualSFT candidate; no multiple-run tuning based on these outcomes."
+  ]
+}

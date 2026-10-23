@@ -1,0 +1,36 @@
+{
+  "scope": "Describe paired exact/option-diagnostic changes; no relabeling",
+  "arms": {
+    "domain_control": {
+      "domain_regression_ids": [
+        "kali-docdev-v1-pe-suspicious-verbose"
+      ],
+      "retention_regression_families": {
+        "authored-family:offline-dns": 6,
+        "authored-family:offline-tls": 6
+      },
+      "retention_regressions_with_quiet_flag": 12,
+      "retention_gains": 0,
+      "domain_gains": 0
+    },
+    "domain_plus_replay": {
+      "domain_regression_ids": [
+        "kali-docdev-v1-pe-suspicious-verbose"
+      ],
+      "retention_regression_families": {
+        "authored-family:offline-dns": 6,
+        "authored-family:offline-tls": 6
+      },
+      "retention_regressions_with_quiet_flag": 12,
+      "retention_gains": 0,
+      "domain_gains": 0
+    }
+  },
+  "linked_linux_evidence": "kali-linux-semantics-2026-10-23.json",
+  "interpretation": [
+    "Both arms change pescan to pe-scan on the same one query; installed pev0.81 has pescan, not pe-scan.",
+    "Both arms regress on12correlated DNS/TLS tshark cases. Fixed benignLinux fixture confirms -q suppresses required packet output.",
+    "Selected regression mechanisms are supported; unique training cause is not proven.",
+    "Independent-utility replay excludes tshark and does not directly rehearse it; its lack of benefit does not establish that all replay is ineffective."
+  ]
+}

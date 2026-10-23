@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_UNSUPPORTED_GPU_ARCH",
+  "gpu": "NVIDIA GeForce GTX1080Ti",
+  "compute_capability": "6.1",
+  "runtime_minimum": "7.0",
+  "allocated_gpu_count": 1,
+  "model_training_steps": 0,
+  "reason": "Generic GPU scheduling selected Pascal unsupported by pinned PyTorch2.8CUDA12.8 image",
+  "fix": "Require compute major>=8 and VRAM>22000MiB in subsequent job",
+  "not_a_benchmark_result": true
+}

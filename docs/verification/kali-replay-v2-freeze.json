@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN_BEFORE_ARM_RUNS",
+  "frozen_at_utc": "2026-10-23T18:15:20.480524+00:00",
+  "protocol_sha256": {
+    "domain_control": "4a619a8695b6defa3c8bdc6896241f8ea57101267e4890913e6058dcab3f8867",
+    "domain_plus_replay": "3412f67ed8e15403446797fcab3f2c6b82b623a29c13ec8d5f03e5ecaf4abdc8"
+  },
+  "domain_rows_available": 156,
+  "common_domain_rows": 96,
+  "domain_families": 80,
+  "replay_rows": 32,
+  "steps_per_arm": 128,
+  "max_candidates": 2,
+  "official_test_enabled": false,
+  "confirmation_inference": false,
+  "selection_rule": "Compare both to same original base under v1acceptance rule; do not promote any failing arm. No third candidate based on these outcomes."
+}

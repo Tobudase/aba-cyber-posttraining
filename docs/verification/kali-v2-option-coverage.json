@@ -1,0 +1,826 @@
+{
+  "status": "DESCRIPTIVE_COVERAGE_ONLY",
+  "sets": {
+    "v1": {
+      "training_rows": 108,
+      "training_sha256": "fac60849999c71582776b7511e47a26e32823a7635c04d7632f769499667cd3b",
+      "dev_rows": 36,
+      "rows_with_missing_required_flag": 34,
+      "rows_tool_and_flags_seen": 1,
+      "details": [
+        {
+          "id": "kali-docdev-v1-pe-imports-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--imports|-i"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-optional-header",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--header|-h"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-entrypoint-att",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--entrypoint|-e",
+            "--att"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-rva-instruction-limit",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--rva|-r",
+            "-i",
+            "--mode|-m"
+          ],
+          "option_groups_total": 3
+        },
+        {
+          "id": "kali-docdev-v1-pe-suspicious-json",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "--format|-f"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-suspicious-verbose",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "--verbose|-v",
+            "--format|-f"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-section-hashes",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--section|-s"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-coff-hashes",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--header|-h"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-resource-list",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--list|-l"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-resource-stats",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--statistics|-s"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-apk-source-only",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--no-res|-r",
+            "--threads-count|-j"
+          ],
+          "option_groups_total": 3
+        },
+        {
+          "id": "kali-docdev-v1-apk-resources-only",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--no-src|-s"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-yara-tagged-file",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--tag|-t",
+            "--print-meta|-m"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-yara-compiled-count",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--compiled-rules|-C",
+            "--count|-c"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-local-database",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--database|-d",
+            "--infected|-i"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-file-list-log",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--file-list|-f",
+            "--log|-l"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-daemon-stream",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--stream",
+            "--infected|-i"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-daemon-config-log",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--config-file|-c",
+            "--log|-l"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-partition-unallocated",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-A",
+            "-B"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-partition-offset",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-o",
+            "-b"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-aff-sector-differences",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-b"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-ignore-metadata",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-m"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-sha1-validation",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-S"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-segment-names",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-l"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-order",
+          "tool_seen": false,
+          "missing_required_option_groups": [],
+          "option_groups_total": 0
+        },
+        {
+          "id": "kali-docdev-v1-capture-order-no-unneeded-write",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "-n"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-count-duration",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-c",
+            "-u"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-type-interfaces",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-t",
+            "-I"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-chronological-merge",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-concatenate",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-a"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-retain-range",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-r"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-snapshot-length",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-s"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-host-listening-tcp",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--listening|-l",
+            "--tcp|-t",
+            "--programs|-p"
+          ],
+          "option_groups_total": 4
+        },
+        {
+          "id": "kali-docdev-v1-host-routes-numeric",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--route|-r"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-binary-imports-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-i"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-binary-sections-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-S"
+          ],
+          "option_groups_total": 2
+        }
+      ]
+    },
+    "v2_available": {
+      "training_rows": 156,
+      "training_sha256": "60b5fc81c0fefa84fc04e2520738466afa79738707499ea1048099e4d715c3a1",
+      "dev_rows": 36,
+      "rows_with_missing_required_flag": 12,
+      "rows_tool_and_flags_seen": 23,
+      "details": [
+        {
+          "id": "kali-docdev-v1-pe-imports-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-optional-header",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--header|-h"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-entrypoint-att",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-rva-instruction-limit",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 3
+        },
+        {
+          "id": "kali-docdev-v1-pe-suspicious-json",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "--format|-f"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-suspicious-verbose",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "--verbose|-v",
+            "--format|-f"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-section-hashes",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--section|-s"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-coff-hashes",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-resource-list",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-resource-stats",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-apk-source-only",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 3
+        },
+        {
+          "id": "kali-docdev-v1-apk-resources-only",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-yara-tagged-file",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--tag|-t",
+            "--print-meta|-m"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-yara-compiled-count",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--compiled-rules|-C",
+            "--count|-c"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-local-database",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-file-list-log",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-daemon-stream",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--infected|-i"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-daemon-config-log",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--log|-l"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-partition-unallocated",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-partition-offset",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-aff-sector-differences",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-ignore-metadata",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-sha1-validation",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-segment-names",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-l"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-order",
+          "tool_seen": false,
+          "missing_required_option_groups": [],
+          "option_groups_total": 0
+        },
+        {
+          "id": "kali-docdev-v1-capture-order-no-unneeded-write",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "-n"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-count-duration",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-type-interfaces",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-t",
+            "-I"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-chronological-merge",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-concatenate",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-retain-range",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-snapshot-length",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-host-listening-tcp",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--tcp|-t"
+          ],
+          "option_groups_total": 4
+        },
+        {
+          "id": "kali-docdev-v1-host-routes-numeric",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-binary-imports-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-binary-sections-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        }
+      ]
+    },
+    "v2_common96": {
+      "training_rows": 96,
+      "training_sha256": "c9275434f51ddcf00609cb96d431620f21ee52ba6d56516ab454abc4f08fa198",
+      "dev_rows": 36,
+      "rows_with_missing_required_flag": 12,
+      "rows_tool_and_flags_seen": 23,
+      "details": [
+        {
+          "id": "kali-docdev-v1-pe-imports-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-optional-header",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--header|-h"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-entrypoint-att",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-rva-instruction-limit",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 3
+        },
+        {
+          "id": "kali-docdev-v1-pe-suspicious-json",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "--format|-f"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-suspicious-verbose",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "--verbose|-v",
+            "--format|-f"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-section-hashes",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--section|-s"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-pe-coff-hashes",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-resource-list",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-pe-resource-stats",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-apk-source-only",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 3
+        },
+        {
+          "id": "kali-docdev-v1-apk-resources-only",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-yara-tagged-file",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--tag|-t",
+            "--print-meta|-m"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-yara-compiled-count",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--compiled-rules|-C",
+            "--count|-c"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-local-database",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-file-list-log",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-daemon-stream",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--infected|-i"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-clam-daemon-config-log",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--log|-l"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-partition-unallocated",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-partition-offset",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-aff-sector-differences",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-ignore-metadata",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-sha1-validation",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-aff-segment-names",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-l"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-order",
+          "tool_seen": false,
+          "missing_required_option_groups": [],
+          "option_groups_total": 0
+        },
+        {
+          "id": "kali-docdev-v1-capture-order-no-unneeded-write",
+          "tool_seen": false,
+          "missing_required_option_groups": [
+            "-n"
+          ],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-count-duration",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-type-interfaces",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "-t",
+            "-I"
+          ],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-chronological-merge",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-concatenate",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-capture-retain-range",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-capture-snapshot-length",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 1
+        },
+        {
+          "id": "kali-docdev-v1-host-listening-tcp",
+          "tool_seen": true,
+          "missing_required_option_groups": [
+            "--tcp|-t"
+          ],
+          "option_groups_total": 4
+        },
+        {
+          "id": "kali-docdev-v1-host-routes-numeric",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-binary-imports-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        },
+        {
+          "id": "kali-docdev-v1-binary-sections-json",
+          "tool_seen": true,
+          "missing_required_option_groups": [],
+          "option_groups_total": 2
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Lexical flag coverage ignores parameter semantics, order and composition; not proof of learned knowledge.",
+    "No-option tasks counted separately by option_groups_total.",
+    "V2 was designed after V1 diagnostics; this is exposed development, not independent testing."
+  ]
+}

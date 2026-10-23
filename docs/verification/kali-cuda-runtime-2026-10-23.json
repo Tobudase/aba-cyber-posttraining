@@ -1,0 +1,17 @@
+{
+  "status": "PASS_CUDA_OPTIMIZER_SMOKE",
+  "gpu": "NVIDIA A10",
+  "gpu_total_bytes": 23686938624,
+  "torch": "2.8.0+cu128",
+  "cuda_build": "12.8",
+  "optimizer_steps": 20,
+  "initial_loss": 0.33310872316360474,
+  "final_loss": 0.3250109553337097,
+  "peak_allocated_bytes": 25822208,
+  "wall_seconds": 2.0487789929993596,
+  "scope": "Synthetic linear-layer runtime check, not LLM training or benchmark evaluation",
+  "official_test_rows": 0,
+  "ABA_executed": false,
+  "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+  "allocation": "one non-premium GPU; requests=limits CPU1/memory2Gi; five-minute job deadline"
+}

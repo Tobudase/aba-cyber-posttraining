@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "platform": "Linux",
+  "packages": [
+    "net-tools 1.60+git20181103.0eebece-1ubuntu5.4",
+    "pev 0.81-7",
+    "tshark 3.6.2-2",
+    "wireshark-common 3.6.2-2",
+    "yara 4.1.3-1build1"
+  ],
+  "fixture_sha256": "f8b7a3a73f83069a7086762084eee792bb1b7681a39c2d0291afb75a93580bba",
+  "checks": {
+    "tshark_quiet_suppresses_packet_output": {
+      "visible_rc": 0,
+      "quiet_rc": 0,
+      "visible_lines": 3,
+      "quiet_stdout_bytes": 0,
+      "pass": true
+    },
+    "editcap_range_keeps_two_packets": {
+      "editcap_rc": 0,
+      "packet_count": 2,
+      "pass": true
+    },
+    "yara_rules_before_target": {
+      "rules_first_rc": 0,
+      "target_first_rc": 1,
+      "pass": true
+    },
+    "netstat_unique_long_option_abbreviation": {
+      "full_rc": 0,
+      "abbreviated_rc": 0,
+      "same_fixture_row": true,
+      "pass": true
+    }
+  },
+  "executable_name_check": {
+    "pescan_binary_present": true,
+    "pe_scan_binary_present": false,
+    "scope": "Installed executable names only; no PE semantic fixture"
+  },
+  "dataset_or_model_commands_executed": 0,
+  "external_targets_contacted": 0,
+  "scope": "Selected benign Linux fixture semantics, not all48labels or the exact original Kali package versions",
+  "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385"
+}

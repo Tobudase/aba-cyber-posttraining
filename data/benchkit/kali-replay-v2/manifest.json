@@ -1,0 +1,28 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "kali",
+  "official_test": false,
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "rows": 32,
+      "sha256": "4a34255ad7575ab42f1cbf0606349a2621e8732a80301750227525683de1cb4d",
+      "quality": {
+        "AUTHORED_SOURCE_SILVER_EXECUTION_PENDING": 32
+      }
+    }
+  },
+  "source": {
+    "source_url": "https://raw.githubusercontent.com/coreutils/coreutils/9192fd32e03abf6be27eb42c3adb592e49d2cb0e/doc/coreutils.texi",
+    "revision": "9192fd32e03abf6be27eb42c3adb592e49d2cb0e",
+    "sha256": "75d3f2d0f663bd56a6fdc3d62d5814849f57031352ae8b777a704d4e0032ac9e",
+    "bytes": 684410,
+    "scope": "Upstream GNU Coreutils reference; source file not redistributed, authored replay scenarios are original"
+  },
+  "protected_tool_overlap": 0,
+  "limitations": [
+    "32rows from16correlated families; original authored examples grounded in GNU documentation.",
+    "Not expert-reviewed; task-specific replay intentionally excludes all protected tool names.",
+    "No claim that unrelated utility replay alone preserves tshark knowledge."
+  ]
+}

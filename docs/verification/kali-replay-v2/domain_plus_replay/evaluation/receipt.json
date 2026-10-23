@@ -1,0 +1,91 @@
+{
+  "status": "COMPLETE",
+  "phase": "evaluate",
+  "started_at_utc": "2026-10-23T18:34:00.769706+00:00",
+  "protocol_sha256": "3412f67ed8e15403446797fcab3f2c6b82b623a29c13ec8d5f03e5ecaf4abdc8",
+  "conversion_receipt_sha256": "7e9a6095128afd230c90cd5ef9a7e3045c89859225c044fd02bd7e4cf83eaf83",
+  "train_manifest_sha256": "f959b0c381032217c4180c79ed6e6a10082c0b9e3f618757cb7c0925baf639f0",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "actual_pretrained_weights_used": true,
+  "source_silver_pilot": true,
+  "ABA_executed": false,
+  "official_test_rows": 0,
+  "confirmation_rows_queried": 0,
+  "dataset_commands_executed": 0,
+  "tool_help_context_in_model_input": false,
+  "runner_sha256": "3b4f89be231af964824ee7751558293b8d906ceedfd145d917656514c3a21994",
+  "mlx": "0.32.4",
+  "mlx_lm": "0.32.2",
+  "training_receipt_sha256": "47c6f0df588324a643f9ee051660e14d26440386cf9d34acbda4740ad397c2c3",
+  "adapter_files": {
+    "adapters.safetensors": "44715ff4bae0d29d33f2b19f85d76ba481dd7043a26cda05a8ef050778d40ca3",
+    "adapter_config.json": "8f6fc0b3dbd7462058a659d6d95f56135d65aeb78a53f0157373a9e61ceea2ed"
+  },
+  "evaluations": {
+    "domain": {
+      "rows": 36,
+      "baseline": {
+        "tool_score": 100.0,
+        "optional_f1": 37.24867724867725,
+        "positional_f1": 82.97619047619047,
+        "total_score": 73.40828924162257,
+        "exact_match": 16.666666666666664,
+        "format_error": 0.0,
+        "strict_option_value_correct": 16.666666666666664,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 16.666666666666664,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "post": {
+        "tool_score": 97.22222222222221,
+        "optional_f1": 41.633597883597886,
+        "positional_f1": 89.82804232804233,
+        "total_score": 76.2279541446208,
+        "exact_match": 13.88888888888889,
+        "format_error": 0.0,
+        "strict_option_value_correct": 13.88888888888889,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 13.88888888888889,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "complete_XML_rows": 36,
+      "truncated_rows": 0,
+      "predictions_sha256": "76cb8a8a3ea0f93c2dd46490fc6a6aea439a3ba6925f48b0490aca5d92aab872",
+      "metrics_sha256": "ec43391cadf1b4ea6baaf2fe6046c2e7cf027a3a38a82881b082246fe3c07bf4"
+    },
+    "retention": {
+      "rows": 72,
+      "baseline": {
+        "tool_score": 100.0,
+        "optional_f1": 91.66666666666666,
+        "positional_f1": 100.0,
+        "total_score": 97.22222222222221,
+        "exact_match": 91.66666666666666,
+        "format_error": 0.0,
+        "strict_option_value_correct": 91.66666666666666,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 91.66666666666666,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "post": {
+        "tool_score": 75.0,
+        "optional_f1": 88.33333333333333,
+        "positional_f1": 77.77777777777779,
+        "total_score": 80.37037037037037,
+        "exact_match": 75.0,
+        "format_error": 0.0,
+        "strict_option_value_correct": 75.0,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 75.0,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "complete_XML_rows": 72,
+      "truncated_rows": 0,
+      "predictions_sha256": "efa5813a4b000a1b6b847aa616ed2501ddd8823818c24251139b9fd1a9950a88",
+      "metrics_sha256": "291b4459c6604e31f32d5828195fd69fc0bdb01425d19aad2a1edbe7d28e5cd9"
+    }
+  },
+  "wall_seconds": 259.9825831670314,
+  "peak_metal_memory_bytes": 5139025540
+}

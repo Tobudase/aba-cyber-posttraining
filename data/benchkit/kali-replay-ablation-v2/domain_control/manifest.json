@@ -1,0 +1,20 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "kali",
+  "official_test": false,
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "rows": 128,
+      "sha256": "c9275434f51ddcf00609cb96d431620f21ee52ba6d56516ab454abc4f08fa198",
+      "quality": {
+        "AI_DOC_REVIEWED_SOURCE_SILVER_NOT_EXPERT_GOLD": 128
+      }
+    }
+  },
+  "arm": "domain_control",
+  "common_domain_rows": 96,
+  "extra_rows": 32,
+  "unique_source_training_rows": 96,
+  "selection": "One row per80domainfamilies plus16hash-selected second variants; control repeats32common rows; treatment adds32independent-utility rows. No result-driven selection."
+}

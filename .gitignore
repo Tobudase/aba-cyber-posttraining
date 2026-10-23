@@ -47,3 +47,8 @@ docs/verification/athenabench-2026-10-18/source/
 !data/benchkit/kali-domain-dev-v1/
 data/benchkit/kali-domain-dev-v1/dev_confirm.jsonl
 configs/kali-domain-dev-v1.tasks.json
+
+# Reviewed V2 train-only releases.
+!data/benchkit/kali-doc-train-v2/
+!data/benchkit/kali-replay-v2/
+!data/benchkit/kali-replay-ablation-v2/

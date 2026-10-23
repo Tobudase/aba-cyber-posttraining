@@ -1,0 +1,28 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "kali",
+  "official_test": false,
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "rows": 156,
+      "sha256": "60b5fc81c0fefa84fc04e2520738466afa79738707499ea1048099e4d715c3a1",
+      "quality": {
+        "AI_DOC_REVIEWED_SOURCE_SILVER_NOT_EXPERT_GOLD": 156
+      }
+    }
+  },
+  "usage_document_sha256": "4515fc581d624652297344f036cd7f429e8002356956b7b528220097a60254cd",
+  "recipe_source_sha256": {
+    "kali_doc_training_tasks.py": "9f96c2a935bf20babcf052c03d329dbb3fdcb75ba759e57765bb2fdb1f8fe98d",
+    "kali_doc_v2_tasks.py": "22b4595775eddec7b2f0d18b205aedfc4fadd933352e70b65e956b8d18db4cbf"
+  },
+  "limitations": [
+    "AI-authored and source-assisted reviewed; not independently expert-reviewed or terminal-verified.",
+    "Two scenarios per intent are correlated; does not establish independent task skills per row.",
+    "Known tools/packages overlap search-dev, but operation signatures, query/command text and authored scenarios are excluded.",
+    "Source docs may have been seen in original checkpoint training; new authored rows do not prove unseen tool knowledge.",
+    "No confirmation/official test inference or optimization; separate boundary auditor reads authored protected rows only for exclusion.",
+    "All commands remain inert strings. Fixed local source-silver pilot, not actual ABA or official benchmark validation."
+  ]
+}

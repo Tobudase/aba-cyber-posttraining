@@ -1,3 +1,19 @@
+## October 23: expanded data and frozen replay ablation completed
+
+Expanded the domain pool to **156 source-silver rows / 80 correlated families**, added **32 independent-source general utility replay rows**, and verified all32 replay fixtures plus four selected semantic checks on Linux. Mandatory-option coverage gaps fell from34/36to12/36 in the exposed domain development set.
+
+Two predeclared128-step LoRA arms started from the original RedSage-K8B base. Both used the same96-row domain core; control repeated32domain records, treatment replaced those32presentations with replay. Equal steps do not mean equal tokens or domain exposure.
+
+| Matched development | Original base | Domain control | Domain + replay |
+| --- | ---: | ---: | ---: |
+| Domain Exact / option diagnostic |6/36|5/36|5/36|
+| CLI retention Exact / option diagnostic |66/72|54/72|54/72|
+| Retention native Total |97.22|89.63|80.37|
+
+**Keep the original base.** Neither candidate passed the frozen rule; this replay did not solve the regression. These are exposed development results from manual local SFT. Actual ABA, fresh independent validation and official benchmark evaluation remain pending.
+
+Read the [full ablation report](KALI_REPLAY_ABLATION_REPORT_2026-10-23.md) and [paired evidence](verification/kali-replay-v2/comparison.json). GPU access also progressed: an actual A10 CUDA/20-step synthetic optimizer check passed and was cleaned up; this alone does not establish8B GPU training. The [resource report](KALI_RESOURCE_VALIDATION_2026-10-23.md) records the precise stage reached.
+
 ## October 23: fixed document-data SFT — negative result
 
 Completed a single frozen 108-step LoRA experiment on RedSage-K-SFT-GRPO (8B, local MLX affine4, M2 Pro/16GiB), using 108 source-silver rows across 55 correlated intent families. Matched inference used the SFT-aligned prefix without tool help.

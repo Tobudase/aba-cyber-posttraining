@@ -1,0 +1,34 @@
+{
+  "attempts": [
+    {
+      "stage": "initial_dependency_import",
+      "status": "FAILED",
+      "reason": "Missing regex package",
+      "gpu_requested": 0
+    },
+    {
+      "stage": "in_process_import",
+      "status": "STOPPED_FOR_DIAGNOSIS",
+      "reason": "Slow/stalled import after pip installed packages; bounded separate import subsequently passed",
+      "gpu_requested": 0
+    },
+    {
+      "stage": "subprocess_import",
+      "status": "FAILED_TIMEOUT",
+      "reason": "120-second import timeout; thread-limited fresh import used in next attempt",
+      "gpu_requested": 0
+    },
+    {
+      "stage": "thread_limited_prefetch",
+      "status": "JOB_ENDED_WITHOUT_COMPLETION_RECEIPT",
+      "observed_cache": "All metadata plus full-size first shard left as .partial; not considered verified until resumed hash audit",
+      "gpu_requested": 0
+    },
+    {
+      "stage": "cpu_resume",
+      "status": "IN_PROGRESS",
+      "reason": "Explicit sizes, streaming hashes, retry/resume; no GPU held"
+    }
+  ],
+  "scope": "Setup failures are recorded separately from benchmark/LoRA results"
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "kali.doc_worker.v2",
+  "status": "PACKAGED_SELF_CHECKED_NOT_LINUX_GPU_OR_ABA_EXECUTED",
+  "model": {
+    "id": "RISys-Lab/RedSage-K-SFT-GRPO",
+    "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+    "license_card_field": null,
+    "weight_files": [
+      "model-00001-of-00004.safetensors",
+      "model-00002-of-00004.safetensors",
+      "model-00003-of-00004.safetensors",
+      "model-00004-of-00004.safetensors"
+    ]
+  },
+  "training_rows": 128,
+  "training_manifest_sha256": "f959b0c381032217c4180c79ed6e6a10082c0b9e3f618757cb7c0925baf639f0",
+  "worker_command": [
+    "python",
+    "scripts/train-benchkit.py",
+    "--model",
+    "redsage",
+    "--dataset",
+    "data/benchkit/train/manifest.json",
+    "--steps",
+    "128",
+    "--learning-rate",
+    "0.00001",
+    "--output",
+    "/results/candidate-01",
+    "--execute"
+  ],
+  "model_prefetch_command": [
+    "python",
+    "scripts/cache-benchkit-model.py",
+    "--model",
+    "redsage",
+    "--cache-dir",
+    "/results/hf-cache",
+    "--execute"
+  ],
+  "private_evaluator": {
+    "status": "INTERFACE_CONTRACT_ONLY_NOT_INTEGRATED_WITH_ACTUAL_ABA",
+    "input": {
+      "candidate_id": "string",
+      "adapter_directory": "shared-result-path",
+      "training_receipt_sha256": "sha256"
+    },
+    "output": [
+      "candidate_id",
+      "status",
+      "domain_native_metrics",
+      "domain_option_diagnostic",
+      "retention_native_metrics",
+      "retention_option_diagnostic",
+      "coverage",
+      "gpu_hours",
+      "errors"
+    ],
+    "official_test_feedback": false,
+    "dev_rows_returned_to_worker": false
+  },
+  "private_dev_files": 0,
+  "confirmation_files": 0,
+  "official_test_files": 0,
+  "credentials": 0,
+  "search_enabled": false,
+  "gpu_jobs_submitted": 0,
+  "runtime_difference": "Existing CUDA runner uses NF4,PEFT rank16/all q-v layers; Mac frozen pilot uses MLX affine4,rank8/last4layers. Fresh matched GPU baseline/protocol required; do not claim cross-runtime reproduction.",
+  "prerequisites": [
+    "Pod admission restored and CPU fixtures verified; compatible GPU and full CUDA LLM environment still require verification",
+    "CPU-only prefetch before GPU scheduling",
+    "Build and validate immutable Linux training image and CUDA stack",
+    "Single finite GPU smoke, telemetry, private evaluator mounting and controlled submission",
+    "Actual pinned ABA setup/worker/evaluator end-to-end validation before enabling search"
+  ]
+}
