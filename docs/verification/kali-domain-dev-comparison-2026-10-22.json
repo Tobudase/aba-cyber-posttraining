@@ -1,0 +1,217 @@
+{
+  "status": "THREE_DOMAIN_DEV_INFERENCE_CONTROLS_COMPLETE",
+  "model": {
+    "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+    "source_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+    "conversion_receipt_sha256": "7e9a6095128afd230c90cd5ef9a7e3045c89859225c044fd02bd7e4cf83eaf83",
+    "dev_manifest_sha256": "f344d3baaec75a35af9c01644771e44184f24b47af2c74fd8b54cfb9432ba6d2",
+    "row_ids": [
+      "kali-docdev-v1-pe-imports-json",
+      "kali-docdev-v1-pe-optional-header",
+      "kali-docdev-v1-pe-entrypoint-att",
+      "kali-docdev-v1-pe-rva-instruction-limit",
+      "kali-docdev-v1-pe-suspicious-json",
+      "kali-docdev-v1-pe-suspicious-verbose",
+      "kali-docdev-v1-pe-section-hashes",
+      "kali-docdev-v1-pe-coff-hashes",
+      "kali-docdev-v1-pe-resource-list",
+      "kali-docdev-v1-pe-resource-stats",
+      "kali-docdev-v1-apk-source-only",
+      "kali-docdev-v1-apk-resources-only",
+      "kali-docdev-v1-yara-tagged-file",
+      "kali-docdev-v1-yara-compiled-count",
+      "kali-docdev-v1-clam-local-database",
+      "kali-docdev-v1-clam-file-list-log",
+      "kali-docdev-v1-clam-daemon-stream",
+      "kali-docdev-v1-clam-daemon-config-log",
+      "kali-docdev-v1-partition-unallocated",
+      "kali-docdev-v1-partition-offset",
+      "kali-docdev-v1-aff-sector-differences",
+      "kali-docdev-v1-aff-ignore-metadata",
+      "kali-docdev-v1-aff-sha1-validation",
+      "kali-docdev-v1-aff-segment-names",
+      "kali-docdev-v1-capture-order",
+      "kali-docdev-v1-capture-order-no-unneeded-write",
+      "kali-docdev-v1-capture-count-duration",
+      "kali-docdev-v1-capture-type-interfaces",
+      "kali-docdev-v1-capture-chronological-merge",
+      "kali-docdev-v1-capture-concatenate",
+      "kali-docdev-v1-capture-retain-range",
+      "kali-docdev-v1-capture-snapshot-length",
+      "kali-docdev-v1-host-listening-tcp",
+      "kali-docdev-v1-host-routes-numeric",
+      "kali-docdev-v1-binary-imports-json",
+      "kali-docdev-v1-binary-sections-json"
+    ],
+    "temperature": 0,
+    "seed": 42,
+    "max_output_tokens": 1024,
+    "quantization": "MLX affine4 group64"
+  },
+  "results": {
+    "aligned": {
+      "rows": 36,
+      "native_metrics": {
+        "tool_score": 100.0,
+        "optional_f1": 37.24867724867725,
+        "positional_f1": 82.97619047619047,
+        "total_score": 73.40828924162257,
+        "exact_match": 16.666666666666664,
+        "format_error": 0.0,
+        "strict_option_value_correct": 16.666666666666664,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 16.666666666666664,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "correct_option_diagnostic_rows": 6.0,
+      "complete_XML_rows": 36,
+      "truncated_rows": 0,
+      "generation_prefix": "sft-aligned",
+      "tool_help_context": false,
+      "stream_leading_space_differences": 0,
+      "receipt_sha256": "83db26a54fd727e8a9bd71e64f330036815747101f695ec51cc62759f37b467e",
+      "peak_metal_memory_bytes": 5077282460,
+      "wall_seconds_this_process": 91.26653458317742
+    },
+    "native": {
+      "rows": 36,
+      "native_metrics": {
+        "tool_score": 91.66666666666666,
+        "optional_f1": 31.878306878306876,
+        "positional_f1": 79.07407407407408,
+        "total_score": 67.53968253968253,
+        "exact_match": 11.11111111111111,
+        "format_error": 5.555555555555555,
+        "strict_option_value_correct": 11.11111111111111,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 11.11111111111111,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "correct_option_diagnostic_rows": 4.0,
+      "complete_XML_rows": 0,
+      "truncated_rows": 0,
+      "generation_prefix": "native",
+      "tool_help_context": false,
+      "stream_leading_space_differences": 4,
+      "receipt_sha256": "92f49cfffe220ac28d7738614584955ce58015b6ae123401bbc1451df2d6d4aa",
+      "peak_metal_memory_bytes": 5077282448,
+      "wall_seconds_this_process": 31.157935624942183
+    },
+    "tool_help": {
+      "rows": 36,
+      "native_metrics": {
+        "tool_score": 100.0,
+        "optional_f1": 90.87962962962963,
+        "positional_f1": 90.74074074074073,
+        "total_score": 93.87345679012346,
+        "exact_match": 69.44444444444444,
+        "format_error": 0.0,
+        "strict_option_value_correct": 69.44444444444444,
+        "runtime_failed_rows": 0,
+        "all_requested_strict_exact": 69.44444444444444,
+        "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+      },
+      "correct_option_diagnostic_rows": 25.0,
+      "complete_XML_rows": 36,
+      "truncated_rows": 0,
+      "generation_prefix": "sft-aligned",
+      "tool_help_context": true,
+      "stream_leading_space_differences": 0,
+      "receipt_sha256": "6576c267db4cd323558ce1702e9c7ef53fa21f53ded36129bfbe05469508e056",
+      "peak_metal_memory_bytes": 5418077500,
+      "wall_seconds_this_process": 199.6238775840029
+    }
+  },
+  "paired_changes": {
+    "native_to_aligned": {
+      "gain_rows": 2,
+      "regression_rows": 0,
+      "identical_response_texts": 0
+    },
+    "aligned_to_tool_help": {
+      "gain_rows": 19,
+      "regression_rows": 0,
+      "identical_response_texts": 5
+    }
+  },
+  "remaining_dochelp_review_queue": [
+    {
+      "id": "kali-docdev-v1-apk-resources-only",
+      "reference": "jadx --no-src --output-dir jade_resources mobile_jade.apk",
+      "predicted": "jadx --no-res mobile_jade.apk",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-yara-tagged-file",
+      "reference": "yara --tag triage --print-meta signatures_triage.yar offline_sample.bin",
+      "predicted": "yara --print-meta --tag=triage offline_sample.bin signatures_triage.yar",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-clam-file-list-log",
+      "reference": "clamscan --file-list review_manifest.txt --log review_scan.log",
+      "predicted": "clamscan --file-list=local review_manifest.txt --log=review_scan.log --leave-temps",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-partition-offset",
+      "reference": "mmls -o 4096 -b 512 nested_papa.dd",
+      "predicted": "mmls -b 512 -o 4096 local nested_papa.dd",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-aff-sector-differences",
+      "reference": "affcompare -b original_quebec.aff copied_quebec.aff",
+      "predicted": "affcompare --b original_quebec.aff copied_quebec.aff",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-aff-ignore-metadata",
+      "reference": "affcompare -m evidence_romeo.aff replica_romeo.aff",
+      "predicted": "affcompare -m local_evidence_romeo.aff replica_romeo.aff",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-aff-segment-names",
+      "reference": "affinfo -l archive_tango.aff",
+      "predicted": "affinfo -l localarchive_tango.aff",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-capture-snapshot-length",
+      "reference": "editcap -s 128 session_beta.pcapng bounded_packets.pcapng",
+      "predicted": "editcap -s 128 saved_capture_session.pcapng bounded_packets.pcapng",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-host-listening-tcp",
+      "reference": "netstat --listening --tcp --numeric --programs",
+      "predicted": "netstat --numeric --program --listening --tcp",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-binary-imports-json",
+      "reference": "rabin2 -i -j captured_binary.elf",
+      "predicted": "rabin2 -j --imports captured_binary.elf",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    },
+    {
+      "id": "kali-docdev-v1-binary-sections-json",
+      "reference": "rabin2 -S -j archived_binary.elf",
+      "predicted": "rabin2 -j archived_binary.elf",
+      "review_status": "PENDING_SEMANTIC_REVIEW"
+    }
+  ],
+  "new_training_steps": 0,
+  "ABA_executed": false,
+  "official_test_rows": 0,
+  "confirmation_rows_queried": 0,
+  "commands_executed": 0,
+  "limitations": [
+    "Authored source-silver, independent label review pending; not representative official performance.",
+    "Tool-help context is supplied at inference; any gain is not learning or post-training improvement.",
+    "Strict system messages and1024-token cap differ from official thinking-system/8192-token evaluation.",
+    "Do not conclude quantization, model knowledge, or dataset quality as sole cause from these controls.",
+    "Failed native attempt preserved; resumed24validated rows, generated remaining12 without rewriting old outputs."
+  ]
+}

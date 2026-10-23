@@ -1,0 +1,351 @@
+{
+  "status": "TRAIN_REQUIRED_FLAG_COVERAGE_DIAGNOSTIC_NOT_CAUSAL_PROOF",
+  "search_rows": 36,
+  "new_train_rows": 108,
+  "dev_tools": 18,
+  "dev_tools_present_in_new_train": 16,
+  "rows_with_all_required_option_groups_seen": 2,
+  "rows_with_missing_required_option_groups": 34,
+  "details": [
+    {
+      "id": "kali-docdev-v1-pe-imports-json",
+      "tool": "readpe",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--imports|-i"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-optional-header",
+      "tool": "readpe",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--header|-h"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-entrypoint-att",
+      "tool": "pedis",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--entrypoint|-e",
+        "--att"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-rva-instruction-limit",
+      "tool": "pedis",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--rva|-r",
+        "-i",
+        "--mode|-m"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-suspicious-json",
+      "tool": "pescan",
+      "tool_present_in_new_train": false,
+      "required_option_groups_absent_from_new_train": [
+        "--format|-f"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-suspicious-verbose",
+      "tool": "pescan",
+      "tool_present_in_new_train": false,
+      "required_option_groups_absent_from_new_train": [
+        "--verbose|-v",
+        "--format|-f"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-section-hashes",
+      "tool": "pehash",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--section|-s"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-coff-hashes",
+      "tool": "pehash",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--header|-h"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-resource-list",
+      "tool": "peres",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--list|-l"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-pe-resource-stats",
+      "tool": "peres",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--statistics|-s"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-apk-source-only",
+      "tool": "jadx",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--no-res|-r",
+        "--threads-count|-j"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-apk-resources-only",
+      "tool": "jadx",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--no-src|-s"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-yara-tagged-file",
+      "tool": "yara",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--tag|-t",
+        "--print-meta|-m"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-yara-compiled-count",
+      "tool": "yara",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--compiled-rules|-C",
+        "--count|-c"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-clam-local-database",
+      "tool": "clamscan",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--database|-d",
+        "--infected|-i"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-clam-file-list-log",
+      "tool": "clamscan",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--file-list|-f",
+        "--log|-l"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-clam-daemon-stream",
+      "tool": "clamdscan",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--stream",
+        "--infected|-i"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-clam-daemon-config-log",
+      "tool": "clamdscan",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--config-file|-c",
+        "--log|-l"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-partition-unallocated",
+      "tool": "mmls",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-A",
+        "-B"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-partition-offset",
+      "tool": "mmls",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-o",
+        "-b"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-aff-sector-differences",
+      "tool": "affcompare",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-b"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-aff-ignore-metadata",
+      "tool": "affcompare",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-m"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-aff-sha1-validation",
+      "tool": "affinfo",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-S"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-aff-segment-names",
+      "tool": "affinfo",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-l"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-capture-order",
+      "tool": "reordercap",
+      "tool_present_in_new_train": false,
+      "required_option_groups_absent_from_new_train": [],
+      "all_required_option_groups_seen_for_this_tool": true
+    },
+    {
+      "id": "kali-docdev-v1-capture-order-no-unneeded-write",
+      "tool": "reordercap",
+      "tool_present_in_new_train": false,
+      "required_option_groups_absent_from_new_train": [
+        "-n"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-capture-count-duration",
+      "tool": "capinfos",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-c",
+        "-u"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-capture-type-interfaces",
+      "tool": "capinfos",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-t",
+        "-I"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-capture-chronological-merge",
+      "tool": "mergecap",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [],
+      "all_required_option_groups_seen_for_this_tool": true
+    },
+    {
+      "id": "kali-docdev-v1-capture-concatenate",
+      "tool": "mergecap",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-a"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-capture-retain-range",
+      "tool": "editcap",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-r"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-capture-snapshot-length",
+      "tool": "editcap",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-s"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-host-listening-tcp",
+      "tool": "netstat",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--listening|-l",
+        "--tcp|-t",
+        "--programs|-p"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-host-routes-numeric",
+      "tool": "netstat",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "--route|-r"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-binary-imports-json",
+      "tool": "rabin2",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-i"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    },
+    {
+      "id": "kali-docdev-v1-binary-sections-json",
+      "tool": "rabin2",
+      "tool_present_in_new_train": true,
+      "required_option_groups_absent_from_new_train": [
+        "-S"
+      ],
+      "all_required_option_groups_seen_for_this_tool": false
+    }
+  ],
+  "interpretation": "New training intentionally excludes matching development operation signatures; many required per-tool flag mappings are therefore not directly taught. This is a data-coverage limitation and a hypothesis for poor transfer, not proof of a unique cause. Do not add development targets to training or tune against confirmation/test.",
+  "rows_with_tool_and_all_option_groups_seen": 1,
+  "note": "The2flag-covered rows include1zero-option task with no newTRAIN examples for that tool; only1row has both tool exposure and all required option groups."
+}

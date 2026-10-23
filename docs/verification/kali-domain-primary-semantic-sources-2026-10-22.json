@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "name": "gnu-getopt-long",
+      "url": "https://sourceware.org/glibc/manual/latest/html_node/Getopt-Long-Options.html",
+      "resolved_url": "https://sourceware.org/glibc/manual/latest/html_node/Getopt-Long-Options.html",
+      "sha256": "b7b125eab542894bb6a78f7d35193548a05558bb2fb3c67e5c51864fe7fc93cf",
+      "bytes": 13785,
+      "path": ".tools/benchkit/kali/reverification-primary-docs/gnu-getopt-long.html",
+      "checked_at_utc": "2026-10-22T21:55:10.873746+00:00"
+    },
+    {
+      "name": "netstat-source",
+      "url": "https://salsa.debian.org/debian/net-tools/-/raw/upstream/2.10/netstat.c",
+      "resolved_url": "https://salsa.debian.org/debian/net-tools/-/raw/upstream/2.10/netstat.c",
+      "sha256": "55d5b8a73db097042464e8e33160e097adc1a5551ddc63f2dbd745bcf12fb2e7",
+      "bytes": 65523,
+      "path": ".tools/benchkit/kali/reverification-primary-docs/netstat-source.c",
+      "checked_at_utc": "2026-10-22T21:55:11.550469+00:00"
+    },
+    {
+      "name": "yara-cli",
+      "url": "https://yara.readthedocs.io/en/stable/commandline.html",
+      "resolved_url": "https://yara.readthedocs.io/en/stable/commandline.html",
+      "sha256": "058509576f6d0db5058e0f62c6e768ea0598dc0843b92a575fa59f9153718045",
+      "bytes": 23423,
+      "path": ".tools/benchkit/kali/reverification-primary-docs/yara-cli.html",
+      "checked_at_utc": "2026-10-22T21:55:11.841351+00:00"
+    },
+    {
+      "name": "editcap-manual",
+      "url": "https://www.wireshark.org/docs/man-pages/editcap.html",
+      "resolved_url": "https://www.wireshark.org/docs/man-pages/editcap.html",
+      "sha256": "1b1104124b4b6026bd3e5f0ed0af32466e135c0f70574377996fa74c781cc511",
+      "bytes": 41297,
+      "path": ".tools/benchkit/kali/reverification-primary-docs/editcap-manual.html",
+      "checked_at_utc": "2026-10-22T21:55:12.396870+00:00"
+    },
+    {
+      "name": "mergecap-manual",
+      "url": "https://www.wireshark.org/docs/man-pages/mergecap.html",
+      "resolved_url": "https://www.wireshark.org/docs/man-pages/mergecap.html",
+      "sha256": "7a4884af98e36142ca1785aedf018e7abd71da6917a86552e2928a8ee0a6004d",
+      "bytes": 14015,
+      "path": ".tools/benchkit/kali/reverification-primary-docs/mergecap-manual.html",
+      "checked_at_utc": "2026-10-22T21:55:12.506556+00:00"
+    }
+  ],
+  "runtime_commands_executed": 0,
+  "official_scorer_modified": false,
+  "scope": "Selected semantic checks; not independent review of all48 labels"
+}

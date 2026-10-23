@@ -1,0 +1,88 @@
+{
+  "schema": "kali.doc_sft.fixed_pilot.v1",
+  "frozen_at_utc": "2026-10-23T06:56:23.470420+00:00",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "conversion_receipt_sha256": "7e9a6095128afd230c90cd5ef9a7e3045c89859225c044fd02bd7e4cf83eaf83",
+  "train_manifest": "data/benchkit/kali-doc-train-v1/manifest.json",
+  "train_manifest_sha256": "a12e73d621a88a6d4c82f8e8e4fb5e3bdf5ce3491bfde8e0d9c383ffbe317cde",
+  "train_rows": 108,
+  "source_review_sha256": "fef92c4d82e1c3907b85a0baf8238323f87676cedbfc25e427760d52e13c144e",
+  "training": {
+    "steps": 108,
+    "epochs": 1,
+    "batch_size": 1,
+    "learning_rate": 1e-05,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0,
+    "seed": 42,
+    "shuffle_once": true,
+    "lora": {
+      "rank": 8,
+      "scale": 2.0,
+      "dropout": 0.0,
+      "keys": [
+        "self_attn.q_proj",
+        "self_attn.v_proj"
+      ]
+    },
+    "last_layers": 4,
+    "max_sequence_tokens": 2048,
+    "train_sequence_min": 385,
+    "train_sequence_max": 457,
+    "supervision": "native_full_chat_assistant_only_final_targets_no_help_context_no_fabricated_reasoning"
+  },
+  "inference": {
+    "generation_prefix": "sft-aligned",
+    "tool_help_context": false,
+    "temperature": 0,
+    "seed": 42,
+    "max_output_tokens": 1024,
+    "prefill_step_size": 256
+  },
+  "evaluation": {
+    "domain": {
+      "manifest": "data/benchkit/kali-domain-dev-v1/manifest.json",
+      "manifest_sha256": "f344d3baaec75a35af9c01644771e44184f24b47af2c74fd8b54cfb9432ba6d2",
+      "split": "dev_search",
+      "rows": 36,
+      "baseline_directory": "docs/verification/kali-domain-e0-2026-10-22",
+      "baseline_receipt_sha256": "83db26a54fd727e8a9bd71e64f330036815747101f695ec51cc62759f37b467e",
+      "baseline_predictions_sha256": "29ef8dde66b21e4c34a9de9393f20b67f03e03ce7ec81af24a0c8b7761a23111"
+    },
+    "retention": {
+      "manifest": "data/benchkit/kali-external-dev/manifest.json",
+      "manifest_sha256": "e9179f80569b68690e69eeced4d73decee52534e0b3e0af2cc3a684c8ebfb842",
+      "split": "dev_search",
+      "rows": 72,
+      "baseline_directory": "docs/verification/kali-prefix-ablation-2026-10-22/E0",
+      "baseline_receipt_sha256": "f0e9a5a7a45516dd07efc9d79000d37da6ebb7404cc3c6037afa762bf116036c",
+      "baseline_predictions_sha256": "5298146c75277dca019b95428dfd8c10c793cbcfc1af241e87366430b80216a3"
+    }
+  },
+  "protected_files_sha256": {
+    "data/benchkit/kali-domain-dev-v1/dev_search.jsonl": "32b954c36aaae517333ab71652fc309c667a8ddcc42d20499e4c5053db6143ff",
+    "data/benchkit/kali-domain-dev-v1/dev_confirm.jsonl": "2224ffface17b031d5f5cda35c8a1d7120c0b7a726bccd386c14833020632865",
+    "data/benchkit/kali-external-dev/dev_search.jsonl": "28754b7786470f7def06bf2733fbf248f91c69861d6c73cc3715be21fbd60e21",
+    "data/benchkit/kali-external-dev/dev_confirm.jsonl": "fe254f3555202c440f8923f7ad26c82fc50ad1e36b915e0ac2692810cb3ad39a"
+  },
+  "budget": {
+    "max_candidates": 1,
+    "train_deadline_seconds": 1800,
+    "eval_deadline_seconds": 1800,
+    "metal_memory_limit_bytes": 9663676416,
+    "metal_cache_limit_bytes": 268435456
+  },
+  "decision_rule": "Keep base unless domain nativeExact and strict option diagnostic both strictly improve, domain Total does not decrease, retention strict diagnostic does not decrease, and no truncation/runtime/XML failures.",
+  "baseline_domain_correct": 6,
+  "baseline_retention_correct": 66,
+  "confirmation_inference": false,
+  "official_test_enabled": false,
+  "ABA_executed": false,
+  "limitations": [
+    "Single fixed manualSFT engineering candidate; no actual ABA or formal benchmark score.",
+    "108source-silver rows/55correlated intent families, assistant-reviewed, not expert gold or terminal-verified.",
+    "Development already exposed to manual diagnostics; no independent generalization/significance claim.",
+    "Quantized local model differs from official BF16/thinking protocol; no model/adapters published automatically."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-23T08:00:11.529542+00:00",
+  "scope": "Curated public score replay and portable tests; no new model calls or training",
+  "source_files_verified": 54,
+  "portable_tests_passed": 10,
+  "matched_domain_correct": [
+    6,
+    5
+  ],
+  "matched_retention_correct": [
+    66,
+    54
+  ],
+  "domain_control_correct": [
+    4,
+    6,
+    25
+  ],
+  "credential_scan_issues": 0,
+  "new_confirmation_bodies_released": false,
+  "model_tensors_released": false,
+  "actual_ABA_executed": false,
+  "decision": "KEEP_ORIGINAL_BASE_DO_NOT_PROMOTE_ADAPTER"
+}

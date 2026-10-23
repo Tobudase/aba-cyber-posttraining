@@ -1,0 +1,25 @@
+{
+  "status": "LOCAL_STRICT_PREFIX_ALIGNMENT_ACCEPTED_RETENTION_ONLY",
+  "checked_at_utc": "2026-10-22T17:48:50.195327+00:00",
+  "source_comparison": "docs/verification/kali-prefix-ablation-2026-10-22/comparison.json",
+  "both_aligned_Exact": 66,
+  "rows": 72,
+  "both_aligned_native_total": 97.22222222222221,
+  "both_aligned_complete_XML": 72,
+  "posttraining_metric_gain_after_alignment": 0,
+  "identical_response_texts": 71,
+  "differing_responses": [
+    {
+      "id": "authored-doc-v1-log-count-04",
+      "E0": "<output>\ngrep -c 'FAILED' local_evidence_04.log\n</output>",
+      "E1": "<output>\ngrep -c \"FAILED\" local_evidence_04.log\n</output>"
+    }
+  ],
+  "decision": "Retain unchanged base weights; use explicit sft-aligned policy for this local strict-format retention protocol. Do not alter official thinking evaluation.",
+  "data_role_correction": "Current72rows are generalCLI retention/interface checks, insufficient as sole Kali task-learning/ABA selection objective.",
+  "remaining_work": "Build independently reviewed domain-representative externaldev; then compare conservative training candidates.",
+  "formal_test_rows": 0,
+  "confirmation_rows_queried": 0,
+  "new_training_steps": 0,
+  "deployed_on_Nautilus": false
+}

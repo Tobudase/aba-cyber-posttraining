@@ -1,0 +1,25 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "kali",
+  "official_test": false,
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "rows": 108,
+      "sha256": "fac60849999c71582776b7511e47a26e32823a7635c04d7632f769499667cd3b",
+      "quality": {
+        "AI_DOC_REVIEWED_SOURCE_SILVER_NOT_EXPERT_GOLD": 108
+      }
+    }
+  },
+  "usage_document_sha256": "4515fc581d624652297344f036cd7f429e8002356956b7b528220097a60254cd",
+  "recipe_source_sha256": "9f96c2a935bf20babcf052c03d329dbb3fdcb75ba759e57765bb2fdb1f8fe98d",
+  "limitations": [
+    "AI-authored and source-assisted reviewed; not independently expert-reviewed or terminal-verified.",
+    "Two scenarios per intent are correlated; does not establish108independent task skills.",
+    "Known tools/packages overlap search-dev, but operation signatures, query/command text and authored scenarios are excluded.",
+    "Source docs may have been seen in original checkpoint training; new authored rows do not prove unseen tool knowledge.",
+    "No confirmation/official test inference or optimization; separate boundary auditor reads authored protected rows only for exclusion.",
+    "All commands remain inert strings. Fixed local source-silver pilot, not actual ABA or official benchmark validation."
+  ]
+}

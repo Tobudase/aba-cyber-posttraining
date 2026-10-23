@@ -1,0 +1,8 @@
+{
+  "written_at_utc": "2026-10-22T17:41:26.886822+00:00",
+  "timing": "After generation started; before viewing new prediction text or computing new scores",
+  "engineering_acceptance": "For each unchanged-model comparison, require improved fullXML coverage without lower nativeTotal or option diagnostic before adopting for future externaldev. No statistical efficacy claim.",
+  "E0_E1_training_comparison": "Report both prefixes separately; never mix the best result from different inference policies.",
+  "confirmation_set": "Remain unused.",
+  "official_protocol": "Do not replace paper thinking-prompt evaluation with local strict-prefix experiment."
+}

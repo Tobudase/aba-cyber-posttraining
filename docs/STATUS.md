@@ -1,3 +1,18 @@
+## October 23: fixed document-data SFT — negative result
+
+Completed a single frozen 108-step LoRA experiment on RedSage-K-SFT-GRPO (8B, local MLX affine4, M2 Pro/16GiB), using 108 source-silver rows across 55 correlated intent families. Matched inference used the SFT-aligned prefix without tool help.
+
+| Authored development set | Original base | New adapter |
+| --- | ---: | ---: |
+| Domain Exact / option diagnostic | 6/36 | 5/36 |
+| General CLI retention Exact / option diagnostic | 66/72 | 54/72 |
+
+**Keep the original base; do not promote the adapter.** Domain Total rose from 73.41 to 76.45, but the frozen acceptance rule failed. The 12 retention regressions belong to two correlated tshark families. These are development engineering results, not official KaliBench scores or actual ABA results.
+
+A preceding prefix control brought the earlier base and 20-step adapter to the same 66/72, so the older 61→62 comparison below is historical and does not establish training gains. Domain inference controls were native 4/36, aligned 6/36, and aligned with tool help 25/36; tool-help gains are inference assistance, not learning.
+
+Read the [full report](KALI_DOC_SFT_REPORT_2026-10-23.md), [frozen comparison](verification/kali-doc-sft-v1-2026-10-22/comparison.json), and [public reproduction instructions](REPRODUCTION.md). Released: training data, 36 search-dev rows, scripts, predictions and receipts. New confirmation bodies and all tensors remain excluded. Actual ABA/CUDA integration and independent semantic validation are pending.
+
 # Current status — October 22, 2026
 
 Minhao owns KaliBench; the collaborator owns AthenaBench. The real local RedSage8B affine4 cycle completed:72externaldev E0 61/72 Exact →20continuedSFT optimizer steps→same72E1 62/72. NativeTotal93.75→93.52;5gains4regressions, no reliable improvement. Keep the base. Training changed16LoRA tensors, persistedadapter reload delta0, peakMetal5.72GB. Independent4case token/stream/replay audit passed.

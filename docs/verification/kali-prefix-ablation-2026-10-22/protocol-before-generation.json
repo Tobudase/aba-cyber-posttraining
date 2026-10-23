@@ -1,0 +1,25 @@
+{
+  "schema": "kali.prefix_ablation.v1",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "source_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "conversion_receipt_sha256": "7e9a6095128afd230c90cd5ef9a7e3045c89859225c044fd02bd7e4cf83eaf83",
+  "training_receipt_sha256": "9606c1f28d9d17690b686b4156fe79aa9305ead6a38ef43f700235acdab7de83",
+  "dev_manifest_sha256": "e9179f80569b68690e69eeced4d73decee52534e0b3e0af2cc3a684c8ebfb842",
+  "rows_per_phase": 72,
+  "maximum_generation_calls": 144,
+  "changed_variable": "Remove only opening<think> from native assistant generation prefix",
+  "SFT_assistant_boundary_matches_all_rows": true,
+  "max_output_tokens": 1024,
+  "temperature": 0,
+  "seed": 42,
+  "batch_size": 1,
+  "training_updates": 0,
+  "official_test_rows": 0,
+  "confirmation_rows_queried": 0,
+  "scorer_changed": false,
+  "limitations": [
+    "External dev already exposed,12authored families, not independent test.",
+    "Removing prefix is not a guarantee that reasoning is disabled.",
+    "Does not replace thinking-prompt official evaluation or demonstrate ABA improvement."
+  ]
+}

@@ -1,3 +1,22 @@
+# October 23 public score reproduction
+
+The latest completed experiment is the [negative fixed-SFT pilot](KALI_DOC_SFT_REPORT_2026-10-23.md). Model inference and retraining are not needed to check the published scores.
+
+```sh
+python3 -m venv .venv-score
+. .venv-score/bin/activate
+pip install transformers==4.57.6 tokenizers==0.22.2 cvss==3.6
+python scripts/restore-benchkit-sources.py --execute
+python scripts/verify-kali-public-results.py
+python -m unittest discover -s tests -v
+```
+
+The source restorer fetches only pinned scorer/code/model metadata files, never weights or official test data. The verifier checks released data and receipt hashes, matches IDs and prompt hashes, recomputes both native scores and the option diagnostic for E0/E1, and verifies the fixed rejection decision. It also recomputes the three earlier domain controls. Ten portable tests cover prefix handling, decoding and data boundaries.
+
+The original manifest commits to 12 new confirmation rows, whose bodies are withheld; this is intentionally a partial public dataset release. Training scripts, original analyzers and worker packager preserve their full-workspace checks and require unavailable local inputs or tensors. Do not disable those checks to claim full reproduction. The original 37-test suite and persisted-adapter check were performed in the private working environment; this release rechecks scores, not those training assertions.
+
+## Earlier reproduction instructions (historical)
+
 # Current entry point — October22 Kali pilot
 
 See [Kali MLX pilot reproduction](KALI_MLX_PILOT.md) for the actual8B local run and score-only replay from published predictions. Formal BF16 and ABA runs are still pending. The earlier preparation instructions below remain useful but do not describe a completed ABA domain experiment.

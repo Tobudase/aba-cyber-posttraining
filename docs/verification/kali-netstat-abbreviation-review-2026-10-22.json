@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-10-22T21:55:45.623393+00:00",
+  "status": "SOURCE_SUPPORTED_LONG_OPTION_EQUIVALENCE_RUNTIME_NOT_EXECUTED",
+  "case_id": "kali-docdev-v1-host-listening-tcp",
+  "predicted_option": "--program",
+  "canonical_option": "--programs",
+  "net_tools_version": "2.10",
+  "source_url": "https://salsa.debian.org/debian/net-tools/-/blob/upstream/2.10/netstat.c",
+  "source_sha256": "55d5b8a73db097042464e8e33160e097adc1a5551ddc63f2dbd745bcf12fb2e7",
+  "matching_long_options": [
+    "programs"
+  ],
+  "uses_getopt_long": true,
+  "parser_documentation": "https://sourceware.org/glibc/manual/latest/html_node/Getopt-Long-Options.html",
+  "static_inference": "GNU getopt_long permits unique long-option abbreviations; program uniquely matches programs in the net-tools2.10 table. Therefore this spelling alone is not evidence of a wrong command.",
+  "pinned_Kali_runtime_verified": false,
+  "official_scorer_modified": false,
+  "original_predictions_modified": false,
+  "canonical_native_matches_remain": 25,
+  "note": "Do not automatically relabel all variants or replace the published canonical result; preserve a separate semantic review finding."
+}

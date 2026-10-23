@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "checked_at_utc": "2026-10-23T07:15:14.083335+00:00",
+  "raw_token_decode_matches": {
+    "domain": 36,
+    "retention": 72
+  },
+  "stream_audit_matches": {
+    "domain": 36,
+    "retention": 72
+  },
+  "token_accounting_and_no_truncation": true,
+  "protected_authored_splits_unchanged": 4,
+  "training_worker_train_only": true,
+  "worker_archive_sha256": "f332949548aded074d7a1357d4accd1cda134624908c7748cadcd6ac183e5cb9",
+  "no_tensor_or_credentials_in_worker": true,
+  "actual_model_calls": 0,
+  "independent_semantic_review": false
+}

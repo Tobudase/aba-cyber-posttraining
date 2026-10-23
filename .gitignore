@@ -41,3 +41,9 @@ data/benchkit/*
 docs/verification/athenabench-2026-10-18/source/
 
 .venv*/
+
+# October23 reviewed training and search-only evidence release.
+!data/benchkit/kali-doc-train-v1/
+!data/benchkit/kali-domain-dev-v1/
+data/benchkit/kali-domain-dev-v1/dev_confirm.jsonl
+configs/kali-domain-dev-v1.tasks.json

@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE",
+  "native_prefix": {
+    "native_metrics": {
+      "tool_score": 93.05555555555556,
+      "optional_f1": 91.66666666666666,
+      "positional_f1": 96.52777777777779,
+      "total_score": 93.75,
+      "exact_match": 84.72222222222221,
+      "format_error": 0.0,
+      "strict_option_value_correct": 84.72222222222221,
+      "runtime_failed_rows": 0,
+      "all_requested_strict_exact": 84.72222222222221,
+      "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+    },
+    "complete_XML_rows": 0,
+    "xml_and_option_correct": 0,
+    "output_tokens": 1462
+  },
+  "aligned_final_only_prefix": {
+    "native_metrics": {
+      "tool_score": 100.0,
+      "optional_f1": 91.66666666666666,
+      "positional_f1": 100.0,
+      "total_score": 97.22222222222221,
+      "exact_match": 91.66666666666666,
+      "format_error": 0.0,
+      "strict_option_value_correct": 91.66666666666666,
+      "runtime_failed_rows": 0,
+      "all_requested_strict_exact": 91.66666666666666,
+      "warning": "Native exact/total may ignore incorrect option values; separate strict diagnostic is not official metric."
+    },
+    "complete_XML_rows": 72,
+    "xml_and_option_correct": 66,
+    "output_tokens": 1596
+  },
+  "rows": 72,
+  "wall_seconds": 179.90751183312386,
+  "predictions_sha256": "5298146c75277dca019b95428dfd8c10c793cbcfc1af241e87366430b80216a3",
+  "protocol_sha256": "a72bcc301d93db05456ce5117537cae1650beb281334c0fb61ef74abbc6bb376"
+}

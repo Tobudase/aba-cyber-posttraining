@@ -1,0 +1,41 @@
+{
+  "complete_XML_rows": 0,
+  "groups": {
+    "category:binary_static": {
+      "rows": 14,
+      "native_exact_correct": 2.0,
+      "option_diagnostic_correct": 2.0
+    },
+    "known_train_tool": {
+      "rows": 26,
+      "native_exact_correct": 3.0,
+      "option_diagnostic_correct": 3.0
+    },
+    "category:malware_detection": {
+      "rows": 6,
+      "native_exact_correct": 0.0,
+      "option_diagnostic_correct": 0.0
+    },
+    "category:forensic_image": {
+      "rows": 6,
+      "native_exact_correct": 0.0,
+      "option_diagnostic_correct": 0.0
+    },
+    "tool_absent_screened_train": {
+      "rows": 10,
+      "native_exact_correct": 1.0,
+      "option_diagnostic_correct": 1.0
+    },
+    "category:capture_files": {
+      "rows": 8,
+      "native_exact_correct": 1.0,
+      "option_diagnostic_correct": 1.0
+    },
+    "category:host_audit": {
+      "rows": 2,
+      "native_exact_correct": 1.0,
+      "option_diagnostic_correct": 1.0
+    }
+  },
+  "interpretation": "Descriptive engineering diagnostics; labels await independent review, no generalization or training benefit claim."
+}

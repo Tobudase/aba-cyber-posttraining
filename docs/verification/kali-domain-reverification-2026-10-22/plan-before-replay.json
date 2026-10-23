@@ -1,0 +1,57 @@
+{
+  "written_at_utc": "2026-10-22T21:54:13.185573+00:00",
+  "selection": {
+    "unchanged_success": [
+      "kali-docdev-v1-pe-suspicious-verbose",
+      "kali-docdev-v1-host-routes-numeric"
+    ],
+    "dochelp_gain": [
+      "kali-docdev-v1-capture-order-no-unneeded-write",
+      "kali-docdev-v1-pe-coff-hashes"
+    ],
+    "still_failed": [
+      "kali-docdev-v1-binary-sections-json",
+      "kali-docdev-v1-aff-segment-names"
+    ],
+    "native_stream_whitespace": [
+      "kali-docdev-v1-capture-order-no-unneeded-write",
+      "kali-docdev-v1-capture-snapshot-length"
+    ]
+  },
+  "row_ids": [
+    "kali-docdev-v1-pe-suspicious-verbose",
+    "kali-docdev-v1-host-routes-numeric",
+    "kali-docdev-v1-capture-order-no-unneeded-write",
+    "kali-docdev-v1-pe-coff-hashes",
+    "kali-docdev-v1-binary-sections-json",
+    "kali-docdev-v1-aff-segment-names",
+    "kali-docdev-v1-capture-snapshot-length",
+    "kali-docdev-v1-aff-sha1-validation"
+  ],
+  "selection_policy": "Outcome-stratified diagnostic selection from already exposed dev, hash ordered; no generalization claim",
+  "arms": [
+    "aligned",
+    "native",
+    "tool_help"
+  ],
+  "maximum_generation_calls": 24,
+  "temperature": 0,
+  "seed": 42,
+  "max_output_tokens": 1024,
+  "prefill_step_size": 256,
+  "original_hashes": {
+    "docs/verification/kali-domain-e0-2026-10-22/predictions.jsonl": "29ef8dde66b21e4c34a9de9393f20b67f03e03ce7ec81af24a0c8b7761a23111",
+    "docs/verification/kali-domain-e0-2026-10-22/receipt.json": "83db26a54fd727e8a9bd71e64f330036815747101f695ec51cc62759f37b467e",
+    "docs/verification/kali-domain-e0-2026-10-22/metrics.json": "8a10390dbc87f7c11762393e2b809df79f26efba1575d844b594425b827c7ac3",
+    "docs/verification/kali-domain-e0-2026-10-22/protocol-before-generation.json": "c03058dae91debc9fe3288fa18ba5319d720a9a14cceba79dbd17cf11e1e45ce",
+    "docs/verification/kali-domain-e0-native-resumed-2026-10-22/predictions.jsonl": "eb3fd86bd4d7244fafec9be5c66f31e93e837ef90baf19252b581b871f3f8c3f",
+    "docs/verification/kali-domain-e0-native-resumed-2026-10-22/receipt.json": "92f49cfffe220ac28d7738614584955ce58015b6ae123401bbc1451df2d6d4aa",
+    "docs/verification/kali-domain-e0-native-resumed-2026-10-22/metrics.json": "172511ab8a9c54a5968a69c3c4521db27864aa5cc2d283794fb68b2f28df8c6b",
+    "docs/verification/kali-domain-e0-native-resumed-2026-10-22/protocol-before-generation.json": "752ac66289d4da846ca4a2d53fa4910ecd171b685add17718b6cbb51c934949e",
+    "docs/verification/kali-domain-e0-dochelp-2026-10-22/predictions.jsonl": "31528f005279afada31cd7a030ee84ef25d820c0ea715aa545644f35535f30fa",
+    "docs/verification/kali-domain-e0-dochelp-2026-10-22/receipt.json": "6576c267db4cd323558ce1702e9c7ef53fa21f53ded36129bfbe05469508e056",
+    "docs/verification/kali-domain-e0-dochelp-2026-10-22/metrics.json": "3b5663948a3253ca99c304f1517e691dfd0015714288a5a25d5b6b6fe1f88d6b",
+    "docs/verification/kali-domain-e0-dochelp-2026-10-22/protocol-before-generation.json": "7b27ba63b10037d5012bd44f2610f7e1bbb6e628edb76c1e1726be983792e30b"
+  },
+  "model_conversion_sha256": "7e9a6095128afd230c90cd5ef9a7e3045c89859225c044fd02bd7e4cf83eaf83"
+}

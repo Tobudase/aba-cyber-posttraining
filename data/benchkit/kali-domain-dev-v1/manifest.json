@@ -1,0 +1,38 @@
+{
+  "schema": "benchkit.dataset.v1",
+  "benchmark": "kali",
+  "official_test": false,
+  "self_authored": true,
+  "splits": {
+    "dev_search": {
+      "file": "dev_search.jsonl",
+      "rows": 36,
+      "sha256": "32b954c36aaae517333ab71652fc309c667a8ddcc42d20499e4c5053db6143ff",
+      "quality": {
+        "AUTHORED_SOURCE_SILVER_PENDING_INDEPENDENT_REVIEW": 36
+      }
+    },
+    "dev_confirm": {
+      "file": "dev_confirm.jsonl",
+      "rows": 12,
+      "sha256": "2224ffface17b031d5f5cda35c8a1d7120c0b7a726bccd386c14833020632865",
+      "quality": {
+        "AUTHORED_SOURCE_SILVER_PENDING_INDEPENDENT_REVIEW": 12
+      }
+    }
+  },
+  "task_config_sha256": "0ee1d06649f8e44385ce77adbe4b165000e09cc39729798a81467d26296a37dd",
+  "usage_document_sha256": "4515fc581d624652297344f036cd7f429e8002356956b7b528220097a60254cd",
+  "sufficient_for_ABA_selection": false,
+  "limitations": [
+    "48 authored tasks cover24tools/6localcategories, not the full936screened tools or23official dimensions.",
+    "Two distinct task intents per tool; no filename-only variant multiplication.",
+    "Queries explicitly name the intended tool; measures argument/task composition rather than unrestricted tool discovery.",
+    "Split by entire parent package;12confirmation rows remain unqueried.",
+    "Pinned usage docs are part of upstream benchmark material; checkpoint exposure to these docs is unknown.",
+    "Exact TRAIN command/query exclusion is not semantic independence or proof of no official TEST overlap.",
+    "Reference commands are static data, never executed; independent review and Linux task verification remain pending.",
+    "Native-score self-consistency does not prove reference correctness; this is engineering source-silver only.",
+    "Not approved as sole ABA candidate-selection objective or official result."
+  ]
+}

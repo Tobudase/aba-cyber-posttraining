@@ -12,6 +12,7 @@ import time
 
 from benchkit import (ROOT, encode_supervision, load_jsonl, load_manifest, load_tokenizer,
                       score_predictions, sha, write_json, write_jsonl)
+from kali_prompt_policy import generation_prompt
 
 TRAIN = ROOT / 'data/benchkit/kali-screened/manifest.json'
 DEV = ROOT / 'data/benchkit/kali-external-dev/manifest.json'
@@ -40,6 +41,8 @@ def main():
     parser.add_argument('--resume-from', type=Path)
     parser.add_argument('--limit', type=int, default=72)
     parser.add_argument('--steps', type=int, default=20)
+    parser.add_argument('--generation-prefix', choices=['native', 'sft-aligned'], default='native',
+                        help='Explicit local policy; retain native default for historical reproducibility')
     parser.add_argument('--execute', action='store_true')
     args = parser.parse_args()
     if not args.execute: parser.error('Local real-model experiment requires --execute')
@@ -65,6 +68,8 @@ def main():
             raise ValueError('Complete72-row baseline required')
         if baseline['conversion_receipt_sha256'] != sha((ROOT / 'docs/verification/kali-mlx-convert.json').read_bytes()):
             raise ValueError('Different quantized base')
+        if baseline.get('generation_prefix_policy', 'native') != args.generation_prefix:
+            raise ValueError('Baseline/post prefix policy mismatch; obtain a matched baseline first')
     if args.phase == 'post':
         if not args.adapter: parser.error('Post phase requires persisted adapter')
         training = json.loads((args.adapter.parent / 'receipt.json').read_text())
@@ -96,6 +101,7 @@ def main():
         'mlx_lm': importlib.metadata.version('mlx-lm'), 'device': mx.device_info()['device_name'],
         'train_manifest_sha256': sha(TRAIN.read_bytes()), 'dev_manifest_sha256': sha(DEV.read_bytes()),
         'max_output_tokens': 1024, 'temperature': 0, 'seed': 42, 'official_test_rows': 0,
+        'generation_prefix_policy': args.generation_prefix,
         'confirmation_rows_queried': 0, 'dataset_commands_executed': 0,
         'official_benchmark_score': False, 'ABA_executed': False,
         'limitations': ['External72dev is18 authored families split into12search/6confirm; six variants per family are correlated.',
@@ -109,7 +115,7 @@ def main():
             adapter_path=str(args.adapter) if args.adapter else None)
         native = load_tokenizer('redsage')
         for row in dev:
-            canonical = native.apply_chat_template(row['messages'], tokenize=False, add_generation_prompt=True)
+            canonical = generation_prompt(native, row['messages'], args.generation_prefix)
             if native.encode(canonical, add_special_tokens=False) != tokenizer.encode(canonical, add_special_tokens=False):
                 raise ValueError('MLX/native tokenizer differs')
         if args.phase == 'train':
@@ -176,6 +182,8 @@ def main():
                 prior = json.loads((args.resume_from / 'receipt.json').read_text())
                 for key in ['phase', 'conversion_receipt_sha256', 'dev_manifest_sha256', 'max_output_tokens', 'temperature', 'seed']:
                     if prior[key] != receipt[key]: raise ValueError('Resume protocol mismatch')
+                if prior.get('generation_prefix_policy', 'native') != args.generation_prefix:
+                    raise ValueError('Resume prefix policy mismatch')
                 if args.phase != 'baseline': raise ValueError('Only unchanged baseline can reuse previous records')
                 results = load_jsonl(args.resume_from / 'predictions.jsonl')
                 if len({r['id'] for r in results}) != len(results) or not {r['id'] for r in results} <= {r['id'] for r in dev}:
@@ -183,7 +191,7 @@ def main():
                 write_jsonl(out / 'predictions.jsonl', results)
             for row in dev:
                 if row['id'] in {r['id'] for r in results}: continue
-                prompt = native.apply_chat_template(row['messages'], tokenize=False, add_generation_prompt=True)
+                prompt = generation_prompt(native, row['messages'], args.generation_prefix)
                 ids = native.encode(prompt, add_special_tokens=False)
                 mx.random.seed(42)
                 began = time.monotonic(); segments = []; last = None
@@ -201,7 +209,8 @@ def main():
                 mx.clear_cache()
             scored = score_predictions(dev, results, 'kali'); write_json(out / 'metrics.json', scored)
             receipt.update(actual_rows=len(results), requested_rows=len(dev), full_search_split=len(dev) == 72,
-                prompt_policy='Pinned strict messages, native opening<think>, greedy', metrics=scored['summary'],
+                prompt_policy=('Pinned strict messages, native opening<think>, greedy' if args.generation_prefix == 'native'
+                               else 'Pinned strict messages, SFT-aligned assistant boundary, greedy'), metrics=scored['summary'],
                 predictions_sha256=sha((out / 'predictions.jsonl').read_bytes()))
         receipt['status'] = 'COMPLETE'
     except Exception as exc:
