@@ -1,3 +1,7 @@
+# Current CUDA/ABA preparation — October 23
+
+See [latest preparation and blocker](KALI_CUDA_ABA_PREPARATION_2026-10-23.md). No new GPU allocation/results; ordinary quota admission restored, hardware scheduling unavailable during bounded attempts. Native config/bwrap preflight only; actual ABA domain cycle pending. All owned cycle resources cleaned and VM stopped.
+
 ## October 23: expanded data and frozen replay ablation completed
 
 Expanded the domain pool to **156 source-silver rows / 80 correlated families**, added **32 independent-source general utility replay rows**, and verified all32 replay fixtures plus four selected semantic checks on Linux. Mandatory-option coverage gaps fell from34/36to12/36 in the exposed domain development set.

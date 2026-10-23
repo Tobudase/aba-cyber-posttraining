@@ -1,3 +1,13 @@
+# Latest CUDA/ABA preparation
+
+Read [the current report](KALI_CUDA_ABA_PREPARATION_2026-10-23.md) before execution.
+The frozen protocol and code are included for review. Cluster-account config,
+prepared model/cache contents, VM install and credentials are intentionally not
+included. These are not a turnkey public deployment. Copy the example operations
+config only for your own approved resources. No tensor redistribution is implied.
+The48tests count is from the original workspace; the public suite is smaller.
+No GPU is required to run public boundary tests after restoring pinned sources.
+
 # Latest V2 score replay — October 23
 
 Follow the environment/source-restoration commands below, then run:

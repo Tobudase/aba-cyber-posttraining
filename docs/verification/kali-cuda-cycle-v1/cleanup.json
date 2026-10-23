@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-10-23T21:58:13.327166+00:00",
+  "remaining_cycle_jobs_pods_configmaps": 0,
+  "VM_status": "Stopped",
+  "VM_run_strategy": "Halted",
+  "cache_PVC_status": "Bound",
+  "cache_PVC_capacity": {
+    "storage": "32Gi"
+  },
+  "owned_cycle_GPU_jobs_allocated_this_round": 0,
+  "persistent_model_cache_retained": true,
+  "native_ABA_controller_executed_this_round": false,
+  "model_API_calls_this_round": 0,
+  "scope": "No model results from these unscheduled attempts. Prior real8B smoke remains separate."
+}

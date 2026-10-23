@@ -1,0 +1,4 @@
+{
+  "status": "NO_GPU_ALLOCATED",
+  "reason": "Original hostname busy; deleted Pending Job and broadened normal scheduler selector to same frozen NVIDIA-L4 class. No inference or optimizer steps."
+}

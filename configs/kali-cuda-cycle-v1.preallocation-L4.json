@@ -1,0 +1,83 @@
+{
+  "schema": "kali.cuda_cycle.v1",
+  "frozen_at_utc": "2026-10-23T21:42:26.673553+00:00",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "checkpoint_files": {
+    "tokenizer.json": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+    "tokenizer_config.json": "9547e91b4d4682c40337c6f5af3cf8017b3910347f7ec9ca2ee551c1e4c823a6",
+    "config.json": "8729d2255cda98f506efc0bd6e68585bd1300af6a5715287f259c057cdcd43ef",
+    "chat_template.jinja": "243e67343dd1cd38f29d779fc98d11f1a2edd097a6561882ca4aa77f8dbd1d1f",
+    "README.md": "9eff2f0bef6438a43daeb80e0566a60b2a52de3d49e36781229ffbf6554636eb",
+    "model-00001-of-00004.safetensors": "9cd06c8e8863149132149a2dfb0a10a06bbabdd79219c134aec2fc22ae6b937d",
+    "model-00002-of-00004.safetensors": "7661d054e4f1fb38cad64ca0adc4764c5a5a5f8db9a351499e355a80c644dca8",
+    "model-00003-of-00004.safetensors": "b9b6b4921c78dc47cb1fab53684a9a41d6c028af0035dd374210373a3798bf52",
+    "model-00004-of-00004.safetensors": "35f8159241968f613d093d22220fd9a994698af3d8f365729b95ea7e185ee519",
+    "model.safetensors.index.json": "3649bb967710edc0f995e3839a363a069482a1688216f87745248966751d0221"
+  },
+  "runtime_archive_sha256": "c47d41129fdb9e25d874b5bae9e69010f323cf65850fffa98ab5e53341e746dd",
+  "runner_sha256": "3acfde6cf4122004279cfd4dfce19a5f2bddb2279087b9e803cf0b892b380b8f",
+  "GPU_model": "NVIDIA L4",
+  "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+  "train_manifest": "data/benchkit/kali-replay-ablation-v2/domain_plus_replay/manifest.json",
+  "train_manifest_sha256": "f959b0c381032217c4180c79ed6e6a10082c0b9e3f618757cb7c0925baf639f0",
+  "train_rows_sha256": "ffd7eec669e1c41c2b8bfe147b50092591971fa4284ce84d1e4261c771482569",
+  "inference_rows_sha256": "bd7f7d975df0b83c8b1e19649397c2bcc721ad71ad853e5455d6413e7f920b42",
+  "training": {
+    "steps": 128,
+    "epochs": 1,
+    "batch_size": 1,
+    "learning_rate": 1e-05,
+    "seed": 42,
+    "optimizer": "AdamW",
+    "weight_decay": 0,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "all_layers": true,
+    "max_sequence_tokens": 2048
+  },
+  "inference": {
+    "generation_prefix": "sft-aligned",
+    "tool_help_context": false,
+    "temperature": 0,
+    "seed": 42,
+    "max_output_tokens": 256
+  },
+  "evaluation": {
+    "domain": {
+      "manifest": "data/benchkit/kali-domain-dev-v1/manifest.json",
+      "manifest_sha256": "f344d3baaec75a35af9c01644771e44184f24b47af2c74fd8b54cfb9432ba6d2",
+      "split": "dev_search",
+      "file_sha256": "32b954c36aaae517333ab71652fc309c667a8ddcc42d20499e4c5053db6143ff",
+      "rows": 36
+    },
+    "retention": {
+      "manifest": "data/benchkit/kali-external-dev/manifest.json",
+      "manifest_sha256": "e9179f80569b68690e69eeced4d73decee52534e0b3e0af2cc3a684c8ebfb842",
+      "split": "dev_search",
+      "file_sha256": "28754b7786470f7def06bf2733fbf248f91c69861d6c73cc3715be21fbd60e21",
+      "rows": 72
+    }
+  },
+  "official_test_enabled": false,
+  "confirmation_enabled": false,
+  "budget": {
+    "max_manual_candidates": 1,
+    "max_ABA_candidates": 1,
+    "parallel_GPUs": 1,
+    "job_deadline_seconds": 1800,
+    "scheduler_wait_seconds": 360
+  },
+  "decision_rule": "Keep base unless native domain exact and strict option diagnostic both strictly improve, domain total does not decrease, retention strict does not decrease, and no truncation/runtime/XML failures.",
+  "limitations": [
+    "Engineering diagnostic, one seed, already exposed development sets; no generalization or official ranking claim.",
+    "CUDA NF4, all-layer rank16 and max256 differ from Mac MLX rank8 last4 layers max1024; do not compare scores as paired reproduction.",
+    "E1 manual and E2 ABA use identical frozen recipe for controller/worker parity only; no adaptive data generation or hyperparameter search in this integration.",
+    "Source-silver labels; model already trained official TRAIN. New confirmation and official test remain unqueried.",
+    "GPU utilization samples begin after staging; report staging and whole Job allocation separately."
+  ]
+}

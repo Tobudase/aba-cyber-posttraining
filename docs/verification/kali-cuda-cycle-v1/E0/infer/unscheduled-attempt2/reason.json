@@ -1,0 +1,4 @@
+{
+  "status": "NO_GPU_ALLOCATED",
+  "reason": "L4 normal scheduler pool unavailable (GPU/memory). Job deleted Pending before any model run. Hardware-only A10 protocol revision recorded before outputs."
+}

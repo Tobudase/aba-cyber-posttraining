@@ -1,5 +1,23 @@
 # ABA Cybersecurity Post-training Research
 
+## October 23: CUDA/ABA preflight ready; baseline waiting for hardware
+
+Prepared a separate frozen CUDA study and native ABA task for RedSage8B. The
+native ABA configuration and a loopback connection through its pinned bwrap
+emitter passed;48 workspace tests pass. A CPU-only dependency archive is ready,
+but its GPU staging speed benefit is not measured.
+
+The CUDA baseline was submitted but never allocated: ordinary L4 and A10 attempts
+stayed Pending because matching GPU/memory resources were unavailable. Global
+ordinary Job admission has recovered to200pods. **No new CUDA scores, optimizer
+updates, model API calls or native ABA domain run were produced this round.**
+Jobs/Pods/ConfigMaps were cleaned up, CPU VM stopped, model cache retained.
+
+Next: collect a verified matched E0 baseline, then run one fixed-recipe native
+ABA candidate and independently check journal/artifact provenance. This first
+integration does not enable adaptive data generation/search. New confirmation
+and official tests remain untouched. Read the [exact state and commands](docs/KALI_CUDA_ABA_PREPARATION_2026-10-23.md).
+
 Research code, traceable external pilot data, and engineering evidence for using an ABA agent to adapt open-weight language models on cybersecurity tasks.
 
 ## October 23: expanded data and frozen replay ablation completed

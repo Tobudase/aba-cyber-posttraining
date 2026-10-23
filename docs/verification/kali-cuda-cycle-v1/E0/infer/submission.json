@@ -1,0 +1,13 @@
+{
+  "submitted_at_utc": "2026-10-23T21:50:28.662405+00:00",
+  "protocol_sha256": "24d674b232774636b1cb7b82e92c2d83d875d3de037d2c8637177bcf5cfbd7fc",
+  "run_id": "E0",
+  "phase": "infer",
+  "GPU_count": 1,
+  "CPU": 2,
+  "RAM_GiB": 12,
+  "ephemeral_GiB": 24,
+  "deadline_seconds": 1800,
+  "GPU_model": "NVIDIA A10",
+  "runner_sha256": "3acfde6cf4122004279cfd4dfce19a5f2bddb2279087b9e803cf0b892b380b8f"
+}

@@ -1,0 +1,297 @@
+{
+  "run": {
+    "task_name": "kali-cuda-fixed-integration",
+    "data_root": "/home/minhao/kali-aba-cuda-20261023/task",
+    "playground_root": "/home/minhao/kali-aba-cuda-20261023/playground",
+    "budget": {
+      "wall_clock_minutes": 40,
+      "cost_usd": 5,
+      "per_agent_cost_cap_usd": 2,
+      "reminder_interval_divisor": 1
+    }
+  },
+  "llm": {
+    "default": {
+      "model": "qwen3-small",
+      "max_thinking_tokens": 0
+    },
+    "retry_ceiling_s": 60,
+    "system_instructions": {
+      "setup": "Read the complete task README. Publish only README.md, train.jsonl, train_client.py, base_model.json. Wrap frozen private evaluate.py without edits. Create baseline exactly as README: final_model/model.json, train_metrics.json optimizer_steps=0, README.md, run.py copied from train_client.py. Evaluator uses Python standard library and SSH loopback; do not install ML packages. Set up a real Conda program environment normally. Pass actual cached E0 scoring gate. Do not disable sandbox or validation. One candidate only.",
+      "designer": "Exactly one concise fixed-recipe execution plan: execute supplied train_client.py once. TRAIN data and recipe are frozen. No parameter changes, data synthesis, downloads or references, no revisions. references=[]. This is real8B CUDA engineering integration, not an optimization study.",
+      "worker": "Copy supplied public train_client.py into source_dir/run.py; EXECUTE it with OUTPUT_DIR=attempt_dir. It sends a fixed allowlisted request and blocks for real remote one-GPU128-step training, potentially up to10minutes. Do not fabricate results or install ML packages. It writes final_model/model.json, train_metrics.json, README.md, run.py into OUTPUT_DIR. Check steps=128 and changed tensors>0, verify all four files exist. Do not score or modify recipe. Submit real output once, no revisions.",
+      "finalizer": "Copy exactly selected existing final_model/model.json, train_metrics.json, README.md, run.py byte-for-byte to deliverable and list all four relative_paths in StructuredOutput. Original base is valid if selected by score; do not force candidate promotion or fake optimizer steps. No retraining, rescoring, reconstructing source, downloading model weights or paper writing."
+    }
+  },
+  "work_units": [
+    {
+      "kind": "llm_agent",
+      "name": "aggregator",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "coder",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "coder_review",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "committee",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "designer",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 3
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "designer_review",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "finalizer",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "judge",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "meta",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "meta_review",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "planner",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "reviewer",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "reviser",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "reviser_review",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "router",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "selector",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "setup",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 6
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "setup_review",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "submitter",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "worker",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 13
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "worker_review",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 13
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "writer",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "writer_review",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 4
+      },
+      "retry": 0
+    },
+    {
+      "kind": "llm_agent",
+      "name": "manager",
+      "budget": {
+        "kind": "pipeline"
+      },
+      "retry": 0
+    },
+    {
+      "kind": "program",
+      "name": "score_program",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 16
+      },
+      "retry": 0
+    },
+    {
+      "kind": "program",
+      "name": "training",
+      "budget": {
+        "kind": "fixed",
+        "minutes": 13
+      },
+      "retry": 0
+    }
+  ],
+  "search": {
+    "kind": "nb_tree",
+    "input": {
+      "parallel": 1,
+      "num_designs": 1,
+      "num_revisions": 1,
+      "max_evaluations": 1,
+      "early_stopping": 1
+    }
+  },
+  "resources": {
+    "run": {
+      "cpu_max_cores": 2,
+      "memory_max_gb": 6,
+      "disk_free_floor_gb": 4
+    },
+    "work_unit": {
+      "cpu_max_cores": 2,
+      "memory_max_gb": 4
+    },
+    "sandbox": {
+      "enable": true
+    },
+    "cuda_visible_devices": []
+  },
+  "disallowed_tools": [
+    "WebSearch",
+    "WebFetch"
+  ],
+  "scheduler": {
+    "recheck_seconds": 10
+  },
+  "writer": {
+    "enable": false
+  },
+  "mcps": {}
+}

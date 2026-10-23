@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-10-23T22:01:49.085362+00:00",
+  "status": "PREPARATION_CHECKS_PASS_NOT_GPU_EXECUTION",
+  "workspace_unit_tests": 48,
+  "public_unit_tests": 21,
+  "native_tokenizer_train_boundaries_checked": 128,
+  "native_inference_prompt_hashes_checked": 108,
+  "native_config_schema_valid": true,
+  "pinned_native_bwrap_bridge_health": true,
+  "actual_ABA_domain_run": false,
+  "new_GPU_results": false,
+  "model_API_calls_this_round": 0,
+  "confirmation_rows": 0,
+  "official_test_rows": 0
+}

@@ -1,0 +1,8 @@
+{
+  "status": "NO_COMPLETED_RESULT",
+  "error_type": "TimeoutError",
+  "GPU_allocated": false,
+  "model_results_claimed": false,
+  "protocol_sha256": "24d674b232774636b1cb7b82e92c2d83d875d3de037d2c8637177bcf5cfbd7fc",
+  "evidence": "scheduling-latest.json confirms PodScheduled=False; every24lifecycle sample was Pending, no containers"
+}

@@ -1,0 +1,13 @@
+{
+  "submitted_at_utc": "2026-10-23T21:44:04.543196+00:00",
+  "protocol_sha256": "60b2847d6164d468e13297b9fd29dd441397ab4b7c7cf22a991a6b8116f8ef0a",
+  "run_id": "E0",
+  "phase": "infer",
+  "GPU_count": 1,
+  "CPU": 2,
+  "RAM_GiB": 12,
+  "ephemeral_GiB": 24,
+  "deadline_seconds": 1800,
+  "GPU_model": "NVIDIA L4",
+  "runner_sha256": "3acfde6cf4122004279cfd4dfce19a5f2bddb2279087b9e803cf0b892b380b8f"
+}

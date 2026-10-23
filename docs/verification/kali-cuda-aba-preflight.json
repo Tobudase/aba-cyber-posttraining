@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "manifest": {
+    "protocol_sha256": "24d674b232774636b1cb7b82e92c2d83d875d3de037d2c8637177bcf5cfbd7fc",
+    "files": {
+      "train_client.py": "6069d39c8459c4d01920a89bc45c09a6dc9375c16993a1680435f358cf8707ac",
+      "train.jsonl": "fc0fdb5a5f80b91b3fbe14c83347b742eafedaad6be9312c973bfa672e31d343",
+      "README.md": "042a33868d745ec675bea94ae8a3a527e4d4009467fa1cbb5d89211282340fd1",
+      "base_model.json": "9f641a4b18cc41cf4145ac247018f3c5ba7cfe5d8d846a0900e86ff410504f9d",
+      "evaluate.py": "e8b81f39cbb4c6c9d68f75639800be9ca9408b5569644984ee9cc4ff106712b0"
+    },
+    "official_test_rows": 0,
+    "confirmation_rows": 0
+  },
+  "native_config_schema_valid": true,
+  "sandbox_enabled": true,
+  "native_bwrap_health": {
+    "status": "READY",
+    "protocol_sha256": "24d674b232774636b1cb7b82e92c2d83d875d3de037d2c8637177bcf5cfbd7fc",
+    "search_enabled": false,
+    "max_ABA_candidates": 1
+  },
+  "TRAIN_rows": 128,
+  "native_ABA_started": false,
+  "GPU_jobs_triggered": 0,
+  "source_bwrap_sha256": "d2f6433c547ec3293fa483361e30d2a8b9178298eed391115f21aa64ec60402f",
+  "checked_at_utc": "2026-10-23T21:56:23.179681+00:00",
+  "protocol_sha256": "24d674b232774636b1cb7b82e92c2d83d875d3de037d2c8637177bcf5cfbd7fc",
+  "scope": "Native config and bwrap emitter connectivity preflight, not a full ABA role-policy or training run.",
+  "task_manifest_dev_or_test_files": 0,
+  "bwrap_matches_pinned_source_archive": true
+}
