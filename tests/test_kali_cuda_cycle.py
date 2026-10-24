@@ -3,7 +3,7 @@ import copy,json,sys,unittest,tempfile
 from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from kali_cuda_jobs import ROOT,build,canonical,frozen,sha,verified_receipt
+from kali_cuda_jobs import ROOT,build,canonical,frozen,sha,verified_receipt,gpu_resource
 from kali_cuda_broker import Broker
 LOCAL={'context':'test','namespace':'test','PVC':'test','nodeSelector':{'nvidia.com/gpu.product':'NVIDIA-A10'}}
 
@@ -18,14 +18,28 @@ class CudaBoundaryTests(unittest.TestCase):
    with self.assertRaises(ValueError):build(run,phase)
  def test_one_gpu_finite_no_token_and_no_reserved_tolerations(self):
   _,cm,j=build('E2','train',LOCAL);s=j['spec']['template']['spec'];c=s['containers'][0]
-  self.assertEqual('1',c['resources']['requests']['nvidia.com/gpu']);self.assertEqual(c['resources']['requests'],c['resources']['limits'])
+  requested={k:v for k,v in c['resources']['requests'].items() if k.startswith('nvidia.com/')}
+  p,_=frozen();self.assertEqual({gpu_resource(p['GPU_model']):'1'},requested);self.assertEqual(c['resources']['requests'],c['resources']['limits'])
   self.assertEqual(1800,j['spec']['activeDeadlineSeconds']);self.assertEqual(0,j['spec']['backoffLimit'])
   self.assertFalse(s['automountServiceAccountToken']);self.assertNotIn('nodeName',s);self.assertNotIn('tolerations',s);self.assertNotIn('priorityClassName',s)
   self.assertEqual(['python','-u','/input/runner.py'],c['command'])
   payload=json.loads(cm['data']['payload.json']);self.assertNotIn('inference_rows',payload)
+ def test_reviewed_host_memory_change_keeps_recipe(self):
+  local={**LOCAL,'RAM_GiB':8,'CPU':'500m'};_,cm,j=build('E0','infer',local)
+  self.assertEqual('8Gi',j['spec']['template']['spec']['containers'][0]['resources']['requests']['memory'])
+  self.assertEqual('500m',j['spec']['template']['spec']['containers'][0]['resources']['requests']['cpu'])
+  p,_=frozen();self.assertEqual(sha(canonical(p)),json.loads(cm['data']['payload.json'])['protocol_sha256'])
+  for cpu in ['250m','4',2]:
+   with self.assertRaises(ValueError):build('E0','infer',{**LOCAL,'CPU':cpu})
+  for ram in [True,0,4,16,'8']:
+   with self.assertRaises(ValueError):build('E0','infer',{**LOCAL,'RAM_GiB':ram})
  def test_inference_has_no_targets(self):
   _,cm,_=build('E0','infer',LOCAL);payload=json.loads(cm['data']['payload.json']);self.assertNotIn('train_rows',payload)
   self.assertFalse(any('target' in r or 'native_label' in r for r in payload['inference_rows']))
+ def test_nrp_dedicated_resource_mapping(self):
+  self.assertEqual('nvidia.com/rtxa6000',gpu_resource('NVIDIA RTX A6000'))
+  self.assertEqual('nvidia.com/a100',gpu_resource('NVIDIA A100-SXM4-80GB'))
+  self.assertEqual('nvidia.com/gpu',gpu_resource('NVIDIA GeForce RTX 4090'))
  def test_broker_rejects_arbitrary_recipes_or_commands_before_execution(self):
   b=Broker()
   for r in [{'action':'train','learning_rate':1},{'action':'shell'},{'command':'id'},{'action':'candidate_score','path':'/tmp/x'}]:

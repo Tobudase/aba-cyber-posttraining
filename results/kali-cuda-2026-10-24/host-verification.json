@@ -1,0 +1,36 @@
+{
+  "schema": "kali.public_host_verification.v1",
+  "scope": "Recorded host-verification conclusions; raw native artifacts/journals/private environment are excluded.",
+  "native": {
+    "native_completed": true,
+    "task_bytes_unchanged": true,
+    "public_only_training_material": true,
+    "real_CUDA_candidate_verified": true,
+    "selected_delivery_verified": true,
+    "private_evaluator_matches_frozen_source": true,
+    "candidate_run_source_matches_frozen_client": true,
+    "candidate_metrics_match_CUDA_receipt": true,
+    "native_declares_required_files": true
+  },
+  "native_delivery_file_sha256": {
+    "README.md": "c17ffb0cb4c1e362a37ebf675ba0d772c1cfb8a72a5c323e6c8e83bfe7a5668c",
+    "run.py": "6069d39c8459c4d01920a89bc45c09a6dc9375c16993a1680435f358cf8707ac",
+    "train_metrics.json": "777cda1ed2af4cc1b763522d195c232f1a2ef809f68036fe41872d01aaff29d8",
+    "final_model/model.json": "9aa94201672fcad2c64a66451c9430b85539a716ae6dfc6d2e6a453ce02300b6"
+  },
+  "setup_failed": false,
+  "deterministic_setup_verifier_passed": true,
+  "semantic_setup_review_passed": true,
+  "supervisor_completed": true,
+  "native_client_returncode": 0,
+  "cleanup_errors": [],
+  "final_resource_cleanup": {
+    "checked_at_utc": "2026-10-24T20:17:43.765491+00:00",
+    "passed": true,
+    "owned_GPU_jobs_pods_configmaps_remaining": 0,
+    "owned_CPU_VM_stopped": true,
+    "persistent_data_retained": true
+  },
+  "official_test_rows": 0,
+  "confirmation_rows": 0
+}

@@ -1,6 +1,6 @@
 {
   "schema": "kali.cuda_cycle.v1",
-  "frozen_at_utc": "2026-10-23T21:42:26.673553+00:00",
+  "frozen_at_utc": "2026-10-24T19:31:35.022769+00:00",
   "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
   "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "checkpoint_files": {
@@ -16,8 +16,8 @@
     "model.safetensors.index.json": "3649bb967710edc0f995e3839a363a069482a1688216f87745248966751d0221"
   },
   "runtime_archive_sha256": "c47d41129fdb9e25d874b5bae9e69010f323cf65850fffa98ab5e53341e746dd",
-  "runner_sha256": "3acfde6cf4122004279cfd4dfce19a5f2bddb2279087b9e803cf0b892b380b8f",
-  "GPU_model": "NVIDIA A10",
+  "runner_sha256": "fc9e81943ec33d93600e28553998548bec84bfd75baaafbe6518a894e9d57abe",
+  "GPU_model": "NVIDIA RTX A6000",
   "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
   "train_manifest": "data/benchkit/kali-replay-ablation-v2/domain_plus_replay/manifest.json",
   "train_manifest_sha256": "f959b0c381032217c4180c79ed6e6a10082c0b9e3f618757cb7c0925baf639f0",
@@ -81,9 +81,10 @@
     "GPU utilization samples begin after staging; report staging and whole Job allocation separately."
   ],
   "allocation_revision": {
-    "reason": "No L4 allocation; switch to previously validated ordinary A10 before any CUDA-cycle inference or optimization. Algorithm/data unchanged.",
-    "previous_protocol_sha256": "60b2847d6164d468e13297b9fd29dd441397ab4b7c7cf22a991a6b8116f8ef0a",
-    "changed_at_utc": "2026-10-23T21:49:58.880436+00:00",
+    "reason": "A10 full allocation unschedulable. Ordinary RTX4090 actually allocated and CUDA/BF16 verified at500mCPU/12GiB; change before any cycle model inference or optimization. All phases will use same RTX4090 class. Storage output prefix changed to preserve aborted A10 directory. Model/data/optimizer/inference/scorer unchanged.",
+    "previous_protocol_sha256": "24d674b232774636b1cb7b82e92c2d83d875d3de037d2c8637177bcf5cfbd7fc",
+    "changed_at_utc": "2026-10-24T06:43:07.582120+00:00",
     "completed_model_runs_before_revision": 0
-  }
+  },
+  "storage_prefix": "cuda-cycle-v1-a6000-20261024"
 }

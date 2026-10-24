@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-10-24T20:26:06.095159+00:00",
+  "release_scope": "Numerical/aggregate experiment report and general code only. Internal operations payload removed after automatic review rejection.",
+  "changed_files_scanned": 15,
+  "actual_secret_byte_and_credential_pattern_scan": "PASS",
+  "specific_cluster_VM_PVC_account_and_internal_endpoint_identifier_scan": "PASS",
+  "offline_public_tests": 26,
+  "tests_passed": true,
+  "local_authorized_tokenizer_and_inference_inputs_used_for_data_dependent_tests": true,
+  "local_inputs_released": false,
+  "API_calls": 0,
+  "GPU_allocations": 0,
+  "weights_or_raw_predictions_or_native_journals_published": false,
+  "rejected_commit_in_public_ancestry": false
+}

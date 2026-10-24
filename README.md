@@ -1,3 +1,11 @@
+## October 24, 2026 — native ABA post-training completed
+
+Completed real128-step LoRA post-training of `RISys-Lab/RedSage-K-SFT-GRPO` (~8.19B) on one RTX A6000, matched108-row before/after development evaluation, and native ABA delivery verification. Domain strict correctness **2/36 → 3/36**; utility retention **52/72 → 36/72**. **Keep the original base; do not promote this adapter.** This is a fixed-recipe engineering result on exposed source-silver development data, not an official benchmark score or autonomous data-generation result. Official tests and new confirmation data remain untouched. All owned GPU jobs were removed and the CPU VM stopped; private adapter data retained.
+
+[Full report](docs/KALIBENCH_CUDA_POSTTRAIN_REPORT_2026-10-24.md) · [Published evidence and verification](docs/KALI_CUDA_PUBLICATION_2026-10-24.md) · [Aggregate comparison](results/kali-cuda-2026-10-24/comparison.json).
+
+This completion supersedes historical pending/running statements below. Do not relaunch the completed experiment. Published files contain general source, aggregate results and numerical receipt excerpts. Internal operational scripts, cluster metadata, weights, credentials, raw predictions and protected evaluation data are excluded.
+
 # ABA Cybersecurity Post-training Research
 
 ## October 23: CUDA/ABA preflight ready; baseline waiting for hardware

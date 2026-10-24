@@ -7,6 +7,10 @@ from benchkit import ROOT,load_jsonl,load_manifest,score_predictions,write_json
 
 def canonical(x):return json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
 def sha(x):return hashlib.sha256(x).hexdigest()
+def gpu_resource(model):
+ # NRP advertises high-memory GPU families as dedicated extended resources.
+ # A selector alone cannot make nvidia.com/gpu allocate those devices.
+ return {'NVIDIA RTX A6000':'nvidia.com/rtxa6000','NVIDIA A100-SXM4-80GB':'nvidia.com/a100','NVIDIA H100 80GB HBM3':'nvidia.com/h100'}.get(model,'nvidia.com/gpu')
 def verified_receipt(folder,p):
  r=json.loads((folder/'receipt.json').read_text());v=json.loads((folder/'verified.json').read_text())
  if r.get('status')!='COMPLETE' or r.get('protocol_sha256')!=sha(canonical(p)) or r.get('runner_sha256')!=p['runner_sha256'] or v.get('status')!='HOST_COLLECTION_VERIFIED' or not v.get('job_succeeded') or v.get('receipt_sha256')!=sha((folder/'receipt.json').read_bytes()):raise ValueError('Cached receipt is not independently host-verified')
@@ -28,13 +32,17 @@ def kubectl(args,input=None,check=True,timeout=40):
 
 def build(run,phase,local=None):
  if run not in ['E0','E1','E2'] or phase not in ['train','infer'] or (run=='E0' and phase=='train'):raise ValueError('Unapproved operation')
- p,inputs=frozen();phash=sha(canonical(p));name=f'miw113-kali-cv1-{run.lower()}-{phase}'
+ p,inputs=frozen();phash=sha(canonical(p));name=f'kali-cv1-{run.lower()}-{phase}'
  labels={'app.kubernetes.io/part-of':'kali-cuda-cycle-v1','kali-protocol':phash[:16]}
  field='train_rows' if phase=='train' else 'inference_rows'
  payload={'protocol':p,'protocol_sha256':phash,'run_id':run,'phase':phase,field:inputs[field]}
  cm={'apiVersion':'v1','kind':'ConfigMap','metadata':{'name':name,'labels':labels},'data':{'runner.py':(ROOT/'scripts/run-kali-cuda-cycle.py').read_text(),'payload.json':json.dumps(payload)}}
  local=local or json.loads((ROOT/'configs/kali-cuda-jobs.local.json').read_text())
- resources={'cpu':'2','memory':'12Gi','ephemeral-storage':'24Gi','nvidia.com/gpu':'1'}
+ ram=local.get('RAM_GiB',12)
+ if type(ram) is not int or ram not in (8,12):raise ValueError('Only reviewed 8/12GiB host memory allocations are allowed')
+ cpu=local.get('CPU','2')
+ if cpu not in ('500m','1','2'):raise ValueError('Only reviewed finite CPU allocations are allowed')
+ resources={'cpu':cpu,'memory':str(ram)+'Gi','ephemeral-storage':'24Gi',gpu_resource(p['GPU_model']):'1'}
  spec={'restartPolicy':'Never','automountServiceAccountToken':False,'nodeSelector':local['nodeSelector'],
    'containers':[{'name':'worker','image':p['image'],'command':['python','-u','/input/runner.py'],
      'resources':{'requests':resources,'limits':resources},
@@ -79,7 +87,7 @@ def execute(run,phase):
  try:
   kubectl(['create','-f','-'],json.dumps(cm));cm_created=True
   kubectl(['create','-f','-'],json.dumps(job));submitted=True
-  write_json(folder/'submission.json',{'submitted_at_utc':datetime.now(timezone.utc).isoformat(),'protocol_sha256':sha(canonical(p)),'run_id':run,'phase':phase,'GPU_count':1,'CPU':2,'RAM_GiB':12,'ephemeral_GiB':24,'deadline_seconds':1800,'GPU_model':p['GPU_model'],'runner_sha256':p['runner_sha256']})
+  write_json(folder/'submission.json',{'submitted_at_utc':datetime.now(timezone.utc).isoformat(),'protocol_sha256':sha(canonical(p)),'run_id':run,'phase':phase,'GPU_count':1,'CPU':job['spec']['template']['spec']['containers'][0]['resources']['requests']['cpu'],'RAM_GiB':int(job['spec']['template']['spec']['containers'][0]['resources']['requests']['memory'][:-2]),'ephemeral_GiB':24,'deadline_seconds':1800,'GPU_model':p['GPU_model'],'runner_sha256':p['runner_sha256']})
   while time.monotonic()-started<2160:
    jobdata=json.loads(kubectl(['get','job',name,'-o','json']).stdout)
    pods=json.loads(kubectl(['get','pods','-l','job-name='+name,'-o','json']).stdout)['items']

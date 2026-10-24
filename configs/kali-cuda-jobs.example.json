@@ -4,6 +4,8 @@
   "PVC": "YOUR_PREPARED_MODEL_CACHE_PVC",
   "nodeSelector": {
     "kubernetes.io/arch": "amd64",
-    "nvidia.com/gpu.product": "NVIDIA-A10"
-  }
+    "nvidia.com/gpu.product": "NVIDIA-RTX-A6000"
+  },
+  "CPU": "500m",
+  "RAM_GiB": 12
 }

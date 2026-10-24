@@ -24,7 +24,7 @@ def main(payload):
  field='train_rows' if phase=='train' else 'inference_rows'
  if hashlib.sha256(canonical(payload[field])).hexdigest()!=protocol[field+'_sha256']:raise ValueError('Frozen input projection mismatch')
  if phase=='train' and run=='E0':raise ValueError('Baseline cannot train')
- root=Path('/cache');out=root/'cuda-cycle-v1'/run/phase;out.mkdir(parents=True,exist_ok=False)
+ root=Path('/cache');out=root/protocol['storage_prefix']/run/phase;out.mkdir(parents=True,exist_ok=False)
  started=time.monotonic();receipt={'status':'RUNNING','run_id':run,'phase':phase,'protocol_sha256':payload['protocol_sha256'],'runner_sha256':hashlib.sha256(Path('/input/runner.py').read_bytes()).hexdigest(),'official_test_rows':0,'confirmation_rows':0,'labels_in_inference_input':False}
  scratch=Path('/scratch');modeldir=scratch/'model';modeldir.mkdir()
  for name,expected in protocol['checkpoint_files'].items():
@@ -90,7 +90,7 @@ def main(payload):
    rows=payload['inference_rows']
    if any(set(r)!={'id','messages','prompt_sha256','set'} for r in rows):raise ValueError('Inference projection contains unexpected fields/labels')
    if run!='E0':
-    train=root/'cuda-cycle-v1'/run/'train';tr=json.loads((train/'receipt.json').read_text())
+    train=root/protocol['storage_prefix']/run/'train';tr=json.loads((train/'receipt.json').read_text())
     if tr['status']!='COMPLETE' or tr['protocol_sha256']!=payload['protocol_sha256'] or digest(train/'adapter/adapter_model.safetensors')!=tr['adapter_sha256']:raise ValueError('Adapter provenance mismatch')
     set_peft_model_state_dict(model,load_file(str(train/'adapter/adapter_model.safetensors')),adapter_name='default');receipt['training_receipt_sha256']=digest(train/'receipt.json')
    else:
