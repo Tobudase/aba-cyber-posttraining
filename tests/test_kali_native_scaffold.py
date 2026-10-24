@@ -13,6 +13,8 @@ class ScaffoldTests(unittest.TestCase):
    run,task,p=self.fixture(Path(d));r=provision(run,task,p)
    self.assertEqual(set(x.name for x in (run/'public').iterdir()),{'README.md','train_client.py','base_model.json','train.jsonl'})
    self.assertTrue((run/'public/train.jsonl').is_symlink());self.assertEqual((run/'private/evaluate.py').read_bytes(),(task/'evaluate.py').read_bytes());self.assertEqual(json.loads((run/'private/baseline_attempt/train_metrics.json').read_text())['optimizer_steps'],0)
+   self.assertEqual(r['required_metric_name'],'frozen_adoption_gate')
+   self.assertEqual(r['required_metric_direction'],'max')
  def test_refuses_started_setup_or_existing_artifacts(self):
   for started in [True,False]:
    with tempfile.TemporaryDirectory() as d:

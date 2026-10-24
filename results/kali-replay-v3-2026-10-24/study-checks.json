@@ -1,0 +1,190 @@
+{
+  "schema": "kali.public_replay_v3_checks.v1",
+  "freeze": {
+    "status": "V3_FROZEN_BEFORE_ANY_INFERENCE_OR_TRAINING",
+    "frozen_at_utc": "2026-10-24T20:48:08.312028+00:00",
+    "previous_protocol_sha256": "9e3e2592a569a7217ac9b156ce5ec4938293562c0aa39b2f6f29c80a20024bf7",
+    "protocol_sha256": "561bab720267e9ac845adde2380afbc8d8d2321393efff2d10dffc0049849cac",
+    "changed_protocol_fields": [
+      "frozen_at_utc",
+      "storage_prefix",
+      "train_manifest",
+      "train_manifest_sha256",
+      "train_rows_sha256"
+    ],
+    "single_scientific_factor": "Replace32unrelatedutilityreplayrowswith32executionvalidatedtool-awareutilityrows",
+    "domain_rows_unchanged": 96,
+    "train_rows": 128,
+    "steps": 128,
+    "max_candidates": 1,
+    "model_worker_optimizer_GPU_prompt_generation_scoring_and_adoption_gate_unchanged": true,
+    "fresh_matching_E0_required": true,
+    "prior_adapter_not_used": true,
+    "same_index_shuffle_keeps_domain_positions": true,
+    "token_and_gradient_budget_not_equalized": true,
+    "official_test_rows": 0,
+    "confirmation_rows": 0,
+    "scope": "Already-exposed development-guided engineering data ablation; not independent validation or autonomous data creation.",
+    "budgets": {
+      "parallel_GPU": 1,
+      "GPU_job_seconds": 1800,
+      "Pending_seconds": 360,
+      "native_hardcap_seconds": 7200,
+      "VM_autostop_seconds": 7500
+    },
+    "cautions": [
+      "Do not change native scorer or retrospectively credit disputed commands.",
+      "Eight known retention tools overlap TRAIN intentionally. Task intents differ; semantic independence is not proven.",
+      "Old confirmation bodies are not read or queried; do not claim their independence for this new curriculum.",
+      "One candidate only; no gain-chasing retries or extra hyperparameter variants.",
+      "Operator-authored data and setup; native gates still required."
+    ]
+  },
+  "data_use": {
+    "status": "V3_TRAIN_DATA_AND_DIFFERENT_ADAPTER_VERIFIED",
+    "new_utility_training_ids": 32,
+    "domain_training_ids": 96,
+    "first_new_utility_step": 3,
+    "first_changed_training_loss_step": 3,
+    "changed_loss_steps": 126,
+    "V1_adapter_sha256": "8a0399e1258b4660b32a853c48c7b5c4456b9bdf3e4d64c2b7c04a80cb2b7425",
+    "V3_adapter_sha256": "47770f0d312bcf9f37577b6ce2545e6fe99fa1f531be11eae82a598e59402429",
+    "adapter_bytes_differ": true,
+    "first_8_V1_losses": [
+      1.3343042135238647,
+      0.37947434186935425,
+      0.32147711515426636,
+      1.32896888256073,
+      1.9147661924362183,
+      0.2534741759300232,
+      0.8513630628585815,
+      0.17672941088676453
+    ],
+    "first_8_V3_losses": [
+      1.3343042135238647,
+      0.37947434186935425,
+      0.2868605852127075,
+      1.3334990739822388,
+      1.926812767982483,
+      0.24193112552165985,
+      0.8313207626342773,
+      0.20202183723449707
+    ],
+    "note": "Hash and actual IDs/loss differences establish a different executed update; same greedy command outputs do not imply reused old adapter. This is not an independent tensor-by-tensor comparison."
+  },
+  "token_boundaries": {
+    "status": "PASS",
+    "checked_at_utc": "2026-10-24T20:49:56.443912+00:00",
+    "results": {
+      "previous": {
+        "rows": 128,
+        "max_full_tokens": 469,
+        "total_full_tokens": 52180,
+        "assistant_target_tokens": 3105,
+        "utility32_full_tokens": 12552,
+        "utility32_target_tokens": 505,
+        "assistant_only_boundary_passed_rows": 128
+      },
+      "v3": {
+        "rows": 128,
+        "max_full_tokens": 469,
+        "total_full_tokens": 52420,
+        "assistant_target_tokens": 3222,
+        "utility32_full_tokens": 12792,
+        "utility32_target_tokens": 622,
+        "assistant_only_boundary_passed_rows": 128
+      }
+    },
+    "domain_first96_byte_semantics_unchanged": true,
+    "numeric_worker_source_unchanged": true,
+    "no_model_execution": true,
+    "no_confirmation_or_official_test_read": true,
+    "token_budgets_equal": false
+  },
+  "pretraining": {
+    "status": "PASS",
+    "checks": {
+      "semantic_review_passed": true,
+      "new_utility_execution32_passed": true,
+      "CPU_jobs_cleaned": true,
+      "assistant_boundary_all128_passed": true,
+      "numeric_source_unchanged": true,
+      "original_domain96_unchanged": true,
+      "frozen_before_new_GPU_work": true,
+      "official_and_confirmation_queries_zero": true
+    },
+    "scientific_scope": "One adaptive-development data ablation, not independent validation or expert-reviewed gold.",
+    "total_token_change_percent": 0.4599463395937198,
+    "supervised_token_change_percent": 3.7681159420289934,
+    "old_scores_and_adoption_gate_unchanged": true,
+    "protocol_sha256": "561bab720267e9ac845adde2380afbc8d8d2321393efff2d10dffc0049849cac"
+  },
+  "matched_baseline": {
+    "status": "MATCHED_BASELINE_VERIFIED",
+    "rows": 108,
+    "response_identical_to_previous_A6000_baseline": 108,
+    "domain_correct": 2.0,
+    "retention_correct": 52.0,
+    "official_test_rows": 0,
+    "confirmation_rows": 0
+  },
+  "new_utility_fixtures": {
+    "status": "PASS",
+    "source_sha256": "0dbf3bc3bb2f20851cc607e41c8cb676ee6461a3b8f9c55081fed98e68710cd2",
+    "training_sha256": "ecb0e0b4289272d7dc0e49764370565b4b838d15054051920dd45a6911049748",
+    "rows": 32,
+    "families": 16,
+    "tools": [
+      "grep",
+      "head",
+      "jq",
+      "openssl",
+      "tail",
+      "tcpdump",
+      "tshark",
+      "wc"
+    ],
+    "platform": "Linux",
+    "packages": [
+      "coreutils 8.32-4.1ubuntu1.2",
+      "grep 3.7-1build1",
+      "jq 1.6-2.1ubuntu3.2",
+      "openssl 3.0.2-0ubuntu1.30",
+      "tcpdump 4.99.1-3ubuntu0.2",
+      "tshark 3.6.2-2"
+    ],
+    "passed_rows": 32,
+    "raw_fixture_outputs_released": false
+  },
+  "semantic_diagnosis": {
+    "platform": "Linux",
+    "packages": [
+      "coreutils 8.32-4.1ubuntu1.2",
+      "net-tools 1.60+git20181103.0eebece-1ubuntu5.4",
+      "tshark 3.6.2-2"
+    ],
+    "tshark_extra_n_same_selected_packets_cases": 12,
+    "netstat_bundled_options_identical_output": true,
+    "wrong_filename_failures_verified": 6,
+    "scorer_or_historical_score_modified": false,
+    "task_network_targets_contacted": 0,
+    "scope": "Synthetic mixed DNS/TLS/other PCAP, 6 filename variants per filter; offline name-resolution-disabled preferences. Same selected packets and successful display, not byte-identical output for every possible preference/PCAP. Six variants are correlated."
+  },
+  "paired_command_comparison": {
+    "retention_same_as_V1": 72,
+    "retention_rows": 72,
+    "domain_same_as_V1": 33,
+    "domain_rows": 36,
+    "domain_changed_commands": 3,
+    "domain_changed_commands_strict_gains": 0,
+    "full_semantic_audit_of_changed_domain_commands_completed": false
+  },
+  "scientific_limits": [
+    "Exposed source-silver development; no official score or independent holdout claim.",
+    "Correlated variants; tools overlap intentionally; semantic independence unproven.",
+    "Operator-authored new data and scaffold; ABA orchestrates one fixed numerical candidate.",
+    "Equal rows/steps do not imply equal token, FLOP or gradient budget.",
+    "Semantic fixture diagnosis did not change strict scoring or retrospective results.",
+    "Raw prediction/data-order conclusions are host-recorded, not independently reproducible from released summaries."
+  ]
+}

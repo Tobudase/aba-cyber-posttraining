@@ -1,0 +1,24 @@
+{
+  "schema": "kali.publication_preflight.v1",
+  "checked_at_utc": "2026-10-24T22:04:32.150097+00:00",
+  "scope": "Curated V3 numerical and generic-code update only. Local credential values were compared without printing or retaining them.",
+  "candidate_files_scanned": 13,
+  "credential_pattern_and_local_exact_value_scan_passed": true,
+  "internal_operational_metadata_scan_passed": true,
+  "no_symlinks_weights_or_archives": true,
+  "JSON_parse_passed": true,
+  "private_rejected_commit_not_in_ancestry": true,
+  "raw_predictions_new_training_data_native_logs_and_operational_scripts_excluded": true,
+  "offline_result_verifiers": "Run both scripts before commit; checks do not independently reproduce private artifacts or scores.",
+  "local_curated_unit_tests": {
+    "tests_run": 26,
+    "passed": true,
+    "network_enabled": false,
+    "GPU_allocated": false,
+    "environment_note": "Existing ignored local tokenizer cache and inference projection used; not a fresh-clone test reproduction claim."
+  },
+  "V1_offline_numerical_verifier_passed": true,
+  "V3_offline_numerical_verifier_passed": true,
+  "changed_Python_compile_passed": true,
+  "git_diff_check_passed": true
+}

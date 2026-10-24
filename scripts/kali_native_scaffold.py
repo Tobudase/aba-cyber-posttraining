@@ -31,6 +31,6 @@ def provision(run,task,payload):
  (base/'run.py').write_text(payload['files']['train_client.py'])
  (base/'README.md').write_text('Original E0 model reference. No training. This is a zero-step baseline, not a candidate.\n')
  (base/'train_metrics.json').write_text(json.dumps({'optimizer_steps':0,'run_id':'E0','baseline':True,'protocol_sha256':payload['protocol_sha256']},indent=2)+'\n')
- report={'status':'OPERATOR_SCAFFOLD_PROVISIONED_BEFORE_NATIVE_SETUP','run_name':run.name,'protocol_sha256':payload['protocol_sha256'],'native_gates_unchanged':True,'task_hashes':manifest['files'],'operator_provided_not_agent_generated':True,'baseline_optimizer_steps':0,'official_test_rows':0,'confirmation_rows':0,'output_hashes':{str(p.relative_to(run)):digest(p.read_bytes()) for folder in [public,private] for p in folder.rglob('*') if p.is_file()}}
+ report={'status':'OPERATOR_SCAFFOLD_PROVISIONED_BEFORE_NATIVE_SETUP','run_name':run.name,'protocol_sha256':payload['protocol_sha256'],'native_gates_unchanged':True,'task_hashes':manifest['files'],'operator_provided_not_agent_generated':True,'baseline_optimizer_steps':0,'required_metric_name':'frozen_adoption_gate','required_metric_direction':'max','official_test_rows':0,'confirmation_rows':0,'output_hashes':{str(p.relative_to(run)):digest(p.read_bytes()) for folder in [public,private] for p in folder.rglob('*') if p.is_file()}}
  (private/'operator-setup-provenance.json').write_text(json.dumps(report,indent=2)+'\n')
  return report

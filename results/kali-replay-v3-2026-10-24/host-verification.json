@@ -1,0 +1,41 @@
+{
+  "schema": "kali.public_host_verification.v1",
+  "scope": "Recorded host-verification conclusions only; original native artifacts and operational data excluded.",
+  "native": {
+    "native_completed": true,
+    "task_bytes_unchanged": true,
+    "public_only_training_material": true,
+    "real_CUDA_candidate_verified": true,
+    "selected_delivery_verified": true,
+    "private_evaluator_matches_frozen_source": true,
+    "candidate_run_source_matches_frozen_client": true,
+    "candidate_metrics_match_CUDA_receipt": true,
+    "native_declares_required_files": true
+  },
+  "native_delivery_file_sha256": {
+    "run.py": "6069d39c8459c4d01920a89bc45c09a6dc9375c16993a1680435f358cf8707ac",
+    "README.md": "c17ffb0cb4c1e362a37ebf675ba0d772c1cfb8a72a5c323e6c8e83bfe7a5668c",
+    "train_metrics.json": "1d6d1eeb1a53085f77656c6e8714c2bcb4f73a9890135130b3b1ed2a2bf6962b",
+    "final_model/model.json": "189cc2f8d5d680f5dae8c531ff38b6e235ec6ce06debce991da69326e62f4b90"
+  },
+  "setup_failed": false,
+  "required_metric_name": "frozen_adoption_gate",
+  "required_metric_direction": "max",
+  "deterministic_setup_verifier_passed": true,
+  "semantic_setup_review_passed": true,
+  "supervisor_completed": true,
+  "native_client_returncode": 0,
+  "cleanup_errors": [],
+  "final_resource_cleanup": {
+    "checked_at_utc": "2026-10-24T21:50:05.920901+00:00",
+    "passed": true,
+    "owned_GPU_jobs_pods_configmaps_remaining": 0,
+    "owned_CPU_VM_stopped": true,
+    "persistent_data_retained": true
+  },
+  "prior_control_failure_optimizer_steps": 0,
+  "actual_optimization_candidates": 1,
+  "metric_contract_repair": "Fresh Setup provenance declares frozen_adoption_gate/max. Host guards, data, numerical worker and scoring unchanged; original global deadline retained. Prior control attempt performed zero optimization.",
+  "official_test_rows": 0,
+  "confirmation_rows": 0
+}
