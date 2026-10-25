@@ -2,7 +2,7 @@
   "schema": "kali.public_numerical_publication.v1",
   "protocol_sha256": "9e3e2592a569a7217ac9b156ce5ec4938293562c0aa39b2f6f29c80a20024bf7",
   "file_sha256": {
-    "README.md": "ab4fc774b8e7ec0039e34c7d82737f794780d5d06b9b7397ad3693e24e6a6d6f",
+    "README.md": "23954f6681f352af4ae43080296b6deba0f729062a9ba2106264c96a5dc25a5c",
     "configs/kali-cuda-cycle-v1.preallocation-RTX4090.json": "a25a71c084ab2bf9da84a6ff35430461a12e427a7b3ff13b86bc576f15b28220",
     "configs/kali-cuda-cycle-v1.protocol.json": "30427676c49cf97c2d0cf0c0642d760baaf2c94831511676d898ee5a0c37ea72",
     "configs/kali-cuda-jobs.example.json": "61eab49c9772362c4ea46f3053754c112e6bf9ac840882c473774e654de80006",

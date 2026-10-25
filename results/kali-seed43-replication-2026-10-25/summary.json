@@ -1,0 +1,305 @@
+{
+  "schema": "kali.public_seed_replication.v1",
+  "date": "2026-10-25",
+  "previous_public_commit": "9b8adb842968174d1710fe29fec208306dd44d01",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "primary_protocol": "Same NF4/BF16, single-example greedy256, SFT-aligned final-only prefix; not official full-precision/thinking evaluation",
+  "scores": {
+    "base": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 2,
+        "native_exact_correct": 2.0,
+        "native_total": 74.00352733686067,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 52,
+        "native_exact_correct": 52.0,
+        "native_total": 92.87037037037037,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 8,
+        "native_exact_correct": 9.0,
+        "native_total": 82.16269841269842,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed42_compact": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 3,
+        "native_exact_correct": 3.0,
+        "native_total": 74.43562610229277,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 36,
+        "native_exact_correct": 36.0,
+        "native_total": 86.38888888888889,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 7,
+        "native_exact_correct": 8.0,
+        "native_total": 77.84722222222221,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed42_newline": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 5,
+        "native_exact_correct": 5.0,
+        "native_total": 77.28835978835978,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 54,
+        "native_exact_correct": 54.0,
+        "native_total": 93.05555555555556,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 8,
+        "native_exact_correct": 9.0,
+        "native_total": 82.83399470899471,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed43_compact": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 3,
+        "native_exact_correct": 3.0,
+        "native_total": 74.32539682539682,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 36,
+        "native_exact_correct": 36.0,
+        "native_total": 86.38888888888889,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 7,
+        "native_exact_correct": 7.0,
+        "native_total": 76.72288359788361,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed43_newline": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 4,
+        "native_exact_correct": 4.0,
+        "native_total": 75.78042328042328,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 54,
+        "native_exact_correct": 54.0,
+        "native_total": 93.05555555555556,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 8,
+        "native_exact_correct": 9.0,
+        "native_total": 82.83399470899471,
+        "generation_or_format_failures": 0.0
+      }
+    }
+  },
+  "transfer": {
+    "base": {
+      "rows": 24,
+      "strict_correct": 8,
+      "native_total": 82.16269841269842,
+      "execution_passed": 10,
+      "executed": 22,
+      "unverified": 2
+    },
+    "seed42_compact": {
+      "rows": 24,
+      "strict_correct": 7,
+      "native_total": 77.84722222222221,
+      "execution_passed": 10,
+      "executed": 21,
+      "unverified": 3
+    },
+    "seed42_newline": {
+      "rows": 24,
+      "strict_correct": 8,
+      "native_total": 82.83399470899471,
+      "execution_passed": 10,
+      "executed": 22,
+      "unverified": 2
+    },
+    "seed43_compact": {
+      "rows": 24,
+      "strict_correct": 7,
+      "native_total": 76.72288359788361,
+      "execution_passed": 11,
+      "executed": 22,
+      "unverified": 2
+    },
+    "seed43_newline": {
+      "rows": 24,
+      "strict_correct": 8,
+      "native_total": 82.83399470899471,
+      "execution_passed": 10,
+      "executed": 22,
+      "unverified": 2
+    }
+  },
+  "paired_strict_changes": {
+    "42": {
+      "domain": 2,
+      "retention": 18,
+      "transfer": 1
+    },
+    "43": {
+      "domain": 1,
+      "retention": 18,
+      "transfer": 1
+    }
+  },
+  "replication": {
+    "seed": 43,
+    "arms": [
+      "seed43_compact",
+      "seed43_newline"
+    ],
+    "optimizer_steps_per_arm": 128,
+    "new_optimizer_steps": 256,
+    "new_generations": 450,
+    "base_historical_full_controls": 108,
+    "seed42_reference_controls_each": 3,
+    "seed42_primary_rows_are_cached": true,
+    "fresh_transfer_rows_per_model": 24,
+    "all_historical_controls_passed": true,
+    "initial_LoRA_parameters_identical": true,
+    "initial_LoRA_sha256": "00eacfe735bb16f14f120cbb963273281314c26704b16f1194a9c228fee436f4",
+    "training_orders_identical": true,
+    "training_order_sha256": {
+      "seed43_compact": "f85b37cd2f5ed53c9257a7b15d481685d35c20c872ef22d5cf7332714ea65f1f",
+      "seed43_newline": "f85b37cd2f5ed53c9257a7b15d481685d35c20c872ef22d5cf7332714ea65f1f"
+    },
+    "original_training_AST_sha256": "a8333226a772d9aeef8dc8899dc026ded1d8b12ac7e6e5b6f793f2649e80e5f6",
+    "seed43_training_AST_sha256": "b5885d32ccdb31d8ff2b1282c64908d04e2828c04fa74ecafc3df36b3cab2d93",
+    "only_numeric_AST_change": "Random(42) to Random(43); torch initialization seed43; inference greedyseed42 unchanged",
+    "learning_rate": 1e-05,
+    "train_rows": 128,
+    "domain_rows": 96,
+    "utility_rows": 32,
+    "target_token_counts": {
+      "compact": 3222,
+      "newline": 3374
+    },
+    "queries_and_canonical_commands_unchanged": true,
+    "two_seeds_are_descriptive_not_powered_generalization": true
+  },
+  "transfer_panel": {
+    "rows": 24,
+    "tools": 8,
+    "frozen_before_model_calls": true,
+    "gold_prevalidation_passed": 24,
+    "full_query_and_command_exact_overlap_with_local_TRAIN_or_old_dev": 0,
+    "used_for_training_or_tuning": false,
+    "independent_official_or_expert_validation": false,
+    "purposively_authored_after_prior_failure_awareness": true,
+    "semantic_and_tool_overlap_with_prior_data_possible": true,
+    "source_panel_sha256": "b8cae3c4b9559c79a70d6c774a25a3e465f9b7da64ce0c7a57705c8478b213a7",
+    "gold_prevalidation_executions": 24,
+    "postvalidation_check_records": 144,
+    "postvalidation_commands_executed": 133,
+    "postvalidation_not_executed": 11,
+    "not_executed_reason": "Capture/read argv did not satisfy offline-only review; commands were neither executed nor repaired for evaluation.",
+    "reference_labels_and_output_predicates_unchanged": true,
+    "postgeneration_review_extensions": [
+      "readonly cat FILE | wc --lines",
+      "readonly ls --block-size=1"
+    ],
+    "strict_scorer_unchanged": true
+  },
+  "candidate_gates": {
+    "seed42_newline": {
+      "domain_exact_improves": true,
+      "domain_strict_improves": true,
+      "domain_total_not_decreased": true,
+      "retention_strict_not_decreased": true,
+      "primary_no_generation_format_failure": true,
+      "transfer_strict_not_below_base": true,
+      "transfer_all_commands_executed": false,
+      "base_transfer_all_commands_executed": false,
+      "transfer_execution_not_below_base": true
+    },
+    "seed43_newline": {
+      "domain_exact_improves": true,
+      "domain_strict_improves": true,
+      "domain_total_not_decreased": true,
+      "retention_strict_not_decreased": true,
+      "primary_no_generation_format_failure": true,
+      "transfer_strict_not_below_base": true,
+      "transfer_all_commands_executed": false,
+      "base_transfer_all_commands_executed": false,
+      "transfer_execution_not_below_base": true
+    }
+  },
+  "all_internal_checks_passed": {
+    "seed42_newline": false,
+    "seed43_newline": false
+  },
+  "decision": {
+    "positive_retention_contrast_seed43": true,
+    "formal_default_remains_original_base": true,
+    "independent_validation_complete": false,
+    "larger_formal_training_or_official_evaluation_started": false,
+    "new_native_ABA_search_cycle": false,
+    "conclusion": "The old retention recovery repeats acrossseeds42/43. The newpanel shows no improvement overbase; certificate and offline-capture/filename issues remain. Do not promote the candidate or claim broad ability gains."
+  },
+  "execution_findings": [
+    "Newline models omit-noout on the new certificate query, unlike compact controls.",
+    "Wrong filename copying/quoting and jq expressions remain in base and repaired models.",
+    "Eleven offline-capture-mode predictions were not executed; this is not an observed execution failure or evidence of successful capture."
+  ],
+  "formatter": {
+    "file": "scripts/kali_target_envelope.py",
+    "equivalence_to_frozen128row_treatment_verified": true,
+    "changes_target_only": true,
+    "rejects_non_TRAIN_or_official_test": true,
+    "refuses_overwrite": true,
+    "source_sha256": "c647ee6e83c2b765a3f87bd4d74a67f108c0b205745924929fdd87ad4bae890c"
+  },
+  "resource_summary": {
+    "max_GPUs": 1,
+    "host_wall_seconds": 1186.2628959589638,
+    "GPU_sample_mean_percent": 35.263852242744065,
+    "owned_resources_remaining": 0,
+    "all_study_compute_cleaned": true,
+    "CPU_VM_stopped": true,
+    "utilization_target_compliance_certified": false
+  },
+  "official_test_rows": 0,
+  "confirmation_rows": 0,
+  "old_scientific_scores_rewritten": false,
+  "source_artifact_sha256": {
+    "worker_result": "ef30f814a077219a09ca07568a0fea1cb7e259d734ce7987f1caa2ee78302290",
+    "postvalidation_host": "5614d1307662ccbc495222e87378bb631213b15b0d10d673b3b6141f43c95627",
+    "freeze": "30cf91277cdee8e6907a7636244a47937d7ed814820c65a499b31ee12ba08643",
+    "completion": "7146cf03e78fb79f7bdcb77313645c60c1c288d3d3aa90d242b5c3cf09ca151c"
+  },
+  "publication_boundary": "Selected aggregates and numerical receipts only. Public offline checks validate internal consistency/file integrity, not independent recomputation or runtime reproduction of unreleased predictions/data/weights."
+}

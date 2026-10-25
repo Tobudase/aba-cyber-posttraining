@@ -1,3 +1,11 @@
+## October25,2026 — second-seed replication and transfer limits
+
+Seed43 repeated the retention recovery **36/72→54/72**, with domain strict **3/36→4/36** (seed42:3/36→5/36). Both compact/newline arms completed128 steps. A newly frozen24row transfer panel showed **8/24strict and10/24verified execution for both repaired models, equal to the base**; certificate, filename/quoting and offline-capture constraints remain. **Keep the original base as formal default; do not claim broad improvement.**
+
+Completed450 generations,256 new optimizer steps,24gold prevalidation executions and144 postvalidation records (133executed,11not executed). The panel was authored after prior errors were known, not independent expert/official validation. No tuning or extra candidates followed. Resources were cleaned. Historical results below remain unchanged.
+
+[Replication report](docs/KALI_SEED43_REPLICATION_2026-10-25.md) · [中文说明](docs/KALI_SEED43_REPLICATION_ZH_2026-10-25.md) · [Aggregates](results/kali-seed43-replication-2026-10-25/summary.json) · [Opt-in target formatter](scripts/kali_target_envelope.py). Offline check: `python3 scripts/verify-kali-seed43-publication.py`.
+
 ## October 25, 2026 — causal investigation and recovery candidate
 
 Changing only the TRAIN target envelope to use internal newlines recovered retention **36/72 → 54/72** and domain strict **3/36 → 5/36**, compared with V3. All18 original new strict regressions recovered;579 fresh CPU checks supported the execution conclusions. A separate fixed-weight, bidirectional output-prefix intervention (18 generations, zero training;108 fresh Linux checks) reproduced and removed the same filename error in three correlated counting variants.
