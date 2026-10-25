@@ -1,0 +1,267 @@
+{
+  "schema": "kali.public_causal_findings.v1",
+  "date": "2026-10-25",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "scope": "One-seed, exposed, self-authored source-silver development; not official KaliBench results or independent holdout validation. Later diagnostics are operator-fixed manual studies, not new native ABA search cycles.",
+  "cohorts": {
+    "train_rows": 128,
+    "domain_train_rows": 96,
+    "utility_train_rows": 32,
+    "domain_dev_rows": 36,
+    "retention_dev_rows": 72,
+    "retention_correlated_families": 12,
+    "retention_variants_per_family": 6
+  },
+  "primary_inference": {
+    "single_example": true,
+    "greedy": true,
+    "max_new_tokens": 256,
+    "loading": "NF4/BF16",
+    "GPU_model": "NVIDIA RTX A6000",
+    "matches_official_full_precision_thinking_protocol": false
+  },
+  "scores": {
+    "base": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 2,
+        "native_exact_correct": 2.0,
+        "native_total": 74.00352733686067
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 52,
+        "native_exact_correct": 52.0,
+        "native_total": 92.87037037037037
+      }
+    },
+    "V3_compact": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 3,
+        "native_exact_correct": 3.0,
+        "native_total": 74.43562610229277
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 36,
+        "native_exact_correct": 36.0,
+        "native_total": 86.38888888888889
+      }
+    },
+    "target_newline": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 5,
+        "native_exact_correct": 5.0,
+        "native_total": 77.28835978835978
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 54,
+        "native_exact_correct": 54.0,
+        "native_total": 93.05555555555556
+      }
+    },
+    "query_directive_removal": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 4,
+        "native_exact_correct": 4.0,
+        "native_total": 75.51587301587301
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 36,
+        "native_exact_correct": 36.0,
+        "native_total": 86.38888888888889
+      }
+    },
+    "learning_rate_half": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 3,
+        "native_exact_correct": 3.0,
+        "native_total": 73.32451499118166
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 36,
+        "native_exact_correct": 36.0,
+        "native_total": 86.38888888888889
+      }
+    }
+  },
+  "original_regression": {
+    "new_strict_failures": 18,
+    "new_strict_gains": 2,
+    "real_filename_failures": 6,
+    "extra_n_strict_vs_fixed_fixture_cases": 12,
+    "historical_scores_not_rewritten": true
+  },
+  "null_controls": {
+    "learning_rate_half": {
+      "learning_rate": 5e-06,
+      "optimizer_steps": 128,
+      "retention_commands_same_as_V3": 72,
+      "no_unique_all_learning_rates_conclusion": true
+    },
+    "query_directive_removal": {
+      "changed_queries": 32,
+      "unchanged_domain_rows": 96,
+      "unchanged_assistant_targets": 128,
+      "optimizer_steps": 128,
+      "retention_commands_same_as_V3": 72,
+      "retention_raw_responses_same_as_V3": 72,
+      "does_not_exclude_all_input_coverage_effects": true
+    }
+  },
+  "target_format_treatment": {
+    "changed_TRAIN_field": "target",
+    "rows": 128,
+    "added_real_newlines_per_target": 2,
+    "queries_commands_labels_and_fixtures_unchanged": true,
+    "learning_rate": 1e-05,
+    "optimizer_steps": 128,
+    "inference_generations_including_controls": 324,
+    "historical_control_rows": 216,
+    "historical_controls_raw_tokens_and_eight_per_row_scores_match": true,
+    "original_numeric_training_AST_sha256": "a8333226a772d9aeef8dc8899dc026ded1d8b12ac7e6e5b6f793f2649e80e5f6",
+    "supervised_tokens_before": 3222,
+    "supervised_tokens_after": 3374,
+    "full_tokens_before": 52420,
+    "full_tokens_after": 52572,
+    "new_responses_with_newlines": 108,
+    "response_rows": 108,
+    "original_V3_responses_with_newlines": 0,
+    "old_strict_regressions_recovered": 18,
+    "retention_commands_same_as_V3": 54,
+    "exact_differential_audit_status": "PASS_EXACT_DIFFERENTIAL_AUDIT",
+    "output_only_newline_rescoring": {
+      "domain": {
+        "correct": 3,
+        "rows": 36
+      },
+      "retention": {
+        "correct": 36,
+        "rows": 72
+      }
+    },
+    "fresh_Linux_checks": 579,
+    "fixed_fixture_counts": {
+      "gold": 72,
+      "base": 58,
+      "V3": 54,
+      "latest": 60
+    },
+    "wc_edge_checks": {
+      "gold": {
+        "passed": 48,
+        "rows": 48
+      },
+      "base": {
+        "passed": 48,
+        "rows": 48
+      },
+      "V3": {
+        "passed": 0,
+        "rows": 48
+      },
+      "latest": {
+        "passed": 48,
+        "rows": 48
+      }
+    },
+    "packet_ID_checks": {
+      "passed": 96,
+      "rows": 96
+    },
+    "passes_exposed_development_gate": true,
+    "independent_validation_complete": false,
+    "formal_default_remains_original_base": true,
+    "token_count_and_within_row_loss_weighting_also_change": true
+  },
+  "fixed_weight_prefix_intervention": {
+    "generations": 18,
+    "optimizer_steps": 0,
+    "filename_variants": 3,
+    "one_task_family": "wc-lines",
+    "groups": {
+      "E0/original": {
+        "rows": 3,
+        "strict_pass": 3,
+        "Linux_reply_pass": 3
+      },
+      "E0/forced_compact": {
+        "rows": 3,
+        "strict_pass": 0,
+        "Linux_reply_pass": 0
+      },
+      "E0/forced_newline": {
+        "rows": 3,
+        "strict_pass": 3,
+        "Linux_reply_pass": 3
+      },
+      "E2/original": {
+        "rows": 3,
+        "strict_pass": 0,
+        "Linux_reply_pass": 0
+      },
+      "E2/forced_compact": {
+        "rows": 3,
+        "strict_pass": 0,
+        "Linux_reply_pass": 0
+      },
+      "E2/forced_newline": {
+        "rows": 3,
+        "strict_pass": 3,
+        "Linux_reply_pass": 3
+      }
+    },
+    "historical_controls": {
+      "E0_single_matches_historical": true,
+      "E2_single_matches_historical": true
+    },
+    "bidirectional_same_bad_good_commands": true,
+    "prefix_token_ids": {
+      "opening_tag_only": [
+        27,
+        3006,
+        29
+      ],
+      "opening_tag_and_newline": [
+        27,
+        3006,
+        397
+      ]
+    },
+    "fresh_Linux_checks": 108,
+    "operator_prefix_is_not_generated": true,
+    "opening_tag_only_does_not_forbid_generated_newline": true,
+    "DNS_TLS_prefix_mechanism_separately_tested": false,
+    "original_primary_scores_modified": false
+  },
+  "interpretation": "The tested target-envelope treatment recovered the observed retention regression. Fixed-weight bidirectional prefix interventions identify a conditional generation-context mechanism for three correlated wc variants; this does not establish a unique mechanism across all tasks, the contribution of loss weighting, or independent generalization.",
+  "resource_summary": {
+    "maximum_concurrent_GPUs": 1,
+    "GPU_jobs_finite_and_cleaned": true,
+    "CPU_jobs_cleaned": true,
+    "CPU_VM_stopped": true,
+    "target_format_GPU_sample_mean_percent": 29.8213058419244,
+    "prefix_probe_GPU_sample_mean_percent": 3.6049382716049383,
+    "utilization_target_compliance_certified": false,
+    "note": "Cold preparation/model loading dominate short probes; these measured means are below40%, not whole-namespace certification."
+  },
+  "official_test_rows": 0,
+  "confirmation_rows": 0,
+  "private_raw_predictions_weights_and_operational_files_released": false,
+  "source_artifact_sha256": {
+    "target_format_worker_result": "48bac2b4a9679646c4e8b86495771b9c1b0b82623ee305fa609b40b1c98fb59f",
+    "target_format_CPU_evidence": "4a586a7fac2e14c2aad0f049320c27e5dc527a24ed5801f8326cfa0741e4a67e",
+    "prefix_worker_result": "954301536b8a736ee66e76b8596072419900c4b0e992e992502d4b6a9f931977",
+    "prefix_CPU_evidence": "ab8f50f7a2d85a2bccff4fb1f104701a7bf530f69ce1245fa5d4e37851aff726",
+    "exact_differential_audit": "13a58a7e97011b1563f654c7eb98fc6bfc0cb2f7c7455c7e1092bb72345ec824"
+  },
+  "public_verification_boundary": "Public verifier checks released hashes and aggregate/numerical consistency. Raw predictions, weights, full new training bodies and runtime provenance are not released, so it cannot independently recompute or reproduce private experiment scores."
+}
