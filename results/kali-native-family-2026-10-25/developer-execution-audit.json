@@ -1,0 +1,81 @@
+{
+  "status": "COMPLETE_POSTHOC_DEVELOPER_EXECUTION_AUDIT",
+  "records": 36,
+  "actual_command_executions": 30,
+  "not_executed_records": 6,
+  "gold": {
+    "rows": 12,
+    "executed": 12,
+    "passed": 12
+  },
+  "models": {
+    "base": {
+      "rows": 12,
+      "executed": 9,
+      "passed": 4
+    },
+    "candidate": {
+      "rows": 12,
+      "executed": 9,
+      "passed": 4
+    }
+  },
+  "strict_argv_regressions": 2,
+  "execution_verified_true_regressions_among_those2": 0,
+  "verified_order_equivalent_OpenSSL_pairs": 2,
+  "by_family": {
+    "head_exclude": {
+      "base": {
+        "rows": 3,
+        "executed": 1,
+        "passed": 0
+      },
+      "candidate": {
+        "rows": 3,
+        "executed": 1,
+        "passed": 0
+      }
+    },
+    "jq_length": {
+      "base": {
+        "rows": 3,
+        "executed": 2,
+        "passed": 2
+      },
+      "candidate": {
+        "rows": 3,
+        "executed": 2,
+        "passed": 2
+      }
+    },
+    "openssl_serial": {
+      "base": {
+        "rows": 3,
+        "executed": 3,
+        "passed": 2
+      },
+      "candidate": {
+        "rows": 3,
+        "executed": 3,
+        "passed": 2
+      }
+    },
+    "tcpdump_udp": {
+      "base": {
+        "rows": 3,
+        "executed": 3,
+        "passed": 0
+      },
+      "candidate": {
+        "rows": 3,
+        "executed": 3,
+        "passed": 0
+      }
+    }
+  },
+  "developer_gate_changed": false,
+  "sealed_validation_queries": 0,
+  "extra_model_calls": 0,
+  "no_posthoc_candidate_adoption": true,
+  "limits": "Only9/12modelcommands perarm executed after explicit readonly review;3/12perarm notexecuted. These are fixed synthetic fixture predicates, not all-environment semantic correctness. Strict gate remains failed; officialTEST untouched."
+}

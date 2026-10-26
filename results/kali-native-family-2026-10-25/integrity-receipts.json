@@ -1,0 +1,12 @@
+{
+  "private_worker_result_sha256": "5ada97c340ba75408145c43372e27bf1b8bd99fe11da29a8f587dcf5319b8d1c",
+  "private_payload_sha256": "b42605883123dfcb1f730ac00c398363d75c54fce4d3eba49520aac0dfb5c92c",
+  "private_worker_source_sha256": "79e847a6793856dd1d519a4127555e383d6f794faa9f2faba8bbefd140c95364",
+  "encoded_train_sha256": "52d39a313d2e0518118c3b59cef210dd1c48082dc77922f1173b08aa1fdf8a6f",
+  "model_score_sha256": "eba42588d692dfbe2a45d8dc22645fec5176664c85a46b15859dc805630460a9",
+  "independent_final_review_sha256": "4ecb940f57a91ddf1f6f60519e3b8d7df1c804933e40a2c6fffbe19282e48871",
+  "independent_exact_four_model_artifact_review_passed": true,
+  "native_gates_source_unchanged": true,
+  "raw_private_data_or_runtime_metadata_released": false,
+  "public_verification_boundary": "Numeric arithmetic, released bytes and generic input guards only. Private runtime/trajectory regeneration is not provided."
+}

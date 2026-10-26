@@ -1,0 +1,281 @@
+{
+  "schema": "kali.native.family.public.v1",
+  "status": "COMPLETED_NATIVE_ABA_PILOT",
+  "date": "2026-10-25",
+  "model": {
+    "id": "RISys-Lab/RedSage-K-SFT-GRPO",
+    "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+    "parameters_approx": 8190000000
+  },
+  "protocol_sha256": "2d2d9d18ccb4c83998c0e2a688f6709d76809cf11353c25e1ae340a0f562dcaa",
+  "alignment": {
+    "rows": 24,
+    "legacy_nf4_final_only_strict": 8,
+    "bf16_native_strict": 13,
+    "legacy_native_exact": 9,
+    "bf16_native_exact": 14,
+    "native_nf4_bridge": 4,
+    "native_bf16_bridge": 5,
+    "bridge_rows": 6,
+    "legacy_controls_exact_match": true,
+    "new_generations": 33,
+    "new_optimizer_steps": 0,
+    "official_vllm_reproduction": false,
+    "single_factor_causal_claim": false,
+    "generated_think_closure_rows": 0,
+    "native_continuations": 30,
+    "think_closure_not_added_as_scoring_gate": true
+  },
+  "data": {
+    "split_rows": {
+      "train": 64,
+      "dev": 12,
+      "validation": 12
+    },
+    "grouping_unit": "disjoint intent and query-template family",
+    "gold_passed": 88,
+    "negative_controls_passed": 4,
+    "independent_expert_or_official_gold": false,
+    "TRAIN_generated": 64,
+    "TRAIN_reviewed_executed": 56,
+    "TRAIN_verified": 50,
+    "TRAIN_executed_failed": 6,
+    "TRAIN_not_executed": 8,
+    "TRAIN_execution_pass_but_constraint_rejected": 8,
+    "TRAIN_accepted_rows": 42,
+    "TRAIN_accepted_families": 6,
+    "supervised_tokens": 891,
+    "max_sequence_tokens": 390,
+    "reasoning_tokens_supervised": false,
+    "responses_repaired": false,
+    "native_prefix_stripped": false,
+    "actual_teacher_tokens_retained": true,
+    "selection_revision": 3,
+    "heldout_predictions_used_for_TRAIN_selection": false,
+    "limits": [
+      "Self-authored after earlier failures were known; repeated filename variants are correlated.",
+      "The42-row training subset is utility-heavy and includes file hashing; PCAP trajectories violating an explicit flag constraint were excluded.",
+      "Developer exact-argv score can reject valid alternatives; it is fixed identically for base/candidate and separate from native metrics."
+    ]
+  },
+  "rollouts": {
+    "generations": 79,
+    "TRAIN_rows": 64,
+    "DEV_rows": 12,
+    "validation_rows": 0,
+    "native_controls_match": true,
+    "optimization_steps": 0
+  },
+  "native_ABA": {
+    "completed": true,
+    "setup_verifier_reviewer_passed": true,
+    "task_bytes_unchanged": true,
+    "private_evaluator_bytes_unchanged": true,
+    "four_selected_files_exact": true,
+    "four_files_declared": true,
+    "selected_model": "E0",
+    "agent_DEV_rows": 0,
+    "agent_validation_rows": 0,
+    "operator_authored_data_and_scaffold": true,
+    "autonomous_data_or_hyperparameter_search": false,
+    "final_delivery_verified_via_cached_controller_replay": true,
+    "controller_replay_new_optimizer_steps": 0,
+    "controller_replay_new_GPU_jobs": 0,
+    "public_zero_step_baseline_snapshot_files": 4,
+    "actual_training_native_gates_passed_before_numerical_job": true
+  },
+  "training": {
+    "rows": 42,
+    "steps": 42,
+    "seed": 42,
+    "epochs": 1,
+    "batch_size": 1,
+    "optimizer": "AdamW",
+    "learning_rate": 5e-06,
+    "weight_decay": 0,
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0,
+    "lora_targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "all_layers": true,
+    "precision": "NF4 weights/BF16 compute; BF16 original+adapter inference",
+    "loss": "Output block and EOS only; native prompt and pre-output generated text masked",
+    "supervised_tokens": 891,
+    "masked_generated_context_tokens": 1842,
+    "literal_final_command_repeated_in_masked_context_rows": 0,
+    "teacher_is_original_learner_checkpoint": true,
+    "max_sequence_tokens": 2048
+  },
+  "inference": {
+    "backend": "Transformers model-card usage, not vLLM leaderboard reproduction",
+    "prompt_policy": "unrestricted thinking; native <think> retained",
+    "max_input_tokens": 8192,
+    "max_new_tokens": 8192,
+    "temperature": 0.2,
+    "top_p": 1.0,
+    "top_k": 0,
+    "do_sample": true,
+    "seed": 3407,
+    "precision": "BF16 original model + optional LoRA; no NF4 inference"
+  },
+  "developer": {
+    "base_dev_exact": 4,
+    "candidate_dev_exact": 2,
+    "dev_rows": 12,
+    "base_retention_strict": 13,
+    "candidate_retention_strict": 13,
+    "retention_rows": 24,
+    "format_or_truncation_failures": 0.0,
+    "adoption_gate_passed": false
+  },
+  "developer_execution_audit": {
+    "status": "COMPLETE_POSTHOC_DEVELOPER_EXECUTION_AUDIT",
+    "records": 36,
+    "actual_command_executions": 30,
+    "not_executed_records": 6,
+    "gold": {
+      "rows": 12,
+      "executed": 12,
+      "passed": 12
+    },
+    "models": {
+      "base": {
+        "rows": 12,
+        "executed": 9,
+        "passed": 4
+      },
+      "candidate": {
+        "rows": 12,
+        "executed": 9,
+        "passed": 4
+      }
+    },
+    "strict_argv_regressions": 2,
+    "execution_verified_true_regressions_among_those2": 0,
+    "verified_order_equivalent_OpenSSL_pairs": 2,
+    "by_family": {
+      "head_exclude": {
+        "base": {
+          "rows": 3,
+          "executed": 1,
+          "passed": 0
+        },
+        "candidate": {
+          "rows": 3,
+          "executed": 1,
+          "passed": 0
+        }
+      },
+      "jq_length": {
+        "base": {
+          "rows": 3,
+          "executed": 2,
+          "passed": 2
+        },
+        "candidate": {
+          "rows": 3,
+          "executed": 2,
+          "passed": 2
+        }
+      },
+      "openssl_serial": {
+        "base": {
+          "rows": 3,
+          "executed": 3,
+          "passed": 2
+        },
+        "candidate": {
+          "rows": 3,
+          "executed": 3,
+          "passed": 2
+        }
+      },
+      "tcpdump_udp": {
+        "base": {
+          "rows": 3,
+          "executed": 3,
+          "passed": 0
+        },
+        "candidate": {
+          "rows": 3,
+          "executed": 3,
+          "passed": 0
+        }
+      }
+    },
+    "developer_gate_changed": false,
+    "sealed_validation_queries": 0,
+    "extra_model_calls": 0,
+    "no_posthoc_candidate_adoption": true,
+    "limits": "Only9/12modelcommands perarm executed after explicit readonly review;3/12perarm notexecuted. These are fixed synthetic fixture predicates, not all-environment semantic correctness. Strict gate remains failed; officialTEST untouched."
+  },
+  "validation": {
+    "status": "NOT_QUERIED_CANDIDATE_FAILED_DEVELOPER_GATE",
+    "model_rows": 0
+  },
+  "official_test_rows": 0,
+  "old_scientific_results_rewritten": false,
+  "cleanup": {
+    "VM_Halted": true,
+    "VM_instances": 0,
+    "remaining_new_jobs_pods_configmaps": 0,
+    "persistent_model_cache_and_adapter_retained": true,
+    "cleanup_scope": "Only the owned finite study Jobs/Pods/ConfigMaps and owned CPU VM; persistent research data retained."
+  },
+  "resources": {
+    "candidate": {
+      "maximum_GPUs": 1,
+      "host_wall_seconds": 467.54335616598837,
+      "worker_seconds": 448.2189342339989,
+      "staging_seconds": 309.1277835618239,
+      "mean_GPU_utilization_whole_worker": 19.235955056179776,
+      "mean_GPU_utilization_after_staging": 63.407407407407405,
+      "sample_period_seconds": 5,
+      "remaining_resources": 0,
+      "overhead_note": "Whole-worker utilization includes expensive model staging; post-staging utilization does not certify whole-allocation utilization."
+    },
+    "alignment": {
+      "maximum_GPUs": 1,
+      "wall_seconds": 438.8895990420133,
+      "worker_seconds": 410.85824244702235,
+      "staging_seconds": 320.58575114700943,
+      "GPU_sample_mean_whole_worker": 12.097560975609756,
+      "GPU_sample_mean_after_staging": 55.111111111111114,
+      "owned_resources_remaining": 0
+    },
+    "rollouts": {
+      "maximum_GPUs": 1,
+      "host_wall_seconds": 607.6254284169991,
+      "worker_seconds": 579.8116441878956,
+      "staging_seconds": 413.77982422406785,
+      "mean_GPU_utilization_whole_worker": 25.20689655172414,
+      "mean_GPU_utilization_after_staging": 88.60606060606061,
+      "sample_period_seconds": 5,
+      "remaining_resources": 0,
+      "overhead_note": "Whole-worker utilization includes expensive model staging; post-staging utilization does not certify whole-allocation utilization."
+    },
+    "aborted_50row_native_attempt_GPU_jobs": 0,
+    "aborted_50row_native_attempt_optimizer_steps": 0
+  },
+  "audit_corrections": [
+    "Initial JSON fixture did not distinguish whole-object vs array cardinality; corrected before pilot predictions.",
+    "Initial alignment analyzer incorrectly introduced a closed-think gate; corrected to pinned native extraction, old invalid local analysis retained.",
+    "Initial execution worker accidentally applied the capture-r guard to sha256sum; repaired before the42-row data freeze.",
+    "The50-row native attempt was stopped before GPU work after eight PCAP trajectories omitted explicitly required-n. V2 requires execution plus explicit constraint checks.",
+    "A native startup failed before model/GPU calls because its owned CLI bind directory was missing; repaired without disabling sandbox.",
+    "The first numerical native run completed but Finalizer delivered task inputs instead of model artifacts. Independent strict checks rejected it despite the generic native verifier passing. A fresh native controller replay used the cached42-step result and a declared pre-Setup zero-step baseline snapshot; no additional optimization or GPU jobs."
+  ],
+  "decision": {
+    "formal_default_remains_original_base": true,
+    "reason": "No execution-verified developer gain; retention unchanged. Two strict argv regressions are option-order equivalents. Frozen gate failed, so retain original base; sealed validation unqueried. No official benchmark claim."
+  },
+  "limits": [
+    "Historical8/24 vs native13/24 is an inference protocol change, not a training gain.",
+    "No single-factor inference-causality claim, repeated-seed generalization or official leaderboard reproduction.",
+    "This release verifies numerical/source consistency, not fresh reproduction of private model trajectories.",
+    "Validation, if queried, is self-authored and family-separated; not independently authored expert gold."
+  ]
+}
