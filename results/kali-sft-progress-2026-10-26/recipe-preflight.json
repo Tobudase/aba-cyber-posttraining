@@ -1,0 +1,10 @@
+{
+  "status": "VALIDATED_REAL_240_ROW_RECIPE_WITH_SHARED_CONSUMER",
+  "rows": 240,
+  "steps": 240,
+  "TRAIN_labels_and_flags_checked": true,
+  "optimizer_source_sha256": "50a3eb70d936a6583af22a2e62f3ad08d3e783146c17f60b5489468b7be54490",
+  "recipe_sha256": "3e0c28c3b0611567f5ccb56039dfda118758fa4163768df270fe6b3bc1792595",
+  "new_8B_training_executed": false,
+  "no_historical_parent_recipe_used": true
+}

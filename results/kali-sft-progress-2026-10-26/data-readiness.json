@@ -1,0 +1,22 @@
+{
+  "status": "READY_LINUX_AND_TOKENIZER_NOT_YET_MODEL_TRAINED",
+  "rows": {
+    "train": 240,
+    "dev": 72,
+    "confirmation": 72
+  },
+  "groups": {
+    "train": 40,
+    "dev": 12,
+    "confirmation": 12
+  },
+  "TRAIN_encoded_rows": 240,
+  "supervised_tokens": 6624,
+  "maximum_sequence_length": 375,
+  "TRAIN_file_sha256": "6dc7f2ce004703a7266d2f1008bf2f5c058b090087fc5f71d0b36ceb72425834",
+  "encoded_sha256": "60c6cc926123cd34fa75949782f7dacb25931a5453e0688a826e7e93ff8c681c",
+  "optimizer_recipe_sha256": "3e0c28c3b0611567f5ccb56039dfda118758fa4163768df270fe6b3bc1792595",
+  "official_or_old_sealed_data_read": 0,
+  "new_dataset_model_calls": 0,
+  "independent_human_review": false
+}

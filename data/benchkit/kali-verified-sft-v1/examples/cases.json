@@ -1,0 +1,124 @@
+{
+  "status": "EIGHT_PUBLIC_TRAIN_EXAMPLES_FROM_LINUX_VERIFIED_CORPUS",
+  "cases": [
+    {
+      "id": "sft-train-grep-intent-0-v1",
+      "tool": "grep",
+      "filename": "case_grep_1.log",
+      "argv": [
+        "grep",
+        "-F",
+        "ERR.[audit]",
+        "case_grep_1.log"
+      ],
+      "fixture_sha256": "17481e8d00af29caf6314250cb97feb3f3a81ab46a7165badcc89f5e0ad89c23",
+      "expected_stdout_sha256": "97a65aa4bac2c6ea10d92069166273aee0d6115f25b82aaba7cd8062800f7317"
+    },
+    {
+      "id": "sft-train-head-intent-0-v1",
+      "tool": "head",
+      "filename": "case_head_1.log",
+      "argv": [
+        "head",
+        "-n",
+        "2",
+        "case_head_1.log"
+      ],
+      "fixture_sha256": "6944aba23128d19e2019a353f3318ce872a3244d7c13f1bda912221f4b9b19d9",
+      "expected_stdout_sha256": "9ec2d4c5c24b853d35d43a48373faa0b6ac783064c473b1a4f56b319cc32d264"
+    },
+    {
+      "id": "sft-train-jq-intent-0-v1",
+      "tool": "jq",
+      "filename": "case_jq_1.json",
+      "argv": [
+        "jq",
+        "-r",
+        ".incident.kind",
+        "case_jq_1.json"
+      ],
+      "fixture_sha256": "52581d80900f2602198e709c1bed1a7912ffb62f6855548527f5a5af5de3c956",
+      "expected_stdout_sha256": "bf1d052012ee1d41fdff3a3bab1278a0e54fef4a7b27045c3727888886a089e5"
+    },
+    {
+      "id": "sft-train-openssl-intent-2-v1",
+      "tool": "openssl",
+      "filename": "case_openssl_1.log",
+      "argv": [
+        "openssl",
+        "dgst",
+        "-sha384",
+        "case_openssl_1.log"
+      ],
+      "fixture_sha256": "6944aba23128d19e2019a353f3318ce872a3244d7c13f1bda912221f4b9b19d9",
+      "expected_stdout_sha256": "f6add34b656f46fc80825b8b9e4460d251d8a2456e34ce4e964c9372248d5ca1"
+    },
+    {
+      "id": "sft-train-tail-intent-1-v1",
+      "tool": "tail",
+      "filename": "case_tail_1.log",
+      "argv": [
+        "tail",
+        "-c",
+        "6",
+        "case_tail_1.log"
+      ],
+      "fixture_sha256": "6944aba23128d19e2019a353f3318ce872a3244d7c13f1bda912221f4b9b19d9",
+      "expected_stdout_sha256": "a9c9d255de675e01c34aa709993adae12f6a24675d1046b388d2370a4f065ee4"
+    },
+    {
+      "id": "sft-train-tcpdump-intent-1-v1",
+      "tool": "tcpdump",
+      "filename": "case_tcpdump_1.pcap",
+      "argv": [
+        "tcpdump",
+        "-nn",
+        "-r",
+        "case_tcpdump_1.pcap",
+        "tcp"
+      ],
+      "fixture_sha256": "d0114f4da63982cbd8311b7c0135aa4d704ad9725862aa55f2c2650183ace71e",
+      "expected_stdout_sha256": "25b44b302eb28f0565263808e985e4104b5522163b7dd3785688924a6c9a179a"
+    },
+    {
+      "id": "sft-train-tshark-intent-0-v1",
+      "tool": "tshark",
+      "filename": "case_tshark_1.pcap",
+      "argv": [
+        "tshark",
+        "-n",
+        "-r",
+        "case_tshark_1.pcap",
+        "-Y",
+        "dns",
+        "-T",
+        "fields",
+        "-e",
+        "frame.number"
+      ],
+      "fixture_sha256": "d0114f4da63982cbd8311b7c0135aa4d704ad9725862aa55f2c2650183ace71e",
+      "expected_stdout_sha256": "8391e9ff91c3c6402f9596a8c9e82d4ceaa7815687f5854f7e1a23b194be4968"
+    },
+    {
+      "id": "sft-train-wc-intent-1-v1",
+      "tool": "wc",
+      "filename": "case_wc_1.log",
+      "argv": [
+        "wc",
+        "-w",
+        "case_wc_1.log"
+      ],
+      "fixture_sha256": "6944aba23128d19e2019a353f3318ce872a3244d7c13f1bda912221f4b9b19d9",
+      "expected_stdout_sha256": "4165aa27a425746e250936a91d2239238b3063c3cc232df93b29f5fdff12314a"
+    }
+  ],
+  "Linux_versions": [
+    "coreutils 8.32-4.1ubuntu1.2",
+    "grep 3.7-1build1",
+    "jq 1.6-2.1ubuntu3.2",
+    "openssl 3.0.2-0ubuntu1.30",
+    "tcpdump 4.99.1-3ubuntu0.2",
+    "tshark 3.6.2-2"
+  ],
+  "model_calls": 0
+}

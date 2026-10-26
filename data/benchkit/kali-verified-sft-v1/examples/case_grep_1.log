@@ -1,0 +1,6 @@
+ALLOW
+ERR.[audit] first
+err.[audit] mixed
+ERR.[audit]
+DENY unrelated
+ERR.[audit] final

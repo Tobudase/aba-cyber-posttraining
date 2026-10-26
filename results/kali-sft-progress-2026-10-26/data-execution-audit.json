@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "gold": {
+    "train": {
+      "rows": 240,
+      "passed": 240
+    },
+    "dev": {
+      "rows": 72,
+      "passed": 72
+    },
+    "confirmation": {
+      "rows": 72,
+      "passed": 72
+    }
+  },
+  "negative_checks": 448,
+  "negative_passed": 448,
+  "versions": [
+    "coreutils 8.32-4.1ubuntu1.2",
+    "grep 3.7-1build1",
+    "jq 1.6-2.1ubuntu3.2",
+    "openssl 3.0.2-0ubuntu1.30",
+    "tcpdump 4.99.1-3ubuntu0.2",
+    "tshark 3.6.2-2"
+  ],
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "GPU_count": 0,
+  "generator_sha256": "b43ab584250ab0030046e535330b2a7d213db9a5ba789488533b02298bf35f93",
+  "independent_human_review": false,
+  "live_targets": 0
+}

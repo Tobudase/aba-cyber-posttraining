@@ -1,0 +1,7 @@
+{
+  "status": "PASS_PORTABLE_ENCODER_EQUALS_ALL240_PREPARED_TRAIN_ROWS",
+  "rows": 240,
+  "prompt_source_parsed_as_AST_literal_only_no_exec": true,
+  "model_calls": 0,
+  "official_or_confirmation_data_read": 0
+}

@@ -1,0 +1,100 @@
+{
+  "status": "COMPLETE_TRAIN_ONLY_MICROFIT",
+  "actual_GPU": "NVIDIA L4",
+  "TRAIN_rows": 8,
+  "sets": {
+    "base_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0
+    },
+    "base_BF16": {
+      "rows": 8,
+      "correct": 2,
+      "unsupported": 0,
+      "truncated": 0
+    },
+    "lr5e6_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 4,
+      "unsupported": 0,
+      "truncated": 0
+    },
+    "lr5e6_BF16": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0
+    },
+    "lr2e5_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0
+    },
+    "lr2e5_BF16": {
+      "rows": 8,
+      "correct": 5,
+      "unsupported": 3,
+      "truncated": 0
+    }
+  },
+  "arms": {
+    "lr5e6": {
+      "learning_rate": 5e-06,
+      "steps": 128,
+      "NF4_TRAIN_correct": 4,
+      "BF16_TRAIN_correct": 0,
+      "token_weighted_NLL_before": 2.0557754491766294,
+      "token_weighted_NLL_after": 0.49255016694466275,
+      "relative_loss_drop": 0.7604066304313845,
+      "gradient_norm_min": 2.1460537910461426,
+      "gradient_norm_max": 7.304369926452637,
+      "all_gradient_norms_finite": true,
+      "changed_tensors": 144,
+      "reload_delta": 0.0,
+      "predeclared_sanity_gate_passed": false
+    },
+    "lr2e5": {
+      "learning_rate": 2e-05,
+      "steps": 128,
+      "NF4_TRAIN_correct": 0,
+      "BF16_TRAIN_correct": 5,
+      "token_weighted_NLL_before": 2.0557754491766294,
+      "token_weighted_NLL_after": 0.17072884626686574,
+      "relative_loss_drop": 0.91695160756237,
+      "gradient_norm_min": 0.23961235582828522,
+      "gradient_norm_max": 6.683198928833008,
+      "all_gradient_norms_finite": true,
+      "changed_tensors": 144,
+      "reload_delta": 0.0,
+      "predeclared_sanity_gate_passed": false
+    }
+  },
+  "training_sanity_gate_passed": false,
+  "selected_arm": null,
+  "selected_learning_rate": null,
+  "new_optimizer_steps": 256,
+  "new_generations": 48,
+  "official_or_confirmation_calls": 0,
+  "external_teacher_calls": 0,
+  "same_initial_LoRA_across_arms": true,
+  "TRAIN_memorization_not_generalization": true,
+  "formal_default": "original_base",
+  "next": "STOP_LARGER_TRAINING_AND_REVIEW_FAILURES",
+  "resources": {
+    "host_seconds": 818.4022004578728,
+    "worker_seconds": 790.9553926959634,
+    "staging_seconds": 211.12628972390667,
+    "GPU_mean_whole_worker": 46.096774193548384,
+    "GPU_mean_after_staging": 63.230088495575224,
+    "remaining_owned_resources": 0,
+    "cleanup_errors": []
+  },
+  "limits": [
+    "Two operator-fixed LR controls,not ABA autonomous search or an optimal-LR proof.",
+    "Eight selected previously failed TRAIN examples;this gate proves only limited fitting ability.",
+    "Main NF4 gate and BF16 non-regression do not prove BF16 generalization."
+  ]
+}

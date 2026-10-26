@@ -1,0 +1,15 @@
+{
+  "status": "PASS_REAL_TINY_CPU_OPTIMIZER_AND_BOUNDARIES",
+  "torch": "2.8.0",
+  "optimizer_steps": 16,
+  "base_weights_unchanged": true,
+  "changed_toy_LoRA_tensors": 2,
+  "TRAIN_NLL_before": 3.335965633392334,
+  "TRAIN_NLL_after": 3.3075811862945557,
+  "gradient_norms_finite": true,
+  "reload_max_logit_delta": 0,
+  "invalid_inputs_rejected": 11,
+  "pretrained_8B_training": false,
+  "cybersecurity_model_gain": false,
+  "GPU_allocations": 0
+}

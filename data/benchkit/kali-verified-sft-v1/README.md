@@ -1,0 +1,11 @@
+# Authored SFT curriculum
+
+This exploratory curriculum releases 240 TRAIN records across 40 command/constraint intent groups and 72 DEV records across 12 groups, covering eight CLI tools. Each group contains six content, parameter and filename variants. These variants are correlated, not independent skills. Another 72 confirmation records across 12 groups remain host-side and have not been queried by a model.
+
+All 384 gold commands and 448 negative checks passed a finite Linux fixture audit. Expected outputs were computed separately in Python, covering UTF-8 counts, JSON selection, hashes, certificate fields and selected offline packet port sequences. Execution checks do not constitute independent human semantic review: `independent_human_review` remains false. This is neither official KaliBench data nor an expert-authored generalization benchmark. Tools and fixture patterns are shared between splits, although the declared command/constraint intent groups are disjoint.
+
+The queries and commands are original project-authored synthetic examples, checked against the linked primary tool references. No source-manual passages, upstream benchmark records, model reasoning or real incident data are redistributed. See the repository NOTICE; no repository-wide license or upstream/model permission is inferred.
+
+`examples/cases.json` contains eight actual TRAIN fixture files whose byte hashes match the completed Linux audit, plus expected stdout hashes and tool versions. Run `python3 scripts/verify-kali-sft-examples.py` to check the released files. On Linux with the recorded tool versions, add `--execute` to replay these eight gold commands. The replay sets UTF-8 locale and UTC. Full fixture/task generation and confirmation bodies remain host-side to protect the next evaluation. Public verification cannot independently regenerate the entire protected 384-case audit.
+
+Eligible TRAIN flags record completed execution and explicit-constraint checks. The data was tokenized with the native input template and an explicit empty-think/final-answer target; that target mode remains experimental. The 240-row model training is gated on training-sanity checks and has not run in this snapshot. Data readiness and toy CPU tests must not be described as model gains.

@@ -1,0 +1,29 @@
+{
+  "schema": "kali.verified.sft.public.v1",
+  "status": "LINUX_AND_TOKENIZER_VERIFIED_NOT_YET240_ROW_MODEL_TRAINED",
+  "released_rows": {
+    "train": 240,
+    "dev": 72
+  },
+  "released_groups": {
+    "train": 40,
+    "dev": 12
+  },
+  "withheld_confirmation_rows": 72,
+  "withheld_confirmation_groups": 12,
+  "withheld_confirmation_sha256": "81e23b91bca27b328f63edd56f2a6a28a1275c6fa7750d63b5821a23c6d4d0d8",
+  "independent_human_review": false,
+  "variants_per_intent": 6,
+  "official_benchmark_rows": 0,
+  "Linux_gold_passed": 384,
+  "Linux_negative_controls_passed": 448,
+  "generator_source_sha256": "b43ab584250ab0030046e535330b2a7d213db9a5ba789488533b02298bf35f93",
+  "TRAIN_supervised_tokens": 6624,
+  "TRAIN_max_sequence_tokens": 375,
+  "released_data_sha256": {
+    "train.jsonl": "6dc7f2ce004703a7266d2f1008bf2f5c058b090087fc5f71d0b36ceb72425834",
+    "dev.jsonl": "d9327a06d3c63c57576c98d38f09922e66ce54fa478671a89a593b006e7feb73"
+  },
+  "full_fixture_task_generator_withheld": true,
+  "boundary": "New authored synthetic TRAIN/DEV only;no upstream benchmark bodies,private old42trajectories,reasoning,encodedtokenIDs,weights orconfirmationbodies."
+}

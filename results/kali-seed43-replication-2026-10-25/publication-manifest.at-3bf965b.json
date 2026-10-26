@@ -1,0 +1,21 @@
+{
+  "schema": "kali.public_seed43_publication.v1",
+  "previous_public_commit": "9b8adb842968174d1710fe29fec208306dd44d01",
+  "file_sha256": {
+    "README.md": "db5beb7a17dd3ef022cd076a9fd2557a22d31bb6cc5471fc5807067f17b00b0c",
+    "docs/KALI_SEED43_REPLICATION_2026-10-25.md": "18af5400d8a4fe1a8f74c196e6f02a185e7eb02934238eaf3a427128bb98d971",
+    "docs/KALI_SEED43_REPLICATION_ZH_2026-10-25.md": "3938382e3bf343a387f7224a488e093bbf0269e3484d6816f0df0d4d021f5921",
+    "results/kali-seed43-replication-2026-10-25/summary.json": "8b9d8799b5044cd24941b09164ab46ae1764d0a9e24cae91751726f443e313d6",
+    "results/kali-seed43-replication-2026-10-25/numerical-receipts.json": "2d421031a1b859727624424b7e36c751850dec6094b6d6862ef46497b4c37267",
+    "scripts/kali_target_envelope.py": "c647ee6e83c2b765a3f87bd4d74a67f108c0b205745924929fdd87ad4bae890c",
+    "scripts/verify-kali-seed43-publication.py": "5f1cbba7a50bd6ee67756327ba51c6d5d1d4e535b2405c1f2daa2293a5e9fbec",
+    "results/kali-cuda-2026-10-24/publication-manifest.json": "99a0fd0a73278d1ba20d7dbe22a0675a33db0f5037d9114f4a004dfff1a5cd61",
+    "results/kali-cuda-2026-10-24/publication-manifest.at-9b8adb8.json": "d19bed0fa854eb2b74915fea463013aae0b4306e6977fb8444fe51ae649ad71c",
+    "results/kali-replay-v3-2026-10-24/publication-manifest.json": "e58b5b2465ecb743f78c8123a9e828cef157de88f005a822ffb0cc66c88dbb2a",
+    "results/kali-replay-v3-2026-10-24/publication-manifest.at-9b8adb8.json": "620728cb1e92800386fb55230ab96820013fe4f94a6079a9b514a773fa840803",
+    "results/kali-causal-findings-2026-10-25/publication-manifest.json": "5c7879bb5dbe7d56436a2fd29be9c307896617daa05e2b25d5d3a80affaa5f76",
+    "results/kali-causal-findings-2026-10-25/publication-manifest.at-9b8adb8.json": "3a5021d85556f7ecf37425e776f6356607110e8943cc37cc9a92d946b29571c1"
+  },
+  "boundary": "Released aggregate/numerical consistency only, not private prediction/runtime reproduction.",
+  "candidate_formally_adopted": false
+}

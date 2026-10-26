@@ -1,0 +1,121 @@
+{
+  "status": "COMPLETE_TRAIN_RECALL_DIAGNOSTIC",
+  "actual_GPU": "NVIDIA L4",
+  "rows": 42,
+  "correction_rows": 22,
+  "easy_replay_rows": 20,
+  "sets": {
+    "NF4_base": {
+      "correction": {
+        "rows": 22,
+        "correct": 4,
+        "unsupported": 0,
+        "truncated": 0
+      },
+      "easy_replay": {
+        "rows": 20,
+        "correct": 20,
+        "unsupported": 0,
+        "truncated": 0
+      }
+    },
+    "NF4_hardmix": {
+      "correction": {
+        "rows": 22,
+        "correct": 5,
+        "unsupported": 0,
+        "truncated": 0
+      },
+      "easy_replay": {
+        "rows": 20,
+        "correct": 20,
+        "unsupported": 0,
+        "truncated": 0
+      }
+    },
+    "BF16_base": {
+      "correction": {
+        "rows": 22,
+        "correct": 3,
+        "unsupported": 2,
+        "truncated": 0
+      },
+      "easy_replay": {
+        "rows": 20,
+        "correct": 20,
+        "unsupported": 0,
+        "truncated": 0
+      }
+    },
+    "BF16_hardmix": {
+      "correction": {
+        "rows": 22,
+        "correct": 1,
+        "unsupported": 1,
+        "truncated": 0
+      },
+      "easy_replay": {
+        "rows": 20,
+        "correct": 20,
+        "unsupported": 0,
+        "truncated": 0
+      }
+    }
+  },
+  "paired": {
+    "NF4": {
+      "correction": {
+        "gains": 1,
+        "regressions": 0,
+        "identical_commands": 21
+      },
+      "easy_replay": {
+        "gains": 0,
+        "regressions": 0,
+        "identical_commands": 18
+      }
+    },
+    "BF16": {
+      "correction": {
+        "gains": 1,
+        "regressions": 3,
+        "identical_commands": 15
+      },
+      "easy_replay": {
+        "gains": 0,
+        "regressions": 0,
+        "identical_commands": 20
+      }
+    }
+  },
+  "token_weighted_TRAIN_NLL": {
+    "NF4_base": 2.141990257364459,
+    "NF4_hardmix": 1.502995725648593,
+    "BF16_base": 2.565425555895915,
+    "BF16_hardmix": 2.389870794262506
+  },
+  "predeclared_learning_signal": false,
+  "next_branch": "BOUNDED_TRAIN_ONLY_MICROFIT",
+  "same_card_all_four_conditions": true,
+  "greedy_diagnostic_not_comparable_with_old_sampled_DEV": true,
+  "TRAIN_recall_is_not_generalization": true,
+  "new_optimizer_steps": 0,
+  "new_generations": 168,
+  "official_or_validation_calls": 0,
+  "external_teacher_calls": 0,
+  "resources": {
+    "host_seconds": 1350.8786904169247,
+    "worker_seconds": 1321.9690959700383,
+    "staging_seconds": 191.38237014296465,
+    "GPU_mean_whole_worker": 44.627906976744185,
+    "GPU_mean_after_staging": 52.336363636363636,
+    "remaining_owned_resources": 0,
+    "cleanup_errors": []
+  },
+  "formal_default": "original_base",
+  "limitations": [
+    "TRAIN targets selected after known failures;no independent validation or official score.",
+    "Command-contract metric is limited to reviewed syntax;unsupported alternatives conservatively fail and need execution review.",
+    "Fixed seeded greedy decoding and one actual GPU do not prove cross-allocation exact reproducibility."
+  ]
+}

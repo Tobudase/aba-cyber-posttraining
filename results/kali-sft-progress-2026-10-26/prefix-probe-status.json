@@ -1,0 +1,8 @@
+{
+  "status": "NO_ALLOCATION_WITHIN_BOUNDED_WAIT",
+  "new_optimizer_steps": 0,
+  "new_generations": 0,
+  "results_collected": false,
+  "remaining_owned_resources": 0,
+  "cleanup_errors": []
+}

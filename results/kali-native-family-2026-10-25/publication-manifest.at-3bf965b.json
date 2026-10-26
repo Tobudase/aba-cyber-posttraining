@@ -1,0 +1,28 @@
+{
+  "schema": "kali.native.family.publication.v1",
+  "previous_public_commit": "b324d399a3e28f0df628d8b54ae28968d1564d0b",
+  "file_sha256": {
+    "README.md": "db5beb7a17dd3ef022cd076a9fd2557a22d31bb6cc5471fc5807067f17b00b0c",
+    "docs/KALI_NATIVE_FAMILY_PILOT_2026-10-25.md": "60ae364fd0ff8ab5b127dfb58564bc265f108612109be65126056c8006cfe4db",
+    "docs/KALI_NATIVE_FAMILY_PILOT_ZH_2026-10-25.md": "3074f0119336a486e84818edc78e214d8d0c7970d200437a153bb2276cf23f4b",
+    "scripts/kali_native_completion.py": "46b5565119052af7a7fda7c4e026e73da0138d11f376da8a30988e75296a97d6",
+    "scripts/verify-kali-native-publication.py": "15010c15bf5fe7bb6ecb70259019ace2053f45cfd6a9fde416b11c12e4b1fad0",
+    "results/kali-native-family-2026-10-25/summary.json": "053ecd62d8787511c56894bd0f1f374604939254afab000994d50379b556579c",
+    "results/kali-native-family-2026-10-25/developer-execution-audit.json": "5e18c617e3c804ea036fee1de7e385fda1ebcc21c898a06f370c25abad6a5147",
+    "results/kali-native-family-2026-10-25/training-receipt.json": "94efe37d43f76193787d72281186170323fee25b10e7d16b6d6e10b7a16b05c4",
+    "results/kali-native-family-2026-10-25/integrity-receipts.json": "51343cef7d1f33346e310456b849e5aaa75cf7aaf80a271c23b48ef6b3792521",
+    "results/kali-cuda-2026-10-24/publication-manifest.json": "99a0fd0a73278d1ba20d7dbe22a0675a33db0f5037d9114f4a004dfff1a5cd61",
+    "results/kali-replay-v3-2026-10-24/publication-manifest.json": "e58b5b2465ecb743f78c8123a9e828cef157de88f005a822ffb0cc66c88dbb2a",
+    "results/kali-causal-findings-2026-10-25/publication-manifest.json": "5c7879bb5dbe7d56436a2fd29be9c307896617daa05e2b25d5d3a80affaa5f76",
+    "results/kali-seed43-replication-2026-10-25/publication-manifest.json": "77f8c7d37e09296df6f0547ad6313ab2f3d40965e7c85a7f2ae06acecf287861",
+    "results/kali-cuda-2026-10-24/publication-manifest.at-b324d39.json": "3f6e4df1882079818b8a73ba47cf932933cbc1e268638a60234a690976bbb5a9",
+    "results/kali-replay-v3-2026-10-24/publication-manifest.at-b324d39.json": "632ab043bb85d0e7e527f95f86dd37ed006eccb52dcfb9b1046d482df2e18598",
+    "results/kali-causal-findings-2026-10-25/publication-manifest.at-b324d39.json": "67718f0401c99026448204c5f8854b7604c81e7c1102727f36f7bf93eaac5213",
+    "results/kali-seed43-replication-2026-10-25/publication-manifest.at-b324d39.json": "1bde6f84b0c95edef5839d1ded4ccd3b7d7df4a05e83b4443e2c0105b9116bb4"
+  },
+  "boundary": "Released-byte integrity, numeric consistency and generic supervision guards; no private data/model/runtime regeneration.",
+  "old_scientific_records_rewritten": false,
+  "raw_private_data_reasoning_weights_operational_metadata_released": false,
+  "candidate_formally_adopted": false,
+  "native_delivery_replay_new_optimizer_steps": 0
+}
