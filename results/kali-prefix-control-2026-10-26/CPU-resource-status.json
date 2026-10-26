@@ -1,0 +1,10 @@
+{
+  "resize_dry_run_accepted": false,
+  "patch_applied": false,
+  "CPU_requests_and_limits_before": "500m",
+  "CPU_requests_and_limits_after": "500m",
+  "GPU_requests_unchanged": true,
+  "restartCount_before": 0,
+  "restartCount_after": 0,
+  "note": "Resize preflight lacked required GET permission;no mutation,no workaround. Frozen experiment continued with original allocation."
+}

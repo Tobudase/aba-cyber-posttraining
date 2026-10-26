@@ -1,0 +1,38 @@
+{
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED_OR_EXECUTED",
+  "created_at_utc": "2026-10-26T20:13:51.710830+00:00",
+  "question": "Can matched numerical training/deployment modes fit the fixed same-text target without the cross-precision failure?",
+  "prerequisite_facts": {
+    "NF4_resegmented_TRAIN_correct": 8,
+    "BF16_same_adapter_TRAIN_correct": 5,
+    "BF16_truncations": 1,
+    "old_cross_precision_gate": "FAILED_UNCHANGED"
+  },
+  "planned_factor": "NF4 versus BF16 training numerical pipeline",
+  "model_and_data": "Same pinned RedSage-K and8previouslyusedTRAIN;same BPE target representation;shared initialLoRA tensorstate and order;not new officialdata",
+  "arms": [
+    "NF4_training",
+    "BF16_training"
+  ],
+  "readouts": [
+    "NF4_eval",
+    "BF16_eval"
+  ],
+  "planned_primary_gate": "Both matched diagonal cells correct>=7/8,closure+output8/8,zero truncation,within-armNLLdrop>=50%,finite nonzero gradients and reloadconsistency. All off-diagonal results reported,not hidden or retroactively relabeled.",
+  "planned_budget": {
+    "optimizer_steps": 256,
+    "generations": 48,
+    "GPU_count": 1,
+    "CPU_cores": 2,
+    "host_memory_GiB": 8,
+    "inference_batch_size": 4,
+    "training_batch_size": 1,
+    "max_new_tokens": 1024
+  },
+  "BF16_implementation_requirement": "Load frozen base directly inBF16,enable gradientcheckpointing(nonreentrant)+inputgrad hooks,and attach FP32LoRA. DoNOTcall thekbit preparationhelper whichupcasts an ordinaryBF16base toFP32. Stop/recordOOMratherthansilentlychanging experiments.",
+  "precision_comparisons": "Fresh same-job baseline and readout forbothprecisions. Fixedbatch4before/after declaredbefore predictions;do not credit batch/protocol differencesaslearning.",
+  "new240_training_or_ABA_launch": "Stillblockedbycurrentfailedgate;requires separatelyfrozen verified protocol and newDEV72/retention24gate.",
+  "model_generations": 0,
+  "optimizer_steps": 0,
+  "official_TEST_oldsealed_confirmation_externalteacher_calls": 0
+}

@@ -1,0 +1,62 @@
+{
+  "status": "POST_CONTROL_NATIVE_TAG_STRUCTURE_AUDIT",
+  "arms": {
+    "NF4_base_cache": {
+      "rows": 8,
+      "close_text": 0,
+      "special_close_ID": 0,
+      "open_text": 0,
+      "special_open_ID": 0,
+      "complete_output": 8
+    },
+    "NF4_base_no_cache": {
+      "rows": 8,
+      "close_text": 0,
+      "special_close_ID": 0,
+      "open_text": 0,
+      "special_open_ID": 0,
+      "complete_output": 8
+    },
+    "NF4_adapter_cache": {
+      "rows": 8,
+      "close_text": 0,
+      "special_close_ID": 0,
+      "open_text": 0,
+      "special_open_ID": 0,
+      "complete_output": 0
+    },
+    "NF4_adapter_no_cache": {
+      "rows": 8,
+      "close_text": 0,
+      "special_close_ID": 0,
+      "open_text": 0,
+      "special_open_ID": 0,
+      "complete_output": 0
+    },
+    "NF4_adapter_fresh_loader": {
+      "rows": 8,
+      "close_text": 0,
+      "special_close_ID": 0,
+      "open_text": 0,
+      "special_open_ID": 0,
+      "complete_output": 0
+    },
+    "BF16_base": {
+      "rows": 8,
+      "close_text": 0,
+      "special_close_ID": 0,
+      "open_text": 0,
+      "special_open_ID": 0,
+      "complete_output": 8
+    },
+    "BF16_adapter": {
+      "rows": 8,
+      "close_text": 0,
+      "special_close_ID": 0,
+      "open_text": 0,
+      "special_open_ID": 0,
+      "complete_output": 8
+    }
+  },
+  "raw_model_text_released": false
+}

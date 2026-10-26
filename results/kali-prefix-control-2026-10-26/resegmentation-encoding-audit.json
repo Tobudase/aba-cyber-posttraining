@@ -1,0 +1,15 @@
+{
+  "status": "PASS_SAME_TEXT_DIFFERENT_TARGET_IDS",
+  "rows": 8,
+  "canonical_supervised_tokens": 240,
+  "resegmented_supervised_tokens": 248,
+  "native_input_token_IDs_identical": true,
+  "complete_decoded_training_text_identical": true,
+  "all_gold_commands_unchanged": true,
+  "model_tokenizer_on_disk_unchanged": true,
+  "only_added_token_151668_removed_in_temporary_target_encoder": true,
+  "model_generations": 0,
+  "optimizer_steps": 0,
+  "not_a_generalization_or_serving_compatibility_claim": true,
+  "source_tokenizer_sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+}

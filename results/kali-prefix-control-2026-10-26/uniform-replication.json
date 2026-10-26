@@ -1,0 +1,11 @@
+{
+  "status": "EXACT_UNIFORM_CONTROL_REPLICATION",
+  "same_fields": {
+    "adapter_sha256": true,
+    "initial_LoRA_sha256": true,
+    "epoch_order_sha256": true,
+    "trace": true
+  },
+  "NLL_after_exact_equal": true,
+  "generations_additional_to_current_study": 0
+}

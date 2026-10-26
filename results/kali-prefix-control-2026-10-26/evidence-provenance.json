@@ -1,0 +1,18 @@
+{
+  "worker_sha256": "e5827f1c703295f2efe644910195c8d2c9ffe42c31cb6831370df356a7e66455",
+  "optimizer_source_sha256": "50a3eb70d936a6583af22a2e62f3ad08d3e783146c17f60b5489468b7be54490",
+  "prefix_optimizer_source_sha256": "8d590449a4afd06304895c9780bee63171ab030d8ad623fe8ab9a896bd2048ab",
+  "payload_sha256": "bfd49766c89394e542851beb76f887d17a49324611bf72c4c10fb66c19c90090",
+  "effective_config_sha256": "d14e9b81be70b45fec0586386ce8bfdfa31659324f3412544be9903540d33ce2",
+  "prerequisite_probe_summary_sha256": "9d97f1f67d5dfd80c497261bad60fcefc7852fcaadbef06d161b07af99689bdf",
+  "recorded_package_versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "bitsandbytes": "0.47.0",
+    "safetensors": "0.6.2"
+  },
+  "raw_questions_and_predictions_released": false,
+  "complete_private_model_reproduction": false
+}

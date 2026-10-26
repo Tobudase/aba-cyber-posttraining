@@ -1,0 +1,10 @@
+{
+  "status": "FINAL_CLEANUP_VERIFIED",
+  "remaining_owned_resources": 0,
+  "includes_Jobs_Pods_ConfigMaps_Secrets": true,
+  "own_active_GPU_pods": 0,
+  "research_VM_runStrategy": "Halted",
+  "research_VM_instances": 0,
+  "force_deletion_used": false,
+  "checked_at_utc": "2026-10-26T20:09:59.742999+00:00"
+}

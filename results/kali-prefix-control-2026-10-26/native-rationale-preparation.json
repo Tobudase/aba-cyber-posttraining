@@ -1,0 +1,34 @@
+{
+  "status": "PREPARED_VALIDATED_TRAIN_SCHEMA_NOT_MODEL_TRAINED",
+  "created_at_utc": "2026-10-26T19:05:04.187005+00:00",
+  "TRAIN_rows": 8,
+  "intent_distribution": {
+    "jq_field": 3,
+    "tshark_dns": 3,
+    "wc_words": 2
+  },
+  "supervised_tokens": 452,
+  "empty_think_parent_supervised_tokens": 240,
+  "all_native_input_token_IDs_unchanged": true,
+  "all_final_commands_unchanged": true,
+  "all_decode_roundtrips_and_masks_passed": true,
+  "model_generations": 0,
+  "optimizer_steps": 0,
+  "GPU_allocations": 0,
+  "external_teacher_calls": 0,
+  "official_DEV_confirmation_calls": 0,
+  "independent_human_review": false,
+  "source_payload_sha256": "e06d4663234972816879ed3958f5bb9f35cbfeefbd8057e678bd4a9099840ef6",
+  "encoded_file_sha256": "dde33d171851bf945622ccad66522f4dec102a66bdb3eee7d4a40867745b7476",
+  "limits": [
+    "Candidate future target-mode/data-quality control only;does not replace active frozen weight1vs8 study.",
+    "Includes extra factual text and more supervised tokens;not a single-variable proof of optimal rationale or token-matched compute.",
+    "Operator-written short explanations are not independently reviewed expert trajectories.",
+    "No training or effectiveness evidence."
+  ],
+  "preparation_source_sha256": "f7c6367da5d79d604da8dd11a67bbf5d07f59f07a1ffc4635884ccc891b4a7c1",
+  "parent_encoded_sha256": "947f762929aa65ab80c089db49c3eec47a66648c4b0ece4747bd237637163e65",
+  "inherited_final_command_execution_flags_verified": true,
+  "shared_TRAIN_recipe_schema_check": "PASS",
+  "no_target_or_input_token_changes_from_v1": true
+}

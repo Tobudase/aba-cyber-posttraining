@@ -1,0 +1,10 @@
+{
+  "status": "PASS_EXPORTED_ENCODER_EXACT_PARITY",
+  "rows": 8,
+  "actual_prepared_input_IDs_reproduced_exactly": true,
+  "source_sha256": "e2197062ef0bcee0c497da696a8f2fa65e4d782006a631f66d7ba4ed36e0b0f6",
+  "model_generations": 0,
+  "optimizer_steps": 0,
+  "inference_tokenizer_unchanged": true,
+  "experimental_noncanonical_target_segmentation": true
+}

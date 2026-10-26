@@ -1,0 +1,18 @@
+{
+  "schema": "kali.public_causal_publication.v1",
+  "previous_public_commit": "8369c70aa0f4c9350ee8027c8da1375941457265",
+  "file_sha256": {
+    "README.md": "7dc861de54694fefe2dd21b109a25a00e7f50a3b2aba8a692c5eeba7be7a1f20",
+    "docs/KALI_CAUSAL_FINDINGS_2026-10-25.md": "433461959a89eb15c18a8254fcea7117967be4d5efec28298d807d5f5feba3d5",
+    "docs/KALI_CAUSAL_FINDINGS_ZH_2026-10-25.md": "92bf9ee9ac812c5e0e4c5fdebaec9d5a002074e1de38907e9951843ef9fb8bf2",
+    "results/kali-causal-findings-2026-10-25/summary.json": "7b8207fb55eaa0889e62777ab15aca5207e1237e3b0fbefbefcf15efe6c7f756",
+    "results/kali-causal-findings-2026-10-25/numerical-receipts.json": "5dd3eaabd198bfc5a26a3f912b8b269295f58a81fbe45cedc97baa9d9f696288",
+    "scripts/verify-kali-causal-findings.py": "d6c10dba628b1ceac51adf667a3cd5ce74882b24eb01ab91612ba79085458e78",
+    "results/kali-cuda-2026-10-24/publication-manifest.json": "2437f028a495575ac5d3bafdc0db34378840ac2694b24f6a08b65a71ee71930a",
+    "results/kali-cuda-2026-10-24/publication-manifest.at-8369c70.json": "e147505cb2a278f8522e80679bf534e32f0826e8b95d92b3bdf9f9c0f23cd75b",
+    "results/kali-replay-v3-2026-10-24/publication-manifest.json": "b80ec84417d5bdeff267d90c6e2fe9e0a6f2e6af1f4cf9f5898064e1b019dee8",
+    "results/kali-replay-v3-2026-10-24/publication-manifest.at-8369c70.json": "d98c35ce0c9db6a77c7c452cb071e09bb50d57b559ab2620df17a8fcd58a1eed"
+  },
+  "boundary": "Aggregate/numerical consistency only; private raw runtime evidence is not reproduced.",
+  "private_operational_files_or_weights_released": false
+}

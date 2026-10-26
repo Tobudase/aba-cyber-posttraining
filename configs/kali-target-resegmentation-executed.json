@@ -1,0 +1,108 @@
+{
+  "schema": "kali.target.resegmentation.v1",
+  "study": "target_resegmentation",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "initialization_seed": 42,
+  "LoRA": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_dropout": 0,
+    "task_type": "CAUSAL_LM"
+  },
+  "quantization": {
+    "type": "nf4",
+    "compute": "bfloat16",
+    "double_quant": false
+  },
+  "allowed_GPU_models": [
+    "NVIDIA L40",
+    "NVIDIA L40S",
+    "NVIDIA GeForce RTX 4090",
+    "NVIDIA L4",
+    "NVIDIA GeForce RTX 3090",
+    "NVIDIA A10",
+    "NVIDIA RTX A5000"
+  ],
+  "arms": [
+    {
+      "name": "canonical",
+      "optimizer": {
+        "schema": "kali.sft.optimizer.v1",
+        "seed": 42,
+        "epochs": 16,
+        "max_optimizer_steps": 128,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "max_sequence_tokens": 2048,
+        "learning_rate": 2e-05,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "max_grad_norm": null
+      }
+    },
+    {
+      "name": "resegmented",
+      "optimizer": {
+        "schema": "kali.sft.optimizer.v1",
+        "seed": 42,
+        "epochs": 16,
+        "max_optimizer_steps": 128,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "max_sequence_tokens": 2048,
+        "learning_rate": 2e-05,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "max_grad_norm": null
+      }
+    }
+  ],
+  "inference": {
+    "TRAIN": {
+      "do_sample": false,
+      "temperature": null,
+      "top_p": null,
+      "top_k": null,
+      "seed": 3407,
+      "max_new_tokens": 1024
+    },
+    "evaluation": {
+      "do_sample": false,
+      "temperature": null,
+      "top_p": null,
+      "top_k": null,
+      "seed": 3407,
+      "max_new_tokens": 1024
+    }
+  },
+  "budget": {
+    "max_generations": 48,
+    "max_optimizer_steps": 256,
+    "max_output_tokens": 49152,
+    "deadline_seconds": 3600,
+    "pending_seconds": 1800
+  },
+  "decision": {
+    "sanity_gate": "NF4correct>=7/8;BF16correct>=same-jobbase;within-armunweightedNLLdrop>=50%;finite/nonzerogradients;reload<=1e-4;completeoutputandliteralclosingthink8/8;no truncation. TRAIN-only,nopromotion.",
+    "single_target_text_and_input_text_invariant": true,
+    "only_target_token_representation_differs": true,
+    "not_canonical_tokenizer_training_serialization": true,
+    "not_ABA_search": true,
+    "no_forced_inference_prefix": true,
+    "if_failed": "Stoplargertraining;reviewupstreamSFToutput-onlyprotocol andtargetalignment."
+  },
+  "operator_fixed_not_ABA_search": true
+}

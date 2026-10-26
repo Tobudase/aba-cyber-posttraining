@@ -1,0 +1,19 @@
+{
+  "completed_additional_8B_optimizer_steps": 512,
+  "completed_additional_8B_generations": 96,
+  "TRAIN_rows": 8,
+  "formal_default": "original_base",
+  "new240_SFT_executed": false,
+  "new_ABA_search_executed": false,
+  "official_TEST_calls": 0,
+  "old_sealed_validation_calls": 0,
+  "new_confirmation_calls": 0,
+  "external_teacher_calls": 0,
+  "native_rationale_candidate_trained": false,
+  "all_round_resources_cleaned": true,
+  "private_model_reproduction": false,
+  "weight_control_training_sanity_gate_passed": false,
+  "selected_weight_arm": null,
+  "resegmentation_training_sanity_gate_passed": false,
+  "selected_target_representation_arm": null
+}
