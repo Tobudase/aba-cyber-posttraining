@@ -1,0 +1,48 @@
+{
+  "status": "DETERMINISTIC_POST_COLLECTION_LOSS_ATTRIBUTION",
+  "source_worker_result_sha256": "e8968fd13fd3ba05eb8a456fd6343f7cd275a1731098a58bc86dd96aa1019d9b",
+  "teacher_forced_only": true,
+  "denominator": "first8 target positions only,not whole completion",
+  "arms": {
+    "NF4_base": {
+      "rows": 8,
+      "critical_token_EOS_argmax_rows": 0,
+      "critical_target_argmax_rows": 0,
+      "critical_position_NLL_fraction_of_first8_positions": 0.9268395405454205,
+      "mean_critical_target_probability": 3.0614001904793785e-21,
+      "mean_critical_EOS_probability": 8.062214473104786e-21
+    },
+    "NF4_adapter_set_state": {
+      "rows": 8,
+      "critical_token_EOS_argmax_rows": 8,
+      "critical_target_argmax_rows": 0,
+      "critical_position_NLL_fraction_of_first8_positions": 0.9913905416893876,
+      "mean_critical_target_probability": 0.007204861554782838,
+      "mean_critical_EOS_probability": 0.4685448780655861
+    },
+    "NF4_adapter_from_pretrained": {
+      "rows": 8,
+      "critical_token_EOS_argmax_rows": 8,
+      "critical_target_argmax_rows": 0,
+      "critical_position_NLL_fraction_of_first8_positions": 0.9913905416893876,
+      "mean_critical_target_probability": 0.007204861554782838,
+      "mean_critical_EOS_probability": 0.4685448780655861
+    },
+    "BF16_base": {
+      "rows": 8,
+      "critical_token_EOS_argmax_rows": 0,
+      "critical_target_argmax_rows": 0,
+      "critical_position_NLL_fraction_of_first8_positions": 0.8964399145540975,
+      "mean_critical_target_probability": 7.396588378199408e-26,
+      "mean_critical_EOS_probability": 2.6742828806437476e-26
+    },
+    "BF16_adapter": {
+      "rows": 8,
+      "critical_token_EOS_argmax_rows": 0,
+      "critical_target_argmax_rows": 0,
+      "critical_position_NLL_fraction_of_first8_positions": 0.9580631231843921,
+      "mean_critical_target_probability": 0.0004929915603497648,
+      "mean_critical_EOS_probability": 0.0465629892423749
+    }
+  }
+}

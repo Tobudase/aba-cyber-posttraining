@@ -1,0 +1,412 @@
+{
+  "status": "COMPLETE_TRAIN_ONLY_FIXED_WEIGHT_PROBE",
+  "actual_GPU": "NVIDIA L4",
+  "new_generations": 56,
+  "new_optimizer_steps": 0,
+  "TRAIN_rows": 8,
+  "sets": {
+    "NF4_base_cache": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "only_whitespace_before_EOS": 0,
+      "output_block_present": 8
+    },
+    "NF4_base_no_cache": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "only_whitespace_before_EOS": 0,
+      "output_block_present": 8
+    },
+    "NF4_adapter_cache": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "only_whitespace_before_EOS": 8,
+      "output_block_present": 0
+    },
+    "NF4_adapter_no_cache": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "only_whitespace_before_EOS": 8,
+      "output_block_present": 0
+    },
+    "NF4_adapter_fresh_loader": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "only_whitespace_before_EOS": 8,
+      "output_block_present": 0
+    },
+    "BF16_base": {
+      "rows": 8,
+      "correct": 2,
+      "unsupported": 0,
+      "truncated": 0,
+      "only_whitespace_before_EOS": 0,
+      "output_block_present": 8
+    },
+    "BF16_adapter": {
+      "rows": 8,
+      "correct": 5,
+      "unsupported": 3,
+      "truncated": 0,
+      "only_whitespace_before_EOS": 0,
+      "output_block_present": 8
+    }
+  },
+  "paired_generation_comparisons": {
+    "NF4_base_cache__vs__NF4_base_no_cache": {
+      "rows": 8,
+      "identical_generated_token_sequences": 8,
+      "identical_truncation_status": 8
+    },
+    "NF4_adapter_cache__vs__NF4_adapter_no_cache": {
+      "rows": 8,
+      "identical_generated_token_sequences": 8,
+      "identical_truncation_status": 8
+    },
+    "NF4_adapter_cache__vs__NF4_adapter_fresh_loader": {
+      "rows": 8,
+      "identical_generated_token_sequences": 8,
+      "identical_truncation_status": 8
+    }
+  },
+  "teacher_forced_prefix_aggregates": {
+    "NF4_base": {
+      "0": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9996320903301239,
+        "mean_EOS_probability": 1.012740717953875e-07
+      },
+      "1": {
+        "rows": 8,
+        "target_argmax_rows": 0,
+        "mean_target_probability": 3.0614001904793785e-21,
+        "mean_EOS_probability": 8.062214473104786e-21
+      },
+      "2": {
+        "rows": 8,
+        "target_argmax_rows": 1,
+        "mean_target_probability": 0.36574011854827404,
+        "mean_EOS_probability": 1.4727454640706128e-05
+      },
+      "3": {
+        "rows": 8,
+        "target_argmax_rows": 6,
+        "mean_target_probability": 0.6114766821265221,
+        "mean_EOS_probability": 6.856779164454707e-07
+      },
+      "4": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999978095293045,
+        "mean_EOS_probability": 4.476495636305221e-11
+      },
+      "5": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999357014894485,
+        "mean_EOS_probability": 1.5280667716443283e-11
+      },
+      "6": {
+        "rows": 8,
+        "target_argmax_rows": 6,
+        "mean_target_probability": 0.7450247518718243,
+        "mean_EOS_probability": 3.2450786897110116e-19
+      },
+      "7": {
+        "rows": 8,
+        "target_argmax_rows": 4,
+        "mean_target_probability": 0.48451746883802116,
+        "mean_EOS_probability": 8.192733877365086e-17
+      }
+    },
+    "NF4_adapter_set_state": {
+      "0": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9993407726287842,
+        "mean_EOS_probability": 0.0003040229967155028
+      },
+      "1": {
+        "rows": 8,
+        "target_argmax_rows": 0,
+        "mean_target_probability": 0.007204861554782838,
+        "mean_EOS_probability": 0.4685448780655861
+      },
+      "2": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9861979857087135,
+        "mean_EOS_probability": 0.004287404648493975
+      },
+      "3": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9966283515095711,
+        "mean_EOS_probability": 0.0010616213439789135
+      },
+      "4": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999829977750778,
+        "mean_EOS_probability": 3.1141122036615343e-07
+      },
+      "5": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9968285784125328,
+        "mean_EOS_probability": 2.436645438197438e-08
+      },
+      "6": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9899780377745628,
+        "mean_EOS_probability": 1.7562338065017101e-13
+      },
+      "7": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9886641874909401,
+        "mean_EOS_probability": 1.1576446350951309e-12
+      }
+    },
+    "NF4_adapter_from_pretrained": {
+      "0": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9993407726287842,
+        "mean_EOS_probability": 0.0003040229967155028
+      },
+      "1": {
+        "rows": 8,
+        "target_argmax_rows": 0,
+        "mean_target_probability": 0.007204861554782838,
+        "mean_EOS_probability": 0.4685448780655861
+      },
+      "2": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9861979857087135,
+        "mean_EOS_probability": 0.004287404648493975
+      },
+      "3": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9966283515095711,
+        "mean_EOS_probability": 0.0010616213439789135
+      },
+      "4": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999829977750778,
+        "mean_EOS_probability": 3.1141122036615343e-07
+      },
+      "5": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9968285784125328,
+        "mean_EOS_probability": 2.436645438197438e-08
+      },
+      "6": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9899780377745628,
+        "mean_EOS_probability": 1.7562338065017101e-13
+      },
+      "7": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9886641874909401,
+        "mean_EOS_probability": 1.1576446350951309e-12
+      }
+    },
+    "BF16_base": {
+      "0": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999862611293793,
+        "mean_EOS_probability": 4.1585692667212015e-09
+      },
+      "1": {
+        "rows": 8,
+        "target_argmax_rows": 0,
+        "mean_target_probability": 7.396588378199408e-26,
+        "mean_EOS_probability": 2.6742828806437476e-26
+      },
+      "2": {
+        "rows": 8,
+        "target_argmax_rows": 0,
+        "mean_target_probability": 0.09167970670387149,
+        "mean_EOS_probability": 2.2545375795157696e-06
+      },
+      "3": {
+        "rows": 8,
+        "target_argmax_rows": 4,
+        "mean_target_probability": 0.5105305574834347,
+        "mean_EOS_probability": 2.3244471972216907e-08
+      },
+      "4": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999984949827194,
+        "mean_EOS_probability": 2.8329263915727494e-12
+      },
+      "5": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999939352273941,
+        "mean_EOS_probability": 3.6806821375263765e-14
+      },
+      "6": {
+        "rows": 8,
+        "target_argmax_rows": 5,
+        "mean_target_probability": 0.6804009726038203,
+        "mean_EOS_probability": 4.9616169383484796e-20
+      },
+      "7": {
+        "rows": 8,
+        "target_argmax_rows": 4,
+        "mean_target_probability": 0.5249705554451793,
+        "mean_EOS_probability": 2.00696584095803e-18
+      }
+    },
+    "BF16_adapter": {
+      "0": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999734908342361,
+        "mean_EOS_probability": 1.8892754951593815e-05
+      },
+      "1": {
+        "rows": 8,
+        "target_argmax_rows": 0,
+        "mean_target_probability": 0.0004929915603497648,
+        "mean_EOS_probability": 0.0465629892423749
+      },
+      "2": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9825733378529549,
+        "mean_EOS_probability": 0.0003905725698132301
+      },
+      "3": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9895040839910507,
+        "mean_EOS_probability": 9.089443051379931e-05
+      },
+      "4": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9999977797269821,
+        "mean_EOS_probability": 2.4657833778279903e-09
+      },
+      "5": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9998620897531509,
+        "mean_EOS_probability": 1.2241422798865763e-11
+      },
+      "6": {
+        "rows": 8,
+        "target_argmax_rows": 6,
+        "mean_target_probability": 0.8332875743508339,
+        "mean_EOS_probability": 2.7830579136973614e-15
+      },
+      "7": {
+        "rows": 8,
+        "target_argmax_rows": 8,
+        "mean_target_probability": 0.9237503781914711,
+        "mean_EOS_probability": 1.1335507408029695e-14
+      }
+    }
+  },
+  "generation_config_by_loader": {
+    "NF4_base": {
+      "eos_token_id": 151645,
+      "forced_eos_token_id": null,
+      "forced_bos_token_id": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "bad_words_ids": null,
+      "stop_strings": null,
+      "min_length": 0,
+      "max_length": 20
+    },
+    "NF4_adapter_set_state": {
+      "eos_token_id": 151645,
+      "forced_eos_token_id": null,
+      "forced_bos_token_id": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "bad_words_ids": null,
+      "stop_strings": null,
+      "min_length": 0,
+      "max_length": 20
+    },
+    "NF4_adapter_from_pretrained": {
+      "eos_token_id": 151645,
+      "forced_eos_token_id": null,
+      "forced_bos_token_id": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "bad_words_ids": null,
+      "stop_strings": null,
+      "min_length": 0,
+      "max_length": 20
+    },
+    "BF16_base": {
+      "eos_token_id": 151645,
+      "forced_eos_token_id": null,
+      "forced_bos_token_id": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "bad_words_ids": null,
+      "stop_strings": null,
+      "min_length": 0,
+      "max_length": 20
+    },
+    "BF16_adapter": {
+      "eos_token_id": 151645,
+      "forced_eos_token_id": null,
+      "forced_bos_token_id": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "bad_words_ids": null,
+      "stop_strings": null,
+      "min_length": 0,
+      "max_length": 20
+    }
+  },
+  "official_or_validation_calls": 0,
+  "external_teacher_calls": 0,
+  "training_sanity_gate_previously_failed": true,
+  "larger240_SFT_executed": false,
+  "formal_default": "original_base",
+  "resources": {
+    "host_seconds": 789.0103265829384,
+    "worker_seconds": 574.5429671818856,
+    "staging_seconds": 201.3992449119687,
+    "GPU_mean_whole_worker": 39.876106194690266,
+    "GPU_mean_after_staging": 61.726027397260275,
+    "remaining_owned_resources": 0,
+    "cleanup_errors": []
+  },
+  "limits": [
+    "Selected previously used TRAIN rows; not an official score or generalization result.",
+    "Fixed weights and same-card controls; no new optimizer updates or forced-prefix decoding.",
+    "256-token cap is a diagnostic budget; count truncation explicitly.",
+    "Teacher-forced prefix probabilities are not probabilities along a divergent free-generation path.",
+    "Identical outcomes can disfavor a tested cache/loader explanation; they do not prove every runtime or learning cause excluded."
+  ]
+}

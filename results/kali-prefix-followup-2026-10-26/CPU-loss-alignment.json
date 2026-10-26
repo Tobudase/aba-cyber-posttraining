@@ -1,0 +1,9 @@
+{
+  "status": "PASS_CRITICAL_PREFIX_CAUSAL_LOSS",
+  "uniform_matches_HF_CE": true,
+  "weighted_matches_independent_scalar_formula": true,
+  "masked_prompt_gradient_zero": true,
+  "invalid_inputs_rejected": 5,
+  "model_generations": 0,
+  "GPU_allocations": 0
+}

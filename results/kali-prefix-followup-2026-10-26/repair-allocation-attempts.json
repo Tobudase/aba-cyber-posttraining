@@ -1,0 +1,25 @@
+[
+  {
+    "GPU_request_family": "generic",
+    "status": "STOPPED_DURING_STAGING_FOR_PROTECTED_PAYLOAD_TRANSPORT",
+    "GPU_allocated": true,
+    "host_seconds": 219.16144995810464,
+    "new_model_generations": 0,
+    "new_optimizer_steps": 0,
+    "remaining_owned_resources_after_followup_audit": 0
+  },
+  {
+    "GPU_request_family": "generic",
+    "status": "FAILED",
+    "error_type": "TimeoutError",
+    "host_seconds": 607.8308640420437,
+    "remaining_owned_resources": 0
+  },
+  {
+    "GPU_request_family": "A100",
+    "status": "FAILED",
+    "error_type": "TimeoutError",
+    "host_seconds": 304.6436434579082,
+    "remaining_owned_resources": 0
+  }
+]

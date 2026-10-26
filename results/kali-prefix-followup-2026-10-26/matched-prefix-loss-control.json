@@ -1,0 +1,6 @@
+{
+  "status": "NOT_EXECUTED_NO_GPU_ALLOCATION",
+  "new_optimizer_steps": 0,
+  "new_generations": 0,
+  "training_sanity_gate_passed": false
+}

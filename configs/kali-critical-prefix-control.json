@@ -1,0 +1,107 @@
+{
+  "schema": "kali.explicit.cuda.prefix.loss.v1",
+  "study": "critical-prefix-loss",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "initialization_seed": 42,
+  "LoRA": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_dropout": 0,
+    "task_type": "CAUSAL_LM"
+  },
+  "quantization": {
+    "type": "nf4",
+    "compute": "bfloat16",
+    "double_quant": false
+  },
+  "allowed_GPU_models": [
+    "NVIDIA A100-PCIE-40GB",
+    "NVIDIA A100 80GB PCIe",
+    "NVIDIA A100-SXM4-80GB"
+  ],
+  "arms": [
+    {
+      "name": "uniform",
+      "critical_prefix_weight": 1,
+      "optimizer": {
+        "schema": "kali.sft.optimizer.v1",
+        "seed": 42,
+        "epochs": 16,
+        "max_optimizer_steps": 128,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "max_sequence_tokens": 2048,
+        "learning_rate": 2e-05,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "max_grad_norm": null
+      }
+    },
+    {
+      "name": "prefix8",
+      "critical_prefix_weight": 8,
+      "optimizer": {
+        "schema": "kali.sft.optimizer.v1",
+        "seed": 42,
+        "epochs": 16,
+        "max_optimizer_steps": 128,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "max_sequence_tokens": 2048,
+        "learning_rate": 2e-05,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "max_grad_norm": null
+      }
+    }
+  ],
+  "inference": {
+    "TRAIN": {
+      "do_sample": false,
+      "temperature": null,
+      "top_p": null,
+      "top_k": null,
+      "seed": 3407,
+      "max_new_tokens": 1024
+    },
+    "evaluation": {
+      "do_sample": false,
+      "temperature": null,
+      "top_p": null,
+      "top_k": null,
+      "seed": 3407,
+      "max_new_tokens": 1024
+    }
+  },
+  "budget": {
+    "max_generations": 48,
+    "max_optimizer_steps": 256,
+    "max_output_tokens": 49152,
+    "deadline_seconds": 1800,
+    "pending_seconds": 300
+  },
+  "decision": {
+    "sanity_gate": "Same historical threshold:NF4TRAIN>=7/8;BF16TRAIN>=same-jobBF16base;unweightedNF4TRAIN NLLdrop>=50%;finite nonzero gradients;save/reload delta<=1e-4;complete output and no truncation on both precision readouts. No model adoption or generalization claim.",
+    "intervention": "Only the CE weight of completion token offset1(closing think tag) changes1to8;all other target tokens remain supervised,normalization by sum of weights. Original uniform control uses unchanged shared loop.",
+    "no_forced_decoding_prefix": true,
+    "new_data_DEV_or_confirmation_calls": 0,
+    "next_if_passed": "Freeze a separate larger-data study;never rewrite historical failed gates.",
+    "next_if_failed": "Stop expansion;review target construction and domain SFT data rather than choosing a favorable precision."
+  },
+  "operator_fixed_not_ABA_search": true,
+  "critical_prefix_offset": 1,
+  "critical_prefix_token_id": 151668
+}
