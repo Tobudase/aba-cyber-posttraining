@@ -1,0 +1,8 @@
+{
+  "status": "PASS_FUTURE_ENCODER_EQUALS_ALL_FROZEN_ARM_ROWS",
+  "rows_checked": 84,
+  "actual_tokenizer": true,
+  "worker_or_payload_modified": false,
+  "model_calls": 0,
+  "official_or_validation_rows_read": 0
+}

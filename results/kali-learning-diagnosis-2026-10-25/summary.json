@@ -1,0 +1,292 @@
+{
+  "status": "COMPLETE_PAIRED_CAUSAL_DIAGNOSTIC",
+  "actual_GPU": "NVIDIA L4",
+  "controls": {
+    "fresh_initial_LoRA_sha256": "ae349862f0a297c856ae64ece4ba870b49b40641dde4c6948272cfd5b6461c9c",
+    "native_NF4_controls_full_match": true,
+    "native_BF16_controls_full_match": true
+  },
+  "baseline_BF16_DEV_contract": 4,
+  "baseline_BF16_retention_strict": 12,
+  "sets": {
+    "nf4_base_dev": {
+      "rows": 12,
+      "contract_correct": 7,
+      "literal_argv_correct": 4,
+      "unsupported_rows": 2,
+      "format_or_truncation_failures": 0
+    },
+    "nf4_old_adapter_dev": {
+      "rows": 12,
+      "contract_correct": 7,
+      "literal_argv_correct": 4,
+      "unsupported_rows": 2,
+      "format_or_truncation_failures": 0
+    },
+    "bf16_base_dev": {
+      "rows": 12,
+      "contract_correct": 4,
+      "literal_argv_correct": 4,
+      "unsupported_rows": 1,
+      "format_or_truncation_failures": 0
+    },
+    "bf16_base_retention": {
+      "rows": 24,
+      "strict_correct": 12,
+      "native_exact_correct": 13.0,
+      "native_total_percent": 89.14351851851852,
+      "format_or_truncation_failures": 0
+    },
+    "bf16_old_adapter_dev": {
+      "rows": 12,
+      "contract_correct": 5,
+      "literal_argv_correct": 3,
+      "unsupported_rows": 1,
+      "format_or_truncation_failures": 0
+    },
+    "style_control_nf4_dev": {
+      "rows": 12,
+      "contract_correct": 7,
+      "literal_argv_correct": 5,
+      "unsupported_rows": 2,
+      "format_or_truncation_failures": 0
+    },
+    "style_control_bf16_dev": {
+      "rows": 12,
+      "contract_correct": 5,
+      "literal_argv_correct": 3,
+      "unsupported_rows": 3,
+      "format_or_truncation_failures": 0
+    },
+    "style_control_bf16_retention": {
+      "rows": 24,
+      "strict_correct": 13,
+      "native_exact_correct": 14.0,
+      "native_total_percent": 90.06944444444444,
+      "format_or_truncation_failures": 0
+    },
+    "hardmix_nf4_dev": {
+      "rows": 12,
+      "contract_correct": 7,
+      "literal_argv_correct": 4,
+      "unsupported_rows": 2,
+      "format_or_truncation_failures": 0
+    },
+    "hardmix_bf16_dev": {
+      "rows": 12,
+      "contract_correct": 4,
+      "literal_argv_correct": 2,
+      "unsupported_rows": 1,
+      "format_or_truncation_failures": 0
+    },
+    "hardmix_bf16_retention": {
+      "rows": 24,
+      "strict_correct": 13,
+      "native_exact_correct": 14.0,
+      "native_total_percent": 88.95833333333333,
+      "format_or_truncation_failures": 0
+    }
+  },
+  "NLL_matrix": {
+    "old_objective_nf4_base": {
+      "rows": 42,
+      "mean_row_nll": 0.06590082634024189,
+      "token_weighted_nll": 0.06862159872058607,
+      "target_tokens": 891
+    },
+    "old_objective_nf4_old_adapter": {
+      "rows": 42,
+      "mean_row_nll": 0.03521622730009507,
+      "token_weighted_nll": 0.036853018178538956,
+      "target_tokens": 891
+    },
+    "old_objective_bf16_base": {
+      "rows": 42,
+      "mean_row_nll": 0.011262135733496896,
+      "token_weighted_nll": 0.011349062132760181,
+      "target_tokens": 891
+    },
+    "old_objective_bf16_old_adapter": {
+      "rows": 42,
+      "mean_row_nll": 0.012224541139793084,
+      "token_weighted_nll": 0.012900329302722278,
+      "target_tokens": 891
+    },
+    "style_control_nf4_pretrain": {
+      "rows": 42,
+      "mean_row_nll": 2.2153670475596474,
+      "token_weighted_nll": 2.204688503092838,
+      "target_tokens": 1017
+    },
+    "style_control_nf4_posttrain": {
+      "rows": 42,
+      "mean_row_nll": 1.4539118267240978,
+      "token_weighted_nll": 1.4470477707852538,
+      "target_tokens": 1017
+    },
+    "hardmix_nf4_pretrain": {
+      "rows": 42,
+      "mean_row_nll": 2.202789843082428,
+      "token_weighted_nll": 2.141990257364459,
+      "target_tokens": 1130
+    },
+    "hardmix_nf4_posttrain": {
+      "rows": 42,
+      "mean_row_nll": 1.534325849442255,
+      "token_weighted_nll": 1.502995725648593,
+      "target_tokens": 1130
+    }
+  },
+  "paired_developer_changes": {
+    "bf16_old_adapter": {
+      "gains": 1,
+      "regressions": 0,
+      "identical_extracted_commands": 9,
+      "by_intent": {
+        "head_exclude": {
+          "rows": 3,
+          "base_correct": 0,
+          "candidate_correct": 0
+        },
+        "jq_length": {
+          "rows": 3,
+          "base_correct": 2,
+          "candidate_correct": 2
+        },
+        "openssl_serial": {
+          "rows": 3,
+          "base_correct": 2,
+          "candidate_correct": 2
+        },
+        "tcpdump_udp": {
+          "rows": 3,
+          "base_correct": 0,
+          "candidate_correct": 1
+        }
+      }
+    },
+    "style_control_bf16": {
+      "gains": 1,
+      "regressions": 0,
+      "identical_extracted_commands": 7,
+      "by_intent": {
+        "head_exclude": {
+          "rows": 3,
+          "base_correct": 0,
+          "candidate_correct": 0
+        },
+        "jq_length": {
+          "rows": 3,
+          "base_correct": 2,
+          "candidate_correct": 2
+        },
+        "openssl_serial": {
+          "rows": 3,
+          "base_correct": 2,
+          "candidate_correct": 2
+        },
+        "tcpdump_udp": {
+          "rows": 3,
+          "base_correct": 0,
+          "candidate_correct": 1
+        }
+      }
+    },
+    "hardmix_bf16": {
+      "gains": 0,
+      "regressions": 0,
+      "identical_extracted_commands": 10,
+      "by_intent": {
+        "head_exclude": {
+          "rows": 3,
+          "base_correct": 0,
+          "candidate_correct": 0
+        },
+        "jq_length": {
+          "rows": 3,
+          "base_correct": 2,
+          "candidate_correct": 2
+        },
+        "openssl_serial": {
+          "rows": 3,
+          "base_correct": 2,
+          "candidate_correct": 2
+        },
+        "tcpdump_udp": {
+          "rows": 3,
+          "base_correct": 0,
+          "candidate_correct": 0
+        }
+      }
+    }
+  },
+  "old_precision_and_learning_contrasts": {
+    "nf4": {
+      "old_training_objective_delta_nll": -0.03176858054204711,
+      "old_training_objective_relative_change": -0.4629530808718499,
+      "old_DEV_contract_change": 0
+    },
+    "bf16": {
+      "old_training_objective_delta_nll": 0.0015512671699620968,
+      "old_training_objective_relative_change": 0.13668681621578332,
+      "old_DEV_contract_change": 1
+    }
+  },
+  "new_matched_arms": {
+    "style_control": {
+      "steps": 42,
+      "DEV_contract_correct_BF16": 5,
+      "DEV_contract_correct_NF4": 7,
+      "retention_strict_BF16": 13,
+      "train_objective_NLL_change": -0.7576407323075842,
+      "train_objective_NLL_relative_change": -0.3436497860104641,
+      "promising_developer_gate": true
+    },
+    "hardmix": {
+      "steps": 42,
+      "DEV_contract_correct_BF16": 4,
+      "DEV_contract_correct_NF4": 7,
+      "retention_strict_BF16": 13,
+      "train_objective_NLL_change": -0.6389945317158658,
+      "train_objective_NLL_relative_change": -0.2983181317090095,
+      "promising_developer_gate": false
+    }
+  },
+  "interpretations": {
+    "scoring_bug_confirmed_and_fixed": true,
+    "old_optimizer_reduces_TRAIN_objective_NF4": true,
+    "old_optimizer_reduces_TRAIN_objective_BF16": false,
+    "precision_masks_positive_old_DEV_gain_on_this_panel": false,
+    "new_style_control_DEV_delta_vs_old_adapter": 0,
+    "hardmix_data_strategy_DEV_delta_vs_matched_style_control": -1,
+    "unique_sample_count_cause_confirmed": false,
+    "generalization_or_official_ranking_confirmed": false,
+    "formal_default_remains_original_base": true
+  },
+  "new_optimizer_steps": 84,
+  "new_learner_generations": 174,
+  "official_TEST_model_calls": 0,
+  "sealed_validation_model_calls": 0,
+  "external_teacher_API_calls": 0,
+  "same_card_fresh_baselines": true,
+  "matched_new_arm_initialization": true,
+  "new_experiment_is_manual_fixed_ablation_not_ABA_search": true,
+  "old_publication_or_frozen_gate_changed": false,
+  "resources": {
+    "host_wall_seconds": 1527.4881868339144,
+    "worker_seconds": 1483.7652384231333,
+    "staging_seconds": 185.26091626402922,
+    "mean_GPU_whole_worker": 49.806228373702425,
+    "mean_GPU_after_staging": 57.11904761904762,
+    "remaining_owned_resources": 0,
+    "cleanup_errors": []
+  },
+  "limitations": [
+    "One seed,small already exposed self-authored DEV;no officialbenchmark or independentexpert validation.",
+    "Style contrast includes native empty-think closure/loss context/envelope changes;not one-token causal identification.",
+    "Hardmix versus style_control changes hard/easy composition, intents and target token lengths: a data-strategy contrast, not identification of sample count as the unique cause.",
+    "External teacher collection was rejected before execution. New hard targets are existing execution-verified operator gold, with no invented reasoning.",
+    "Command contracts cover reviewed synthetic cases, not arbitrary shell equivalence.",
+    "Keep the original base as formal default; one exposed pilot does not justify automatic promotion."
+  ]
+}

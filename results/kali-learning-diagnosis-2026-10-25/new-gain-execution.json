@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETE",
+  "GPU_count": 0,
+  "cleanup_errors": [],
+  "records": [
+    {
+      "arm": "bf16_base_dev",
+      "executed": true,
+      "returncode": 0,
+      "printed_packets": 5,
+      "passed": false,
+      "matches_frozen_contract": true
+    },
+    {
+      "arm": "bf16_old_adapter_dev",
+      "executed": true,
+      "returncode": 0,
+      "printed_packets": 3,
+      "passed": true,
+      "matches_frozen_contract": true
+    },
+    {
+      "arm": "style_control_bf16_dev",
+      "executed": true,
+      "returncode": 0,
+      "printed_packets": 3,
+      "passed": true,
+      "matches_frozen_contract": true
+    },
+    {
+      "arm": "hardmix_bf16_dev",
+      "executed": true,
+      "returncode": 0,
+      "printed_packets": 5,
+      "passed": false,
+      "matches_frozen_contract": true
+    },
+    {
+      "arm": "gold",
+      "executed": true,
+      "returncode": 0,
+      "printed_packets": 3,
+      "passed": true,
+      "matches_frozen_contract": true
+    }
+  ],
+  "tcpdump_version": "tcpdump version 4.99.1",
+  "model_calls": 0,
+  "official_or_validation_rows": 0,
+  "owned_resources_remaining": 0,
+  "wall_seconds": 34.67608204204589
+}

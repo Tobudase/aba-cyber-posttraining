@@ -1,0 +1,43 @@
+{
+  "status": "PAIRED_TRAIN_READY",
+  "arms": {
+    "style_control": {
+      "rows": 42,
+      "families": {
+        "wc_lines": 8,
+        "head_lines": 8,
+        "tail_lines": 8,
+        "grep_fixed": 8,
+        "jq_field": 2,
+        "openssl_digest": 8
+      },
+      "target_tokens": 1017,
+      "max_sequence_tokens": 348,
+      "new_corrected_failure_targets": 0
+    },
+    "hardmix": {
+      "rows": 42,
+      "families": {
+        "wc_words": 8,
+        "jq_field": 6,
+        "tshark_dns": 8,
+        "wc_lines": 4,
+        "head_lines": 4,
+        "tail_lines": 4,
+        "grep_fixed": 4,
+        "openssl_digest": 4
+      },
+      "target_tokens": 1130,
+      "max_sequence_tokens": 361,
+      "new_corrected_failure_targets": 22
+    }
+  },
+  "serialization_identical_across_arms": true,
+  "original_correct_command_blocks_preserved": true,
+  "training_query_overlap_with_DEV": 0,
+  "empty_think_is_structural_only_no_reasoning_fabricated": true,
+  "external_teacher_calls": 0,
+  "input_native_prefixes_retained": true,
+  "old_gold_execution_receipt_sha256": "838a8482a48a0c2049d20ca3121b175d1683989f3c97edd9b0bd36a910afff20",
+  "encoded_sha256": "be1576cbfe181653f580033417b7a1464020778a80437ffbb0497203cd5aa3fc"
+}

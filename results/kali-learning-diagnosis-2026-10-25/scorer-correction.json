@@ -1,0 +1,22 @@
+{
+  "status": "FIXED_LOCAL_DEV_SCORER_REVIEWED_CONTRACT_V2",
+  "historical_frozen_scores_and_gate_unchanged": true,
+  "official_scoring_unchanged": true,
+  "DEV12_recomputed": {
+    "base": {
+      "rows": 12,
+      "contract_correct": 4,
+      "unsupported": 1
+    },
+    "old_adapter": {
+      "rows": 12,
+      "contract_correct": 4,
+      "unsupported": 1
+    }
+  },
+  "new_rule_applies_to_future_diagnostic_arms_only": true,
+  "regression_tests_passed": 110,
+  "scorer_source_sha256": "95359d20dba8a9719436e2f8bece8e799e9d8f38637ae3c962932ad96ab48014",
+  "protected_validation_model_queries": 0,
+  "new_model_queries": 0
+}

@@ -1,0 +1,8 @@
+{
+  "same_24_prompts": true,
+  "raw_response_changes": 7,
+  "extracted_command_changes": 3,
+  "strict_gains": 0,
+  "strict_losses": 1,
+  "interpretation": "Cross-allocation exact reproducibility is incomplete despite sampled controls matching;fresh same-card baselines are required. A unique hardware/kernel cause is not isolated."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "CLEANED_NO_DIAGNOSTIC_COMPUTE_REMAINING",
+  "checked_at_utc": "2026-10-26T06:27:46.139113+00:00",
+  "new_diagnostic_jobs_pods_configmaps": 0,
+  "CPU_VM_runStrategy": "Halted",
+  "CPU_VM_instances": 0,
+  "model_calls_in_cleanup": 0
+}

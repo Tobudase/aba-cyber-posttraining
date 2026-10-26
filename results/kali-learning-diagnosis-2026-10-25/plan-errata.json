@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_PLAN_NARRATIVE_ERRATA_NO_PROTOCOL_CHANGE",
+  "authoritative_files": [
+    "freeze.json",
+    "payload.json",
+    "check-kali-learning-diagnosis.py"
+  ],
+  "frozen_plan_sha256": "6f7dbd4dafbbe634cc1018237863d04f2d549ab236a92412bf3c5be8b64d4db5",
+  "notes": [
+    "The stale extra_NF4_inference prose says126; frozen cap and actual executable count are174 generations.",
+    "Allocation prose retainsCPU1; frozen executable requests500mCPU and8Gi RAM.",
+    "Style-control gold wording refers to unchanged original correct output blocks, not recanonicalized gold text; paired-data-readiness records preservation.",
+    "The allowed GPU family was broadened before any new model execution; three earlier attempts never executed the model. All model comparisons use the same actual allocated L4."
+  ],
+  "frozen_files_changed": false,
+  "candidate_selection_rule_changed": false,
+  "new_model_calls": 0
+}

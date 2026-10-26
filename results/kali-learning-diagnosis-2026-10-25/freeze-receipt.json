@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_BEFORE_NEW_GPU_RESULTS",
+  "payload_sha256": "6e8ec5b8937bbb72976e9efb162bbdd636063e85a26320143ee5a30952b83fdd",
+  "worker_sha256": "c0d7de53b36a09cb63178b5e70ccb034977f578b28f17687c8a903df7e5d95fb",
+  "scorer_sha256": "95359d20dba8a9719436e2f8bece8e799e9d8f38637ae3c962932ad96ab48014",
+  "plan_sha256": "6f7dbd4dafbbe634cc1018237863d04f2d549ab236a92412bf3c5be8b64d4db5",
+  "paired_data_sha256": "be1576cbfe181653f580033417b7a1464020778a80437ffbb0497203cd5aa3fc",
+  "GPUs": 1,
+  "max_optimizer_steps": 84,
+  "new_arm_steps": {
+    "style_control": 42,
+    "hardmix": 42
+  },
+  "max_learner_generations": 174,
+  "max_native_tokens": 131072,
+  "deadline_seconds": 1800,
+  "official_TEST_rows": 0,
+  "sealed_validation_rows": 0,
+  "external_teacher_requests": 0,
+  "new_run_is_operator_frozen_diagnostic_not_ABA_search": true,
+  "GPU_model": "SINGLE_ACTUAL_COMPATIBLE_MODEL_RECORDED",
+  "allocation_revision_before_any_new_model_execution": true,
+  "allowed_GPU_models": [
+    "NVIDIA L40",
+    "NVIDIA L40S",
+    "NVIDIA GeForce RTX 4090",
+    "NVIDIA L4"
+  ],
+  "private_payload_released": false
+}
