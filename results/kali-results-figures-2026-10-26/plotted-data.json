@@ -1,0 +1,228 @@
+{
+  "as_of": "2026-10-26",
+  "model": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "matplotlib_version": "3.10.7",
+  "source_sha256": {
+    "results/kali-seed43-replication-2026-10-25/summary.json": "8b9d8799b5044cd24941b09164ab46ae1764d0a9e24cae91751726f443e313d6",
+    "results/kali-cuda-2026-10-24/comparison.json": "cdf69343cc06cfe88ffd0f2540ac7b65a6e5e0cbf7fc98bb7f03f7bd5757fb5e",
+    "results/kali-causal-findings-2026-10-25/summary.json": "7b8207fb55eaa0889e62777ab15aca5207e1237e3b0fbefbefcf15efe6c7f756",
+    "results/kali-prefix-control-2026-10-26/same-text-resegmentation.json": "6a030422be243cb8177dc61ff99a5d7880f6f377be4fcb5a5d4765a463bf9e19",
+    "results/kali-prefix-control-2026-10-26/matched-control.json": "bf18e435c96ccd5585dbcdb767a9fb8ec1f5a6e4c09875a1402b071ea0b936f4"
+  },
+  "history": {
+    "base": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 2,
+        "native_exact_correct": 2.0,
+        "native_total": 74.00352733686067,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 52,
+        "native_exact_correct": 52.0,
+        "native_total": 92.87037037037037,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 8,
+        "native_exact_correct": 9.0,
+        "native_total": 82.16269841269842,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed42_compact": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 3,
+        "native_exact_correct": 3.0,
+        "native_total": 74.43562610229277,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 36,
+        "native_exact_correct": 36.0,
+        "native_total": 86.38888888888889,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 7,
+        "native_exact_correct": 8.0,
+        "native_total": 77.84722222222221,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed42_newline": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 5,
+        "native_exact_correct": 5.0,
+        "native_total": 77.28835978835978,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 54,
+        "native_exact_correct": 54.0,
+        "native_total": 93.05555555555556,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 8,
+        "native_exact_correct": 9.0,
+        "native_total": 82.83399470899471,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed43_compact": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 3,
+        "native_exact_correct": 3.0,
+        "native_total": 74.32539682539682,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 36,
+        "native_exact_correct": 36.0,
+        "native_total": 86.38888888888889,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 7,
+        "native_exact_correct": 7.0,
+        "native_total": 76.72288359788361,
+        "generation_or_format_failures": 0.0
+      }
+    },
+    "seed43_newline": {
+      "domain": {
+        "rows": 36,
+        "strict_correct": 4,
+        "native_exact_correct": 4.0,
+        "native_total": 75.78042328042328,
+        "generation_or_format_failures": 0.0
+      },
+      "retention": {
+        "rows": 72,
+        "strict_correct": 54,
+        "native_exact_correct": 54.0,
+        "native_total": 93.05555555555556,
+        "generation_or_format_failures": 0.0
+      },
+      "transfer": {
+        "rows": 24,
+        "strict_correct": 8,
+        "native_exact_correct": 9.0,
+        "native_total": 82.83399470899471,
+        "generation_or_format_failures": 0.0
+      }
+    }
+  },
+  "segmentation_TRAIN_sets": {
+    "base_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 0
+    },
+    "base_BF16": {
+      "rows": 8,
+      "correct": 2,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 0
+    },
+    "canonical_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 0,
+      "think_closed": 0
+    },
+    "canonical_BF16": {
+      "rows": 8,
+      "correct": 5,
+      "unsupported": 3,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 0
+    },
+    "resegmented_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 8,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 8
+    },
+    "resegmented_BF16": {
+      "rows": 8,
+      "correct": 5,
+      "unsupported": 2,
+      "truncated": 1,
+      "format_complete": 7,
+      "think_closed": 5
+    }
+  },
+  "loss_weight_TRAIN_sets": {
+    "base_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8
+    },
+    "base_BF16": {
+      "rows": 8,
+      "correct": 2,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8
+    },
+    "uniform_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 0
+    },
+    "uniform_BF16": {
+      "rows": 8,
+      "correct": 5,
+      "unsupported": 3,
+      "truncated": 0,
+      "format_complete": 8
+    },
+    "prefix8_NF4_TRAIN": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 0
+    },
+    "prefix8_BF16": {
+      "rows": 8,
+      "correct": 1,
+      "unsupported": 1,
+      "truncated": 0,
+      "format_complete": 8
+    }
+  },
+  "full_segmentation_gate_passed": false,
+  "formal_default": "original_base",
+  "new_model_calls_or_training_steps": 0,
+  "scope": "Previously published aggregate diagnostics; no official scores or independent generalization claim."
+}

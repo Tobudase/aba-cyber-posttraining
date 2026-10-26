@@ -1,3 +1,9 @@
+## Results figures — October 26, 2026
+
+[中文结果图解与限制](docs/KALI_RESULTS_FIGURES_ZH_2026-10-26.md) · [TRAIN-only diagnostic](results/kali-results-figures-2026-10-26/02-train-segmentation-control.svg) · [Earlier DEV and transfer](results/kali-results-figures-2026-10-26/01-development-and-transfer.svg). These are separate diagnostic studies, not official benchmark scores. The original base remains the default; the full reliability gate has not passed.
+
+![Latest TRAIN-only target segmentation control: local NF4 recovery, BF16 limitations remain](results/kali-results-figures-2026-10-26/02-train-segmentation-control.png)
+
 ## October 26 later results — target representation and precision limits
 
 Completed **512 additional real 8B optimizer updates and 96 generations** across two matched TRAIN-only controls. Critical-prefix loss weighting did not fix premature EOS. In a separate same-card target-representation control, keeping **all decoded training text and inference inputs unchanged**, an explicit experimental BPE target segmentation increased NF4 TRAIN correctness from **0/8 to 8/8**, with all eight closing/output tags complete.
