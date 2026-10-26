@@ -1,0 +1,121 @@
+{
+  "schema": "kali.matched.precision.v1",
+  "study": "matched_precision_TRAIN_only",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "initialization_seed": 42,
+  "LoRA": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_dropout": 0,
+    "task_type": "CAUSAL_LM"
+  },
+  "quantization": {
+    "type": "nf4",
+    "compute": "bfloat16",
+    "double_quant": false
+  },
+  "allowed_GPU_models": [
+    "NVIDIA L40",
+    "NVIDIA L40S",
+    "NVIDIA GeForce RTX 4090",
+    "NVIDIA L4",
+    "NVIDIA GeForce RTX 3090",
+    "NVIDIA A10",
+    "NVIDIA RTX A5000"
+  ],
+  "arms": [
+    {
+      "name": "NF4_training",
+      "training_precision": "NF4",
+      "optimizer": {
+        "schema": "kali.sft.optimizer.v1",
+        "seed": 42,
+        "epochs": 16,
+        "max_optimizer_steps": 128,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "max_sequence_tokens": 2048,
+        "learning_rate": 2e-05,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "max_grad_norm": null
+      }
+    },
+    {
+      "name": "BF16_training",
+      "training_precision": "BF16",
+      "optimizer": {
+        "schema": "kali.sft.optimizer.v1",
+        "seed": 42,
+        "epochs": 16,
+        "max_optimizer_steps": 128,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "max_sequence_tokens": 2048,
+        "learning_rate": 2e-05,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "max_grad_norm": null
+      }
+    }
+  ],
+  "inference": {
+    "batch_size": 4,
+    "padding_side": "left",
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "seed": 3407,
+    "use_cache": true,
+    "forced_prefix": false,
+    "output_repair": false
+  },
+  "budget": {
+    "max_generations": 48,
+    "max_optimizer_steps": 256,
+    "max_output_tokens": 49152,
+    "deadline_seconds": 3600,
+    "pending_seconds": 1800
+  },
+  "decision": {
+    "both_diagonals_required": true,
+    "diagonal_correct_min": 7,
+    "rows_per_cell": 8,
+    "output_complete_required": 8,
+    "think_closed_required": 8,
+    "truncations_allowed": 0,
+    "within_arm_NLL_relative_drop_min": 0.5,
+    "nonzero_finite_gradient_steps_each": 128,
+    "reload_max_logit_delta": 0.0001,
+    "report_all_off_diagonal_cells": true,
+    "formal_default": "original_base",
+    "TRAIN_fitting_not_generalization": true,
+    "old_gate_unchanged": "FAILED",
+    "if_failed": "STOP_LARGER_TRAINING_REVIEW_PREREGISTERED_PROTOCOL",
+    "if_passed": "SEPARATELY_FREEZE_NEW240_SFT_DEV_AND_RETENTION_NO_AUTOMATIC_LAUNCH"
+  },
+  "operator_fixed_not_ABA_search": true,
+  "resources": {
+    "GPU_count": 1,
+    "CPU_cores": 2,
+    "RAM_GiB": 8
+  },
+  "numerical_pipeline": {
+    "NF4": "NF4 base with standard kbit nonquantized-module upcasts; FP32 LoRA",
+    "BF16": "Frozen BF16 base without kbit helper; FP32 LoRA; nonreentrant checkpointing/input gradients",
+    "initialization": "Explicit same FP32 LoRA tensor state copied to every fresh model; checked by hash",
+    "OOM_policy": "Stop and preserve partial evidence; no silent hardware, batch or sequence changes"
+  }
+}

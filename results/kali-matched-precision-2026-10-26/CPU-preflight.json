@@ -1,0 +1,15 @@
+{
+  "status": "PASS_CPU_TOKEN_MASK_AND_PROTOCOL_PREFLIGHT",
+  "TRAIN_rows": 8,
+  "supervised_tokens": 248,
+  "inherited_target_token_arrays_exact": true,
+  "native_prompt_IDs_identical": true,
+  "all_left_padded_batch4_inputs_exact": true,
+  "shared_TRAIN_schema_passed": true,
+  "base_BF16_kbit_helper_forbidden_in_worker_branch": true,
+  "GPU_allocations": 0,
+  "model_generations": 0,
+  "optimizer_steps": 0,
+  "protected_or_external_calls": 0,
+  "previous_scientific_records_modified": false
+}

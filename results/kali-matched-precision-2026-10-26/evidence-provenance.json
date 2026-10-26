@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN_BEFORE_MODEL_CALLS_AND_TRAINING",
+  "created_at_utc": "2026-10-26T23:02:32.163325+00:00",
+  "worker_sha256": "9e97aa9af535e2a1d2c54efa85d8649aeb1eca25403f80f33568744bc9274aa9",
+  "launcher_sha256": "58e879765dc8f956d6a4c708d9a3ce7fec9b59083508e8ec55b6381632e8cb22",
+  "analyzer_sha256": "7c942d07873b3177ced2293aa0f842ba16826316587c4f0acd9ba27267bd8c1a",
+  "preparation_source_sha256": "68c8e50be0f7aa8e703d6079753cefe6c19598473893637dafbe96b782a0a281",
+  "optimizer_source_sha256": "50a3eb70d936a6583af22a2e62f3ad08d3e783146c17f60b5489468b7be54490",
+  "payload_sha256": "5a0eb9c66e1904fe8141fe20017c8107f875860d748d1e8abb377adcaac63a29",
+  "effective_config_sha256": "71997c527387c712005e8a271c80300fa44124a956a18be30f5d3999734eaca8",
+  "previous_result_sha256": "6a030422be243cb8177dc61ff99a5d7880f6f377be4fcb5a5d4765a463bf9e19",
+  "CPU_preflight_sha256": "b935978c1a68d34c5f1c3fc3c7e1d5bfe2fae7e068bf88d57a5b79d6b571ef46",
+  "TRAIN_rows": 8,
+  "optimizer_steps_budget": 256,
+  "generations_budget": 48,
+  "external_teacher_or_protected_calls": 0,
+  "private_payload_released": false,
+  "raw_predictions_or_reasoning_released": false,
+  "private_model_reproduction": false
+}

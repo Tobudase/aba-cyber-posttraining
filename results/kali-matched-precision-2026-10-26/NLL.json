@@ -1,0 +1,18 @@
+{
+  "NF4_training_before": {
+    "rows": 8,
+    "token_weighted_NLL": 1.914695979126038
+  },
+  "NF4_training_after": {
+    "rows": 8,
+    "token_weighted_NLL": 0.005569735335396423
+  },
+  "BF16_training_before": {
+    "rows": 8,
+    "token_weighted_NLL": 2.3334180342574276
+  },
+  "BF16_training_after": {
+    "rows": 8,
+    "token_weighted_NLL": 0.006066854889204185
+  }
+}

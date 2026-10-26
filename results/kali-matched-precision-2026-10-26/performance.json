@@ -1,0 +1,9 @@
+{
+  "status": "MEASURED_RESOURCE_SUMMARY",
+  "mean_CPU_cores_over_sample_interval": 0.6292173193754576,
+  "mean_CPU_percent_of_2_cores": 31.46086596877288,
+  "peak_sampled_host_RAM_GiB": 7.996585845947266,
+  "max_GPU_allocated_GiB": 18.427765369415283,
+  "samples": 101,
+  "scientific_gate_changed": false
+}

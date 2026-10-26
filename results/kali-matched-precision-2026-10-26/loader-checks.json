@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "NF4",
+    "training": false,
+    "adapter_loaded": false,
+    "non_LoRA_FP32_parameters": 1244967936,
+    "shared_initial_copied": true
+  },
+  {
+    "mode": "BF16",
+    "training": false,
+    "adapter_loaded": false,
+    "non_LoRA_FP32_parameters": 0,
+    "shared_initial_copied": true
+  },
+  {
+    "mode": "NF4",
+    "training": true,
+    "adapter_loaded": false,
+    "non_LoRA_FP32_parameters": 1244967936,
+    "shared_initial_copied": true
+  },
+  {
+    "mode": "BF16",
+    "training": false,
+    "adapter_loaded": true,
+    "non_LoRA_FP32_parameters": 0,
+    "shared_initial_copied": false
+  },
+  {
+    "mode": "BF16",
+    "training": true,
+    "adapter_loaded": false,
+    "non_LoRA_FP32_parameters": 0,
+    "shared_initial_copied": true
+  },
+  {
+    "mode": "NF4",
+    "training": false,
+    "adapter_loaded": true,
+    "non_LoRA_FP32_parameters": 1244967936,
+    "shared_initial_copied": false
+  }
+]

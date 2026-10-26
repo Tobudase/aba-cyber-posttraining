@@ -1,0 +1,10 @@
+{
+  "remaining_owned_resources": 0,
+  "cleanup_errors": [],
+  "GPU_count": 1,
+  "CPU_cores": 2,
+  "RAM_GiB": 8,
+  "normal_priority": true,
+  "finite_job": true,
+  "no_new240_SFT_or_ABA": true
+}

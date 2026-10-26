@@ -3,7 +3,7 @@
   "previous_public_commit": "ac8157bf925319322b3b66ddd414070626d5b3d1",
   "as_of": "2026-10-26",
   "file_sha256": {
-    "README.md": "2d006a4cf4f0498f8bed2d2b789f48019b6fd6df3d024b0b7c0ef6d47d3c815e",
+    "README.md": "b50e2a7b74acfa3fbe4f5250f000c02b8317f352bea2f8b01b14b5c01906417f",
     "docs/KALI_RESULTS_FIGURES_ZH_2026-10-26.md": "52055e1540cf1994fe637a1855ac506a7f606f89f93228d2052821a967aef3d7",
     "scripts/plot-kali-results.py": "36c6643d85e6413a6d4d4a8ad5ac3acb657d680bfd300a244e40ace20dc1d7b9",
     "scripts/verify-kali-results-figures.py": "25adcf200f912f6f08c621ecd256c37c0545c3c64f22fde8321d9c2b1510a670",
@@ -29,15 +29,15 @@
     "results/kali-sft-progress-2026-10-26/publication-manifest.at-ac8157b.json": "defdb812b093a459fe1cd416ece98492d951290c97bee3fa137e536fced68a0d",
     "results/kali-prefix-followup-2026-10-26/publication-manifest.at-ac8157b.json": "61fc40ea119b9a0bb1953039c09c3b97cff8751dfc9a595579dd5c293e43136e",
     "results/kali-prefix-control-2026-10-26/publication-manifest.at-ac8157b.json": "9a34769276f1b7b56919996d53f1501b1de9285b632493cb95fe75216cab3e8b",
-    "results/kali-cuda-2026-10-24/publication-manifest.json": "bd28cfb8d730f75adc271ade8d8f64d7263d9d1106ab04e365a825b8f23a29d4",
-    "results/kali-replay-v3-2026-10-24/publication-manifest.json": "3e6b21ab82e4545a3cc8200877d7dec260771217548bac9c01293447a09e5a19",
-    "results/kali-causal-findings-2026-10-25/publication-manifest.json": "dc70b9797fd95b7a2f311c9882294971c1f0bbc37a491828a50813e27541c48a",
-    "results/kali-seed43-replication-2026-10-25/publication-manifest.json": "0fce84eec34cc5cd09c1c70eb2ebfcfebaf518b72fee579165fe8482b43bc352",
-    "results/kali-native-family-2026-10-25/publication-manifest.json": "f8bce3f671ca916c59494d818f66b812bbcb04bb79fd192ace3ccbcd4a74460b",
-    "results/kali-learning-diagnosis-2026-10-25/publication-manifest.json": "cad6dd6a88bad8d155e12d02b220c146c164ce3ccd339b5955bb51795cbfeb99",
-    "results/kali-sft-progress-2026-10-26/publication-manifest.json": "e67aa7ee34ad86449242106083b50a6705627881c908deb1b63b75f4e5bcc0c9",
-    "results/kali-prefix-followup-2026-10-26/publication-manifest.json": "e02284f5af29fd94de18c3361ed7a295e275b2d3d51c65dfa39bf5f05a1ba7eb",
-    "results/kali-prefix-control-2026-10-26/publication-manifest.json": "f04c8fe890f48a13379a850c130c81a75d05d729ac84c23fe8c1ecc9fa8a129b"
+    "results/kali-cuda-2026-10-24/publication-manifest.json": "70f6d2ffbfdfdfcefa39d67924b86ec4ce3201a913cb682dbb825fdd22a61863",
+    "results/kali-replay-v3-2026-10-24/publication-manifest.json": "d1a08a8c08975676e6b9f3f0978aae395b831868037ca4a83ce895c760add14a",
+    "results/kali-causal-findings-2026-10-25/publication-manifest.json": "befc60f9bae93a7ea611ac4e1a8f46bc62d4fcf5a6054f1a76f730b1656866c5",
+    "results/kali-seed43-replication-2026-10-25/publication-manifest.json": "e1be061e850486bccaf2d37a1e1fd4129d3fa13109a9de6593f16b56ebc86156",
+    "results/kali-native-family-2026-10-25/publication-manifest.json": "816bc56b4431ebe6ea12aab52f7c6de1229dbfbd4f253ea85e507d379d350367",
+    "results/kali-learning-diagnosis-2026-10-25/publication-manifest.json": "ff214ed3f0d8969ede4e61058ff9d144a0d4a5e1ac603b185db00206e856e80e",
+    "results/kali-sft-progress-2026-10-26/publication-manifest.json": "16844335b619a1655cc8da27984cc39fcfc628280eb6325858d57c70f230b96e",
+    "results/kali-prefix-followup-2026-10-26/publication-manifest.json": "a96bf61b91acd2f4f831c75211de7844fcbb7437568f17b8e4753eb9c1c06c91",
+    "results/kali-prefix-control-2026-10-26/publication-manifest.json": "3ea1c65673d65b95191834da81453620d11f10f819b9672fe0165456e85f1780"
   },
   "prior_integrity_manifests_archived": 9,
   "prior_integrity_manifest_update_order": [

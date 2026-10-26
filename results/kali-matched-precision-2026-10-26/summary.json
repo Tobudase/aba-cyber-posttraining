@@ -1,0 +1,159 @@
+{
+  "status": "COMPLETE_MATCHED_PRECISION_TRAIN_ONLY",
+  "TRAIN_rows": 8,
+  "actual_GPU": "NVIDIA L4",
+  "sets": {
+    "base_NF4": {
+      "rows": 8,
+      "correct": 0,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 0
+    },
+    "base_BF16": {
+      "rows": 8,
+      "correct": 3,
+      "unsupported": 1,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 0
+    },
+    "NF4_training_NF4": {
+      "rows": 8,
+      "correct": 8,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 8
+    },
+    "NF4_training_BF16": {
+      "rows": 8,
+      "correct": 5,
+      "unsupported": 3,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 5
+    },
+    "BF16_training_BF16": {
+      "rows": 8,
+      "correct": 8,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 8
+    },
+    "BF16_training_NF4": {
+      "rows": 8,
+      "correct": 4,
+      "unsupported": 0,
+      "truncated": 0,
+      "format_complete": 8,
+      "think_closed": 8
+    }
+  },
+  "arms": {
+    "NF4_training": {
+      "training_precision": "NF4",
+      "steps": 128,
+      "within_precision_NLL_before": 1.914695979126038,
+      "within_precision_NLL_after": 0.005569735335396423,
+      "relative_NLL_drop": 0.9970910602016625,
+      "matched_diagonal_gate_passed": true,
+      "changed_tensors": 144,
+      "reload_delta": 0.0
+    },
+    "BF16_training": {
+      "training_precision": "BF16",
+      "steps": 128,
+      "within_precision_NLL_before": 2.3334180342574276,
+      "within_precision_NLL_after": 0.006066854889204185,
+      "relative_NLL_drop": 0.9974000137137302,
+      "matched_diagonal_gate_passed": true,
+      "changed_tensors": 144,
+      "reload_delta": 0.0
+    }
+  },
+  "both_matched_diagonals_gate_passed": true,
+  "old_full_cross_precision_gate_remains": "FAILED_UNCHANGED",
+  "formal_default": "original_base",
+  "same_initial_LoRA_state": true,
+  "same_TRAIN_order": true,
+  "inference_batch_size": 4,
+  "new_optimizer_steps": 256,
+  "new_generations": 48,
+  "official_or_confirmation_calls": 0,
+  "external_teacher_calls": 0,
+  "heldout_generalization_improvement_established": false,
+  "new240_SFT_or_ABA_executed": false,
+  "resources": {
+    "host_seconds": 816.416328500025,
+    "worker_seconds": 509.7418376270216,
+    "staging_seconds": 184.14327158709057,
+    "GPU_mean_whole_worker": 50.34653465346535,
+    "GPU_mean_after_staging": 79.453125,
+    "phase_GPU_samples": {
+      "inference_BF16_training_BF16": {
+        "samples": 1,
+        "mean_GPU_percent": 96.0
+      },
+      "inference_BF16_training_NF4": {
+        "samples": 2,
+        "mean_GPU_percent": 95.5
+      },
+      "inference_NF4_training_BF16": {
+        "samples": 3,
+        "mean_GPU_percent": 92.0
+      },
+      "inference_NF4_training_NF4": {
+        "samples": 3,
+        "mean_GPU_percent": 95.66666666666667
+      },
+      "inference_base_BF16": {
+        "samples": 2,
+        "mean_GPU_percent": 96.5
+      },
+      "inference_base_NF4": {
+        "samples": 5,
+        "mean_GPU_percent": 97.6
+      },
+      "load_BF16": {
+        "samples": 3,
+        "mean_GPU_percent": 15.0
+      },
+      "load_NF4": {
+        "samples": 10,
+        "mean_GPU_percent": 14.4
+      },
+      "nll_NF4_training_after": {
+        "samples": 1,
+        "mean_GPU_percent": 100.0
+      },
+      "nll_NF4_training_before": {
+        "samples": 1,
+        "mean_GPU_percent": 100.0
+      },
+      "staging": {
+        "samples": 38,
+        "mean_GPU_percent": 0.0
+      },
+      "train_BF16_training": {
+        "samples": 12,
+        "mean_GPU_percent": 98.75
+      },
+      "train_NF4_training": {
+        "samples": 20,
+        "mean_GPU_percent": 99.0
+      }
+    },
+    "remaining_owned_resources": 0,
+    "cleanup_errors": []
+  },
+  "limits": [
+    "Eight selected previously used TRAIN examples; not official or held-out improvement.",
+    "BPE targets are a disclosed noncanonical representation.",
+    "Batch4 protocol differs from prior batch1; use only fresh same-job baselines.",
+    "NF4 k-bit preparation also upcasts nonquantized modules; comparison concerns complete numerical pipelines.",
+    "No candidate is promoted from a TRAIN-only check."
+  ]
+}

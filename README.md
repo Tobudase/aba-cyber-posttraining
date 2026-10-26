@@ -1,3 +1,11 @@
+## October 26 — matched training / inference precision
+
+Completed a frozen TRAIN-only 2x2 precision study: 256 real optimizer updates and 48 generations, same initial LoRA state, same eight BPE-target training rows. Both matched-diagonal gate: **PASS**. All cross-precision outputs are reported. **Keep the original base; no held-out gain or new 240-row SFT/ABA claim.** Batch4 inference uses fresh same-job baselines; the older failed cross-precision gate is unchanged.
+
+[中文完整对照](docs/KALI_MATCHED_PRECISION_ZH_2026-10-26.md) · [All six readouts](results/kali-matched-precision-2026-10-26/summary.json). Offline check: `python3 scripts/verify-kali-matched-precision.py`.
+
+![Matched precision TRAIN-only results: both diagonals 8/8, cross-precision 5/8 and 4/8](results/kali-matched-precision-2026-10-26/precision-matrix.png)
+
 ## Results figures — October 26, 2026
 
 [中文结果图解与限制](docs/KALI_RESULTS_FIGURES_ZH_2026-10-26.md) · [TRAIN-only diagnostic](results/kali-results-figures-2026-10-26/02-train-segmentation-control.svg) · [Earlier DEV and transfer](results/kali-results-figures-2026-10-26/01-development-and-transfer.svg). These are separate diagnostic studies, not official benchmark scores. The original base remains the default; the full reliability gate has not passed.

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "GPU_count": 1,
+  "CPU_cores": 2,
+  "RAM_GiB": 8,
+  "priority_override": false,
+  "created_objects": 0,
+  "private_payload_in_Secret": true
+}
