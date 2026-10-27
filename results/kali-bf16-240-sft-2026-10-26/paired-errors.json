@@ -1,0 +1,174 @@
+{
+  "status": "DESCRIPTIVE_PAIRED_ERROR_ACCOUNTING",
+  "primary_gate_changed": false,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "sets": {
+    "DEV": {
+      "rows": 72,
+      "verified_gains": 35,
+      "verified_regressions": 2,
+      "same_extracted_command": 11,
+      "by_tool": {
+        "grep": {
+          "rows": 12,
+          "verified_gains": 8,
+          "verified_regressions": 2,
+          "base_unknown": 0,
+          "sft_unknown": 2
+        },
+        "head": {
+          "rows": 12,
+          "verified_gains": 5,
+          "verified_regressions": 0,
+          "base_unknown": 4,
+          "sft_unknown": 0
+        },
+        "jq": {
+          "rows": 6,
+          "verified_gains": 6,
+          "verified_regressions": 0,
+          "base_unknown": 0,
+          "sft_unknown": 0
+        },
+        "openssl": {
+          "rows": 6,
+          "verified_gains": 0,
+          "verified_regressions": 0,
+          "base_unknown": 0,
+          "sft_unknown": 0
+        },
+        "tail": {
+          "rows": 12,
+          "verified_gains": 4,
+          "verified_regressions": 0,
+          "base_unknown": 4,
+          "sft_unknown": 0
+        },
+        "tcpdump": {
+          "rows": 6,
+          "verified_gains": 6,
+          "verified_regressions": 0,
+          "base_unknown": 6,
+          "sft_unknown": 0
+        },
+        "tshark": {
+          "rows": 6,
+          "verified_gains": 0,
+          "verified_regressions": 0,
+          "base_unknown": 0,
+          "sft_unknown": 0
+        },
+        "wc": {
+          "rows": 12,
+          "verified_gains": 6,
+          "verified_regressions": 0,
+          "base_unknown": 6,
+          "sft_unknown": 0
+        }
+      },
+      "by_arm": {
+        "base": {
+          "unsupported_not_executed": 20,
+          "known_explicit_constraint_failures": 23,
+          "executed_but_oracle_failed": 0,
+          "truncated": 0
+        },
+        "sft": {
+          "unsupported_not_executed": 2,
+          "known_explicit_constraint_failures": 7,
+          "executed_but_oracle_failed": 1,
+          "truncated": 0
+        }
+      }
+    },
+    "TRAIN_diagnostic": {
+      "rows": 16,
+      "verified_gains": 11,
+      "verified_regressions": 0,
+      "same_extracted_command": 4,
+      "by_tool": {
+        "grep": {
+          "rows": 2,
+          "verified_gains": 2,
+          "verified_regressions": 0,
+          "base_unknown": 1,
+          "sft_unknown": 0
+        },
+        "head": {
+          "rows": 2,
+          "verified_gains": 1,
+          "verified_regressions": 0,
+          "base_unknown": 1,
+          "sft_unknown": 0
+        },
+        "jq": {
+          "rows": 2,
+          "verified_gains": 2,
+          "verified_regressions": 0,
+          "base_unknown": 1,
+          "sft_unknown": 0
+        },
+        "openssl": {
+          "rows": 2,
+          "verified_gains": 0,
+          "verified_regressions": 0,
+          "base_unknown": 0,
+          "sft_unknown": 0
+        },
+        "tail": {
+          "rows": 2,
+          "verified_gains": 1,
+          "verified_regressions": 0,
+          "base_unknown": 0,
+          "sft_unknown": 0
+        },
+        "tcpdump": {
+          "rows": 2,
+          "verified_gains": 2,
+          "verified_regressions": 0,
+          "base_unknown": 2,
+          "sft_unknown": 0
+        },
+        "tshark": {
+          "rows": 2,
+          "verified_gains": 2,
+          "verified_regressions": 0,
+          "base_unknown": 2,
+          "sft_unknown": 0
+        },
+        "wc": {
+          "rows": 2,
+          "verified_gains": 1,
+          "verified_regressions": 0,
+          "base_unknown": 1,
+          "sft_unknown": 0
+        }
+      },
+      "by_arm": {
+        "base": {
+          "unsupported_not_executed": 8,
+          "known_explicit_constraint_failures": 3,
+          "executed_but_oracle_failed": 0,
+          "truncated": 0
+        },
+        "sft": {
+          "unsupported_not_executed": 0,
+          "known_explicit_constraint_failures": 0,
+          "executed_but_oracle_failed": 0,
+          "truncated": 0
+        }
+      }
+    }
+  },
+  "retention": {
+    "rows": 24,
+    "strict_gains": 6,
+    "strict_regressions": 3,
+    "historical_exposed_sentinel": true
+  },
+  "limits": [
+    "Unknown syntax is not a verified error; paired verified gains can include previously unknown cases.",
+    "Descriptive, correlated rows and one seed; no significance or unique-cause claim."
+  ]
+}

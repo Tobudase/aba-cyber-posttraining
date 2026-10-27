@@ -1,0 +1,212 @@
+{
+  "status": "COMPLETE_FROZEN_BF16_240_SFT_DEVELOPMENT_COMPARISON",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "actual_GPU": "NVIDIA L4",
+  "precision_training": "BF16",
+  "precision_inference": "BF16",
+  "TRAIN_rows": 240,
+  "TRAIN_epochs": 2,
+  "new_optimizer_steps": 480,
+  "new_generations": 224,
+  "DEV": {
+    "by_group": {
+      "grep-intent-2": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 0,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "grep-intent-3": {
+        "rows_per_arm": 6,
+        "base_correct": 3,
+        "base_unsupported": 0,
+        "sft_correct": 3,
+        "sft_unsupported": 2
+      },
+      "head-intent-4": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 0,
+        "sft_correct": 4,
+        "sft_unsupported": 0
+      },
+      "head-intent-5": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 4,
+        "sft_correct": 1,
+        "sft_unsupported": 0
+      },
+      "jq-intent-3": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 0,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "openssl-intent-7": {
+        "rows_per_arm": 6,
+        "base_correct": 6,
+        "base_unsupported": 0,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tail-intent-0": {
+        "rows_per_arm": 6,
+        "base_correct": 5,
+        "base_unsupported": 1,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tail-intent-3": {
+        "rows_per_arm": 6,
+        "base_correct": 3,
+        "base_unsupported": 3,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tcpdump-intent-0": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tshark-intent-5": {
+        "rows_per_arm": 6,
+        "base_correct": 6,
+        "base_unsupported": 0,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "wc-intent-2": {
+        "rows_per_arm": 6,
+        "base_correct": 6,
+        "base_unsupported": 0,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "wc-intent-7": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      }
+    },
+    "base": {
+      "rows": 72,
+      "correct": 29,
+      "executed": 29,
+      "unsupported": 20,
+      "explicit_constraint_failure": 43,
+      "truncated": 0
+    },
+    "sft": {
+      "rows": 72,
+      "correct": 62,
+      "executed": 63,
+      "unsupported": 2,
+      "explicit_constraint_failure": 9,
+      "truncated": 0
+    }
+  },
+  "TRAIN_diagnostic": {
+    "base": {
+      "rows": 16,
+      "correct": 5,
+      "executed": 5,
+      "unsupported": 8,
+      "explicit_constraint_failure": 11,
+      "truncated": 0
+    },
+    "sft": {
+      "rows": 16,
+      "correct": 16,
+      "executed": 16,
+      "unsupported": 0,
+      "explicit_constraint_failure": 0,
+      "truncated": 0
+    }
+  },
+  "retention": {
+    "base": {
+      "rows": 24,
+      "strict_correct": 12,
+      "previously_exposed_regression_panel": true
+    },
+    "sft": {
+      "rows": 24,
+      "strict_correct": 15,
+      "previously_exposed_regression_panel": true
+    }
+  },
+  "formats": {
+    "base": {
+      "rows": 112,
+      "complete_output_blocks": 112,
+      "think_closed": 0,
+      "truncated": 0
+    },
+    "sft": {
+      "rows": 112,
+      "complete_output_blocks": 112,
+      "think_closed": 112,
+      "truncated": 0
+    }
+  },
+  "development_gate": {
+    "conservative_DEV_gain_lower_bound": 13,
+    "conservative_positive_DEV_groups": 3,
+    "checks": {
+      "DEV_conservative_gain_at_least4": true,
+      "conservative_positive_groups_at_least2": true,
+      "retention_strict_not_decreased": true,
+      "candidate_complete_outputs": true,
+      "candidate_think_closure": true,
+      "candidate_no_truncation": true,
+      "valid_training_and_reload": true
+    },
+    "passes_development_gate": true
+  },
+  "TRAIN_NLL_before": 2.491176721828801,
+  "TRAIN_NLL_after": 0.007816053210864997,
+  "TRAIN_NLL_relative_drop": 0.9968625055210345,
+  "training_sanity": {
+    "changed_tensors": 144,
+    "nonzero_finite_steps": 480,
+    "reload_max_logit_delta": 0.0
+  },
+  "formal_default": "original_base",
+  "candidate_promoted": false,
+  "official_TEST_calls": 0,
+  "old_sealed_calls": 0,
+  "new_confirmation_calls": 0,
+  "external_teacher_calls": 0,
+  "new_ABA_search_executed": false,
+  "independent_expert_or_official_generalization_proven": false,
+  "resources": {
+    "GPU_count": 1,
+    "CPU_cores": 2,
+    "RAM_GiB": 12,
+    "host_seconds": 1398.74833804206,
+    "worker_seconds": 785.3078078618273,
+    "staging_seconds": 216.7814585508313,
+    "GPU_mean_whole_worker": 67.38461538461539,
+    "GPU_mean_after_staging": 93.85714285714286,
+    "GPU_resources_remaining": 0,
+    "CPU_scoring_resources_remaining": 0,
+    "CPU_scoring_wall_seconds": 48.01494341599755,
+    "cleanup_errors": []
+  },
+  "limits": [
+    "DEV and TRAIN are intent-group disjoint but share authored generators, tools, filenames and fixture patterns.",
+    "Six correlated variants per group; no row-independent significance claim.",
+    "Retention24 is a previously exposed historical regression sentinel, not a fresh independent test.",
+    "Unknown command syntax was not executed; DEV improvement gate uses a conservative baseline upper bound.",
+    "Experimental BPE empty-think targets and operator-fixed SFT; not upstream recipe reproduction or new ABA data search.",
+    "One fixed candidate, no post-output hyperparameter or scoring changes; protected confirmation remains unqueried."
+  ]
+}

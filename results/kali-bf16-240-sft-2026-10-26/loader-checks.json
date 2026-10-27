@@ -1,0 +1,8 @@
+[
+  {
+    "mode": "BF16",
+    "non_LoRA_FP32_parameters": 0,
+    "LoRA_dtype": "float32",
+    "only_LoRA_trainable": true
+  }
+]

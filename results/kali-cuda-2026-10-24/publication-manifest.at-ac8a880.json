@@ -1,0 +1,26 @@
+{
+  "schema": "kali.public_numerical_publication.v1",
+  "protocol_sha256": "9e3e2592a569a7217ac9b156ce5ec4938293562c0aa39b2f6f29c80a20024bf7",
+  "file_sha256": {
+    "README.md": "b50e2a7b74acfa3fbe4f5250f000c02b8317f352bea2f8b01b14b5c01906417f",
+    "configs/kali-cuda-cycle-v1.preallocation-RTX4090.json": "a25a71c084ab2bf9da84a6ff35430461a12e427a7b3ff13b86bc576f15b28220",
+    "configs/kali-cuda-cycle-v1.protocol.json": "30427676c49cf97c2d0cf0c0642d760baaf2c94831511676d898ee5a0c37ea72",
+    "configs/kali-cuda-jobs.example.json": "61eab49c9772362c4ea46f3053754c112e6bf9ac840882c473774e654de80006",
+    "docs/KALIBENCH_CUDA_POSTTRAIN_REPORT_2026-10-24.md": "2fab7faef1b504188bd2ddde21cd1be15936ab11c1277625a7365f44b82858c5",
+    "docs/KALI_CUDA_PUBLICATION_2026-10-24.md": "ede0b599d6214be98e44b0166d1ecd05f5f803f562ad6ccc9b6d30ce6e12d2e6",
+    "results/kali-cuda-2026-10-24/comparison.json": "cdf69343cc06cfe88ffd0f2540ac7b65a6e5e0cbf7fc98bb7f03f7bd5757fb5e",
+    "results/kali-cuda-2026-10-24/host-verification.json": "fd76340d7e6b710edd8ab30a4bb6c46df2e4b005409d9fc89bab8ce48f6dddb6",
+    "results/kali-cuda-2026-10-24/numerical-receipts.json": "add0dd9f59ba131ec565576c3251ef16641694a54faf3091436bef97fbe9618a",
+    "results/kali-cuda-2026-10-24/publication-checks.json": "ffe2b1f0bb92a8aa91501445a33c67cc78d3d8c5965ddde3d7f0b4a641a18fac",
+    "scripts/kali_cuda_jobs.py": "674ea679e2eecca4fd8caf9403bb588e6b80606d5601c81672e0c010b0138d39",
+    "scripts/kali_native_scaffold.py": "156647dd2ef03a7bcd7815c3519a74cf45f748e8d5feb521d33ecd2edf8f9385",
+    "scripts/run-kali-cuda-cycle.py": "fc9e81943ec33d93600e28553998548bec84bfd75baaafbe6518a894e9d57abe",
+    "scripts/verify-kali-cuda-publication.py": "5fc9efd4db53ab127df0b5d2089762ee0556774428af2a4e019bc83cd75cd2c1",
+    "tests/test_kali_cuda_cycle.py": "f52d55c628b8cd961aeb82d9ef0f1e4f37d53c6117159ddb19f642ed0d4fcf86",
+    "tests/test_kali_native_scaffold.py": "008002399785645b48e3e8c9802e030dfe2d8e1a0d029454fb9c6d9733659776"
+  },
+  "original_publication_commit": "20deb24f68fd29065e65eaf6936ae0ceda05ccc8",
+  "original_manifest_file": "results/kali-cuda-2026-10-24/publication-manifest.at-20deb24.json",
+  "original_manifest_sha256": "029036d95a8750b7462725742a371233bf6f91456f1928b7c880521704010db6",
+  "maintenance_note": "Current-tree hash maintenance for the October25 README update; original V1 scientific artifacts unchanged. Prior manifests remain archived."
+}

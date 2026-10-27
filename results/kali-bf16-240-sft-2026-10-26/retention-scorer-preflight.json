@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "gold_retention_labels_self_scored_correct": 24,
+  "historical_panel": true,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "official_or_confirmation_bodies_read": 0,
+  "scoring_code_changed": false
+}

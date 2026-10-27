@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "historical_Linux_receipt_matches_original_manifest": true,
+  "execution_receipt_sha256": "0f7663c2fb4f62c5ef36b8dbd1241350fc2edbdbd6d13a54118736cc8d0e4975",
+  "all_scoring_sources_match_pre_output_freeze": true,
+  "scoring_changes": 0,
+  "new_model_calls_by_check": 0
+}

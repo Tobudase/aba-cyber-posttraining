@@ -1,3 +1,11 @@
+## October 26 — 240-row matched-BF16 SFT
+
+Completed one frozen 480-update SFT candidate and 224 before/after generations. Verified authored DEV: **29/72 → 62/72**; historical retention strict: **12/24 → 15/24**. Conservative DEV gain lower bound **+13** after accounting for unreviewed baseline syntax. Predeclared development gate: **PASS**. **Original base retained; no official/independent-source gain, protected-confirmation query or new ABA search claimed.**
+
+[中文完整报告与逐组结果](docs/KALI_BF16_240_SFT_ZH_2026-10-26.md) · [Aggregate evidence](results/kali-bf16-240-sft-2026-10-26/summary.json). Offline check: `python3 scripts/verify-kali-bf16-240-result.py`.
+
+![BF16 SFT before/after: authored DEV and historical retention](results/kali-bf16-240-sft-2026-10-26/before-after.png)
+
 ## October 26 — matched training / inference precision
 
 Completed a frozen TRAIN-only 2x2 precision study: 256 real optimizer updates and 48 generations, same initial LoRA state, same eight BPE-target training rows. Both matched-diagonal gate: **PASS**. All cross-precision outputs are reported. **Keep the original base; no held-out gain or new 240-row SFT/ABA claim.** Batch4 inference uses fresh same-job baselines; the older failed cross-precision gate is unchanged.

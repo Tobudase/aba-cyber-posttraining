@@ -1,0 +1,90 @@
+{
+  "schema": "kali.bf16.240.sft.v1",
+  "study": "one_fixed_BF16_SFT_candidate",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "initialization_seed": 42,
+  "LoRA": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_dropout": 0,
+    "task_type": "CAUSAL_LM"
+  },
+  "allowed_GPU_models": [
+    "NVIDIA L40",
+    "NVIDIA L40S",
+    "NVIDIA GeForce RTX 4090",
+    "NVIDIA L4",
+    "NVIDIA GeForce RTX 3090",
+    "NVIDIA A10",
+    "NVIDIA RTX A5000"
+  ],
+  "training_precision": "BF16",
+  "inference_precision": "BF16",
+  "resources": {
+    "GPU_count": 1,
+    "CPU_cores": 2,
+    "RAM_GiB": 12
+  },
+  "arms": [
+    {
+      "name": "bf16_sft",
+      "optimizer": {
+        "schema": "kali.sft.optimizer.v1",
+        "seed": 42,
+        "epochs": 2,
+        "max_optimizer_steps": 480,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 1,
+        "max_sequence_tokens": 2048,
+        "learning_rate": 2e-05,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "max_grad_norm": null
+      }
+    }
+  ],
+  "inference": {
+    "batch_size": 4,
+    "padding_side": "left",
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "seed": 3407,
+    "use_cache": true,
+    "forced_prefix": false,
+    "output_repair": false
+  },
+  "target_mode": "Experimental same-text BPE close-think target; unchanged inference tokenizer/prompt",
+  "budget": {
+    "max_optimizer_steps": 480,
+    "max_generations": 224,
+    "max_output_tokens": 229376,
+    "deadline_seconds": 3600,
+    "pending_seconds": 900
+  },
+  "decision": {
+    "DEV_correct_minus_base_correct_and_unsupported_min": 4,
+    "conservative_positive_DEV_intent_groups_min": 2,
+    "retention_strict_not_decreased": true,
+    "candidate_complete_output_blocks": 112,
+    "candidate_literal_think_closure": 112,
+    "candidate_truncations_max": 0,
+    "nonzero_finite_gradient_steps": 480,
+    "reload_delta_max": 0.0001,
+    "formal_default": "original_base",
+    "no_automatic_promotion": true,
+    "protected_confirmation_calls": 0,
+    "scoring": "read-only-reviewed explicit constraints AND independent synthetic stdout oracle;unknown syntax not executed",
+    "one_candidate_no_post_output_tuning": true
+  },
+  "not_new_ABA_search": true,
+  "not_official_benchmark_score": true
+}

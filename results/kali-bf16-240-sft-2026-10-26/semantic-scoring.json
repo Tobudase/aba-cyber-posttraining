@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETE",
+  "summary": {
+    "base": {
+      "DEV": {
+        "rows": 72,
+        "correct": 29,
+        "executed": 29,
+        "unsupported": 20
+      },
+      "TRAIN_diagnostic": {
+        "rows": 16,
+        "correct": 5,
+        "executed": 5,
+        "unsupported": 8
+      }
+    },
+    "sft": {
+      "DEV": {
+        "rows": 72,
+        "correct": 62,
+        "executed": 63,
+        "unsupported": 2
+      },
+      "TRAIN_diagnostic": {
+        "rows": 16,
+        "correct": 16,
+        "executed": 16,
+        "unsupported": 0
+      }
+    }
+  },
+  "records": 176,
+  "gold_controls": 113,
+  "gold_controls_passed": 113,
+  "model_calls": 0,
+  "GPU_count": 0,
+  "raw_commands_or_predictions_released": false,
+  "unknown_syntax_not_executed": true
+}

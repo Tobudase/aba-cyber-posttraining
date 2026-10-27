@@ -1,0 +1,9 @@
+{
+  "status": "MEASURED_COMPLETE_WORKER",
+  "CPU_mean_cores": 0.7421202358965213,
+  "CPU_mean_percent_of_requested_2": 37.10601179482607,
+  "peak_sampled_host_RAM_GiB": 11.979408264160156,
+  "max_GPU_allocated_GiB": 16.13762617111206,
+  "samples": 156,
+  "includes_loading_and_file_cache": true
+}
