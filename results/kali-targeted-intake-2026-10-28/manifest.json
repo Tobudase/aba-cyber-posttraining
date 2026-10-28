@@ -1,0 +1,7 @@
+{
+  "schema": "kali.targeted-intake.public.v1",
+  "file_sha256": {
+    "docs/KALI_TARGETED_INTAKE_ZH_2026-10-28.md": "f110e727229a819ad20d67c1625cd594fb12c10522f8d62c9b3f215709891c77",
+    "results/kali-targeted-intake-2026-10-28/summary.json": "8a4f9be513d148c8cab020c67cf0d1a8e7692d6abfb4d022ba3eb5b501971fe8"
+  }
+}
