@@ -1,0 +1,13 @@
+{
+  "status": "POSTHOC_AGGREGATE_ONLY",
+  "parent_commit": "a90f265629767647c892b94e010d8fcb927a739e",
+  "file_sha256": {
+    "docs/KALI_POSTHOC_AUDIT_AND_NEXT_DATA_ZH_2026-10-27.md": "bb3013ae504bf24c9131cae3f2a0fcb00ac8c5ed9657b09cf5f6300365de7728",
+    "results/kali-bf16-confirmation-2026-10-26/summary.json": "a408fcdfd1ea914cc25b8cdafdc965b57a304fb251785e4646ee5192a247b3df",
+    "results/kali-posthoc-audit-2026-10-27/audit.json": "a938f65813e1108f074382f008ba31888d79e80eb3b580d5edaa82cc41b60dfd",
+    "scripts/audit-kali-confirmation-posthoc.py": "eb8b135ae05d3bb39c7ffa8219d69b815a02f956fbde7adce64dd07ae0ba6f08",
+    "scripts/verify-kali-posthoc-audit.py": "d122e7a5e2358952f74465f7829187eb186c7fb5d61979d077ebe5a4384c5506"
+  },
+  "scientific_gate_unchanged": true,
+  "private_rows_released": false
+}

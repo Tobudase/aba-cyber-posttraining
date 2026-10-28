@@ -1,0 +1,60 @@
+{
+  "status": "POSTHOC_DIAGNOSTIC_ONLY",
+  "created_at_utc": "2026-10-28T05:50:59.103976+00:00",
+  "private_input_sha256": "8e43357ba0981c1d63bf63bdc38d64e3fad358a5b1fac46b21a0dda7c4224194",
+  "private_result_sha256": "f487f72fb8cd9017c4ca947dca5b1ef1711735fc3e9f2ed185061ecc569bd3cf",
+  "predeclared_summary_sha256": "a408fcdfd1ea914cc25b8cdafdc965b57a304fb251785e4646ee5192a247b3df",
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "official_test_calls": 0,
+  "arms": {
+    "base": {
+      "rows": 72,
+      "unsupported_not_executed": 47,
+      "reviewed": 25,
+      "verified_correct": 19
+    },
+    "sft": {
+      "rows": 72,
+      "unsupported_not_executed": 6,
+      "reviewed": 66,
+      "verified_correct": 60
+    }
+  },
+  "review_reason_counts": {
+    "base": {
+      "Only reviewed saved-capture field queries permitted": 6,
+      "REVIEWED": 25,
+      "Unreviewed executable": 7,
+      "Unreviewed jq input/filter": 6,
+      "Unsupported jq grammar": 6,
+      "unsupported option": 22
+    },
+    "sft": {
+      "Only reviewed saved-capture field queries permitted": 6,
+      "REVIEWED": 66
+    }
+  },
+  "unsupported_by_tool": {
+    "base": {
+      "head": 6,
+      "jq": 12,
+      "tail": 1,
+      "tcpdump": 12,
+      "tshark": 12,
+      "wc": 4
+    },
+    "sft": {
+      "tshark": 6
+    }
+  },
+  "base_unsupported_to_sft": {
+    "sft_other_not_correct": 5,
+    "sft_unsupported": 6,
+    "sft_verified_correct": 36
+  },
+  "gate_recomputed_or_changed": false,
+  "candidate_promoted": false,
+  "interpretation": "Unsupported means the allowlisted reviewer did not execute the command. Its explicit_constraint_failure flag is set automatically by the reviewer and does not prove the command would fail its task. The 36 transitions from base-unsupported to SFT-verified cannot be called 36 confirmed gains.",
+  "private_commands_or_task_ids_released": false
+}
