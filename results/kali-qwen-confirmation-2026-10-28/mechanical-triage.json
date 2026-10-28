@@ -1,0 +1,40 @@
+{
+  "status": "MECHANICAL_TRIAGE_ONLY_HUMAN_REVIEW_PENDING",
+  "scope": "primary87 strict transitions and post-SFT truncations",
+  "source_prediction_sha256": {
+    "baseline": "8c699249241fb6f94969d62c1aa0185c085a0df6005d08c1dece500d6a852c55",
+    "post_sft": "e277ee206378a11ee520adc2517eb3ba67fb92ad196e642ad5d67d2c5811f10e"
+  },
+  "case_counts": {
+    "gained": 9,
+    "lost": 1,
+    "both_wrong_truncated": 3
+  },
+  "gains_with_tool_present_in_train512": 8,
+  "gains_with_tool_absent_from_train512": 1,
+  "gains_exact_gold_command": 7,
+  "gains_strict_correct_but_not_exact_gold_string": 2,
+  "losses_with_tool_absent_from_train512": 1,
+  "truncated_at_cap_without_closed_output_and_with_repeated_fivegram": 3,
+  "token_lengths_all93": {
+    "baseline": {
+      "min": 11,
+      "median": 20,
+      "p95_nearest_rank": 47,
+      "max": 69,
+      "at_least_256_tokens": 0,
+      "at_512_token_cap": 0
+    },
+    "post_sft": {
+      "min": 11,
+      "median": 20,
+      "p95_nearest_rank": 49,
+      "max": 512,
+      "at_least_256_tokens": 3,
+      "at_512_token_cap": 3
+    }
+  },
+  "interpretation_limit": "String/format checks and lexical ratios do not establish semantic correctness or data independence.",
+  "individual_case_content_released": false,
+  "independent_human_semantic_reviews": 0
+}

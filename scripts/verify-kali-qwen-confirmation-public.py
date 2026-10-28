@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULT = ROOT / "results/kali-qwen-confirmation-2026-10-28/summary.json"
+TRIAGE = ROOT / "results/kali-qwen-confirmation-2026-10-28/mechanical-triage.json"
 
 
 def sha(path):
@@ -55,6 +56,26 @@ def main():
     assert primary["paired"]["strict"] == {"both_correct": 17, "gained": 9,
                                            "lost": 1, "both_wrong": 60}
     assert r["post_sft_primary_truncated_all_both_wrong"] is True
+    audit = json.loads(TRIAGE.read_text())
+    assert audit["status"] == "MECHANICAL_TRIAGE_ONLY_HUMAN_REVIEW_PENDING"
+    assert audit["case_counts"] == {"gained": 9, "lost": 1, "both_wrong_truncated": 3}
+    assert audit["gains_with_tool_present_in_train512"] == 8
+    assert audit["gains_with_tool_absent_from_train512"] == 1
+    assert audit["gains_exact_gold_command"] == 7
+    assert audit["gains_strict_correct_but_not_exact_gold_string"] == 2
+    assert audit["losses_with_tool_absent_from_train512"] == 1
+    assert audit["truncated_at_cap_without_closed_output_and_with_repeated_fivegram"] == 3
+    assert audit["source_prediction_sha256"] == {
+        "baseline": r["private_baseline_predictions_sha256"],
+        "post_sft": r["private_post_predictions_sha256"]}
+    assert audit["individual_case_content_released"] is False
+    assert audit["independent_human_semantic_reviews"] == 0
+    lengths = audit["token_lengths_all93"]
+    assert lengths["baseline"]["median"] == lengths["post_sft"]["median"] == 20
+    assert lengths["baseline"]["max"] == 69
+    assert lengths["post_sft"]["max"] == 512
+    assert lengths["baseline"]["at_512_token_cap"] == 0
+    assert lengths["post_sft"]["at_512_token_cap"] == 3
     print(json.dumps({"status": "PUBLIC_AGGREGATE_ARITHMETIC_PASS",
                       "primary_strict": "18/87 -> 26/87", "unseen_tool_strict": "5/22 -> 5/22",
                       "official_TEST_rows": 0}))
