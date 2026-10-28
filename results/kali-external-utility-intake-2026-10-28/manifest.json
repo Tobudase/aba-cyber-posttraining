@@ -1,0 +1,9 @@
+{
+  "schema": "kali.external-utility-intake.public.v1",
+  "file_sha256": {
+    "docs/KALI_EXTERNAL_UTILITY_INTAKE_ZH_2026-10-28.md": "ada4d9f5570a26bc4c91a2f2137e027eed460ce7485825cb5570560ddaf94a0a",
+    "configs/kali-external-utility-selection-2026-10-28.json": "fc95757ed307a0d21dbb76824be8570b98bb6733a521bd2145dda661bde6ca29",
+    "scripts/reproduce-kali-external-utility-screen.py": "d882aeb59adfaa5e94c7f4aad5a8a1015b8ec8a4088e783be340c4309c9a70b3",
+    "results/kali-external-utility-intake-2026-10-28/summary.json": "a1c4a4ddd1fc3bb2274065f64a28e13f708ce9514bff1e7dd371b4395aba69b5"
+  }
+}

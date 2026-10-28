@@ -1,3 +1,7 @@
+## October 28 — external utility candidate intake
+
+Pinned an Apache-2.0-labelled public Linux command dataset and screened 8,669 pairs into 23 **review-pending** generic utility candidates. Fifteen have automatic risk flags; two may run indefinitely. None is training gold or a blind test. No dataset command, model, GPU, ABA generation or official TEST was run. The original base remains the formal default. [中文审核报告](docs/KALI_EXTERNAL_UTILITY_INTAKE_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-external-utility-intake-2026-10-28/summary.json). Verify with `python3 scripts/verify-kali-external-utility-intake-public.py`.
+
 ## October 26 — 240-row matched-BF16 SFT
 
 Completed one frozen 480-update SFT candidate and 224 before/after generations. Verified authored DEV: **29/72 → 62/72**; historical retention strict: **12/24 → 15/24**. Conservative DEV gain lower bound **+13** after accounting for unreviewed baseline syntax. Predeclared development gate: **PASS**. **Original base retained; no official/independent-source gain, protected-confirmation query or new ABA search claimed.**

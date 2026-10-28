@@ -1,0 +1,28 @@
+{
+  "status": "CORRECTED_BEFORE_ANY_MODEL_EVALUATION_OR_GOLD_ADMISSION",
+  "supersedes": "selection-protocol-v0-bug.json",
+  "correction": "v0 accidentally encoded a literal backslash-r, rejecting any command containing the letter r; preserve its output as a failed screening run",
+  "purpose": "External-source candidate pool for generic command utility retention, not Kali domain training gold or a blind test",
+  "source": "mecha-org/linux-command-dataset",
+  "revision": "d3883ec38c0458a73a0b8aef19103cb2d006c87c",
+  "file": "linuxcommands.json",
+  "source_sha256": "81b33a65b80134875706fe005601f8b75dee726e91c4b632a517790e2b9ab175",
+  "declared_license": "apache-2.0",
+  "selection": {
+    "approved_first_token": ["ls", "cat", "grep", "tail", "du", "find", "uname", "free"],
+    "max_per_first_token": 3,
+    "max_total": 24,
+    "max_input_chars": 240,
+    "max_output_chars": 180,
+    "forbidden_command_characters": ["`", "$", ";", "|", "&", ">", "<", "\\", "\n", "\r"],
+    "forbidden_command_words": ["sudo", "su", "ssh", "curl", "wget", "http", "https", "rm", "chmod", "chown", "kill", "exec", "-exec", "-delete", "-execdir"],
+    "forbidden_absolute_or_home_paths": true,
+    "ranking": "ascending SHA256 of normalized input, NUL, normalized output; first three unique outputs per command family"
+  },
+  "gates": [
+    "Read-only syntax screening, with no shell execution of dataset strings",
+    "Check exact overlap against prior authored or exposed local records",
+    "Independent human semantic and license review before any gold or training use",
+    "Never use this inspected pool as a blind final metric or for posthoc model selection"
+  ]
+}
