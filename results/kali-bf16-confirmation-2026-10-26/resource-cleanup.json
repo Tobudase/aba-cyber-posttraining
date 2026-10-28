@@ -1,0 +1,7 @@
+{
+  "GPU_job_resources_remaining": 0,
+  "CPU_scoring_resources_remaining": 0,
+  "cleanup_errors": [],
+  "finite_normal_priority_jobs": true,
+  "shared_cache_read_only": true
+}

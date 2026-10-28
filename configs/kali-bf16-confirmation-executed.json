@@ -1,0 +1,66 @@
+{
+  "schema": "kali.bf16.confirmation.v1",
+  "study": "exact_persisted_adapter_confirmation_no_training",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "LoRA": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_dropout": 0,
+    "task_type": "CAUSAL_LM"
+  },
+  "allowed_GPU_models": [
+    "NVIDIA L40",
+    "NVIDIA L40S",
+    "NVIDIA GeForce RTX 4090",
+    "NVIDIA L4",
+    "NVIDIA GeForce RTX 3090",
+    "NVIDIA A10",
+    "NVIDIA RTX A5000",
+    "NVIDIA RTX A6000"
+  ],
+  "training_precision": "BF16",
+  "inference_precision": "BF16",
+  "resources": {
+    "GPU_count": 1,
+    "CPU_cores": 2,
+    "RAM_GiB": 12
+  },
+  "inference": {
+    "batch_size": 4,
+    "padding_side": "left",
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "seed": 3407,
+    "use_cache": true,
+    "forced_prefix": false,
+    "output_repair": false
+  },
+  "target_mode": "Experimental same-text BPE close-think target; unchanged inference tokenizer/prompt",
+  "budget": {
+    "max_optimizer_steps": 0,
+    "max_generations": 192,
+    "max_output_tokens": 196608,
+    "deadline_seconds": 3600,
+    "pending_seconds": 600
+  },
+  "decision": {
+    "conservative_confirm_gain_min": 4,
+    "conservative_positive_groups_min": 2,
+    "retention_strict_not_decreased": true,
+    "candidate_output_blocks": 96,
+    "candidate_think_closure": 96,
+    "candidate_max_truncations": 0,
+    "adapter_identity_required": true
+  },
+  "not_new_ABA_search": true,
+  "not_official_benchmark_score": true,
+  "initialization_seed": 42,
+  "adapter_sha256": "f69a01832afe8baba1ff460efce22324873df2bbe8ff2c370317d1db62061395",
+  "formal_default": "original_base",
+  "no_automatic_promotion": true
+}

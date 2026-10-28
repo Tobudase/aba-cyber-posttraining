@@ -1,0 +1,28 @@
+{
+  "purpose": "Descriptive source-reuse audit; not a new gate or post-output scoring change",
+  "official_or_independent_source_claim": false,
+  "counts": {
+    "train": 240,
+    "dev": 72,
+    "confirmation": 72
+  },
+  "comparisons": {
+    "confirmation_vs_train": {
+      "id_confirmation_rows_with_exact_value_already_in_train": 0,
+      "query_confirmation_rows_with_exact_value_already_in_train": 0,
+      "template_group_confirmation_rows_with_exact_value_already_in_train": 0,
+      "gold_command_confirmation_rows_with_exact_value_already_in_train": 0,
+      "filename_confirmation_rows_with_exact_value_already_in_train": 72,
+      "tool_confirmation_rows_with_exact_value_already_in_train": 72
+    },
+    "confirmation_vs_dev": {
+      "id_confirmation_rows_with_exact_value_already_in_dev": 0,
+      "query_confirmation_rows_with_exact_value_already_in_dev": 0,
+      "template_group_confirmation_rows_with_exact_value_already_in_dev": 0,
+      "gold_command_confirmation_rows_with_exact_value_already_in_dev": 0,
+      "filename_confirmation_rows_with_exact_value_already_in_dev": 60,
+      "tool_confirmation_rows_with_exact_value_already_in_dev": 72
+    }
+  },
+  "interpretation": "Disjoint intent groups do not imply independent sources. Reused tools/filenames/fixtures remain shared context; this audit does not infer task correctness or causal leakage from overlaps."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-27T01:48:04.614601+00:00",
+  "checks": [
+    "All new Python sources parse",
+    "All frozen file hashes match launcher build",
+    "No training data or optimizer in worker payload",
+    "Entire adapter/model cache mounted read-only",
+    "Private questions only in Secret, not ConfigMap",
+    "Conservative gain gate boundary 4 passes,3 fails",
+    "Retention regression fails gate",
+    "Adapter identity failure fails gate"
+  ],
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0
+}

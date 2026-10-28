@@ -1,0 +1,186 @@
+{
+  "status": "COMPLETE_FIXED_ADAPTER_CONFIRMATION",
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "adapter_sha256": "f69a01832afe8baba1ff460efce22324873df2bbe8ff2c370317d1db62061395",
+  "actual_GPU": "NVIDIA RTX A6000",
+  "precision": "BF16",
+  "new_generations": 192,
+  "new_optimizer_steps": 0,
+  "CONFIRMATION": {
+    "by_group": {
+      "grep-intent-4": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 0,
+        "sft_correct": 5,
+        "sft_unsupported": 0
+      },
+      "head-intent-2": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 1,
+        "sft_unsupported": 0
+      },
+      "jq-intent-4": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "jq-intent-7": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "openssl-intent-0": {
+        "rows_per_arm": 6,
+        "base_correct": 6,
+        "base_unsupported": 0,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "openssl-intent-1": {
+        "rows_per_arm": 6,
+        "base_correct": 6,
+        "base_unsupported": 0,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tail-intent-2": {
+        "rows_per_arm": 6,
+        "base_correct": 5,
+        "base_unsupported": 1,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tcpdump-intent-3": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tcpdump-intent-7": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tshark-intent-2": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      },
+      "tshark-intent-7": {
+        "rows_per_arm": 6,
+        "base_correct": 0,
+        "base_unsupported": 6,
+        "sft_correct": 0,
+        "sft_unsupported": 6
+      },
+      "wc-intent-0": {
+        "rows_per_arm": 6,
+        "base_correct": 2,
+        "base_unsupported": 4,
+        "sft_correct": 6,
+        "sft_unsupported": 0
+      }
+    },
+    "base": {
+      "rows": 72,
+      "correct": 19,
+      "executed": 19,
+      "unsupported": 47,
+      "explicit_constraint_failure": 53,
+      "truncated": 0
+    },
+    "sft": {
+      "rows": 72,
+      "correct": 60,
+      "executed": 60,
+      "unsupported": 6,
+      "explicit_constraint_failure": 12,
+      "truncated": 0
+    }
+  },
+  "retention": {
+    "base": {
+      "rows": 24,
+      "strict_correct": 12,
+      "previously_exposed_panel": true
+    },
+    "sft": {
+      "rows": 24,
+      "strict_correct": 16,
+      "previously_exposed_panel": true
+    }
+  },
+  "formats": {
+    "base": {
+      "rows": 96,
+      "complete_output_blocks": 96,
+      "think_closed": 0,
+      "truncated": 0
+    },
+    "sft": {
+      "rows": 96,
+      "complete_output_blocks": 96,
+      "think_closed": 96,
+      "truncated": 0
+    }
+  },
+  "confirmation_gate": {
+    "conservative_gain_lower_bound": -6,
+    "conservative_positive_groups": 1,
+    "checks": {
+      "conservative_confirmation_gain_at_least4": false,
+      "conservative_positive_groups_at_least2": false,
+      "retention_strict_not_decreased": true,
+      "candidate_complete_outputs": true,
+      "candidate_think_closure": true,
+      "candidate_no_truncation": true,
+      "exact_saved_adapter_no_training": true
+    },
+    "passes_confirmation_gate": false
+  },
+  "paired": {
+    "new_verified_passes": 41,
+    "old_verified_passes_lost": 0,
+    "lost_to_unknown": 0,
+    "identical_extracted_commands": 14
+  },
+  "candidate_promoted": false,
+  "formal_default": "original_base",
+  "official_TEST_calls": 0,
+  "external_teacher_calls": 0,
+  "ABA_search_executed": false,
+  "confirmation_now_exposed": true,
+  "resources": {
+    "GPU_count": 1,
+    "CPU_cores": 2,
+    "RAM_GiB": 12,
+    "host_seconds": 434.2945010419935,
+    "worker_seconds": 333.198356162,
+    "staging_seconds": 182.16862171800312,
+    "GPU_mean_whole_worker": 29.761194029850746,
+    "GPU_mean_after_staging": 66.46666666666667,
+    "CPU_scoring_seconds": 37.95293133286759,
+    "all_owned_resources_remaining": 0,
+    "cleanup_errors": []
+  },
+  "limits": [
+    "Same authored generators/tools/filenames/fixtures as TRAIN/DEV, six correlated variants per group.",
+    "Intent-group disjoint confirmation, not independently sourced expert gold or official KaliBench.",
+    "Previously exposed historical retention panel; unsupported syntax not executed.",
+    "No tuning/retraining/reselection from confirmation; no automatic promotion.",
+    "Unchanged CPU scorer summary has only historical DEV/TRAIN keys; this analyzer uses all 144 explicit CONFIRMATION records."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "records": 144,
+  "gold_controls": 79,
+  "gold_controls_passed": 79,
+  "model_calls": 0,
+  "GPU_count": 0,
+  "raw_commands_or_predictions_released": false,
+  "unknown_syntax_not_executed": true
+}

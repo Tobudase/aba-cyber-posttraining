@@ -1,0 +1,6 @@
+{
+  "adapter_sha256": "f69a01832afe8baba1ff460efce22324873df2bbe8ff2c370317d1db62061395",
+  "exact_tensor_match": true,
+  "loaded_tensor_count": 144,
+  "zero_new_optimizer_steps": true
+}

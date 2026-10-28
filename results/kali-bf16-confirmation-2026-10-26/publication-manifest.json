@@ -1,0 +1,28 @@
+{
+  "status": "AGGREGATE_ONLY_RELEASE",
+  "parent_commit": "c99fbbd1e7e19928e1f4aaadbfaf41ddea784209",
+  "file_sha256": {
+    "configs/kali-bf16-confirmation-executed.json": "2d9c765bdb08812847d40b095fd46eb6cff7c72c123dfa04174234828245bced",
+    "docs/KALI_BF16_CONFIRMATION_ZH_2026-10-26.md": "e62ac60cf07ce517e281ec9282a3266263af84e0daace52f3425207768505c67",
+    "results/kali-bf16-240-sft-2026-10-26/summary.json": "51c5619f94c3ab46cf72c8570167f573f489043644b46ce3b4553a2fdd90bc4e",
+    "results/kali-bf16-240-sft-2026-10-26/training-receipt.json": "c35d32cd286dcd0663a81cd25d661e80ee85b6e3cfdd6ef3090b59a6c8c32653",
+    "results/kali-bf16-confirmation-2026-10-26/CPU-preflight.json": "e94c082cb695a4a29d8d9107366752548bd9db8de212523489f2e4095dbe0e91",
+    "results/kali-bf16-confirmation-2026-10-26/adapter-identity.json": "f9d981661a42349d4fcdc1984c3a3b8b13a42b8bee02355ccc9f6e0268b05685",
+    "results/kali-bf16-confirmation-2026-10-26/admission-dry-run.json": "bf227dcc2d760db64cf47e8eb2d6599b8ca3775da3805958593e6a39c6f81dfe",
+    "results/kali-bf16-confirmation-2026-10-26/before-after.png": "d6304a5daa83fd0ab2163849df7f1fface31ee774c084cb170cec5aaf9d553b0",
+    "results/kali-bf16-confirmation-2026-10-26/before-after.svg": "1f3dd63009b5de418c09080db5a82013b67f1bdc46c86fefb3a8d2be6a4f81f5",
+    "results/kali-bf16-confirmation-2026-10-26/descriptive-overlap-audit.json": "d4d6fdc4512ba5cea2b3ecac8be244fe12186aa20739dd9a219a4573a1e716f7",
+    "results/kali-bf16-confirmation-2026-10-26/design.json": "0c4fca4f6aa93812d0238be6cc70e04237c565f4076609c2f2cef17dfabce9a5",
+    "results/kali-bf16-confirmation-2026-10-26/evidence-provenance.json": "fead09fbe777c788534742c500edac155214ff2d561fbe39672eec01cd626703",
+    "results/kali-bf16-confirmation-2026-10-26/offline-protocol-checks.json": "2d7bb58c4be98178f49b281c9e87fd2b6615d0e51053cc5525f6ee21d0e252eb",
+    "results/kali-bf16-confirmation-2026-10-26/parent-continuity-check.json": "8218209a6581acff5a22ce17f20e33f595c13c58409a8cdbb94b592a272cc7ac",
+    "results/kali-bf16-confirmation-2026-10-26/resource-cleanup.json": "86533b9133616f910d8762667dd212b904189c3ee756539e46e8dcff32f39faf",
+    "results/kali-bf16-confirmation-2026-10-26/semantic-scoring.json": "c3f35ee7c1027dff57a1a2f23ca680a2c180f2f1dfb59219d407335fa796d616",
+    "results/kali-bf16-confirmation-2026-10-26/summary.json": "a408fcdfd1ea914cc25b8cdafdc965b57a304fb251785e4646ee5192a247b3df",
+    "scripts/check-kali-bf16-confirmation.py": "057a0e11ae4f1d77d9d404012f373c95b868f7bcb09d7a9a3f02cf3ba536b01c",
+    "scripts/plot-kali-bf16-confirmation.py": "b3e5429414f6dfa463f55db8b886e4d3c4611fad13e473d251d4c6459b0d9260",
+    "scripts/verify-kali-bf16-confirmation.py": "3a94eec36eab7f8888998385944acedb876834f261599a7bf3a959418c568326"
+  },
+  "private_predictions_released": false,
+  "prior_README_and_science_unchanged": true
+}

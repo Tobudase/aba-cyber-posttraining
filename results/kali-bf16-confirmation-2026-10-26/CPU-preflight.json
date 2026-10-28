@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "confirmation_rows": 72,
+  "confirmation_groups": 12,
+  "variants_per_group": 6,
+  "overlap_with_TRAIN_or_DEV_ids_queries_groups": 0,
+  "gold_rows_prior_Linux_verified": 72,
+  "negative_controls_prior_passed": 448,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "private_payload_without_gold": true,
+  "protected_same_generator_limitation": true,
+  "independent_expert_review": false,
+  "payload_bytes": 183166,
+  "compressed_Secret_bytes": 13913,
+  "retention_rows": 24,
+  "allocation_revision_only": true,
+  "scientific_inputs_unchanged": true,
+  "science_inputs_unchanged": true
+}
