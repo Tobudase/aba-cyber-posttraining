@@ -1,0 +1,7 @@
+{
+  "schema": "kali.second-base-preflight.public.v1",
+  "file_sha256": {
+    "docs/KALI_SECOND_BASE_DECISION_ZH_2026-10-28.md": "6688ddf1448b097d05665024be7a72ebe9c7e49b35afd89bf9ee80bac89b3c3a",
+    "results/kali-qwen3-8b-second-base-2026-10-28/summary.json": "c8625c17dc2125d913827992c80ae66521913759e25978ea2359da54de3fdabe"
+  }
+}

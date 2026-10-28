@@ -1,3 +1,7 @@
+## October 28 — second-base decision and Qwen3-8B preflight
+
+Selected public, Apache-2.0-labelled `Qwen/Qwen3-8B` as a future general-model control alongside the specialized RedSage-K. Tokenizer-only checks passed on all 240 existing TRAIN prompts. Qwen's native prompt does **not** end at the open `<think>` token required by the prior RedSage worker, so swapping model IDs would invalidate that run. A full second-base training cycle is deferred until data review and a separate model-native protocol are complete. No weights, model inference, GPU job, optimizer step or official TEST were used. [中文决策与预检](docs/KALI_SECOND_BASE_DECISION_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-qwen3-8b-second-base-2026-10-28/summary.json). Offline check: `python3 scripts/verify-kali-second-base-preflight-public.py`.
+
 ## October 28 — external utility candidate intake
 
 Pinned an Apache-2.0-labelled public Linux command dataset and screened 8,669 pairs into 23 **review-pending** generic utility candidates. Fifteen have automatic risk flags; two may run indefinitely. None is training gold or a blind test. No dataset command, model, GPU, ABA generation or official TEST was run. The original base remains the formal default. [中文审核报告](docs/KALI_EXTERNAL_UTILITY_INTAKE_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-external-utility-intake-2026-10-28/summary.json). Verify with `python3 scripts/verify-kali-external-utility-intake-public.py`.
