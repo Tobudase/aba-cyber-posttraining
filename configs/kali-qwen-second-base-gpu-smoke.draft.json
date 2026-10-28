@@ -1,0 +1,51 @@
+{
+  "schema": "kali.qwen.second-base.gpu-smoke.draft.v1",
+  "status": "DESIGN_ONLY_NOT_SUBMITTED",
+  "purpose": "One bounded model-loading and output-format check using eight prior TRAIN inputs; not a benchmark score",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "weights": {
+    "files": 5,
+    "published_total_bytes": 16381516776,
+    "published_total_gib_approx": 15.26,
+    "already_downloaded": false
+  },
+  "inputs": {
+    "split": "TRAIN only",
+    "one_per_tool": 8,
+    "DEV": 0,
+    "exposed_confirmation": 0,
+    "official_TEST": 0,
+    "external_teacher": 0
+  },
+  "inference": {
+    "prompt": "official Qwen3 chat template, enable_thinking=false",
+    "precision": "BF16 if supported",
+    "do_sample": false,
+    "max_new_tokens_per_input": 256,
+    "training_steps": 0,
+    "outputs_private": true
+  },
+  "resources": {
+    "normal_priority_only": true,
+    "GPU_count": 1,
+    "A100_required": false,
+    "CPU_cores": 2,
+    "RAM_GiB": 12,
+    "ephemeral_GiB_max": 24,
+    "pending_seconds_max": 900,
+    "running_seconds_max": 1200,
+    "automatic_cleanup": true,
+    "priority_override": false,
+    "tolerations_override": false
+  },
+  "preconditions": [
+    "Materialize and hash-verify all pinned model shards without occupying a GPU",
+    "Review exact Kubernetes manifest and actual node memory compatibility",
+    "Verify no owned GPU Job already runs",
+    "Use normal namespace limits and a finite Job",
+    "Confirm selected TRAIN-only input hashes and model-native prompt bytes"
+  ],
+  "submission_completed": false,
+  "model_calls_completed": 0
+}

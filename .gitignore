@@ -42,6 +42,9 @@ docs/verification/athenabench-2026-10-18/source/
 
 .venv*/
 
+# Qwen second-base tokenizer prep writes private token arrays and human-review packets here.
+docs/verification/kali-qwen3-8b-second-base-2026-10-28/
+
 # October23 reviewed training and search-only evidence release.
 !data/benchkit/kali-doc-train-v1/
 !data/benchkit/kali-domain-dev-v1/

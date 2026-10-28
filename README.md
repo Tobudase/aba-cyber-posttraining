@@ -1,3 +1,7 @@
+## October 28 — Qwen3-8B TRAIN encoding and review packet
+
+Prepared Qwen-native, nonthinking TRAIN encodings for all 240 prior synthetic rows: prompt labels masked 240/240, target/EOS labels supervised 240/240, six negative controls rejected. The private encoded rows are explicitly **not approved for training**; an independent 40-group review packet is pending. The pinned model has five published weight shards totaling ~15.26 GiB, but no weights were downloaded, GPU Job submitted, or model call made. [中文准备报告](docs/KALI_QWEN_SECOND_BASE_PREP_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-qwen-second-base-prep-2026-10-28/summary.json). Offline check: `python3 scripts/verify-kali-qwen-second-base-prep-public.py`.
+
 ## October 28 — second-base decision and Qwen3-8B preflight
 
 Selected public, Apache-2.0-labelled `Qwen/Qwen3-8B` as a future general-model control alongside the specialized RedSage-K. Tokenizer-only checks passed on all 240 existing TRAIN prompts. Qwen's native prompt does **not** end at the open `<think>` token required by the prior RedSage worker, so swapping model IDs would invalidate that run. A full second-base training cycle is deferred until data review and a separate model-native protocol are complete. No weights, model inference, GPU job, optimizer step or official TEST were used. [中文决策与预检](docs/KALI_SECOND_BASE_DECISION_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-qwen3-8b-second-base-2026-10-28/summary.json). Offline check: `python3 scripts/verify-kali-second-base-preflight-public.py`.

@@ -1,0 +1,13 @@
+{
+  "schema": "kali.qwen.second-base-prep.public.v1",
+  "file_sha256": {
+    ".gitignore": "418c165a5c9fe710a2f75e2fc1618860cd03c6ad15f60db491b52e5d04cdf3c5",
+    "docs/KALI_QWEN_SECOND_BASE_PREP_ZH_2026-10-28.md": "aba15bc98c4eb809ec1ecb17f85c96ccef2507ecb3be4ddbc3ab8460d8d1f397",
+    "configs/kali-qwen-second-base-prep.json": "da32178a5dd0bf43605fdb5e560746d10d183f9129c8ee4f24b27d1901511190",
+    "configs/kali-qwen-second-base-gpu-smoke.draft.json": "5c02d6e238adfb4906d7672e692c67689d20125daea46e4eec42ab108f1ab2f2",
+    "scripts/prepare-kali-qwen-second-base-train.py": "e9e80e4dcbd6b7b796d29742ad64597e8d96c7a5f415d07ff7275bc18a86e51c",
+    "scripts/check-kali-qwen-second-base-prep.py": "7328527c51fed222223e127fc8275e67e1512363cc984ba2e80b2517305735ce",
+    "results/kali-qwen-second-base-prep-2026-10-28/summary.json": "51dd66926825fc49e6d23f47550cbf3229d658eaf7deef979c23c794ea00f0fa",
+    "scripts/verify-kali-qwen-second-base-prep-public.py": "6cfde65e381c21e2d59a4cbf2e09b2324773df2f9cf59e2c49e10c7926f46777"
+  }
+}

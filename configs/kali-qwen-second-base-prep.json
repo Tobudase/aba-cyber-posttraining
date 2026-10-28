@@ -1,0 +1,23 @@
+{
+  "schema": "kali.qwen.second-base.prep.v1",
+  "status": "TOKENIZER_PREP_ONLY_NO_TRAINING_AUTHORIZATION",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "train_source": "data/benchkit/kali-verified-sft-v1/train.jsonl",
+  "train_sha256": "6dc7f2ce004703a7266d2f1008bf2f5c058b090087fc5f71d0b36ceb72425834",
+  "train_rows_expected": 240,
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "prompt_source_sha256": "7f0b39d6ab9e9fa0fd86bede0a6476506c7b2d7e7095a9527738b2f367d25118",
+  "prompt_mode": "official Qwen3 tokenizer chat template with enable_thinking=false",
+  "expected_prompt_suffix": "<think>\n\n</think>\n\n",
+  "target_format": "<output>\n{verified_gold_command}\n</output><|im_end|>",
+  "max_sequence_tokens": 2048,
+  "labels": "-100 for every prompt token; target tokens and EOS supervised",
+  "inputs_permitted": ["existing TRAIN only"],
+  "excluded_inputs": ["DEV", "exposed confirmation", "official TEST", "external teacher"],
+  "decoded_target_roundtrip_required": true,
+  "independent_human_review_required_before_training": true,
+  "independent_source_holdout_required_before_model_selection": true,
+  "new_GPU_jobs": 0,
+  "new_model_calls": 0
+}
