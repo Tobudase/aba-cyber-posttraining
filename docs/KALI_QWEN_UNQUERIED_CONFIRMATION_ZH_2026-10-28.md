@@ -36,6 +36,12 @@
 
 [公开机械审计汇总](../results/kali-qwen-confirmation-2026-10-28/mechanical-triage.json)不含逐题内容；[审计脚本](../scripts/audit-kali-qwen-confirmation-errors.py)可在持有私有数据时复算。13 条原始问题、标准命令和模型输出仍留在私有审核包，独立人工语义审核尚未完成。
 
+## 工具文档初审发现的标签问题
+
+在进一步的 **AI 文档初审**中，9 条自动评分“转对”有 7 条得到相应工具说明支持，另有 1 条 `lvmconfig` 的题目／参考命令冲突、1 条 `hardlink` 的“扫描”要求与可能修改文件的行为存在歧义。尤其是 [`lvmconfig` 手册](https://man7.org/linux/man-pages/man8/lvmconfig.8.html)将 `--file` 定义为**输出文件**，但题目把它当作待验证的配置文件输入；不能把该条自动转对视为已证实的实际成功。[`hardlink` 手册](https://www.man7.org/linux/man-pages/man1/hardlink.1.html)则说明 `--dry-run`／`--list-duplicates` 才是不修改文件的查看方式，且 `--include` 与 `--exclude` 并用时有重新纳入的语义。两题都需核对目标工具版本和人工裁定，不应直接执行可能修改配置或文件的参考命令。
+
+**原始冻结自动指标继续保留为 18/87→26/87。** 仅排除有文档冲突的 `lvmconfig` 一题，敏感性结果为 **18/86→25/86**；这仍不是人工确认后的总体正确率，因为剩余 74 条未变化题尚未逐条语义审核，`hardlink` 也未裁定。本轮没有运行任何题目命令、新模型推理或训练。[公开分类汇总](../results/kali-qwen-confirmation-2026-10-28/source-review-summary.json)不含逐题问题和输出；私有逐题审查单等待独立人工签核。
+
 ## 解释与下一步
 
 新划出的未查询命令组上，提升方向与上一轮一致，说明上一轮增益并非只发生在已查看的 128 条题上。但两批题都来自官方 TRAIN 的内部划分，标签是发布方核验的银标；当前只有一个训练种子，样本量有限，尚无独立来源盲测、逐题专家复核或跨工具收益。**保留原来的 RedSage-K 作为正式默认底座，不自动提升 Qwen 适配器。**

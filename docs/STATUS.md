@@ -4,6 +4,8 @@ The KaliBench track now has a completed Qwen3-8B fixed SFT and a separate, froze
 
 This is an internal development signal with publisher silver labels, one seed and no independent-source blind validation. It is **not** an official KaliBench leaderboard score, an ABA automated data-generation/search result, or a CyberGym transfer result. The original RedSage-K remains the formal default. The next scientific steps are independent semantic review of the 13 changed/truncated cases, a source-separated frozen holdout, and then a matched replication or ABA experiment if warranted. All owned confirmation GPU objects were cleaned. [Result figure](../results/kali-qwen-confirmation-2026-10-28/before-after.png) · [Chinese report](KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](../results/kali-qwen-confirmation-2026-10-28/summary.json).
 
+A subsequent **AI documentation review**, not independent human approval, found one disputed `lvmconfig` reference among the nine automatically scored gains and one ambiguous `hardlink` task. Excluding only the disputed reference gives 18/86 → 25/86 as a sensitivity result; the original automatic metric remains unchanged. [Aggregate source review](../results/kali-qwen-confirmation-2026-10-28/source-review-summary.json).
+
 The dated sections below preserve earlier states and are superseded by this update.
 
 ## Historical CUDA/ABA preparation — October 23

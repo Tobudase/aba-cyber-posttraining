@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PILOT = ROOT / "results/kali-qwen-official-executed-pilot-2026-10-28/cycle-summary.json"
 CONFIRM = ROOT / "results/kali-qwen-confirmation-2026-10-28/summary.json"
 TRIAGE = ROOT / "results/kali-qwen-confirmation-2026-10-28/mechanical-triage.json"
+SOURCE_REVIEW = ROOT / "results/kali-qwen-confirmation-2026-10-28/source-review-summary.json"
 OUT = CONFIRM.parent
 
 
@@ -26,11 +27,15 @@ def main():
     pilot = json.loads(PILOT.read_text())
     confirm = json.loads(CONFIRM.read_text())
     triage = json.loads(TRIAGE.read_text())
+    source_review = json.loads(SOURCE_REVIEW.read_text())
     assert pilot["model_id"] == confirm["model_id"] == "Qwen/Qwen3-8B"
     assert pilot["saved_adapter_sha256"] == confirm["prior_adapter_sha256"]
     assert pilot["optimizer_steps"] == 512 and confirm["optimizer_steps_this_run"] == 0
     assert pilot["official_TEST_rows_opened"] == confirm["official_TEST_rows_opened"] == 0
     assert triage["case_counts"] == {"gained": 9, "lost": 1, "both_wrong_truncated": 3}
+    assert source_review["reviewed_cases_with_independent_human_signoff"] == 0
+    assert source_review["sensitivity_excluding_disputed_lvmconfig_only"] == {
+        "baseline": 18, "post_sft": 25, "rows": 86}
 
     primary = confirm["sets"]["primary87"]
     unseen = confirm["sets"]["primary_tool_absent_from_train22"]
@@ -105,9 +110,9 @@ def main():
              fontsize=11, weight="bold", color="#983E37")
     fig.text(.07, .12, "The 22 unseen-tool rows are a subset of the 87; they show no net strict gain (5/22 -> 5/22).",
              fontsize=10.5)
-    fig.text(.07, .072, "Official TRAIN internal splits, publisher silver labels. No official TEST, external blind validation, or ABA search.",
+    fig.text(.07, .072, "AI document review flags one disputed reference and one ambiguous task; independent human review is pending.",
              fontsize=10, color="#516377")
-    fig.text(.07, .037, "This is a diagnostic, not an official leaderboard score. The original formal base remains unchanged.",
+    fig.text(.07, .037, "Publisher-silver TRAIN internal diagnostic, not official TEST or leaderboard. Original formal base unchanged.",
              fontsize=10, color="#516377")
 
     files = {}
@@ -122,7 +127,7 @@ def main():
         files[path.name] = sha(path)
     plt.close(fig)
     manifest = {"status": "RENDERED_FROM_PUBLIC_AGGREGATES", "matplotlib_version": plt.matplotlib.__version__,
-                "source_sha256": {p.name: sha(p) for p in (PILOT, CONFIRM, TRIAGE)},
+                "source_sha256": {p.name: sha(p) for p in (PILOT, CONFIRM, TRIAGE, SOURCE_REVIEW)},
                 "figure_sha256": files, "official_TEST_rows": 0}
     (OUT / "figure-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print("RENDERED_QWEN_CONFIRMATION_FIGURE")

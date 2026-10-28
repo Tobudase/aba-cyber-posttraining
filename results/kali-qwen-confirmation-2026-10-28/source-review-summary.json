@@ -1,0 +1,39 @@
+{
+  "status": "AI_SOURCE_REVIEW_COMPLETE_INDEPENDENT_HUMAN_PENDING",
+  "scope": "13 automated strict changes/truncations in predeclared primary87; AI document review, not independent human or runtime validation",
+  "counts": {
+    "AMBIGUOUS_TASK_OR_REFERENCE_PENDING_HUMAN": 1,
+    "FORMAT_FAILURE_BOTH_WRONG_PENDING_HUMAN": 3,
+    "REFERENCE_SEMANTICS_CONFLICT_PENDING_HUMAN": 1,
+    "SOURCE_SUPPORTED_GAIN_PENDING_HUMAN": 7,
+    "SOURCE_SUPPORTED_LOSS_PENDING_HUMAN": 1
+  },
+  "frozen_auto_primary_strict": {
+    "baseline": 18,
+    "post_sft": 26,
+    "rows": 87
+  },
+  "sensitivity_excluding_disputed_lvmconfig_only": {
+    "baseline": 18,
+    "post_sft": 25,
+    "rows": 86
+  },
+  "disputed_reference": {
+    "tool": "lvmconfig",
+    "issue": "Tool manual defines --file as an output file, while task wording treats it as the config file to validate.",
+    "evidence_url": "https://man7.org/linux/man-pages/man8/lvmconfig.8.html",
+    "status": "PENDING_VERSION_SPECIFIC_HUMAN_ADJUDICATION"
+  },
+  "ambiguous_reference": {
+    "tool": "hardlink",
+    "issue": "Task says scan while the documented tool can link files unless a non-mutating mode is used; include/exclude semantics also require review.",
+    "evidence_url": "https://www.man7.org/linux/man-pages/man1/hardlink.1.html",
+    "status": "PENDING_HUMAN_ADJUDICATION"
+  },
+  "reviewed_cases_with_independent_human_signoff": 0,
+  "other_primary_rows_not_semantically_reviewed": 74,
+  "official_TEST_rows": 0,
+  "new_model_calls": 0,
+  "commands_executed": 0,
+  "individual_question_or_command_released": false
+}

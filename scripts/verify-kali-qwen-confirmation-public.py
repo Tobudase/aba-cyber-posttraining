@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESULT = ROOT / "results/kali-qwen-confirmation-2026-10-28/summary.json"
 TRIAGE = ROOT / "results/kali-qwen-confirmation-2026-10-28/mechanical-triage.json"
+SOURCE_REVIEW = ROOT / "results/kali-qwen-confirmation-2026-10-28/source-review-summary.json"
 PILOT = ROOT / "results/kali-qwen-official-executed-pilot-2026-10-28/cycle-summary.json"
 FIGURE_DIR = ROOT / "results/kali-qwen-confirmation-2026-10-28"
 
@@ -78,12 +79,27 @@ def main():
     assert lengths["post_sft"]["max"] == 512
     assert lengths["baseline"]["at_512_token_cap"] == 0
     assert lengths["post_sft"]["at_512_token_cap"] == 3
+    source_review = json.loads(SOURCE_REVIEW.read_text())
+    assert source_review["status"] == "AI_SOURCE_REVIEW_COMPLETE_INDEPENDENT_HUMAN_PENDING"
+    assert source_review["frozen_auto_primary_strict"] == {"baseline": 18, "post_sft": 26, "rows": 87}
+    assert source_review["sensitivity_excluding_disputed_lvmconfig_only"] == {
+        "baseline": 18, "post_sft": 25, "rows": 86}
+    assert source_review["counts"] == {
+        "AMBIGUOUS_TASK_OR_REFERENCE_PENDING_HUMAN": 1,
+        "FORMAT_FAILURE_BOTH_WRONG_PENDING_HUMAN": 3,
+        "REFERENCE_SEMANTICS_CONFLICT_PENDING_HUMAN": 1,
+        "SOURCE_SUPPORTED_GAIN_PENDING_HUMAN": 7,
+        "SOURCE_SUPPORTED_LOSS_PENDING_HUMAN": 1}
+    assert source_review["reviewed_cases_with_independent_human_signoff"] == 0
+    assert source_review["other_primary_rows_not_semantically_reviewed"] == 74
+    assert source_review["individual_question_or_command_released"] is False
     figure = json.loads((FIGURE_DIR / "figure-manifest.json").read_text())
     assert figure["status"] == "RENDERED_FROM_PUBLIC_AGGREGATES"
     assert figure["official_TEST_rows"] == 0
     assert figure["source_sha256"] == {"cycle-summary.json": sha(PILOT),
                                        "summary.json": sha(RESULT),
-                                       "mechanical-triage.json": sha(TRIAGE)}
+                                       "mechanical-triage.json": sha(TRIAGE),
+                                       "source-review-summary.json": sha(SOURCE_REVIEW)}
     assert figure["figure_sha256"] == {name: sha(FIGURE_DIR / name)
                                         for name in ("before-after.png", "before-after.svg")}
     print(json.dumps({"status": "PUBLIC_AGGREGATE_ARITHMETIC_PASS",

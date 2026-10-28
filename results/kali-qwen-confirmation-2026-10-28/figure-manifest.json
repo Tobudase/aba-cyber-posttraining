@@ -4,11 +4,12 @@
   "source_sha256": {
     "cycle-summary.json": "99e4c592adfea8f245dd9cc30b7815034accb31d898ae8f5a4e74281d99b08e2",
     "summary.json": "d7c49b768f5c7ee647c5677b9385ba238afaa049a1a5e30d75cfd653d08d2148",
-    "mechanical-triage.json": "8ce6692c666a00ebb8c109d95fc9d0dae73d391b9a2eb0561b6485b4054d52fd"
+    "mechanical-triage.json": "8ce6692c666a00ebb8c109d95fc9d0dae73d391b9a2eb0561b6485b4054d52fd",
+    "source-review-summary.json": "ad87c4f710972e11e42f341d6991b3dd6ea4324b150654b3469a8eb320e61d7c"
   },
   "figure_sha256": {
-    "before-after.png": "bd11f3a2409a15b228d600d33f75ff5b8bbbcf0228ce20c8dd2c86473c5ba403",
-    "before-after.svg": "0c6981898069bf3c4a4988bef7251b7d0b93d2f056d6462321d67753b3bc443e"
+    "before-after.png": "d2ad4d4a330d125c17467cd3bf697356cf4ed9e83f591842ad892e291329b697",
+    "before-after.svg": "fc8fa9ff937da58d6257416c0c9dee0db8751e93512d61d5caf072d3ada4b011"
   },
   "official_TEST_rows": 0
 }
