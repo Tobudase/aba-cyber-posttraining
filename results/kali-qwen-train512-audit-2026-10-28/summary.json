@@ -1,0 +1,58 @@
+{
+  "status": "STATIC_AUDIT_COMPLETE_INDEPENDENT_HUMAN_REVIEW_PENDING",
+  "source_sha256": {
+    "train512": "14a89d7a4bc32de0272f8d5ef6f43c7142e99599a63d1b71d643c768bac8454d",
+    "dev128": "60dbcc3e47f2c8c4786eafa9ca445707cffcddb05067f03e5f309c5e9292e6c1",
+    "publisher_train3504": "93dc4ddff6d9df73bed4b9e92716470e7a73df513f5ca2f1b201c85f2329f909"
+  },
+  "scope": "KaliBench official TRAIN only; no official TEST, command execution, model call, or new training",
+  "row_counts": {
+    "train": 512,
+    "pilot_dev": 128,
+    "confirmation_primary": 87
+  },
+  "provenance": {
+    "publisher_model_accurate": 512,
+    "publisher_terminal_PASS_EXECUTED": 512,
+    "independently_human_verified": 0
+  },
+  "structure": {
+    "tools": 275,
+    "tools_with_one_train_row": 165,
+    "unique_normalized_queries": 512,
+    "unique_normalized_tool_command_groups": 503,
+    "repeated_tool_command_groups": 5,
+    "rows_in_repeated_tool_command_groups": 14,
+    "target_format_mismatches": 0
+  },
+  "lexical_review_cues": {
+    "gold_command_verbatim_substring_in_query": 5,
+    "long_gold_command_at_least_120_chars": 2,
+    "repeated_tool_command_group_within_train": 14,
+    "tool_has_single_train_example": 165
+  },
+  "cross_split_overlap": {
+    "pilot_dev128": {
+      "normalized_query": 0,
+      "normalized_tool_command_group": 0,
+      "tools_absent_from_train": 0
+    },
+    "confirmation_primary87": {
+      "normalized_query": 0,
+      "normalized_tool_command_group": 0,
+      "tools_absent_from_train": 22
+    }
+  },
+  "review_plan": {
+    "priority_queue_rows": 64,
+    "deterministic_sample_rows": 32,
+    "human_verdicts_recorded": 0,
+    "interpretation": "Every TRAIN row is queued privately; priority/sample lists are review aids, not certified labels."
+  },
+  "limitations": [
+    "Substring, shell-character and shlex flags are heuristics; they do not prove a bad label or command behavior.",
+    "Publisher execution and AI review do not replace independent semantic review with tool-version evidence.",
+    "DEV and confirmation rows share the publisher source family; neither is an independent-source test.",
+    "The 87-row confirmation has already been queried and remains a development diagnostic."
+  ]
+}

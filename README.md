@@ -20,11 +20,19 @@ One initial DEV prompt contained its reference command; excluding it leaves stri
 
 **Preliminary source review:** of the nine automatically scored gains on the primary set, seven are supported by tool documentation, one reference (`lvmconfig`) conflicts with its tool manual, and one (`hardlink`) needs task interpretation. Excluding only the disputed reference yields **18/86 → 25/86** as a sensitivity check; it does not replace the frozen automatic **18/87 → 26/87** result. No independent human semantic signoff has occurred. [Review summary](results/kali-qwen-confirmation-2026-10-28/source-review-summary.json).
 
+**TRAIN data audit:** all 512 SFT records match the frozen publisher-verified files and target format. They span 275 tools, but 165 tools have only one example; 14 records share five normalized tool-command groups. This is a read-only static audit, with **0 independently human-reviewed labels** and no new model run. [Chinese audit](docs/KALI_QWEN_TRAIN512_DATA_AUDIT_ZH_2026-10-28.md) · [Sanitized aggregate](results/kali-qwen-train512-audit-2026-10-28/summary.json) · [Next experiment draft](docs/KALI_QWEN_NEXT_EXPERIMENT_PROTOCOL_DRAFT_ZH_2026-10-28.md).
+
+An exploratory breakdown of the already queried 87-row set shows strict correctness **5→5** for 22 tools unseen in training, **9→12** for 37 rows whose tool appeared once, and **4→9** for 28 rows whose tool appeared at least twice. This is post hoc and cannot establish a causal coverage effect. [Aggregate breakdown](results/kali-qwen-train512-audit-2026-10-28/coverage-posthoc.json).
+
 [Full Chinese result and error audit](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Figure source](scripts/plot-kali-qwen-confirmation.py) · [Reproduction scope](docs/REPRODUCTION.md). Check the public arithmetic and figure hashes with `python3 scripts/verify-kali-qwen-confirmation-public.py`. Raw questions, predictions, labels, model weights and the adapter are not in this repository.
 
 ## Experiment log (newest first)
 
 The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
+## October 28 — Qwen3-8B TRAIN512 static audit and review preparation
+
+Rechecked the frozen 512-row publisher-verified official-TRAIN SFT set without running commands or model inference. All targets have the expected envelope; 512 normalized questions are unique, with 503 normalized tool-command groups. Five questions explicitly contain their reference command; these are review cues rather than proven leakage. A private all-row review queue, priority 64, deterministic sample 32, and blank independent 13-case adjudication form are ready. No human signoff, new SFT, official TEST, or independent-source result occurred. [中文数据审计](docs/KALI_QWEN_TRAIN512_DATA_AUDIT_ZH_2026-10-28.md) · [Aggregate](results/kali-qwen-train512-audit-2026-10-28/summary.json) · [Protocol draft](docs/KALI_QWEN_NEXT_EXPERIMENT_PROTOCOL_DRAFT_ZH_2026-10-28.md).
 
 ## October 28 — Qwen3-8B unqueried internal DEV confirmation
 

@@ -1,0 +1,34 @@
+{
+  "status": "POSTHOC_DESCRIPTIVE_COVERAGE_BREAKDOWN_ONLY",
+  "scope": "Already queried publisher-TRAIN internal primary87; no new model call, training or official TEST",
+  "source_sha256": {
+    "train512": "14a89d7a4bc32de0272f8d5ef6f43c7142e99599a63d1b71d643c768bac8454d",
+    "selection": "3b2008413724c42c679559d3869d1775bb5d7008e1c585e46be8d140c463e04b",
+    "baseline": "8c699249241fb6f94969d62c1aa0185c085a0df6005d08c1dece500d6a852c55",
+    "post_sft": "e277ee206378a11ee520adc2517eb3ba67fb92ad196e642ad5d67d2c5811f10e"
+  },
+  "train_tool_frequency_buckets": {
+    "0": {
+      "rows": 22,
+      "baseline_correct": 5,
+      "post_sft_correct": 5,
+      "gained": 1,
+      "lost": 1
+    },
+    "1": {
+      "rows": 37,
+      "baseline_correct": 9,
+      "post_sft_correct": 12,
+      "gained": 3,
+      "lost": 0
+    },
+    "2plus": {
+      "rows": 28,
+      "baseline_correct": 4,
+      "post_sft_correct": 9,
+      "gained": 5,
+      "lost": 0
+    }
+  },
+  "interpretation_limit": "Bucket selection is post hoc; small correlated samples and silver labels do not establish a causal training-frequency effect or independent-source generalization."
+}
