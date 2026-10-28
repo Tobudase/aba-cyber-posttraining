@@ -1,0 +1,71 @@
+{
+  "status": "ENGINEERING_INTAKE_PILOT_COMPLETE_HUMAN_REVIEW_PENDING",
+  "created_at_utc": "2026-10-28T06:48:02.755709+00:00",
+  "generation": {
+    "requested_NRP_model": "qwen3-small",
+    "bounded_public_context_requests": 2,
+    "responses_received": 0,
+    "request_outcomes": {
+      "TimeoutError": 2
+    },
+    "protected_examples_sent": 0,
+    "native_ABA_data_generation_executed": false,
+    "fallback_origin": "operator_authored_not_agent_generated"
+  },
+  "candidates": {
+    "total": 13,
+    "positive": 9,
+    "by_family": {
+      "jq": 5,
+      "openssl-dgst": 2,
+      "openssl-x509": 2
+    },
+    "deliberate_negative_controls": 4,
+    "new_independent_human_reviews": 0,
+    "training_eligible": 0,
+    "heldout_rows_created": 0,
+    "exact_old_train_dev_confirmation_query_or_command_overlap": 0
+  },
+  "validation": {
+    "Mac_positive_gold_passed": 9,
+    "Linux_positive_gold_passed": 9,
+    "cross_platform_stdout_sha256_identical": 9,
+    "negative_controls_rejected_before_execution": 4,
+    "negative_control_reasons": {
+      "missing_fixture": 1,
+      "non_fixture_path": 1,
+      "unsafe_shell_syntax": 1,
+      "write_option": 1
+    },
+    "Linux_CPU_cores": 1,
+    "Linux_RAM_GiB": 2,
+    "Linux_GPU_count": 0,
+    "Linux_host_seconds": 56.49,
+    "owned_cluster_objects_remaining": 0
+  },
+  "provenance": {
+    "private_candidate_file_sha256": "549ba4c263522994fb3421d18c21138f336b14a014e122e72362f30eb4da2e8c",
+    "synthetic_fixture_sha256": {
+      "events.json": "6f770a1f5470778ebe40da7cbec7d9245984809b41a52affab6c9e1dee239f79",
+      "evidence.txt": "5897fd47965e914e4c70ecb11ba1f0770dffc11785fea065713251ae6651201f",
+      "lab_cert.pem": "9f0a44485f597876cfa3531dd9e5601da54e7f08f19a2b344c741d7a8e44237d"
+    },
+    "source_urls": [
+      "https://jqlang.org/manual/",
+      "https://docs.openssl.org/master/man1/openssl-dgst/",
+      "https://docs.openssl.org/master/man1/openssl-x509/"
+    ],
+    "source_document_text_copied": false,
+    "source_license_review_complete": false,
+    "independent_source_holdout_established": false
+  },
+  "scientific_decision": {
+    "eligible_for_training": false,
+    "reason": "Operator-authored engineering pilot; no native ABA proposals, independent human gold review or independent-source holdout.",
+    "prior_confirmation_gate_changed": false,
+    "formal_default": "original_base",
+    "official_test_calls": 0,
+    "new_optimizer_steps": 0
+  },
+  "private_task_bodies_or_commands_released": false
+}

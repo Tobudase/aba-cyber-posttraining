@@ -1,0 +1,13 @@
+{
+  "status": "AGGREGATE_ONLY_DATA_INTAKE_PILOT",
+  "parent_commit": "26bccc134686e133891651ca5fd0ad4434293364",
+  "file_sha256": {
+    "docs/KALI_NEXT_DATA_PILOT_ZH_2026-10-27.md": "98f34c9e500247fc3297cd6660e10f72ff33dbc52809346a3e035ce8be9c4ce6",
+    "results/kali-bf16-confirmation-2026-10-26/summary.json": "a408fcdfd1ea914cc25b8cdafdc965b57a304fb251785e4646ee5192a247b3df",
+    "results/kali-next-data-pilot-2026-10-27/summary.json": "e5ade21d530976dd7485f2d192b302fdc6caaaa168c6e1eda4aa7c98132652d4",
+    "results/kali-posthoc-audit-2026-10-27/audit.json": "a938f65813e1108f074382f008ba31888d79e80eb3b580d5edaa82cc41b60dfd",
+    "scripts/verify-kali-next-data-pilot-public.py": "8c3380fa27d9188eff78c87559ce0a801f405ec57a7201d2d2b7d004dfbee4d2"
+  },
+  "private_tasks_or_fixtures_released": false,
+  "prior_confirmation_gate_changed": false
+}
