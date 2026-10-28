@@ -1,0 +1,35 @@
+{
+  "schema": "kali.qwen.unqueried-official-train-dev.v1",
+  "status": "FROZEN_BEFORE_93_MODEL_OUTPUTS",
+  "source_file": "data/benchkit/kali-screened/train.jsonl",
+  "source_sha256": "650e6272807f2bfd88f6ba4b14a4ace53b3014880646f8e53c34ecb19b39d03e",
+  "prior_split_manifest": "data/benchkit/kali-qwen-official-executed-pilot-2026-10-28/manifest.json",
+  "prior_split_ids": "data/benchkit/kali-qwen-official-executed-pilot-2026-10-28/split-ids-private.json",
+  "prior_pilot_dev": "data/benchkit/kali-qwen-official-executed-pilot-2026-10-28/pilot_dev.jsonl",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "all_unqueried_rows": 93,
+  "primary_rows": 87,
+  "supplementary_rows_sharing_command_group_with_prior_dev": 6,
+  "primary_rule": "full_dev minus pilot_dev IDs, excluding normalized tool plus command groups seen in prior pilot_dev",
+  "primary_gold_command_embedded_in_prompt": 0,
+  "all93_gold_command_embedded_in_prompt": 1,
+  "train_rows_for_gradient": 0,
+  "official_TEST_rows": 0,
+  "inference": {
+    "prompt_mode": "official Qwen3 chat template enable_thinking=false",
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "seed": 3407,
+    "precision": "NF4 QLoRA with BF16 compute",
+    "base_then_saved_adapter": true
+  },
+  "predeclared_reporting": [
+    "primary87 native and strict metrics with paired transitions",
+    "secondary all93 metrics",
+    "22 primary rows with tools absent from pilot TRAIN512, separately",
+    "format, truncation, exact command and gain/loss counts"
+  ],
+  "no_protocol_tuning_after_outputs": true
+}

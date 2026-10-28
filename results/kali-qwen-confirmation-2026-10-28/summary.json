@@ -1,0 +1,191 @@
+{
+  "status": "CONFIRMED_UNQUERIED_INTERNAL_DEV_AGGREGATE",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "origin": "KaliBench-Verified official TRAIN internal holdout; publisher silver labels, not independent expert gold",
+  "primary_rule": "previously unqueried remaining DEV; exclude 6 normalized tool+gold-command groups shared with prior 128 DEV",
+  "prior_train_rows": 512,
+  "prior_dev_rows": 128,
+  "all_unqueried_rows": 93,
+  "primary_rows": 87,
+  "primary_gold_command_embedded_in_prompt": 0,
+  "primary_normalized_group_overlap_with_train_or_prior_dev": 0,
+  "primary_tools": 86,
+  "primary_rows_with_tool_absent_from_train": 22,
+  "prior_training_optimizer_steps": 512,
+  "optimizer_steps_this_run": 0,
+  "official_TEST_rows_opened": 0,
+  "ABA_search_executed": false,
+  "independent_external_validation": false,
+  "automatic_model_promotion": false,
+  "GPU": "NVIDIA GeForce RTX 3090",
+  "GPU_count": 1,
+  "precision": "NF4_QLORA_BF16_COMPUTE",
+  "greedy_decoding": true,
+  "max_new_tokens": 512,
+  "seed": 3407,
+  "worker_wall_seconds": 1299.71,
+  "peak_cuda_allocated_bytes": 10147383808,
+  "sets": {
+    "primary87": {
+      "rows": 87,
+      "baseline": {
+        "strict_correct_count": 18,
+        "exact_command_count": 14,
+        "total_score": 61.52830991911451,
+        "exact_match": 20.689655172413794,
+        "format_error": 0.0,
+        "complete_output_blocks": 87,
+        "truncated_rows": 0
+      },
+      "post_sft": {
+        "strict_correct_count": 26,
+        "exact_command_count": 22,
+        "total_score": 69.06312716657544,
+        "exact_match": 31.03448275862069,
+        "format_error": 3.4482758620689653,
+        "complete_output_blocks": 84,
+        "truncated_rows": 3
+      },
+      "paired": {
+        "strict": {
+          "both_correct": 17,
+          "gained": 9,
+          "lost": 1,
+          "both_wrong": 60
+        },
+        "exact_command": {
+          "both_correct": 14,
+          "gained": 8,
+          "lost": 0,
+          "both_wrong": 65
+        }
+      }
+    },
+    "all93": {
+      "rows": 93,
+      "baseline": {
+        "strict_correct_count": 23,
+        "exact_command_count": 19,
+        "total_score": 63.29350856232576,
+        "exact_match": 24.731182795698924,
+        "format_error": 0.0,
+        "complete_output_blocks": 93,
+        "truncated_rows": 0
+      },
+      "post_sft": {
+        "strict_correct_count": 31,
+        "exact_command_count": 27,
+        "total_score": 70.34220856801502,
+        "exact_match": 34.40860215053764,
+        "format_error": 3.225806451612903,
+        "complete_output_blocks": 90,
+        "truncated_rows": 3
+      },
+      "paired": {
+        "strict": {
+          "both_correct": 22,
+          "gained": 9,
+          "lost": 1,
+          "both_wrong": 61
+        },
+        "exact_command": {
+          "both_correct": 19,
+          "gained": 8,
+          "lost": 0,
+          "both_wrong": 66
+        }
+      }
+    },
+    "primary_tool_absent_from_train22": {
+      "rows": 22,
+      "baseline": {
+        "strict_correct_count": 5,
+        "exact_command_count": 4,
+        "total_score": 64.84848484848484,
+        "exact_match": 22.727272727272727,
+        "format_error": 0.0,
+        "complete_output_blocks": 22,
+        "truncated_rows": 0
+      },
+      "post_sft": {
+        "strict_correct_count": 5,
+        "exact_command_count": 5,
+        "total_score": 71.76767676767676,
+        "exact_match": 22.727272727272727,
+        "format_error": 4.545454545454546,
+        "complete_output_blocks": 21,
+        "truncated_rows": 1
+      },
+      "paired": {
+        "strict": {
+          "both_correct": 4,
+          "gained": 1,
+          "lost": 1,
+          "both_wrong": 16
+        },
+        "exact_command": {
+          "both_correct": 4,
+          "gained": 1,
+          "lost": 0,
+          "both_wrong": 17
+        }
+      }
+    },
+    "all93_without_prompt_embedded_gold92": {
+      "rows": 92,
+      "baseline": {
+        "strict_correct_count": 22,
+        "exact_command_count": 18,
+        "total_score": 62.89452495974235,
+        "exact_match": 23.91304347826087,
+        "format_error": 0.0,
+        "complete_output_blocks": 92,
+        "truncated_rows": 0
+      },
+      "post_sft": {
+        "strict_correct_count": 30,
+        "exact_command_count": 26,
+        "total_score": 70.01984126984127,
+        "exact_match": 33.69565217391305,
+        "format_error": 3.260869565217391,
+        "complete_output_blocks": 89,
+        "truncated_rows": 3
+      },
+      "paired": {
+        "strict": {
+          "both_correct": 21,
+          "gained": 9,
+          "lost": 1,
+          "both_wrong": 61
+        },
+        "exact_command": {
+          "both_correct": 18,
+          "gained": 8,
+          "lost": 0,
+          "both_wrong": 66
+        }
+      }
+    }
+  },
+  "primary_strict_gain_distinct_tools": 9,
+  "primary_strict_loss_distinct_tools": 1,
+  "post_sft_primary_truncated_all_both_wrong": true,
+  "private_selection_manifest_sha256": "1c451805565fb54b0c00ff9ac9d99a39ebc05d93890b6ea435eac939f254ea2b",
+  "private_protocol_sha256": "d8928fb06642e6801f0f87c944043d8592f1289f0f9f655795184b647ed81b25",
+  "private_GPU_receipt_sha256": "7814f116e3e0ada65465688ea7764816cd98515fc9abe3f465ef2d84a1fd4307",
+  "private_score_receipt_sha256": "1529f7bdf7a96b812594be27a3316ad9f004f5ce2e76bdc97e0e72b6d5d72730",
+  "private_baseline_predictions_sha256": "8c699249241fb6f94969d62c1aa0185c085a0df6005d08c1dece500d6a852c55",
+  "private_post_predictions_sha256": "e277ee206378a11ee520adc2517eb3ba67fb92ad196e642ad5d67d2c5811f10e",
+  "prior_adapter_sha256": "80f1d149ef1dbb8ab21de571bc4f0a950da28227dcffda5197b6b2f145cd6054",
+  "public_config_sha256": "d1cd838d919f8805085c660ba3d46f1c3d8dda7b87a2d5bc2d92d0e4fef9f56e",
+  "public_worker_sha256": "28d53b3c075191f9c5c8a68d4be74249b4329e6382eb2f5d93e0e8f1119e7906",
+  "limitations": [
+    "One seed and internal official-TRAIN holdout; not official TEST or an external blind benchmark score.",
+    "The 87-row primary set excludes exact normalized tool+gold-command groups from prior DEV and TRAIN; semantic near-duplicates and pretraining exposure remain possible.",
+    "Publisher verification is silver and each changed case still awaits independent expert judgment.",
+    "No strict gain among 22 primary rows using tools absent from TRAIN512.",
+    "Three post-SFT outputs newly truncated at 512 tokens; all were incorrect before and after.",
+    "This fixed SFT confirmation did not run ABA automated data generation or model search."
+  ]
+}
