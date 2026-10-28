@@ -1,0 +1,43 @@
+{
+  "schema": "kali.qwen.official.executed-pilot.encoding.v1",
+  "status": "FROZEN_BEFORE_QWEN_MODEL_OUTPUTS",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "split_manifest": "data/benchkit/kali-qwen-official-executed-pilot-2026-10-28/manifest.json",
+  "prompt_mode": "official Qwen3 tokenizer chat template with enable_thinking=false",
+  "expected_prompt_suffix": "<think>\n\n</think>\n\n",
+  "target": "exact publisher <output> block plus EOS",
+  "train_labels": "prompt tokens -100; target and EOS supervised",
+  "max_train_sequence_tokens": 2048,
+  "inference": {
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "batch_size_initial": 4,
+    "temperature": null,
+    "seed": 3407,
+    "response_extraction": "official KaliBench <output> parser with separate exact-command diagnostic"
+  },
+  "training_pilot": {
+    "epochs": 1,
+    "max_optimizer_steps": 512,
+    "learning_rate": 0.00002,
+    "batch_size": 1,
+    "LoRA_rank": 16,
+    "LoRA_alpha": 32,
+    "LoRA_dropout": 0,
+    "LoRA_targets": ["q_proj", "v_proj"],
+    "all_layers": true,
+    "precision": "BF16",
+    "fixed_recipe_not_ABA_search": true
+  },
+  "evaluation": {
+    "development_rows": 128,
+    "official_TEST_rows": 0,
+    "independent_expert_gold_claimed": false,
+    "predeclared_reporting": ["native tool/optional/positional/total/exact", "exact command string", "format and truncation", "paired transitions"],
+    "automatic_model_promotion": false
+  },
+  "official_TEST_rows_opened": 0,
+  "commands_executed": 0
+}
