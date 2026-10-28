@@ -1,0 +1,117 @@
+{
+  "status": "COMPLETED_MATCHED_INTERNAL_DEV_QWEN_QLORA_PILOT",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "checkpoint_source": "Qwen/Qwen3-8B pinned revision, hash-verified all 11 files",
+  "GPU": "NVIDIA GeForce RTX 3090",
+  "GPU_count": 1,
+  "precision": "NF4 QLoRA with BF16 compute",
+  "train_rows": 512,
+  "dev_rows": 128,
+  "dev_origin": "publisher KaliBench-Verified official TRAIN internal split",
+  "data_quality": "publisher model ACCURATE plus terminal PASS_EXECUTED; silver, not independent expert gold",
+  "optimizer_steps": 512,
+  "epochs": 1,
+  "LoRA_rank": 16,
+  "LoRA_alpha": 32,
+  "LoRA_targets": [
+    "q_proj",
+    "v_proj"
+  ],
+  "learning_rate": 2e-05,
+  "seed": 3407,
+  "max_new_tokens": 512,
+  "greedy_decoding": true,
+  "baseline": {
+    "tool_score": 71.09375,
+    "optional_f1": 40.95548115079365,
+    "positional_f1": 56.11855158730159,
+    "total_score": 56.055927579365076,
+    "exact_match": 23.4375,
+    "strict_option_value_correct": 22.65625,
+    "exact_command_match": 19.53125,
+    "format_error": 2.34375,
+    "complete_output_blocks": 125,
+    "truncated_rows": 3,
+    "runtime_failed_rows": 3
+  },
+  "post_sft": {
+    "tool_score": 85.9375,
+    "optional_f1": 55.583457341269835,
+    "positional_f1": 65.77256944444444,
+    "total_score": 69.09784226190476,
+    "exact_match": 34.375,
+    "strict_option_value_correct": 33.59375,
+    "exact_command_match": 28.125,
+    "format_error": 0.0,
+    "complete_output_blocks": 128,
+    "truncated_rows": 0,
+    "runtime_failed_rows": 0
+  },
+  "strict_correct_counts": {
+    "baseline": 29,
+    "post_sft": 43
+  },
+  "exact_command_correct_counts": {
+    "baseline": 25,
+    "post_sft": 36
+  },
+  "paired_transitions": {
+    "strict": {
+      "both_correct": 26,
+      "gained": 17,
+      "lost": 3,
+      "both_wrong": 82
+    },
+    "exact_command": {
+      "both_correct": 24,
+      "gained": 12,
+      "lost": 1,
+      "both_wrong": 91
+    }
+  },
+  "strict_gain_distinct_tools": 16,
+  "strict_loss_distinct_tools": 3,
+  "official_TEST_rows_opened": 0,
+  "development_gradient_rows": 0,
+  "benchmark_official_score": null,
+  "independent_external_validation": false,
+  "ABA_search_executed": false,
+  "automatic_model_promotion": false,
+  "wall_seconds": 2122.95,
+  "staging_seconds": 295.05,
+  "peak_cuda_allocated_bytes": 10275639296,
+  "saved_adapter_bytes": 30690184,
+  "saved_adapter_sha256": "80f1d149ef1dbb8ab21de571bc4f0a950da28227dcffda5197b6b2f145cd6054",
+  "saved_adapter_hash_reverified_on_PVC": true,
+  "owned_GPU_job_pod_configmap_remaining": 0,
+  "protocol_sha256": "c27975b46ff9a63fd10947d2c9eafc5d2fe3544d987e88611eef3d8f1e7f599b",
+  "worker_sha256": "6c6b630b5a4ff70c7e8bb8433172de4c53db251c561974be23bc1ad80da23653",
+  "private_GPU_receipt_sha256": "feed815960e697cb67766875eaac8feeb4d7dabb78e84f861d0e774f1bd9619f",
+  "private_score_receipt_sha256": "9a386a5c4be10200825cf62cc923fa09e0b8469822b60e70750c847ed6b27c34",
+  "private_baseline_predictions_sha256": "c4cf752a2bd796eb64248e4ff79ad1ad93b1ce7d0dded2cc0e9331be598946e5",
+  "private_post_predictions_sha256": "6c35c2d75cd6f706ad6f4cbde6691fc29d1374a00cfc8a2885df8ff5a67a3c18",
+  "limitations": [
+    "One seed and 128 internal development rows, not official TEST or blinded external validation.",
+    "One internal DEV prompt contains the exact target command; excluding it leaves strict 28/127 to 42/127.",
+    "Data are publisher-verified silver labels; no per-row independent expert gold.",
+    "The general Qwen base may have seen related material in pretraining; contamination cannot be ruled out.",
+    "Exact command metric penalizes valid alternative commands; native metric can ignore wrong option values.",
+    "NF4 3090 result cannot be directly compared with earlier BF16 RedSage results.",
+    "Fixed SFT only; ABA automated search and task generation were not run."
+  ],
+  "prompt_embeds_exact_gold_command": {
+    "train_rows": 4,
+    "dev_rows": 1,
+    "dev_row_correct_in_baseline_and_post_sft": true
+  },
+  "sensitivity_excluding_prompt_embedded_gold_dev_row": {
+    "rows": 127,
+    "strict_correct_baseline": 28,
+    "strict_correct_post_sft": 42,
+    "strict_percent_baseline": 22.04724409448819,
+    "strict_percent_post_sft": 33.07086614173229,
+    "exact_command_baseline": 24,
+    "exact_command_post_sft": 35
+  }
+}
