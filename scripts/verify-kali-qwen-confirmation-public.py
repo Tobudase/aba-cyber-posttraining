@@ -9,6 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESULT = ROOT / "results/kali-qwen-confirmation-2026-10-28/summary.json"
 TRIAGE = ROOT / "results/kali-qwen-confirmation-2026-10-28/mechanical-triage.json"
+PILOT = ROOT / "results/kali-qwen-official-executed-pilot-2026-10-28/cycle-summary.json"
+FIGURE_DIR = ROOT / "results/kali-qwen-confirmation-2026-10-28"
 
 
 def sha(path):
@@ -76,6 +78,14 @@ def main():
     assert lengths["post_sft"]["max"] == 512
     assert lengths["baseline"]["at_512_token_cap"] == 0
     assert lengths["post_sft"]["at_512_token_cap"] == 3
+    figure = json.loads((FIGURE_DIR / "figure-manifest.json").read_text())
+    assert figure["status"] == "RENDERED_FROM_PUBLIC_AGGREGATES"
+    assert figure["official_TEST_rows"] == 0
+    assert figure["source_sha256"] == {"cycle-summary.json": sha(PILOT),
+                                       "summary.json": sha(RESULT),
+                                       "mechanical-triage.json": sha(TRIAGE)}
+    assert figure["figure_sha256"] == {name: sha(FIGURE_DIR / name)
+                                        for name in ("before-after.png", "before-after.svg")}
     print(json.dumps({"status": "PUBLIC_AGGREGATE_ARITHMETIC_PASS",
                       "primary_strict": "18/87 -> 26/87", "unseen_tool_strict": "5/22 -> 5/22",
                       "official_TEST_rows": 0}))

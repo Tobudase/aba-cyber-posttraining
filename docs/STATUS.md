@@ -1,4 +1,12 @@
-# Current CUDA/ABA preparation — October 23
+# Current status — October 28, 2026
+
+The KaliBench track now has a completed Qwen3-8B fixed SFT and a separate, frozen internal confirmation. All data in these readouts came from **publisher-verified official TRAIN**, not official TEST. The 512-row, 512-step one-seed NF4 QLoRA study measured strict tool/option-value correctness **29/128 → 43/128** on initial internal DEV. On 87 previously unqueried, command-group-separated internal DEV rows, the same saved adapter measured **18/87 → 26/87** (nine gained, one lost). The 22 rows involving tools absent from TRAIN512 showed **5/22 → 5/22**. Three outputs newly hit the 512-token cap after SFT. One initial DEV prompt embedded its reference command; the 87-row primary confirmation contains none.
+
+This is an internal development signal with publisher silver labels, one seed and no independent-source blind validation. It is **not** an official KaliBench leaderboard score, an ABA automated data-generation/search result, or a CyberGym transfer result. The original RedSage-K remains the formal default. The next scientific steps are independent semantic review of the 13 changed/truncated cases, a source-separated frozen holdout, and then a matched replication or ABA experiment if warranted. All owned confirmation GPU objects were cleaned. [Result figure](../results/kali-qwen-confirmation-2026-10-28/before-after.png) · [Chinese report](KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](../results/kali-qwen-confirmation-2026-10-28/summary.json).
+
+The dated sections below preserve earlier states and are superseded by this update.
+
+## Historical CUDA/ABA preparation — October 23
 
 See [latest preparation and blocker](KALI_CUDA_ABA_PREPARATION_2026-10-23.md). No new GPU allocation/results; ordinary quota admission restored, hardware scheduling unavailable during bounded attempts. Native config/bwrap preflight only; actual ABA domain cycle pending. All owned cycle resources cleaned and VM stopped.
 
@@ -33,7 +41,7 @@ A preceding prefix control brought the earlier base and 20-step adapter to the s
 
 Read the [full report](KALI_DOC_SFT_REPORT_2026-10-23.md), [frozen comparison](verification/kali-doc-sft-v1-2026-10-22/comparison.json), and [public reproduction instructions](REPRODUCTION.md). Released: training data, 36 search-dev rows, scripts, predictions and receipts. New confirmation bodies and all tensors remain excluded. Actual ABA/CUDA integration and independent semantic validation are pending.
 
-# Current status — October 22, 2026
+## Historical status — October 22, 2026
 
 Minhao owns KaliBench; the collaborator owns AthenaBench. The real local RedSage8B affine4 cycle completed:72externaldev E0 61/72 Exact →20continuedSFT optimizer steps→same72E1 62/72. NativeTotal93.75→93.52;5gains4regressions, no reliable improvement. Keep the base. Training changed16LoRA tensors, persistedadapter reload delta0, peakMetal5.72GB. Independent4case token/stream/replay audit passed.
 
@@ -41,7 +49,7 @@ Official BF16/5,000-test evaluation and true ABA domain integration remain pendi
 
 ## Historical preparation snapshot
 
-# Current status
+## Historical status — October 21, 2026
 
 Updated October 21, 2026. Current preparation covers AthenaBench and KaliBench, with eventual transfer to CyberGym. Models and experiment protocols remain provisional.
 

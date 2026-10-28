@@ -1,3 +1,29 @@
+# ABA Cybersecurity Post-training Research
+
+Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
+
+## Current result — October 28, 2026
+
+A fixed 512-step NF4 QLoRA SFT run adapted **Qwen3-8B** using 512 publisher-verified KaliBench official-TRAIN examples. The same saved adapter was then compared with the unchanged base under a matched inference protocol. All sets below are **internal splits of official TRAIN**, with publisher silver labels; these are **not official benchmark or leaderboard scores**.
+
+| Strict tool + option-value diagnostic | Original Qwen3-8B | After fixed SFT | Reading |
+| --- | ---: | ---: | --- |
+| Initial internal DEV | 29/128 | 43/128 | Positive pilot signal |
+| Previously unqueried, command-group-separated primary DEV | 18/87 | 26/87 | 9 gained, 1 lost |
+| TRAIN-unseen tools within the primary 87 | 5/22 | 5/22 | No net cross-tool gain |
+
+![Qwen3-8B internal KaliBench SFT results: paired correctness and failure counts](results/kali-qwen-confirmation-2026-10-28/before-after.png)
+
+**Reliability limit:** three post-SFT outputs among all 93 previously unqueried inputs hit the 512-token cap and repeated content; the base had none. This is one training seed, with no independent-source blind validation or official TEST use. ABA automated data generation/search has **not** been run in this Qwen study. The original RedSage-K remains the formal default; the Qwen adapter is a candidate under review.
+
+One initial DEV prompt contained its reference command; excluding it leaves strict correctness **28/127 → 42/127**. The separately selected 87-row primary set has no prompt-embedded reference commands or exact normalized tool-plus-command overlap with the prior TRAIN/DEV sets. Semantic near-duplicates remain possible.
+
+[Full Chinese result and error audit](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Figure source](scripts/plot-kali-qwen-confirmation.py) · [Reproduction scope](docs/REPRODUCTION.md). Check the public arithmetic and figure hashes with `python3 scripts/verify-kali-qwen-confirmation-public.py`. Raw questions, predictions, labels, model weights and the adapter are not in this repository.
+
+## Experiment log (newest first)
+
+The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
 ## October 28 — Qwen3-8B unqueried internal DEV confirmation
 
 Froze 93 previously unqueried KaliBench official-TRAIN internal DEV inputs before generating any outputs. The predeclared primary 87 exclude six normalized tool+gold-command groups shared with earlier DEV and contain no prompt-embedded gold commands. With the same Qwen3-8B base and saved adapter, strict correctness rose **18/87 → 26/87** (9 gained, 1 lost); exact command matching rose **14/87 → 22/87**. Among 22 primary rows whose tools were absent from the 512-row TRAIN set, strict correctness stayed **5/22 → 5/22**. Mechanical case triage found three new 512-token repetitive truncations; independent semantic review is pending. This is a one-seed silver-label internal holdout result, not official TEST, external validation, or ABA. The original formal default remains unchanged. [中文复测与误差审计报告](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Aggregate results](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Mechanical triage](results/kali-qwen-confirmation-2026-10-28/mechanical-triage.json). Offline check: `python3 scripts/verify-kali-qwen-confirmation-public.py`.
@@ -122,7 +148,7 @@ Completed real128-step LoRA post-training of `RISys-Lab/RedSage-K-SFT-GRPO` (~8.
 
 This completion supersedes historical pending/running statements below. Do not relaunch the completed experiment. Published files contain general source, aggregate results and numerical receipt excerpts. Internal operational scripts, cluster metadata, weights, credentials, raw predictions and protected evaluation data are excluded.
 
-# ABA Cybersecurity Post-training Research
+## Historical project snapshot — October 23, 2026
 
 ## October 23: CUDA/ABA preflight ready; baseline waiting for hardware
 
@@ -142,7 +168,7 @@ ABA candidate and independently check journal/artifact provenance. This first
 integration does not enable adaptive data generation/search. New confirmation
 and official tests remain untouched. Read the [exact state and commands](docs/KALI_CUDA_ABA_PREPARATION_2026-10-23.md).
 
-Research code, traceable external pilot data, and engineering evidence for using an ABA agent to adapt open-weight language models on cybersecurity tasks.
+This section preserves the earlier preparation state; later results appear above.
 
 ## October 23: expanded data and frozen replay ablation completed
 
@@ -210,7 +236,7 @@ Start with [Kali pilot results and reproduction](docs/KALI_MLX_PILOT.md), [paire
 
 Start with the [current experiment preparation](docs/ATHENA_KALI_PROGRESS.md), [reproduction instructions](docs/REPRODUCTION.md), and [status](docs/STATUS.md). See [local prefix comparison](results/athena-prefix-comparison-2026-10-21.json) and [scoring evidence](results/benchkit-scorer-audit-summary.json).
 
-## Current provisional model pairs
+## Earlier provisional model pairs (historical)
 
 - Athena: [fdtn-ai/Foundation-Sec-8B-Reasoning](https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning), revision `63c930c82d7646226d33502bec5870019738400e`.
 - Kali: [RISys-Lab/RedSage-K-SFT-GRPO](https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO), revision `843e2e3096e7de68f5c35eb16238f4909f21695a`.
@@ -254,7 +280,7 @@ The [result summary](results/aba-synthetic-validation.json) and [exact generated
 
 CyberGym neutral-input tool checks, VulnLLM-R-7B CPU inference, Feyospace BF16 inference and two synthetic QLoRA steps remain available as historical engineering evidence. Their limitations are documented in [status](docs/STATUS.md) and the earlier reports. They are not current CTI baselines or domain-training results.
 
-## Next experiments
+## Initial experiment plan (historical)
 
 1. Verify the available GPU, CUDA runtime and disk capacity; choose and pin the actual model/protocol.
 2. Run the unchanged pretrained checkpoint on the fixed external development file.

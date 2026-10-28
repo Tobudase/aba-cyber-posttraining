@@ -1,5 +1,9 @@
 # KaliBench Qwen3-8B：未查询内部开发题复测（2026-10-28）
 
+![Qwen3-8B 训练前后内部开发题结果图](../results/kali-qwen-confirmation-2026-10-28/before-after.png)
+
+图中初始 128 条与新划出的主结果 87 条互不重叠；“训练未见工具”22 条是后者的子集。图由公开汇总生成，不使用或公开逐题材料；[绘图脚本](../scripts/plot-kali-qwen-confirmation.py)与[图文件哈希](../results/kali-qwen-confirmation-2026-10-28/figure-manifest.json)一并提供。
+
 ## 目的与事先锁定的划分
 
 上一轮以固定版本 Qwen3-8B、512 条 KaliBench-Verified 官方 **TRAIN** 记录做了 512 步 NF4 QLoRA SFT，并在 128 条同源内部开发题上观察到严格正确率 29/128→43/128。为了检验这一提升是否只出现在已经反复查看的开发题上，我们在生成新输出**之前**锁定剩余 93 条未查询的内部开发题、输入文件、模型版本、适配器哈希、推理设置和评分集合。没有再次训练，也没有读取官方 TEST。
