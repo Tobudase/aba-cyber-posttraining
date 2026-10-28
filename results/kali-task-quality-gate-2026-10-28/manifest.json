@@ -1,0 +1,7 @@
+{
+  "schema": "kali.task-quality.public.v1",
+  "file_sha256": {
+    "docs/KALI_TASK_QUALITY_GATE_ZH_2026-10-28.md": "4d9a86bc65c58dd52aa5dc18b5f1d5bc9c7418275df17fa2b68bbce34056589e",
+    "results/kali-task-quality-gate-2026-10-28/summary.json": "31507898fff57065f6464f2e32c1e1b557039b821ca3de49b0909db0dfbc0177"
+  }
+}

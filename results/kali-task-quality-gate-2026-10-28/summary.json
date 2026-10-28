@@ -1,0 +1,23 @@
+{
+  "status": "TASK_QUALITY_ENGINEERING_CHECK_COMPLETE_HUMAN_REVIEW_PENDING",
+  "date_pacific": "2026-10-28",
+  "control_model": "qwen3-small",
+  "model_proposals": 3,
+  "accepted_for_local_engineering_checks": 2,
+  "semantic_mismatch_rejected_before_execution": 1,
+  "synthetic_input_variants_per_accepted_proposal": 5,
+  "metamorphic_command_runs": 10,
+  "metamorphic_oracle_passes": 10,
+  "independent_human_reviews": 0,
+  "training_eligible": 0,
+  "native_ABA_data_generation_complete": false,
+  "new_linux_jobs": 0,
+  "new_gpu_jobs": 0,
+  "new_training_steps": 0,
+  "official_test_calls": 0,
+  "previous_confirmation_gate_changed": false,
+  "formal_default": "original_base",
+  "private_metamorphic_receipt_sha256": "5384db81bf324ef152296c0177f6663ecd004e25601bf6652ce14263db4637b3",
+  "private_local_validation_sha256": "598e08673d886d72e3d7548d4c46e3202a12488acb553fc3d431dd72eb9c43e7",
+  "raw_candidate_bodies_released": false
+}
