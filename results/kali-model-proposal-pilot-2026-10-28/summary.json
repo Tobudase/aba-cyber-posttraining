@@ -1,0 +1,30 @@
+{
+  "status": "MODEL_PROPOSAL_ENGINEERING_PILOT_COMPLETE_HUMAN_REVIEW_PENDING",
+  "date_pacific": "2026-10-28",
+  "provider": "NRP Anthropic-compatible",
+  "control_model": "qwen3-small",
+  "native_ABA_generation_complete": false,
+  "public_context_only": true,
+  "protected_examples_sent": 0,
+  "requests_this_round": 2,
+  "text_response_rejected": 1,
+  "structured_tool_responses": 1,
+  "model_proposals": 3,
+  "local_engineering_pass": 2,
+  "semantic_mismatch_rejected_before_execution": 1,
+  "linux_jobs_this_round": 0,
+  "gpu_jobs_this_round": 0,
+  "model_training_steps_this_round": 0,
+  "official_test_calls_this_round": 0,
+  "independent_human_reviews": 0,
+  "training_eligible": 0,
+  "previous_confirmation_gate_changed": false,
+  "formal_default": "original_base",
+  "private_candidate_sha256": "6423a25776bb994337ab7cf75a98574ca14e665d06f4e8345bf8bbebaf7d5ecb",
+  "private_validation_sha256": "598e08673d886d72e3d7548d4c46e3202a12488acb553fc3d431dd72eb9c43e7",
+  "private_candidate_bodies_released": false,
+  "public_sources": [
+    "https://nrp.ai/documentation/userdocs/ai/llm-managed/client-configs/",
+    "https://jqlang.org/manual/"
+  ]
+}

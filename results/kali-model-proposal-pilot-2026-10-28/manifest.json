@@ -1,0 +1,7 @@
+{
+  "schema": "kali.model-proposal.public.v1",
+  "file_sha256": {
+    "docs/KALI_MODEL_PROPOSAL_PILOT_ZH_2026-10-28.md": "7179504e59f739465cfa6f622589ad6bc58c0b4d30c2ba0b0129a8fc0b07a323",
+    "results/kali-model-proposal-pilot-2026-10-28/summary.json": "e2ee896636c9317cbedde338f953aaec3d8e135809e1f0dc6a6c17de649d5eec"
+  }
+}
