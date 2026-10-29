@@ -28,11 +28,17 @@ An exploratory breakdown of the already queried 87-row set shows strict correctn
 
 **October 29 AI source-review pilot:** seven TRAIN references with documented task/command conflicts were provisionally quarantined; 505 unique publisher-TRAIN rows then entered a real 512-step Qwen SFT run. On the same exposed internal DEV128, strict correctness was **44/128**, versus **43/128** for the original adapter and **39/128** for the blanket receipt screen. Exact gold-command matching was **36/128** for both the new and original adapters; native total score was slightly lower for the new one (**68.74 vs 69.10**). The remaining 42 receipt-flagged and 401 other rows are uncertified publisher silver, human signoffs remain **zero**, and there is no blind-source result. This is a development ablation, not a model promotion or official benchmark score. [Chinese review and result](docs/KALI_QWEN_AI_REVIEW_ZH_2026-10-29.md) · [Aggregate comparison](results/kali-qwen-ai-review-2026-10-29/comparison.json).
 
+**Next-stage preparation:** a private 52-case independent-review packet is ready (10 priority, 42 follow-up). A pinned, external CyBashBench source yielded 36 deduplicated command-generation review candidates across 24 tools, with no detected exact or high-similarity overlap against prior Qwen TRAIN/DEV records. All 36 still lack independent command-label review and target-version checks, so the gate reports **NOT_ADMITTED**: this is not a frozen blind holdout or a new model result. No additional model calls, GPU jobs or KaliBench official TEST use. [Chinese intake report](docs/KALI_QWEN_NEXT_GATE_ZH_2026-10-29.md) · [Aggregate](results/kali-qwen-next-gate-2026-10-29/summary.json).
+
 [Full Chinese result and error audit](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Figure source](scripts/plot-kali-qwen-confirmation.py) · [Reproduction scope](docs/REPRODUCTION.md). Check the public arithmetic and figure hashes with `python3 scripts/verify-kali-qwen-confirmation-public.py`. Raw questions, predictions, labels, model weights and the adapter are not in this repository.
 
 ## Experiment log (newest first)
 
 The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
+## October 29 — independent-review packet and external-source intake gate
+
+Prepared a private 52-case evidence packet and blank human review form; no signatures were inferred. Screened a pinned public CyBashBench task file down to 36 external-source NL-to-command candidates and ran a static, no-execution overlap gate against existing Qwen TRAIN512, DEV128 and exposed DEV93. No exact or thresholded near overlaps were found, but all 36 remain unadmitted because command semantics/tool versions have not been independently reviewed. This panel is a potential secondary transfer check, not a KaliBench domain blind set. [中文报告](docs/KALI_QWEN_NEXT_GATE_ZH_2026-10-29.md) · [Aggregates](results/kali-qwen-next-gate-2026-10-29/summary.json).
 
 ## October 29 — AI source review and 505-row development SFT
 

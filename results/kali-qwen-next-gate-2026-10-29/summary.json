@@ -1,0 +1,55 @@
+{
+  "status": "PREPARATION_ONLY_NO_HOLDOUT_ADMISSION",
+  "date_pacific": "2026-10-29",
+  "review_packet": {
+    "priority_cases": 10,
+    "followup_cases": 42,
+    "total_cases": 52,
+    "private_packet_sha256": "6893d5a82a055b2cd370c88c94800d3bf4ef0ff605895aa431031e437b73b453",
+    "independent_human_signoffs": 0
+  },
+  "external_candidate": {
+    "source": "CyBashBench via Lyptus Research cyber-task-horizons-data",
+    "source_repo": "https://github.com/lyptus-research/cyber-task-horizons-data",
+    "source_revision": "178c0da1800f9c07311e1b8d6c61dd8104e7b4ae",
+    "source_sha256": "3ad067b036d8d28cfd8cef23b594c635c7b040ce8494fd5466f9a88184334935",
+    "source_license_spdx": "CC-BY-4.0",
+    "source_rows": 200,
+    "selected_before_command_dedup": 37,
+    "duplicate_commands_removed": 1,
+    "candidate_rows": 36,
+    "candidate_tools": 24,
+    "category_counts": {
+      "crypto": 6,
+      "forensics": 10,
+      "pwn": 5,
+      "reverse": 6,
+      "web": 9
+    },
+    "shell_control_review_flags": 7,
+    "candidate_sha256": "ce33b68e4fd8d0860a81387b035897ac60125aee31432c5176119c8e8a4edd4a",
+    "gate_status": "NOT_ADMITTED",
+    "gate_issue_counts": {
+      "independent_review_missing": 36,
+      "tool_version_unverified": 36
+    },
+    "exact_or_near_prior_overlap_detected": 0,
+    "comparison_prior_files": [
+      "data/benchkit/kali-qwen-confirmation-2026-10-28/dev93-private.jsonl",
+      "data/benchkit/kali-qwen-official-executed-pilot-2026-10-28/pilot_dev.jsonl",
+      "data/benchkit/kali-qwen-official-executed-pilot-2026-10-28/pilot_train.jsonl"
+    ],
+    "human_label_signoffs": 0,
+    "target_tool_versions_verified": 0
+  },
+  "kali_official_TEST_rows": 0,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "new_GPU_jobs": 0,
+  "limitations": [
+    "CyBashBench metadata timing_source=human_reviewed is not a human command-label signoff.",
+    "The 36-row external panel is a candidate transfer/retention check, not an admitted blind KaliBench domain holdout.",
+    "Public dataset source separation and string/near-overlap checks do not prove pretraining nonexposure or semantic correctness.",
+    "The previous Qwen DEV128 is exposed and must not be used to tune this candidate panel."
+  ]
+}
