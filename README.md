@@ -26,11 +26,17 @@ An exploratory breakdown of the already queried 87-row set shows strict correctn
 
 **October 29 receipt-screen ablation:** a TRAIN-only check found 111/512 publisher `PASS_EXECUTED` receipts with environment-failure text or truncated output, despite zero exit codes. This is a review cue, not proof of bad command labels. A separate 401-unique-row, 512-step SFT candidate completed on one RTX3090 but scored **39/128** versus the original adapter's **43/128** on the same already exposed internal DEV; its post-training exact-command count was **32 vs 36**, with **1 vs 0** truncations. Screening removed all examples for 43 tools. Keep the original adapter; do not promote the screened candidate. [Chinese report](docs/KALI_QWEN_RECEIPT_SCREEN_ZH_2026-10-29.md) · [Aggregate comparison](results/kali-qwen-receipt-screen-2026-10-29/comparison.json).
 
+**October 29 AI source-review pilot:** seven TRAIN references with documented task/command conflicts were provisionally quarantined; 505 unique publisher-TRAIN rows then entered a real 512-step Qwen SFT run. On the same exposed internal DEV128, strict correctness was **44/128**, versus **43/128** for the original adapter and **39/128** for the blanket receipt screen. Exact gold-command matching was **36/128** for both the new and original adapters; native total score was slightly lower for the new one (**68.74 vs 69.10**). The remaining 42 receipt-flagged and 401 other rows are uncertified publisher silver, human signoffs remain **zero**, and there is no blind-source result. This is a development ablation, not a model promotion or official benchmark score. [Chinese review and result](docs/KALI_QWEN_AI_REVIEW_ZH_2026-10-29.md) · [Aggregate comparison](results/kali-qwen-ai-review-2026-10-29/comparison.json).
+
 [Full Chinese result and error audit](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Figure source](scripts/plot-kali-qwen-confirmation.py) · [Reproduction scope](docs/REPRODUCTION.md). Check the public arithmetic and figure hashes with `python3 scripts/verify-kali-qwen-confirmation-public.py`. Raw questions, predictions, labels, model weights and the adapter are not in this repository.
 
 ## Experiment log (newest first)
 
 The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
+## October 29 — AI source review and 505-row development SFT
+
+Reviewed the 111 receipt-flagged TRAIN records against primary tool documentation without running benchmark commands. Kept 62 with source-supported syntax, provisionally quarantined seven with source conflicts, and left 42 environment-confounded cases unresolved; the other 401 records were not independently reviewed. A bounded one-RTX3090 512-step SFT on the 505-row derivative completed and cleaned its GPU resources. Exposed internal DEV strict correctness was **29/128 before → 44/128 after**, one more than the original 512-row adapter, but exact gold-command matching stayed **36/128** and native total score was lower. No independent human signoff, official TEST use, blind validation, automatic promotion, or ABA data generation. [中文报告](docs/KALI_QWEN_AI_REVIEW_ZH_2026-10-29.md) · [Aggregates](results/kali-qwen-ai-review-2026-10-29/comparison.json).
 
 ## October 29 — terminal-receipt screen and negative SFT ablation
 

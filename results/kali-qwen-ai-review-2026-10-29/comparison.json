@@ -1,0 +1,95 @@
+{
+  "status": "EXPLORATORY_EXPOSED_INTERNAL_DEV_COMPARISON_NOT_BLIND",
+  "scope": "All arms use publisher official-TRAIN internal DEV128; zero official TEST and no source-separated blind evaluation",
+  "model_id": "Qwen/Qwen3-8B",
+  "baseline_responses_identical": true,
+  "results": {
+    "original512": {
+      "baseline": {
+        "strict_correct": 29,
+        "exact_gold_command": 25,
+        "truncated": 3,
+        "complete_output_block": 125,
+        "native_total_score": 56.055927579365076
+      },
+      "post_sft": {
+        "strict_correct": 43,
+        "exact_gold_command": 36,
+        "truncated": 0,
+        "complete_output_block": 128,
+        "native_total_score": 69.09784226190476
+      }
+    },
+    "receipt_screen401": {
+      "baseline": {
+        "strict_correct": 29,
+        "exact_gold_command": 25,
+        "truncated": 3,
+        "complete_output_block": 125,
+        "native_total_score": 56.055927579365076
+      },
+      "post_sft": {
+        "strict_correct": 39,
+        "exact_gold_command": 32,
+        "truncated": 1,
+        "complete_output_block": 127,
+        "native_total_score": 66.69064153439153
+      }
+    },
+    "ai_review505": {
+      "baseline": {
+        "strict_correct": 29,
+        "exact_gold_command": 25,
+        "truncated": 3,
+        "complete_output_block": 125,
+        "native_total_score": 56.055927579365076
+      },
+      "post_sft": {
+        "strict_correct": 44,
+        "exact_gold_command": 36,
+        "truncated": 0,
+        "complete_output_block": 128,
+        "native_total_score": 68.73821924603175
+      }
+    }
+  },
+  "paired_original_vs_ai_review_post_strict": {
+    "ai_review_only": 2,
+    "both_correct": 42,
+    "both_wrong": 83,
+    "original_only": 1
+  },
+  "source_sha256": {
+    "dev128": "60dbcc3e47f2c8c4786eafa9ca445707cffcddb05067f03e5f309c5e9292e6c1",
+    "original512_receipt": "feed815960e697cb67766875eaac8feeb4d7dabb78e84f861d0e774f1bd9619f",
+    "original512_baseline": "c4cf752a2bd796eb64248e4ff79ad1ad93b1ce7d0dded2cc0e9331be598946e5",
+    "original512_post_sft": "6c35c2d75cd6f706ad6f4cbde6691fc29d1374a00cfc8a2885df8ff5a67a3c18",
+    "receipt_screen401_receipt": "7ae07a0b0e7bae70014292aa84f28804c4305cdc762736276050eeab0e995ab1",
+    "receipt_screen401_baseline": "c4cf752a2bd796eb64248e4ff79ad1ad93b1ce7d0dded2cc0e9331be598946e5",
+    "receipt_screen401_post_sft": "404b0dcdf11f310c27509a8b8769364dbcf07ee2322d761132dcb09ec4905932",
+    "ai_review505_receipt": "6a233cefb3774a3acf07ced4fadb1272453dbb0eaccdcedb5e5830fc13227cdc",
+    "ai_review505_baseline": "c4cf752a2bd796eb64248e4ff79ad1ad93b1ce7d0dded2cc0e9331be598946e5",
+    "ai_review505_post_sft": "03551ff2fd3280ce4af2c8b5e119a566a03455fbc7d72c2b09613f8dcb0ad0a9"
+  },
+  "review_counts": {
+    "AI_ENVIRONMENT_CONFOUNDED_UNRESOLVED": 42,
+    "AI_QUARANTINE_SOURCE_CONFLICT": 7,
+    "AI_SOURCE_SUPPORTED_SYNTAX_ONLY": 62,
+    "PUBLISHER_SILVER_NOT_INDEPENDENTLY_REVIEWED": 401
+  },
+  "training_unique_rows": {
+    "original512": 512,
+    "receipt_screen401": 401,
+    "ai_review505": 505
+  },
+  "training_optimizer_steps": 512,
+  "official_TEST_rows": 0,
+  "independent_human_signoffs": 0,
+  "automatic_model_promotion": false,
+  "limitations": [
+    "Seven source-conflict rows were omitted, but 42 failure-cue and 401 other rows remain uncertified publisher silver.",
+    "DEV128 was queried by earlier experiments and is not blind; no causal or generalization claim follows from these scores.",
+    "Seven deterministic single repeats preserve 512 optimizer steps but slightly change exposure/token totals.",
+    "Automated strict scoring is not independent semantic adjudication."
+  ]
+}
