@@ -88,6 +88,7 @@
   "automatic_model_promotion": false,
   "limitations": [
     "Seven source-conflict rows were omitted, but 42 failure-cue and 401 other rows remain uncertified publisher silver.",
+    "The 62 source-supported-syntax statuses came from a tool-name-to-documentation screen, not 62 per-case semantic adjudications.",
     "DEV128 was queried by earlier experiments and is not blind; no causal or generalization claim follows from these scores.",
     "Seven deterministic single repeats preserve 512 optimizer steps but slightly change exposure/token totals.",
     "Automated strict scoring is not independent semantic adjudication."
