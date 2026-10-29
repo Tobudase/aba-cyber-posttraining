@@ -1,0 +1,52 @@
+{
+  "status": "EXPLORATORY_TRAIN_ONLY_RECEIPT_SCREEN_NOT_SEMANTICALLY_APPROVED",
+  "source_sha256": {
+    "frozen_train512": "14a89d7a4bc32de0272f8d5ef6f43c7142e99599a63d1b71d643c768bac8454d",
+    "publisher_train3504": "93dc4ddff6d9df73bed4b9e92716470e7a73df513f5ca2f1b201c85f2329f909"
+  },
+  "original_encoded_train_sha256": "7da5395a3aa9886fa042f15ab4b4b23a8c206e1a8afa60181515b7dd05b97c44",
+  "counts": {
+    "source_train_rows": 512,
+    "no_lexical_failure_cue": 401,
+    "held_for_effect_review": 111,
+    "independent_human_effect_verdicts": 0,
+    "publisher_exit_code_zero": 512,
+    "publisher_timed_out": 0
+  },
+  "cue_counts_nonexclusive": {
+    "dependency_missing": 2,
+    "display_unavailable": 2,
+    "explicit_error_line": 36,
+    "missing_file_or_directory": 64,
+    "network_or_dns_unavailable": 16,
+    "permission_or_capability": 12,
+    "publisher_terminal_output_truncated": 1
+  },
+  "private_derived_sha256": {
+    "receipt_clear_train": "df24036402f04dcc90a86dc4457cf99291602adcca94933e4d96bff8191f9153",
+    "effect_review_hold": "f6eb8663e8690c25ee2fa045b164f092545e289a536e43e3dbc9f57bf476f8d4",
+    "review_queue": "9896cb2cf419d7878a723bfc7dc3aa940b5e34a5ff9a68af245d3958a1d892f4",
+    "receipt_clear_encoded_train": "658a548f0a1b2f844fae034d0c769ee7c471d786cf5154bfbf78ec5a0e950f56",
+    "receipt_clear_512step_schedule_encoded": "04897f2fea6c51b422e87afac8d1a3c770f8bdee62cdbcae36525f6fb65d2aee"
+  },
+  "candidate_encoded_checks": {
+    "rows": 401,
+    "scheduled_optimizer_exposures": 512,
+    "twice_exposed_rows": 111,
+    "all_prompt_tokens_masked": true,
+    "all_target_and_EOS_tokens_supervised": true,
+    "official_TEST_rows": 0
+  },
+  "selection_rule": "Keep only original publisher-PASS_EXECUTED TRAIN rows with exit code 0, no timeout, no truncated output and no listed lexical environment-failure cue in stdout/stderr.",
+  "limitations": [
+    "A flagged terminal receipt does not prove the reference command is wrong; missing external resources can cause valid syntax to fail.",
+    "An unflagged terminal receipt does not prove the task was semantically achieved.",
+    "This screen is a TRAIN-only exploratory data ablation; do not interpret it as expert-approved data or a final deployment gate.",
+    "The 512-step schedule repeats 111 selected records once; a future comparison must disclose changed unique-row and token exposure.",
+    "No evaluation outputs or official TEST records informed this selection."
+  ],
+  "commands_executed": 0,
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "official_TEST_rows": 0
+}

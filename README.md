@@ -2,7 +2,7 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## Current result — October 28, 2026
+## Current result — October 29, 2026
 
 A fixed 512-step NF4 QLoRA SFT run adapted **Qwen3-8B** using 512 publisher-verified KaliBench official-TRAIN examples. The same saved adapter was then compared with the unchanged base under a matched inference protocol. All sets below are **internal splits of official TRAIN**, with publisher silver labels; these are **not official benchmark or leaderboard scores**.
 
@@ -24,11 +24,17 @@ One initial DEV prompt contained its reference command; excluding it leaves stri
 
 An exploratory breakdown of the already queried 87-row set shows strict correctness **5→5** for 22 tools unseen in training, **9→12** for 37 rows whose tool appeared once, and **4→9** for 28 rows whose tool appeared at least twice. This is post hoc and cannot establish a causal coverage effect. [Aggregate breakdown](results/kali-qwen-train512-audit-2026-10-28/coverage-posthoc.json).
 
+**October 29 receipt-screen ablation:** a TRAIN-only check found 111/512 publisher `PASS_EXECUTED` receipts with environment-failure text or truncated output, despite zero exit codes. This is a review cue, not proof of bad command labels. A separate 401-unique-row, 512-step SFT candidate completed on one RTX3090 but scored **39/128** versus the original adapter's **43/128** on the same already exposed internal DEV; its post-training exact-command count was **32 vs 36**, with **1 vs 0** truncations. Screening removed all examples for 43 tools. Keep the original adapter; do not promote the screened candidate. [Chinese report](docs/KALI_QWEN_RECEIPT_SCREEN_ZH_2026-10-29.md) · [Aggregate comparison](results/kali-qwen-receipt-screen-2026-10-29/comparison.json).
+
 [Full Chinese result and error audit](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Figure source](scripts/plot-kali-qwen-confirmation.py) · [Reproduction scope](docs/REPRODUCTION.md). Check the public arithmetic and figure hashes with `python3 scripts/verify-kali-qwen-confirmation-public.py`. Raw questions, predictions, labels, model weights and the adapter are not in this repository.
 
 ## Experiment log (newest first)
 
 The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
+## October 29 — terminal-receipt screen and negative SFT ablation
+
+Audited publisher TRAIN terminal receipts without executing their commands. Kept 401/512 records lacking specified environment-failure cues and held 111 for effect review; zero independent human verdicts. The resulting finite 512-step Qwen SFT run used 401 unique rows, with 111 repeated once. It reduced tool coverage from 275 to 232 and scored **39/128** strict on reused internal DEV, below the original 512-unique-row adapter's **43/128**. Baseline responses were identical. Five rows favored the original adapter and one the screened adapter; source-level AI checks suggest the sole screened gain may be an automatic-scoring false positive. No official TEST, independent-source validation or model promotion. [中文报告](docs/KALI_QWEN_RECEIPT_SCREEN_ZH_2026-10-29.md) · [Aggregates](results/kali-qwen-receipt-screen-2026-10-29/comparison.json).
 
 ## October 28 — Qwen3-8B TRAIN512 static audit and review preparation
 

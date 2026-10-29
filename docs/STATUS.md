@@ -1,4 +1,6 @@
-# Current status — October 28, 2026
+# Current status — October 29, 2026
+
+**October 29 update:** A publisher terminal-receipt text screen flagged 111/512 TRAIN rows for effect review, but these are not proven wrong labels. An exploratory 401-unique-row/512-step Qwen SFT completed; on the reused internal DEV128 it scored **39/128** strict versus **43/128** for the original adapter, with one versus zero post-SFT truncations. The screened set lost 43 tools. A preliminary source check of six discordant cases also questions the sole automatic gain for the screened adapter. Keep the original Qwen adapter as the stronger internal candidate and RedSage-K as the formal default. Human signoffs remain zero, and the independent-source validation set is still absent. [Full report](KALI_QWEN_RECEIPT_SCREEN_ZH_2026-10-29.md) · [Aggregate comparison](../results/kali-qwen-receipt-screen-2026-10-29/comparison.json).
 
 The subsequent read-only [TRAIN512 audit](KALI_QWEN_TRAIN512_DATA_AUDIT_ZH_2026-10-28.md) verified frozen publisher provenance and target formatting, found 275 tools (165 represented by one training row), and created a private all-row review queue. This did not change the model, adapter, automatic scores, or formal default. Independently human-reviewed training labels remain **0/512**; the 13-case independent adjudication form is blank. A [next-experiment protocol draft](KALI_QWEN_NEXT_EXPERIMENT_PROTOCOL_DRAFT_ZH_2026-10-28.md) awaits source-separated data and review before any new GPU run.
 

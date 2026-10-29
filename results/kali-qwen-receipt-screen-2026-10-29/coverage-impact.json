@@ -1,0 +1,42 @@
+{
+  "status": "STATIC_COVERAGE_IMPACT_NOT_MODEL_PERFORMANCE",
+  "source_sha256": {
+    "old_train512": "14a89d7a4bc32de0272f8d5ef6f43c7142e99599a63d1b71d643c768bac8454d",
+    "screened_train401": "df24036402f04dcc90a86dc4457cf99291602adcca94933e4d96bff8191f9153",
+    "old_encoded512": "7da5395a3aa9886fa042f15ab4b4b23a8c206e1a8afa60181515b7dd05b97c44",
+    "new_schedule_encoded512": "04897f2fea6c51b422e87afac8d1a3c770f8bdee62cdbcae36525f6fb65d2aee",
+    "pilot_dev128": "60dbcc3e47f2c8c4786eafa9ca445707cffcddb05067f03e5f309c5e9292e6c1",
+    "confirmation93": "06ea112edea05569585da368c545ccc6c1363eafeecf8f607477a880e6d4b128",
+    "primary_selection": "3b2008413724c42c679559d3869d1775bb5d7008e1c585e46be8d140c463e04b"
+  },
+  "train_tools": {
+    "original512": 275,
+    "screened401": 232,
+    "lost_entirely": 43,
+    "held_rows_from_lost_tools": 91
+  },
+  "dev_rows_with_tool_absent_from_screened401": {
+    "pilot_dev128": 20,
+    "confirmation_primary87": 33
+  },
+  "scheduled_exposure_tokens": {
+    "original512": {
+      "optimizer_steps": 512,
+      "unique_examples": 512,
+      "prompt_tokens": 198515,
+      "supervised_target_tokens": 10620,
+      "total_input_tokens": 209135
+    },
+    "receipt_screen512_steps": {
+      "optimizer_steps": 512,
+      "unique_examples": 401,
+      "prompt_tokens": 198371,
+      "supervised_target_tokens": 10719,
+      "total_input_tokens": 209090
+    }
+  },
+  "interpretation_limit": "This filter changes tool coverage and unique-row exposure, so any SFT comparison is not an isolated test of semantic label quality.",
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "official_TEST_rows": 0
+}

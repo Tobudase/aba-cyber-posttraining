@@ -1,0 +1,75 @@
+{
+  "status": "EXPLORATORY_REUSED_INTERNAL_DEV_COMPARISON_NOT_BLIND",
+  "source_sha256": {
+    "internal_dev128": "60dbcc3e47f2c8c4786eafa9ca445707cffcddb05067f03e5f309c5e9292e6c1",
+    "screened_train401": "df24036402f04dcc90a86dc4457cf99291602adcca94933e4d96bff8191f9153",
+    "original512_receipt": "feed815960e697cb67766875eaac8feeb4d7dabb78e84f861d0e774f1bd9619f",
+    "original512_baseline": "c4cf752a2bd796eb64248e4ff79ad1ad93b1ce7d0dded2cc0e9331be598946e5",
+    "original512_post_sft": "6c35c2d75cd6f706ad6f4cbde6691fc29d1374a00cfc8a2885df8ff5a67a3c18",
+    "receipt_screen401_receipt": "7ae07a0b0e7bae70014292aa84f28804c4305cdc762736276050eeab0e995ab1",
+    "receipt_screen401_baseline": "c4cf752a2bd796eb64248e4ff79ad1ad93b1ce7d0dded2cc0e9331be598946e5",
+    "receipt_screen401_post_sft": "404b0dcdf11f310c27509a8b8769364dbcf07ee2322d761132dcb09ec4905932"
+  },
+  "scope": "Both arms use publisher official-TRAIN internal DEV128; no official TEST or source-separated validation",
+  "baseline_responses_identical": true,
+  "results": {
+    "original512": {
+      "baseline": {
+        "strict_correct": 29,
+        "exact_gold_command": 25,
+        "truncated": 3,
+        "complete_output_block": 125,
+        "native_total_score": 56.055927579365076
+      },
+      "post_sft": {
+        "strict_correct": 43,
+        "exact_gold_command": 36,
+        "truncated": 0,
+        "complete_output_block": 128,
+        "native_total_score": 69.09784226190476
+      }
+    },
+    "receipt_screen401": {
+      "baseline": {
+        "strict_correct": 29,
+        "exact_gold_command": 25,
+        "truncated": 3,
+        "complete_output_block": 125,
+        "native_total_score": 56.055927579365076
+      },
+      "post_sft": {
+        "strict_correct": 39,
+        "exact_gold_command": 32,
+        "truncated": 1,
+        "complete_output_block": 127,
+        "native_total_score": 66.69064153439153
+      }
+    }
+  },
+  "paired_post_strict": {
+    "both_correct": 38,
+    "both_wrong": 84,
+    "original_only": 5,
+    "screened_only": 1
+  },
+  "by_screened_tool_coverage": {
+    "tool_retained": {
+      "rows": 108,
+      "original_post_correct": 35,
+      "screened_post_correct": 33
+    },
+    "tool_lost_by_screen": {
+      "rows": 20,
+      "original_post_correct": 8,
+      "screened_post_correct": 6
+    }
+  },
+  "limitations": [
+    "Screening used only TRAIN terminal receipts, not DEV outputs, but DEV128 was already queried in the older experiment.",
+    "The screened arm has 401 unique rows repeated to 512 exposures, losing 43 tools; this is not a single-factor semantic-label-quality test.",
+    "Publisher silver labels and automated strict scoring are not independent human semantic verification.",
+    "No model promotion is warranted from this exposed internal comparison."
+  ],
+  "official_TEST_rows": 0,
+  "independent_human_signoffs": 0
+}
