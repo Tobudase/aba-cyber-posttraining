@@ -1,0 +1,38 @@
+{
+  "a100_request_quota_after_cleanup": "0/12",
+  "added_train_rows": 133,
+  "attempts": {
+    "gpu-cycle": {
+      "cleanup_errors": [],
+      "gpu_allocated": false,
+      "status": "NO_GPU_ALLOCATION_WITHIN_900S"
+    },
+    "gpu-cycle-a100": {
+      "cleanup_errors": [],
+      "gpu_allocated": false,
+      "status": "NO_GPU_ALLOCATION_WITHIN_900S"
+    },
+    "gpu-cycle-l40": {
+      "cleanup_errors": [],
+      "gpu_allocated": false,
+      "status": "NO_GPU_ALLOCATION_WITHIN_900S"
+    }
+  },
+  "fresh_internal_dev_rows": 64,
+  "independent_human_signoffs": 0,
+  "limitation": "This is a frozen, unexecuted same-publisher official-TRAIN internal study; no new model result or independent validation exists.",
+  "model_calls": 0,
+  "model_id": "Qwen/Qwen3-8B",
+  "official_TEST_rows": 0,
+  "optimizer_steps": 0,
+  "owned_resources_after_cleanup": 0,
+  "prior_ai_train_rows": 505,
+  "prior_tool_seen_dev_rows": 32,
+  "prior_tool_unseen_dev_rows": 32,
+  "source_separated": false,
+  "status": "FROZEN_TRAINING_PREPARED_BUT_NO_GPU_ALLOCATION",
+  "study_manifest_sha256": "c59195c535c60c8656016384f32d5f0714750ce513bef6d6d3cf6cc13e410156",
+  "total_gpu_allocations": 0,
+  "train_rows": 638,
+  "train_tools": 359
+}

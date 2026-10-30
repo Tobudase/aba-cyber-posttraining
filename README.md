@@ -4,6 +4,8 @@ Research code and traceable experiment summaries for adapting open-weight langua
 
 ## Current result — October 30, 2026
 
+**Expanded Qwen training status:** a 638-row/359-tool publisher-TRAIN SFT and fresh, unqueried internal DEV64 were frozen. Single-GPU RTX 3090, L40 and approved A100 requests each passed server preflight but timed out after 15 minutes without a node. All owned objects were cleaned and A100 request quota returned to 0/12. **No GPU allocation, optimizer step, model output or new score occurred.** [Chinese preparation and scheduling report](docs/KALI_QWEN_EXPANDED_TRAIN_PREP_ZH_2026-10-30.md) · [Aggregate](results/kali-qwen-expanded-prep-2026-10-30/summary.json).
+
 **External validation intake update:** case-by-case AI static triage of the 36 proposed CyBashBench-source questions found five clear task/reference mismatches and six context-dependent cases. Removing only the five clear mismatches leaves **31 questions**, below the predeclared 32-question minimum; the unchanged gate returns **NOT_ADMITTED**. This subset will not be treated as a frozen holdout. AI review is not independent human signoff; no model queries, GPU jobs, command executions or official TEST access occurred. Existing model decisions are unchanged. [Chinese audit](docs/KALI_QWEN_EXTERNAL_LABEL_AUDIT_ZH_2026-10-30.md) · [Sanitized aggregate](results/kali-qwen-external-ai-audit-2026-10-30/summary.json).
 
 A fixed 512-step NF4 QLoRA SFT run adapted **Qwen3-8B** using 512 publisher-verified KaliBench official-TRAIN examples. The same saved adapter was then compared with the unchanged base under a matched inference protocol. All sets below are **internal splits of official TRAIN**, with publisher silver labels; these are **not official benchmark or leaderboard scores**.
@@ -37,6 +39,10 @@ An exploratory breakdown of the already queried 87-row set shows strict correctn
 ## Experiment log (newest first)
 
 The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
+## October 30 — expanded Qwen SFT frozen, GPU scheduling unsuccessful
+
+Prepared 638 unique publisher-TRAIN rows and a new internal DEV64 before any new model output. Three sequential bounded single-GPU requests remained Pending and were cleaned; training and evaluation did not execute. [中文报告](docs/KALI_QWEN_EXPANDED_TRAIN_PREP_ZH_2026-10-30.md) · [Aggregate](results/kali-qwen-expanded-prep-2026-10-30/summary.json).
 
 ## October 30 — external candidate label audit
 
