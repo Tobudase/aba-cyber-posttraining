@@ -1,0 +1,34 @@
+{
+  "audit_type": "case_specific_ai_static_triage_not_human_or_runtime_validation",
+  "caveat": "AI static triage is not independent human signoff, target-runtime validation, or a model evaluation.",
+  "commands_executed": 0,
+  "counts": {
+    "CLEAR_MISMATCH": 5,
+    "CONTEXT_OR_VERSION_DEPENDENT": 6,
+    "PLAUSIBLE_UNVERIFIED": 25
+  },
+  "filtered_candidate_sha256": "5e82942692230a4bf3a53a12cbc0b3b878b43c10e1c9a82b81d5187f3624dcbe",
+  "gate": {
+    "issue_count": 63,
+    "issue_types": {
+      "independent_review_missing": 31,
+      "too_few_rows": 1,
+      "tool_version_unverified": 31
+    },
+    "rows": 31,
+    "status": "NOT_ADMITTED",
+    "tools": 20
+  },
+  "gpu_jobs": 0,
+  "holdout_frozen": false,
+  "independent_human_signoffs": 0,
+  "ledger_sha256": "5436a6a6c5c0878eff318d6e978fd9aff630efcb417ca58a4c2414629cd19440",
+  "max_rows_after_five_clear_exclusions": 31,
+  "model_calls": 0,
+  "official_TEST_rows": 0,
+  "predeclared_min_rows": 32,
+  "reviewed_rows": 36,
+  "source_candidate_sha256": "ce33b68e4fd8d0860a81387b035897ac60125aee31432c5176119c8e8a4edd4a",
+  "status": "REJECT_AS_32_ROW_HOLDOUT_CANDIDATE",
+  "verified_target_tool_versions": 0
+}

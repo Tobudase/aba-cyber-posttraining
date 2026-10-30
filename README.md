@@ -2,7 +2,9 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## Current result — October 29, 2026
+## Current result — October 30, 2026
+
+**External validation intake update:** case-by-case AI static triage of the 36 proposed CyBashBench-source questions found five clear task/reference mismatches and six context-dependent cases. Removing only the five clear mismatches leaves **31 questions**, below the predeclared 32-question minimum; the unchanged gate returns **NOT_ADMITTED**. This subset will not be treated as a frozen holdout. AI review is not independent human signoff; no model queries, GPU jobs, command executions or official TEST access occurred. Existing model decisions are unchanged. [Chinese audit](docs/KALI_QWEN_EXTERNAL_LABEL_AUDIT_ZH_2026-10-30.md) · [Sanitized aggregate](results/kali-qwen-external-ai-audit-2026-10-30/summary.json).
 
 A fixed 512-step NF4 QLoRA SFT run adapted **Qwen3-8B** using 512 publisher-verified KaliBench official-TRAIN examples. The same saved adapter was then compared with the unchanged base under a matched inference protocol. All sets below are **internal splits of official TRAIN**, with publisher silver labels; these are **not official benchmark or leaderboard scores**.
 
@@ -35,6 +37,10 @@ An exploratory breakdown of the already queried 87-row set shows strict correctn
 ## Experiment log (newest first)
 
 The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
+## October 30 — external candidate label audit
+
+Audited all 36 fixed CyBashBench-source candidate labels without executing their commands or querying a model. Five clear mismatches make the original 32+ row external panel infeasible without new reviewed source data. The 31-row exclusion derivative still fails admission; no blind holdout was frozen. [中文报告](docs/KALI_QWEN_EXTERNAL_LABEL_AUDIT_ZH_2026-10-30.md) · [Aggregate](results/kali-qwen-external-ai-audit-2026-10-30/summary.json).
 
 ## October 29 — independent-review packet and external-source intake gate
 
