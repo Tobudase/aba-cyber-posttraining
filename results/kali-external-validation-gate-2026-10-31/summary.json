@@ -1,0 +1,35 @@
+{
+  "status": "EXTERNAL_DOMAIN_HOLDOUT_NOT_ADMITTED_REVIEW_PACKET_READY",
+  "cybash_rows_after_clear_mismatch_exclusion": 31,
+  "cybash_context_or_version_dependent": 6,
+  "cybash_plausible_unverified": 25,
+  "predeclared_min_domain_rows": 32,
+  "independent_human_signoffs": 0,
+  "target_versions_verified": 0,
+  "private_review_packet_sha256": "7630c803ca50d04a30ac87d6b62763aee8bef75d8e745137b6cbbb7d4d4ce184",
+  "private_review_form_sha256": "05161586154f76eee91e04e2208f67acde284457d968ce349994297d7e882aa6",
+  "nl2sh_alfa": {
+    "difficulty_counts": {
+      "0": 100,
+      "1": 100,
+      "2": 100
+    },
+    "evaluation_status": "HASH_PINNED_CANDIDATE_NOT_RUN",
+    "exact_question_or_either_command_overlap_with_kali_official_train_3504": 0,
+    "license": "MIT per dataset card",
+    "limitation": "General Bash, not cybersecurity; original test split and not for early model selection; paper-level manual verification is not our independent signoff.",
+    "model_queries": 0,
+    "published_manually_verified_pairs": 600,
+    "publisher_test_rows": 300,
+    "role": "FUTURE_GENERAL_BASH_RETENTION_ONLY_NOT_CYBER_DOMAIN_VALIDATION",
+    "source_revision": "a99cb5784cf5c2a42b1cc26c1903d9c3b35206ba",
+    "source_sha256": "65a94a14db655c4a695bde38653b7e8884b071cded604ee05e62d7a61ea44c35",
+    "source_url": "https://huggingface.co/datasets/westenfelder/NL2SH-ALFA/tree/a99cb5784cf5c2a42b1cc26c1903d9c3b35206ba"
+  },
+  "kali_official_test_rows": 0,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "new_gpu_jobs": 0,
+  "dataset_commands_executed": 0,
+  "next_gate": "Find enough independent cybersecurity command cases, pin tool versions, obtain actual independent human semantic review, freeze before any model outputs."
+}

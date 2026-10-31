@@ -2,7 +2,9 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## Current result — October 30, 2026
+## Current result — October 31, 2026
+
+**External validation gate:** a private 31-case CyBashBench review packet and blank independent-review form are ready. Six cases still depend on context or tool version; no cases have independent human signoff, and the 32-case minimum remains unmet. A pinned 300-question NL2SH-ALFA test file was examined only for provenance and exact overlaps; it is reserved as a future general Bash retention check, not used for model selection or cybersecurity validation. No new model calls or GPU jobs occurred. [Chinese next-stage report](docs/KALI_EXTERNAL_VALIDATION_GATE_ZH_2026-10-31.md) · [Sanitized summary](results/kali-external-validation-gate-2026-10-31/summary.json).
 
 **Expanded Qwen result:** after unsuccessful bounded GPU scheduling attempts, one A40 Job completed the frozen 638-row/359-tool SFT with 638 optimizer steps. On a fresh, same-publisher official-TRAIN internal DEV64, strict tool/option correctness changed **19/64 → 22/64** (4 gained, 1 lost); exact reference command changed **13/64 → 17/64**. This is a modest, one-seed silver-label development result, **not an official KaliBench score or independent-source validation**. No official TEST or ABA-generated training data were used; the adapter is not automatically promoted. [Chinese result and limitations](docs/KALI_QWEN_EXPANDED_A40_RESULT_ZH_2026-10-30.md) · [Aggregate](results/kali-qwen-expanded-a40-2026-10-30/summary.json) · [Earlier scheduling report](docs/KALI_QWEN_EXPANDED_TRAIN_PREP_ZH_2026-10-30.md).
 
