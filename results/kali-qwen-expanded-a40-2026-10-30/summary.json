@@ -1,0 +1,58 @@
+{
+  "status": "PAIRED_INTERNAL_DEV_SCORED",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "gpu": "NVIDIA A40",
+  "train_rows": 638,
+  "train_tools": 359,
+  "optimizer_steps": 638,
+  "dev_rows": 64,
+  "baseline_generations": 64,
+  "post_sft_generations": 64,
+  "strict_option_value_correct": {
+    "baseline": 19,
+    "post_sft": 22,
+    "both_correct": 18,
+    "gained": 4,
+    "lost": 1,
+    "both_wrong": 41
+  },
+  "exact_reference_command": {
+    "baseline": 13,
+    "post_sft": 17,
+    "both_correct": 12,
+    "gained": 5,
+    "lost": 1,
+    "both_wrong": 46
+  },
+  "native_total_score": {
+    "baseline": 61.42361111111111,
+    "post_sft": 67.43055555555554
+  },
+  "prior_train_tool_seen_strict": {
+    "rows": 32,
+    "baseline": 6,
+    "post_sft": 7
+  },
+  "prior_train_tool_unseen_strict": {
+    "rows": 32,
+    "baseline": 13,
+    "post_sft": 15
+  },
+  "truncated_outputs": {
+    "baseline": 1,
+    "post_sft": 0
+  },
+  "training_wall_seconds": 1162.9,
+  "peak_cuda_allocated_bytes": 10275639296,
+  "adapter_sha256": "f9bbbe9465cfb5c5c5adef671b704b68960f185e8cb44d543e621b8462eb4aa6",
+  "adapter_bytes": 30690184,
+  "protocol_sha256": "4986605b82a5b94034f1e74613e2f4060d6701dac42233367608086f40a3e094",
+  "official_test_rows": 0,
+  "independent_human_signoffs": 0,
+  "independent_source_validation": false,
+  "aba_automated_data_generation": false,
+  "automatic_model_promotion": false,
+  "owned_gpu_resources_after_cleanup": 0,
+  "limitations": "One seed; same-publisher official-TRAIN internal DEV64 with silver labels. Strict and exact-reference metrics require semantic review of discordant cases. This is not an official KaliBench score."
+}

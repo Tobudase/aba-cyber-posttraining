@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-labelledby="title desc">
+  <title id="title">Qwen3-8B internal DEV64 before and after SFT</title>
+  <desc id="desc">Strict correctness rises from 19 to 22 of 64. Exact reference command rises from 13 to 17 of 64. Same-publisher silver-label internal development results, not official benchmark scores.</desc>
+  <rect width="760" height="360" rx="16" fill="#f8fafc"/>
+  <text x="36" y="43" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Qwen3-8B · Internal DEV64</text>
+  <text x="36" y="70" font-family="Arial, sans-serif" font-size="13" fill="#475569">638-step SFT on one A40 · counts out of 64</text>
+  <rect x="482" y="32" width="14" height="14" rx="3" fill="#94a3b8"/>
+  <text x="504" y="44" font-family="Arial, sans-serif" font-size="13" fill="#334155">Base</text>
+  <rect x="582" y="32" width="14" height="14" rx="3" fill="#0d9488"/>
+  <text x="604" y="44" font-family="Arial, sans-serif" font-size="13" fill="#334155">Post-SFT</text>
+  <text x="36" y="123" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#0f172a">Strict tool + option value</text>
+  <rect x="280" y="102" width="209" height="25" rx="5" fill="#94a3b8"/>
+  <rect x="280" y="137" width="242" height="25" rx="5" fill="#0d9488"/>
+  <text x="497" y="120" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">19/64</text>
+  <text x="530" y="155" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">22/64</text>
+  <text x="36" y="212" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#0f172a">Exact reference command</text>
+  <rect x="280" y="191" width="143" height="25" rx="5" fill="#94a3b8"/>
+  <rect x="280" y="226" width="187" height="25" rx="5" fill="#0d9488"/>
+  <text x="431" y="209" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">13/64</text>
+  <text x="475" y="244" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">17/64</text>
+  <line x1="280" y1="278" x2="632" y2="278" stroke="#cbd5e1"/>
+  <text x="280" y="299" font-family="Arial, sans-serif" font-size="12" fill="#475569">0</text>
+  <text x="449" y="299" font-family="Arial, sans-serif" font-size="12" fill="#475569">16</text>
+  <text x="625" y="299" font-family="Arial, sans-serif" font-size="12" fill="#475569">32</text>
+  <text x="36" y="334" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Same-publisher official-TRAIN internal split · silver labels · one seed · official TEST unused</text>
+</svg>
