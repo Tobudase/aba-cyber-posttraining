@@ -12,6 +12,16 @@
       "gpu_allocated": false,
       "status": "NO_GPU_ALLOCATION_WITHIN_900S"
     },
+    "gpu-cycle-a100-r2": {
+      "cleanup_errors": [],
+      "gpu_allocated": false,
+      "status": "NO_GPU_ALLOCATION_WITHIN_1800S"
+    },
+    "gpu-cycle-a6000": {
+      "cleanup_errors": [],
+      "gpu_allocated": false,
+      "status": "NO_GPU_ALLOCATION_WITHIN_900S"
+    },
     "gpu-cycle-l40": {
       "cleanup_errors": [],
       "gpu_allocated": false,
@@ -19,6 +29,13 @@
     }
   },
   "fresh_internal_dev_rows": 64,
+  "datahub_researcher_gpu": {
+    "profile": "8 CPU, 16 GB RAM, 1 GPU",
+    "launch_status": "PENDING_NO_GPU_ALLOCATION",
+    "scheduler_gpu_shortage": true,
+    "training_started": false,
+    "pending_server_cleanup_verified": false
+  },
   "independent_human_signoffs": 0,
   "limitation": "This is a frozen, unexecuted same-publisher official-TRAIN internal study; no new model result or independent validation exists.",
   "model_calls": 0,
