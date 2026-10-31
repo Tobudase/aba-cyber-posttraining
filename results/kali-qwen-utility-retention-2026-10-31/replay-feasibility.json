@@ -1,0 +1,33 @@
+{
+  "GPU_jobs": 0,
+  "Linux_fixture_passed": 32,
+  "Linux_fixture_receipt_sha256": "1f2e6d5a2c2cf7a4db97f17e38595f7b460a7449a73b20777fb6fc83922c153d",
+  "Qwen_tokenizer_roundtrip_passed": 32,
+  "decision": "Do not submit a Qwen replay training job with these 32 rows alone as a claimed fix. First source/verify targeted intent examples and freeze a controlled equal-step comparison with appropriate retention and independent cyber validation.",
+  "exact_command_overlap_with_utility_dev108": 0,
+  "exact_query_overlap_with_utility_dev108": 0,
+  "families": 16,
+  "limitation": "Source-silver authored rows; already used in earlier RedSage development. Distinct command strings do not imply semantic independence. Existing 32 cover tools but omit all three regressed intents. Prior RedSage V3 utility replay did not improve its retention score.",
+  "maximum_train_sequence_tokens": 422,
+  "model_calls": 0,
+  "official_TEST_rows": 0,
+  "regressed_intent_training_examples": {
+    "grep_count": 0,
+    "grep_line_numbers": 0,
+    "tshark_tls_filter": 0
+  },
+  "rows": 32,
+  "source_train_sha256": "9d1625affc2889561e078e4f7037b97418822c98826a6eb73ada2ac3aff3e208",
+  "status": "REPLAY32_FEASIBLE_ENCODING_BUT_NOT_TARGETED_REGRESSION_COVERAGE",
+  "target_format_conversion_required": "V3 inline XML tags must become Qwen-arm newline XML tags before any training",
+  "tool_counts": {
+    "grep": 4,
+    "head": 4,
+    "jq": 4,
+    "openssl": 4,
+    "tail": 4,
+    "tcpdump": 4,
+    "tshark": 4,
+    "wc": 4
+  }
+}
