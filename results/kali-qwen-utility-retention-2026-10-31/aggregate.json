@@ -1,0 +1,251 @@
+{
+  "GPU": "NVIDIA A40",
+  "GPU_count": 1,
+  "Qwen_queries_on_these_rows_before_freeze": 0,
+  "adapter_sha256": "f9bbbe9465cfb5c5c5adef671b704b68960f185e8cb44d543e621b8462eb4aa6",
+  "base_model": "Qwen/Qwen3-8B",
+  "date_pacific": "2026-10-31",
+  "decision": "Do not promote saved SFT adapter; investigate systematic command/format regression before another training run.",
+  "families": {
+    "certificate-dates": {
+      "rows": 6,
+      "split": "dev_confirm",
+      "strict_baseline": 0,
+      "strict_post_sft": 0,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "certificate-serial": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 0,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "certificate-subject": {
+      "rows": 6,
+      "split": "dev_confirm",
+      "strict_baseline": 4,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "checksum-binary": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 2,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "checksum-sha256": {
+      "rows": 6,
+      "split": "dev_confirm",
+      "strict_baseline": 6,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "checksum-verify": {
+      "rows": 6,
+      "split": "dev_confirm",
+      "strict_baseline": 0,
+      "strict_post_sft": 0,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "dgst-hex": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 6,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "dgst-sha256": {
+      "rows": 6,
+      "split": "dev_confirm",
+      "strict_baseline": 6,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "head-five": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 6,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "json-compact": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 0,
+      "strict_post_sft": 0,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "json-event": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 6,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "log-count": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 6,
+      "strict_post_sft": 0,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "log-line-numbers": {
+      "rows": 6,
+      "split": "dev_confirm",
+      "strict_baseline": 6,
+      "strict_post_sft": 0,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 6
+    },
+    "offline-capture": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 0,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "offline-dns": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 6,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "offline-tls": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 6,
+      "strict_post_sft": 0,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "tail-seven": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 6,
+      "strict_post_sft": 6,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    },
+    "wc-lines": {
+      "rows": 6,
+      "split": "dev_search",
+      "strict_baseline": 0,
+      "strict_post_sft": 3,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    }
+  },
+  "human_expert_signoffs": 0,
+  "inference_wall_seconds": 764.45,
+  "limitation": "Self-authored narrow CLI tasks with six correlated filename variants per family; other model queries had used this pool. Not independent-source cybersecurity validation or an official benchmark score. No causality established for regression mechanism.",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "official_KaliBench_TEST_rows": 0,
+  "optimizer_steps_this_run": 0,
+  "peak_cuda_allocated_bytes": 10147383808,
+  "prior_other_model_queries_on_self_authored_pool": true,
+  "protocol_sha256": "00eb96e5e946c7df87180a43ec1f0c07ce6883911b09db31c21306940a0901df",
+  "receipt_sha256": "cfa15d3e0b88352b9c8ed9499e4eb5679fc670af69274a22a8bb16eb33b7cb57",
+  "sets": {
+    "all108": {
+      "exact_baseline": 48,
+      "exact_post_sft": 66,
+      "families": 18,
+      "native_total_baseline": 87.35,
+      "native_total_post_sft": 79.94,
+      "paired_strict": {
+        "both_correct": 48,
+        "both_wrong": 21,
+        "gained": 21,
+        "lost": 18
+      },
+      "rows": 108,
+      "strict_baseline": 66,
+      "strict_post_sft": 69,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 6
+    },
+    "primary_dev_confirm36": {
+      "exact_baseline": 18,
+      "exact_post_sft": 18,
+      "families": 6,
+      "native_total_baseline": 90.06,
+      "native_total_post_sft": 55.56,
+      "paired_strict": {
+        "both_correct": 16,
+        "both_wrong": 12,
+        "gained": 2,
+        "lost": 6
+      },
+      "rows": 36,
+      "strict_baseline": 22,
+      "strict_post_sft": 18,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 6
+    },
+    "secondary_dev_search72": {
+      "exact_baseline": 30,
+      "exact_post_sft": 48,
+      "families": 12,
+      "native_total_baseline": 85.99,
+      "native_total_post_sft": 92.13,
+      "paired_strict": {
+        "both_correct": 32,
+        "both_wrong": 9,
+        "gained": 19,
+        "lost": 12
+      },
+      "rows": 72,
+      "strict_baseline": 44,
+      "strict_post_sft": 51,
+      "truncated_baseline": 0,
+      "truncated_post_sft": 0
+    }
+  },
+  "status": "EXPLORATORY_SELF_AUTHORED_UTILITY_RETENTION_ONLY",
+  "this_run": "inference only; baseline versus saved adapter on matched frozen prompts",
+  "three_complete_regression_families": [
+    "log-count",
+    "log-line-numbers",
+    "offline-tls"
+  ],
+  "training_examples_using_nine_utility_executables_as_primary_tool": {
+    "grep": 0,
+    "head": 0,
+    "jq": 0,
+    "openssl": 0,
+    "sha256sum": 0,
+    "tail": 0,
+    "tcpdump": 0,
+    "tshark": 0,
+    "wc": 0
+  },
+  "training_reference_commands_mentioning_nine_utility_executables": {
+    "grep": 0,
+    "head": 0,
+    "jq": 0,
+    "openssl": 0,
+    "sha256sum": 0,
+    "tail": 0,
+    "tcpdump": 0,
+    "tshark": 0,
+    "wc": 0
+  },
+  "training_type_of_saved_adapter": "fixed 638-row one-epoch NF4 QLoRA SFT, not autonomous ABA data generation"
+}
