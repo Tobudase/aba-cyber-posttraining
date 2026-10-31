@@ -1,0 +1,206 @@
+{
+  "GPU": "NVIDIA A40",
+  "GPU_count": 1,
+  "adapter_sha256": {
+    "control": "ae7d7f8bdcafa16ed44f5ea84a8bd00ce176defea4b9da13b65020835f7583d5",
+    "treatment": "542a1bc611fabe54710ed22114b1e24f394fd0eadcaffb5acb5e337afba9f1ec"
+  },
+  "date_pacific": "2026-10-31",
+  "decision": "Keep original base as formal control; do not promote either new adapter or claim targeted data fixed the regression.",
+  "design_sha256": "d46f0060fd69e2e4480f9a4bb70ef9806fdddd71eb937fdfcb2c34ce8b089403",
+  "evaluation_scope": "previously exposed same-publisher internal DEV64 and self-authored correlated utility DEV108; not independent cyber validation",
+  "extra_rows_each_arm": 12,
+  "extra_supervised_tokens": {
+    "control": 237,
+    "treatment": 238
+  },
+  "extra_total_tokens": {
+    "control": 4832,
+    "treatment": 4830
+  },
+  "gate_checks": {
+    "domain_internal_dev64_strict": false,
+    "no_truncation_dev64_plus_utility108": true,
+    "official_TEST_untouched": true,
+    "utility_primary_confirm36_strict": false
+  },
+  "gate_passed": false,
+  "human_expert_signoffs": 0,
+  "limitations": [
+    "One seed and one adaptive-development batch; no independent cyber panel or official TEST.",
+    "Six file-name variants per utility family are correlated; the 12 new training rows have two variants per family.",
+    "Matched 650 update counts and close token totals do not guarantee identical FLOPs or causal attribution beyond these arms.",
+    "Static and Linux fixture checks do not replace independent human semantic review."
+  ],
+  "model_id": "Qwen/Qwen3-8B",
+  "model_promotion": false,
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "official_KaliBench_TEST_rows": 0,
+  "optimizer_steps_each_arm": 650,
+  "peak_cuda_allocated_bytes": 10275639296,
+  "predeclared_gate": {
+    "decision_if_gate_fails": "KEEP_ORIGINAL_BASE_AND_DO_NOT_PROMOTE_ADAPTER",
+    "internal_DEV64_strict_minimum": 22,
+    "new_output_truncation_maximum": 0,
+    "require_no_official_TEST_queries": true,
+    "require_no_training_on_development_rows": true,
+    "utility_primary36_strict_minimum": 22
+  },
+  "protocol_sha256": "7727b3ec9027dd3c72f4feda8457fb13618757155cb08dbcbf72c4c13e988332",
+  "receipt_sha256": "5945756a062d0388a3cba0ff3a733b0d1b2a068dc668dbb9e46c3c0e66c6508a",
+  "regression_diagnostic": {
+    "domain_one_paired_loss": "One wbinfo option-value command became wrong in treatment; private case retained for review.",
+    "truncation": "Both arms have zero truncations; no unique targeted-data effect established.",
+    "utility_primary36": "Both arms 18/36 strict; no paired strict gains or losses; three known regressed intent families remain 0/6 each."
+  },
+  "sets": {
+    "domain_internal_dev64": {
+      "control": {
+        "exact_reference_command": 17,
+        "format_error_percent": 0.0,
+        "native_total": 68.73,
+        "rows": 64,
+        "strict_correct": 22,
+        "truncated": 0
+      },
+      "families": 55,
+      "paired": {
+        "exact_reference_command": {
+          "both_correct": 16,
+          "both_wrong": 47,
+          "gained": 0,
+          "lost": 1
+        },
+        "strict": {
+          "both_correct": 21,
+          "both_wrong": 42,
+          "gained": 0,
+          "lost": 1
+        }
+      },
+      "rows": 64,
+      "treatment": {
+        "exact_reference_command": 16,
+        "format_error_percent": 0.0,
+        "native_total": 67.86,
+        "rows": 64,
+        "strict_correct": 21,
+        "truncated": 0
+      }
+    },
+    "utility_all108": {
+      "control": {
+        "exact_reference_command": 66,
+        "format_error_percent": 0.0,
+        "native_total": 86.23,
+        "rows": 108,
+        "strict_correct": 72,
+        "truncated": 0
+      },
+      "families": 18,
+      "paired": {
+        "exact_reference_command": {
+          "both_correct": 66,
+          "both_wrong": 42,
+          "gained": 0,
+          "lost": 0
+        },
+        "strict": {
+          "both_correct": 72,
+          "both_wrong": 36,
+          "gained": 0,
+          "lost": 0
+        }
+      },
+      "rows": 108,
+      "treatment": {
+        "exact_reference_command": 66,
+        "format_error_percent": 0.0,
+        "native_total": 85.93,
+        "rows": 108,
+        "strict_correct": 72,
+        "truncated": 0
+      }
+    },
+    "utility_primary_confirm36": {
+      "control": {
+        "exact_reference_command": 18,
+        "format_error_percent": 0.0,
+        "native_total": 68.89,
+        "rows": 36,
+        "strict_correct": 18,
+        "truncated": 0
+      },
+      "families": 6,
+      "paired": {
+        "exact_reference_command": {
+          "both_correct": 18,
+          "both_wrong": 18,
+          "gained": 0,
+          "lost": 0
+        },
+        "strict": {
+          "both_correct": 18,
+          "both_wrong": 18,
+          "gained": 0,
+          "lost": 0
+        }
+      },
+      "rows": 36,
+      "treatment": {
+        "exact_reference_command": 18,
+        "format_error_percent": 0.0,
+        "native_total": 69.44,
+        "rows": 36,
+        "strict_correct": 18,
+        "truncated": 0
+      }
+    },
+    "utility_secondary_search72": {
+      "control": {
+        "exact_reference_command": 48,
+        "format_error_percent": 0.0,
+        "native_total": 94.91,
+        "rows": 72,
+        "strict_correct": 54,
+        "truncated": 0
+      },
+      "families": 12,
+      "paired": {
+        "exact_reference_command": {
+          "both_correct": 48,
+          "both_wrong": 24,
+          "gained": 0,
+          "lost": 0
+        },
+        "strict": {
+          "both_correct": 54,
+          "both_wrong": 18,
+          "gained": 0,
+          "lost": 0
+        }
+      },
+      "rows": 72,
+      "treatment": {
+        "exact_reference_command": 48,
+        "format_error_percent": 0.0,
+        "native_total": 94.17,
+        "rows": 72,
+        "strict_correct": 54,
+        "truncated": 0
+      }
+    }
+  },
+  "shared_original_domain_train_rows": 638,
+  "source_data_sha256": "74f000e108991d02bd10a0dffdb1a90cc38408aea9baf521db8cdc2c7d7d5ab3",
+  "status": "COMPLETE_EXPLORATORY_MATCHED_650_ARMS_GATE_FAILED",
+  "target_tool_versions": [
+    "grep 3.7-1build1",
+    "tshark 3.6.2-2"
+  ],
+  "targeted_data_Linux_fixtures_passed": 12,
+  "targeted_data_tokenizer_roundtrips_passed": 12,
+  "training_dataset_quality": "self-authored, doc-grounded, Linux-fixture-checked silver; zero independent human signoffs",
+  "training_type": "fixed-data SFT, not ABA autonomous generation or search",
+  "wall_seconds": 1542.3
+}
