@@ -21,8 +21,8 @@
 
 ## 结果如何解释
 
-这是一项**内部开发集上的小幅正向信号**。净增只有 3 道严格正确题；一次训练种子和 64 条银标准样本不足以确认稳定收益。五条严格指标发生变化的题目已定位。其中一条退化把 `assetfinder --subs-only` 改成 `--subdomains`；[该工具上游源码](https://github.com/tomnomnom/assetfinder/blob/master/main.go)声明的是 `--subs-only`。一条提升把 `ipcrm -A` 改成 `--all`；[util-linux 手册](https://man7.org/linux/man-pages/man1/ipcrm.1.html)列出的是 `-a, --all`。这些是**部分静态核查**，其余变化仍需依据具体工具版本和任务语义复核。自动评分的“完全一致”也不等同于语义正确。
+这是一项**内部开发集上的小幅正向信号**。净增只有 3 道严格正确题；一次训练种子和仅 64 条银标准验证样本不足以确认稳定收益。五条严格指标发生变化的题目已定位，四条从错变对、一条从对变错。静态核查显示，四条提升分别涉及 `cge.pl`、`mgmt-tester`、`ipcrm`、`dislocker-find`，其训练后写法与 [Kali 的 cge.pl 用法](https://www.kali.org/tools/cisco-global-exploiter/)、[BlueZ 选项源码](https://github.com/bluez/bluez/blob/master/src/shared/tester.c)、[ipcrm 手册](https://man7.org/linux/man-pages/man1/ipcrm.1.html)、[Kali 的 dislocker-find 用法](https://www.kali.org/tools/dislocker/)一致。退化一条把 `assetfinder --subs-only` 改成 `--subdomains`，而[上游源码](https://github.com/tomnomnom/assetfinder/blob/master/main.go)声明的是 `--subs-only`。这支持自动评分记录的方向，但**仅是 AI 对公开文档的静态比对**；目标工具版本尚未固定，也未执行命令或完成独立人工复核。自动评分的“完全一致”也不等同于语义正确。
 
-本轮没有使用 KaliBench 官方 TEST，也没有独立来源的盲测或独立人工签核。因此不把新适配器提升为默认模型，不宣称官方成绩；此前 RedSage-K 的正式默认选择保持不变。下一步应复核变化题目的命令语义，并建立版本固定、独立来源的验证集，再决定是否继续扩充数据或训练。
+本轮没有使用 KaliBench 官方 TEST，也没有独立来源的盲测或独立人工签核。因此不把新适配器提升为默认模型，不宣称官方成绩；此前 RedSage-K 的正式默认选择保持不变。下一步应核实目标工具版本、对变化题目做独立人工复核，并建立独立来源的验证集，再决定是否继续扩充数据或训练。
 
 ![Qwen3-8B 内部 DEV64 训练前后比较](../results/kali-qwen-expanded-a40-2026-10-30/before-after.svg)
