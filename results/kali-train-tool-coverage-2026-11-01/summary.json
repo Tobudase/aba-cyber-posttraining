@@ -1,0 +1,65 @@
+{
+  "GPU_jobs": 0,
+  "interpretation": "These tools have zero direct TRAIN rows by both metadata and first executable token. This establishes a coverage gap, not the cause of any model error or the absence of indirect knowledge.",
+  "metadata_first_token_mismatch_rows": 26,
+  "metadata_singleton_tools": 157,
+  "metadata_tools_with_at_most_two_rows": 307,
+  "model_calls": 0,
+  "official_TEST_rows_opened": 0,
+  "optimizer_steps": 0,
+  "selected_common_tool_counts": {
+    "find": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "grep": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "head": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "jq": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "nmap": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "openssl": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "sha256sum": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "strings": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "tail": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "tcpdump": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "tshark": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    },
+    "wc": {
+      "first_command_token": 0,
+      "metadata_tool_name": 0
+    }
+  },
+  "source_train_rows": 3504,
+  "source_train_sha256": "93dc4ddff6d9df73bed4b9e92716470e7a73df513f5ca2f1b201c85f2329f909",
+  "status": "OFFICIAL_TRAIN_TOOL_COVERAGE_STATIC_AUDIT",
+  "unique_first_command_tokens": 962,
+  "unique_metadata_tools": 962
+}
