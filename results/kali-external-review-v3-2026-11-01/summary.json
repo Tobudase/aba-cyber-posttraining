@@ -23,7 +23,7 @@
   "official_train_near_overlap_by_declared_rule": 0,
   "official_test_rows_accessed": 0,
   "model_calls": 0,
-  "publisher_commands_executed": 0,
+  "publisher_commands_executed_during_initial_static_triage": 0,
   "gpu_jobs": 0,
   "caveat": "AI static triage and lexical non-overlap do not prove semantic correctness, human reviewer identity, or pretraining nonexposure. The same-source adaptive review queue cannot be used for model selection until at least 32 cases pass independent review and the holdout is frozen before model outputs."
 }

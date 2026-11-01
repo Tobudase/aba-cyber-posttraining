@@ -1,0 +1,40 @@
+{
+  "status": "PASS_NARROW_SYNTHETIC_FIXTURES_ONLY",
+  "linux_cpu_job": true,
+  "gpu_count": 0,
+  "checks_passed": 10,
+  "cases_with_spot_check_evidence": 11,
+  "tool_versions": {
+    "find": "GNU findutils 4.8.0",
+    "sort": "GNU coreutils 8.32",
+    "strings_and_readelf": "GNU Binutils 2.38",
+    "tar": "GNU tar 1.34",
+    "openssl": "OpenSSL 3.5.2",
+    "ldd": "Ubuntu glibc 2.35"
+  },
+  "observations": {
+    "strings_n20_includes_exactly20": true,
+    "sort_month_day_not_chronological": true,
+    "find_user_includes_directory": true,
+    "find_mmin_includes_directory": true,
+    "find_xtype_l_broken_only": true,
+    "tar_creates_gzip_archive": true,
+    "openssl_x509_parses_certificate": true,
+    "openssl_x509_extracts_public_key": true,
+    "readelf_header_and_sections": true,
+    "ldd_trusted_bin_ls_dependencies": true
+  },
+  "v3_ai_static_triage": {
+    "context_dependent": 10,
+    "plausible_unverified": 25,
+    "plausible_lower_provenance": 1
+  },
+  "independent_human_signoffs": 0,
+  "target_tool_versions_certified_for_gold": 0,
+  "owned_cluster_objects_remaining": 0,
+  "exact_reference_commands_run_on_synthetic_or_trusted_local_inputs": 3,
+  "publisher_commands_run_on_live_external_targets": 0,
+  "model_calls": 0,
+  "official_test_rows_accessed": 0,
+  "caveat": "Synthetic fixture results establish only specified behaviors on the recorded Linux image, not correctness of 36 publisher labels or independent human semantic review."
+}
