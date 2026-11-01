@@ -1,0 +1,57 @@
+{
+  "GPU_count": 0,
+  "cpu_protocol_sha256": "4c6e5244dfa82038b31357c97588eade7dab8f28a574c8bb3804993aa4616d19",
+  "cpu_receipt_sha256": "494f5128ce314b402b78d2192c45577a7b459dbb216dc3ba9aa79c9dec28b948",
+  "date_pacific": "2026-10-31",
+  "decision": "The predeclared SFT gate remains failed; do not promote either adapter.",
+  "families": {
+    "log-count": {
+      "control": 6,
+      "control_executable": 6,
+      "rows": 6,
+      "strict_scorer_correct": {
+        "control": 0,
+        "treatment": 0
+      },
+      "treatment": 0,
+      "treatment_executable": 0
+    },
+    "log-line-numbers": {
+      "control": 0,
+      "control_executable": 0,
+      "rows": 6,
+      "strict_scorer_correct": {
+        "control": 0,
+        "treatment": 0
+      },
+      "treatment": 0,
+      "treatment_executable": 0
+    },
+    "offline-tls": {
+      "control": 0,
+      "control_executable": 0,
+      "rows": 6,
+      "strict_scorer_correct": {
+        "control": 0,
+        "treatment": 0
+      },
+      "treatment": 0,
+      "treatment_executable": 0
+    }
+  },
+  "generated_commands_run": 36,
+  "interpretation": "The strict scorer marks all 18 selected cases wrong in both arms. On one synthetic Linux fixture, control log-count outputs match the references in 6/6 while treatment log-count fails in 6/6; other selected families fail in both arms. This is a scorer-versus-execution diagnostic, not a replacement benchmark or proof of correctness on all files.",
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "official_KaliBench_TEST_rows": 0,
+  "owned_cluster_resources_remaining": 0,
+  "package_versions": [
+    "grep 3.7-1build1",
+    "tshark 3.6.2-2"
+  ],
+  "reference_commands_fixture_passed": 18,
+  "rows": 18,
+  "source_650_protocol_sha256": "7727b3ec9027dd3c72f4feda8457fb13618757155cb08dbcbf72c4c13e988332",
+  "source_scores_sha256": "d155e9428ed4a1e3a28a3a4d88e154f5485d001cdd36793431cd14beeb36dbef",
+  "status": "OFFLINE_SYNTHETIC_SEMANTIC_AUDIT_COMPLETE"
+}
