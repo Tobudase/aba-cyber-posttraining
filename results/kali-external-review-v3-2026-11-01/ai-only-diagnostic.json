@@ -1,0 +1,21 @@
+{
+  "status": "AI_ONLY_DIAGNOSTIC_NOT_VALIDATION_GOLD",
+  "protocol_change": "AI-assisted review at user request; does not satisfy prior independent-human admission gate",
+  "v3_rows_reviewed_by_ai": 36,
+  "provisional_ai_screened_rows": 26,
+  "context_excluded_rows": 10,
+  "provisional_distinct_tools": 20,
+  "provisional_rows_with_narrow_linux_fixture_support": 13,
+  "provisional_rows_without_linux_fixture_support": 13,
+  "safe_linux_fixture_checks_passed_total": 20,
+  "formal_minimum_rows": 32,
+  "formal_gate_satisfied": false,
+  "independent_human_signoffs": 0,
+  "fully_certified_gold_rows": 0,
+  "official_train_exact_overlap": 0,
+  "official_train_near_overlap_by_declared_rule": 0,
+  "model_calls_on_source": 0,
+  "official_test_rows_accessed": 0,
+  "allowed_use": "qualitative command-generation diagnosis only",
+  "disallowed_claims": ["official KaliBench score", "formal model promotion", "independently human-verified gold labels"]
+}

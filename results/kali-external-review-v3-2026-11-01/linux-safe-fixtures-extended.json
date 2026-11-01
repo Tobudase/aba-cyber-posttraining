@@ -1,0 +1,29 @@
+{
+  "status": "PASS_NARROW_SYNTHETIC_FIXTURES_ONLY",
+  "linux_cpu_job": true,
+  "gpu_count": 0,
+  "checks_passed": 10,
+  "observations": {
+    "apache_common_log_first_field_ips": true,
+    "env_grep_path_prefix": true,
+    "find_setuid_bit": true,
+    "grep_n_line_numbers": true,
+    "nm_lists_regular_symbol": true,
+    "openssl_aes256_cbc_roundtrip": true,
+    "openssl_self_signed_days_365": true,
+    "readelf_header_grep_entry": true,
+    "strings_grep_password_case_insensitive": true,
+    "uname_a_kernel_info": true
+  },
+  "checks_mapped_to_v3_cases": 9,
+  "one_check_related_to_utility_retention_not_v3": true,
+  "provisional_cases_with_either_fixture_support": 13,
+  "provisional_cases_without_fixture_support": 13,
+  "owned_cluster_objects_remaining": 0,
+  "external_network_targets": 0,
+  "model_calls": 0,
+  "official_test_rows_accessed": 0,
+  "independent_human_signoffs": 0,
+  "fully_certified_gold_rows": 0,
+  "caveat": "Some source commands were adapted to synthetic paths or noninteractive inputs. These checks do not establish task-level gold-label correctness."
+}
