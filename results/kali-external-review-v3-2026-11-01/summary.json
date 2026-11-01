@@ -1,0 +1,29 @@
+{
+  "status": "NOT_ADMITTED",
+  "source_revision": "178c0da1800f9c07311e1b8d6c61dd8104e7b4ae",
+  "source_sha256": "3ad067b036d8d28cfd8cef23b594c635c7b040ce8494fd5466f9a88184334935",
+  "v2_ai_static_review": {
+    "rows": 32,
+    "clear_mismatch": 2,
+    "context_dependent": 9,
+    "plausible_unverified": 20,
+    "plausible_lower_provenance": 1
+  },
+  "v3_adaptive_review_queue": {
+    "rows": 36,
+    "retained_from_v2": 30,
+    "new_same_source_misc_cases": 6,
+    "distinct_tools": 26,
+    "static_gate_issue_count": 72,
+    "independent_human_signoffs": 0,
+    "verified_tool_versions": 0,
+    "frozen": false
+  },
+  "official_train_exact_overlap": 0,
+  "official_train_near_overlap_by_declared_rule": 0,
+  "official_test_rows_accessed": 0,
+  "model_calls": 0,
+  "publisher_commands_executed": 0,
+  "gpu_jobs": 0,
+  "caveat": "AI static triage and lexical non-overlap do not prove semantic correctness, human reviewer identity, or pretraining nonexposure. The same-source adaptive review queue cannot be used for model selection until at least 32 cases pass independent review and the holdout is frozen before model outputs."
+}
