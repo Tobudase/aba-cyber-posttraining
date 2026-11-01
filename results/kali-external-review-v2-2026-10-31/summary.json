@@ -1,0 +1,30 @@
+{
+  "blank_form_sha256": "d1c8a5b053bedef9001c97d27619317670a8d25f415c5a027687fbf607e4c460",
+  "candidate_rows": 32,
+  "candidate_v2_sha256": "865010cd2a555adb4c0cee43fbfd9eea6fef3fba3928e560abcafb4e0576d3fe",
+  "dataset_commands_executed": 0,
+  "decision": "Candidate count reaches 32 but neither original nor supplement is human-certified. Do not freeze, evaluate, or select a model on this queue.",
+  "gate_issue_count": 64,
+  "limitations": [
+    "This is an adaptive supplementary review intake after five original reference mismatches were found.",
+    "The supplemental source is CyBashBench again, so it adds no source diversity.",
+    "Publisher timing_source=model_estimated does not certify semantic correctness.",
+    "The six ambiguous original rows may fail human review, reducing the eventual count below 32.",
+    "ldd must not be run on untrusted binaries; no source command was executed here."
+  ],
+  "new_GPU_jobs": 0,
+  "new_model_calls": 0,
+  "new_model_estimated_timing_rows": 1,
+  "new_optimizer_steps": 0,
+  "new_source_independent_from_prior_31": false,
+  "official_KaliBench_TEST_rows": 0,
+  "prior_31_sha256": "5e82942692230a4bf3a53a12cbc0b3b878b43c10e1c9a82b81d5187f3624dcbe",
+  "prior_human_reviewed_timing_rows": 31,
+  "review_packet_sha256": "ecb8f046a1d0c569fe3614258af0097dc364099af50cfc2a0060d2931ca7eb8d",
+  "source_revision": "178c0da1800f9c07311e1b8d6c61dd8104e7b4ae",
+  "source_rows": 200,
+  "source_sha256": "3ad067b036d8d28cfd8cef23b594c635c7b040ce8494fd5466f9a88184334935",
+  "status": "REVIEW_QUEUE_32_NOT_ADMITTED",
+  "target_tool_versions_verified": 0,
+  "verified_independent_human_signoffs": 0
+}
