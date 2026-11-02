@@ -1,0 +1,35 @@
+{
+  "status": "POSTHOC_SAFE_FIXTURE_DIAGNOSTIC_NOT_PREDECLARED_SCORE",
+  "arms": {
+    "control": {
+      "strict_failed_rows_checked": 6,
+      "safe_fixture_pass": 4,
+      "safe_fixture_fail": 2,
+      "commands_executed": 6,
+      "head_equivalent_pass": 2,
+      "grep_equivalent_pass": 2,
+      "jq_pass": 0
+    },
+    "treatment": {
+      "strict_failed_rows_checked": 6,
+      "safe_fixture_pass": 5,
+      "safe_fixture_fail": 1,
+      "commands_executed": 5,
+      "head_equivalent_pass": 2,
+      "grep_equivalent_pass": 2,
+      "jq_pass": 1
+    }
+  },
+  "rows": 12,
+  "GPU_count": 0,
+  "official_TEST_rows": 0,
+  "commands_executed": 11,
+  "fixture_pass_total": 9,
+  "original_strict_gate_unchanged": true,
+  "model_promotion": false,
+  "private_receipt_sha256": "748a68e0678f0584b2c120b769384f25d870ec4d86b517f8013b9d68ca7a35df",
+  "limitations": [
+    "These were selected after strict scoring; this does not revise the frozen primary metric.",
+    "Synthetic fixture output agreement does not prove general command validity or independent gold."
+  ]
+}
