@@ -2,6 +2,12 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 2, 2026 — hosted-agent TRAIN paraphrase pilot
+
+A hosted agent proposed 64 paraphrases of 16 fixture-checked TRAIN seeds across eight CLI tools. After static and semantic-form screening, **42** were used in a matched 680-update Qwen3-8B SFT comparison. On 16 pre-frozen, same-source family-held-out questions, strict correctness was **8/16 base, 10/16 matched control, 10/16 agent-data treatment**; old DEV64 remained **22/64** for both SFT arms, and exposed utility108 remained **72/108**. Treatment reduced utility108 truncations from 6 to 1, but produced one truncation on the 16-question holdout. The predeclared primary gain gate failed, so the adapter was not promoted. This is agent-assisted paraphrase data plus fixed SFT, **not native ABA automation or an official benchmark score**. Two bounded native ABA CPU VM starts were blocked by a LINSTOR volume-attach timeout before the controller ran; the VM is stopped. [Chinese report](docs/KALI_QWEN_AGENT_DATA680_ZH_2026-11-02.md) · [Aggregate](results/kali-qwen-agent-data680-2026-11-02/aggregate.json).
+
+![Matched 680-update agent-data pilot](results/kali-qwen-agent-data680-2026-11-02/strict-counts.png)
+
 ## November 2, 2026 — source-separated AI-only diagnostic
 
 The Qwen3-8B base and both matched 734-step SFT adapters were compared on **26 source-separated CyBashBench CLI questions covering 20 tools**. The provisional publisher references were AI-screened, with no independent human gold signoff. Tokenized exact-reference matches were **9/26 base, 7/26 control, 8/26 treatment**; on the eight cases with some safe-fixture evidence, they were **2/8, 1/8, 1/8**. Treatment recovered the control's one truncated output, but this panel gives **no reliable evidence of cross-tool transfer**. These are lexical, nonofficial diagnostics; no generated commands were executed, no optimizer steps were run, and neither adapter was promoted. [Chinese report](docs/KALI_QWEN_EXTERNAL26_AI_DIAGNOSTIC_ZH_2026-11-02.md) · [Aggregate](results/kali-qwen-external26-ai-diagnostic-2026-11-02/aggregate.json).

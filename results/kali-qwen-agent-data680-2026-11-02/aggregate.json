@@ -1,0 +1,118 @@
+{
+  "agent_proposals_admitted": 42,
+  "base_train_rows_common": 638,
+  "exploratory_gate_passed": false,
+  "gate_checks": {
+    "no_extra_truncation": true,
+    "official_TEST_untouched": true,
+    "old_dev_loss_at_most2": true,
+    "validation_gain_at_least2": false
+  },
+  "limits": [
+    "Validation is family-separated within the same self-authored source, not independent expert gold.",
+    "Agent paraphrases reuse the original verified commands, not new command semantics.",
+    "This pilot is fixed SFT with agent-proposed data, not native ABA controller orchestration."
+  ],
+  "model_promotion": false,
+  "native_ABA_controller_executed": false,
+  "official_TEST_rows": 0,
+  "optimizer_steps_each_arm": 680,
+  "protocol_sha256": "66c1fe68e9a06bc17bbcd8514f93525c5b8a1ad9f9a396139afa1e21998b835c",
+  "receipt_sha256": "713b3875dbd3f1ce33fdc5e8ebf117a5d7a842ffa1cc280081ce2a7143a06a52",
+  "score_protocol_sha256": "6ededc90efa413bac7acece1a58bd29b4880a3bc36041c0a02b1e7bf2139a695",
+  "sets": {
+    "old_dev64": {
+      "control": {
+        "native_total": 69.5,
+        "rows": 64,
+        "strict_correct": 22,
+        "truncated": 0
+      },
+      "paired_control_treatment": {
+        "both_correct": 22,
+        "both_wrong": 42,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 69.01,
+        "rows": 64,
+        "strict_correct": 22,
+        "truncated": 0
+      }
+    },
+    "utility_all108": {
+      "control": {
+        "native_total": 81.79,
+        "rows": 108,
+        "strict_correct": 72,
+        "truncated": 6
+      },
+      "paired_control_treatment": {
+        "both_correct": 72,
+        "both_wrong": 36,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 84.34,
+        "rows": 108,
+        "strict_correct": 72,
+        "truncated": 1
+      }
+    },
+    "utility_primary36": {
+      "control": {
+        "native_total": 55.56,
+        "rows": 36,
+        "strict_correct": 18,
+        "truncated": 6
+      },
+      "paired_control_treatment": {
+        "both_correct": 18,
+        "both_wrong": 18,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 64.7,
+        "rows": 36,
+        "strict_correct": 18,
+        "truncated": 1
+      }
+    },
+    "validation16": {
+      "base": {
+        "native_total": 87.6,
+        "rows": 16,
+        "strict_correct": 8,
+        "truncated": 0
+      },
+      "control": {
+        "native_total": 88.89,
+        "rows": 16,
+        "strict_correct": 10,
+        "truncated": 0
+      },
+      "paired_base_treatment": {
+        "both_correct": 8,
+        "both_wrong": 6,
+        "gained": 2,
+        "lost": 0
+      },
+      "paired_control_treatment": {
+        "both_correct": 10,
+        "both_wrong": 6,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 87.5,
+        "rows": 16,
+        "strict_correct": 10,
+        "truncated": 1
+      }
+    }
+  },
+  "status": "SCORED_AGENT_DATA_MATCHED_SFT_EXPLORATORY"
+}
