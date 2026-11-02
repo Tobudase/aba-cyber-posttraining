@@ -1,0 +1,55 @@
+{
+  "status": "POSTHOC_TRAIN_FIXTURE_AUDIT",
+  "native_run_status": "NATIVE_ABA_COMPLETED",
+  "native_ABA_exit_code": 0,
+  "candidate_sha256": "4371c180cb08db036ef133f2a5059c3ecb9b555962c006debb9bb3d47a56b291",
+  "task_manifest_sha256": "67825f74299e6ba9a0b700b1fc066339deac798e4e92072a1df526cc22c1bcb1",
+  "candidate_rows": 16,
+  "unique_ids": 16,
+  "unique_questions": 16,
+  "unique_commands": 16,
+  "tools": {
+    "grep": 4,
+    "head": 4,
+    "tail": 4,
+    "wc": 4
+  },
+  "frozen_primary": {
+    "score": 0.875,
+    "accepted": 14,
+    "rows": 16,
+    "warning": "Finite TRAIN fixture screen only; no independent gold or benchmark gain"
+  },
+  "posthoc_two_fixture_passed": 16,
+  "posthoc_reasons": {
+    "pass": 16
+  },
+  "frozen_reject_diagnosis": "Frozen evaluator lowercased the pattern extracted from the question and demanded exact token-case equality; GNU grep -i -F accepts the uppercase literal tokens in these two commands.",
+  "source_semantics": [
+    "head bytes",
+    "tail bytes",
+    "wc words",
+    "grep case-sensitive whole line"
+  ],
+  "candidate_semantics": [
+    "head lines",
+    "tail lines",
+    "wc lines",
+    "grep case-insensitive fixed substring"
+  ],
+  "structural_families": 4,
+  "official_TEST_rows": 0,
+  "independent_gold_rows": 0,
+  "model_optimizer_steps": 0,
+  "decision": "HOLD_FOR_REVIEW_AND_INDEPENDENT_EVALUATION",
+  "limitations": [
+    "Four constrained templates and four filename variants per tool; limited lexical and semantic diversity.",
+    "The 16 generated rows and post hoc checks share the TRAIN-side task definition; no blind generalization estimate.",
+    "The original 14/16 frozen primary score is retained; 16/16 is only a post hoc semantic sensitivity result.",
+    "No SFT, official KaliBench score, or model promotion follows from this data-generation pilot."
+  ],
+  "posthoc_not_primary": true,
+  "ephemeral_vmi_deleted": true,
+  "gpu_count": 0,
+  "note": "No raw task/question/command bodies, token or model weights in public aggregate."
+}

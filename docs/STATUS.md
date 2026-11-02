@@ -1,4 +1,7 @@
-# Current status — October 31, 2026
+# Current status — November 2, 2026
+
+**Native ABA TRAIN data-generation milestone:** a bounded CPU-only run delivered 16 candidate question/command rows spanning four new operation templates. The pre-frozen fixture scored **14/16**. A separate post hoc execution audit passed **16/16** and traced the discrepancy to case-sensitive scorer matching of the pattern argument for two valid `grep -i -F` commands. The original primary score is preserved. The VM was deleted; there were zero GPU updates and zero official TEST rows. These candidates are too narrow for a supported model-gain claim and have not entered SFT. [Chinese report](KALI_NATIVE_ABA_NOVEL_DATA_PILOT_ZH_2026-11-02.md) · [Aggregate](../results/kali-native-aba-novel-2026-11-02/aggregate.json).
+
 
 **External validation still gated:** a private 31-case CyBashBench review packet and blank independent-review form are prepared. Six cases need context or version adjudication; independent human signoffs and verified tool versions remain zero. The predeclared 32-case minimum is unmet. The pinned NL2SH-ALFA test file is reserved for future general Bash retention only and has received zero model queries. No new optimizer steps, GPU Jobs, dataset-command executions or KaliBench official TEST reads. [Chinese next-stage report](KALI_EXTERNAL_VALIDATION_GATE_ZH_2026-10-31.md) · [Sanitized summary](../results/kali-external-validation-gate-2026-10-31/summary.json).
 
