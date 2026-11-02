@@ -31,7 +31,7 @@ def main():
     assert d["posthoc_behavior_paired_control_treatment"] == {"both_correct":12,"gained":1,"lost":2,"both_wrong":1}
     assert d["posthoc_failure_mechanisms"] == {"control_invalid_grep_options":2,"treatment_grep_word_boundary_output_mismatch":3}
     assert d["model_promotion"] is False
-    assert d["decision"] == "KEEP_BASE_AND_DO_NOT_REUSE_NATIVE_ABA_BATCH_AS_IS"
+    assert d["decision"] == "DO_NOT_PROMOTE_TREATMENT_KEEP_FORMAL_DEFAULT_UNCHANGED"
     assert not any(k in d for k in ("candidate_b64","per_row_private","raw_predictions","messages","token","question","command"))
     body = REPORT.read_text()
     for phrase in ("12/16", "16/16", "14/16", "13/16", "事后", "不推广处理适配器", "官方 TEST"):

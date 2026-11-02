@@ -220,7 +220,7 @@
   "independent_gold_rows": 0,
   "official_TEST_rows": 0,
   "model_promotion": false,
-  "decision": "KEEP_BASE_AND_DO_NOT_REUSE_NATIVE_ABA_BATCH_AS_IS",
+  "decision": "DO_NOT_PROMOTE_TREATMENT_KEEP_FORMAL_DEFAULT_UNCHANGED",
   "freeze_sha256": "a335002f4cb6de7639cba54ccff0f39a47a69903af1df8af6e1ac19a62a0bd37",
   "strict_score_protocol_sha256": "0d786bd0522fa8728c43a5008fe28d2598613d1f4aa4a32fa2a4d034e881176d",
   "linux_posthoc_tasks_sha256": "d1dd9f914d0f65145ca02a8af9a12e78957958056d59cbc255fad3c1be3c3d90"

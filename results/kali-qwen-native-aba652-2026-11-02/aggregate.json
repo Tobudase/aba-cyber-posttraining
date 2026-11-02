@@ -141,5 +141,5 @@
     "Match uses optimizer steps and approximate lengths, not identical token/FLOP budgets.",
     "Any result is an engineering comparison, not a CyberGym or KaliBench leaderboard score."
   ],
-  "decision": "KEEP_ORIGINAL_BASE_AND_DO_NOT_PROMOTE_NATIVE_ABA_TREATMENT"
+  "decision": "DO_NOT_PROMOTE_TREATMENT_KEEP_FORMAL_DEFAULT_UNCHANGED"
 }
