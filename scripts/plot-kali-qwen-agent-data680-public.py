@@ -27,7 +27,7 @@ def main():
     fig, ax = plt.subplots(figsize=(7.2, 4.1), dpi=160)
     width = 0.26
     left = ax.bar(x - 0.18, control, width, label="Matched control SFT", color="#8197aa")
-    right = ax.bar(x + 0.18, treatment, width, label="Agent paraphrase SFT", color="#2a768f")
+    right = ax.bar(x + 0.18, treatment, width, label="Model paraphrase SFT", color="#2a768f")
     for bars in (left, right):
         for bar in bars:
             ax.annotate(f"{bar.get_height():.0f}", (bar.get_x() + bar.get_width() / 2, bar.get_height()),
@@ -36,7 +36,7 @@ def main():
     ax.set_xticks(x, [label for label, _ in groups])
     ax.set_ylim(0, 85)
     ax.set_ylabel("Strict correct count")
-    ax.set_title("Qwen3-8B agent-paraphrase pilot: no strict-score gain")
+    ax.set_title("Qwen3-8B model-paraphrase pilot: no strict-score gain")
     ax.legend(loc="upper left", frameon=False, fontsize=8)
     ax.spines[["top", "right"]].set_visible(False)
     fig.text(0.5, 0.02, "Exploratory, same-source family holdout; not official KaliBench or native ABA",
