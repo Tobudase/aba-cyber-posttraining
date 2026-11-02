@@ -1,0 +1,75 @@
+{
+  "GPU_count": 0,
+  "cpu_protocol_sha256": "bd401976da27543cf986bff9b3022e1ca27d1056e59b887e67d49be972d7ca7b",
+  "cpu_receipt_sha256": "c31413bd06c08764460d945e3b775571aa05d17f400738bd583c78ab38900daf",
+  "date_pacific": "2026-11-01",
+  "families": {
+    "log-count": {
+      "control": {
+        "executed": 5,
+        "fixture_stdout_match": 1,
+        "no_complete_output": 0,
+        "not_allowlisted": 1,
+        "strict_correct": 0
+      },
+      "rows": 6,
+      "treatment": {
+        "executed": 6,
+        "fixture_stdout_match": 6,
+        "no_complete_output": 0,
+        "not_allowlisted": 0,
+        "strict_correct": 6
+      }
+    },
+    "log-line-numbers": {
+      "control": {
+        "executed": 4,
+        "fixture_stdout_match": 0,
+        "no_complete_output": 2,
+        "not_allowlisted": 0,
+        "strict_correct": 0
+      },
+      "rows": 6,
+      "treatment": {
+        "executed": 6,
+        "fixture_stdout_match": 6,
+        "no_complete_output": 0,
+        "not_allowlisted": 0,
+        "strict_correct": 6
+      }
+    },
+    "offline-tls": {
+      "control": {
+        "executed": 6,
+        "fixture_stdout_match": 0,
+        "no_complete_output": 0,
+        "not_allowlisted": 0,
+        "strict_correct": 0
+      },
+      "rows": 6,
+      "treatment": {
+        "executed": 6,
+        "fixture_stdout_match": 3,
+        "no_complete_output": 0,
+        "not_allowlisted": 0,
+        "strict_correct": 3
+      }
+    }
+  },
+  "generated_commands_run": 33,
+  "interpretation": "All fifteen strict gains occur in three exposed self-authored template families. On one synthetic offline Linux fixture, generated-command output matches improve in the same three families, but strict scoring misses one executable control log-count answer. These checks cannot establish independent or official benchmark generalization.",
+  "model_promotion": false,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "official_KaliBench_TEST_rows": 0,
+  "owned_cluster_resources_remaining": 0,
+  "package_versions": [
+    "grep 3.7-1build1",
+    "tshark 3.6.2-2"
+  ],
+  "reference_commands_fixture_passed": 18,
+  "rows": 18,
+  "source_734_protocol_sha256": "23c843abdd449c6daf69d2e8ecb811ee26b15199e1ef98c7915499edc2b588b5",
+  "source_scores_sha256": "95f2f34760c011b412045a22b00f6782bf40de277c0339deb7216df356084671",
+  "status": "OFFLINE_SYNTHETIC_SEMANTIC_AUDIT_COMPLETE"
+}

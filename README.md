@@ -2,7 +2,17 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## Current result — October 31, 2026
+## November 1, 2026 — source-quality correction and larger SFT data dose
+
+An attempted fresh 96-item internal KaliBench TRAIN development panel was **invalidated before any model query**: its publisher terminal labels were 88 runtime errors and 8 timeouts, with zero successful executions. All 936 successful-execution items in our 3,376-item screened TRAIN file were already in the earlier Qwen training/development split. The dependent first 734-step evaluation protocol was canceled, and its GPU attempts produced no model outputs or optimizer steps.
+
+Separately, 96 self-authored `grep`/offline `tshark` training candidates across six correlated intent families passed 96/96 benign Linux fixtures on Nautilus. A revised, explicitly exploratory study compares 734-step Qwen3-8B SFT arms: the same original 638 rows plus 96 length-matched publisher TRAIN repeats, versus plus 96 fixture-checked utility rows. The primary utility and old domain sets are already exposed development data; there is no independent or official TEST evaluation, and no automatic model promotion. [Chinese report and protocol](docs/KALI_QWEN_DATA_QUALITY_DOSE_ZH_2026-11-01.md) · [Sanitized aggregate](results/kali-qwen-data-quality-2026-11-01/summary.json).
+
+**Completed matched result:** both arms finished 734 updates on one A40. Strict utility confirm improved **18/36 → 24/36** and all utility **72/108 → 87/108**, while old domain DEV64 stayed **22/64 → 22/64** and truncations decreased. The predeclared exploratory gate passed. **All 15 gained utility items fall in three exposed, self-authored template families** that overlap the added training data; this is local template improvement, not independent or official KaliBench generalization. A CPU-only offline command audit found reference-output matches of **0→6/6** for log line numbers, **1→6/6** for log counts, and **0→3/6** for offline TLS, including one control answer the strict scorer missed. No adapter was promoted. [Chinese result and limitations](docs/KALI_QWEN_DIVERSE_734_RESULT_ZH_2026-11-01.md) · [Paired aggregate](results/kali-qwen-diverse-734-2026-11-01/comparison.json) · [Offline audit](results/kali-qwen-diverse-734-2026-11-01/semantic-audit.json).
+
+![Matched 734-step exploratory Qwen3-8B result](results/kali-qwen-diverse-734-2026-11-01/control-treatment.png)
+
+## Previous controlled result — October 31, 2026
 
 **Latest controlled SFT result:** a one-A40, 650-step-per-arm comparison kept the same 638 original KaliBench TRAIN rows and initial Qwen3-8B LoRA state. The control added 12 length-matched repeats of domain TRAIN rows; treatment added 12 self-authored, documentation-grounded CLI rows that passed fixed Linux fixtures. On **previously exposed development sets**, treatment scored **21/64 vs control 22/64** strict on domain DEV64 and **18/36 vs 18/36** on the primary CLI panel. Both arms had zero truncations and the three previously regressed CLI families remained **0/6 each**. Read-only failure audit found matching prompt templates and correctly encoded targets; targeted examples contributed only 1.85% of updates, a possible but unproven explanation for the missing gain. The predeclared exploratory gate **failed**; neither adapter is promoted. This is fixed-data SFT, not ABA, independent cyber validation or official KaliBench evaluation. [Chinese report](docs/KALI_QWEN_TARGETED_REPLAY_650_ZH_2026-10-31.md) · [Aggregate and chart](results/kali-qwen-targeted-650-2026-10-31/summary.json).
 

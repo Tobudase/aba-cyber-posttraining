@@ -1,0 +1,116 @@
+{
+  "design_sha256": "56b54aeb884626467f0203a9ef3c18d96eb3aa201c5a443d93d1f325fc93b33e",
+  "exploratory_gate_passed": true,
+  "gate_checks": {
+    "no_extra_truncation": true,
+    "official_TEST_untouched": true,
+    "old_dev64_loss_at_most2": true,
+    "utility_primary36_min_plus3": true
+  },
+  "human_expert_signoffs_on_new_data": 0,
+  "limitation": "Even a passed development gate cannot establish independent-source generalization or justify formal promotion.",
+  "model_promotion": false,
+  "official_TEST_rows": 0,
+  "optimizer_steps_each_arm": 734,
+  "predeclared_gate": {
+    "decision": "NO_FORMAL_PROMOTION_WITHOUT_INDEPENDENT_VALIDATION",
+    "official_TEST_untouched": true,
+    "old_internal_DEV64_treatment_max_loss_from_control": 2,
+    "treatment_truncations_max_extra_over_control": 0,
+    "utility_primary36_treatment_min_gain_over_control": 3
+  },
+  "protocol_sha256": "23c843abdd449c6daf69d2e8ecb811ee26b15199e1ef98c7915499edc2b588b5",
+  "receipt_sha256": "afba08419043b134047791cc5d53a5b02475216187728cc0bbf9d3da1ae9b8cc",
+  "scope": "Previously exposed self-authored utility and same-publisher internal DEV; invalid fresh96 excluded; not independent/official score",
+  "sets": {
+    "domain_old_dev64": {
+      "control": {
+        "format_error_percent": 3.12,
+        "native_total": 67.78,
+        "rows": 64,
+        "strict_correct": 22,
+        "truncated": 2
+      },
+      "paired_strict": {
+        "both_correct": 22,
+        "both_wrong": 42,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "format_error_percent": 1.56,
+        "native_total": 68.87,
+        "rows": 64,
+        "strict_correct": 22,
+        "truncated": 1
+      }
+    },
+    "utility_all108": {
+      "control": {
+        "format_error_percent": 1.85,
+        "native_total": 84.52,
+        "rows": 108,
+        "strict_correct": 72,
+        "truncated": 2
+      },
+      "paired_strict": {
+        "both_correct": 72,
+        "both_wrong": 21,
+        "gained": 15,
+        "lost": 0
+      },
+      "treatment": {
+        "format_error_percent": 0.0,
+        "native_total": 89.22,
+        "rows": 108,
+        "strict_correct": 87,
+        "truncated": 0
+      }
+    },
+    "utility_primary36": {
+      "control": {
+        "format_error_percent": 5.56,
+        "native_total": 64.72,
+        "rows": 36,
+        "strict_correct": 18,
+        "truncated": 2
+      },
+      "paired_strict": {
+        "both_correct": 18,
+        "both_wrong": 12,
+        "gained": 6,
+        "lost": 0
+      },
+      "treatment": {
+        "format_error_percent": 0.0,
+        "native_total": 74.6,
+        "rows": 36,
+        "strict_correct": 24,
+        "truncated": 0
+      }
+    },
+    "utility_secondary72": {
+      "control": {
+        "format_error_percent": 0.0,
+        "native_total": 94.42,
+        "rows": 72,
+        "strict_correct": 54,
+        "truncated": 0
+      },
+      "paired_strict": {
+        "both_correct": 54,
+        "both_wrong": 9,
+        "gained": 9,
+        "lost": 0
+      },
+      "treatment": {
+        "format_error_percent": 0.0,
+        "native_total": 96.53,
+        "rows": 72,
+        "strict_correct": 63,
+        "truncated": 0
+      }
+    }
+  },
+  "status": "SCORED_MATCHED_734_INTERNAL_ONLY_V2_EXPLORATORY"
+}

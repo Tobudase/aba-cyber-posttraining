@@ -1,0 +1,57 @@
+{
+  "completed_gpu_comparison": {
+    "GPU_count": 1,
+    "GPU_model": "NVIDIA A40",
+    "domain_old_dev64_strict_control": 22,
+    "domain_old_dev64_strict_treatment": 22,
+    "exploratory_gate_passed": true,
+    "model_promotion": false,
+    "official_test_rows": 0,
+    "optimizer_steps_total": 1468,
+    "utility_all108_strict_control": 72,
+    "utility_all108_strict_treatment": 87,
+    "utility_primary36_strict_control": 18,
+    "utility_primary36_strict_treatment": 24
+  },
+  "control_extra_supervised_tokens": 2155,
+  "control_extra_total_tokens": 39309,
+  "date": "2026-11-01",
+  "fixture_families": 6,
+  "fixture_gpu_count": 0,
+  "fixture_job_owned_resources_remaining": 0,
+  "fixture_passed": 96,
+  "fixture_training_candidate_rows": 96,
+  "historical_qwen_split936_terminal_labels": {
+    "PASS_EXECUTED": 936
+  },
+  "human_expert_signoffs": 0,
+  "invalid_fresh_panel96_terminal_labels": {
+    "PASS_RUNTIME_ERROR": 88,
+    "TIMEOUT": 8
+  },
+  "invalid_fresh_panel_model_calls": 0,
+  "limitations": [
+    "New TRAIN records outside prior Qwen split lack PASS_EXECUTED in the screened source.",
+    "Self-authored fixture data and exposed DEV support exploratory causal diagnosis only.",
+    "All 15 utility strict gains were confined to three exposed self-authored template families; independent generalization remains untested."
+  ],
+  "matched_study_extra_rows_each": 96,
+  "matched_study_steps_each_arm": 734,
+  "model_promotion": false,
+  "official_test_rows": 0,
+  "publisher_train3504_terminal_labels": {
+    "PASS_EXECUTED": 954,
+    "PASS_RUNTIME_ERROR": 2355,
+    "TIMEOUT": 195
+  },
+  "screened_train3376_terminal_labels": {
+    "PASS_EXECUTED": 936,
+    "PASS_RUNTIME_ERROR": 2249,
+    "TIMEOUT": 191
+  },
+  "status": "EXPLORATORY_734_COMPLETED_GATE_PASSED_NO_PROMOTION",
+  "targeted_update_fraction": 0.13079,
+  "targeted_updates_final_100": 8,
+  "treatment_extra_supervised_tokens": 2208,
+  "treatment_extra_total_tokens": 39216
+}
