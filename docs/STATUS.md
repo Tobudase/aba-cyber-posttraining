@@ -1,5 +1,7 @@
 # Current status — November 2, 2026
 
+**Native ABA data → Qwen3-8B SFT engineering loop completed:** 14 frozen-accepted ABA TRAIN rows entered a matched A40 SFT comparison against 14 publisher TRAIN repeats. Both arms completed 652 updates with nearly identical extra input-token totals. Primary, historically exposed validation16 strict correctness was **8/16 vs 8/16**; old domain DEV64 was **21/64 vs 22/64**, utility108 **66/108 vs 66/108**. The exploratory primary gain gate failed, so no adapter is promoted. No official TEST or independent gold was used. All owned GPU objects were cleaned. [Chinese report](KALI_QWEN_NATIVE_ABA652_RESULT_ZH_2026-11-02.md) · [Aggregate and figure](../results/kali-qwen-native-aba652-2026-11-02/aggregate.json).
+
 **Native ABA TRAIN data-generation milestone:** a bounded CPU-only run delivered 16 candidate question/command rows spanning four new operation templates. The pre-frozen fixture scored **14/16**. A separate post hoc execution audit passed **16/16** and traced the discrepancy to case-sensitive scorer matching of the pattern argument for two valid `grep -i -F` commands. The original primary score is preserved. The VM was deleted; there were zero GPU updates and zero official TEST rows. These candidates are too narrow for a supported model-gain claim and have not entered SFT. [Chinese report](KALI_NATIVE_ABA_NOVEL_DATA_PILOT_ZH_2026-11-02.md) · [Aggregate](../results/kali-native-aba-novel-2026-11-02/aggregate.json).
 
 

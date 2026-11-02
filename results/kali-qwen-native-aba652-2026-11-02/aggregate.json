@@ -1,0 +1,145 @@
+{
+  "status": "COMPLETE_NATIVE_ABA_DATA_MATCHED_QWEN_SFT_ENGINEERING",
+  "native_ABA_controller_executed": true,
+  "native_ABA_candidate_sha256": "4371c180cb08db036ef133f2a5059c3ecb9b555962c006debb9bb3d47a56b291",
+  "native_ABA_candidate_rows": 16,
+  "frozen_fixture_accepted_into_SFT": 14,
+  "posthoc_sensitive_rows_excluded": 2,
+  "source_examples_type": "self-authored TRAIN-side synthetic, not official TEST",
+  "common_publisher_TRAIN_rows": 638,
+  "control_extra_publisher_TRAIN_repeats": 14,
+  "treatment_extra_native_ABA_rows": 14,
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "GPU": "NVIDIA A40",
+  "GPU_count": 1,
+  "peak_cuda_allocated_bytes": 10275639296,
+  "worker_wall_seconds": 2900.0,
+  "optimizer_steps_each_arm": 652,
+  "optimizer_steps_total": 1304,
+  "length_match": {
+    "max_input_token_delta": 12,
+    "sum_input_token_control": 5551,
+    "sum_input_token_treatment": 5552,
+    "sum_supervised_target_tokens_control": 211,
+    "sum_supervised_target_tokens_treatment": 211
+  },
+  "protocol_sha256": "e4339c6df02a85e3d5c072429da372051ea1e24a054c76c33cd21d2191bd597c",
+  "score_protocol_sha256": "7f0411e46d3b6499f303f9e6938991e449f91a6073b6d8e0c83273e91e6d955b",
+  "receipt_sha256": "d780f49c7de2131e5a4e432bd1ae6fde625808812adbc8b9416b0a299bb85be0",
+  "validation16_historically_exposed": true,
+  "independent_gold_rows": 0,
+  "official_TEST_rows": 0,
+  "sets": {
+    "old_dev64": {
+      "control": {
+        "native_total": 66.41,
+        "rows": 64,
+        "strict_correct": 21,
+        "truncated": 0
+      },
+      "paired_control_treatment": {
+        "both_correct": 21,
+        "both_wrong": 42,
+        "gained": 1,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 67.46,
+        "rows": 64,
+        "strict_correct": 22,
+        "truncated": 0
+      }
+    },
+    "utility_all108": {
+      "control": {
+        "native_total": 78.09,
+        "rows": 108,
+        "strict_correct": 66,
+        "truncated": 6
+      },
+      "paired_control_treatment": {
+        "both_correct": 66,
+        "both_wrong": 42,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 78.09,
+        "rows": 108,
+        "strict_correct": 66,
+        "truncated": 6
+      }
+    },
+    "utility_primary36": {
+      "control": {
+        "native_total": 55.56,
+        "rows": 36,
+        "strict_correct": 18,
+        "truncated": 6
+      },
+      "paired_control_treatment": {
+        "both_correct": 18,
+        "both_wrong": 18,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 55.56,
+        "rows": 36,
+        "strict_correct": 18,
+        "truncated": 6
+      }
+    },
+    "validation16": {
+      "base": {
+        "native_total": 87.6,
+        "rows": 16,
+        "strict_correct": 8,
+        "truncated": 0
+      },
+      "control": {
+        "native_total": 76.39,
+        "rows": 16,
+        "strict_correct": 8,
+        "truncated": 2
+      },
+      "paired_base_treatment": {
+        "both_correct": 6,
+        "both_wrong": 6,
+        "gained": 2,
+        "lost": 2
+      },
+      "paired_control_treatment": {
+        "both_correct": 8,
+        "both_wrong": 8,
+        "gained": 0,
+        "lost": 0
+      },
+      "treatment": {
+        "native_total": 76.39,
+        "rows": 16,
+        "strict_correct": 8,
+        "truncated": 2
+      }
+    }
+  },
+  "gate_checks": {
+    "no_extra_truncation": true,
+    "official_TEST_untouched": true,
+    "old_dev_loss_at_most2": true,
+    "validation_gain_at_least2": false
+  },
+  "exploratory_gate_passed": false,
+  "model_promotion": false,
+  "owned_GPU_resources_cleaned": true,
+  "one_discordant_domain_tool": "wbinfo",
+  "one_discordant_domain_interpretation": "Treatment matches the publisher silver reference; no independent semantic verification or causal attribution.",
+  "limits": [
+    "Only four constrained task families and 14 admitted rows.",
+    "Existing validation16 is historically exposed; no blind or independent gold result.",
+    "Match uses optimizer steps and approximate lengths, not identical token/FLOP budgets.",
+    "Any result is an engineering comparison, not a CyberGym or KaliBench leaderboard score."
+  ],
+  "decision": "KEEP_ORIGINAL_BASE_AND_DO_NOT_PROMOTE_NATIVE_ABA_TREATMENT"
+}
