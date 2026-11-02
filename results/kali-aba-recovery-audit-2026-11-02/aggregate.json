@@ -1,0 +1,42 @@
+{
+  "status": "READ_ONLY_RECOVERY_AUDIT_NO_NEW_TRAINING",
+  "historically_exposed_validation16_strict": {
+    "base": 8,
+    "control": 8,
+    "treatment": 8
+  },
+  "historically_exposed_utility108_strict": {
+    "control": 66,
+    "treatment": 66
+  },
+  "current_validation16_truncation": {
+    "base": 0,
+    "control": 2,
+    "treatment": 2
+  },
+  "current_utility108_truncation": {
+    "control": 6,
+    "treatment": 6
+  },
+  "prior_noncausal_680_step_utility108_truncation": {
+    "control": 6,
+    "treatment": 1
+  },
+  "native_ABA_candidate_rows": 16,
+  "ambiguous_grep_candidate_rows": 4,
+  "ambiguous_grep_rows_in_completed_SFT": 2,
+  "native_ABA_rows_in_completed_SFT": 14,
+  "completed_SFT_steps_each_arm": 652,
+  "common_supervised_target_tokens": 13228,
+  "extra_supervised_target_tokens_each_arm": 211,
+  "posthoc_derived_candidate_rows": 16,
+  "posthoc_reworded_grep_rows": 4,
+  "local_safe_fixture_checks_passed": 32,
+  "future_training_eligible_rows": 0,
+  "independent_gold_rows": 0,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "official_TEST_rows": 0,
+  "causal_root_cause_confirmed": false,
+  "model_promotion": false
+}
