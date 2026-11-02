@@ -18,6 +18,12 @@
     "control": 6,
     "treatment": 6
   },
+  "historical_core638_utility108_truncation": {
+    "base": 0,
+    "sft638": 6,
+    "same_six_ids_as_current_control": true,
+    "utility_input_hash_and_generation_protocol_fields_match_current": true
+  },
   "prior_noncausal_680_step_utility108_truncation": {
     "control": 6,
     "treatment": 1
