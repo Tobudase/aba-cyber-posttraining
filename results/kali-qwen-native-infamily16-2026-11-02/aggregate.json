@@ -1,0 +1,227 @@
+{
+  "status": "COMPLETE_ADAPTIVE_INFAMILY16_AND_POSTHOC_LINUX_AUDIT",
+  "rows": 16,
+  "tools": {
+    "head": 4,
+    "tail": 4,
+    "wc": 4,
+    "grep": 4
+  },
+  "created_after_previous_SFT_result": true,
+  "questions_new_filenames_same_four_intent_families": true,
+  "fixtures_frozen_before_this_diagnostic_model_outputs": true,
+  "reference_safe_fixture_passed_before_outputs": 16,
+  "GPU_inference_model": "NVIDIA A40",
+  "GPU_inference_optimizer_steps": 0,
+  "GPU_inference_wall_seconds": 795.31,
+  "GPU_inference_resources_cleaned": true,
+  "frozen_strict": {
+    "base": {
+      "rows": 16,
+      "strict_correct": 12,
+      "canonical_exact": 12,
+      "truncated": 0,
+      "by_tool": {
+        "grep": {
+          "behavior": 0,
+          "rows": 4,
+          "strict": 0
+        },
+        "head": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        },
+        "tail": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        },
+        "wc": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        }
+      }
+    },
+    "control": {
+      "rows": 16,
+      "strict_correct": 12,
+      "canonical_exact": 12,
+      "truncated": 0,
+      "by_tool": {
+        "grep": {
+          "behavior": 0,
+          "rows": 4,
+          "strict": 0
+        },
+        "head": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        },
+        "tail": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        },
+        "wc": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        }
+      }
+    },
+    "treatment": {
+      "rows": 16,
+      "strict_correct": 12,
+      "canonical_exact": 12,
+      "truncated": 0,
+      "by_tool": {
+        "grep": {
+          "behavior": 0,
+          "rows": 4,
+          "strict": 0
+        },
+        "head": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        },
+        "tail": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        },
+        "wc": {
+          "behavior": 4,
+          "rows": 4,
+          "strict": 4
+        }
+      }
+    }
+  },
+  "frozen_strict_paired_control_treatment": {
+    "both_correct": 12,
+    "both_wrong": 4,
+    "gained": 0,
+    "lost": 0
+  },
+  "frozen_narrow_allowlist_fixture_pass": {
+    "base": 12,
+    "control": 12,
+    "treatment": 12
+  },
+  "posthoc_expanded_safe_linux_execution": {
+    "base": {
+      "rows": 16,
+      "executed": 16,
+      "passed": 16,
+      "by_tool": {
+        "head": {
+          "passed": 4,
+          "rows": 4
+        },
+        "tail": {
+          "passed": 4,
+          "rows": 4
+        },
+        "wc": {
+          "passed": 4,
+          "rows": 4
+        },
+        "grep": {
+          "passed": 4,
+          "rows": 4
+        }
+      },
+      "reasons": {
+        "matched": 16
+      }
+    },
+    "control": {
+      "rows": 16,
+      "executed": 16,
+      "passed": 14,
+      "by_tool": {
+        "head": {
+          "passed": 4,
+          "rows": 4
+        },
+        "tail": {
+          "passed": 4,
+          "rows": 4
+        },
+        "wc": {
+          "passed": 4,
+          "rows": 4
+        },
+        "grep": {
+          "passed": 2,
+          "rows": 4
+        }
+      },
+      "reasons": {
+        "matched": 14,
+        "command_error": 2
+      }
+    },
+    "treatment": {
+      "rows": 16,
+      "executed": 16,
+      "passed": 13,
+      "by_tool": {
+        "head": {
+          "passed": 4,
+          "rows": 4
+        },
+        "tail": {
+          "passed": 4,
+          "rows": 4
+        },
+        "wc": {
+          "passed": 4,
+          "rows": 4
+        },
+        "grep": {
+          "passed": 1,
+          "rows": 4
+        }
+      },
+      "reasons": {
+        "matched": 13,
+        "output_mismatch": 3
+      }
+    }
+  },
+  "posthoc_expanded_safe_linux_execution_rows": 48,
+  "posthoc_expanded_safe_linux_execution_GPU_count": 0,
+  "posthoc_expanded_safe_linux_execution_resources_cleaned": true,
+  "posthoc_behavior_paired_control_treatment": {
+    "both_correct": 12,
+    "gained": 1,
+    "lost": 2,
+    "both_wrong": 1
+  },
+  "posthoc_behavior_paired_base_treatment": {
+    "both_correct": 13,
+    "gained": 0,
+    "lost": 3,
+    "both_wrong": 0
+  },
+  "posthoc_failure_mechanisms": {
+    "control_invalid_grep_options": 2,
+    "treatment_grep_word_boundary_output_mismatch": 3
+  },
+  "frozen_strict_unchanged": true,
+  "posthoc_expanded_allowlist_after_outputs": true,
+  "training_data_quality_followup": "Quarantine two frozen-accepted ambiguous grep TRAIN word/substr rows for future studies; prior SFT and scores remain unchanged.",
+  "causal_claim": "No causal attribution: one seed, 14 narrow training rows, adaptive same-family diagnostic.",
+  "independent_gold_rows": 0,
+  "official_TEST_rows": 0,
+  "model_promotion": false,
+  "decision": "KEEP_BASE_AND_DO_NOT_REUSE_NATIVE_ABA_BATCH_AS_IS",
+  "freeze_sha256": "a335002f4cb6de7639cba54ccff0f39a47a69903af1df8af6e1ac19a62a0bd37",
+  "strict_score_protocol_sha256": "0d786bd0522fa8728c43a5008fe28d2598613d1f4aa4a32fa2a4d034e881176d",
+  "linux_posthoc_tasks_sha256": "d1dd9f914d0f65145ca02a8af9a12e78957958056d59cbc255fad3c1be3c3d90"
+}
