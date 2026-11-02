@@ -2,6 +2,12 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 2, 2026 — source-separated AI-only diagnostic
+
+The Qwen3-8B base and both matched 734-step SFT adapters were compared on **26 source-separated CyBashBench CLI questions covering 20 tools**. The provisional publisher references were AI-screened, with no independent human gold signoff. Tokenized exact-reference matches were **9/26 base, 7/26 control, 8/26 treatment**; on the eight cases with some safe-fixture evidence, they were **2/8, 1/8, 1/8**. Treatment recovered the control's one truncated output, but this panel gives **no reliable evidence of cross-tool transfer**. These are lexical, nonofficial diagnostics; no generated commands were executed, no optimizer steps were run, and neither adapter was promoted. [Chinese report](docs/KALI_QWEN_EXTERNAL26_AI_DIAGNOSTIC_ZH_2026-11-02.md) · [Aggregate](results/kali-qwen-external26-ai-diagnostic-2026-11-02/aggregate.json).
+
+![Source-separated AI-only 26-row CLI diagnostic](results/kali-qwen-external26-ai-diagnostic-2026-11-02/external26.png)
+
 ## November 1, 2026 — source-quality correction and larger SFT data dose
 
 An attempted fresh 96-item internal KaliBench TRAIN development panel was **invalidated before any model query**: its publisher terminal labels were 88 runtime errors and 8 timeouts, with zero successful executions. All 936 successful-execution items in our 3,376-item screened TRAIN file were already in the earlier Qwen training/development split. The dependent first 734-step evaluation protocol was canceled, and its GPU attempts produced no model outputs or optimizer steps.

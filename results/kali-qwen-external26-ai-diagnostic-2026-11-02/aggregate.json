@@ -1,0 +1,397 @@
+{
+  "date_pacific": "2026-11-02",
+  "formal_gate_satisfied": false,
+  "generation_protocol_sha256": "6cfddbf415b2d6e27fafdfccb8fa65e963ffad4e58781bddf24056fa0a48c699",
+  "human_expert_signoffs": 0,
+  "limitations": [
+    "All references are provisional AI-screened publisher labels.",
+    "Only eight rows have some prior safe-fixture evidence, not full gold certification.",
+    "Exact command matching does not determine functional equivalence or safety.",
+    "The external panel is small and was selected adaptively."
+  ],
+  "model_promotion": false,
+  "no_commands_executed": true,
+  "official_TEST_rows": 0,
+  "optimizer_steps": 0,
+  "receipt_sha256": "63fd6936a5ea4b2e078ea6102766778afb43821f7a32fb5b54027719acd98ee9",
+  "rows": 26,
+  "scope": "Source-separated but AI-screened provisional publisher references; lexical diagnosis only, no command execution",
+  "scoring_protocol_sha256": "db733515eab0887fd3a9b3a5c2afb0bc28205d5e515064a57d43e4373815da4d",
+  "source_freeze_sha256": "86ef3a5e1fe929e0eadcf712b282c5c19732d62332a01f122bc4505cc8f24741",
+  "status": "SCORED_EXTERNAL26_AI_ONLY_DIAGNOSTIC_NOT_GOLD",
+  "strata": {
+    "all26": {
+      "arms": {
+        "base": {
+          "closed_output_envelope_no_extra_text": 26,
+          "not_truncated": 26,
+          "reference_command_exact_string": 8,
+          "reference_command_shlex_token_exact": 9,
+          "reference_first_executable_match": 26
+        },
+        "control": {
+          "closed_output_envelope_no_extra_text": 25,
+          "not_truncated": 25,
+          "reference_command_exact_string": 7,
+          "reference_command_shlex_token_exact": 7,
+          "reference_first_executable_match": 24
+        },
+        "treatment": {
+          "closed_output_envelope_no_extra_text": 26,
+          "not_truncated": 26,
+          "reference_command_exact_string": 8,
+          "reference_command_shlex_token_exact": 8,
+          "reference_first_executable_match": 24
+        }
+      },
+      "paired": {
+        "base_vs_control": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 25,
+            "gained": 0,
+            "lost": 1,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 25,
+            "gained": 0,
+            "lost": 1,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 6,
+            "gained": 1,
+            "lost": 2,
+            "neither": 17
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 6,
+            "gained": 1,
+            "lost": 3,
+            "neither": 16
+          },
+          "reference_first_executable_match": {
+            "both": 24,
+            "gained": 0,
+            "lost": 2,
+            "neither": 0
+          }
+        },
+        "base_vs_treatment": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 26,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 26,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 7,
+            "gained": 1,
+            "lost": 1,
+            "neither": 17
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 7,
+            "gained": 1,
+            "lost": 2,
+            "neither": 16
+          },
+          "reference_first_executable_match": {
+            "both": 24,
+            "gained": 0,
+            "lost": 2,
+            "neither": 0
+          }
+        },
+        "control_vs_treatment": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 25,
+            "gained": 1,
+            "lost": 0,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 25,
+            "gained": 1,
+            "lost": 0,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 7,
+            "gained": 1,
+            "lost": 0,
+            "neither": 18
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 7,
+            "gained": 1,
+            "lost": 0,
+            "neither": 18
+          },
+          "reference_first_executable_match": {
+            "both": 22,
+            "gained": 2,
+            "lost": 2,
+            "neither": 0
+          }
+        }
+      },
+      "rows": 26
+    },
+    "safe_fixture_evidence_false": {
+      "arms": {
+        "base": {
+          "closed_output_envelope_no_extra_text": 18,
+          "not_truncated": 18,
+          "reference_command_exact_string": 6,
+          "reference_command_shlex_token_exact": 7,
+          "reference_first_executable_match": 18
+        },
+        "control": {
+          "closed_output_envelope_no_extra_text": 17,
+          "not_truncated": 17,
+          "reference_command_exact_string": 6,
+          "reference_command_shlex_token_exact": 6,
+          "reference_first_executable_match": 16
+        },
+        "treatment": {
+          "closed_output_envelope_no_extra_text": 18,
+          "not_truncated": 18,
+          "reference_command_exact_string": 7,
+          "reference_command_shlex_token_exact": 7,
+          "reference_first_executable_match": 16
+        }
+      },
+      "paired": {
+        "base_vs_control": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 17,
+            "gained": 0,
+            "lost": 1,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 17,
+            "gained": 0,
+            "lost": 1,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 5,
+            "gained": 1,
+            "lost": 1,
+            "neither": 11
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 5,
+            "gained": 1,
+            "lost": 2,
+            "neither": 10
+          },
+          "reference_first_executable_match": {
+            "both": 16,
+            "gained": 0,
+            "lost": 2,
+            "neither": 0
+          }
+        },
+        "base_vs_treatment": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 18,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 18,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 6,
+            "gained": 1,
+            "lost": 0,
+            "neither": 11
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 6,
+            "gained": 1,
+            "lost": 1,
+            "neither": 10
+          },
+          "reference_first_executable_match": {
+            "both": 16,
+            "gained": 0,
+            "lost": 2,
+            "neither": 0
+          }
+        },
+        "control_vs_treatment": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 17,
+            "gained": 1,
+            "lost": 0,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 17,
+            "gained": 1,
+            "lost": 0,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 6,
+            "gained": 1,
+            "lost": 0,
+            "neither": 11
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 6,
+            "gained": 1,
+            "lost": 0,
+            "neither": 11
+          },
+          "reference_first_executable_match": {
+            "both": 14,
+            "gained": 2,
+            "lost": 2,
+            "neither": 0
+          }
+        }
+      },
+      "rows": 18
+    },
+    "safe_fixture_evidence_true": {
+      "arms": {
+        "base": {
+          "closed_output_envelope_no_extra_text": 8,
+          "not_truncated": 8,
+          "reference_command_exact_string": 2,
+          "reference_command_shlex_token_exact": 2,
+          "reference_first_executable_match": 8
+        },
+        "control": {
+          "closed_output_envelope_no_extra_text": 8,
+          "not_truncated": 8,
+          "reference_command_exact_string": 1,
+          "reference_command_shlex_token_exact": 1,
+          "reference_first_executable_match": 8
+        },
+        "treatment": {
+          "closed_output_envelope_no_extra_text": 8,
+          "not_truncated": 8,
+          "reference_command_exact_string": 1,
+          "reference_command_shlex_token_exact": 1,
+          "reference_first_executable_match": 8
+        }
+      },
+      "paired": {
+        "base_vs_control": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 1,
+            "gained": 0,
+            "lost": 1,
+            "neither": 6
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 1,
+            "gained": 0,
+            "lost": 1,
+            "neither": 6
+          },
+          "reference_first_executable_match": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          }
+        },
+        "base_vs_treatment": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 1,
+            "gained": 0,
+            "lost": 1,
+            "neither": 6
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 1,
+            "gained": 0,
+            "lost": 1,
+            "neither": 6
+          },
+          "reference_first_executable_match": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          }
+        },
+        "control_vs_treatment": {
+          "closed_output_envelope_no_extra_text": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "not_truncated": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          },
+          "reference_command_exact_string": {
+            "both": 1,
+            "gained": 0,
+            "lost": 0,
+            "neither": 7
+          },
+          "reference_command_shlex_token_exact": {
+            "both": 1,
+            "gained": 0,
+            "lost": 0,
+            "neither": 7
+          },
+          "reference_first_executable_match": {
+            "both": 8,
+            "gained": 0,
+            "lost": 0,
+            "neither": 0
+          }
+        }
+      },
+      "rows": 8
+    }
+  },
+  "tools": 20
+}
