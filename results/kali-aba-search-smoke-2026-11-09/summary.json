@@ -1,0 +1,61 @@
+{
+  "status": "TWO_REAL_SMOKE_CANDIDATES_SCORED_NATIVE_SEARCH_BLOCKED_BY_CONTROLLER_MODEL_403",
+  "date": "2026-11-09",
+  "base_model": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "benchmark_scope": "KaliBench exploratory exposed development only",
+  "official_test_rows": 0,
+  "native_ABA_new_candidates_scored": 0,
+  "candidates": [
+    {
+      "id": "C02",
+      "recipe": "lr5e6_s120_seed43",
+      "gpu": "NVIDIA L40",
+      "optimizer_steps": 120,
+      "new_generations": 224,
+      "changed_adapter_tensors": 144,
+      "dev_base_correct": 28,
+      "dev_candidate_correct": 29,
+      "dev_rows": 72,
+      "retention_base_correct": 12,
+      "retention_candidate_correct": 14,
+      "retention_rows": 24,
+      "candidate_complete_output_blocks": 109,
+      "total_output_blocks": 112,
+      "truncated_rows": 0,
+      "passes_exploratory_gate": false,
+      "selection_score": -1.0
+    },
+    {
+      "id": "C04",
+      "recipe": "lr5e6_s240_seed42",
+      "gpu": "NVIDIA A100",
+      "optimizer_steps": 240,
+      "new_generations": 224,
+      "changed_adapter_tensors": 144,
+      "dev_base_correct": 28,
+      "dev_candidate_correct": 26,
+      "dev_rows": 72,
+      "retention_base_correct": 11,
+      "retention_candidate_correct": 12,
+      "retention_rows": 24,
+      "candidate_complete_output_blocks": 112,
+      "total_output_blocks": 112,
+      "truncated_rows": 0,
+      "passes_exploratory_gate": false,
+      "selection_score": -1.0
+    }
+  ],
+  "selected_model": "E0_original_base",
+  "native_pilot": {
+    "max_evaluations": 3,
+    "setup_status": "failed_before_new_candidate_due_to_NRP_generation_HTTP_403",
+    "model_list_accessible": true,
+    "generation_accessible": false,
+    "owned_cluster_resources_remaining": 0
+  },
+  "limitations": [
+    "Self-authored TRAIN and exposed DEV/retention are not independent expert gold.",
+    "The two smoke candidates are operator-run and not native ABA proposals.",
+    "No official KaliBench TEST evaluation or benchmark improvement claim."
+  ]
+}
