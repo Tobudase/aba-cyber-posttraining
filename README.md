@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 9, 2026 — controller restored; native ABA blocked by GPU scheduling
+
+A newly created NRP credential passed both model listing and a minimal generation request. A fresh bounded native ABA run passed Setup verification and review, and its designer selected the frozen C13 recipe. The Worker successfully used short `submit` and `wait` calls, resolving the earlier two-minute tool-call mismatch. C13's ordinary-priority A100 Pod remained unschedulable for the 15-minute wait window, so **no new training, candidate score, or official TEST evaluation occurred**. The run was stopped after the failure; all owned Jobs and Pods were removed and the VM stopped. The original E0 model remains selected. [Chinese follow-up](docs/KALI_NATIVE_ABA_ASYNC_ATTEMPT_2026-11-09_ZH.md).
+
 ## November 9, 2026 — ABA multi-candidate smoke and controller access
 
 Two distinct RedSage-K 8B recipes completed real one-GPU training and safe development scoring. C02 changed DEV strict correctness **28/72 → 29/72** and C04 **28/72 → 26/72**; neither passed the frozen exploratory adoption gate, so the original base remains selected. Both adapters reloaded correctly and all owned cluster jobs were cleaned. A bounded native ABA three-evaluation pilot was prepared, but its first Setup failed before proposing a new candidate because the NRP controller-model generation API returned **HTTP 403**. The token could list models, while minimal generation requests to three aliases were denied. There is **no native multi-candidate search or official TEST result yet**. [Chinese report](docs/KALI_ABA_SEARCH_SMOKE_2026-11-09_ZH.md) · [Sanitized aggregate](results/kali-aba-search-smoke-2026-11-09/summary.json).
