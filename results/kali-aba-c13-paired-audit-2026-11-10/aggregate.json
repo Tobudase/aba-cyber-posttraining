@@ -1,0 +1,83 @@
+{
+  "status": "POST_HOC_EXPOSED_DEV_AUDIT",
+  "frozen_score_unchanged": true,
+  "DEV_rows": 72,
+  "paired_transitions": {
+    "0->0": 25,
+    "0->1": 18,
+    "1->0": 3,
+    "1->1": 26
+  },
+  "groups": {
+    "grep-intent-2": {
+      "0->0": 6
+    },
+    "grep-intent-3": {
+      "0->0": 3,
+      "1->0": 3
+    },
+    "head-intent-4": {
+      "0->0": 6
+    },
+    "head-intent-5": {
+      "0->0": 6
+    },
+    "jq-intent-3": {
+      "0->0": 3,
+      "0->1": 3
+    },
+    "openssl-intent-7": {
+      "1->1": 6
+    },
+    "tail-intent-0": {
+      "0->1": 1,
+      "1->1": 5
+    },
+    "tail-intent-3": {
+      "0->0": 1,
+      "0->1": 2,
+      "1->1": 3
+    },
+    "tcpdump-intent-0": {
+      "0->1": 6
+    },
+    "tshark-intent-5": {
+      "1->1": 6
+    },
+    "wc-intent-2": {
+      "1->1": 6
+    },
+    "wc-intent-7": {
+      "0->1": 6
+    }
+  },
+  "TRAIN_group_count": 40,
+  "DEV_group_count": 12,
+  "TRAIN_DEV_group_overlap": 0,
+  "TRAIN_DEV_exact_normalized_query_overlap": 0,
+  "TRAIN_tool_counts": {
+    "grep": 30,
+    "head": 30,
+    "jq": 30,
+    "openssl": 30,
+    "tail": 30,
+    "tcpdump": 30,
+    "tshark": 30,
+    "wc": 30
+  },
+  "DEV_tool_counts": {
+    "grep": 12,
+    "head": 12,
+    "jq": 6,
+    "openssl": 6,
+    "tail": 12,
+    "tcpdump": 6,
+    "tshark": 6,
+    "wc": 12
+  },
+  "frozen_gate_passed": false,
+  "official_TEST_rows": 0,
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0,
+  "warning": "Post hoc analysis of exposed source-authored tasks; not independent validation"
+}
