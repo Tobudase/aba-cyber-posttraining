@@ -4,7 +4,7 @@ Research code and traceable experiment summaries for adapting open-weight langua
 
 ## November 9, 2026 — review gate and GPU scheduling follow-up
 
-Two more bounded native ABA attempts reached Setup verification; the reviewer did not finish within its effective time budget, so the independent reviewer gate prevented new training. A short central RTX 4090 probe ran successfully with the same cache PVC, but subsequent C13 training Jobs stayed Pending despite an audited allocation-only revision across compatible GPUs. The broad Job timed out after about 902 seconds; **no new optimizer steps, adapter, development score, or official TEST query resulted**. All owned cluster resources were cleaned, the controller VM stopped, and E0 remains the default. [Chinese diagnosis and next conditions](docs/KALI_ABA_RESOURCE_AND_REVIEW_FOLLOWUP_2026-11-09_ZH.md).
+Two more bounded native ABA attempts reached Setup verification; the reviewer did not finish within its effective time budget, so the independent reviewer gate prevented new training. A short central RTX 4090 probe ran successfully with the same cache PVC, but subsequent C13 training Jobs stayed Pending despite an audited allocation-only revision across compatible GPUs. Two broad C13 attempts each timed out after about 15 minutes; a separate single-A100 100-second probe also remained Pending. **No new optimizer steps, adapter, development score, or official TEST query resulted**. All owned cluster resources were cleaned, the controller VM stopped, and E0 remains the default. [Chinese diagnosis and next conditions](docs/KALI_ABA_RESOURCE_AND_REVIEW_FOLLOWUP_2026-11-09_ZH.md).
 
 ## November 9, 2026 — controller restored; native ABA blocked by GPU scheduling
 
