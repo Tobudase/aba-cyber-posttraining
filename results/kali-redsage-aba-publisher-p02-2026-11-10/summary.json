@@ -123,5 +123,9 @@
     "Development panels come from official TRAIN; official TEST and sealed final64 untouched.",
     "P02 collapse cause not isolated by this single comparison."
   ],
-  "retained_default_model": "E0_base"
+  "retained_default_model": "E0_base",
+  "offline_audit_status": "OFFLINE_AUDIT_FINALIZED_AGENT_SUBMITTED_P02",
+  "offline_audit_sha256": "c3995db1371718c0539c8162f5d6f770fd8eb62304bb112cf7e065f8aafab4f7",
+  "recovery_native_run_completed": false,
+  "recovery_native_failure": "Setup modified frozen public README and review timed out; no new GPU Job was created."
 }
