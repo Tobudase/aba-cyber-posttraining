@@ -68,11 +68,12 @@ def build():
     pod = {"restartPolicy": "Never",
            "activeDeadlineSeconds": protocol["pod_runtime_seconds"],
            "automountServiceAccountToken": False,
-           "nodeSelector": {"kubernetes.io/arch": "amd64",
-                            "topology.kubernetes.io/region": "us-west"},
+           "nodeSelector": {"kubernetes.io/arch": "amd64"},
            "affinity": {"nodeAffinity": {"requiredDuringSchedulingIgnoredDuringExecution": {
                "nodeSelectorTerms": [{"matchExpressions": [{"key": "nvidia.com/gpu.product",
-                   "operator": "In", "values": [models[m] for m in protocol["allowed_GPU_models"]]}]}]}}},
+                   "operator": "In", "values": [models[m] for m in ("NVIDIA L40", "NVIDIA L40S")]},
+                   {"key": "topology.kubernetes.io/region", "operator": "In",
+                    "values": ["us-west", "us-central"]}]}]}}},
            "containers": [{"name": "infer", "image": json.loads(
                (ROOT / "configs/gpu-runtime-image.lock.json").read_text())["image"],
                "command": ["/bin/bash", "-lc", "set -euo pipefail; mkdir -p "

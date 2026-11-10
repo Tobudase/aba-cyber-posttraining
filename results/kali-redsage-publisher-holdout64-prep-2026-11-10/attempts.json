@@ -1,0 +1,32 @@
+{
+  "status": "NO_HOLDOUT_MODEL_PREDICTIONS_YET",
+  "scientific_inputs_unchanged_across_attempts": true,
+  "attempts": [
+    {
+      "allocation": "generic GPU, us-west",
+      "outcome": "canceled while unscheduled",
+      "holdout_predictions": 0
+    },
+    {
+      "allocation": "generic GPU, us-west or us-central",
+      "GPU": "NVIDIA A10",
+      "outcome": "all model shards hash verified; CUBLAS_STATUS_EXECUTION_FAILED on first historical anchor",
+      "holdout_predictions": 0,
+      "owned_cluster_resources_remaining": 0,
+      "cause_confirmed": false
+    },
+    {
+      "allocation": "L40 or L40S, us-west or us-central",
+      "outcome": "canceled while unscheduled after A100 server dry-run passed",
+      "holdout_predictions": 0
+    },
+    {
+      "allocation": "one A100, us-west or us-central",
+      "outcome": "queued; no GPU allocated at publication",
+      "holdout_predictions": 0
+    }
+  ],
+  "new_optimizer_steps": 0,
+  "official_TEST_rows": 0,
+  "model_promotion_allowed": false
+}

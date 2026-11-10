@@ -35,7 +35,7 @@ def main():
     assert lock["training_protocol_sha256"] == sha(DATA / "protocol-private.json")
     assert protocol["status"] == "FROZEN_REDSAGE_PUBLISHER_SFT638_BEFORE_TRAINING"
     assert protocol["official_TEST_rows"] == 0
-    first_run = HOLDOUT / "gpu-attempt1"
+    first_run = HOLDOUT / "gpu-attempt4"
     first_host = json.loads((first_run / "host-run-private.json").read_text())
     second_host = json.loads((RUN / "host-run-private.json").read_text())
     receipt = json.loads((RUN / "receipt-private.json").read_text())
