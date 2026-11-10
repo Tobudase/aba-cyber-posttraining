@@ -1,5 +1,5 @@
 {
-  "status": "AGENT_SUBMITTED_GPU_CANDIDATE_TRAINED_AND_INTERNAL_DEV_SCORED_NATIVE_RUN_FAILED",
+  "status": "AGENT_SUBMITTED_GPU_CANDIDATE_TRAINED_NATIVE_RECOVERY_SELECTED_BASE",
   "candidate_id": "P02",
   "base_model": "RedSage-K-8B",
   "recipe": "publisher638_lr5e6",
@@ -126,6 +126,19 @@
   "retained_default_model": "E0_base",
   "offline_audit_status": "OFFLINE_AUDIT_FINALIZED_AGENT_SUBMITTED_P02",
   "offline_audit_sha256": "c3995db1371718c0539c8162f5d6f770fd8eb62304bb112cf7e065f8aafab4f7",
-  "recovery_native_run_completed": false,
-  "recovery_native_failure": "Setup modified frozen public README and review timed out; no new GPU Job was created."
+  "recovery_native_run_completed": true,
+  "recovery_native_run_id": "be04d591e13b405797248aecc2290dbc",
+  "recovery_native_result": "E0_SELECTED_AFTER_P02_NATIVE_SCORE_MINUS_ONE",
+  "recovery_scored_native_candidates": [
+    "P02"
+  ],
+  "recovery_native_setup_and_finalizer_gates_passed": true,
+  "recovery_new_GPU_jobs": 0,
+  "recovery_e0_artifact_hashes": {
+    "run.py": "aaccd18dc4a74b625c841f38111eefc1b5a69c13e850a8dfa055c6ec10602f68",
+    "README.md": "ca7e2a8aa0aeeadcc9dd482f11c6af5fd5913109dc30d68525487b555f943095",
+    "train_metrics.json": "f9537a14d3a5c19ac0715eff12aca464ac6b15d10d9a6bd55f5255152e0f8bae",
+    "final_model/model.json": "6d382fe653d4e4544e8bf345f6f093f5da19d5e77b16d36825834d77a9182826"
+  },
+  "recovery_interpretation": "Separate CPU-only native recovery of prior P02 GPU candidate; original native training run failed after GPU collection. No single clean end-to-end run or model gain claimed."
 }
