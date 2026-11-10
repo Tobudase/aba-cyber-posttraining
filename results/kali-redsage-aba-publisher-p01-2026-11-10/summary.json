@@ -1,0 +1,123 @@
+{
+  "status": "OPERATOR_P01_COMPLETED_FAILED_DEV_GATES",
+  "candidate_id": "P01",
+  "model": "RISys-Lab/RedSage-K-SFT-GRPO (8B)",
+  "training_source": "publisher-verified KaliBench official TRAIN; publisher silver",
+  "training_rows": 505,
+  "optimizer_steps": 505,
+  "nonzero_gradient_steps": 505,
+  "adapter_reload_max_logit_delta": 0.0,
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "gpu_count": 1,
+  "dev_panels": {
+    "dev1": {
+      "base": {
+        "rows": 64,
+        "native_total_mean": 0.7562872023809524,
+        "strict_correct": 28,
+        "native_exact_correct": 29,
+        "format_errors": 3,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 64,
+        "native_total_mean": 0.22395833333333331,
+        "strict_correct": 0,
+        "native_exact_correct": 0,
+        "format_errors": 64,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 0,
+        "lost": 28
+      }
+    },
+    "dev2": {
+      "base": {
+        "rows": 64,
+        "native_total_mean": 0.7536995701058201,
+        "strict_correct": 19,
+        "native_exact_correct": 20,
+        "format_errors": 2,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 64,
+        "native_total_mean": 0.20833333333333331,
+        "strict_correct": 0,
+        "native_exact_correct": 0,
+        "format_errors": 64,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 0,
+        "lost": 19
+      }
+    },
+    "combined": {
+      "base": {
+        "rows": 128,
+        "native_total_mean": 0.7549933862433862,
+        "strict_correct": 47,
+        "native_exact_correct": 49,
+        "format_errors": 5,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 128,
+        "native_total_mean": 0.21614583333333331,
+        "strict_correct": 0,
+        "native_exact_correct": 0,
+        "format_errors": 128,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 0,
+        "lost": 47
+      }
+    },
+    "train_unseen_tools": {
+      "base": {
+        "rows": 19,
+        "native_total_mean": 0.8245614035087719,
+        "strict_correct": 7,
+        "native_exact_correct": 7,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 19,
+        "native_total_mean": 0.19298245614035087,
+        "strict_correct": 0,
+        "native_exact_correct": 0,
+        "format_errors": 19,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 0,
+        "lost": 7
+      }
+    }
+  },
+  "selection_gates": {
+    "native_total_improves": false,
+    "strict_no_drop": false,
+    "unseen_strict_no_drop": false,
+    "format_no_increase": false,
+    "zero_truncations": true
+  },
+  "passes_all_gates": false,
+  "output_pattern": "All 128 P01 predictions were a single newline before EOS.",
+  "official_TEST_rows": 0,
+  "final64_used": false,
+  "model_promotion_allowed": false,
+  "native_ABA_result": false,
+  "owned_resources_remaining": 0,
+  "limitations": [
+    "Publisher silver labels are not independent expert gold.",
+    "Internal DEV panels come from official TRAIN.",
+    "This is not an official KaliBench leaderboard evaluation.",
+    "P01 was operator-run; native ABA agent result is separate.",
+    "The collapse mechanism is not established by this single comparison."
+  ]
+}
