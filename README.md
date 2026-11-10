@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 9, 2026 — review gate and GPU scheduling follow-up
+
+Two more bounded native ABA attempts reached Setup verification; the reviewer did not finish within its effective time budget, so the independent reviewer gate prevented new training. A short central RTX 4090 probe ran successfully with the same cache PVC, but subsequent C13 training Jobs stayed Pending despite an audited allocation-only revision across compatible GPUs. The broad Job timed out after about 902 seconds; **no new optimizer steps, adapter, development score, or official TEST query resulted**. All owned cluster resources were cleaned, the controller VM stopped, and E0 remains the default. [Chinese diagnosis and next conditions](docs/KALI_ABA_RESOURCE_AND_REVIEW_FOLLOWUP_2026-11-09_ZH.md).
+
 ## November 9, 2026 — controller restored; native ABA blocked by GPU scheduling
 
 A newly created NRP credential passed both model listing and a minimal generation request. A fresh bounded native ABA run passed Setup verification and review, and its designer selected the frozen C13 recipe. The Worker successfully used short `submit` and `wait` calls, resolving the earlier two-minute tool-call mismatch. C13's ordinary-priority A100 Pod remained unschedulable for the 15-minute wait window, so **no new training, candidate score, or official TEST evaluation occurred**. The run was stopped after the failure; all owned Jobs and Pods were removed and the VM stopped. The original E0 model remains selected. [Chinese follow-up](docs/KALI_NATIVE_ABA_ASYNC_ATTEMPT_2026-11-09_ZH.md).
