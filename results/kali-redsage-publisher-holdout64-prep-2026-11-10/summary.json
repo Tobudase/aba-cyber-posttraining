@@ -13,6 +13,8 @@
   "reference_gold_self_check": "64/64 native exact and strict option-value",
   "holdout_model_outputs": 0,
   "new_optimizer_steps": 0,
+  "publisher_sft638_protocol_frozen": true,
+  "publisher_sft638_gpu_server_dry_run": "pass; no Job submitted",
   "official_TEST_rows": 0,
   "GPU_job": "one ordinary-priority GPU; pending scheduling",
   "model_promotion_allowed": false,
