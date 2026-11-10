@@ -1,5 +1,5 @@
 {
-  "status": "NO_HOLDOUT_MODEL_PREDICTIONS_YET",
+  "status": "HOLDOUT64_COMPARISON_COMPLETED_AFTER_REVISED_ANCHOR_AUDIT",
   "scientific_inputs_unchanged_across_attempts": true,
   "attempts": [
     {
@@ -22,8 +22,15 @@
     },
     {
       "allocation": "one A100, us-west or us-central",
-      "outcome": "queued; no GPU allocated at publication",
-      "holdout_predictions": 0
+      "outcome": "model loaded; first L40S historical anchor byte-exact mismatch on A100; stopped before holdout predictions",
+      "holdout_predictions": 0,
+      "owned_cluster_resources_remaining": 0
+    },
+    {
+      "allocation": "one A100, us-west or us-central",
+      "outcome": "completed 64 base and 64 C13 holdout predictions; 8 anchors audited; Job cleaned",
+      "holdout_predictions_per_arm": 64,
+      "owned_cluster_resources_remaining": 0
     }
   ],
   "new_optimizer_steps": 0,

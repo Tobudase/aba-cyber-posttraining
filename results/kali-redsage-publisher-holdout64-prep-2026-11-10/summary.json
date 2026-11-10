@@ -1,5 +1,5 @@
 {
-  "status": "QUEUED_NO_HOLDOUT_MODEL_RESULTS",
+  "status": "PREPARATION_COMPLETED_AND_HOLDOUT64_SCORED",
   "source_official_split": "train",
   "publisher_terminal_verified_training_rows": 638,
   "training_tools": 359,
@@ -11,12 +11,13 @@
   "train_holdout_id_overlap": 0,
   "train_holdout_command_group_overlap": 0,
   "reference_gold_self_check": "64/64 native exact and strict option-value",
-  "holdout_model_outputs": 0,
+  "holdout_model_outputs": 128,
   "new_optimizer_steps": 0,
   "publisher_sft638_protocol_frozen": true,
-  "publisher_sft638_gpu_server_dry_run": "pass; no Job submitted",
+  "publisher_sft638_gpu_server_dry_run": "pass; one-A100 Job queued after comparison cleanup",
   "official_TEST_rows": 0,
-  "GPU_job": "one ordinary-priority A100; pending scheduling after A10 CUDA failure",
+  "GPU_job": "comparison completed on one A100 and cleaned; separate 638-step SFT queued",
   "model_promotion_allowed": false,
-  "limitation": "Publisher TRAIN internal holdout with silver labels; chosen after earlier C13 DEV findings; not official TEST, independent expert gold or a leaderboard score."
+  "limitation": "Publisher TRAIN internal holdout with silver labels; chosen after earlier C13 DEV findings; not official TEST, independent expert gold or a leaderboard score.",
+  "result_summary_path": "../kali-redsage-publisher-holdout64-2026-11-10/summary.json"
 }

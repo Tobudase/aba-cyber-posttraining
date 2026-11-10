@@ -1,0 +1,121 @@
+{
+  "status": "SCORED_PUBLISHER_TRAIN_INTERNAL_HOLDOUT64",
+  "source_official_split": "train",
+  "publisher_label_quality": "silver",
+  "rows": 64,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "optimizer_steps": 0,
+  "official_TEST_rows": 0,
+  "historical_anchors_compared": 8,
+  "historical_anchors_byte_exact_cross_gpu": 7,
+  "historical_anchor_final_command_matches": 8,
+  "strata": {
+    "all64": {
+      "rows": 64,
+      "arms": {
+        "base": {
+          "native_total_score_mean": 0.7562872023809524,
+          "native_exact_match": 29,
+          "strict_option_value_correct": 28,
+          "format_errors": 3,
+          "truncated": 0
+        },
+        "sft": {
+          "native_total_score_mean": 0.6451941287878787,
+          "native_exact_match": 24,
+          "strict_option_value_correct": 23,
+          "format_errors": 6,
+          "truncated": 0
+        }
+      },
+      "paired": {
+        "strict_option_value_correct": {
+          "both_correct": 22,
+          "gained": 1,
+          "lost": 6,
+          "both_incorrect": 35
+        },
+        "native_exact_match": {
+          "both_correct": 23,
+          "gained": 1,
+          "lost": 6,
+          "both_incorrect": 34
+        }
+      }
+    },
+    "train_seen56": {
+      "rows": 56,
+      "arms": {
+        "base": {
+          "native_total_score_mean": 0.7452806122448979,
+          "native_exact_match": 26,
+          "strict_option_value_correct": 25,
+          "format_errors": 3,
+          "truncated": 0
+        },
+        "sft": {
+          "native_total_score_mean": 0.6520472582972582,
+          "native_exact_match": 23,
+          "strict_option_value_correct": 22,
+          "format_errors": 4,
+          "truncated": 0
+        }
+      },
+      "paired": {
+        "strict_option_value_correct": {
+          "both_correct": 21,
+          "gained": 1,
+          "lost": 4,
+          "both_incorrect": 30
+        },
+        "native_exact_match": {
+          "both_correct": 22,
+          "gained": 1,
+          "lost": 4,
+          "both_incorrect": 29
+        }
+      }
+    },
+    "train_unseen8": {
+      "rows": 8,
+      "arms": {
+        "base": {
+          "native_total_score_mean": 0.8333333333333333,
+          "native_exact_match": 3,
+          "strict_option_value_correct": 3,
+          "format_errors": 0,
+          "truncated": 0
+        },
+        "sft": {
+          "native_total_score_mean": 0.5972222222222222,
+          "native_exact_match": 1,
+          "strict_option_value_correct": 1,
+          "format_errors": 2,
+          "truncated": 0
+        }
+      },
+      "paired": {
+        "strict_option_value_correct": {
+          "both_correct": 1,
+          "gained": 0,
+          "lost": 2,
+          "both_incorrect": 5
+        },
+        "native_exact_match": {
+          "both_correct": 1,
+          "gained": 0,
+          "lost": 2,
+          "both_incorrect": 5
+        }
+      }
+    }
+  },
+  "model_promotion_allowed": false,
+  "generated_commands_executed": false,
+  "limitations": [
+    "Publisher silver labels, not independently certified gold.",
+    "Official TRAIN internal holdout, not official TEST or leaderboard score.",
+    "This C13 comparison is diagnostic after earlier exposed DEV observations.",
+    "Native command score can credit outputs with incorrect option values; inspect strict diagnostic."
+  ]
+}

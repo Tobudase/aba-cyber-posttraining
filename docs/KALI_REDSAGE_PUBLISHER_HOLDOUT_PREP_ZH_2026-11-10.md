@@ -1,5 +1,7 @@
 # RedSage-K：KaliBench 发布方 TRAIN 内部留出实验准备
 
+**后续状态：** 本文记录提交前的准备快照。A100 上的 64 题成对比较已完成：基座严格正确 28/64，C13 为 23/64；资源已清理。638 步发布方 TRAIN SFT 已单独排队。请看[结果报告](KALI_REDSAGE_PUBLISHER_HOLDOUT_RESULT_ZH_2026-11-10.md)。
+
 ## 为什么更换诊断数据
 
 C13 使用的 240 条自编训练题仅覆盖 `grep`、`wc`、`head`、`tail`、`jq`、`openssl`、`tshark`、`tcpdump`。在本项目筛选的 KaliBench 发布方 TRAIN 中，这八种工具没有任何 `PASS_EXECUTED` 样本。C13 在自编 DEV72 上的提升（29/72→44/72）集中于两个相近的六题模板组，不能据此推断它提高了 KaliBench 目标能力。原拟运行的 26 题 CyBashBench 检查也主要测试通用 Bash 工具，且参考答案仅经 AI 筛查。因此在第三次 GPU 任务排队、尚未分配 GPU 时撤销，并确认相关 Job、Pod、ConfigMap、Secret 均已清理。
