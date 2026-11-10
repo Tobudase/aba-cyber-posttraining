@@ -1,0 +1,127 @@
+{
+  "status": "AGENT_SUBMITTED_GPU_CANDIDATE_TRAINED_AND_INTERNAL_DEV_SCORED_NATIVE_RUN_FAILED",
+  "candidate_id": "P02",
+  "base_model": "RedSage-K-8B",
+  "recipe": "publisher638_lr5e6",
+  "source_official_split": "train",
+  "training_rows": 638,
+  "dev_rows": 128,
+  "GPU": "NVIDIA A100-SXM4-80GB",
+  "GPU_count": 1,
+  "optimizer_steps": 638,
+  "nonzero_gradient_steps": 638,
+  "adapter_reload_max_logit_delta": 0.0,
+  "adapter_sha256": "c95f915dfbbf91a055e2a577e21efc0a8d0feafffe7255e1d12785002b8ac7dd",
+  "official_TEST_rows": 0,
+  "final64_used": false,
+  "human_expert_signoffs": 0,
+  "cleanup_errors": [],
+  "remaining_owned_resources": 0,
+  "summary": {
+    "dev1": {
+      "base": {
+        "rows": 64,
+        "native_total_mean": 0.7562872023809524,
+        "strict_correct": 28,
+        "native_exact_correct": 29,
+        "format_errors": 3,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 64,
+        "native_total_mean": 0.234375,
+        "strict_correct": 1,
+        "native_exact_correct": 1,
+        "format_errors": 63,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 0,
+        "lost": 27
+      }
+    },
+    "dev2": {
+      "base": {
+        "rows": 64,
+        "native_total_mean": 0.7536995701058201,
+        "strict_correct": 19,
+        "native_exact_correct": 20,
+        "format_errors": 2,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 64,
+        "native_total_mean": 0.22395833333333331,
+        "strict_correct": 1,
+        "native_exact_correct": 1,
+        "format_errors": 63,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 1,
+        "lost": 19
+      }
+    },
+    "combined": {
+      "base": {
+        "rows": 128,
+        "native_total_mean": 0.7549933862433862,
+        "strict_correct": 47,
+        "native_exact_correct": 49,
+        "format_errors": 5,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 128,
+        "native_total_mean": 0.22916666666666666,
+        "strict_correct": 2,
+        "native_exact_correct": 2,
+        "format_errors": 126,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 1,
+        "lost": 46
+      }
+    },
+    "train_unseen_tools": {
+      "base": {
+        "rows": 12,
+        "native_total_mean": 0.8240740740740741,
+        "strict_correct": 4,
+        "native_exact_correct": 4,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 12,
+        "native_total_mean": 0.19444444444444442,
+        "strict_correct": 0,
+        "native_exact_correct": 0,
+        "format_errors": 12,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 0,
+        "lost": 4
+      }
+    }
+  },
+  "selection_gates": {
+    "native_total_improves": false,
+    "strict_no_drop": false,
+    "unseen_strict_no_drop": false,
+    "format_no_increase": false,
+    "zero_truncations": true
+  },
+  "passes_all_gates": false,
+  "native_ABA_run_completed": false,
+  "native_ABA_failure": "Broker requested changed_tensors absent from exported worker receipt; native Worker saw FAILED after successful GPU collection.",
+  "private_score_sha256": "c83347d90e964cc0fad79c59d72bb4e6b73ed32a6c9469fefcc1fc4614fbbe9f",
+  "limitations": [
+    "Publisher silver TRAIN labels are not independent expert gold.",
+    "Development panels come from official TRAIN; official TEST and sealed final64 untouched.",
+    "P02 collapse cause not isolated by this single comparison."
+  ],
+  "retained_default_model": "E0_base"
+}
