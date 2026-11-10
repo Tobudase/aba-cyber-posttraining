@@ -1,5 +1,5 @@
 {
-  "status": "PREPARATION_COMPLETED_AND_HOLDOUT64_SCORED",
+  "status": "PREPARATION_AND_FOLLOWUP_SFT_COMPLETED",
   "source_official_split": "train",
   "publisher_terminal_verified_training_rows": 638,
   "training_tools": 359,
@@ -12,12 +12,13 @@
   "train_holdout_command_group_overlap": 0,
   "reference_gold_self_check": "64/64 native exact and strict option-value",
   "holdout_model_outputs": 128,
-  "new_optimizer_steps": 0,
+  "new_optimizer_steps": 638,
   "publisher_sft638_protocol_frozen": true,
-  "publisher_sft638_gpu_server_dry_run": "pass; one-A100 Job queued after comparison cleanup",
+  "publisher_sft638_gpu_server_dry_run": "pass; Job completed, collected, and cleaned",
   "official_TEST_rows": 0,
-  "GPU_job": "comparison completed on one A100 and cleaned; separate 638-step SFT queued",
+  "GPU_job": "comparison completed on A100-SXM4; 638-step SFT completed on A100 PCIe; both cleaned",
   "model_promotion_allowed": false,
   "limitation": "Publisher TRAIN internal holdout with silver labels; chosen after earlier C13 DEV findings; not official TEST, independent expert gold or a leaderboard score.",
-  "result_summary_path": "../kali-redsage-publisher-holdout64-2026-11-10/summary.json"
+  "result_summary_path": "../kali-redsage-publisher-holdout64-2026-11-10/summary.json",
+  "sft_result_summary_path": "../kali-redsage-publisher-sft638-2026-11-10/summary.json"
 }

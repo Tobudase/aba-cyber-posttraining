@@ -1,6 +1,6 @@
 # RedSage-K：KaliBench 发布方 TRAIN 内部留出实验准备
 
-**后续状态：** 本文记录提交前的准备快照。A100 上的 64 题成对比较已完成：基座严格正确 28/64，C13 为 23/64；资源已清理。638 步发布方 TRAIN SFT 已单独排队。请看[结果报告](KALI_REDSAGE_PUBLISHER_HOLDOUT_RESULT_ZH_2026-11-10.md)。
+**后续状态：** 本文记录提交前的准备快照。A100 上的 64 题成对比较已完成：基座严格正确 28/64，C13 为 23/64；后续 638 步发布方 TRAIN SFT 为 30/64。两次 GPU Job 均已清理。请看[比较报告](KALI_REDSAGE_PUBLISHER_HOLDOUT_RESULT_ZH_2026-11-10.md)与[训练报告](KALI_REDSAGE_PUBLISHER_SFT638_RESULT_ZH_2026-11-10.md)。
 
 ## 为什么更换诊断数据
 

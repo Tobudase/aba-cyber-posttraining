@@ -1,0 +1,150 @@
+{
+  "status": "SCORED_REDSAGE_PUBLISHER_SFT638_INTERNAL_HOLDOUT",
+  "source_official_split": "train",
+  "publisher_label_quality": "silver",
+  "rows": 64,
+  "training_rows": 638,
+  "optimizer_steps": 638,
+  "nonzero_gradient_steps": 638,
+  "supervised_token_presentations": 15142,
+  "adapter_reload_max_logit_delta": 0.0,
+  "adapter_sha256": "e781da831cd54bc3403be59df6dc2cd909deab455e7cd6d35caaa6dd89d51e82",
+  "training_gpu": "NVIDIA A100 80GB PCIe",
+  "training_wall_seconds": 489.48,
+  "peak_cuda_allocated_bytes": 17635482112,
+  "baseline_anchor_exact_repeat_matches": 4,
+  "baseline_anchor_count": 4,
+  "baseline_gpu_model_match": false,
+  "strata": {
+    "all64": {
+      "rows": 64,
+      "arms": {
+        "base": {
+          "strict_correct": 28,
+          "native_exact_correct": 29,
+          "native_total_mean": 0.7562872023809524,
+          "format_errors": 3,
+          "truncations": 0
+        },
+        "C13_synthetic240": {
+          "strict_correct": 23,
+          "native_exact_correct": 24,
+          "native_total_mean": 0.6451941287878787,
+          "format_errors": 6,
+          "truncations": 0
+        },
+        "publisher_sft638": {
+          "strict_correct": 30,
+          "native_exact_correct": 31,
+          "native_total_mean": 0.7822585978835979,
+          "format_errors": 0,
+          "truncations": 0
+        }
+      },
+      "paired": {
+        "base_vs_publisher_sft638": {
+          "both_correct": 27,
+          "gained": 3,
+          "lost": 1,
+          "both_incorrect": 33
+        },
+        "C13_synthetic240_vs_publisher_sft638": {
+          "both_correct": 23,
+          "gained": 7,
+          "lost": 0,
+          "both_incorrect": 34
+        }
+      }
+    },
+    "train_seen56": {
+      "rows": 56,
+      "arms": {
+        "base": {
+          "strict_correct": 25,
+          "native_exact_correct": 26,
+          "native_total_mean": 0.7452806122448979,
+          "format_errors": 3,
+          "truncations": 0
+        },
+        "C13_synthetic240": {
+          "strict_correct": 22,
+          "native_exact_correct": 23,
+          "native_total_mean": 0.6520472582972582,
+          "format_errors": 4,
+          "truncations": 0
+        },
+        "publisher_sft638": {
+          "strict_correct": 27,
+          "native_exact_correct": 28,
+          "native_total_mean": 0.7854497354497355,
+          "format_errors": 0,
+          "truncations": 0
+        }
+      },
+      "paired": {
+        "base_vs_publisher_sft638": {
+          "both_correct": 24,
+          "gained": 3,
+          "lost": 1,
+          "both_incorrect": 28
+        },
+        "C13_synthetic240_vs_publisher_sft638": {
+          "both_correct": 22,
+          "gained": 5,
+          "lost": 0,
+          "both_incorrect": 29
+        }
+      }
+    },
+    "train_unseen8": {
+      "rows": 8,
+      "arms": {
+        "base": {
+          "strict_correct": 3,
+          "native_exact_correct": 3,
+          "native_total_mean": 0.8333333333333333,
+          "format_errors": 0,
+          "truncations": 0
+        },
+        "C13_synthetic240": {
+          "strict_correct": 1,
+          "native_exact_correct": 1,
+          "native_total_mean": 0.5972222222222222,
+          "format_errors": 2,
+          "truncations": 0
+        },
+        "publisher_sft638": {
+          "strict_correct": 3,
+          "native_exact_correct": 3,
+          "native_total_mean": 0.7599206349206349,
+          "format_errors": 0,
+          "truncations": 0
+        }
+      },
+      "paired": {
+        "base_vs_publisher_sft638": {
+          "both_correct": 3,
+          "gained": 0,
+          "lost": 0,
+          "both_incorrect": 5
+        },
+        "C13_synthetic240_vs_publisher_sft638": {
+          "both_correct": 1,
+          "gained": 2,
+          "lost": 0,
+          "both_incorrect": 5
+        }
+      }
+    }
+  },
+  "official_TEST_rows": 0,
+  "generated_commands_executed": false,
+  "owned_cluster_resources_remaining": 0,
+  "model_promotion_allowed": false,
+  "limitations": [
+    "Same publisher TRAIN source supplies SFT labels and internal holdout.",
+    "The holdout was selected after earlier C13 DEV observations.",
+    "Publisher silver labels are not independent expert gold.",
+    "This is not an official KaliBench TEST or leaderboard result."
+  ]
+}
