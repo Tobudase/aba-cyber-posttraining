@@ -1,0 +1,102 @@
+{
+  "scope": "historically_exposed_self_authored_development_only",
+  "candidate_id": "C13",
+  "model": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "model_size": "8B",
+  "recipe_id": "lr1e5_s240_seed42",
+  "optimizer_steps": 240,
+  "new_generations": 224,
+  "gpu": "NVIDIA L40S",
+  "adapter_reload_max_logit_delta": 0.0,
+  "DEV": {
+    "base": {
+      "rows": 72,
+      "correct": 29,
+      "executed": 29,
+      "unsupported": 19,
+      "explicit_constraint_failure": 43,
+      "truncated": 0
+    },
+    "sft": {
+      "rows": 72,
+      "correct": 44,
+      "executed": 44,
+      "unsupported": 1,
+      "explicit_constraint_failure": 28,
+      "truncated": 0
+    }
+  },
+  "TRAIN_diagnostic": {
+    "base": {
+      "rows": 16,
+      "correct": 5,
+      "executed": 5,
+      "unsupported": 8,
+      "explicit_constraint_failure": 11,
+      "truncated": 0
+    },
+    "sft": {
+      "rows": 16,
+      "correct": 8,
+      "executed": 8,
+      "unsupported": 7,
+      "explicit_constraint_failure": 8,
+      "truncated": 0
+    }
+  },
+  "retention": {
+    "base": {
+      "strict_correct": 12,
+      "rows": 24
+    },
+    "sft": {
+      "strict_correct": 13,
+      "rows": 24
+    }
+  },
+  "formats": {
+    "base": {
+      "complete_output_blocks": 112,
+      "truncated": 0,
+      "think_closed": 0
+    },
+    "sft": {
+      "complete_output_blocks": 112,
+      "truncated": 0,
+      "think_closed": 112
+    }
+  },
+  "conservative_DEV_gain_lower_bound": -4,
+  "conservative_positive_DEV_groups": 1,
+  "checks": {
+    "conservative_DEV_gain_at_least4": false,
+    "positive_DEV_groups_at_least2": false,
+    "retention_not_decreased": true,
+    "candidate_complete_outputs": true,
+    "candidate_no_truncation": true,
+    "adapter_reloaded": true
+  },
+  "passes_exploratory_gate": false,
+  "ABA_selection_score": -1.0,
+  "safe_fixture_gold_controls_passed": 86,
+  "semantic_records": 176,
+  "CPU_scorer_bootstrap": "official_https_base_only_infrastructure_retry",
+  "GPU_cleanup": {
+    "status": "COLLECTED",
+    "remaining_owned_resources": 0,
+    "cleanup_errors": []
+  },
+  "CPU_cleanup": {
+    "status": "COLLECTED",
+    "remaining_owned_resources": 0,
+    "cleanup_errors": []
+  },
+  "official_TEST_rows": 0,
+  "decision": "Keep original E0 base; C13 not promoted",
+  "limitations": [
+    "Exposed source-authored DEV is not independent validation",
+    "No official KaliBench score",
+    "Infrastructure-only package-source variation for C13 CPU scoring",
+    "No completed native multi-candidate ABA search"
+  ]
+}

@@ -2,9 +2,13 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## November 9, 2026 — C13 queued for one GPU
+## November 9, 2026 — C13 trained and scored; frozen gate failed
 
-After the bounded scheduling diagnostics below, one ordinary-priority C13 training Job was submitted to Nautilus and left Pending for a compatible GPU. The queue wait is bounded to seven days; actual Pod runtime is capped at one hour, and logs are saved to private persistent storage. This is a **live resource request, not a new training or benchmark result**. The previous C02/C04 scores and E0 model decision remain unchanged; official TEST remains untouched.
+The queued C13 Job eventually ran on one L40S. The frozen RedSage-K 8B recipe completed **240 real optimizer steps**; adapter save/reload matched, and the safe CPU fixture scorer evaluated all 176 development-arm records. On historically exposed DEV72, strict correctness changed **29/72 → 44/72**; retention24 changed **12/24 → 13/24**, with no output truncations. The **pre-frozen conservative gate failed**: its lower-bound DEV gain was **−4** after accounting for 19 unsupported base commands, and only **1** template group passed the conservative positive-gain test (2 required). This promising raw development gain is not independent validation or an official KaliBench score. **E0 remains the default; C13 is not promoted.** The CPU scorer needed an infrastructure-only retry using the official Ubuntu HTTPS base repository; the frozen worker and scoring input were unchanged. All owned GPU and CPU Job resources were cleaned; official TEST use stayed at zero. [Chinese result and limitations](docs/KALI_ABA_C13_RESULT_ZH_2026-11-09.md) · [Sanitized aggregate](results/kali-aba-c13-2026-11-09/summary.json).
+
+## November 9, 2026 — historical C13 queue submission
+
+After the bounded scheduling diagnostics below, one ordinary-priority C13 training Job was submitted to Nautilus and initially stayed Pending for a compatible GPU. The queue wait was bounded to seven days; actual Pod runtime was capped at one hour, and logs were saved to private persistent storage. At this snapshot it was a resource request without a new result. Its completed outcome is reported above.
 
 ## November 9, 2026 — review gate and GPU scheduling follow-up
 
