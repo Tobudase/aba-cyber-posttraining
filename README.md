@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 9, 2026 — C13 queued for one GPU
+
+After the bounded scheduling diagnostics below, one ordinary-priority C13 training Job was submitted to Nautilus and left Pending for a compatible GPU. The queue wait is bounded to seven days; actual Pod runtime is capped at one hour, and logs are saved to private persistent storage. This is a **live resource request, not a new training or benchmark result**. The previous C02/C04 scores and E0 model decision remain unchanged; official TEST remains untouched.
+
 ## November 9, 2026 — review gate and GPU scheduling follow-up
 
 Two more bounded native ABA attempts reached Setup verification; the reviewer did not finish within its effective time budget, so the independent reviewer gate prevented new training. A short central RTX 4090 probe ran successfully with the same cache PVC, but subsequent C13 training Jobs stayed Pending despite an audited allocation-only revision across compatible GPUs. Two broad C13 attempts each timed out after about 15 minutes; a separate single-A100 100-second probe also remained Pending. **No new optimizer steps, adapter, development score, or official TEST query resulted**. All owned cluster resources were cleaned, the controller VM stopped, and E0 remains the default. [Chinese diagnosis and next conditions](docs/KALI_ABA_RESOURCE_AND_REVIEW_FOLLOWUP_2026-11-09_ZH.md).
