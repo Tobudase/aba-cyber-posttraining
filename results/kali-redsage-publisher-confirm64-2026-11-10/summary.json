@@ -1,0 +1,137 @@
+{
+  "status": "SCORED_PUBLISHER_TRAIN_CONFIRM64",
+  "source_official_split": "train",
+  "publisher_label_quality": "silver",
+  "selection_after_first_panel_results": true,
+  "rows": 64,
+  "train_seen_tool_rows": 60,
+  "train_unseen_tool_rows": 4,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "historical_base_anchors_byte_exact_cross_gpu": 3,
+  "historical_base_anchor_count": 4,
+  "strata": {
+    "all64": {
+      "rows": 64,
+      "arms": {
+        "base": {
+          "native_total_score_mean": 0.7536995701058201,
+          "native_exact_match": 20,
+          "strict_option_value_correct": 19,
+          "format_errors": 2,
+          "truncated": 0
+        },
+        "sft": {
+          "native_total_score_mean": 0.7197379298941798,
+          "native_exact_match": 22,
+          "strict_option_value_correct": 22,
+          "format_errors": 0,
+          "truncated": 0
+        }
+      },
+      "paired": {
+        "strict_option_value_correct": {
+          "both_correct": 15,
+          "gained": 7,
+          "lost": 4,
+          "both_incorrect": 38
+        },
+        "native_exact_match": {
+          "both_correct": 15,
+          "gained": 7,
+          "lost": 5,
+          "both_incorrect": 37
+        }
+      }
+    },
+    "train_seen60": {
+      "rows": 60,
+      "arms": {
+        "base": {
+          "native_total_score_mean": 0.7502425044091711,
+          "native_exact_match": 19,
+          "strict_option_value_correct": 18,
+          "format_errors": 2,
+          "truncated": 0
+        },
+        "sft": {
+          "native_total_score_mean": 0.7259215167548501,
+          "native_exact_match": 22,
+          "strict_option_value_correct": 22,
+          "format_errors": 0,
+          "truncated": 0
+        }
+      },
+      "paired": {
+        "strict_option_value_correct": {
+          "both_correct": 15,
+          "gained": 7,
+          "lost": 3,
+          "both_incorrect": 35
+        },
+        "native_exact_match": {
+          "both_correct": 15,
+          "gained": 7,
+          "lost": 4,
+          "both_incorrect": 34
+        }
+      }
+    },
+    "train_unseen4": {
+      "rows": 4,
+      "arms": {
+        "base": {
+          "native_total_score_mean": 0.8055555555555556,
+          "native_exact_match": 1,
+          "strict_option_value_correct": 1,
+          "format_errors": 0,
+          "truncated": 0
+        },
+        "sft": {
+          "native_total_score_mean": 0.626984126984127,
+          "native_exact_match": 0,
+          "strict_option_value_correct": 0,
+          "format_errors": 0,
+          "truncated": 0
+        }
+      },
+      "paired": {
+        "strict_option_value_correct": {
+          "both_correct": 0,
+          "gained": 0,
+          "lost": 1,
+          "both_incorrect": 3
+        },
+        "native_exact_match": {
+          "both_correct": 0,
+          "gained": 0,
+          "lost": 1,
+          "both_incorrect": 3
+        }
+      }
+    }
+  },
+  "two_internal_panels_combined_descriptive": {
+    "rows": 128,
+    "base_strict_correct": 47,
+    "publisher_sft638_strict_correct": 52,
+    "base_native_exact": 49,
+    "publisher_sft638_native_exact": 53,
+    "base_native_mean": 0.7549933862433862,
+    "publisher_sft638_native_mean": 0.7509982638888888,
+    "base_format_errors": 5,
+    "publisher_sft638_format_errors": 0,
+    "strict_gained": 10,
+    "strict_lost": 5
+  },
+  "official_TEST_rows": 0,
+  "optimizer_steps": 0,
+  "generated_commands_executed": false,
+  "owned_cluster_resources_remaining": 0,
+  "model_promotion_allowed": false,
+  "limitations": [
+    "Publisher silver labels, not independently certified gold.",
+    "Official TRAIN internal holdout, not official TEST or leaderboard score.",
+    "This second panel was selected after viewing the first internal holdout scores, before any predictions on these rows.",
+    "Native command score can credit outputs with incorrect option values; inspect strict diagnostic."
+  ]
+}

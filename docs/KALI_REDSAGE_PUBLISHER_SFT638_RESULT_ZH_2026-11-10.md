@@ -1,5 +1,7 @@
 # RedSage-K：638 条发布方 TRAIN SFT 结果
 
+**后续确认：** 另一组不重叠的 64 条发布方 TRAIN 题目上，严格正确为 19/64→22/64，但原生均分下降 0.7537→0.7197。两组描述性合并后严格正确 47/128→52/128，原生均分约 0.7550→0.7510；因此不能据第一组的微小增益宣布整体提升。见[第二组结果](KALI_REDSAGE_PUBLISHER_CONFIRM64_RESULT_ZH_2026-11-10.md)。
+
 ## 实际完成的训练
 
 从固定版本的 RedSage-K 8B 基座出发，用 638 条 KaliBench 发布方 `PASS_EXECUTED` / `ACCURATE` TRAIN 记录完成 **638 个 BF16 LoRA 优化步骤**。只训练 LoRA 参数；监督目标采用模型原生聊天模板、空思考闭合、`<output>` 命令与 EOS。训练共呈现 15,142 个监督 token。638/638 步均有非零且有限的梯度。适配器已保存并重新装载，探针 logits 的最大差值为 **0.0**。训练在一张 NVIDIA A100 80GB PCIe 上完成，GPU Job、Pod、ConfigMap 和 Secret 已清理。
