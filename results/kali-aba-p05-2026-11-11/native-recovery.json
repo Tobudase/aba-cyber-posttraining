@@ -1,0 +1,25 @@
+{
+  "status": "VALID_CPU_RECOVERY_OF_EXISTING_P05_TRAINING",
+  "native_workflow_completed": true,
+  "original_training_was_real_gpu_job": true,
+  "recovery_was_separate_from_original_training_run": true,
+  "new_GPU_jobs_in_recovery": 0,
+  "official_TEST_rows": 0,
+  "sealed_final64_used": false,
+  "native_setup_verifier_passed": true,
+  "native_setup_reviewer_passed": true,
+  "native_attempt_verifier_passed": true,
+  "protected_candidate_scored": "P05",
+  "protected_P05_score": -1.0,
+  "baseline_E0_score": 0.0,
+  "native_finalizer_verifier_passed": true,
+  "final_selected_model": "E0",
+  "final_deliverable_files_byte_identical_to_E0_baseline": 4,
+  "cluster_VM_stopped": true,
+  "owned_cluster_objects_remaining": 0,
+  "limitations": [
+    "The original native GPU run stopped after training because a Broker receipt field was missing; this is a later CPU-only recovery of that same result.",
+    "An earlier recovery scored P05 but delivered P05 rather than E0; another delivered E0 but scored E0 rather than P05. Neither was counted as a valid full recovery.",
+    "All performance data are publisher-silver official-TRAIN internal development data, not official TEST or independent expert gold."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "status": "P05_REAL_TRAINING_SCORED_INTERNAL_DEV_NOT_ADOPTED",
+  "date": "2026-11-11",
+  "benchmark": "KaliBench",
+  "base_model": "RedSage-K 8B",
+  "source_official_split": "train",
+  "official_TEST_rows": 0,
+  "sealed_final64_used": false,
+  "training_rows": 638,
+  "P05_optimizer_steps": 638,
+  "P05_nonzero_gradient_steps": 638,
+  "P05_changed_tensors": 144,
+  "P05_GPU": "NVIDIA A100-SXM4-80GB",
+  "internal_DEV_rows": 128,
+  "base": {
+    "rows": 128,
+    "native_total_mean": 0.7549933862433862,
+    "strict_correct": 47,
+    "native_exact_correct": 49,
+    "format_errors": 5,
+    "truncations": 0
+  },
+  "P04_operator_control": {
+    "rows": 128,
+    "native_total_mean": 0.7756944444444445,
+    "strict_correct": 54,
+    "native_exact_correct": 55,
+    "format_errors": 0,
+    "truncations": 0
+  },
+  "P05_native_ABA_candidate": {
+    "rows": 128,
+    "native_total_mean": 0.7525173611111111,
+    "strict_correct": 51,
+    "native_exact_correct": 52,
+    "format_errors": 1,
+    "truncations": 0
+  },
+  "P05_dev1": {
+    "base": {
+      "rows": 64,
+      "native_total_mean": 0.7562872023809524,
+      "strict_correct": 28,
+      "native_exact_correct": 29,
+      "format_errors": 3,
+      "truncations": 0
+    },
+    "candidate": {
+      "rows": 64,
+      "native_total_mean": 0.7822585978835979,
+      "strict_correct": 30,
+      "native_exact_correct": 31,
+      "format_errors": 0,
+      "truncations": 0
+    },
+    "paired": {
+      "gained": 3,
+      "lost": 1
+    }
+  },
+  "P05_dev2": {
+    "base": {
+      "rows": 64,
+      "native_total_mean": 0.7536995701058201,
+      "strict_correct": 19,
+      "native_exact_correct": 20,
+      "format_errors": 2,
+      "truncations": 0
+    },
+    "candidate": {
+      "rows": 64,
+      "native_total_mean": 0.7227761243386244,
+      "strict_correct": 21,
+      "native_exact_correct": 21,
+      "format_errors": 1,
+      "truncations": 0
+    },
+    "paired": {
+      "gained": 7,
+      "lost": 5
+    }
+  },
+  "P05_train_unseen_tools": {
+    "base": {
+      "rows": 12,
+      "native_total_mean": 0.8240740740740741,
+      "strict_correct": 4,
+      "native_exact_correct": 4,
+      "format_errors": 0,
+      "truncations": 0
+    },
+    "candidate": {
+      "rows": 12,
+      "native_total_mean": 0.7433862433862434,
+      "strict_correct": 4,
+      "native_exact_correct": 4,
+      "format_errors": 0,
+      "truncations": 0
+    },
+    "paired": {
+      "gained": 1,
+      "lost": 1
+    }
+  },
+  "P05_selection_gates": {
+    "native_total_improves": false,
+    "strict_no_drop": true,
+    "unseen_strict_no_drop": true,
+    "format_no_increase": true,
+    "zero_truncations": true
+  },
+  "P05_passes_all_gates": false,
+  "P05_paired_native_delta": -0.002476025132275135,
+  "P05_native_delta_bootstrap_95_CI": [
+    -0.04882192460317462,
+    0.04534350198412698
+  ],
+  "P05_strict_gained": 10,
+  "P05_strict_lost": 6,
+  "P05_exact_McNemar_p": 0.454498291015625,
+  "selected_model": "E0",
+  "limitations": [
+    "All performance comparisons are on exposed publisher-silver official-TRAIN internal DEV.",
+    "P04 was an operator control, not an ABA-selected candidate.",
+    "P05 and P04 are one run each; the source of their discrepancy is not isolated.",
+    "No official TEST, sealed final64, or independent expert-gold evaluation was used."
+  ]
+}
