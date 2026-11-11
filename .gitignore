@@ -57,3 +57,6 @@ configs/kali-domain-dev-v1.tasks.json
 !data/benchkit/kali-doc-train-v2/
 !data/benchkit/kali-replay-v2/
 !data/benchkit/kali-replay-ablation-v2/
+
+# Source-pinned authored TRAIN supplement; no publisher or sealed evaluation rows.
+!data/benchkit/kali-targeted-source-silver-2026-11-11/
