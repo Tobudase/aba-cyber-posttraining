@@ -70,6 +70,24 @@
     "hypothetically_removed_extra_tokens": 24,
     "hypothetical_pos_improved_rows": 19,
     "hypothetical_no_longer_below_E0_rows": 12,
+    "surface_syntax_only_pairs": {
+      "P04": {
+        "rows": 4,
+        "sum_native_score_delta": -0.6031746031746031
+      },
+      "P05": {
+        "rows": 4,
+        "sum_native_score_delta": -0.6031746031746031
+      },
+      "P06": {
+        "rows": 4,
+        "sum_native_score_delta": -0.6031746031746031
+      },
+      "P07": {
+        "rows": 4,
+        "sum_native_score_delta": -0.6031746031746031
+      }
+    },
     "P07_original_mean_positional_f1": 0.39162561576354676,
     "P07_hypothetical_mean_positional_f1": 0.8620689655172415,
     "P07_original_mean_total": 0.4999452654625069,

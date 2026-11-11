@@ -63,6 +63,17 @@ def syntax(tokens, allowed):
     return equals, spaced
 
 
+def normalized_value_tokens(command):
+    """Compare surface syntax only: --flag=value and --flag value tokenize alike."""
+    result = []
+    for token in shlex.split(command):
+        if token.startswith("-") and "=" in token:
+            result.extend(token.split("=", 1))
+        else:
+            result.append(token)
+    return result
+
+
 def main():
     refs = {row["custom_id"]: row for path in REFS for row in read(path)}
     assert len(refs) == 128
@@ -127,6 +138,17 @@ def main():
     assert len(common) == 29
     counts = collections.Counter()
     original_total = counterfactual_total = original_pos = counterfactual_pos = 0.0
+    exact_surface_only = {}
+    for arm in ("P04", "P05", "P06", "P07"):
+        cases = [case for case in common
+                 if scores["E0"][case]["pred_cmd"] != scores[arm][case]["pred_cmd"]
+                 and normalized_value_tokens(scores["E0"][case]["pred_cmd"])
+                 == normalized_value_tokens(scores[arm][case]["pred_cmd"])]
+        exact_surface_only[arm] = {
+            "rows": len(cases),
+            "sum_native_score_delta": sum(scores[arm][case]["total_score"] - scores["E0"][case]["total_score"]
+                                          for case in cases),
+        }
     for case in common:
         ref = refs[case]
         allowed = allowed_flags(ref)
@@ -187,6 +209,7 @@ def main():
         "model_output_out_of_reference_flag_syntax": output_syntax,
         "prior_three_run_common_harm": {
             "rows": len(common), **dict(counts),
+            "surface_syntax_only_pairs": exact_surface_only,
             "P07_original_mean_positional_f1": original_pos / len(common),
             "P07_hypothetical_mean_positional_f1": counterfactual_pos / len(common),
             "P07_original_mean_total": original_total / len(common),
