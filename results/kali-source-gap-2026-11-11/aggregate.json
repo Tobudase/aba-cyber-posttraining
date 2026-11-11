@@ -1,0 +1,18 @@
+{
+  "status": "READ_ONLY_PUBLISHER_TRAIN_SOURCE_GAP_AUDIT",
+  "official_TEST_rows": 0,
+  "sealed_final64_model_outputs": 0,
+  "verified_PASS_EXECUTED_ACCURATE_total": 954,
+  "verified_in_screened": 936,
+  "verified_held_for_nonperfect_gold_echo": 18,
+  "verified_screened_in_P07_train_DEV_final": 925,
+  "verified_screened_unused_excluded_by_P07_group_rules": 11,
+  "unused_protected_command_group": 8,
+  "unused_duplicate_new_command_group": 3,
+  "prior_common_harm_rows": 29,
+  "reference_required_flag_groups": 78,
+  "groups_covered_in_P07_train": 35,
+  "harm_rows_with_matching_tool_in_verified_held": 1,
+  "required_groups_covered_by_verified_held": 0,
+  "interpretation": "No additional ready-to-admit, group-distinct PASS_EXECUTED/ACCURATE rows remain in the current screened publisher TRAIN pool. The 18 publisher-verified held rows failed the prior native gold-echo screen and require scorer/label reconciliation; none supplies a missing required flag group for the 29 harmed cases. Other external or authored data were not surveyed here."
+}
