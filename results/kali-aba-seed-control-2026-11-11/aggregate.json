@@ -1,0 +1,157 @@
+{
+  "status": "READ_ONLY_SEED_CONTROL_AUDIT",
+  "official_TEST_rows": 0,
+  "sealed_final64_model_outputs": 0,
+  "training_rows_each": 638,
+  "arms": {
+    "P04": "operator control seed42",
+    "P05": "ABA-selected seed42",
+    "P06": "operator seed control seed43"
+  },
+  "base_predictions_equal_across_runs": 128,
+  "candidate_equal_counts": {
+    "P04_P05": 110,
+    "P04_P06": 109,
+    "P05_P06": 110
+  },
+  "panel_component_means": {
+    "DEV1": {
+      "E0": {
+        "tool_score": 0.8125,
+        "optional_f1": 0.6412574404761905,
+        "positional_f1": 0.8151041666666666,
+        "total_score": 0.7562872023809524
+      },
+      "P04": {
+        "tool_score": 0.90625,
+        "optional_f1": 0.7417410714285714,
+        "positional_f1": 0.8133680555555556,
+        "total_score": 0.8204530423280423
+      },
+      "P05": {
+        "tool_score": 0.859375,
+        "optional_f1": 0.7104910714285714,
+        "positional_f1": 0.7769097222222222,
+        "total_score": 0.7822585978835979
+      },
+      "P06": {
+        "tool_score": 0.84375,
+        "optional_f1": 0.6907738095238095,
+        "positional_f1": 0.7909722222222222,
+        "total_score": 0.7751653439153439
+      }
+    },
+    "DEV2": {
+      "E0": {
+        "tool_score": 0.765625,
+        "optional_f1": 0.638702876984127,
+        "positional_f1": 0.8567708333333334,
+        "total_score": 0.7536995701058201
+      },
+      "P04": {
+        "tool_score": 0.8125,
+        "optional_f1": 0.5986855158730159,
+        "positional_f1": 0.7816220238095238,
+        "total_score": 0.7309358465608465
+      },
+      "P05": {
+        "tool_score": 0.796875,
+        "optional_f1": 0.5898313492063492,
+        "positional_f1": 0.7816220238095238,
+        "total_score": 0.7227761243386244
+      },
+      "P06": {
+        "tool_score": 0.796875,
+        "optional_f1": 0.5674355158730159,
+        "positional_f1": 0.7451636904761905,
+        "total_score": 0.7031580687830687
+      }
+    },
+    "combined": {
+      "E0": {
+        "tool_score": 0.7890625,
+        "optional_f1": 0.6399801587301587,
+        "positional_f1": 0.8359375,
+        "total_score": 0.7549933862433862
+      },
+      "P04": {
+        "tool_score": 0.859375,
+        "optional_f1": 0.6702132936507936,
+        "positional_f1": 0.7974950396825397,
+        "total_score": 0.7756944444444445
+      },
+      "P05": {
+        "tool_score": 0.828125,
+        "optional_f1": 0.6501612103174603,
+        "positional_f1": 0.779265873015873,
+        "total_score": 0.7525173611111111
+      },
+      "P06": {
+        "tool_score": 0.8203125,
+        "optional_f1": 0.6291046626984127,
+        "positional_f1": 0.7680679563492063,
+        "total_score": 0.7391617063492063
+      }
+    }
+  },
+  "strict_correct_combined": {
+    "E0": 47,
+    "P04": 54,
+    "P05": 51,
+    "P06": 48
+  },
+  "passes_all_frozen_gates": {
+    "P04": true,
+    "P05": false,
+    "P06": false
+  },
+  "paired_bootstrap_native_delta_95pct": {
+    "P04": [
+      -0.023817791005291005,
+      0.06756159060846562
+    ],
+    "P05": [
+      -0.04930142195767196,
+      0.04558945105820106
+    ],
+    "P06": [
+      -0.06850198412698413,
+      0.03729332010582011
+    ]
+  },
+  "receipts": {
+    "P04": {
+      "GPU": "NVIDIA A100-SXM4-80GB",
+      "GPU_count": 1,
+      "optimizer_steps": 638,
+      "nonzero_gradient_steps": 638,
+      "changed_tensors": null,
+      "adapter_reload_max_logit_delta": 0.0,
+      "official_TEST_rows": 0
+    },
+    "P05": {
+      "GPU": "NVIDIA A100-SXM4-80GB",
+      "GPU_count": 1,
+      "optimizer_steps": 638,
+      "nonzero_gradient_steps": 638,
+      "changed_tensors": 144,
+      "adapter_reload_max_logit_delta": 0.0,
+      "official_TEST_rows": 0
+    },
+    "P06": {
+      "GPU": "NVIDIA A100-SXM4-80GB",
+      "GPU_count": 1,
+      "optimizer_steps": 638,
+      "nonzero_gradient_steps": 638,
+      "changed_tensors": 144,
+      "adapter_reload_max_logit_delta": 0.0,
+      "official_TEST_rows": 0
+    }
+  },
+  "limitations": [
+    "Only P05 was ABA-selected.",
+    "Both DEV panels are exposed publisher-silver TRAIN-source.",
+    "One execution per candidate does not isolate numerical divergence.",
+    "Bootstrap intervals describe this exposed panel, not independent generalization."
+  ]
+}

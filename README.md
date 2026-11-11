@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 11, 2026 — P06 seed control
+
+The pre-frozen P06 operator control completed **638/638 nonzero-gradient A100 updates** and 128 internal DEV predictions; its adapter reload was exact and all owned resources were cleaned. Changing the data-order seed from 42 to 43 did not recover the native score: E0 **0.75499**, P04 operator control **0.77569**, ABA-selected P05 **0.75252**, and P06 **0.73916**. P06 strict correctness was **48/128** versus E0's **47/128**, but its predeclared native-score gate failed. P04's one-run positive DEV result is not stable evidence; P06 is not ABA-selected, and none of these scores use official TEST. [Chinese report](docs/KALI_ABA_P06_SEED_CONTROL_ZH_2026-11-11.md) · [Aggregate](results/kali-aba-seed-control-2026-11-11/aggregate.json).
+
 ## November 11, 2026 — P05 regression cause audit
 
 A read-only paired audit isolated the observed score regression: relative to the base, P05 improved mean tool score by **0.03906** and option F1 by **0.01018**, but positional F1 fell by **0.05667**, leaving native total **0.75499 → 0.75252**. In 27 of 28 cases with a positional-score decline, the scorer parsed additional positional tokens, often because unrecognized options leave their following values as positionals. P04 and P05 shared the same data, optimizer, model and inference settings, and their base outputs matched 128/128; their trained outputs differed on 18/128, accounting for their entire score difference. Their logged first-step gradient norms already differed, so the exact source of training divergence remains unproven. The 638 supervised targets all self-score 1.0 under the pinned native scorer. E0 remains selected; none of these results are an official TEST score. [Chinese cause audit](docs/KALI_ABA_P05_CAUSE_AUDIT_ZH_2026-11-11.md) · [Aggregate](results/kali-aba-p05-cause-2026-11-11/aggregate.json).
