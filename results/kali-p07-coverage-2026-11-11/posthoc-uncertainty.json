@@ -1,0 +1,34 @@
+{
+  "status": "P07_POSTHOC_UNCERTAINTY_AND_PERSISTENT_HARM",
+  "official_TEST_rows": 0,
+  "sealed_final64_model_outputs": 0,
+  "paired_bootstrap_total_delta_95pct": {
+    "P07_minus_E0": [
+      -0.03564814814814815,
+      0.058515211640211645
+    ],
+    "P07_minus_P05": [
+      -0.010156249999999999,
+      0.03955439814814815
+    ],
+    "P07_minus_P04": [
+      -0.027748842592592592,
+      0.004600694444444444
+    ]
+  },
+  "strict_E0_to_P07_gained": 13,
+  "strict_E0_to_P07_lost": 5,
+  "exact_McNemar_two_sided_p": 0.09625244140625,
+  "P05_P07_equal_outputs": 104,
+  "prior_three_run_common_harm_rows": 29,
+  "P07_still_below_E0_on_prior_common_harm_rows": 29,
+  "prior_common_harm_positional_F1": {
+    "E0": 0.9885057471264368,
+    "P05": 0.3916256157635468,
+    "P07": 0.3916256157635468
+  },
+  "limitations": [
+    "Post hoc analyses on exposed publisher-silver TRAIN-source DEV.",
+    "No independent model-gain conclusion or attribution of gain to added rows."
+  ]
+}

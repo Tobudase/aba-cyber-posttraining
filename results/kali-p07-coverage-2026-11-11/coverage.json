@@ -1,0 +1,184 @@
+{
+  "status": "P07_EXPOSED_DEV_COVERAGE_ANALYSIS",
+  "official_TEST_rows": 0,
+  "sealed_final64_model_outputs": 0,
+  "operator_control_not_ABA_selected": true,
+  "model_promotion_allowed": false,
+  "training_rows": 733,
+  "new_rows": 95,
+  "new_tool_types": 31,
+  "base_predictions_equal_P05_P07": 128,
+  "groups": {
+    "combined128": {
+      "E0": {
+        "tool_score": 0.7890625,
+        "optional_f1": 0.6399801587301587,
+        "positional_f1": 0.8359375,
+        "total_score": 0.7549933862433862,
+        "strict_correct": 47,
+        "rows": 128
+      },
+      "P05": {
+        "tool_score": 0.828125,
+        "optional_f1": 0.6501612103174603,
+        "positional_f1": 0.779265873015873,
+        "total_score": 0.7525173611111111,
+        "strict_correct": 51,
+        "rows": 128
+      },
+      "P07": {
+        "tool_score": 0.8515625,
+        "optional_f1": 0.6706845238095238,
+        "positional_f1": 0.7740575396825397,
+        "total_score": 0.7654348544973545,
+        "strict_correct": 55,
+        "rows": 128
+      }
+    },
+    "DEV1_64": {
+      "E0": {
+        "tool_score": 0.8125,
+        "optional_f1": 0.6412574404761905,
+        "positional_f1": 0.8151041666666666,
+        "total_score": 0.7562872023809524,
+        "strict_correct": 28,
+        "rows": 64
+      },
+      "P05": {
+        "tool_score": 0.859375,
+        "optional_f1": 0.7104910714285714,
+        "positional_f1": 0.7769097222222222,
+        "total_score": 0.7822585978835979,
+        "strict_correct": 30,
+        "rows": 64
+      },
+      "P07": {
+        "tool_score": 0.890625,
+        "optional_f1": 0.7417410714285714,
+        "positional_f1": 0.7977430555555556,
+        "total_score": 0.8100363756613757,
+        "strict_correct": 33,
+        "rows": 64
+      }
+    },
+    "DEV2_64": {
+      "E0": {
+        "tool_score": 0.765625,
+        "optional_f1": 0.638702876984127,
+        "positional_f1": 0.8567708333333334,
+        "total_score": 0.7536995701058201,
+        "strict_correct": 19,
+        "rows": 64
+      },
+      "P05": {
+        "tool_score": 0.796875,
+        "optional_f1": 0.5898313492063492,
+        "positional_f1": 0.7816220238095238,
+        "total_score": 0.7227761243386244,
+        "strict_correct": 21,
+        "rows": 64
+      },
+      "P07": {
+        "tool_score": 0.8125,
+        "optional_f1": 0.5996279761904761,
+        "positional_f1": 0.7503720238095238,
+        "total_score": 0.7208333333333333,
+        "strict_correct": 22,
+        "rows": 64
+      }
+    },
+    "old_unseen12": {
+      "E0": {
+        "tool_score": 0.9166666666666666,
+        "optional_f1": 0.6388888888888888,
+        "positional_f1": 0.9166666666666666,
+        "total_score": 0.8240740740740741,
+        "strict_correct": 4,
+        "rows": 12
+      },
+      "P05": {
+        "tool_score": 0.9166666666666666,
+        "optional_f1": 0.5476190476190476,
+        "positional_f1": 0.7658730158730158,
+        "total_score": 0.7433862433862434,
+        "strict_correct": 4,
+        "rows": 12
+      },
+      "P07": {
+        "tool_score": 0.9166666666666666,
+        "optional_f1": 0.6309523809523809,
+        "positional_f1": 0.7936507936507936,
+        "total_score": 0.7804232804232805,
+        "strict_correct": 5,
+        "rows": 12
+      }
+    },
+    "newly_covered8": {
+      "E0": {
+        "tool_score": 0.875,
+        "optional_f1": 0.7916666666666666,
+        "positional_f1": 0.875,
+        "total_score": 0.8472222222222222,
+        "strict_correct": 4,
+        "rows": 8
+      },
+      "P05": {
+        "tool_score": 0.875,
+        "optional_f1": 0.7380952380952381,
+        "positional_f1": 0.7083333333333334,
+        "total_score": 0.7738095238095238,
+        "strict_correct": 4,
+        "rows": 8
+      },
+      "P07": {
+        "tool_score": 0.875,
+        "optional_f1": 0.7380952380952381,
+        "positional_f1": 0.7083333333333334,
+        "total_score": 0.7738095238095238,
+        "strict_correct": 4,
+        "rows": 8
+      }
+    },
+    "still_unseen4": {
+      "E0": {
+        "tool_score": 1.0,
+        "optional_f1": 0.3333333333333333,
+        "positional_f1": 1.0,
+        "total_score": 0.7777777777777777,
+        "strict_correct": 0,
+        "rows": 4
+      },
+      "P05": {
+        "tool_score": 1.0,
+        "optional_f1": 0.16666666666666666,
+        "positional_f1": 0.8809523809523809,
+        "total_score": 0.6825396825396826,
+        "strict_correct": 0,
+        "rows": 4
+      },
+      "P07": {
+        "tool_score": 1.0,
+        "optional_f1": 0.41666666666666663,
+        "positional_f1": 0.9642857142857143,
+        "total_score": 0.7936507936507936,
+        "strict_correct": 1,
+        "rows": 4
+      }
+    }
+  },
+  "paired_strict": {
+    "E0_to_P07": {
+      "gained": 13,
+      "lost": 5
+    },
+    "P05_to_P07": {
+      "gained": 5,
+      "lost": 1
+    }
+  },
+  "limitations": [
+    "Exposed publisher-silver TRAIN-source DEV, not independent validation.",
+    "One P07 run cannot isolate a data effect from numerical run variation.",
+    "The 8 newly covered DEV tools are no longer unseen under the P07 training set."
+  ]
+}

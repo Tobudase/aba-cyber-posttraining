@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 11, 2026 — P07 exploratory coverage result
+
+The operator-prepared P07 control completed **733/733 nonzero-gradient A100 updates** on 733 publisher-verified TRAIN rows. On the already exposed, official-TRAIN-sourced internal DEV128, strict correctness changed **47 → 55/128** and native mean **0.75499 → 0.76543**; DEV1 improved while DEV2 declined. The descriptive paired interval for the mean difference includes zero, and all 29 cases that had declined in P04/P05/P06 still declined under P07. P07 passed its frozen internal gates but is neither ABA-selected nor independently validated, so **E0 remains the default**. Official TEST and sealed final64 were untouched. [Chinese result and limitations](docs/KALI_P07_COVERAGE_RESULT_ZH_2026-11-11.md) · [Sanitized scores](results/kali-p07-coverage-2026-11-11/score.json).
+
 ## November 11, 2026 — P07 coverage control frozen
 
 After P05 and P06 failed the native-score gate, an operator-prepared P07 control was frozen before any P07 outputs: the prior 638 verified publisher TRAIN examples plus **95** additional verified, command-group-screened examples covering **31 new tools**. All 638 old tokenizations reproduced exactly; all 95 new targets self-scored full under the locked native and strict checks. P07 is limited to one A100 and the already exposed 128-row internal DEV, with official TEST and sealed final64 untouched. It is an exploratory data-coverage control, not an ABA-selected candidate or an independent validation. [Pre-run protocol](docs/KALI_P07_COVERAGE_CONTROL_PREP_ZH_2026-11-11.md).
