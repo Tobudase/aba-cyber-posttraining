@@ -1,0 +1,44 @@
+{
+  "status": "POSTHOC_CROSS_RUN_SHARED_HARM_AUDIT",
+  "official_TEST_rows": 0,
+  "sealed_final64_model_outputs": 0,
+  "DEV_rows": 128,
+  "native_decline_rows_by_arm": {
+    "P04": 31,
+    "P05": 34,
+    "P06": 39
+  },
+  "native_decline_common_all_three": 29,
+  "common_tool_types": 28,
+  "common_component_means": {
+    "P04": {
+      "tool_score": 0.7586206896551724,
+      "optional_f1": 0.34192665571975916,
+      "positional_f1": 0.4261083743842365,
+      "total_score": 0.5088852399197227
+    },
+    "P05": {
+      "tool_score": 0.7241379310344828,
+      "optional_f1": 0.359168035030104,
+      "positional_f1": 0.3916256157635468,
+      "total_score": 0.4916438606093778
+    },
+    "P06": {
+      "tool_score": 0.7586206896551724,
+      "optional_f1": 0.3328954570333881,
+      "positional_f1": 0.42266009852216746,
+      "total_score": 0.5047254150702426
+    },
+    "E0": {
+      "tool_score": 0.7586206896551724,
+      "optional_f1": 0.5500273672687466,
+      "positional_f1": 0.9885057471264368,
+      "total_score": 0.765717934683452
+    }
+  },
+  "all_three_positional_declines_within_common": 22,
+  "all_three_optional_declines_within_common": 14,
+  "all_three_tool_declines_within_common": 0,
+  "strict_losses_common_all_three": 4,
+  "interpretation": "Post hoc shared-case pattern indicates reproducible harm on specific tasks; it does not isolate which SFT data or operation causes the harm and is not independent validation."
+}
