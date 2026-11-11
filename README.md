@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 11, 2026 — P07 coverage control frozen
+
+After P05 and P06 failed the native-score gate, an operator-prepared P07 control was frozen before any P07 outputs: the prior 638 verified publisher TRAIN examples plus **95** additional verified, command-group-screened examples covering **31 new tools**. All 638 old tokenizations reproduced exactly; all 95 new targets self-scored full under the locked native and strict checks. P07 is limited to one A100 and the already exposed 128-row internal DEV, with official TEST and sealed final64 untouched. It is an exploratory data-coverage control, not an ABA-selected candidate or an independent validation. [Pre-run protocol](docs/KALI_P07_COVERAGE_CONTROL_PREP_ZH_2026-11-11.md).
+
 ## November 11, 2026 — P06 seed control
 
 The pre-frozen P06 operator control completed **638/638 nonzero-gradient A100 updates** and 128 internal DEV predictions; its adapter reload was exact and all owned resources were cleaned. Changing the data-order seed from 42 to 43 did not recover the native score: E0 **0.75499**, P04 operator control **0.77569**, ABA-selected P05 **0.75252**, and P06 **0.73916**. P06 strict correctness was **48/128** versus E0's **47/128**, but its predeclared native-score gate failed. P04's one-run positive DEV result is not stable evidence; P06 is not ABA-selected, and none of these scores use official TEST. [Chinese report](docs/KALI_ABA_P06_SEED_CONTROL_ZH_2026-11-11.md) · [Aggregate](results/kali-aba-seed-control-2026-11-11/aggregate.json).
