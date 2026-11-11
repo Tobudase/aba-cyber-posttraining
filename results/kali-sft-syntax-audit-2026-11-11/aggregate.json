@@ -1,0 +1,79 @@
+{
+  "status": "POSTHOC_SYNTAX_AND_SCORER_MECHANISM_AUDIT",
+  "official_TEST_rows": 0,
+  "sealed_final64_model_outputs": 0,
+  "DEV_reference_self_score_full": 128,
+  "synthetic_wrong_flag_equals_positional_f1": 1.0,
+  "synthetic_wrong_flag_space_positional_f1": 0.0,
+  "training_reference_syntax": {
+    "old638": {
+      "rows": 638,
+      "rows_known_value_equals": 9,
+      "rows_known_value_space": 255,
+      "tokens_known_value_equals": 9,
+      "tokens_known_value_space": 432
+    },
+    "new95": {
+      "rows": 95,
+      "rows_known_value_equals": 2,
+      "rows_known_value_space": 39,
+      "tokens_known_value_equals": 2,
+      "tokens_known_value_space": 63
+    }
+  },
+  "model_output_out_of_reference_flag_syntax": {
+    "E0": {
+      "rows_out_of_reference_equals": 24,
+      "rows_out_of_reference_space": 10,
+      "tokens_out_of_reference_equals": 32,
+      "tokens_out_of_reference_space": 11
+    },
+    "P04": {
+      "rows_out_of_reference_equals": 5,
+      "rows_out_of_reference_space": 35,
+      "tokens_out_of_reference_equals": 6,
+      "tokens_out_of_reference_space": 42
+    },
+    "P05": {
+      "rows_out_of_reference_equals": 4,
+      "rows_out_of_reference_space": 37,
+      "tokens_out_of_reference_equals": 5,
+      "tokens_out_of_reference_space": 48
+    },
+    "P06": {
+      "rows_out_of_reference_equals": 4,
+      "rows_out_of_reference_space": 35,
+      "tokens_out_of_reference_equals": 6,
+      "tokens_out_of_reference_space": 42
+    },
+    "P07": {
+      "rows_out_of_reference_equals": 2,
+      "rows_out_of_reference_space": 35,
+      "tokens_out_of_reference_equals": 2,
+      "tokens_out_of_reference_space": 45
+    }
+  },
+  "prior_three_run_common_harm": {
+    "rows": 29,
+    "E0_outref_equal_rows": 17,
+    "E0_outref_space_rows": 1,
+    "P07_outref_equal_rows": 0,
+    "P07_outref_space_rows": 21,
+    "same_flag_E0_equals_P07_space_rows": 7,
+    "P07_unknown_flag_rows": 25,
+    "reference_required_flag_groups": 78,
+    "reference_required_flag_groups_seen_in_same_tool_train": 35,
+    "rows_all_reference_flag_groups_seen_in_same_tool_train": 9,
+    "rows_no_reference_flag_group_seen_in_same_tool_train": 15,
+    "P07_outref_flag_seen_same_tool_train_rows": 0,
+    "P07_extra_pos_rows": 24,
+    "hypothetically_removed_extra_tokens": 24,
+    "hypothetical_pos_improved_rows": 19,
+    "hypothetical_no_longer_below_E0_rows": 12,
+    "P07_original_mean_positional_f1": 0.39162561576354676,
+    "P07_hypothetical_mean_positional_f1": 0.8620689655172415,
+    "P07_original_mean_total": 0.4999452654625069,
+    "P07_hypothetical_mean_total": 0.656759715380405
+  },
+  "interpretation": "The frozen parser treats a value after an unrecognized flag as positional when space-separated, but not when joined with '='. The hypothetical filtering is diagnostic only: an unrecognized flag remains incorrect and some filtered tokens might be intended positionals. This does not replace the official score or identify a unique causal effect of SFT data."
+}
