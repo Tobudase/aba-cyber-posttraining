@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 11, 2026 — P08 exact-repeat result
+
+P08 repeated P07 with byte-identical 733-row TRAIN payload, the same A100-SXM4 model, optimizer and seeds. It completed **733/733 nonzero-gradient updates** and passed adapter reload checks; all owned GPU resources were cleaned. On the exposed, official-TRAIN-sourced DEV128, native mean was **0.75499 E0 / 0.76543 P07 / 0.76768 P08**, and strict correctness **47 / 55 / 54 of 128**. P07/P08 outputs matched on 119/128 cases, so the small positive direction repeated once, but DEV2 declined in both runs and P08 still lost to E0 on 28/29 previously identified harm cases. The descriptive paired interval includes zero. These are operator controls, not ABA-selected or independent/official TEST gains; **E0 remains the default**. [Chinese result](docs/KALI_P08_EXACT_REPLICA_RESULT_ZH_2026-11-11.md) · [Sanitized aggregate](results/kali-p08-replica-2026-11-11/aggregate.json).
+
 ## November 11, 2026 — P08 exact-repeat protocol frozen
 
 Before any P08 model output, a one-A100 repeat of P07 was frozen with byte-identical training payload and encoded rows, plus the same model, optimizer and inference settings. The only protocol differences are candidate ID and metadata. It will test whether P07's small positive internal-DEV result is reproducible; it remains an operator control on exposed publisher-silver TRAIN development data, with no official TEST or sealed final64 use and no model promotion. The server-side Kubernetes dry run passed. [Chinese pre-run record](docs/KALI_P08_EXACT_REPLICA_PREP_ZH_2026-11-11.md).

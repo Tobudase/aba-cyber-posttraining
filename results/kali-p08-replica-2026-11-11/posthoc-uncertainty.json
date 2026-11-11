@@ -1,0 +1,17 @@
+{
+  "status": "P08_POSTHOC_DESCRIPTIVE_UNCERTAINTY",
+  "official_TEST_rows": 0,
+  "paired_bootstrap_20000_seed": 20261111,
+  "P08_minus_E0_native_mean_CI95": [
+    -0.032419808201058206,
+    0.059718088624338625
+  ],
+  "P08_minus_P07_native_mean_CI95": [
+    -0.007291666666666667,
+    0.012313988095238097
+  ],
+  "strict_E0_to_P08_gained": 12,
+  "strict_E0_to_P08_lost": 5,
+  "exact_McNemar_two_sided_p": 0.143463134765625,
+  "limitation": "Post hoc uncertainty on already exposed publisher-silver TRAIN-source DEV; not independent validation."
+}

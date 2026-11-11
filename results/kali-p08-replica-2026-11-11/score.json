@@ -1,0 +1,116 @@
+{
+  "status": "SCORED_OPERATOR_COVERAGE_CONTROL_EXPOSED_DEV",
+  "candidate_id": "P08",
+  "training_rows": 733,
+  "optimizer_steps": 733,
+  "source_official_split": "train",
+  "official_TEST_rows": 0,
+  "final64_used": false,
+  "model_promotion_allowed": false,
+  "human_expert_signoffs": 0,
+  "summary": {
+    "dev1": {
+      "base": {
+        "rows": 64,
+        "native_total_mean": 0.7562872023809524,
+        "strict_correct": 28,
+        "native_exact_correct": 29,
+        "format_errors": 3,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 64,
+        "native_total_mean": 0.8100363756613757,
+        "strict_correct": 32,
+        "native_exact_correct": 33,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 5,
+        "lost": 1
+      }
+    },
+    "dev2": {
+      "base": {
+        "rows": 64,
+        "native_total_mean": 0.7536995701058201,
+        "strict_correct": 19,
+        "native_exact_correct": 20,
+        "format_errors": 2,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 64,
+        "native_total_mean": 0.7253224206349206,
+        "strict_correct": 22,
+        "native_exact_correct": 23,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 7,
+        "lost": 4
+      }
+    },
+    "combined": {
+      "base": {
+        "rows": 128,
+        "native_total_mean": 0.7549933862433862,
+        "strict_correct": 47,
+        "native_exact_correct": 49,
+        "format_errors": 5,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 128,
+        "native_total_mean": 0.7676793981481481,
+        "strict_correct": 54,
+        "native_exact_correct": 56,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 12,
+        "lost": 5
+      }
+    },
+    "train_unseen_tools": {
+      "base": {
+        "rows": 4,
+        "native_total_mean": 0.7777777777777777,
+        "strict_correct": 0,
+        "native_exact_correct": 0,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "candidate": {
+        "rows": 4,
+        "native_total_mean": 0.7936507936507936,
+        "strict_correct": 1,
+        "native_exact_correct": 1,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "paired": {
+        "gained": 1,
+        "lost": 0
+      }
+    }
+  },
+  "selection_gates": {
+    "native_total_improves": true,
+    "strict_no_drop": true,
+    "unseen_strict_no_drop": true,
+    "format_no_increase": true,
+    "zero_truncations": true
+  },
+  "passes_all_gates": true,
+  "limitations": [
+    "P08 is operator-prepared, not ABA-selected.",
+    "The 128-row DEV was exposed to previous model runs.",
+    "Publisher silver labels are not independent expert gold.",
+    "Internal DEV panels come from official TRAIN.",
+    "This is not an official KaliBench leaderboard evaluation."
+  ]
+}

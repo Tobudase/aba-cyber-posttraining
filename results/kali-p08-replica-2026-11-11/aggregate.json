@@ -1,0 +1,76 @@
+{
+  "status": "P08_EXACT_REPEAT_EXPOSED_DEV_ANALYSIS",
+  "official_TEST_rows": 0,
+  "sealed_final64_model_outputs": 0,
+  "operator_control_not_ABA_selected": true,
+  "model_promotion_allowed": false,
+  "same_payload_bytes": true,
+  "same_encoded_rows_bytes": true,
+  "same_training_settings_except_candidate_id_and_metadata": true,
+  "training_rows": 733,
+  "nonzero_gradient_steps": 733,
+  "base_predictions_equal_P07_P08": 128,
+  "candidate_predictions_equal_P07_P08": 119,
+  "mean_components": {
+    "E0": {
+      "tool_score": 0.7890625,
+      "optional_f1": 0.6399801587301587,
+      "positional_f1": 0.8359375,
+      "total_score": 0.7549933862433862
+    },
+    "P07": {
+      "tool_score": 0.8515625,
+      "optional_f1": 0.6706845238095238,
+      "positional_f1": 0.7740575396825397,
+      "total_score": 0.7654348544973545
+    },
+    "P08": {
+      "tool_score": 0.8515625,
+      "optional_f1": 0.6670014880952381,
+      "positional_f1": 0.7844742063492064,
+      "total_score": 0.7676793981481481
+    }
+  },
+  "strict_correct": {
+    "E0": 47,
+    "P07": 55,
+    "P08": 54
+  },
+  "paired_strict_E0_to_P08": {
+    "gained": 12,
+    "lost": 5
+  },
+  "P08_minus_E0_native_mean": 0.012686011904761929,
+  "P08_minus_P07_native_mean": 0.002244543650793629,
+  "directional_replication_on_exposed_DEV": true,
+  "prior_common_harm29": {
+    "rows": 29,
+    "P08_still_below_E0": 28,
+    "means": {
+      "E0": {
+        "tool_score": 0.7586206896551724,
+        "optional_f1": 0.5500273672687466,
+        "positional_f1": 0.9885057471264368,
+        "total_score": 0.765717934683452
+      },
+      "P07": {
+        "tool_score": 0.7586206896551724,
+        "optional_f1": 0.3495894909688013,
+        "positional_f1": 0.3916256157635468,
+        "total_score": 0.49994526546250684
+      },
+      "P08": {
+        "tool_score": 0.7586206896551724,
+        "optional_f1": 0.3495894909688013,
+        "positional_f1": 0.40311986863710997,
+        "total_score": 0.5037766830870279
+      }
+    }
+  },
+  "limitations": [
+    "Internal DEV was exposed before P08; replicate is not independent validation.",
+    "P08 is an operator exact repeat, not an ABA-selected candidate.",
+    "Training and DEV labels are publisher silver, not independent expert gold.",
+    "A repeated direction cannot prove causal benefit of the 95 added rows."
+  ]
+}
