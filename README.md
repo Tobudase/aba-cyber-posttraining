@@ -4,7 +4,7 @@ Research code and traceable experiment summaries for adapting open-weight langua
 
 ## November 11, 2026 — ABA controller recovery check
 
-The persistent ABA VM is blocked by a cluster storage-controller error. A bounded, PVC-free Linux VM successfully installed the pinned ABA source, completed its owned-tool setup, and passed the systemd/cgroup and bubblewrap prerequisites; all temporary resources were cleaned. This is an **environment check**, with no GPU training, model output, or official TEST use. The next run still needs a pinned VM image, working model-control and GPU-worker connections, and durable artifact collection. I also confirmed in the upstream KaliBench verifier that `PASS_EXECUTED` certifies successful command exit, not semantic correctness, so the P10 source-silver labels remain quarantined. [Recovery note](docs/ABA_CONTROLLER_RECOVERY_2026-11-11.md).
+The persistent ABA VM is blocked by a cluster storage-controller error. A bounded, PVC-free Linux VM successfully installed the pinned ABA source, completed its owned-tool setup, and passed the systemd/cgroup and bubblewrap prerequisites. A separate pinned-image probe copied and checksum-verified a harmless artifact before VM deletion; all temporary resources were cleaned. These are **environment checks**, with no GPU training, model output, or official TEST use. The next run still needs working model-control and GPU-worker connections plus durable collection of full-size artifacts. I also confirmed in the upstream KaliBench verifier that `PASS_EXECUTED` certifies successful command exit, not semantic correctness, so the P10 source-silver labels remain quarantined. [Recovery note](docs/ABA_CONTROLLER_RECOVERY_2026-11-11.md).
 
 ## November 11, 2026 — P10 source-label quality gate
 
