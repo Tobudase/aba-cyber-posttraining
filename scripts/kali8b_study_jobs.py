@@ -8,7 +8,7 @@ class TransientClusterError(RuntimeError):pass
 def k(*args,payload=None,check=True,timeout=90):
  p=subprocess.run(BASE+list(args),input=payload,text=True,capture_output=True,timeout=timeout)
  if check and p.returncode:
-  transient=any(s in p.stderr.lower() for s in ['connection reset','unable to connect','tls handshake timeout','i/o timeout','context deadline exceeded','serviceunavailable','temporarily unavailable'])
+  transient=any(s in p.stderr.lower() for s in ['connection reset',"can't assign requested address",'connection refused','no route to host','unexpected eof','unable to connect','tls handshake timeout','i/o timeout','context deadline exceeded','serviceunavailable','temporarily unavailable'])
   raise (TransientClusterError if transient else RuntimeError)(p.stderr[-500:])
  return p
 

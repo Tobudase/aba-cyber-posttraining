@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r4';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r5';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
@@ -70,8 +70,8 @@ def main():
    time.sleep(5)
   else:raise TimeoutError('SSH readiness')
   # Reuse the exact checksum-tested Conda/install/one-line dispatch repair recipe.
-  install=(ROOT/'scripts/kali8b_native_install.sh').read_text()
-  r=ssh(install,timeout=1100);(OUT/'install-private.json').write_text(json.dumps({'returncode':r.returncode,'stdout':r.stdout[-1000:],'stderr':r.stderr[-1000:],'install_program_sha256':hashlib.sha256(install.encode()).hexdigest()},indent=2));assert r.returncode==0,'Pinned native installation failed'
+  from kali8b_remote_install import install
+  install(sys.modules[__name__],record)
   data={'config':config,'task':{p.name:p.read_text() for p in (OUT/'task').iterdir()}}
   stage="import json,pathlib,sys;r=pathlib.Path('/mnt/aba-scratch/study');r.mkdir();x=json.load(sys.stdin);(r/'task').mkdir();[(r/'task'/k).write_text(v) for k,v in x['task'].items()];(r/'config.json').write_text(json.dumps(x['config'],indent=2)+'\\n');(r/'playground').mkdir();(r/'cli-state').mkdir(mode=0o700)"
   r=ssh('python3 -c '+shlex.quote(stage),payload=json.dumps(data));assert r.returncode==0

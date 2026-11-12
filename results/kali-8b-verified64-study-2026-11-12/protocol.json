@@ -168,5 +168,13 @@
     "fix": "Bounded detachedsystemduserSupervisor,lingeringguestuser,stdin-onlytemporary0600NRPkeyremovedonread,exitreceiptpolling/reconnect;mailboxresponsecachepreventsredispatch;transientSSHdoesnotcancelGPU.",
     "numerical_data_optimizer_inference_scorer_gates_unchanged": true,
     "tests": "test-kali8b-native-supervisor.py passedmockdisconnect,keyremoval,noargcredential,exitreceipt,response-deliveryretry-idempotence."
+  },
+  "installer_disconnect_fix": {
+    "status": "INSTALLER_ALSO_DETACHED_BEFORE_ANY_NATIVE_CANDIDATE",
+    "at_utc": "2026-11-12T22:10:54.072211+00:00",
+    "observed_error": "ForegroundinstallerSSH:readcan'tassignrequestedaddress,Brokenpipe;thisisnotproofinstallationitselferrored.",
+    "fix": "Token-free installer bounded1500s underuser systemdservice,exitreceipt and reconnect polling;never rerun diskformat/install after lostresponse. Native supervisor separatelydetached.",
+    "GPU_submissions": 0,
+    "numerical_protocols_unchanged": true
   }
 }
