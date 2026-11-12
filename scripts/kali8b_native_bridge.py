@@ -1,5 +1,5 @@
 """Host-only native ABA recipe dispatcher and frozen scorer. Maximum one GPU."""
-import hashlib,json,shlex,threading,time
+import base64,gzip,hashlib,json,shlex,threading,time
 from pathlib import Path
 import kali8b_study_jobs as jobs
 ROOT=jobs.ROOT;S=jobs.S;CIDS=('P13','P14')
@@ -45,6 +45,10 @@ class Broker:
   action=req.get('action')
   if action=='health' and set(req)=={'action'}:
    return {'status':'READY','allowed_candidates':list(CIDS),'baseline_candidate':self.baseline['candidate_id'],'max_parallel_GPU':1,'official_TEST_rows':0}
+  if action=='train_data' and set(req)=={'action','manifest_sha256'}:
+   assert req['manifest_sha256']==self.manifest_sha256
+   raw=(self.driver.OUT/'training-encoded-host-private.json').read_bytes();m=json.loads((self.driver.OUT/'task/training_manifest.json').read_text());assert hashlib.sha256(raw).hexdigest()==m['train_encoded_sha256'];rows=json.loads(raw);assert len(rows)==733 and all(r['split']=='train' and r['official_test'] is False for r in rows)
+   return {'status':'TRAIN_ONLY','train_gzip_base64':base64.b64encode(gzip.compress(raw)).decode(),'DEV_rows':0}
   if action=='submit' and set(req)=={'action','candidate_id','manifest_sha256'}:
    cid=req['candidate_id'];assert cid in CIDS and req['manifest_sha256']==self.manifest_sha256
    with self.lock:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Execute only the preregistered 8B recipes; asynchronous GPU queue and training."""
-import argparse,hashlib,json,os,urllib.request
+import argparse,base64,gzip,hashlib,json,os,urllib.request
 from pathlib import Path
 URL='http://127.0.0.1:29847/candidate'
 def call(req):
@@ -9,8 +9,11 @@ def call(req):
  if result.get('status')=='FAILED':raise RuntimeError('Backend failed: '+result.get('error_type','unknown'))
  return result
 def main():
- p=argparse.ArgumentParser();p.add_argument('action',choices=['health','submit','wait','finalize']);p.add_argument('--candidate',choices=['P13','P14']);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('action',choices=['health','export-train','submit','wait','finalize']);p.add_argument('--candidate',choices=['P13','P14']);a=p.parse_args()
  if a.action=='health':result=call({'action':'health'})
+ elif a.action=='export-train':
+  manifest=Path(os.environ['DATA_DIR'])/'training_manifest.json';metadata=json.loads(manifest.read_text());result=call({'action':'train_data','manifest_sha256':hashlib.sha256(manifest.read_bytes()).hexdigest()});raw=gzip.decompress(base64.b64decode(result['train_gzip_base64'],validate=True));assert hashlib.sha256(raw).hexdigest()==metadata['train_encoded_sha256'];rows=json.loads(raw);assert len(rows)==733 and all(r['split']=='train' and r['official_test'] is False for r in rows)
+  out=Path(os.environ['OUTPUT_DIR']);out.mkdir(parents=True,exist_ok=True);(out/'train-encoded.json').write_bytes(raw);result={'status':'TRAIN_DATA_EXPORTED','rows':733,'train_sha256':metadata['train_encoded_sha256'],'DEV_rows':0}
  else:
   assert a.candidate,'Explicit frozen recipe required'
   if a.action=='submit':
