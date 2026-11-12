@@ -2,13 +2,14 @@
 """Freeze native selection, query sealed64 once, and score without further tuning."""
 import base64,gzip,hashlib,json,os,sys,time
 from pathlib import Path
-from kali8b_study_jobs import ROOT,S,k,protocol,labels
+from kali8b_study_jobs import ROOT,S,k,protocol,labels,placement_pool
 from benchkit import native_kali,strict_option_values
 F=ROOT/'data/benchkit/kali-redsage-aba-final64-2026-11-10';OUT=S/'confirmation';NAME='miw113-kali8b-v64-confirm';WORKER=ROOT/'scripts/kali8b_final64_worker.py'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 def freeze():
  implementation=json.loads((S/'confirmation-implementation-lock-private.json').read_text());assert sha(WORKER)==implementation['worker_sha256'] and sha(Path(__file__))==implementation['runner_sha256'],'Confirmation implementation changed after freeze'
  selection=json.loads((S/'native-selection-private.json').read_text());assert selection['status']=='NATIVE_SEARCH_COMPLETE_SELECTION_FROZEN' and not selection['final64_used'];native=json.loads((ROOT/'docs/verification/kali8b-native-v64-20261112/host-private.json').read_text());assert native['native_completed'] and native['status']=='COMPLETE_VERIFIED_NATIVE_8B_STUDY'
+ frozen_native=json.loads((ROOT/'docs/verification/kali8b-native-v64-20261112/native-task-freeze-private.json').read_text());assert sha(S/'placement-amendment-private.json')==frozen_native['placement_amendment_sha256'];assert json.loads((S/'four-arm-consistency-aggregate.json').read_text())['status']=='PASS_REAL_FOUR_ARM_CONSISTENCY'
  manifest=json.loads((F/'freeze-manifest-private.json').read_text());assert sha(F/'inputs-private.json.gz')==manifest['inputs_gzip_sha256'] and sha(F/'references-private.json')==manifest['references_sha256']
  final_ids={r['id'] for r in json.loads(gzip.decompress((F/'inputs-private.json.gz').read_bytes()))['holdout']};assert len(final_ids)==64
  for cid in ('P11','P12','P13','P14'):
@@ -17,11 +18,14 @@ def freeze():
  for cid in cids:
   r=json.loads((S/cid/'run/receipt-private.json').read_text());p=S/cid/'run/adapter-bundle-private/adapter';assert sha(p/'adapter_model.safetensors')==r['adapter_sha256'] and sha(p/'adapter_config.json')==r['adapter_config_sha256'];adapters[cid]={'weights_sha256':r['adapter_sha256'],'config_sha256':r['adapter_config_sha256']}
  anchors=json.loads(gzip.decompress((S/'P11/payload-private.json.gz').read_bytes()))['anchors'];expected=json.loads((S/'P11/run/base-anchor-audit-private.json').read_text());assert len(anchors)==len(expected)==4
- return {'status':'FINAL64_QUERY_FROZEN_AFTER_SELECTION','model_protocol':protocol('P11'),'adapters':adapters,'preselected_candidate':selection['candidate_id'],'native_selected_candidate':selection['native_selected_candidate'],'selection_sha256':sha(S/'native-selection-private.json'),'final64_inputs_gzip_sha256':sha(F/'inputs-private.json.gz'),'references_sha256':sha(F/'references-private.json'),'worker_sha256':sha(WORKER),'anchors':[{k:r[k] for k in ['id','native_messages']} for r in anchors],'expected_anchor_responses':{r['id']:r['response'] for r in expected},'no_further_training':True,'official_TEST_rows':0}
+ return {'status':'FINAL64_QUERY_FROZEN_AFTER_SELECTION','model_protocol':protocol('P11'),'adapters':adapters,'preselected_candidate':selection['candidate_id'],'native_selected_candidate':selection['native_selected_candidate'],'selection_sha256':sha(S/'native-selection-private.json'),'final64_inputs_gzip_sha256':sha(F/'inputs-private.json.gz'),'references_sha256':sha(F/'references-private.json'),'worker_sha256':sha(WORKER),'anchors':[{k:r[k] for k in ['id','native_messages']} for r in anchors],'expected_anchor_responses':{r['id']:r['response'] for r in expected},'no_further_training':True,'placement_policy':placement_pool(),'official_TEST_rows':0}
 def objects(cfg):
  p=cfg['model_protocol'];cm={'apiVersion':'v1','kind':'ConfigMap','metadata':{'name':NAME,'labels':labels('P11')},'data':{'worker.py':WORKER.read_text(),'config.json':json.dumps(cfg,indent=2)+'\n'}};secret={'apiVersion':'v1','kind':'Secret','metadata':{'name':NAME+'-input','labels':labels('P11')},'type':'Opaque','data':{'inputs.json.gz':base64.b64encode((F/'inputs-private.json.gz').read_bytes()).decode()}}
  node=json.loads((S/'hardware-lock-private.json').read_text())['hostname_label'];resources=p['resource_request']
  pod={'restartPolicy':'Never','activeDeadlineSeconds':7200,'automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/hostname':node},'containers':[{'name':'evaluate','image':json.loads((ROOT/'configs/gpu-runtime-image.lock.json').read_text())['image'],'command':['python','-u','/input/worker.py'],'env':[{'name':'HF_HUB_OFFLINE','value':'1'},{'name':'OMP_NUM_THREADS','value':'2'},{'name':'CUBLAS_WORKSPACE_CONFIG','value':':4096:8'}],'resources':{'requests':resources,'limits':resources},'volumeMounts':[{'name':'input','mountPath':'/input','readOnly':True},{'name':'cache','mountPath':'/cache','readOnly':True},{'name':'scratch','mountPath':'/scratch'}]}],'volumes':[{'name':'input','projected':{'defaultMode':256,'sources':[{'configMap':{'name':NAME}},{'secret':{'name':NAME+'-input'}}]}},{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache','readOnly':True}},{'name':'scratch','emptyDir':{'sizeLimit':'24Gi'}}]}
+ pool=cfg.get('placement_policy')
+ if pool:
+  pod['nodeSelector']={'kubernetes.io/arch':'amd64'};pod['affinity']={'nodeAffinity':{'requiredDuringSchedulingIgnoredDuringExecution':{'nodeSelectorTerms':[{'matchExpressions':[{'key':'kubernetes.io/hostname','operator':'In','values':pool['allowed_hostnames']},{'key':'nvidia.com/gpu.product','operator':'In','values':[pool['GPU_product']]},{'key':'nvidia.com/cuda.driver-version.full','operator':'In','values':[pool['driver_full']]}]}]}}}
  job={'apiVersion':'batch/v1','kind':'Job','metadata':{'name':NAME,'labels':labels('P11')},'spec':{'activeDeadlineSeconds':21600,'backoffLimit':0,'ttlSecondsAfterFinished':3600,'template':{'metadata':{'labels':labels('P11')},'spec':pod}}};return cm,secret,job
 def score(cfg,outputs):
  refs={r['custom_id']:r for r in json.loads((F/'references-private.json').read_text())};assert len(refs)==64;scorer=native_kali();summary={};detail={}

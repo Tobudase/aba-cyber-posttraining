@@ -31,9 +31,10 @@ def freeze_baseline():
 class Broker:
  def __init__(self,driver):
   self.driver=driver;self.baseline=freeze_baseline();self.lock=threading.Lock();self.states={};self.threads=[];self.started=[];self.current=None
-  self.manifest_sha256=sha(driver.OUT/'task/training_manifest.json')
+  self.manifest_sha256=sha(driver.OUT/'task/training_manifest.json');self.placement_sha256=json.loads((driver.OUT/'task/training_manifest.json').read_text()).get('placement_amendment_sha256')
  def train(self,cid):
   try:
+   if self.placement_sha256:assert sha(S/'placement-amendment-private.json')==self.placement_sha256,'Placement addendum changed after native freeze'
    jobs.submit(cid);host=jobs.watch(cid,seconds=3*3600)
    assert host['status']=='COLLECTED',host.get('error','Training did not complete')
    r=json.loads((S/cid/'run/receipt-private.json').read_text());assert r['optimizer_steps']==r['nonzero_gradient_steps']==733 and r['changed_tensors']>0

@@ -11,8 +11,12 @@ def main():
   if host['status']=='COLLECTED':
    receipt=json.loads((run/'receipt-private.json').read_text());export=json.loads((run/'adapter-export-private.json').read_text());assert receipt['protocol_sha256']==entry['protocol_sha256'] and receipt['optimizer_steps']==receipt['nonzero_gradient_steps']==733 and receipt['supervised_token_presentations']==17439
    assert sha(run/'adapter-bundle-private/adapter/adapter_model.safetensors')==export['adapter_sha256']==receipt['adapter_sha256'];score=json.loads((run/'scores-private.json').read_text());assert not score['sealed_final64_used'] and score['official_TEST_rows']==0
-   entry.update(score=score,receipt={k:receipt[k] for k in ['status','run_kind','initial_lora_sha256','adapter_sha256','adapter_config_sha256','optimizer_steps','nonzero_gradient_steps','changed_tensors','supervised_token_presentations','adapter_reload_max_logit_delta','GPU','GPU_count','deterministic_algorithms','attention_backend','wall_seconds','peak_cuda_allocated_bytes','quality_counts']},adapter_tensor_count=export['tensor_count'],cleanup_errors=host['cleanup_errors'])
+   entry.update(node_name=host.get('node_name'),score=score,receipt={k:receipt[k] for k in ['status','run_kind','initial_lora_sha256','adapter_sha256','adapter_config_sha256','optimizer_steps','nonzero_gradient_steps','changed_tensors','supervised_token_presentations','adapter_reload_max_logit_delta','GPU','GPU_count','deterministic_algorithms','attention_backend','wall_seconds','peak_cuda_allocated_bytes','quality_counts']},adapter_tensor_count=export['tensor_count'],cleanup_errors=host['cleanup_errors'])
   result['arms'][cid]=entry
+ placement=s/'placement-amendment-private.json'
+ if placement.exists():result['placement_amendment']=json.loads(placement.read_text());result['limitations'].append('P11/P12 originalhost;ABA/confirmationsameGPUproduct+advertiseddriverfivehostpoolafterzero-updatequeuecancel. Reportactualhosts;notallonephysicalhost.')
+ consistency=s/'four-arm-consistency-aggregate.json'
+ if consistency.exists():result['consistency']=json.loads(consistency.read_text())
  complete=all(x['status']=='COLLECTED' for x in result['arms'].values());selection=s/'native-selection-private.json'
  if selection.exists():
   selected=json.loads(selection.read_text());result['selection']={k:selected[k] for k in ['status','candidate_id','pointer','native_selected_candidate','native_selected_pointer','native_run_id','DEV_score','native_selected_DEV_score','all_available_scores','deliverable_sha256','native_deliverable_candidate','retention_policy','final64_used','official_TEST_rows']}
@@ -22,6 +26,7 @@ def main():
  if (confirmation/'scores-private.json').exists():
   result['confirmation']=json.loads((confirmation/'scores-private.json').read_text());result['confirmation_receipt']=json.loads((confirmation/'receipt-private.json').read_text());ch=json.loads((confirmation/'host-private.json').read_text());result['confirmation_cleanup_errors']=ch['cleanup_errors'];complete=complete and ch['status']=='COMPLETE' and not ch['cleanup_errors']
  else:complete=False
+ complete=complete and result.get('consistency',{}).get('status')=='PASS_REAL_FOUR_ARM_CONSISTENCY'
  result['research_experiment_complete']=complete
  if complete:
   result['status']='COMPLETE_BOUNDED_8B_STUDY';result['training_GPU_worker_hours']=sum(v['receipt']['wall_seconds'] for v in result['arms'].values())/3600;result['confirmation_GPU_worker_hours']=result['confirmation_receipt']['wall_seconds']/3600;result['cost_scope']='Worker elapsed time includes model staging,training and inference;excludes queue wait,CPU export and controllerVM. Not a GPU FLOP or billing measurement.'

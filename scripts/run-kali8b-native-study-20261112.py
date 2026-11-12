@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r6';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r7';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
@@ -102,6 +102,8 @@ def main():
   available=[(BROKER.baseline['candidate_id'],BROKER.baseline['score'])]+candidates
   retained_cid,retained_score=max(available,key=lambda a:a[1])
   retained_pointer=BROKER.baseline['pointer'] if retained_cid==BROKER.baseline['candidate_id'] else BROKER.states[retained_cid]['pointer']
+  assert hashlib.sha256((ROOT/'scripts/check-kali8b-study-consistency.py').read_bytes()).hexdigest()==freeze['runtime_source_sha256']['check-kali8b-study-consistency.py'];assert hashlib.sha256((S/'placement-amendment-private.json').read_bytes()).hexdigest()==freeze['placement_amendment_sha256']
+  consistency=subprocess.run([sys.executable,str(ROOT/'scripts/check-kali8b-study-consistency.py'),'--study',str(S),'--output',str(S/'four-arm-consistency-aggregate.json')],capture_output=True,text=True);assert consistency.returncode==0,'Four-arm numerical consistency gate failed;sealed64 must remain untouched'
   selection={'status':'NATIVE_SEARCH_COMPLETE_SELECTION_FROZEN','candidate_id':retained_cid,'pointer':retained_pointer,'native_selected_candidate':cid,'native_selected_pointer':p,'native_run_id':j['run_id'],'DEV_score':retained_score,'native_selected_DEV_score':expected['score'],'all_available_scores':available,'deliverable_sha256':deliveries,'native_deliverable_candidate':cid,'retention_policy':'Native winner competes with preregistered fixed champion/E0 on DEV;ties retain the fixed champion. Never choose using final64.','final64_used':False,'official_TEST_rows':0}
   (S/'native-selection-private.json').write_text(json.dumps(selection,indent=2)+'\n');record.update(status='COMPLETE_VERIFIED_NATIVE_8B_STUDY',native_completed=True,native_selected_candidate=cid,retained_candidate=retained_cid,native_run_id=j['run_id']);save(record)
  except BaseException as e:

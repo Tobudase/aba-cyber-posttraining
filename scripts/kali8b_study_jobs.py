@@ -18,12 +18,21 @@ def labels(cid):return {'app.kubernetes.io/managed-by':'miw113','app.kubernetes.
 def protocol(cid):
  d,run,name=paths(cid);p=json.loads((d/'protocol-private.json').read_text());f=json.loads((S/'protocol-freeze-private.json').read_text());assert sha(d/'protocol-private.json')==f['protocol_sha256'][cid];assert sha(WORKER)==p['worker_sha256'] and sha(RECIPE)==p['recipe_sha256'];assert sha(d/'payload-private.json.gz')==p['payload_gzip_sha256'];return p
 
+def placement_pool():
+ p=S/'placement-amendment-private.json'
+ if not p.exists():return None
+ x=json.loads(p.read_text());assert x['status']=='FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES' and x['GPU_product']=='NVIDIA-A100-SXM4-80GB' and x['driver_full']=='615.71.09' and len(x['allowed_hostnames'])==5
+ return x
+
 def objects(cid):
  d,run,name=paths(cid);p=protocol(cid);data={'worker.py':WORKER.read_text(),'kali_verified64_sft_recipe.py':RECIPE.read_text(),'protocol.json':(d/'protocol-private.json').read_text()}
  products={'NVIDIA L40':'NVIDIA-L40','NVIDIA L40S':'NVIDIA-L40S','NVIDIA A100-SXM4-80GB':'NVIDIA-A100-SXM4-80GB','NVIDIA A100 80GB PCIe':'NVIDIA-A100-80GB-PCIe','NVIDIA A100-PCIE-40GB':'NVIDIA-A100-PCIE-40GB'}
  expr=[{'key':'nvidia.com/gpu.product','operator':'In','values':[products[v] for v in p['allowed_GPU_models']]},{'key':'topology.kubernetes.io/region','operator':'In','values':p.get('hardware_regions',['us-west'])}]
  if cid!='P11':
-  control=S/'P11/run';c=json.loads((control/'host-private.json').read_text());assert c['status']=='COLLECTED';h=json.loads((S/'hardware-lock-private.json').read_text());expr.append({'key':'kubernetes.io/hostname','operator':'In','values':[h['hostname_label']]})
+  control=S/'P11/run';c=json.loads((control/'host-private.json').read_text());assert c['status']=='COLLECTED';h=json.loads((S/'hardware-lock-private.json').read_text());pool=placement_pool() if cid in {'P13','P14'} else None
+  if pool:
+   expr[0]['values']=[pool['GPU_product']];expr.append({'key':'kubernetes.io/hostname','operator':'In','values':pool['allowed_hostnames']});expr.append({'key':'nvidia.com/cuda.driver-version.full','operator':'In','values':[pool['driver_full']]})
+  else:expr.append({'key':'kubernetes.io/hostname','operator':'In','values':[h['hostname_label']]})
   data['control-base-reference.json']=json.dumps({r['id']:r['response'] for r in json.loads((control/'base-predictions-private.json').read_text())})
  cm={'apiVersion':'v1','kind':'ConfigMap','metadata':{'name':name,'labels':labels(cid)},'data':data}
  secret={'apiVersion':'v1','kind':'Secret','metadata':{'name':name+'-input','labels':labels(cid)},'type':'Opaque','data':{'payload.json.gz':base64.b64encode((d/'payload-private.json.gz').read_bytes()).decode()}}
@@ -109,7 +118,7 @@ def check_once(cid):
  finally:delete_training(cid,record);(run/'host-private.json').write_text(json.dumps(record,indent=2)+'\n')
  if record['status']=='TRAINING_AND_INFERENCE_COLLECTED':
   try:
-   export_adapter(cid,json.loads((S/'hardware-lock-private.json').read_text())['hostname_label']);score=score_arm(cid,run);record.update(status='COLLECTED',optimizer_steps=733,native_delta=score['native_delta'],passes_all_gates=score['passes_all_gates'])
+   export_adapter(cid,record['node_name']);score=score_arm(cid,run);record.update(status='COLLECTED',optimizer_steps=733,native_delta=score['native_delta'],passes_all_gates=score['passes_all_gates'])
   except BaseException as e:record.update(status='FAILED',error_type=type(e).__name__,error=str(e)[:300])
  (run/'host-private.json').write_text(json.dumps(record,indent=2)+'\n');return True,record
 

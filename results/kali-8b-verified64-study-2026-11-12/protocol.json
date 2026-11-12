@@ -57,7 +57,7 @@
     "maximum_panel_native_drop": 0.02,
     "maximum_untargeted_native_drop": 0.02
   },
-  "hardware_policy": "First scheduled P11 us-west/us-central A100 (40/80GB) hostname pins allotherarms;ordinarypriority;oneGPUatonce;freshP11 base predictions mustmatch beforetraining.",
+  "hardware_policy": "P11/P12 originalhost. Resource-only addendum afterfixedcontroloutputs,beforeanyABAoptimizerupdate: P13/P14/confirmation5SDSChostswithsameA100-SXM4-80GBproductandadvertiseddriver615.71.09. FreshbaseDEV128mustmatchexactly;allfourarmconsistencygatebeforeconfirmation. Ordinarypriority,oneGPU.",
   "independent_confirmation": {
     "rows": 64,
     "arms": [
@@ -121,13 +121,16 @@
     "status": "CONFIRMATION_IMPLEMENTATION_FROZEN_BEFORE_OUTPUTS",
     "created_at_utc": "2026-11-12T18:27:54.180407+00:00",
     "worker_sha256": "6ca5f77ea82a7bedb1215742f6e9dda19e166de9d771f63f288fceadc69ff7c0",
-    "runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94",
+    "runner_sha256": "4cdcbf5480466fce620e674ec38800c57586a2857f4ac9232b7452ceab205047",
     "references_sha256": "6593bbcd7001928c538abb7fd4037bd91cc3f27af9ccc119b1b440cacd65d20a",
     "query_inputs_sha256": "0ad15f884e892164d69705665bdfab6f242a371898d2325e4370647466167b84",
     "model_outputs": 0,
     "official_TEST_rows": 0,
     "implementation_amendment_at_utc": "2026-11-12T18:40:40.573351+00:00",
-    "amendment_reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected."
+    "amendment_reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected.",
+    "resource_amendment_at_utc": "2026-11-12T23:42:41.705175+00:00",
+    "resource_amendment_reason": "Finaleval uses same exact-product/advertiseddriver fivehostpool,notonepinnedhost. worker/data/scoring/selection unchanged;final64still0queries.",
+    "prior_runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94"
   },
   "selection_implementation_clarification": {
     "status": "SOURCE_DERIVED_IMPLEMENTATION_CORRECTION_BEFORE_CANDIDATE_RESULTS",
@@ -254,5 +257,70 @@
     "changed": "continuation control flow only;confirmation worker/runner,selection,scoring unchanged",
     "confirmation_queries": 0,
     "continuation_sha256": "a8040811231438d648a679377056e1f04709d6aecaddaa6b4758c4ae4cd89754"
+  },
+  "original_hardware_policy": "First scheduled P11 us-west/us-central A100 (40/80GB) hostname pins allotherarms;ordinarypriority;oneGPUatonce;freshP11 base predictions mustmatch beforetraining.",
+  "placement_amendment": {
+    "status": "FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES",
+    "at_utc": "2026-11-12T23:42:41.705175+00:00",
+    "reason": "Single pinned A100 host had no freecard;P13 stayedPendingandwasoperatorcancelledbeforeanyGPUallocationoroptimizerupdate. ExpandordinarypoolratherthanchangeSFTrecipe.",
+    "original_host": "node-1-4.sdsc.optiputer.net",
+    "allowed_hostnames": [
+      "node-1-1.sdsc.optiputer.net",
+      "node-1-3.sdsc.optiputer.net",
+      "node-1-4.sdsc.optiputer.net",
+      "node-2-2.sdsc.optiputer.net",
+      "node-2-3.sdsc.optiputer.net"
+    ],
+    "GPU_product": "NVIDIA-A100-SXM4-80GB",
+    "driver_label": "nvidia.com/cuda.driver-version.full",
+    "driver_full": "615.71.09",
+    "regions": [
+      "us-west"
+    ],
+    "resource": "nvidia.com/a100",
+    "GPUs_per_job": 1,
+    "parallel_GPU_limit": 1,
+    "priority": "ordinary unchanged,no additionaltolerations",
+    "fixed_control_results_already_observed": true,
+    "P13_P14_optimizer_updates_before_amendment": 0,
+    "cancelled_job_uid": "cae3ce26-934f-4551-81b6-fa6f35402c0c",
+    "cancelled_pod_uid": "2a49967b-c443-4caf-aca3-0397384e7b59",
+    "new_control_source_scope": "P11/P12 remain originalhost;P13/P14 mayuseotherhostswithsameGPUproductandadvertiseddriver. Notallonephysicalhost.",
+    "numeric_protocols_unchanged": {
+      "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+    },
+    "unchanged": [
+      "base weights/tokenizer",
+      "TRAINmembership/orderseeds/733updates/17439supervisedtokens",
+      "LoRA/optimizer settings",
+      "greedy generation configuration",
+      "native/strict score andretentiongates",
+      "final64 input/reference hashes"
+    ],
+    "required_checks": [
+      "freshE0 DEV128 exactbyteagreementwithP11 beforeanytraining",
+      "seed42 initialLoRAbyteagreement",
+      "P12/P14 first preupdate loss/gradient/token record exactagreement",
+      "allfouractualtrainingreceipts/modelSHA/reloadchecks",
+      "completefour-armconsistencybeforeselection/final64"
+    ],
+    "official_TEST_rows": 0,
+    "final64_queries": 0,
+    "limit": "Resource amendment afterfixedcontroloutputs;reportcrosshostcomparison. Exactbase/firstgradientchecksarenecessaryevidence,notwhole-runreplicationor statisticalstabilityguarantee."
+  },
+  "confirmation_implementation_before_placement": {
+    "status": "CONFIRMATION_IMPLEMENTATION_FROZEN_BEFORE_OUTPUTS",
+    "created_at_utc": "2026-11-12T18:27:54.180407+00:00",
+    "worker_sha256": "6ca5f77ea82a7bedb1215742f6e9dda19e166de9d771f63f288fceadc69ff7c0",
+    "runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94",
+    "references_sha256": "6593bbcd7001928c538abb7fd4037bd91cc3f27af9ccc119b1b440cacd65d20a",
+    "query_inputs_sha256": "0ad15f884e892164d69705665bdfab6f242a371898d2325e4370647466167b84",
+    "model_outputs": 0,
+    "official_TEST_rows": 0,
+    "implementation_amendment_at_utc": "2026-11-12T18:40:40.573351+00:00",
+    "amendment_reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected."
   }
 }

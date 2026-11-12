@@ -1,6 +1,6 @@
 {
   "status": "IN_PROGRESS",
-  "updated_at_utc": "2026-11-12T23:02:47.005475+00:00",
+  "updated_at_utc": "2026-11-12T23:46:49.485616+00:00",
   "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
   "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "study_protocol_freeze_sha256": "d393a2ac89ca98b491dcfa2d9aad24f01eca1ab2f3aaf7cd81305c79d29c54e2",
@@ -11,6 +11,7 @@
     "P11": {
       "status": "COLLECTED",
       "protocol_sha256": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "node_name": "node-1-4.sdsc.optiputer.net",
       "score": {
         "status": "FROZEN_INTERNAL_DEV_STUDY_SCORE",
         "candidate_id": "P11",
@@ -123,6 +124,7 @@
     "P12": {
       "status": "COLLECTED",
       "protocol_sha256": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "node_name": "node-1-4.sdsc.optiputer.net",
       "score": {
         "status": "FROZEN_INTERNAL_DEV_STUDY_SCORE",
         "candidate_id": "P12",
@@ -233,7 +235,7 @@
       "cleanup_errors": []
     },
     "P13": {
-      "status": "Pending",
+      "status": "NOT_STARTED",
       "protocol_sha256": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4"
     },
     "P14": {
@@ -247,8 +249,61 @@
     "Replacement matches supervised tokens and updates;prompt tokens and FLOPs differ.",
     "ABA has two recipe candidates;each fixed control has one. No equal-search-budget superiority claim.",
     "Final64 is previously unqueried TRAIN-derived publisher silver,not expert gold or source-separated official TEST.",
-    "A passing internal gate alone is not model release or leaderboard validation."
+    "A passing internal gate alone is not model release or leaderboard validation.",
+    "P11/P12 originalhost;ABA/confirmationsameGPUproduct+advertiseddriverfivehostpoolafterzero-updatequeuecancel. Reportactualhosts;notallonephysicalhost."
   ],
+  "placement_amendment": {
+    "status": "FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES",
+    "at_utc": "2026-11-12T23:42:41.705175+00:00",
+    "reason": "Single pinned A100 host had no freecard;P13 stayedPendingandwasoperatorcancelledbeforeanyGPUallocationoroptimizerupdate. ExpandordinarypoolratherthanchangeSFTrecipe.",
+    "original_host": "node-1-4.sdsc.optiputer.net",
+    "allowed_hostnames": [
+      "node-1-1.sdsc.optiputer.net",
+      "node-1-3.sdsc.optiputer.net",
+      "node-1-4.sdsc.optiputer.net",
+      "node-2-2.sdsc.optiputer.net",
+      "node-2-3.sdsc.optiputer.net"
+    ],
+    "GPU_product": "NVIDIA-A100-SXM4-80GB",
+    "driver_label": "nvidia.com/cuda.driver-version.full",
+    "driver_full": "615.71.09",
+    "regions": [
+      "us-west"
+    ],
+    "resource": "nvidia.com/a100",
+    "GPUs_per_job": 1,
+    "parallel_GPU_limit": 1,
+    "priority": "ordinary unchanged,no additionaltolerations",
+    "fixed_control_results_already_observed": true,
+    "P13_P14_optimizer_updates_before_amendment": 0,
+    "cancelled_job_uid": "cae3ce26-934f-4551-81b6-fa6f35402c0c",
+    "cancelled_pod_uid": "2a49967b-c443-4caf-aca3-0397384e7b59",
+    "new_control_source_scope": "P11/P12 remain originalhost;P13/P14 mayuseotherhostswithsameGPUproductandadvertiseddriver. Notallonephysicalhost.",
+    "numeric_protocols_unchanged": {
+      "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+    },
+    "unchanged": [
+      "base weights/tokenizer",
+      "TRAINmembership/orderseeds/733updates/17439supervisedtokens",
+      "LoRA/optimizer settings",
+      "greedy generation configuration",
+      "native/strict score andretentiongates",
+      "final64 input/reference hashes"
+    ],
+    "required_checks": [
+      "freshE0 DEV128 exactbyteagreementwithP11 beforeanytraining",
+      "seed42 initialLoRAbyteagreement",
+      "P12/P14 first preupdate loss/gradient/token record exactagreement",
+      "allfouractualtrainingreceipts/modelSHA/reloadchecks",
+      "completefour-armconsistencybeforeselection/final64"
+    ],
+    "official_TEST_rows": 0,
+    "final64_queries": 0,
+    "limit": "Resource amendment afterfixedcontroloutputs;reportcrosshostcomparison. Exactbase/firstgradientchecksarenecessaryevidence,notwhole-runreplicationor statisticalstabilityguarantee."
+  },
   "research_experiment_complete": false,
   "matched_replacement_effect_P12_minus_P11": {
     "native_mean_delta": -0.021784812409812337,
