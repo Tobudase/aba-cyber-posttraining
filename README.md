@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 12, 2026 — P10 label disposition frozen
+
+A bounded CPU-only check identified the pinned runtime as util-linux 2.37.2 and tested `hardlink --dry-run --exclude` against harmless duplicate files. Of 16 AI-authored source-silver rows, **2** now have local-runtime behavioral fixture support and are eligible only for exploratory training; **14** remain quarantined for ambiguous task scope, missing behavioral evidence, unsupported options, semantic mismatch, or an absent tool. Two related rows are too narrow for a useful GPU comparison, so no new model was trained or promoted. Official TEST remains untouched. [Chinese audit](docs/KALI_P10_SEMANTIC_QA_2026-11-12_ZH.md) · [Aggregate](results/kali-p10-semantic-qa-2026-11-12/summary.json).
+
 ## November 11, 2026 — ABA controller recovery check
 
 The persistent ABA VM is blocked by a cluster storage-controller error. A bounded, PVC-free Linux VM successfully installed the pinned ABA source, completed its owned-tool setup, and passed the systemd/cgroup and bubblewrap prerequisites. A separate pinned-image probe copied and checksum-verified a harmless artifact before VM deletion; all temporary resources were cleaned. These are **environment checks**, with no GPU training, model output, or official TEST use. The next run still needs working model-control and GPU-worker connections plus durable collection of full-size artifacts. I also confirmed in the upstream KaliBench verifier that `PASS_EXECUTED` certifies successful command exit, not semantic correctness, so the P10 source-silver labels remain quarantined. [Recovery note](docs/ABA_CONTROLLER_RECOVERY_2026-11-11.md).

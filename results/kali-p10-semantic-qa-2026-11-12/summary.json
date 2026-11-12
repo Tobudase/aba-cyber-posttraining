@@ -1,0 +1,23 @@
+{
+  "status": "P10_SEMANTIC_QA_FROZEN",
+  "source_sha256": "6a4d03a2bfb4926788c1185e37971dce1ac4551efaa60aeaa6d30da23c11e2b9",
+  "runtime_util_linux_version": "2.37.2",
+  "counts": {
+    "LOCAL_RUNTIME_FIXTURE_VERIFIED_SILVER": 2,
+    "QUARANTINE_AMBIGUOUS_SCOPE": 2,
+    "QUARANTINE_NO_BEHAVIORAL_ORACLE": 4,
+    "QUARANTINE_RUNTIME_UNSUPPORTED": 4,
+    "QUARANTINE_SEMANTIC_AND_RUNTIME": 2,
+    "QUARANTINE_TARGET_TOOL_ABSENT": 2
+  },
+  "exploratory_train_eligible": 2,
+  "official_TEST_rows": 0,
+  "gpu_jobs": 0,
+  "limitations": [
+    "The two admitted rows are local-runtime fixture-verified silver, not independent expert gold.",
+    "Two closely related hardlink rows are too small and correlated for a standalone GPU comparison.",
+    "Manual pages may describe newer util-linux releases than the pinned 2.37.2 runtime.",
+    "No new candidate was trained or scored; DEV128 and sealed final64 were not queried."
+  ],
+  "review_method": "Manual-source review plus a bounded CPU-only runtime and safe duplicate-file fixture; no independent expert signoff."
+}
