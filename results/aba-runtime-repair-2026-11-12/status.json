@@ -1,0 +1,22 @@
+{
+  "status": "PARTIAL_NATIVE_PIPELINE_NOT_COMPLETE",
+  "source_commit": "c8bd734cafd5a7cd609efb5f561594bde4107d5b",
+  "patch": {
+    "file": "engine/builtin/nb_tree/search.py",
+    "before_sha256": "89c3c6fe5efdda3ee8af66e6f943e2f863618233ef1ae5844dc84100e8b7f5b0",
+    "after_sha256": "3b1cf04008fc0ee01ee4329fc90a527cbdf5326196497b5dd1c007d6695628d6",
+    "change": "Remove business request from zero-request Composite action call; no guards changed."
+  },
+  "baseline_verifier_passed": true,
+  "baseline_verifier_reason": "score program accepted: baseline score -4.5371711105827135",
+  "model_tool_roundtrip_passed": true,
+  "source_patch_contract_check_passed": true,
+  "artifact_64MiB_roundtrip_match": true,
+  "completed_attempt_cleanup_errors": 0,
+  "latest_completed_attempt": "V6 failed on Designer time budget before GPU dispatch",
+  "next_attempt": "V7 in progress; one fixed synthetic CUDA candidate, larger finite controller budgets",
+  "separate_GPU_smoke_passed": true,
+  "single_native_GPU_run_completed": false,
+  "new_LLM_training": false,
+  "official_TEST_rows": 0
+}

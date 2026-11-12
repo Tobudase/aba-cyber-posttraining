@@ -1,0 +1,16 @@
+{
+  "status": "TINY_CUDA_WORKER_PASS",
+  "gpu": "NVIDIA GeForce RTX 2080 Ti",
+  "optimizer_steps": 32,
+  "initial_train_nll": 2.079441547393799,
+  "final_train_nll": 1.4562575817108154,
+  "reload_max_abs_diff": 0.0,
+  "artifact_sha256": "bb0f454d150b73e70939fb46d74587edabaffa884cac0355f56afe7f7d8ea5e9",
+  "weights_l1_change": 10.570847511291504,
+  "official_TEST_rows": 0,
+  "scope": "Synthetic engineering smoke only; no LLM or KaliBench model trained.",
+  "local_recomputed_train_nll": 1.456257585873423,
+  "local_rescore_match": true,
+  "cleanup_errors": 0,
+  "invoked_by_native_ABA": false
+}

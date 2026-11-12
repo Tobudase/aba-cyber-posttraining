@@ -11,6 +11,8 @@
 
 所有文件操作都在自动清理的临时目录中进行。验证任务没有申请 GPU；对应 Job 和 ConfigMap 清理错误为 0。每种任务包含两个表面变体，因此 **64 行不能当作 64 个独立任务类型**。这些仍是 AI 自编、特定运行环境下验证的银标，未经独立专家复核。
 
+检查强度并非全部相同：`dnstwist` 的 insertion/replacement 两类检查每个输出是否符合指定插入/替换规则，并用错误 fuzzer 做反例，未独立枚举其完整键盘邻接映射；其余五类使用预期变换集合核对。PyInstaller 检查的是生成 spec 的配置，因为题目要求生成 spec；没有构建或运行可执行程序。通过检查不等于对所有环境和边界情况的完整证明。
+
 ## 数据与 SFT 格式核查
 
 - 与发布方 3,504 条 TRAIN 比较后，归一化题目、完整命令均无完全重复；新数据内部也无这两类重复。这个检查不证明完全不存在语义重叠。
@@ -36,5 +38,7 @@ python scripts/verify-kali-behavior-train-20261112.py --runtime-receipt /tmp/fix
 ## 使用范围
 
 这是下一轮数据干预对照可用的探索性 TRAIN 补充。工具选择受到已暴露 DEV 错误分析的影响，不能用同一 DEV 宣称独立泛化；也不能仅从这 64 条数据推断全部退化已修复。下一轮仍需冻结等预算 SFT 对照和 ABA 候选规则，再用封存数据确认。当前没有新模型分数，E0 仍是正式默认模型。
+
+事后按工具与选项组核对，这批数据新增覆盖先前 **42 个不同缺失工具选项组中的 6 个**，涉及上述四个工具。[覆盖统计](../results/kali-behavior-train-2026-11-12/coverage-aggregate.json)。这说明它是一批可验证的小规模干预数据，尚未补齐其余 36 个选项组；选项重合也不等于完整任务语义覆盖或模型分数提升。
 
 文档依据：[util-linux 固定版本](https://github.com/util-linux/util-linux/tree/v2.37.2/misc-utils)、[virtualenv CLI](https://virtualenv.pypa.io/en/stable/reference/cli.html)、[dnstwist 固定版本](https://github.com/elceef/dnstwist/tree/20240812)、[PyInstaller 6.10.0](https://pyinstaller.org/en/v6.10.0/man/pyi-makespec.html)。本地版本的执行证据优先于新版网页中的可选参数。

@@ -1,0 +1,14 @@
+{
+  "missing_reference_group_occurrences": 43,
+  "newly_covered_group_occurrences": 6,
+  "missing_unique_tool_option_groups": 42,
+  "newly_covered_unique_tool_option_groups": 6,
+  "covered_tools": [
+    "dnstwist",
+    "hardlink",
+    "pyi-makespec",
+    "virtualenv"
+  ],
+  "interpretation": "Posthoc tool/flag overlap on exposed DEV only; not model gain or semantic coverage of whole tasks.",
+  "official_TEST_rows": 0
+}

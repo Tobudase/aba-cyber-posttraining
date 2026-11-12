@@ -1,0 +1,6 @@
+--- a/engine/builtin/nb_tree/search.py
++++ b/engine/builtin/nb_tree/search.py
+@@ -193,3 +193,2 @@
+                         candidate.run,
+-                        "Start the assigned work.",
+                         upstream=(proposal.producer,),
