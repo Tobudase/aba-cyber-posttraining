@@ -73,7 +73,7 @@ def main():
   stage="import json,pathlib,sys;r=pathlib.Path('/mnt/aba-scratch/study');r.mkdir();x=json.load(sys.stdin);(r/'task').mkdir();[(r/'task'/k).write_text(v) for k,v in x['task'].items()];(r/'config.json').write_text(json.dumps(x['config'],indent=2)+'\\n');(r/'playground').mkdir();(r/'cli-state').mkdir(mode=0o700)"
   r=ssh('python3 -c '+shlex.quote(stage),payload=json.dumps(data));assert r.returncode==0
   for src,dest in [('nrp_anthropic_transport.py','transport.py'),('kali8b_native_mailbox.py','mailbox_server.py')]:
-   r=ssh('cat > '+REMOTE+'/'+dest,payload=(ROOT/'scripts'/src).read_text());assert r.returncode==0
+   r=ssh('mkdir -p /mnt/aba-scratch/.tools; cat > '+REMOTE+'/'+dest,payload=(ROOT/'scripts'/src).read_text());assert r.returncode==0
   t=threading.Thread(target=bridge,args=(sys.modules[__name__],stop),daemon=True);t.start()
   launch='''import os,sys,subprocess,json,pathlib,threading
 sys.path.insert(0,'/mnt/aba-scratch/study');from transport import server

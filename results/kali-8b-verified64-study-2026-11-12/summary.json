@@ -1,6 +1,6 @@
 {
   "status": "IN_PROGRESS",
-  "updated_at_utc": "2026-11-12T18:57:07.912015+00:00",
+  "updated_at_utc": "2026-11-12T19:30:40.422914+00:00",
   "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
   "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "study_protocol_freeze_sha256": "d393a2ac89ca98b491dcfa2d9aad24f01eca1ab2f3aaf7cd81305c79d29c54e2",
@@ -121,8 +121,116 @@
       "cleanup_errors": []
     },
     "P12": {
-      "status": "Pending",
-      "protocol_sha256": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f"
+      "status": "COLLECTED",
+      "protocol_sha256": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "score": {
+        "status": "FROZEN_INTERNAL_DEV_STUDY_SCORE",
+        "candidate_id": "P12",
+        "summary": {
+          "base": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7559337797619048,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7562872023809524,
+              "strict_correct": 27,
+              "format_errors": 3,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7555803571428571,
+              "strict_correct": 21,
+              "format_errors": 2,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7527969790066564,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            }
+          },
+          "candidate": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7454447751322751,
+              "strict_correct": 51,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7752893518518519,
+              "strict_correct": 30,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7156001984126984,
+              "strict_correct": 21,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7460018774534903,
+              "strict_correct": 51,
+              "format_errors": 0,
+              "truncations": 0
+            }
+          }
+        },
+        "native_delta": -0.01048900462962965,
+        "selection_gates": {
+          "native_gain": false,
+          "strict_retained": true,
+          "format_retained": true,
+          "truncation_retained": true,
+          "DEV_panel_retention": false,
+          "untargeted_retention": true
+        },
+        "passes_all_gates": false,
+        "ABA_score": -1.0,
+        "paired_strict": {
+          "gained": 8,
+          "lost": 5
+        },
+        "official_TEST_rows": 0,
+        "sealed_final64_used": false,
+        "scope": "Exposed publisher-TRAIN DEV diagnosis; not independent or official score."
+      },
+      "receipt": {
+        "status": "COMPLETE_8B_STUDY_ARM",
+        "run_kind": "fixed_verified64_SFT",
+        "initial_lora_sha256": "e12720c1bc125d8ef122643e6c54adf1798aac1b42612b7f146da319db119cd2",
+        "adapter_sha256": "37ac0238592816173471b052e4dafe512a94ffaadef2336628af6eae89529fcd",
+        "adapter_config_sha256": "86f6c8e5282c9c35cba1fc9e3402be9d9a35cbe9ec9619d15f226e5df1cc48b2",
+        "optimizer_steps": 733,
+        "nonzero_gradient_steps": 733,
+        "changed_tensors": 144,
+        "supervised_token_presentations": 17439,
+        "adapter_reload_max_logit_delta": 0.0,
+        "GPU": "NVIDIA A100-SXM4-80GB",
+        "GPU_count": 1,
+        "deterministic_algorithms": true,
+        "attention_backend": "math_sdpa",
+        "wall_seconds": 905.23,
+        "peak_cuda_allocated_bytes": 17685551616,
+        "quality_counts": {
+          "publisher_verified": 669,
+          "source_silver": 64
+        }
+      },
+      "adapter_tensor_count": 144,
+      "cleanup_errors": []
     },
     "P13": {
       "status": "NOT_STARTED",
@@ -141,5 +249,10 @@
     "Final64 is previously unqueried TRAIN-derived publisher silver,not expert gold or source-separated official TEST.",
     "A passing internal gate alone is not model release or leaderboard validation."
   ],
-  "research_experiment_complete": false
+  "research_experiment_complete": false,
+  "matched_replacement_effect_P12_minus_P11": {
+    "native_mean_delta": -0.021784812409812337,
+    "strict_count_delta": -3,
+    "interpretation": "Effect of replacing64 token-length-matched publisher records with64 verifiedsilver records;not isolated dataquality effect."
+  }
 }

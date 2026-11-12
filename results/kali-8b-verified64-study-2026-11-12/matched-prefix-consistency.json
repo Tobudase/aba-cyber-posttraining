@@ -1,0 +1,9 @@
+{
+  "status": "P11_P12_PRE_REPLACEMENT_TRACE_CHECK",
+  "prefix_steps": 14,
+  "initial_LoRA_byte_hash_equal": true,
+  "all_14_prefix_loss_gradient_token_records_identical": true,
+  "P12_real_optimizer_steps": 733,
+  "P12_adapter_sha256": "37ac0238592816173471b052e4dafe512a94ffaadef2336628af6eae89529fcd",
+  "scope": "Necessary consistency check before first differentTRAIN row,not a whole-run replica or proof of statistical stability."
+}
