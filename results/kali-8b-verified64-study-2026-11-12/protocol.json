@@ -176,5 +176,76 @@
     "fix": "Token-free installer bounded1500s underuser systemdservice,exitreceipt and reconnect polling;never rerun diskformat/install after lostresponse. Native supervisor separatelydetached.",
     "GPU_submissions": 0,
     "numerical_protocols_unchanged": true
+  },
+  "controller_transport_retry": {
+    "at_utc": "2026-11-12T22:43:46.825401+00:00",
+    "attempt5_run_id": "80580e78c2734d38aeb47c864037598f",
+    "failure": "502 loopback validation ValueError while Designer; exact malformed field unknown because previous diagnostics omitted response shape",
+    "P13_P14_training_submissions": 0,
+    "cleanup_errors": [],
+    "controller_only_changes": [
+      "qwen3 alias changed to qwen3-small; neutral tool schema probe passed, served Qwen/Qwen3.8-27B-FP8",
+      "Design restricted to reading frozen manifest+README then immediate2plans; removes unnecessary full data/environment inspection",
+      "Add response-shape-only diagnostic metadata; no prompt/tool arguments/credentials logged",
+      "Supervisor gets alias from exact config rather than hardcodedqwen3"
+    ],
+    "unchanged": [
+      "8B base weights",
+      "P13/P14 frozen data/recipes",
+      "733updates/17439supervisedtokens",
+      "DEV scoring/gates",
+      "sealed64 unqueried",
+      "officialTEST0"
+    ],
+    "probe": {
+      "neutral_probe_only": true,
+      "training_calls": 0,
+      "results": [
+        {
+          "model": "qwen3-small",
+          "status": "TYPED_MESSAGE_VALID",
+          "served_model": "Qwen/Qwen3.8-27B-FP8",
+          "blocks": [
+            {
+              "type": "tool_use",
+              "input_type": "dict"
+            }
+          ],
+          "stop_reason": "tool_use",
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 468,
+            "output_tokens": 235
+          },
+          "seconds": 6.49
+        },
+        {
+          "model": "qwen3",
+          "status": "TYPED_MESSAGE_VALID",
+          "served_model": "Qwen/Qwen3.8-Flash-Next-FP8",
+          "blocks": [
+            {
+              "type": "tool_use",
+              "input_type": "dict"
+            }
+          ],
+          "stop_reason": "tool_use",
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 468,
+            "output_tokens": 422
+          },
+          "seconds": 14.51
+        }
+      ]
+    },
+    "source_sha256": {
+      "run-kali8b-native-study-20261112.py": "efab81c6479cd9b7e6b2827909734de7f7d0f2d67fcb73e5dea38b6479da3f78",
+      "build-kali8b-native-study.py": "aa184a18d9ba25420458ae96c244c3cf4189571c076baf69d3220f387610dcb6",
+      "nrp_anthropic_transport.py": "d9fb7228b89d9f84d7fdcaecd8c6b74d03458aeddd708cb6f8484117a159fb1d",
+      "kali8b_native_supervisor.py": "d5994de6dd82865d2aff5c4e21d2d067bc66a3dd2f296b4f4e6665b01920cece"
+    }
   }
 }

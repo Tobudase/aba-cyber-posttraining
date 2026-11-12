@@ -1,6 +1,6 @@
 {
   "status": "IN_PROGRESS",
-  "updated_at_utc": "2026-11-12T19:30:40.422914+00:00",
+  "updated_at_utc": "2026-11-12T23:02:47.005475+00:00",
   "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
   "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "study_protocol_freeze_sha256": "d393a2ac89ca98b491dcfa2d9aad24f01eca1ab2f3aaf7cd81305c79d29c54e2",
@@ -233,7 +233,7 @@
       "cleanup_errors": []
     },
     "P13": {
-      "status": "NOT_STARTED",
+      "status": "Pending",
       "protocol_sha256": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4"
     },
     "P14": {

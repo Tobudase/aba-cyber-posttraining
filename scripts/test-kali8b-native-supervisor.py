@@ -22,11 +22,11 @@ def main():
     return result()
   with mock.patch.object(daemon.time,'sleep',return_value=None):state=daemon.start_and_wait(Driver(),'MOCK_ONLY_NOT_A_KEY',{})
   assert state['exit']['returncode']==0 and any(r.get('transport_state')=='RECONNECTING_WITHOUT_CANCELLING_NATIVE' for r in records);assert all('MOCK_ONLY_NOT_A_KEY' not in command for command,_ in calls)
-  credential=root/'.nrp-runtime-key-private';credential.write_text('MOCK_ONLY_NOT_A_KEY');envs=[]
+  credential=root/'.nrp-runtime-key-private';credential.write_text('MOCK_ONLY_NOT_A_KEY');(root/'config.json').write_text(json.dumps({'llm':{'default':{'model':'MOCK_CONTROLLER'}}}));envs=[]
   fake_transport=types.SimpleNamespace(server=lambda _:types.SimpleNamespace(serve_forever=lambda:None));fake_mailbox=types.SimpleNamespace(serve=lambda:None)
   def fake_run(argv,**kwargs):envs.append(kwargs['env']);return result(returncode=0)
   with mock.patch.object(supervisor,'ROOT',root),mock.patch.object(sys,'stdin',io.StringIO('MOCK_ONLY_NOT_A_KEY')),mock.patch.dict(sys.modules,{'transport':fake_transport,'mailbox_server':fake_mailbox}),mock.patch.object(supervisor.subprocess,'run',side_effect=fake_run):supervisor.main()
-  assert not credential.exists() and json.loads((root/'exit.json').read_text())['returncode']==0;assert envs[0]['AIBUILDAI_API_KEY']=='MOCK_ONLY_NOT_A_KEY'
+  assert not credential.exists() and json.loads((root/'exit.json').read_text())['returncode']==0;assert envs[0]['AIBUILDAI_API_KEY']=='MOCK_ONLY_NOT_A_KEY';assert envs[0]['AIBUILDAI_SUBAGENT_MODEL']=='MOCK_CONTROLLER'
   class Stop:
    stopped=False
    def is_set(self):return self.stopped

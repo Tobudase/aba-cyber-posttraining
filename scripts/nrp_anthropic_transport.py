@@ -54,6 +54,7 @@ class Handler(BaseHTTPRequestHandler):
   with (Path(__file__).resolve().parents[1]/'.tools/nrp-transport-metadata.jsonl').open('a') as f:f.write(json.dumps(meta)+'\n')
   try:path,target=route_target(self.path)
   except ValueError:self.send_error(404);return
+  stage='request_validation';status=None;shape=None
   try:
    n=int(self.headers.get('Content-Length','0'))
    if not 0<n<=12*1024**2:raise ValueError('Invalid request size')
@@ -62,17 +63,24 @@ class Handler(BaseHTTPRequestHandler):
    headers={k:v for k,v in self.headers.items() if k.lower() in ['content-type','authorization','x-api-key','anthropic-version','anthropic-beta']}
    headers['Content-Type']='application/json'
    request=urllib.request.Request(UPSTREAM+target,data=json.dumps(payload).encode(),headers=headers,method='POST')
+   stage='upstream_request'
    try:
     with urllib.request.urlopen(request,context=self.server.tls_context,timeout=240) as r:status=r.status;body=r.read();returned=r.headers
    except urllib.error.HTTPError as exc:status=exc.code;body=exc.read();returned=exc.headers
-   if status==200 and stream and path=='/v1/messages':body=encode_events(json.loads(body));ctype='text/event-stream; charset=utf-8'
+   if status==200 and stream and path=='/v1/messages':
+    stage='upstream_json';message=json.loads(body)
+    shape={'message_type':message.get('type'),'role':message.get('role'),'stop_reason':message.get('stop_reason'),'blocks':[{'type':b.get('type'),'input_type':type(b.get('input')).__name__} if isinstance(b,dict) else {'python_type':type(b).__name__} for b in message.get('content',[])]} if isinstance(message,dict) and isinstance(message.get('content'),list) else {'python_type':type(message).__name__}
+    stage='typed_sse_validation';body=encode_events(message);ctype='text/event-stream; charset=utf-8'
    else:ctype=returned.get('Content-Type','application/json')
    self.send_response(status);self.send_header('Content-Type',ctype);self.send_header('Content-Length',str(len(body)));self.send_header('Connection','close')
    for name in ['x-ratelimit-remaining','x-ratelimit-reset','retry-after']:
     if returned.get(name):self.send_header(name,returned[name])
    self.end_headers();self.wfile.write(body);self.close_connection=True
   except Exception as exc:
-   # Fixed diagnostic, never reflect request bodies or credentials.
+   # Shapes and a stage are sufficient to distinguish malformed provider output
+   # from transport errors; never persist prompts, tool arguments or credentials.
+   diagnostic={**meta,'stage':stage,'error_type':type(exc).__name__,'upstream_status':status,'shape':shape}
+   with (Path(__file__).resolve().parents[1]/'.tools/nrp-transport-errors.jsonl').open('a') as f:f.write(json.dumps(diagnostic)+'\n')
    body=json.dumps({'type':'error','error':{'type':'api_error','message':'Loopback transport validation failed: '+type(exc).__name__}}).encode()
    try:self.send_response(502);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body)
    except OSError:pass

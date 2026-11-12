@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r5';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r6';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
@@ -22,6 +22,8 @@ def collect_journal():
  program=(ROOT/'scripts/kali8b_native_journal.py').read_text()
  extra="""
 import hashlib
+errorlog=pathlib.Path('/mnt/aba-scratch/.tools/nrp-transport-errors.jsonl')
+result['transport_errors']=[json.loads(line) for line in errorlog.read_text().splitlines()] if errorlog.is_file() else []
 result['task_hashes']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in pathlib.Path('/mnt/aba-scratch/study/task').iterdir() if p.is_file()}
 result['scored_outputs']={}
 for action in result['actions']:
