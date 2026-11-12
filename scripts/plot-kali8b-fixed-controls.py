@@ -21,5 +21,6 @@ def main():
  for ax in axes:ax.spines[['top','right']].set_visible(False);ax.set_axisbelow(True);ax.grid(axis='y',alpha=.18);ax.tick_params(axis='x',labelsize=9)
  fig.text(.5,.035,'733 updates and 17,439 supervised tokens per SFT arm; 64 new silver rows replace 64 publisher records.\nBoth controls fail frozen gates. P13/P14 native ABA and sealed64 results are not shown or imputed.',ha='center',fontsize=9,color='#475569');fig.tight_layout(rect=(0,.13,1,.92));a.output.parent.mkdir(parents=True,exist_ok=True)
  for ext in ['png','svg']:fig.savefig(a.output.with_suffix('.'+ext),dpi=180)
+ svg=a.output.with_suffix('.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
  plt.close(fig);print('VERIFIED_FIXED_CONTROL_FIGURE_WRITTEN')
 if __name__=='__main__':main()
