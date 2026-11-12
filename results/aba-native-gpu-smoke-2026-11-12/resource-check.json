@@ -1,0 +1,6 @@
+{
+  "status": "INDEPENDENT_RESOURCE_CHECK_PASS",
+  "current_attempt_objects_remaining": 0,
+  "active_GPU_requests_in_owned_Pods": 0,
+  "other_members_resources_modified": false
+}

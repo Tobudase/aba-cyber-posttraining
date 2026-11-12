@@ -1,0 +1,1 @@
+{"device": "cuda", "epochs": 32, "final_train_nll": 1.177154779434204, "gpu": "NVIDIA GeForce RTX 2080 Ti", "initial_train_nll": 4.572910308837891, "learning_rate": 0.1, "optimizer_steps": 256, "reload_max_abs_diff": 0.0, "scope": "Synthetic eight-token native integration only; not LLM SFT.", "seed": 42}

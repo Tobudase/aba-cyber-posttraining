@@ -1,5 +1,5 @@
 {
-  "status": "PARTIAL_NATIVE_PIPELINE_NOT_COMPLETE",
+  "status": "NATIVE_ABA_GPU_PIPELINE_VERIFIED",
   "source_commit": "c8bd734cafd5a7cd609efb5f561594bde4107d5b",
   "patch": {
     "file": "engine/builtin/nb_tree/search.py",
@@ -13,10 +13,12 @@
   "source_patch_contract_check_passed": true,
   "artifact_64MiB_roundtrip_match": true,
   "completed_attempt_cleanup_errors": 0,
-  "latest_completed_attempt": "V6 failed on Designer time budget before GPU dispatch",
-  "next_attempt": "V7 in progress; one fixed synthetic CUDA candidate, larger finite controller budgets",
+  "latest_completed_attempt": "V7 completed native Worker -> actual GPU Job -> native scoring -> Finalizer delivery",
+  "next_attempt": null,
   "separate_GPU_smoke_passed": true,
-  "single_native_GPU_run_completed": false,
+  "single_native_GPU_run_completed": true,
   "new_LLM_training": false,
-  "official_TEST_rows": 0
+  "official_TEST_rows": 0,
+  "verified_summary": "../aba-native-gpu-smoke-2026-11-12/verified-summary.json",
+  "native_optimizer_steps": 256
 }
