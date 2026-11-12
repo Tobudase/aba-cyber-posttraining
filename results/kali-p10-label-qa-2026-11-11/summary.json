@@ -1,0 +1,23 @@
+{
+  "study": "KaliBench P10 matched source-silver replacement",
+  "status": "cancelled_before_gpu_scheduling_after_label_qa_failure",
+  "operator_designed_control": true,
+  "aba_selected": false,
+  "planned_optimizer_steps": 733,
+  "completed_optimizer_steps": 0,
+  "model_outputs": 0,
+  "source_silver_rows_checked": 14,
+  "source_silver_rows_exit_zero_on_runtime": 8,
+  "rejected_option_rows": {
+    "hardlink_cache_size": 2,
+    "more_exit_on_eof": 4
+  },
+  "fixture_files_unchanged": true,
+  "last_observed_gpu_pod_scheduled": false,
+  "remaining_owned_kubernetes_objects": 0,
+  "a100_quota_used_after_cleanup": 0,
+  "official_test_rows": 0,
+  "sealed_final64_rows": 0,
+  "model_promotion_allowed": false,
+  "interpretation": "Runtime-version-sensitive labels failed the pretraining quality gate; no model result exists."
+}

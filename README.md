@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 11, 2026 — P10 source-label quality gate
+
+P09 timed out while waiting for A100 scheduling, with no training or model outputs. P10 pre-froze a matched 733-step control replacing 14 publisher TRAIN rows with 14 AI-authored source-silver rows while keeping supervised target-token count equal. A bounded Linux CPU check then found only **8/14** commands executable in the available runtime: two `hardlink --cache-size` and four `more --exit-on-eof` labels used options that its installed utilities rejected. I cancelled P10 **before GPU scheduling** and cleaned all owned resources. **No P09/P10 model score exists; E0 remains the default; official TEST remains untouched.** The next training run requires version-locked, per-row label validation before GPU submission. [Chinese audit](docs/KALI_P10_LABEL_QA_ABORT_ZH_2026-11-11.md) · [Sanitized summary](results/kali-p10-label-qa-2026-11-11/summary.json).
+
 ## November 11, 2026 — P08 exact-repeat result
 
 P08 repeated P07 with byte-identical 733-row TRAIN payload, the same A100-SXM4 model, optimizer and seeds. It completed **733/733 nonzero-gradient updates** and passed adapter reload checks; all owned GPU resources were cleaned. On the exposed, official-TRAIN-sourced DEV128, native mean was **0.75499 E0 / 0.76543 P07 / 0.76768 P08**, and strict correctness **47 / 55 / 54 of 128**. P07/P08 outputs matched on 119/128 cases, so the small positive direction repeated once, but DEV2 declined in both runs and P08 still lost to E0 on 28/29 previously identified harm cases. The descriptive paired interval includes zero. These are operator controls, not ABA-selected or independent/official TEST gains; **E0 remains the default**. [Chinese result](docs/KALI_P08_EXACT_REPLICA_RESULT_ZH_2026-11-11.md) · [Sanitized aggregate](results/kali-p08-replica-2026-11-11/aggregate.json).
