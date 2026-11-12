@@ -8,6 +8,10 @@
   "model_outputs": 0,
   "source_silver_rows_checked": 14,
   "source_silver_rows_exit_zero_on_runtime": 8,
+  "source_silver_total_candidates": 16,
+  "source_silver_not_executed": 2,
+  "source_silver_semantic_mismatch_ai_review": 2,
+  "source_silver_admitted_for_next_gpu_run": 0,
   "rejected_option_rows": {
     "hardlink_cache_size": 2,
     "more_exit_on_eof": 4

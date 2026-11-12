@@ -4,10 +4,12 @@ P09 的 749 步 source-silver 扩充试验一直未获得 A100 调度，队列�
 
 P10 的单 A100、普通优先级、有时限 Job 提交后仍处于 `Pending`，尚未分配节点。我同时在独立的短时 CPU Job 中，用临时目录和允许的无副作用命令逐条核查 14 条标签，并确认测试文件未改变。结果仅 **8/14 在该 Linux 镜像返回 0**：`lsblk` 4/4、`lsmem` 2/2、`hardlink --exclude` 2/2；`hardlink --cache-size` 2/2 被报告为不认识的选项，`more --exit-on-eof` 4/4 也被报告为不认识的选项。第二次诊断复现同样结果，两个 CPU Job 的资源均已清理。
 
-[util-linux 的当前 hardlink 手册](https://github.com/util-linux/util-linux/blob/master/misc-utils/hardlink.1.adoc)和[当前 more 手册](https://man7.org/linux/man-pages/man1/more.1.html)列出了相应选项。因此此发现说明**本次运行镜像与文档／先前代表性 VM 检查存在版本差异**，不能证明所有 Linux 版本都不接受这些命令。但它已经使“14 条均通过目标运行环境核查”的数据准入条件不成立；逐条退出成功也不能证明自然语言题目的唯一正确答案。
+[util-linux 的当前 hardlink 手册](https://github.com/util-linux/util-linux/blob/master/misc-utils/hardlink.1.adoc)和[当前 more 手册](https://man7.org/linux/man-pages/man1/more.1.html)列出了相应选项。因此此发现说明**本次运行镜像与文档／先前代表性 VM 检查存在版本差异**，不能证明所有 Linux 版本都不接受这些命令。更严重的是，另有 **2 条 `more` 题的题意与标签不符**：题目要求遇到换页符时不暂停，当前手册对应 `--logical`，标签却用了 `--no-pause`。这是本轮 AI 语义审查发现的问题，尚未经过独立专家签核。逐条退出成功也不能证明自然语言题目的唯一正确答案。
 
 我在 GPU 调度前取消 P10，删除 Job 与输入对象。最后一次 Pod 检查为未调度，训练步数和模型输出均为 **0**；个人残留 Job/Pod/ConfigMap/Secret 为 **0**，A100 quota 使用量恢复到 **0**。P10 没有训练结果，也不能和 P07/P08 比较模型分数或宣称新数据收益。原始 E0 模型仍为正式默认，官方 TEST 使用 0 条。
 
 **下一道门槛：** 先锁定目标工具版本，在同一环境对新训练标签逐条执行并核对任务语义；未通过者隔离。其后再冻结真实 ABA 候选与同预算对照，交由原生 ABA Worker 提交、评分和选择，并用封存确认集检验。不能把本次取消记作 ABA 后训练成功。
+
+目前 16 条 source-silver 候选中：8 条只通过当前运行环境的执行检查，4 条运行版本不支持，2 条同时有语义错配和运行版本问题，另 2 条 `virtualenv` 未执行。**下一轮 GPU 训练准入数为 0**，直到通过相应的版本与语义复核；不能把 8 条执行成功直接升格为金标。
 
 [去标识化核查汇总](../results/kali-p10-label-qa-2026-11-11/summary.json)。公开文件不含训练题文本、模型输出或访问凭证。
