@@ -1,0 +1,102 @@
+{
+  "status": "POSTHOC_TARGET_SKILL_COVERAGE_AUDIT",
+  "model_calls": 0,
+  "training_calls": 0,
+  "official_TEST_rows": 0,
+  "sealed64_rows_read": 0,
+  "selection_or_data_changed": false,
+  "new_train_sha256": "95b8877b182eb5b484cbd82cf8351629fca02b10718da750c387efa198cc4525",
+  "tools": [
+    {
+      "tool": "hardlink",
+      "full_training_arm_coverage": {
+        "P11": {
+          "training_rows_for_tool": 2,
+          "required_groups_covered": 0,
+          "rows_covering_all_groups_together": 0
+        },
+        "P12": {
+          "training_rows_for_tool": 16,
+          "required_groups_covered": 2,
+          "rows_covering_all_groups_together": 0
+        }
+      },
+      "new_training_rows": 14,
+      "exposed_DEV_rows": 1,
+      "reference_required_option_groups": 3,
+      "required_groups_with_any_new_TRAIN_example": 2,
+      "new_TRAIN_rows_covering_all_required_groups_together": 0,
+      "P11_P12_strict_correct": 0,
+      "P11_P12_output_unchanged": true
+    },
+    {
+      "tool": "dnstwist",
+      "full_training_arm_coverage": {
+        "P11": {
+          "training_rows_for_tool": 1,
+          "required_groups_covered": 0,
+          "rows_covering_all_groups_together": 0
+        },
+        "P12": {
+          "training_rows_for_tool": 15,
+          "required_groups_covered": 1,
+          "rows_covering_all_groups_together": 0
+        }
+      },
+      "new_training_rows": 14,
+      "exposed_DEV_rows": 1,
+      "reference_required_option_groups": 2,
+      "required_groups_with_any_new_TRAIN_example": 1,
+      "new_TRAIN_rows_covering_all_required_groups_together": 0,
+      "P11_P12_strict_correct": 0,
+      "P11_P12_output_unchanged": true
+    },
+    {
+      "tool": "pyi-makespec",
+      "full_training_arm_coverage": {
+        "P11": {
+          "training_rows_for_tool": 4,
+          "required_groups_covered": 1,
+          "rows_covering_all_groups_together": 0
+        },
+        "P12": {
+          "training_rows_for_tool": 24,
+          "required_groups_covered": 3,
+          "rows_covering_all_groups_together": 0
+        }
+      },
+      "new_training_rows": 20,
+      "exposed_DEV_rows": 1,
+      "reference_required_option_groups": 3,
+      "required_groups_with_any_new_TRAIN_example": 3,
+      "new_TRAIN_rows_covering_all_required_groups_together": 0,
+      "P11_P12_strict_correct": 0,
+      "P11_P12_output_unchanged": true
+    },
+    {
+      "tool": "virtualenv",
+      "full_training_arm_coverage": {
+        "P11": {
+          "training_rows_for_tool": 5,
+          "required_groups_covered": 1,
+          "rows_covering_all_groups_together": 0
+        },
+        "P12": {
+          "training_rows_for_tool": 21,
+          "required_groups_covered": 2,
+          "rows_covering_all_groups_together": 0
+        }
+      },
+      "new_training_rows": 16,
+      "exposed_DEV_rows": 1,
+      "reference_required_option_groups": 2,
+      "required_groups_with_any_new_TRAIN_example": 2,
+      "new_TRAIN_rows_covering_all_required_groups_together": 0,
+      "P11_P12_strict_correct": 0,
+      "P11_P12_output_unchanged": true
+    }
+  ],
+  "required_groups": 10,
+  "covered_groups": 8,
+  "interpretation": "Behavior-valid single-skill examples do not establish coverage of the option combinations and special argument semantics required by these four exposed DEV cases. Counts do not establish a unique causal explanation or imply the model must see exact evaluation answers. Do not add held-out answers or retune after confirmation."
+}
