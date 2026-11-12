@@ -10,7 +10,13 @@ def main():
   if r['status']!=last:print(json.dumps({'stage':'native','status':r['status']}),flush=True);last=r['status']
   if r['status']=='FAILED':raise SystemExit('Native stage failed; receipts preserved; sealed64 remains unqueried')
   if r['status']=='COMPLETE_VERIFIED_NATIVE_8B_STUDY':
-   assert r['native_completed'] and not r['cleanup_errors'];break
+   assert r['native_completed'] and not r['cleanup_errors']
+   try:os.kill(r['local_controller_pid'],0)
+   except ProcessLookupError:
+    final=json.loads(HOST.read_text());assert final['status']=='COMPLETE_VERIFIED_NATIVE_8B_STUDY' and final['native_completed'] and not final['cleanup_errors'];break
+   # COMPLETE is saved before the driver's finally cleanup. Wait for its
+   # actual exit,then reread the final cleanup receipt before querying64.
+   time.sleep(5);continue
   time.sleep(30)
  else:raise TimeoutError('Bounded stage continuation expired without new GPU allocation')
  assert not (S/'confirmation').exists(),'Do not re-query or overwrite a confirmation attempt'

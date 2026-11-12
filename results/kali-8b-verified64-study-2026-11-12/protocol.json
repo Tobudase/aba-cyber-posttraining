@@ -247,5 +247,12 @@
       "nrp_anthropic_transport.py": "d9fb7228b89d9f84d7fdcaecd8c6b74d03458aeddd708cb6f8484117a159fb1d",
       "kali8b_native_supervisor.py": "d5994de6dd82865d2aff5c4e21d2d067bc66a3dd2f296b4f4e6665b01920cece"
     }
+  },
+  "confirmation_cleanup_order": {
+    "at_utc": "2026-11-12T23:18:15.244197+00:00",
+    "reason": "Wait for actual native parent exit and final cleanup receipt before any sealed64 query",
+    "changed": "continuation control flow only;confirmation worker/runner,selection,scoring unchanged",
+    "confirmation_queries": 0,
+    "continuation_sha256": "a8040811231438d648a679377056e1f04709d6aecaddaa6b4758c4ae4cd89754"
   }
 }

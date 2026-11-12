@@ -1,0 +1,18 @@
+{
+  "status": "SAVED_ADAPTER_DTYPE_AUDIT",
+  "model_calls": 0,
+  "official_TEST_rows": 0,
+  "arms": {
+    "P11": {
+      "saved_adapter_tensor_dtypes": {
+        "F32": 144
+      }
+    },
+    "P12": {
+      "saved_adapter_tensor_dtypes": {
+        "F32": 144
+      }
+    }
+  },
+  "scope": "Saved adapter weights are FP32. This read-only header check is not a separate proof of every optimizer state or a unique regression cause."
+}
