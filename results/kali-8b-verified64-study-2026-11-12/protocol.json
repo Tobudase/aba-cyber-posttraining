@@ -137,5 +137,26 @@
     "native_only_patch": "zero-request Composite dispatch,unchanged",
     "original_confirmation_runner_sha256": "84937e263c512090abbdfcc6467b49224b1e74d02006447b121b52e7b25ec425",
     "new_confirmation_runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94"
-  }
+  },
+  "controller_only_amendments": [
+    {
+      "status": "CONTROLLER_ONLY_RETRY_BEFORE_ANY_NATIVE_CANDIDATE",
+      "at_utc": "2026-11-12T19:47:31.833012+00:00",
+      "prior_native_run_id": "a52b096747224403bb0864943a3445ea",
+      "prior_GPU_submissions": 0,
+      "prior_failure": "Setup18min exhausted while manuallycopyingprotectedfiles;no baselinescore/nativecandidatecompleted.",
+      "repair": "Operator-frozen answer-free contract helper with supported publicsymlinks/plainfrozenREADME+score and realhostbaseline; all nativeverifiers preserved. Setup45,review15,VMauto480min,nativehard450min.",
+      "training_data_optimizer_inference_score_gates_unchanged": true,
+      "candidate_outputs_observed": 0,
+      "official_TEST_rows": 0,
+      "final64_outputs": 0
+    },
+    {
+      "status": "CPU_CONTROLLER_BOOT_RETRY_NO_GPU",
+      "at_utc": "2026-11-12T19:54:29.129348+00:00",
+      "reason": "FreshVMIreportedRunningbutSSHnotreadywithin180s;keypairmatchverified;sameCPUhostaspriorworkingVM;nowuniqueVMnameand600sreadinesswithper-attemptdiagnostics.",
+      "numerical_protocols_unchanged": true,
+      "prior_GPU_submissions": 0
+    }
+  ]
 }

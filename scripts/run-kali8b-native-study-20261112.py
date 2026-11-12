@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r3';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
@@ -37,7 +37,7 @@ print(json.dumps(result))
  with JOURNAL_LOCK:
   r=ssh('cd /mnt/aba-scratch/aba && /mnt/aba-scratch/conda/envs/manager/bin/python -',payload=program,timeout=80);assert r.returncode==0,r.stderr[-300:]
   token=(ROOT/'.secrets/nrp_api_key').read_text().strip();raw=r.stdout.replace(token,'[REDACTED]');x=json.loads(raw)
-  p=OUT/'journal-private.json';t=p.with_suffix('.tmp');t.write_text(raw);t.replace(p);return x
+  p=OUT/'journal-private.json';t=p.with_name('journal-'+str(os.getpid())+'.tmp');t.write_text(raw);t.replace(p);return x
 def wait_controls(record):
  until=time.monotonic()+8*3600
  while time.monotonic()<until:
@@ -53,7 +53,7 @@ def main():
  record={'status':'WAITING_FIXED_CONTROLS_NO_VM','local_controller_pid':os.getpid(),'driver_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'started_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'cleanup_errors':[],'official_TEST_rows':0,'native_completed':False};made=False;stop=threading.Event();t=None;token=''
  try:
   wait_controls(record);config=build_task(OUT)
-  obj=m.manifest();obj['metadata']['name']=NAME;obj['spec']['template']['spec']['volumes'][1]['emptyDisk']['capacity']='20Gi';obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData']=obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData'].replace('+20','+360')
+  obj=m.manifest();obj['metadata']['name']=NAME;obj['spec']['template']['spec']['volumes'][1]['emptyDisk']['capacity']='20Gi';obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData']=obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData'].replace('+20','+480')
   k('create','--dry-run=server','-f','-',payload=json.dumps(obj));assert call(m.BASE+['get','vm',NAME]).returncode!=0;k('create','-f','-',payload=json.dumps(obj));made=True;record['status']='VM_STARTING';save(record);print('FORMAL_NATIVE_VM_CREATED',flush=True)
   until=time.monotonic()+420
   while time.monotonic()<until:
@@ -61,9 +61,11 @@ def main():
    if r.returncode==0 and json.loads(r.stdout).get('status',{}).get('phase')=='Running':break
    time.sleep(5)
   else:raise TimeoutError('VM scheduling')
-  until=time.monotonic()+180
+  until=time.monotonic()+600
+  readiness=[]
   while time.monotonic()<until:
-   if ssh('true',timeout=25).returncode==0:break
+   attempt=ssh('true',timeout=25);readiness.append({'at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'returncode':attempt.returncode,'stderr':attempt.stderr[-700:]});(OUT/'ssh-readiness-private.json').write_text(json.dumps(readiness,indent=2)+'\n')
+   if attempt.returncode==0:break
    time.sleep(5)
   else:raise TimeoutError('SSH readiness')
   # Reuse the exact checksum-tested Conda/install/one-line dispatch repair recipe.
@@ -84,12 +86,12 @@ r=pathlib.Path('/mnt/aba-scratch/study');token=sys.stdin.read().strip();e=os.env
 e['PATH']='/mnt/aba-scratch/conda/envs/manager/bin:'+e['PATH']
 for name in ['SMALL_FAST','HAIKU','SONNET','OPUS','SUBAGENT']:e['AIBUILDAI_'+name+'_MODEL']='qwen3'
 with (r/'native.log').open('w') as f:
- try:p=subprocess.run(['/mnt/aba-scratch/conda/envs/manager/bin/aibuildai','run',str(r/'config.json')],cwd=r,env=e,stdout=f,stderr=subprocess.STDOUT,timeout=18300);rc=p.returncode
+ try:p=subprocess.run(['/mnt/aba-scratch/conda/envs/manager/bin/aibuildai','run',str(r/'config.json')],cwd=r,env=e,stdout=f,stderr=subprocess.STDOUT,timeout=27000);rc=p.returncode
  except subprocess.TimeoutExpired:rc=124
 (r/'exit.json').write_text(json.dumps({'returncode':rc}));print(json.dumps({'returncode':rc}))
 '''
   token=(ROOT/'.secrets/nrp_api_key').read_text().strip();assert token and '\n' not in token;record.update(status='NATIVE_RUNNING',config_sha256=hashlib.sha256((OUT/'config.json').read_bytes()).hexdigest());save(record);print('FORMAL_NATIVE_RUNNING',flush=True)
-  r=ssh('/mnt/aba-scratch/conda/envs/manager/bin/python -c '+shlex.quote(launch),payload=token,timeout=18400)
+  r=ssh('/mnt/aba-scratch/conda/envs/manager/bin/python -c '+shlex.quote(launch),payload=token,timeout=27100)
   (OUT/'client-private.json').write_text(json.dumps({'returncode':r.returncode,'stdout':r.stdout.replace(token,'[REDACTED]')[-1200:],'stderr':r.stderr.replace(token,'[REDACTED]')[-1000:]}))
   j=collect_journal();freeze=json.loads((OUT/'native-task-freeze-private.json').read_text());assert j['task_hashes']==freeze['task_sha256'],'Native task mutated'
   collect="import json,pathlib,hashlib;r=pathlib.Path('/mnt/aba-scratch/study');files={str(p.relative_to(r)):{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'text':p.read_text(errors='replace')} for p in (r/'playground').rglob('*') if p.is_file() and not p.is_symlink() and p.stat().st_size<200000 and 'deliverable' in p.parts};print(json.dumps({'files':files,'exit':json.loads((r/'exit.json').read_text()) if (r/'exit.json').exists() else None,'log_tail':(r/'native.log').read_text(errors='replace')[-5000:]}))"
