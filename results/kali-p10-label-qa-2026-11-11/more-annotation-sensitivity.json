@@ -1,0 +1,19 @@
+{
+  "status": "publisher_train_more_annotation_conflict_ai_audit",
+  "publisher_train_more_rows": 2,
+  "affected_exposed_dev_rows": 1,
+  "publisher_terminal_exit_zero": true,
+  "publisher_model_verdict": "ACCURATE",
+  "current_util_linux_manual_alias_conflicts": [
+    "--no-pause|-l",
+    "--clean-print|-p"
+  ],
+  "question_form_feed_requirement_maps_to_current_manual": "--logical",
+  "posthoc_native_mean_delta_p07_minus_e0_original_128": 0.0104414682539683,
+  "posthoc_native_mean_delta_p07_minus_e0_excluding_one_127": 0.011398575178102721,
+  "posthoc_native_mean_delta_p08_minus_e0_original_128": 0.012686011904761929,
+  "posthoc_native_mean_delta_p08_minus_e0_excluding_one_127": 0.013660792400949862,
+  "publisher_runtime_version_known": false,
+  "official_test_rows": 0,
+  "frozen_scores_replaced": false
+}
