@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 12, 2026 — matched 8B study running
+
+The first fixed-control job has received **one A100**. The preregistered study compares publisher733 SFT (P11), publisher669 + behavior-verified64 SFT (P12), and up to two native ABA recipes (P13/P14), with **733 optimizer updates and 17,439 supervised tokens per arm**. All numerical arms are pinned to the first assigned host and use the same deterministic backend. Selection will precede a single previously unqueried 64-row internal confirmation; official TEST remains untouched. **No new training gain or completed 8B native search is claimed at this snapshot.** [Frozen protocol](results/kali-8b-verified64-study-2026-11-12/protocol.json) · [Chinese experiment design](docs/KALI_VERIFIED64_8B_STUDY_2026-11-12_ZH.md).
+
 ## November 12, 2026 — behavior-verified TRAIN supplement
 
 I froze **64 new authored TRAIN rows across 32 task families and four tools** after actual Linux behavior checks and paired wrong-command checks. Four of 68 candidates remain quarantined. All 64 admitted labels self-score 1.0 with the pinned native scorer and pass RedSage prompt masking, think-prefix/EOS round-trip and no-truncation checks. These are exploratory, AI-authored local-runtime silver labels; no new LLM training or independent gain is claimed. [Chinese report and reproduction](docs/KALI_BEHAVIOR_TRAIN_2026-11-12_ZH.md) · [TRAIN data](data/kali-behavior-train-2026-11-12/train.jsonl) · [Manifest](results/kali-behavior-train-2026-11-12/manifest.json).

@@ -1,0 +1,127 @@
+#!/usr/bin/env python3
+"""Real two-candidate native ABA controller, with durable host-only GPU adapters."""
+import datetime,hashlib,json,os,shlex,subprocess,sys,threading,time
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
+from build_kali8b_native_study_import import build_task
+from kali8b_native_bridge import S,bridge
+NAME='miw113-kali8b-native-v64-20261112';REMOTE='/mnt/aba-scratch/study'
+OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
+TASK_NAME='kali8b-verified64';BROKER=None
+import kali8b_native_vm as m
+SSH=[str(ROOT/'.tools/virtctl'),'--context','nautilus','-n','ecepxie','ssh','fedora@vm/'+NAME,'--identity-file',str(m.KEY),'--known-hosts',str(KNOWN),'--local-ssh-opts=-o StrictHostKeyChecking=accept-new','--local-ssh-opts=-o IdentitiesOnly=yes','--local-ssh-opts=-o ConnectTimeout=10']
+def call(args,payload=None,timeout=60):return subprocess.run(args,input=payload,text=True,capture_output=True,timeout=timeout,cwd=ROOT)
+def ssh(command,payload=None,timeout=60):return call(SSH+['--command',command],payload,timeout)
+def k(*args,payload=None):
+ r=call(m.BASE+list(args),payload);assert r.returncode==0,r.stderr[-400:];return r.stdout
+def save(record):
+ p=OUT/'host-private.json';t=p.with_suffix('.tmp');t.write_text(json.dumps(record,indent=2)+'\n');t.replace(p)
+JOURNAL_LOCK=threading.Lock()
+def collect_journal():
+ program=(ROOT/'scripts/kali8b_native_journal.py').read_text()
+ extra="""
+import hashlib
+result['task_hashes']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in pathlib.Path('/mnt/aba-scratch/study/task').iterdir() if p.is_file()}
+result['scored_outputs']={}
+for action in result['actions']:
+ out=action.get('output',{})
+ if '/score_program_' in action['target'] and out.get('failed') is False and out.get('output_dir'):
+  d=pathlib.Path(out['output_dir']);assert d.resolve().is_relative_to(root.resolve());files={}
+  for name in ['run.py','README.md','train_metrics.json','final_model/model.json']:
+   p=d/name
+   if p.is_file() and not p.is_symlink():files[name]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'text':p.read_text()}
+  result['scored_outputs'][str(d)]=files
+print(json.dumps(result))
+"""
+ program=program.replace('print(json.dumps(result))',extra)
+ with JOURNAL_LOCK:
+  r=ssh('cd /mnt/aba-scratch/aba && /mnt/aba-scratch/conda/envs/manager/bin/python -',payload=program,timeout=80);assert r.returncode==0,r.stderr[-300:]
+  token=(ROOT/'.secrets/nrp_api_key').read_text().strip();raw=r.stdout.replace(token,'[REDACTED]');x=json.loads(raw)
+  p=OUT/'journal-private.json';t=p.with_suffix('.tmp');t.write_text(raw);t.replace(p);return x
+def wait_controls(record):
+ until=time.monotonic()+8*3600
+ while time.monotonic()<until:
+  controls={}
+  for c in ('P11','P12'):
+   p=S/c/'run/host-private.json';controls[c]=json.loads(p.read_text())['status'] if p.exists() else 'NOT_STARTED'
+  if 'FAILED' in controls.values():raise RuntimeError('A fixed control failed; repair and preserve receipts before native launch')
+  if all(v=='COLLECTED' for v in controls.values()):return
+  record.update(status='WAITING_FIXED_CONTROLS_NO_VM',controls=controls);save(record);time.sleep(30)
+ raise TimeoutError('Fixed controls did not finish before bounded controller deadline')
+def main():
+ assert not OUT.exists(),'Never overwrite a native attempt';OUT.mkdir(mode=0o700);subprocess.Popen(['caffeinate','-i','-w',str(os.getpid())],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+ record={'status':'WAITING_FIXED_CONTROLS_NO_VM','local_controller_pid':os.getpid(),'driver_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'started_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'cleanup_errors':[],'official_TEST_rows':0,'native_completed':False};made=False;stop=threading.Event();t=None;token=''
+ try:
+  wait_controls(record);config=build_task(OUT)
+  obj=m.manifest();obj['metadata']['name']=NAME;obj['spec']['template']['spec']['volumes'][1]['emptyDisk']['capacity']='20Gi';obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData']=obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData'].replace('+20','+360')
+  k('create','--dry-run=server','-f','-',payload=json.dumps(obj));assert call(m.BASE+['get','vm',NAME]).returncode!=0;k('create','-f','-',payload=json.dumps(obj));made=True;record['status']='VM_STARTING';save(record);print('FORMAL_NATIVE_VM_CREATED',flush=True)
+  until=time.monotonic()+420
+  while time.monotonic()<until:
+   r=call(m.BASE+['get','vmi',NAME,'-o','json'])
+   if r.returncode==0 and json.loads(r.stdout).get('status',{}).get('phase')=='Running':break
+   time.sleep(5)
+  else:raise TimeoutError('VM scheduling')
+  until=time.monotonic()+180
+  while time.monotonic()<until:
+   if ssh('true',timeout=25).returncode==0:break
+   time.sleep(5)
+  else:raise TimeoutError('SSH readiness')
+  # Reuse the exact checksum-tested Conda/install/one-line dispatch repair recipe.
+  install=(ROOT/'scripts/kali8b_native_install.sh').read_text()
+  r=ssh(install,timeout=1100);(OUT/'install-private.json').write_text(json.dumps({'returncode':r.returncode,'stdout':r.stdout[-1000:],'stderr':r.stderr[-1000:],'install_program_sha256':hashlib.sha256(install.encode()).hexdigest()},indent=2));assert r.returncode==0,'Pinned native installation failed'
+  data={'config':config,'task':{p.name:p.read_text() for p in (OUT/'task').iterdir()}}
+  stage="import json,pathlib,sys;r=pathlib.Path('/mnt/aba-scratch/study');r.mkdir();x=json.load(sys.stdin);(r/'task').mkdir();[(r/'task'/k).write_text(v) for k,v in x['task'].items()];(r/'config.json').write_text(json.dumps(x['config'],indent=2)+'\\n');(r/'playground').mkdir();(r/'cli-state').mkdir(mode=0o700)"
+  r=ssh('python3 -c '+shlex.quote(stage),payload=json.dumps(data));assert r.returncode==0
+  for src,dest in [('nrp_anthropic_transport.py','transport.py'),('kali8b_native_mailbox.py','mailbox_server.py')]:
+   r=ssh('cat > '+REMOTE+'/'+dest,payload=(ROOT/'scripts'/src).read_text());assert r.returncode==0
+  t=threading.Thread(target=bridge,args=(sys.modules[__name__],stop),daemon=True);t.start()
+  launch='''import os,sys,subprocess,json,pathlib,threading
+sys.path.insert(0,'/mnt/aba-scratch/study');from transport import server
+proxy=server(29843);threading.Thread(target=proxy.serve_forever,daemon=True).start()
+from mailbox_server import serve
+threading.Thread(target=serve,daemon=True).start()
+r=pathlib.Path('/mnt/aba-scratch/study');token=sys.stdin.read().strip();e=os.environ.copy();e.update(AIBUILDAI_BASE_URL='http://127.0.0.1:29843',AIBUILDAI_API_KEY=token,CLAUDE_CONFIG_DIR=str(r/'cli-state'),XDG_RUNTIME_DIR='/run/user/1000',DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus',CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC='1',DISABLE_TELEMETRY='1',CONDA_EXE='/mnt/aba-scratch/conda/bin/conda',CONDA_PREFIX='/mnt/aba-scratch/conda/envs/manager')
+e['PATH']='/mnt/aba-scratch/conda/envs/manager/bin:'+e['PATH']
+for name in ['SMALL_FAST','HAIKU','SONNET','OPUS','SUBAGENT']:e['AIBUILDAI_'+name+'_MODEL']='qwen3'
+with (r/'native.log').open('w') as f:
+ try:p=subprocess.run(['/mnt/aba-scratch/conda/envs/manager/bin/aibuildai','run',str(r/'config.json')],cwd=r,env=e,stdout=f,stderr=subprocess.STDOUT,timeout=18300);rc=p.returncode
+ except subprocess.TimeoutExpired:rc=124
+(r/'exit.json').write_text(json.dumps({'returncode':rc}));print(json.dumps({'returncode':rc}))
+'''
+  token=(ROOT/'.secrets/nrp_api_key').read_text().strip();assert token and '\n' not in token;record.update(status='NATIVE_RUNNING',config_sha256=hashlib.sha256((OUT/'config.json').read_bytes()).hexdigest());save(record);print('FORMAL_NATIVE_RUNNING',flush=True)
+  r=ssh('/mnt/aba-scratch/conda/envs/manager/bin/python -c '+shlex.quote(launch),payload=token,timeout=18400)
+  (OUT/'client-private.json').write_text(json.dumps({'returncode':r.returncode,'stdout':r.stdout.replace(token,'[REDACTED]')[-1200:],'stderr':r.stderr.replace(token,'[REDACTED]')[-1000:]}))
+  j=collect_journal();freeze=json.loads((OUT/'native-task-freeze-private.json').read_text());assert j['task_hashes']==freeze['task_sha256'],'Native task mutated'
+  collect="import json,pathlib,hashlib;r=pathlib.Path('/mnt/aba-scratch/study');files={str(p.relative_to(r)):{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'text':p.read_text(errors='replace')} for p in (r/'playground').rglob('*') if p.is_file() and not p.is_symlink() and p.stat().st_size<200000 and 'deliverable' in p.parts};print(json.dumps({'files':files,'exit':json.loads((r/'exit.json').read_text()) if (r/'exit.json').exists() else None,'log_tail':(r/'native.log').read_text(errors='replace')[-5000:]}))"
+  a=ssh('python3 -c '+shlex.quote(collect));assert a.returncode==0;raw=a.stdout.replace(token,'[REDACTED]');(OUT/'native-artifacts-private.json').write_text(raw);art=json.loads(raw)
+  assert j['head']['result']=='completed' and not j['failures'],'Native run did not complete'
+  selected=next(x['output']['output'] for x in reversed(j['actions']) if x['target']=='search_1');directory=selected['output_dir'];files=j['scored_outputs'][directory]
+  names=['run.py','README.md','train_metrics.json','final_model/model.json'];assert set(files)==set(names)
+  deliveries={}
+  for name in names:
+   matches=[v for p,v in art['files'].items() if p.endswith('/deliverable/'+name)];assert len(matches)==1;assert matches[0]==files[name];deliveries[name]=matches[0]['sha256']
+  p=json.loads(files['final_model/model.json']['text']);cid=p['candidate_id'];expected=BROKER.call({'action':'score','pointer':p});assert abs(selected['score']-expected['score'])<1e-8
+  assert set(BROKER.started)=={'P13','P14'} and all(BROKER.states[c]['status']=='REAL_GPU_TRAINING_COMPLETE' for c in BROKER.started),'Two real ABA candidates required'
+  candidates=[(c,BROKER.call({'action':'score','pointer':BROKER.states[c]['pointer']})['score']) for c in BROKER.started]
+  assert expected['score']==max(s for _,s in candidates),'Native final selection is not highest-scoring certified ABA candidate'
+  # Pinned nb_tree initializes selected_output=None; baseline verification is
+  # not baseline admission. Keep the native winner distinct from host retention.
+  available=[(BROKER.baseline['candidate_id'],BROKER.baseline['score'])]+candidates
+  retained_cid,retained_score=max(available,key=lambda a:a[1])
+  retained_pointer=BROKER.baseline['pointer'] if retained_cid==BROKER.baseline['candidate_id'] else BROKER.states[retained_cid]['pointer']
+  selection={'status':'NATIVE_SEARCH_COMPLETE_SELECTION_FROZEN','candidate_id':retained_cid,'pointer':retained_pointer,'native_selected_candidate':cid,'native_selected_pointer':p,'native_run_id':j['run_id'],'DEV_score':retained_score,'native_selected_DEV_score':expected['score'],'all_available_scores':available,'deliverable_sha256':deliveries,'native_deliverable_candidate':cid,'retention_policy':'Native winner competes with preregistered fixed champion/E0 on DEV;ties retain the fixed champion. Never choose using final64.','final64_used':False,'official_TEST_rows':0}
+  (S/'native-selection-private.json').write_text(json.dumps(selection,indent=2)+'\n');record.update(status='COMPLETE_VERIFIED_NATIVE_8B_STUDY',native_completed=True,native_selected_candidate=cid,retained_candidate=retained_cid,native_run_id=j['run_id']);save(record)
+ except BaseException as e:
+  record.update(status='FAILED',error_type=type(e).__name__,error=str(e)[:300]);print(json.dumps({'status':'FAILED','error_type':type(e).__name__,'error':str(e)[:200]}),flush=True)
+  if made:
+   try:collect_journal()
+   except Exception:pass
+ finally:
+  stop.set()
+  if t:t.join(timeout=120)
+  if made:
+   for args in [('delete','vm',NAME,'--ignore-not-found=true','--wait=true','--timeout=60s'),('wait','--for=delete','vmi/'+NAME,'--timeout=60s')]:
+    r=call(m.BASE+list(args),timeout=75)
+    if r.returncode:record['cleanup_errors'].append(r.stderr[-200:])
+  KNOWN.unlink(missing_ok=True);save(record);print(json.dumps(record),flush=True)
+if __name__=='__main__':main()

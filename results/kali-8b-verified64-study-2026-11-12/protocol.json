@@ -121,10 +121,21 @@
     "status": "CONFIRMATION_IMPLEMENTATION_FROZEN_BEFORE_OUTPUTS",
     "created_at_utc": "2026-11-12T18:27:54.180407+00:00",
     "worker_sha256": "6ca5f77ea82a7bedb1215742f6e9dda19e166de9d771f63f288fceadc69ff7c0",
-    "runner_sha256": "84937e263c512090abbdfcc6467b49224b1e74d02006447b121b52e7b25ec425",
+    "runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94",
     "references_sha256": "6593bbcd7001928c538abb7fd4037bd91cc3f27af9ccc119b1b440cacd65d20a",
     "query_inputs_sha256": "0ad15f884e892164d69705665bdfab6f242a371898d2325e4370647466167b84",
     "model_outputs": 0,
-    "official_TEST_rows": 0
+    "official_TEST_rows": 0,
+    "implementation_amendment_at_utc": "2026-11-12T18:40:40.573351+00:00",
+    "amendment_reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected."
+  },
+  "selection_implementation_clarification": {
+    "status": "SOURCE_DERIVED_IMPLEMENTATION_CORRECTION_BEFORE_CANDIDATE_RESULTS",
+    "at_utc": "2026-11-12T18:40:40.573351+00:00",
+    "reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected.",
+    "numerical_protocols_unchanged": true,
+    "native_only_patch": "zero-request Composite dispatch,unchanged",
+    "original_confirmation_runner_sha256": "84937e263c512090abbdfcc6467b49224b1e74d02006447b121b52e7b25ec425",
+    "new_confirmation_runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94"
   }
 }

@@ -1,0 +1,54 @@
+"""Build an immutable, bounded native ABA task after fixed controls are scored."""
+import gzip,hashlib,json,subprocess,sys
+from pathlib import Path
+from kali8b_native_bridge import freeze_baseline
+ROOT=Path(__file__).resolve().parents[1];S=ROOT/'data/benchkit/kali-8b-verified64-study-2026-11-12'
+def build(out):
+ out=Path(out);task=out/'task';task.mkdir();baseline=freeze_baseline()
+ payload=json.loads(gzip.decompress((S/'P13/payload-private.json.gz').read_bytes()))
+ (task/'train-encoded.json').write_text(json.dumps(payload['train_rows'],separators=(',',':'))+'\n')
+ manifest={'status':'FROZEN_NATIVE_ABA_TWO_RECIPES','model_id':baseline['pointer']['model_id'],'model_revision':baseline['pointer']['model_revision'],'training_rows':733,'quality_counts':{'publisher_verified':669,'behavior_verified_silver':64},'optimizer_steps':733,'supervised_tokens':17439,'train_encoded_sha256':hashlib.sha256((task/'train-encoded.json').read_bytes()).hexdigest(),'recipes':{c:json.loads((S/c/'protocol-private.json').read_text())['optimizer'] for c in ['P13','P14']},'protocol_sha256':json.loads((S/'protocol-freeze-private.json').read_text())['protocol_sha256'],'official_TEST_rows':0,'final64_used':False}
+ (task/'training_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+ (task/'base_model.json').write_text(json.dumps(baseline['pointer'],indent=2)+'\n')
+ (task/'baseline_metrics.json').write_text(json.dumps({'baseline':True,'optimizer_steps':baseline['pointer']['optimizer_steps'],'source':'completed fixed-control GPU receipt or original E0','official_TEST_rows':0},indent=2)+'\n')
+ (task/'train_client.py').write_bytes((ROOT/'scripts/kali8b_native_client.py').read_bytes())
+ (task/'README.md').write_text('''# KaliBench verified64: bounded native ABA adaptation
+The 8B base is RISys-Lab/RedSage-K-SFT-GRPO at the immutable revision in training_manifest.json. This is an internal TRAIN-derived DEV study, not an official TEST score. The host owns frozen data, recipes, GPU jobs, and grader. No judge examples or cluster credentials are supplied. Public train-encoded.json has 733 masked tokenized TRAIN rows: 669 publisher-verified and 64 locally behavior-verified silver rows (32 correlated families). Silver is not independent expert gold.
+
+The baseline pointer is the best gate-passing fixed control (or E0 if neither passes). It is an actual saved model, not a synthetic zero score. Each ABA candidate starts again from the ORIGINAL 8B weights, not from this champion. The two preregistered alternatives are P13 (mixed data, lr1e-5, seed43) and P14 (mixed data, lr2e-5, seed42), 733 genuine optimizer updates each, one GPU at a time. All other optimizer/inference settings are frozen. Do not invent additional candidates or revisions. requested_gpus=0 for the CPU Worker: the trusted client dispatches an external ordinary-priority GPU job. Search budget two is not equal to fixed SFT's one-candidate search budget.
+
+Setup must expose exactly README.md, train-encoded.json, training_manifest.json, base_model.json, train_client.py. Keep evaluate.py, setup_scaffold.md and baseline_metrics.json private. Do not train or execute submit during Setup or Designer. Use the supplied private scoring wrapper and preserve all native baseline/boundary gates.
+
+Designer: propose two DISTINCT plans, one for each of P13/P14, no revisions or external references. Worker: read training_manifest.json and the unmodified train_client.py. In a Bash command set DATA_DIR=PUBLIC, OUTPUT_DIR=your artifacts/full; call python train_client.py submit --candidate P13 (or P14 as assigned). Submission returns quickly. GPU queue/training can take up to 3 hours. Poll the same client's wait action about once per minute; sleep55 and client wait may be grouped in a Bash timeout100000. IN_PROGRESS is normal, never submit a duplicate or claim completion. On REAL_GPU_TRAINING_COMPLETE call finalize with the same candidate. This writes final_model/model.json, train_metrics.json, run.py, README.md. Inspect all four and submit only after real updates and verified adapter recovery. Host failures must be reported, never replaced by invented metrics. The host denies training unless native Setup passed and a Worker is active. Do not access judge files or alter the client/data.
+
+PRIVATE score is the frozen host internal DEV score: 100*(candidate native mean minus E0) if all predeclared retention/gain gates pass, otherwise -1. Baseline is measured by the same host. Larger is better. Worker cannot score or read private DEV; native Score does this after submission. Finalizer copies all four selected files byte-for-byte into deliverable; do not retrain or reconstruct. Pointers reference actual private adapters, whose tensors are recovered, SHA verified and retained by the host; no tensors need copying to this CPU VM. Final sealed64 confirmation happens only after the native search finishes and selection is frozen.
+''')
+ (task/'evaluate.py').write_text('''import argparse,json,urllib.request
+from pathlib import Path
+p=argparse.ArgumentParser();p.add_argument('--model-path',type=Path,required=True);a=p.parse_args();pointer=json.loads((a.model_path/'model.json').read_text())
+r=urllib.request.Request('http://127.0.0.1:29847/candidate',data=json.dumps({'action':'score','pointer':pointer}).encode(),headers={'Content-Type':'application/json'})
+with urllib.request.urlopen(r,timeout=100) as s:result=json.load(s)
+assert 'score' in result and not result.get('status')=='FAILED'
+print(json.dumps(result))
+''')
+ (task/'setup_scaffold.md').write_text('''# Frozen Setup recipe
+Keep all native verifiers. Do not run any training or submit the client. Expose only README.md, train-encoded.json, training_manifest.json, base_model.json, train_client.py under PUBLIC. No judge data is supplied to Worker.
+Write PRIVATE/score.py with callable score(output_dir): subprocess.run([sys.executable,'/mnt/aba-scratch/study/task/evaluate.py','--model-path',str(Path(output_dir)/'final_model')],check=True,capture_output=True,text=True); return json.loads(stdout). Metric score, direction max; returned components are numeric. Do not catch failures or return a fabricated score.
+Write PRIVATE/baseline_attempt/final_model/model.json as EXACT base_model.json bytes. train_metrics.json is EXACT baseline_metrics.json bytes. README.md identifies the actual frozen champion baseline. run.py can be the exact train_client.py bytes for reproducibility (not executed for baseline). Read/Write tools can copy protected task text; Bash must not modify protected inputs. Baseline may have zero or733 optimizer updates depending on which actual fixed model won. It is NOT a newly trained ABA candidate. Pass the real native baseline scoring verifier, then finish promptly. Do not implement a substitute scorer or inspect host data.
+''')
+ tmp=out/'config-template.json';subprocess.run([sys.executable,str(ROOT/'scripts/build-aba-synthetic-config.py'),'--remote-root','/mnt/aba-scratch/study','--output',str(tmp)],capture_output=True,check=True)
+ config=json.loads(tmp.read_text());tmp.unlink();config['run']['task_name']='kali8b-verified64';config['run']['budget'].update(wall_clock_minutes=300,cost_usd=30,per_agent_cost_cap_usd=12)
+ config['llm']['default']['model']='qwen3';config['llm']['retry_ceiling_s']=45
+ config['llm']['system_instructions'].update(setup='Read README.md and setup_scaffold.md first. Implement exactly the operator Setup recipe. No training/sanity candidates/submit in Setup. Preserve all native verifiers. Keep evaluate.py and setup files private. Pass measured baseline score promptly.',designer='Read README.md and training_manifest.json. Propose exactly two DISTINCT plans: P13 lr1e-5 seed43 and P14 lr2e-5 seed42, both733updates. requested_gpus=0 because external broker dispatches GPU. No revisions, no extra recipes, references=[]. Do not submit or train.',worker='Use unmodified public/train_client.py for the assigned P13 or P14. Submit once, poll wait every55s with Bash timeout100000, until REAL_GPU_TRAINING_COMPLETE, then finalize and inspect all four files. IN_PROGRESS is normal for up to3hours; do not resubmit. Never fabricate, implement another trainer, or read judge material. Explicitly include --candidate in every call. DATA_DIR is PUBLIC, OUTPUT_DIR is artifacts/full.',finalizer='Copy selected final_model/model.json,train_metrics.json,README.md,run.py preserving bytes into deliverable and immediately submit StructuredOutput. Do not retrain, rewrite, score again, or invent missing files.')
+ config['search']['input'].update(parallel=1,num_designs=2,num_revisions=1,max_evaluations=2,early_stopping=2)
+ for unit in config['work_units']:
+  if unit['name']=='worker':unit['budget']['minutes']=200
+  elif unit['name']=='setup':unit['budget']['minutes']=18
+  elif unit['name']=='designer':unit['budget']['minutes']=18
+  elif unit['name']=='finalizer':unit['budget']['minutes']=12
+  elif unit['name']=='score_program':unit['budget']['minutes']=3
+  elif unit['name']=='training':unit['budget']['minutes']=195
+ (out/'config.json').write_text(json.dumps(config,indent=2)+'\n')
+ runtime_files=['run-kali8b-native-study-20261112.py','kali8b_native_bridge.py','kali8b_native_mailbox.py','kali8b_native_client.py','kali8b_native_vm.py','kali8b_native_journal.py','kali8b_native_install.sh','kali8b_study_jobs.py']
+ frozen={'task_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in task.iterdir()},'runtime_source_sha256':{n:hashlib.sha256((ROOT/'scripts'/n).read_bytes()).hexdigest() for n in runtime_files},'config_sha256':hashlib.sha256((out/'config.json').read_bytes()).hexdigest(),'baseline':baseline,'native_candidates_maximum':2,'official_TEST_rows':0,'final64_used':False}
+ (out/'native-task-freeze-private.json').write_text(json.dumps(frozen,indent=2)+'\n');return config

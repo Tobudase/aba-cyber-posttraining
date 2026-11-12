@@ -1,0 +1,7 @@
+"""CPU-only, finite-lived KubeVirt controller. No model-training GPU or PVC."""
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];KEY=ROOT/'.secrets/pilot_ed25519';PUB=ROOT/'.secrets/pilot_ed25519.pub';BASE=['kubectl','--context','nautilus','-n','ecepxie']
+def manifest():
+ public=PUB.read_text().strip();assert public.startswith('ssh-ed25519 ') and '\n' not in public
+ cloud='#cloud-config\nuser: fedora\nssh_pwauth: false\nssh_authorized_keys:\n  - '+public+'\nruncmd:\n  - [shutdown, -h, +20]\n'
+ return {'apiVersion':'kubevirt.io/v1','kind':'VirtualMachine','metadata':{'name':'REPLACE','labels':{'app.kubernetes.io/managed-by':'miw113','app.kubernetes.io/part-of':'kali8b-verified64-study'}},'spec':{'runStrategy':'Once','template':{'metadata':{'labels':{'app.kubernetes.io/managed-by':'miw113'}},'spec':{'terminationGracePeriodSeconds':0,'domain':{'resources':{'requests':{'cpu':'1','memory':'6Gi'},'limits':{'cpu':'2','memory':'8Gi'}},'devices':{'disks':[{'name':n,'disk':{'bus':'virtio'}} for n in ['root','cloudinit','scratch']],'interfaces':[{'name':'default','masquerade':{}}]}},'networks':[{'name':'default','pod':{}}],'volumes':[{'name':'root','containerDisk':{'image':'quay.io/containerdisks/fedora@sha256:4e905e6cdb66b93a82af98192452988c7f6777e67b7b2fdfd67598301ea4d759'}},{'name':'scratch','emptyDisk':{'capacity':'20Gi'}},{'name':'cloudinit','cloudInitNoCloud':{'userData':cloud}}]}}}}
