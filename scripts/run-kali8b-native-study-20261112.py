@@ -5,11 +5,12 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r3';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r4';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
 SSH=[str(ROOT/'.tools/virtctl'),'--context','nautilus','-n','ecepxie','ssh','fedora@vm/'+NAME,'--identity-file',str(m.KEY),'--known-hosts',str(KNOWN),'--local-ssh-opts=-o StrictHostKeyChecking=accept-new','--local-ssh-opts=-o IdentitiesOnly=yes','--local-ssh-opts=-o ConnectTimeout=10']
+SSH+=['--local-ssh-opts=-o ServerAliveInterval=20','--local-ssh-opts=-o ServerAliveCountMax=6']
 def call(args,payload=None,timeout=60):return subprocess.run(args,input=payload,text=True,capture_output=True,timeout=timeout,cwd=ROOT)
 def ssh(command,payload=None,timeout=60):return call(SSH+['--command',command],payload,timeout)
 def k(*args,payload=None):
@@ -77,22 +78,10 @@ def main():
   for src,dest in [('nrp_anthropic_transport.py','transport.py'),('kali8b_native_mailbox.py','mailbox_server.py')]:
    r=ssh('mkdir -p /mnt/aba-scratch/.tools; cat > '+REMOTE+'/'+dest,payload=(ROOT/'scripts'/src).read_text());assert r.returncode==0
   t=threading.Thread(target=bridge,args=(sys.modules[__name__],stop),daemon=True);t.start()
-  launch='''import os,sys,subprocess,json,pathlib,threading
-sys.path.insert(0,'/mnt/aba-scratch/study');from transport import server
-proxy=server(29843);threading.Thread(target=proxy.serve_forever,daemon=True).start()
-from mailbox_server import serve
-threading.Thread(target=serve,daemon=True).start()
-r=pathlib.Path('/mnt/aba-scratch/study');token=sys.stdin.read().strip();e=os.environ.copy();e.update(AIBUILDAI_BASE_URL='http://127.0.0.1:29843',AIBUILDAI_API_KEY=token,CLAUDE_CONFIG_DIR=str(r/'cli-state'),XDG_RUNTIME_DIR='/run/user/1000',DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus',CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC='1',DISABLE_TELEMETRY='1',CONDA_EXE='/mnt/aba-scratch/conda/bin/conda',CONDA_PREFIX='/mnt/aba-scratch/conda/envs/manager')
-e['PATH']='/mnt/aba-scratch/conda/envs/manager/bin:'+e['PATH']
-for name in ['SMALL_FAST','HAIKU','SONNET','OPUS','SUBAGENT']:e['AIBUILDAI_'+name+'_MODEL']='qwen3'
-with (r/'native.log').open('w') as f:
- try:p=subprocess.run(['/mnt/aba-scratch/conda/envs/manager/bin/aibuildai','run',str(r/'config.json')],cwd=r,env=e,stdout=f,stderr=subprocess.STDOUT,timeout=27000);rc=p.returncode
- except subprocess.TimeoutExpired:rc=124
-(r/'exit.json').write_text(json.dumps({'returncode':rc}));print(json.dumps({'returncode':rc}))
-'''
-  token=(ROOT/'.secrets/nrp_api_key').read_text().strip();assert token and '\n' not in token;record.update(status='NATIVE_RUNNING',config_sha256=hashlib.sha256((OUT/'config.json').read_bytes()).hexdigest());save(record);print('FORMAL_NATIVE_RUNNING',flush=True)
-  r=ssh('/mnt/aba-scratch/conda/envs/manager/bin/python -c '+shlex.quote(launch),payload=token,timeout=27100)
-  (OUT/'client-private.json').write_text(json.dumps({'returncode':r.returncode,'stdout':r.stdout.replace(token,'[REDACTED]')[-1200:],'stderr':r.stderr.replace(token,'[REDACTED]')[-1000:]}))
+  from kali8b_native_daemon import start_and_wait
+  token=(ROOT/'.secrets/nrp_api_key').read_text().strip();assert token and '\n' not in token;record.update(status='NATIVE_STARTING',config_sha256=hashlib.sha256((OUT/'config.json').read_bytes()).hexdigest());save(record)
+  state=start_and_wait(sys.modules[__name__],token,record)
+  (OUT/'client-private.json').write_text(json.dumps({'transport':'detached_systemd','exit':state['exit'],'SSH_reconnect_failures':record.get('SSH_reconnect_failures',0),'credential_source_removed':state['credential_source_removed']}))
   j=collect_journal();freeze=json.loads((OUT/'native-task-freeze-private.json').read_text());assert j['task_hashes']==freeze['task_sha256'],'Native task mutated'
   collect="import json,pathlib,hashlib;r=pathlib.Path('/mnt/aba-scratch/study');files={str(p.relative_to(r)):{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'text':p.read_text(errors='replace')} for p in (r/'playground').rglob('*') if p.is_file() and not p.is_symlink() and p.stat().st_size<200000 and 'deliverable' in p.parts};print(json.dumps({'files':files,'exit':json.loads((r/'exit.json').read_text()) if (r/'exit.json').exists() else None,'log_tail':(r/'native.log').read_text(errors='replace')[-5000:]}))"
   a=ssh('python3 -c '+shlex.quote(collect));assert a.returncode==0;raw=a.stdout.replace(token,'[REDACTED]');(OUT/'native-artifacts-private.json').write_text(raw);art=json.loads(raw)

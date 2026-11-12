@@ -4,9 +4,12 @@ from pathlib import Path
 from kali8b_study_grade import score_arm
 ROOT=Path(__file__).resolve().parents[1];S=ROOT/'data/benchkit/kali-8b-verified64-study-2026-11-12';BASE=['kubectl','--context','nautilus','-n','ecepxie'];WORKER=ROOT/'scripts/run-kali-8b-verified64-worker-20261112.py';RECIPE=ROOT/'scripts/kali_verified64_sft_recipe.py';CIDS={'P11','P12','P13','P14'}
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+class TransientClusterError(RuntimeError):pass
 def k(*args,payload=None,check=True,timeout=90):
  p=subprocess.run(BASE+list(args),input=payload,text=True,capture_output=True,timeout=timeout)
- if check and p.returncode:raise RuntimeError(p.stderr[-500:])
+ if check and p.returncode:
+  transient=any(s in p.stderr.lower() for s in ['connection reset','unable to connect','tls handshake timeout','i/o timeout','context deadline exceeded','serviceunavailable','temporarily unavailable'])
+  raise (TransientClusterError if transient else RuntimeError)(p.stderr[-500:])
  return p
 
 def paths(cid):
@@ -113,7 +116,9 @@ def check_once(cid):
 def watch(cid,seconds=28800):
  until=time.monotonic()+seconds;last=None
  while time.monotonic()<until:
-  done,r=check_once(cid)
+  try:done,r=check_once(cid)
+  except (TransientClusterError,subprocess.TimeoutExpired):
+   print(json.dumps({'candidate_id':cid,'status':'RECONNECTING_CLUSTER_WITHOUT_RESUBMITTING'}),flush=True);time.sleep(15);continue
   if r['status']!=last:print(json.dumps({'candidate_id':cid,'status':r['status'],'native_delta':r.get('native_delta'),'error':r.get('error')}),flush=True);last=r['status']
   if done:return r
   time.sleep(30)

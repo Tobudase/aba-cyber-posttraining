@@ -1,5 +1,5 @@
 """Host-only native ABA recipe dispatcher and frozen scorer. Maximum one GPU."""
-import base64,gzip,hashlib,json,shlex,threading,time
+import base64,gzip,hashlib,json,shlex,subprocess,threading,time
 from pathlib import Path
 import kali8b_study_jobs as jobs
 ROOT=jobs.ROOT;S=jobs.S;CIDS=('P13','P14')
@@ -82,23 +82,28 @@ class Broker:
     r=json.loads(f.read_text());jobs.delete_training(cid,r);r.update(status='FAILED',error='Native controller stopped before training completion');f.write_text(json.dumps(r,indent=2)+'\n')
 
 def bridge(driver,stop):
- broker=Broker(driver);driver.BROKER=broker;done=set();transport_failures=0
+ broker=Broker(driver);driver.BROKER=broker;done=set();transport_failures=0;responses={}
  try:
   while not stop.is_set():
    code="import json,pathlib;d=pathlib.Path('/mnt/aba-scratch/study/broker');print(json.dumps({p.name:p.read_text() for p in d.glob('*.request.json') if not p.with_name(p.name.replace('.request.','.response.')).exists()}))"
-   r=driver.ssh('python3 -c '+shlex.quote(code))
-   if r.returncode:
+   try:r=driver.ssh('python3 -c '+shlex.quote(code))
+   except (subprocess.TimeoutExpired,OSError):r=None
+   if r is None or r.returncode:
     transport_failures+=1
-    if transport_failures>=5:raise RuntimeError('Repeated mailbox SSH failure')
-    stop.wait(5);continue
+    (driver.OUT/'bridge-connectivity-private.json').write_text(json.dumps({'status':'RECONNECTING','consecutive_failures':transport_failures,'running_GPU_not_cancelled_for_transient_SSH':True})+'\n');stop.wait(10);continue
    transport_failures=0
    for name,raw in json.loads(r.stdout).items():
     if name in done:continue
-    try:response=broker.call(json.loads(raw))
-    except Exception as e:response={'status':'FAILED','error_type':type(e).__name__,'detail':str(e)[:180]}
+    if name not in responses:
+     try:responses[name]=broker.call(json.loads(raw))
+     except Exception as e:responses[name]={'status':'FAILED','error_type':type(e).__name__,'detail':str(e)[:180]}
+    response=responses[name]
     target=name.replace('.request.','.response.')
     code="import pathlib,sys;p=pathlib.Path('/mnt/aba-scratch/study/broker')/"+repr(target)+";t=p.with_suffix('.tmp');t.write_text(sys.stdin.read());t.replace(p)"
-    r=driver.ssh('python3 -c '+shlex.quote(code),payload=json.dumps(response));assert r.returncode==0;done.add(name)
+    try:r=driver.ssh('python3 -c '+shlex.quote(code),payload=json.dumps(response))
+    except (subprocess.TimeoutExpired,OSError):r=None
+    if r is None or r.returncode:break
+    done.add(name)
    stop.wait(2)
  finally:
   if broker.current:broker.abort_running()

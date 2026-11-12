@@ -158,5 +158,15 @@
       "numerical_protocols_unchanged": true,
       "prior_GPU_submissions": 0
     }
-  ]
+  ],
+  "controller_disconnect_fix": {
+    "status": "FIXED_HOST_SSH_DISCONNECT_AS_FALSE_NATIVE_EXIT",
+    "at_utc": "2026-11-12T20:17:27.950600+00:00",
+    "prior_run_id": "3edd3081d4af4cef90f9b191cf9ae6ad",
+    "evidence": "TaskhelpercompletedandnativeSetupstilllive;foregroundSSHresetbyNLnetwork;hostmistookSSHexitfornativeexitanddeletedVM.",
+    "prior_native_GPU_submissions": 0,
+    "fix": "Bounded detachedsystemduserSupervisor,lingeringguestuser,stdin-onlytemporary0600NRPkeyremovedonread,exitreceiptpolling/reconnect;mailboxresponsecachepreventsredispatch;transientSSHdoesnotcancelGPU.",
+    "numerical_data_optimizer_inference_scorer_gates_unchanged": true,
+    "tests": "test-kali8b-native-supervisor.py passedmockdisconnect,keyremoval,noargcredential,exitreceipt,response-deliveryretry-idempotence."
+  }
 }
