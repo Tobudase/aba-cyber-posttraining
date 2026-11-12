@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 12, 2026 — behavior-verified TRAIN supplement
+
+I froze **64 new authored TRAIN rows across 32 task families and four tools** after actual Linux behavior checks and paired wrong-command checks. Four of 68 candidates remain quarantined. All 64 admitted labels self-score 1.0 with the pinned native scorer and pass RedSage prompt masking, think-prefix/EOS round-trip and no-truncation checks. These are exploratory, AI-authored local-runtime silver labels; no new LLM training or independent gain is claimed. [Chinese report and reproduction](docs/KALI_BEHAVIOR_TRAIN_2026-11-12_ZH.md) · [TRAIN data](data/kali-behavior-train-2026-11-12/train.jsonl) · [Manifest](results/kali-behavior-train-2026-11-12/manifest.json).
+
 ## November 12, 2026 — remaining TRAIN source survey
 
 A read-only, split-safe check found only **3** publisher TRAIN records matching option groups absent from P07 training on repeatedly harmed development tools; all three have `PASS_RUNTIME_ERROR` rather than successful execution, so **none is directly admitted**. Three existing authored pools (108, 156, and 32 rows) have zero matching tool-and-option-group overlap. This narrows the next step to new behaviorally verified, diverse TRAIN data before another GPU comparison. No official TEST, new model output, or GPU was used. [Chinese audit](docs/KALI_PUBLISHER_REMAINDER_AUDIT_2026-11-12_ZH.md) · [Aggregate](results/kali-publisher-remainder-2026-11-12/aggregate.json).

@@ -1,0 +1,550 @@
+{
+  "candidate_checks": [
+    {
+      "id": "kali-fixture-hardlink-consolidate-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-dry-run-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-exclude-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-include-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-respect-name-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-minimum-size-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-ignore-mode-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-keep-oldest-1",
+      "admitted": false,
+      "reference_behavior_pass": false,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-no-seed-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-copies-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-symlinks-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-prompt-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-system-site-packages-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-clear-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-bash-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-fish-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-addition-1",
+      "admitted": false,
+      "reference_behavior_pass": false,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-hyphenation-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-omission-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-repetition-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-transposition-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-vowel-swap-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-insertion-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-replacement-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-onefile-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-onedir-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-name-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-console-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-windowed-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-add-data-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 2
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-hidden-import-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-exclude-module-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-noupx-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-collect-all-1",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-consolidate-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-dry-run-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-exclude-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-include-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-respect-name-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-minimum-size-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-ignore-mode-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-hardlink-keep-oldest-2",
+      "admitted": false,
+      "reference_behavior_pass": false,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-no-seed-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-copies-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-symlinks-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-prompt-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-system-site-packages-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-clear-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-bash-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-virtualenv-fish-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-addition-2",
+      "admitted": false,
+      "reference_behavior_pass": false,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-hyphenation-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-omission-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-repetition-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-transposition-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-vowel-swap-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-insertion-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-dnstwist-replacement-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-onefile-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-onedir-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-name-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-console-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-windowed-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-add-data-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 2
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-hidden-import-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-exclude-module-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-noupx-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    },
+    {
+      "id": "kali-fixture-pyi-makespec-collect-all-2",
+      "admitted": true,
+      "reference_behavior_pass": true,
+      "mutation_rejected": true,
+      "reference_exit_code": 0,
+      "mutation_exit_code": 0
+    }
+  ],
+  "admitted_rows": 64,
+  "gpu": 0
+}

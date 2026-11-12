@@ -1,0 +1,13 @@
+{
+  "status": "SFT_ENCODING_PASS_NO_TRAINING",
+  "rows": 64,
+  "train_sha256": "95b8877b182eb5b484cbd82cf8351629fca02b10718da750c387efa198cc4525",
+  "encoded_sha256": "694252c720ade76536e257e154b9b771028fe187adee790c451d3a86c4c0a12c",
+  "max_sequence_tokens": 411,
+  "total_supervised_tokens": 1626,
+  "prompt_loss_mask_correct": 64,
+  "think_prefix_completion_roundtrip_correct": 64,
+  "eos_appended": 64,
+  "truncated_rows": 0,
+  "optimizer_steps": 0
+}

@@ -1,0 +1,35 @@
+{
+  "status": "EXPLORATORY_TRAIN_FROZEN_BEHAVIOR_AND_MUTATION_VERIFIED",
+  "rows": 64,
+  "candidate_rows": 68,
+  "quarantined_rows": 4,
+  "families": 32,
+  "tool_counts": {
+    "hardlink": 14,
+    "virtualenv": 16,
+    "dnstwist": 14,
+    "pyi-makespec": 20
+  },
+  "train_sha256": "95b8877b182eb5b484cbd82cf8351629fca02b10718da750c387efa198cc4525",
+  "fixture_program_sha256": "1cfc20c0a896aa351490ce2c92d69fc97398053525a2335b0de097978eff193b",
+  "runtime_receipt_sha256": "c2cd371419fd27240bd36e23bf9fbf1c9630e9a5fcb62f5885fef7f2adcb19d3",
+  "runtime_image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+  "native_gold_echo_pass": 64,
+  "positive_behavior_pass": 64,
+  "wrong_command_rejected": 64,
+  "official_TRAIN_exact_query_overlap": 0,
+  "official_TRAIN_exact_command_overlap": 0,
+  "protected_DEV_final_input_hash_overlap": 0,
+  "official_TEST_rows_read": 0,
+  "sealed_final64_outputs_queried": 0,
+  "gpu": 0,
+  "exposed_DEV_adaptive": true,
+  "independent_expert_reviewed": false,
+  "limitations": [
+    "AI-authored silver validated against specific local fixtures, not independent gold.",
+    "Two surface variants per family; 64 rows are 32 correlated families.",
+    "Tool choice informed by exposed DEV; that DEV cannot establish independent generalization.",
+    "Four tools do not cover all 19 harmed tools or all missing options.",
+    "No model training or improved model score is claimed."
+  ]
+}
