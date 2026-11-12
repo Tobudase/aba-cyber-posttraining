@@ -47,17 +47,17 @@
     "ABA search2candidates versus fixedSFT1;reporttotalcost,noequal-search-budget superiorityclaim."
   ],
   "protocol_hashes": {
-    "P11": "18deda1693836acbdb4d905f975460a14cf9e6d27c6d5215b26118cf4dd27cf7",
-    "P12": "9a9d6c98e6dec762920ea87a664a159e8d2263e1c0a833159c40e03aad49bb8a",
-    "P13": "ef1c85e16a27551f92b73d2c15fddd2f7e0895148f20c379e32376a0973ef477",
-    "P14": "54faeed349b73b645bcdab1a6fb0b4995d8f330db2940de93615b036e9efcf49"
+    "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+    "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+    "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+    "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
   },
   "decision_gates": {
     "minimum_native_mean_gain": 0.005,
     "maximum_panel_native_drop": 0.02,
     "maximum_untargeted_native_drop": 0.02
   },
-  "hardware_policy": "First scheduled P11 us-west/us-central A100-SXM4-80GB hostname pins otherarms;ordinary priority;oneGPUatonce;freshP11 base predictions required.",
+  "hardware_policy": "First scheduled P11 us-west/us-central A100 (40/80GB) hostname pins allotherarms;ordinarypriority;oneGPUatonce;freshP11 base predictions mustmatch beforetraining.",
   "independent_confirmation": {
     "rows": 64,
     "arms": [
@@ -75,10 +75,10 @@
   "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "deterministic_algorithms": true,
   "attention_backend": "math_sdpa",
-  "protocol_freeze_sha256": "45d40c13270bda205f247d8f1e482d04db95b255fa0763cc7ab3f1fc2271fa32",
+  "protocol_freeze_sha256": "d393a2ac89ca98b491dcfa2d9aad24f01eca1ab2f3aaf7cd81305c79d29c54e2",
   "worker_sha256": "2e21c53194545f458a068584bd799e6f9319ca8cf3f862956411944489fd4fae",
   "recipe_sha256": "4411dddf01f2cbc0449889c811fbf39be7404fd4facfdf823d0bf8c3a955f085",
-  "grading_lock_sha256": "14a6b3942e0e7325f9dbaee442da3de7bd5f1a4815943d9b2f3341c588da1450",
+  "grading_lock_sha256": "bdb4e1a0076a63fb28143af5a724bfbff67d4ba5e71fa8f5e0c50746ac6f92b2",
   "resource_amendment": {
     "status": "RESOURCE_ONLY_AMENDMENT_BEFORE_NUMERICAL_OUTPUTS",
     "at_utc": "2026-11-12T18:11:01.286635+00:00",
@@ -97,5 +97,34 @@
     },
     "training_data_optimizer_scorer_unchanged": true,
     "cancelled_control_GPU_allocated": false
+  },
+  "resource_variant_amendment": {
+    "status": "RESOURCE_ONLY_AMENDMENT_BEFORE_NUMERICAL_OUTPUTS",
+    "at_utc": "2026-11-12T18:29:44.301466+00:00",
+    "reason": "Include compatible A100 PCIe40/80GB alongsideSXM80;previousstudyfits~18GB,allarms pinnedfirstnode;no numerical outputs observed.",
+    "old_protocol_sha256": {
+      "P11": "18deda1693836acbdb4d905f975460a14cf9e6d27c6d5215b26118cf4dd27cf7",
+      "P12": "9a9d6c98e6dec762920ea87a664a159e8d2263e1c0a833159c40e03aad49bb8a",
+      "P13": "ef1c85e16a27551f92b73d2c15fddd2f7e0895148f20c379e32376a0973ef477",
+      "P14": "54faeed349b73b645bcdab1a6fb0b4995d8f330db2940de93615b036e9efcf49"
+    },
+    "new_protocol_sha256": {
+      "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+    },
+    "training_data_optimizer_scorer_unchanged": true,
+    "cancelled_control_GPU_allocated": false
+  },
+  "confirmation_implementation": {
+    "status": "CONFIRMATION_IMPLEMENTATION_FROZEN_BEFORE_OUTPUTS",
+    "created_at_utc": "2026-11-12T18:27:54.180407+00:00",
+    "worker_sha256": "6ca5f77ea82a7bedb1215742f6e9dda19e166de9d771f63f288fceadc69ff7c0",
+    "runner_sha256": "84937e263c512090abbdfcc6467b49224b1e74d02006447b121b52e7b25ec425",
+    "references_sha256": "6593bbcd7001928c538abb7fd4037bd91cc3f27af9ccc119b1b440cacd65d20a",
+    "query_inputs_sha256": "0ad15f884e892164d69705665bdfab6f242a371898d2325e4370647466167b84",
+    "model_outputs": 0,
+    "official_TEST_rows": 0
   }
 }
