@@ -19,6 +19,11 @@
   "matching_model_verdicts": {
     "ACCURATE": 3
   },
+  "matching_runtime_blockers": {
+    "MISSING_LOCAL_DICTIONARY": 1,
+    "NETWORK_DEPENDENT_BROWSER_STEP": 1,
+    "RUBY_FILE_API_INCOMPATIBILITY": 1
+  },
   "existing_authored_pool_overlap": {
     "kali-doc-train-v1": {
       "rows": 108,
