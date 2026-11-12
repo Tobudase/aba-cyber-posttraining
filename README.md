@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 11, 2026 — ABA controller recovery check
+
+The persistent ABA VM is blocked by a cluster storage-controller error. A bounded, PVC-free Linux VM successfully installed the pinned ABA source, completed its owned-tool setup, and passed the systemd/cgroup and bubblewrap prerequisites; all temporary resources were cleaned. This is an **environment check**, with no GPU training, model output, or official TEST use. The next run still needs a pinned VM image, working model-control and GPU-worker connections, and durable artifact collection. I also confirmed in the upstream KaliBench verifier that `PASS_EXECUTED` certifies successful command exit, not semantic correctness, so the P10 source-silver labels remain quarantined. [Recovery note](docs/ABA_CONTROLLER_RECOVERY_2026-11-11.md).
+
 ## November 11, 2026 — P10 source-label quality gate
 
 P09 timed out while waiting for A100 scheduling, with no training or model outputs. P10 pre-froze a matched 733-step control replacing 14 publisher TRAIN rows with 14 AI-authored source-silver rows while keeping supervised target-token count equal. A bounded Linux CPU check then found only **8/14** commands executable in the available runtime: two `hardlink --cache-size` and four `more --exit-on-eof` labels used options that its installed utilities rejected. AI review also found that two of the `more` labels used the wrong flag for the prompt's form-feed requirement. I cancelled P10 **before GPU scheduling** and cleaned all owned resources. **No P09/P10 model score exists; E0 remains the default; official TEST remains untouched.** None of the 16 AI-authored source-silver rows are admitted to the next GPU run without version and semantic review. [Chinese audit](docs/KALI_P10_LABEL_QA_ABORT_ZH_2026-11-11.md) · [Sanitized summary](results/kali-p10-label-qa-2026-11-11/summary.json).
