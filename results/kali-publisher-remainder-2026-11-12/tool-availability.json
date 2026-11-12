@@ -1,0 +1,33 @@
+{
+  "status": "BOUNDED_CPU_ONLY_TOOL_AVAILABILITY",
+  "tools_checked": 19,
+  "installed_count": 5,
+  "installed_tools": [
+    "hardlink",
+    "lsblk",
+    "lsmem",
+    "more",
+    "setterm"
+  ],
+  "not_installed_count": 14,
+  "not_installed_tools": [
+    "d2j-baksmali",
+    "d2j-smali",
+    "dnscat2-server",
+    "dnstwist",
+    "metacam",
+    "pacu",
+    "pocsuite",
+    "pyi-makespec",
+    "rfcomm-tester",
+    "rkhunter",
+    "sprayhound",
+    "svwar",
+    "twofi",
+    "virtualenv"
+  ],
+  "gpu": 0,
+  "official_TEST_rows": 0,
+  "owned_resource_cleanup_errors": 0,
+  "scope": "Pinned training worker image only; absence does not imply the tool is unavailable on all images."
+}
