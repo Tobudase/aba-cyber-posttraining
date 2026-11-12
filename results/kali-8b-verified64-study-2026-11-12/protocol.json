@@ -1,0 +1,101 @@
+{
+  "status": "PREREGISTERED_BEFORE_CANDIDATE_OUTPUTS",
+  "created_at_utc": "2026-11-12T17:47:38.714520+00:00",
+  "base_protocol_sha256": "b09b0210a3bfc5a847d1cf3c924f1c1449c3dafeef45c88795ed60dd28af7a58",
+  "new_train_sha256": "95b8877b182eb5b484cbd82cf8351629fca02b10718da750c387efa198cc4525",
+  "fixture_program_sha256": "1cfc20c0a896aa351490ce2c92d69fc97398053525a2335b0de097978eff193b",
+  "train_rows": 733,
+  "new_silver_rows": 64,
+  "remaining_publisher_rows": 669,
+  "supervised_tokens_per_arm": 17439,
+  "replacement_target_token_delta": 0,
+  "replacement_prompt_token_delta": -654,
+  "removed_rows_distinct_tools": 44,
+  "retained_original_rows_per_removed_tool_minimum": 2,
+  "arms": {
+    "P11": {
+      "kind": "fixed_publisher_control",
+      "data": "publisher",
+      "lr": 1e-05,
+      "seed": 42
+    },
+    "P12": {
+      "kind": "fixed_verified64_SFT",
+      "data": "mixed",
+      "lr": 1e-05,
+      "seed": 42
+    },
+    "P13": {
+      "kind": "native_ABA_allowed",
+      "data": "mixed",
+      "lr": 1e-05,
+      "seed": 43
+    },
+    "P14": {
+      "kind": "native_ABA_allowed",
+      "data": "mixed",
+      "lr": 2e-05,
+      "seed": 42
+    }
+  },
+  "official_TEST_rows": 0,
+  "sealed_final64_outputs": 0,
+  "limitations": [
+    "64 authored silver rows are32correlated families,notexpertgold.",
+    "DEV128 exposed and source-adaptive;confirmation required.",
+    "Equalupdates and supervisedtokens;prompttokens/FLOPs notexactlymatched.",
+    "ABA search2candidates versus fixedSFT1;reporttotalcost,noequal-search-budget superiorityclaim."
+  ],
+  "protocol_hashes": {
+    "P11": "18deda1693836acbdb4d905f975460a14cf9e6d27c6d5215b26118cf4dd27cf7",
+    "P12": "9a9d6c98e6dec762920ea87a664a159e8d2263e1c0a833159c40e03aad49bb8a",
+    "P13": "ef1c85e16a27551f92b73d2c15fddd2f7e0895148f20c379e32376a0973ef477",
+    "P14": "54faeed349b73b645bcdab1a6fb0b4995d8f330db2940de93615b036e9efcf49"
+  },
+  "decision_gates": {
+    "minimum_native_mean_gain": 0.005,
+    "maximum_panel_native_drop": 0.02,
+    "maximum_untargeted_native_drop": 0.02
+  },
+  "hardware_policy": "First scheduled P11 us-west/us-central A100-SXM4-80GB hostname pins otherarms;ordinary priority;oneGPUatonce;freshP11 base predictions required.",
+  "independent_confirmation": {
+    "rows": 64,
+    "arms": [
+      "E0",
+      "P11",
+      "P12",
+      "native_ABA_selected_deduplicated"
+    ],
+    "query_only_after_selection_frozen": true,
+    "no_further_training_after_confirmation": true,
+    "promotion_candidate": "single preselected best,not chosen from final64 results",
+    "gates": "preselected native mean > E0,strict count>=E0,format/truncations<=E0"
+  },
+  "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+  "deterministic_algorithms": true,
+  "attention_backend": "math_sdpa",
+  "protocol_freeze_sha256": "45d40c13270bda205f247d8f1e482d04db95b255fa0763cc7ab3f1fc2271fa32",
+  "worker_sha256": "2e21c53194545f458a068584bd799e6f9319ca8cf3f862956411944489fd4fae",
+  "recipe_sha256": "4411dddf01f2cbc0449889c811fbf39be7404fd4facfdf823d0bf8c3a955f085",
+  "grading_lock_sha256": "14a6b3942e0e7325f9dbaee442da3de7bd5f1a4815943d9b2f3341c588da1450",
+  "resource_amendment": {
+    "status": "RESOURCE_ONLY_AMENDMENT_BEFORE_NUMERICAL_OUTPUTS",
+    "at_utc": "2026-11-12T18:11:01.286635+00:00",
+    "reason": "L40/L40S ordinary pool unschedulable;use one approved A100",
+    "old_protocol_sha256": {
+      "P11": "899672c76cd67f22ef6c737dbc9a9b0e08e88094d15e4711cbefee71ccd3c0ce",
+      "P12": "d80307a2756bb63d2c577cc2ea449dc138218ac2055d31220d8037158290f682",
+      "P13": "107c47685e71e403329d1ad43976528bcd7afbf92af41f10d7ad8c717625c58b",
+      "P14": "6feac2728a4af2154da84a92ed38954e1d0e3249ba3b3fc023268073ce2deadd"
+    },
+    "new_protocol_sha256": {
+      "P11": "18deda1693836acbdb4d905f975460a14cf9e6d27c6d5215b26118cf4dd27cf7",
+      "P12": "9a9d6c98e6dec762920ea87a664a159e8d2263e1c0a833159c40e03aad49bb8a",
+      "P13": "ef1c85e16a27551f92b73d2c15fddd2f7e0895148f20c379e32376a0973ef477",
+      "P14": "54faeed349b73b645bcdab1a6fb0b4995d8f330db2940de93615b036e9efcf49"
+    },
+    "training_data_optimizer_scorer_unchanged": true,
+    "cancelled_control_GPU_allocated": false
+  }
+}
