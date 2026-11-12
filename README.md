@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 12, 2026 — remaining TRAIN source survey
+
+A read-only, split-safe check found only **3** publisher TRAIN records matching option groups absent from P07 training on repeatedly harmed development tools; all three have `PASS_RUNTIME_ERROR` rather than successful execution, so **none is directly admitted**. Three existing authored pools (108, 156, and 32 rows) have zero matching tool-and-option-group overlap. This narrows the next step to new behaviorally verified, diverse TRAIN data before another GPU comparison. No official TEST, new model output, or GPU was used. [Chinese audit](docs/KALI_PUBLISHER_REMAINDER_AUDIT_2026-11-12_ZH.md) · [Aggregate](results/kali-publisher-remainder-2026-11-12/aggregate.json).
+
 ## November 12, 2026 — P10 label disposition frozen
 
 A bounded CPU-only check identified the pinned runtime as util-linux 2.37.2 and tested `hardlink --dry-run --exclude` against harmless duplicate files. Of 16 AI-authored source-silver rows, **2** now have local-runtime behavioral fixture support and are eligible only for exploratory training; **14** remain quarantined for ambiguous task scope, missing behavioral evidence, unsupported options, semantic mismatch, or an absent tool. Two related rows are too narrow for a useful GPU comparison, so no new model was trained or promoted. Official TEST remains untouched. [Chinese audit](docs/KALI_P10_SEMANTIC_QA_2026-11-12_ZH.md) · [Aggregate](results/kali-p10-semantic-qa-2026-11-12/summary.json).

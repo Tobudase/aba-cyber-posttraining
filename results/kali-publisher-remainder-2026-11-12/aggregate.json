@@ -1,0 +1,41 @@
+{
+  "status": "READ_ONLY_PUBLISHER_TRAIN_REMAINDER_SURVEY",
+  "publisher_train_sha256": "93dc4ddff6d9df73bed4b9e92716470e7a73df513f5ca2f1b201c85f2329f909",
+  "publisher_train_rows": 3504,
+  "protected_P07_and_final_ids": 929,
+  "official_TEST_rows_read": 0,
+  "sealed_final64_outputs_queried": 0,
+  "GPU_jobs": 0,
+  "common_harm_rows": 29,
+  "tools_with_missing_P07_train_required_flag_groups": 19,
+  "publisher_unprotected_rows_matching_missing_groups": 3,
+  "matching_tool_counts": {
+    "dnstwist": 2,
+    "twofi": 1
+  },
+  "matching_terminal_labels": {
+    "PASS_RUNTIME_ERROR": 3
+  },
+  "matching_model_verdicts": {
+    "ACCURATE": 3
+  },
+  "existing_authored_pool_overlap": {
+    "kali-doc-train-v1": {
+      "rows": 108,
+      "rows_matching_missing_groups": 0,
+      "distinct_matching_tools": 0
+    },
+    "kali-doc-train-v2": {
+      "rows": 156,
+      "rows_matching_missing_groups": 0,
+      "distinct_matching_tools": 0
+    },
+    "kali-replay-v2": {
+      "rows": 32,
+      "rows_matching_missing_groups": 0,
+      "distinct_matching_tools": 0
+    }
+  },
+  "direct_train_eligible_from_this_survey": 0,
+  "interpretation": "Matching rows are only leads for review; PASS_RUNTIME_ERROR is not execution validation."
+}
