@@ -567,5 +567,128 @@
       "cleanup_returncode": 0,
       "finished_at_utc": "2026-11-13T01:40:22.745963+00:00"
     }
+  },
+  "controller_special_token_recovery": {
+    "status": "GPTOSS_LITERAL_SPECIAL_TOKEN_GATEWAY_FAILURE_CONFIRMED_DEEPSEEK_MULTITURN_PROBE_PASS",
+    "at_utc": "2026-11-13T02:05:01.272216+00:00",
+    "failed_run_id": "1229b895ebd047e08d91c5695fa5ab3a",
+    "cause_evidence": {
+      "tool_name": "Ls?<|end|><|start|>assistant",
+      "error_feedback_returned_to_next_turn": true,
+      "native_setup_failure_kind": "rate_limited",
+      "native_error": "PermanentError: API Error: 500 Encountered text corresponding to disallowed special token '<|end|>'.\nIf you want this text to be encoded as a special token, pass it to `allowed_special`, e.g. `allowed_special={'<|end|>', ...}`.\nIf you want this text to be encoded as normal text, disable the check for this token by passing `disallowed_special=(enc.special_tokens_set - {'<|end|>'})`.\nTo disable this check for all special tokens, pass `disallowed_special=()`. This is a server-side issue, usually temporary \u2014 try again in a moment. If it persists, check your inference gateway (127.0.0.1:29843).",
+      "upstream_status": 500,
+      "interpretation": "Actual native failure was HTTP500 disallowed special token after malformed tool-name history. Minimal neutral reproduction with identical error feedback: marker-bearing toolname ->500/sameexception;markerless undeclared toolname ->200. Plain text markers alone ->200. This isolates the tool-name encoding path in the minimal test,not arbitrary text or ordinary quota exhaustion. Exact full failing request was not captured.",
+      "prompts_or_tool_names_not_sanitized": true,
+      "server_tokenizer_guard_not_disabled": true
+    },
+    "replacement_controller_probe": {
+      "model": "deepseek-v4-flash",
+      "started_at_utc": "2026-11-13T02:04:16.607618+00:00",
+      "sequence": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "invalid_arguments": 0,
+      "intentional_error_feedback": 1,
+      "final_seen": true,
+      "result_seen": true,
+      "unknown_tools": [],
+      "training_calls": 0,
+      "benchmark_questions": 0,
+      "default_permissions": true,
+      "literal_special_marker_in_feedback": true,
+      "result_is_error": false,
+      "result_subtype": "success",
+      "seconds": 21.33,
+      "finished_at_utc": "2026-11-13T02:04:37.966305+00:00",
+      "passed": true
+    },
+    "P13_P14_GPU_updates": 0,
+    "final64_queries": 0,
+    "official_TEST_rows": 0,
+    "numerical_training_protocols_unchanged": true,
+    "counterfactual_field_probe": {
+      "checked_at_utc": "2026-11-13T02:10:48.503200+00:00",
+      "neutral_only": true,
+      "training_calls": 0,
+      "benchmark_questions": 0,
+      "identical_error_feedback_text_for_all_cases": true,
+      "results": [
+        {
+          "endpoint": "/v1/messages/count_tokens",
+          "marker_in_tool_name": true,
+          "status": 404,
+          "disallowed_special_token_error": false,
+          "seconds": 0.12
+        },
+        {
+          "endpoint": "/v1/messages/count_tokens",
+          "marker_in_tool_name": false,
+          "status": 404,
+          "disallowed_special_token_error": false,
+          "seconds": 0.1
+        },
+        {
+          "endpoint": "/v1/messages",
+          "marker_in_tool_name": true,
+          "status": 500,
+          "disallowed_special_token_error": true,
+          "seconds": 0.45
+        },
+        {
+          "endpoint": "/v1/messages",
+          "marker_in_tool_name": false,
+          "status": 200,
+          "disallowed_special_token_error": false,
+          "seconds": 0.97
+        }
+      ]
+    },
+    "plain_text_marker_negative_control": {
+      "checked_at_utc": "2026-11-13T02:07:46.375646+00:00",
+      "model": "gpt-oss",
+      "neutral_diagnostic_only": true,
+      "training_calls": 0,
+      "benchmark_questions": 0,
+      "results": [
+        {
+          "case": "literal_marker",
+          "status": 200,
+          "disallowed_special_token_error": false,
+          "seconds": 0.7
+        },
+        {
+          "case": "clean_control",
+          "status": 200,
+          "disallowed_special_token_error": false,
+          "seconds": 0.84
+        }
+      ],
+      "paired_reproduction_pass": false
+    },
+    "same_malformed_tool_history_recovery": {
+      "model": "deepseek-v4-flash",
+      "checked_at_utc": "2026-11-13T02:12:08.073267+00:00",
+      "neutral_only": true,
+      "training_calls": 0,
+      "benchmark_questions": 0,
+      "malformed_tool_name_preserved": true,
+      "status": 200,
+      "message_type": "message",
+      "served_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "passed": true,
+      "seconds": 2.5
+    },
+    "actual_remote_pinned_config_preflight": {
+      "status": "PINNED_FULL_AGENT_CONFIG_PASS",
+      "old_short_alias_rejected": true,
+      "catalog_model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "transport_alias": "identity:deepseek-v4-flash",
+      "training_model_unchanged": true
+    }
   }
 }
