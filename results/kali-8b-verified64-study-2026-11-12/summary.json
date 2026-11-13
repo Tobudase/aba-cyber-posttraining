@@ -1,6 +1,6 @@
 {
-  "status": "IN_PROGRESS",
-  "updated_at_utc": "2026-11-13T10:37:54.483467+00:00",
+  "status": "COMPLETE_BOUNDED_8B_STUDY",
+  "updated_at_utc": "2026-11-13T14:24:18.797390+00:00",
   "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
   "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "study_protocol_freeze_sha256": "d393a2ac89ca98b491dcfa2d9aad24f01eca1ab2f3aaf7cd81305c79d29c54e2",
@@ -364,8 +364,131 @@
       "cleanup_errors": []
     },
     "P14": {
-      "status": "NOT_STARTED",
-      "protocol_sha256": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+      "status": "COLLECTED",
+      "protocol_sha256": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a",
+      "node_name": "gp-engine.usd.edu",
+      "observed_pod_resources": {
+        "limits": {
+          "cpu": "2",
+          "ephemeral-storage": "24Gi",
+          "memory": "12Gi",
+          "nvidia.com/a100": "1"
+        },
+        "requests": {
+          "cpu": "2",
+          "ephemeral-storage": "24Gi",
+          "memory": "12Gi",
+          "nvidia.com/a100": "1"
+        }
+      },
+      "score": {
+        "status": "FROZEN_INTERNAL_DEV_STUDY_SCORE",
+        "candidate_id": "P14",
+        "summary": {
+          "base": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7559337797619048,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7562872023809524,
+              "strict_correct": 27,
+              "format_errors": 3,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7555803571428571,
+              "strict_correct": 21,
+              "format_errors": 2,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7527969790066564,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            }
+          },
+          "candidate": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7637428977272727,
+              "strict_correct": 55,
+              "format_errors": 1,
+              "truncations": 1
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.798119212962963,
+              "strict_correct": 32,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7293665824915825,
+              "strict_correct": 23,
+              "format_errors": 1,
+              "truncations": 1
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7648902620676814,
+              "strict_correct": 55,
+              "format_errors": 1,
+              "truncations": 1
+            }
+          }
+        },
+        "native_delta": 0.007809117965367873,
+        "selection_gates": {
+          "native_gain": true,
+          "strict_retained": true,
+          "format_retained": true,
+          "truncation_retained": false,
+          "DEV_panel_retention": false,
+          "untargeted_retention": true
+        },
+        "passes_all_gates": false,
+        "ABA_score": -1.0,
+        "paired_strict": {
+          "gained": 11,
+          "lost": 4
+        },
+        "official_TEST_rows": 0,
+        "sealed_final64_used": false,
+        "scope": "Exposed publisher-TRAIN DEV diagnosis; not independent or official score."
+      },
+      "receipt": {
+        "status": "COMPLETE_8B_STUDY_ARM",
+        "run_kind": "native_ABA_allowed",
+        "initial_lora_sha256": "e12720c1bc125d8ef122643e6c54adf1798aac1b42612b7f146da319db119cd2",
+        "adapter_sha256": "054c32ce9d87cf3be5c35289647e89735dc5cb14f56ab6ae5aadf641497207fe",
+        "adapter_config_sha256": "86f6c8e5282c9c35cba1fc9e3402be9d9a35cbe9ec9619d15f226e5df1cc48b2",
+        "optimizer_steps": 733,
+        "nonzero_gradient_steps": 733,
+        "changed_tensors": 144,
+        "supervised_token_presentations": 17439,
+        "adapter_reload_max_logit_delta": 0.0,
+        "GPU": "NVIDIA A100-SXM4-80GB",
+        "GPU_count": 1,
+        "deterministic_algorithms": true,
+        "attention_backend": "math_sdpa",
+        "wall_seconds": 2757.73,
+        "peak_cuda_allocated_bytes": 17731082240,
+        "quality_counts": {
+          "publisher_verified": 669,
+          "source_silver": 64
+        }
+      },
+      "adapter_tensor_count": 144,
+      "cleanup_errors": []
     }
   },
   "limitations": [
@@ -619,6 +742,33 @@
     "final64_queries": 0,
     "controller_cost_limitation": "ServedDeepSeekV4.1alias lacks upstreampricingtier;do nottreatreportedUSD ascompletecontrollercost. Reporttime/tokenusageinstead."
   },
+  "consistency": {
+    "status": "PASS_REAL_FOUR_ARM_CONSISTENCY",
+    "arms": [
+      "P11",
+      "P12",
+      "P13",
+      "P14"
+    ],
+    "all_fresh_base_DEV128_bytes_identical": true,
+    "base_predictions_sha256": "5467ad8ab4f85c859af535a3b5a412c7e0d15f140aec93bf1f4afce2ee8031e7",
+    "seed42_initial_LoRA_bytes_identical_P11_P12_P14": true,
+    "seed43_P13_initial_LoRA_differs": true,
+    "P12_P14_epoch_order_identical": true,
+    "P12_P14_first_pre_update_loss_gradient_token_record_identical": true,
+    "P12_P14_first_pre_update_record": {
+      "step": 1,
+      "epoch": 1,
+      "loss": 1.7949185371398926,
+      "gradient_norm_before_clip": 9.866765022277832,
+      "supervised_tokens": 23
+    },
+    "P11_P12_pre_replacement_14_step_records_identical": true,
+    "optimizer_steps_per_arm": 733,
+    "supervised_tokens_per_arm": 17439,
+    "DEV_gradient_rows": 0,
+    "scope": "Necessary implementation consistency checks for these runs;not an independent replication,unique historical root-cause proof,or statistical-stability guarantee."
+  },
   "discarded_partial_attempts": [
     {
       "status": "DISCARDED_INCOMPLETE_NATIVE_P13_NO_CERTIFIED_CHECKPOINT",
@@ -664,14 +814,280 @@
   "discarded_optimizer_updates_lower_bound": 704,
   "discarded_approximate_GPU_allocation_window_hours": 0.7553466491666667,
   "native_progress": {
-    "status": "INSTALLING_DETACHED",
-    "native_completed": false,
-    "run_id": null,
+    "status": "COMPLETE_VERIFIED_NATIVE_8B_STUDY",
+    "native_completed": true,
+    "run_id": "1a14375b8e094c80aebc50c9c7f4698a",
     "run_result": null,
     "controller_requested_model": "deepseek-v4-flash",
     "cleanup_errors": []
   },
-  "research_experiment_complete": false,
+  "selection": {
+    "status": "NATIVE_SEARCH_COMPLETE_SELECTION_FROZEN",
+    "candidate_id": "E0",
+    "pointer": {
+      "schema": "kali.verified64.pointer.v1",
+      "candidate_id": "E0",
+      "grading_lock_sha256": "bdb4e1a0076a63fb28143af5a724bfbff67d4ba5e71fa8f5e0c50746ac6f92b2",
+      "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+      "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+      "adapter_sha256": null,
+      "optimizer_steps": 0
+    },
+    "native_selected_candidate": "P13",
+    "native_selected_pointer": {
+      "schema": "kali.verified64.pointer.v1",
+      "candidate_id": "P13",
+      "grading_lock_sha256": "bdb4e1a0076a63fb28143af5a724bfbff67d4ba5e71fa8f5e0c50746ac6f92b2",
+      "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+      "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+      "adapter_sha256": "7ce54da6d92a87e5dc805e576717066e1c3bfa3666ad5ded76ac5139fdf8c9ec",
+      "optimizer_steps": 733
+    },
+    "native_run_id": "1a14375b8e094c80aebc50c9c7f4698a",
+    "DEV_score": 0.0,
+    "native_selected_DEV_score": -1.0,
+    "all_available_scores": [
+      [
+        "E0",
+        0.0
+      ],
+      [
+        "P13",
+        -1.0
+      ],
+      [
+        "P14",
+        -1.0
+      ]
+    ],
+    "deliverable_sha256": {
+      "run.py": "8085fe973987b31b18c2a0d2358e167942d2a5bd8248514008d36c54f9be18c4",
+      "README.md": "05144f942cb8597122ea8c0349526de4eef1fba4f8987cf18dc89a86c7e0fe18",
+      "train_metrics.json": "e5e61b05817b8a367c4b9115c99349962eb3db154e77a0c8b52eb8ea650a73f6",
+      "final_model/model.json": "dae78dbd678bd5f50a61fbb16b14e1198ac89123ddfa2a9336128bc69fdcc3f0"
+    },
+    "native_deliverable_candidate": "P13",
+    "retention_policy": "Native winner competes with preregistered fixed champion/E0 on DEV;ties retain the fixed champion. Never choose using final64.",
+    "final64_used": false,
+    "official_TEST_rows": 0
+  },
+  "native": {
+    "controller_requested_model": "deepseek-v4-flash",
+    "controller_served_models": [
+      "",
+      "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    ],
+    "controller_scope": "NRP-hosted orchestration only;fine-tuned model remains8B. Hosted controller weights are not trained here.",
+    "status": "COMPLETE_VERIFIED_NATIVE_8B_STUDY",
+    "head": {
+      "readable": true,
+      "incompatible": null,
+      "result": "completed",
+      "blocked_reason": null,
+      "suspended": false,
+      "head_elapsed_s": 10033.360133952001,
+      "started_at_unix": 1794566799.8282623,
+      "updated_at_unix": 1794576833.213335,
+      "ended_at_unix": 1794576833.213335
+    },
+    "event_counts": {
+      "RunOpened": 1,
+      "RunEpochOpened": 1,
+      "RunConfigRecorded": 1,
+      "ActionStarted": 14,
+      "ActionAttemptStarted": 14,
+      "RunClockHeartbeat": 1771,
+      "ExecutionCreated": 13,
+      "AgentSpecBuilt": 5,
+      "InvocationStarted": 5,
+      "SessionStarted": 5,
+      "TextDelta": 24,
+      "UsageDelta": 72,
+      "ToolUseStart": 81,
+      "ToolUseEnd": 81,
+      "TurnComplete": 5,
+      "ProgramAttemptRecorded": 6,
+      "ActionCompleted": 14,
+      "MetricContractRecorded": 1,
+      "SearchExplorationStarted": 1,
+      "SearchResultSelected": 2,
+      "SearchExplorationFinished": 1
+    },
+    "source_sha256": {
+      "run-kali8b-native-study-20261112.py": "1f204bd578c163b5ae33df62e378528dfd60be0d10b226c408501411585a922e",
+      "build-kali8b-native-study.py": "f72b603a680314e836504ceb8499e8fce797677cfa0b721cbee316225da15e65",
+      "build_kali8b_native_study_import.py": "d96bf9b09b85ef5d94ff75bb5989d3a83c4bbc64ad44bc08bba6240c83d9b3c1",
+      "build-aba-synthetic-config.py": "76e2999efdfff221180792434b7a1193f630af81db263a6bc6ffb8053cb66ab1",
+      "nrp_anthropic_transport.py": "5c36391a83bce5d2189fbaf415e8eea297ba4489f4022192fb9a4a62cc38492e",
+      "kali8b_native_bridge.py": "729ef11ec9dfbb090608c4f87b76b7fd2db6758c12fbead80c239d10247b987e",
+      "kali8b_native_mailbox.py": "ae8a1250337205afbb6afd9dd917eee3b05f69664416b2eacc5925a821d8f0f8",
+      "kali8b_native_client.py": "6e06b1c396b786b4aeeb2240b3ac10549583d1619708008da8568060036f768a",
+      "kali8b_native_vm.py": "f29e98f4dfd3cce8274b6e82afb47515125f7d4670d59c4dd20128e40cf707ff",
+      "kali8b_native_journal.py": "50b76cc8f22ba878082f4c6ac9a48243a4087ad77f6bf85de242cf5378c52a36",
+      "kali8b_native_install.sh": "9dbbe43e67768fae25175e0c2e06fc701ae85e38abf0ac4c56afb030a8dfb23a",
+      "kali8b_study_jobs.py": "aa549d777766f623668a638d1e76b1b2ee7381f681e54a1ae64df9edb199cd6d",
+      "kali8b_prepare_contract.py": "3ef9fadbe306017ba4e2ced3fc294546b19edce6e03ed8d4365797b693c50bb9",
+      "kali8b_native_daemon.py": "e2ccaca2d9f1a138917ecb60cb72256b56b8de69a388e96dc20f93d673d0d5ba",
+      "kali8b_native_supervisor.py": "bf1c68375538f558b16f28114acc1ebfcee5677b25d7161331a65b598c5cac9c",
+      "kali8b_remote_install.py": "df2e6658fb9697c968da793d6b2608501565c3d29805fb5e5ae4ff10902b7209",
+      "check-kali8b-study-consistency.py": "aa3c5020a5e0b9998bea24ccc53f17bdb6a133af83500086cef3f6ad914ad834",
+      "kali8b_native_reuse.py": "5c25f8a4df866f64a2250274ed5c2d564f526ef85b6272765d88c8e4df33cf47"
+    },
+    "cleanup_errors": [],
+    "training_provenance": {
+      "P13": {
+        "execution": "CERTIFIED_PREVIOUS_NATIVE_ARM_REUSED",
+        "source_native_run_id": "a7309a918547431cb77ba60bcf2675f7",
+        "source_proof_sha256": "91a158b9c423936498e8e215a57c6ad12c868b0cbfe7d608e37aed9bceb447ac",
+        "original_optimizer_steps": 733,
+        "new_optimizer_steps_this_run": 0,
+        "reuse_is_not_new_training": true
+      },
+      "P14": {
+        "execution": "FRESH_NATIVE_GPU_TRAINING",
+        "source_native_run_id": "1a14375b8e094c80aebc50c9c7f4698a",
+        "original_optimizer_steps": 733,
+        "new_optimizer_steps_this_run": 733,
+        "reuse_is_not_new_training": false
+      }
+    },
+    "delivered_client_sha256_by_candidate": {
+      "P13": "8085fe973987b31b18c2a0d2358e167942d2a5bd8248514008d36c54f9be18c4",
+      "P14": "8085fe973987b31b18c2a0d2358e167942d2a5bd8248514008d36c54f9be18c4"
+    },
+    "source_version_scope": "source_sha256 records final declared deployed source. Per-candidate delivered client hashes capture the exact copied artifact version;P13 replay finalized before the client amendment. Neither is a full process-memory attestation. Numeric trainer/recipe/data/scorer hashes remain unchanged.",
+    "auxiliary_readonly_status_helper": {
+      "sha256": "caa9222d75dc0c9178417277891a007a14876a6838b056ae843e6f0e12128521",
+      "scope": "Agent-authored Python9minute read-only status polling after client timeout diagnostics;never submits,finalizes,trains,grades orchangesdata. Trustedclient still handles submission/finalization."
+    }
+  },
+  "confirmation": {
+    "status": "FROZEN64_CONFIRMATION_COMPLETE",
+    "preselected_candidate": "E0",
+    "summary": {
+      "E0": {
+        "rows": 64,
+        "native_mean": 0.761061507936508,
+        "strict_correct": 24,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "P11": {
+        "rows": 64,
+        "native_mean": 0.7520025402837903,
+        "strict_correct": 26,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "P12": {
+        "rows": 64,
+        "native_mean": 0.758974041005291,
+        "strict_correct": 27,
+        "format_errors": 0,
+        "truncations": 0
+      },
+      "P13": {
+        "rows": 64,
+        "native_mean": 0.7595568783068782,
+        "strict_correct": 27,
+        "format_errors": 0,
+        "truncations": 0
+      }
+    },
+    "preselected_retention_gates": {
+      "native_improved": false,
+      "strict_retained": true,
+      "format_retained": true,
+      "truncation_retained": true
+    },
+    "preselected_passed": false,
+    "paired_strict": {
+      "P11": {
+        "gained": 4,
+        "lost": 2
+      },
+      "P12": {
+        "gained": 5,
+        "lost": 2
+      },
+      "P13": {
+        "gained": 5,
+        "lost": 2
+      }
+    },
+    "no_candidate_selection_using_confirmation": true,
+    "official_TEST_rows": 0,
+    "scope": "Previously unqueried TRAIN-derived internal confirmation;publisher-verified silver,not expert gold,not source-separated,not an official benchmark score. Internal gate passing alone does not establish public leaderboard gains or model deployment readiness."
+  },
+  "confirmation_receipt": {
+    "status": "COMPLETE_FROZEN64_EVAL_ONLY",
+    "rows_per_arm": 64,
+    "arms": [
+      "E0",
+      "P11",
+      "P12",
+      "P13"
+    ],
+    "optimizer_steps": 0,
+    "gradients_created": false,
+    "GPU": "NVIDIA A100-SXM4-80GB",
+    "GPU_count": 1,
+    "adapter_sha256": {
+      "P11": {
+        "weights_sha256": "5bde4612a0012fe3b6e9cfa0762cc77eb7b2b07fa92997452b465ad03a02a86f",
+        "config_sha256": "731066a0cb3857ecc290ee0e2b2b3de721d10465cd540cba81d16ae8f9184f27"
+      },
+      "P12": {
+        "weights_sha256": "37ac0238592816173471b052e4dafe512a94ffaadef2336628af6eae89529fcd",
+        "config_sha256": "86f6c8e5282c9c35cba1fc9e3402be9d9a35cbe9ec9619d15f226e5df1cc48b2"
+      },
+      "P13": {
+        "weights_sha256": "7ce54da6d92a87e5dc805e576717066e1c3bfa3666ad5ded76ac5139fdf8c9ec",
+        "config_sha256": "731066a0cb3857ecc290ee0e2b2b3de721d10465cd540cba81d16ae8f9184f27"
+      }
+    },
+    "worker_sha256": "6ca5f77ea82a7bedb1215742f6e9dda19e166de9d771f63f288fceadc69ff7c0",
+    "config_sha256": "bbe281a30457f334f3f251b2d37509e7cde16e210e4eb8ac2342d8fd1b2e809b",
+    "selection_sha256": "314a3d38b119f379b5ca5a19df88cd4312501c96725f43c1a806402e4c37712f",
+    "wall_seconds": 617.67,
+    "peak_cuda_allocated_bytes": 17178078208,
+    "official_TEST_rows": 0
+  },
+  "confirmation_cleanup_errors": [],
+  "native_score_audit": {
+    "status": "PASS_TWO_CURRENT_NATIVE_SCORE_PROGRAMS",
+    "native_run_id": "1a14375b8e094c80aebc50c9c7f4698a",
+    "candidate_ids": [
+      "P13",
+      "P14"
+    ],
+    "certified_scores": {
+      "P13": {
+        "score": -1.0,
+        "adapter_sha256": "7ce54da6d92a87e5dc805e576717066e1c3bfa3666ad5ded76ac5139fdf8c9ec"
+      },
+      "P14": {
+        "score": -1.0,
+        "adapter_sha256": "054c32ce9d87cf3be5c35289647e89735dc5cb14f56ab6ae5aadf641497207fe"
+      }
+    },
+    "before_confirmation_created": true,
+    "at_utc": "2026-11-13T13:34:35.745691+00:00",
+    "model_calls": 0,
+    "official_TEST_rows": 0
+  },
+  "research_experiment_complete": true,
+  "training_GPU_worker_hours": 1.5739999999999998,
+  "confirmation_GPU_worker_hours": 0.17157499999999998,
+  "new_GPU_training_arms_in_final_native_run": [
+    "P14"
+  ],
+  "reused_prior_native_training_arms": [
+    "P13"
+  ],
+  "completed_arm_optimizer_updates": 2932,
+  "total_optimizer_updates_lower_bound": 3636,
+  "cost_scope": "training_GPU_worker_hours includes completed workers only,not discarded attempts. Each completedworker time includes modelstaging,training,inference;excludesqueue,CPUexport,controllerVM. Discarded allocationwindow is separatelyapproximate. Neither is FLOPs or billing.",
   "matched_replacement_effect_P12_minus_P11": {
     "native_mean_delta": -0.021784812409812337,
     "strict_count_delta": -3,

@@ -1,0 +1,27 @@
+{
+  "status": "PASS_REAL_FOUR_ARM_CONSISTENCY",
+  "arms": [
+    "P11",
+    "P12",
+    "P13",
+    "P14"
+  ],
+  "all_fresh_base_DEV128_bytes_identical": true,
+  "base_predictions_sha256": "5467ad8ab4f85c859af535a3b5a412c7e0d15f140aec93bf1f4afce2ee8031e7",
+  "seed42_initial_LoRA_bytes_identical_P11_P12_P14": true,
+  "seed43_P13_initial_LoRA_differs": true,
+  "P12_P14_epoch_order_identical": true,
+  "P12_P14_first_pre_update_loss_gradient_token_record_identical": true,
+  "P12_P14_first_pre_update_record": {
+    "step": 1,
+    "epoch": 1,
+    "loss": 1.7949185371398926,
+    "gradient_norm_before_clip": 9.866765022277832,
+    "supervised_tokens": 23
+  },
+  "P11_P12_pre_replacement_14_step_records_identical": true,
+  "optimizer_steps_per_arm": 733,
+  "supervised_tokens_per_arm": 17439,
+  "DEV_gradient_rows": 0,
+  "scope": "Necessary implementation consistency checks for these runs;not an independent replication,unique historical root-cause proof,or statistical-stability guarantee."
+}

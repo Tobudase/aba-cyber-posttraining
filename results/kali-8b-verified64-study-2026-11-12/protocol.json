@@ -1031,5 +1031,59 @@
     "resolution": "Evidenceexported;ownedidleCPUVMUIDcheckedanddeleted;FAILEDstateandcleanupreceiptpersisted. MainnowpersistsFAILEDbeforefinally,nestedfinallycleansVMevenonjoininterrupt;guardneverinterruptscompletednativehead.",
     "regression_tests": "20privatechecks;publicstandalonefixturesuse no privatekeys/modeldata.",
     "numeric_protocols_unchanged": true
+  },
+  "controller_client_deadline_amendment": {
+    "status": "PROSPECTIVE_CONTROLLER_CLIENT_DEADLINE_FIX_BEFORE_P14_GPU_ALLOCATION",
+    "at_utc": "2026-11-13T11:15:22.715881+00:00",
+    "native_run_id": "1a14375b8e094c80aebc50c9c7f4698a",
+    "P14_job_uid_preserved": "08959931-5da6-4777-a7be-8612be031d17",
+    "P14_gpu_allocated_at_precheck": false,
+    "P14_training_updates_at_precheck": 0,
+    "old_client_sha256": "8085fe973987b31b18c2a0d2358e167942d2a5bd8248514008d36c54f9be18c4",
+    "new_client_sha256": "6e06b1c396b786b4aeeb2240b3ac10549583d1619708008da8568060036f768a",
+    "original_freeze_sha256": "0a4a9c9bd8d50d5f3b49068e29be31227dc3b018602f7e744cb2df1bc417f736",
+    "bug_proof": "Oldwaitwith3secondbrokerRTTraisesfalseTimeoutat421after13healthyIN_PROGRESSstatuses;fixedwaitreturnsIN_PROGRESSat420.",
+    "change": "ReturnlasthealthyIN_PROGRESSatdeadline withoutissuinglast1secondrequest;keep realbackendFAILED/errors visible. InflightoldPythonwaitcanendonce;nextinvocationusesfixedfile.",
+    "remote_result": {
+      "status": "ATOMIC_CONTROLLER_CLIENT_ONLY_FIX",
+      "old_sha256": "8085fe973987b31b18c2a0d2358e167942d2a5bd8248514008d36c54f9be18c4",
+      "new_sha256": "6e06b1c396b786b4aeeb2240b3ac10549583d1619708008da8568060036f768a",
+      "prior_source_preserved": true
+    },
+    "numeric_protocols_unchanged": {
+      "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+    },
+    "trainer_recipe_data_scoring_unchanged": true,
+    "task_manifest_unchanged": true,
+    "P13_cached_artifacts_preserved_with_original_client_version": true,
+    "no_Kubernetes_object_or_resource_or_ownership_change": true,
+    "source_backups": "client-deadline-fix-private/"
+  },
+  "initial_native_freeze_before_deadline_fix_sha256": "0a4a9c9bd8d50d5f3b49068e29be31227dc3b018602f7e744cb2df1bc417f736",
+  "final_declared_native_freeze_sha256": "247030d2d385a41bab7165d7242c4fd801ad1a0d380b5f753d6a3bbefd8a4c0c",
+  "pre_confirmation_actual_native_score_audit": {
+    "status": "PASS_TWO_CURRENT_NATIVE_SCORE_PROGRAMS",
+    "native_run_id": "1a14375b8e094c80aebc50c9c7f4698a",
+    "candidate_ids": [
+      "P13",
+      "P14"
+    ],
+    "certified_scores": {
+      "P13": {
+        "score": -1.0,
+        "adapter_sha256": "7ce54da6d92a87e5dc805e576717066e1c3bfa3666ad5ded76ac5139fdf8c9ec"
+      },
+      "P14": {
+        "score": -1.0,
+        "adapter_sha256": "054c32ce9d87cf3be5c35289647e89735dc5cb14f56ab6ae5aadf641497207fe"
+      }
+    },
+    "before_confirmation_created": true,
+    "at_utc": "2026-11-13T13:34:35.745691+00:00",
+    "model_calls": 0,
+    "official_TEST_rows": 0
   }
 }

@@ -11,13 +11,17 @@ def call(req,timeout=100):
 def wait_candidate(candidate,seconds=420,poll_seconds=30):
  assert 0<=seconds<=480 and 0<poll_seconds<=30
  if seconds:print('The Python client waits internally up to '+str(seconds)+'seconds. Use Bash timeout600000;no shorter shell timeout and no model polling each minute.',file=__import__('sys').stderr,flush=True)
- until=time.monotonic()+seconds
+ until=time.monotonic()+seconds;last_result=None
  while True:
   remaining=max(0,until-time.monotonic())
+  if seconds and remaining<=0 and last_result is not None:return last_result
   try:result=call({'action':'status','candidate_id':candidate},timeout=max(1,min(30,remaining)) if seconds else 30)
   except (TimeoutError,urllib.error.URLError):
-   if time.monotonic()>=until:raise
+   if time.monotonic()>=until:
+    if last_result is not None:return last_result
+    raise
    time.sleep(min(5,max(0,until-time.monotonic())));continue
+  last_result=result
   if result['status']!='IN_PROGRESS' or time.monotonic()>=until:return result
   time.sleep(min(poll_seconds,max(0,until-time.monotonic())))
 def main():

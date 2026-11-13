@@ -1,0 +1,22 @@
+{
+  "status": "PASS_TWO_CURRENT_NATIVE_SCORE_PROGRAMS",
+  "native_run_id": "1a14375b8e094c80aebc50c9c7f4698a",
+  "candidate_ids": [
+    "P13",
+    "P14"
+  ],
+  "certified_scores": {
+    "P13": {
+      "score": -1.0,
+      "adapter_sha256": "7ce54da6d92a87e5dc805e576717066e1c3bfa3666ad5ded76ac5139fdf8c9ec"
+    },
+    "P14": {
+      "score": -1.0,
+      "adapter_sha256": "054c32ce9d87cf3be5c35289647e89735dc5cb14f56ab6ae5aadf641497207fe"
+    }
+  },
+  "before_confirmation_created": true,
+  "at_utc": "2026-11-13T13:34:35.745691+00:00",
+  "model_calls": 0,
+  "official_TEST_rows": 0
+}

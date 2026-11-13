@@ -17,6 +17,13 @@ class WaitTest(unittest.TestCase):
  def test_ready_arm_returns_immediately(self):
   with patch.object(client,'call',return_value={'status':'REAL_GPU_TRAINING_COMPLETE'}),patch.object(client.time,'sleep') as sleep:
    self.assertEqual(client.wait_candidate('P13')['status'],'REAL_GPU_TRAINING_COMPLETE');sleep.assert_not_called()
+ def test_delayed_broker_does_not_create_false_timeout_at_wait_deadline(self):
+  clock=[0]
+  def request(req,timeout):
+   if timeout<3:clock[0]+=timeout;raise TimeoutError('Broker requires3seconds')
+   clock[0]+=3;return {'status':'IN_PROGRESS','candidate_id':'P14'}
+  with patch.object(client.time,'monotonic',side_effect=lambda:clock[0]),patch.object(client.time,'sleep',side_effect=lambda seconds:clock.__setitem__(0,clock[0]+seconds)),patch.object(client,'call',side_effect=request):result=client.wait_candidate('P14')
+  self.assertEqual(clock[0],420);self.assertEqual(result['status'],'IN_PROGRESS')
 class CleanupTest(unittest.TestCase):
  def test_join_interrupt_still_cleans_owned_vm_and_saves_final_state(self):
   spec=importlib.util.spec_from_file_location('cleanup_test_driver',R/'scripts/run-kali8b-native-study-20261112.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
