@@ -1,12 +1,12 @@
 {
-  "status": "SUBMITTED_SERIALLY",
-  "at_utc": "2026-11-13T14:35:39.262678+00:00",
+  "status": "FAILED",
   "arms": {
-    "A15": "QUEUED",
-    "A16": "NOT_STARTED",
-    "A17": "NOT_STARTED",
+    "A15": "COLLECTED",
+    "A16": "COLLECTED",
+    "A17": "FAILED",
     "A18": "NOT_STARTED"
   },
   "official_TEST_rows": 0,
-  "final64_queries": 0
+  "final64_queries": 0,
+  "at_utc": "2026-11-13T23:26:51.882222+00:00"
 }
