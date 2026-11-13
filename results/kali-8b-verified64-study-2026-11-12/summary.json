@@ -1,6 +1,6 @@
 {
   "status": "IN_PROGRESS",
-  "updated_at_utc": "2026-11-13T05:50:48.603079+00:00",
+  "updated_at_utc": "2026-11-13T09:18:18.585940+00:00",
   "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
   "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "study_protocol_freeze_sha256": "d393a2ac89ca98b491dcfa2d9aad24f01eca1ab2f3aaf7cd81305c79d29c54e2",
@@ -237,11 +237,134 @@
       "cleanup_errors": []
     },
     "P13": {
-      "status": "NOT_STARTED",
-      "protocol_sha256": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4"
+      "status": "COLLECTED",
+      "protocol_sha256": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "node_name": "node-2-3.sdsc.optiputer.net",
+      "observed_pod_resources": {
+        "limits": {
+          "cpu": "2",
+          "ephemeral-storage": "24Gi",
+          "memory": "12Gi",
+          "nvidia.com/a100": "1"
+        },
+        "requests": {
+          "cpu": "2",
+          "ephemeral-storage": "24Gi",
+          "memory": "12Gi",
+          "nvidia.com/a100": "1"
+        }
+      },
+      "score": {
+        "status": "FROZEN_INTERNAL_DEV_STUDY_SCORE",
+        "candidate_id": "P13",
+        "summary": {
+          "base": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7559337797619048,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7562872023809524,
+              "strict_correct": 27,
+              "format_errors": 3,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7555803571428571,
+              "strict_correct": 21,
+              "format_errors": 2,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7527969790066564,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            }
+          },
+          "candidate": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7481481481481481,
+              "strict_correct": 50,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.782432208994709,
+              "strict_correct": 29,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7138640873015872,
+              "strict_correct": 21,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7487924560505206,
+              "strict_correct": 50,
+              "format_errors": 0,
+              "truncations": 0
+            }
+          }
+        },
+        "native_delta": -0.007785631613756672,
+        "selection_gates": {
+          "native_gain": false,
+          "strict_retained": true,
+          "format_retained": true,
+          "truncation_retained": true,
+          "DEV_panel_retention": false,
+          "untargeted_retention": true
+        },
+        "passes_all_gates": false,
+        "ABA_score": -1.0,
+        "paired_strict": {
+          "gained": 8,
+          "lost": 6
+        },
+        "official_TEST_rows": 0,
+        "sealed_final64_used": false,
+        "scope": "Exposed publisher-TRAIN DEV diagnosis; not independent or official score."
+      },
+      "receipt": {
+        "status": "COMPLETE_8B_STUDY_ARM",
+        "run_kind": "native_ABA_allowed",
+        "initial_lora_sha256": "c2fab29277e34611479b20056efbc3a8b6fb680c268b7fd11c9657e7d9366846",
+        "adapter_sha256": "7ce54da6d92a87e5dc805e576717066e1c3bfa3666ad5ded76ac5139fdf8c9ec",
+        "adapter_config_sha256": "731066a0cb3857ecc290ee0e2b2b3de721d10465cd540cba81d16ae8f9184f27",
+        "optimizer_steps": 733,
+        "nonzero_gradient_steps": 733,
+        "changed_tensors": 144,
+        "supervised_token_presentations": 17439,
+        "adapter_reload_max_logit_delta": 0.0,
+        "GPU": "NVIDIA A100-SXM4-80GB",
+        "GPU_count": 1,
+        "deterministic_algorithms": true,
+        "attention_backend": "math_sdpa",
+        "wall_seconds": 1032.97,
+        "peak_cuda_allocated_bytes": 17685551616,
+        "quality_counts": {
+          "publisher_verified": 669,
+          "source_silver": 64
+        }
+      },
+      "adapter_tensor_count": 144,
+      "cleanup_errors": []
     },
     "P14": {
-      "status": "NOT_STARTED",
+      "status": "Pending",
       "protocol_sha256": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
     }
   },
@@ -501,9 +624,9 @@
   "discarded_optimizer_updates_lower_bound": 704,
   "discarded_approximate_GPU_allocation_window_hours": 0.7553466491666667,
   "native_progress": {
-    "status": "VM_STARTING",
+    "status": "NATIVE_RUNNING",
     "native_completed": false,
-    "run_id": null,
+    "run_id": "a7309a918547431cb77ba60bcf2675f7",
     "run_result": null,
     "controller_requested_model": "deepseek-v4-flash",
     "cleanup_errors": []

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_OLD_PARTIAL_VS_FRESH_LOGGED_PROGRESS",
+  "at_utc": "2026-11-13T07:29:43.020132+00:00",
+  "matching_logged_steps": 23,
+  "maximum_compared_step": 704,
+  "exact_loss_and_gradient_agreement": true,
+  "all_old_logged_steps_compared": true,
+  "previous_adapter_reused": false,
+  "selected_on_this_audit": false,
+  "scope": "23 sparse stdout progress checks through704,not all-step trace or proof of hardwareequivalence. Fresh complete733receipt is separate;old attempt remains uncertified."
+}
