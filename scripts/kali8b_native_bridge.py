@@ -39,7 +39,19 @@ class Broker:
    assert host['status']=='COLLECTED',host.get('error','Training did not complete')
    r=json.loads((S/cid/'run/receipt-private.json').read_text());assert r['optimizer_steps']==r['nonzero_gradient_steps']==733 and r['changed_tensors']>0
    state={'status':'REAL_GPU_TRAINING_COMPLETE','candidate_id':cid,'pointer':pointer(cid),'training_receipt':r,'official_TEST_rows':0}
-  except BaseException as e:state={'status':'FAILED','candidate_id':cid,'error_type':type(e).__name__,'detail':str(e)[:180]}
+  except BaseException as e:
+   # A bounded watcher/provider failure must not orphan its still-live GPU Job.
+   _,run,name=jobs.paths(cid);f=run/'host-private.json'
+   if f.exists():
+    record=json.loads(f.read_text())
+    try:
+     check=jobs.k('get','job',name,'-o','json',check=False)
+     if check.returncode==0:
+      actual=json.loads(check.stdout);assert actual['metadata']['uid']==record['job_uid'],'Refuse cleanup of replaced Job UID'
+      jobs.delete_training(cid,record)
+    except Exception as cleanup:record['cleanup_errors'].append(type(cleanup).__name__+':'+str(cleanup)[:180])
+    record.update(status='FAILED',error_type=type(e).__name__,error=str(e)[:180]);f.write_text(json.dumps(record,indent=2)+'\n')
+   state={'status':'FAILED','candidate_id':cid,'error_type':type(e).__name__,'detail':str(e)[:180]}
   with self.lock:self.states[cid]=state;self.current=None
   (self.driver.OUT/(cid+'-backend-private.json')).write_text(json.dumps(state,indent=2)+'\n')
  def call(self,req):

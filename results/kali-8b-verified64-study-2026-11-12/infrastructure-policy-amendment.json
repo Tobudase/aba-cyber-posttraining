@@ -1,0 +1,57 @@
+{
+  "status": "INFRASTRUCTURE_POLICY_AMENDMENT_BEFORE_ANY_ABA_UPDATE",
+  "at_utc": "2026-11-13T01:17:27.899261+00:00",
+  "training_protocols_unchanged": true,
+  "P13_P14_optimizer_updates_before_amendment": 0,
+  "official_TEST_rows": 0,
+  "final64_queries": 0,
+  "changes": [
+    "Adapter exporter is a bounded interactive CPU Pod (600s),not an idle Job;actual existing P11 weights re-exported and SHA matched.",
+    "CPU VM requests=limits:1CPU,6GiRAM,24Gi ephemeral-storage.",
+    "Broker failure/timeout cleans only its actual Job UID before clearing active state."
+  ],
+  "actual_exporter_receipt": {
+    "started_at_utc": "2026-11-13T01:15:47.180886+00:00",
+    "GPU_count": 0,
+    "kind": "InteractiveCPUExportPod",
+    "policy_change": "bounded Pod,not idle Job",
+    "numerical_training_changed": false,
+    "status": "PASS_REAL_ADAPTER_EXPORT",
+    "result": {
+      "status": "ADAPTER_EXPORTED_AND_HASH_VERIFIED",
+      "adapter_sha256": "5bde4612a0012fe3b6e9cfa0762cc77eb7b2b07fa92997452b465ad03a02a86f",
+      "tensor_count": 144,
+      "archive_sha256": "89e5f1716978757218120c0dab09ae62499a68dd73b0c63e9b35cc01c34b55a5",
+      "bytes": 30690184
+    },
+    "finished_at_utc": "2026-11-13T01:16:39.437138+00:00"
+  },
+  "usage_policy": "https://nrp.ai/documentation/userdocs/start/policies/",
+  "prior_run_id": "8379339d347f4c5087a1cfe060665130",
+  "prior_run_cleaned": true,
+  "source_sha256": {
+    "kali8b_study_jobs.py": "601f48219a682c163776129350e7962c14787c397b1eab27f492245e803d4423",
+    "kali8b_native_vm.py": "f29e98f4dfd3cce8274b6e82afb47515125f7d4670d59c4dd20128e40cf707ff",
+    "kali8b_native_bridge.py": "a93f16acae9af8739c0143650c586df68487db3c470d7b10d540f60283b9b2cd"
+  },
+  "actual_VM_compute_resources": {
+    "limits": {
+      "cpu": "1",
+      "devices.kubevirt.io/kvm": "1",
+      "devices.kubevirt.io/tun": "1",
+      "devices.kubevirt.io/vhost-net": "1",
+      "ephemeral-storage": "25819803776",
+      "memory": "6524Mi"
+    },
+    "requests": {
+      "cpu": "1",
+      "devices.kubevirt.io/kvm": "1",
+      "devices.kubevirt.io/tun": "1",
+      "devices.kubevirt.io/vhost-net": "1",
+      "ephemeral-storage": "25819803776",
+      "memory": "6524Mi"
+    }
+  },
+  "CPU_only_node": "rci-tide-cpu-04.sdsu.edu",
+  "VM_compute_request_limit_check": "PASS"
+}

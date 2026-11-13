@@ -39,3 +39,7 @@ P13 原始排队 Job 在取消前为 Pending、无 nodeName、无训练记录，
 控制接口补充：`qwen3-small` 在新 Setup 阶段重复出现上游240秒超时，尚无 P13/P14 提交或更新时停止并保留了这次CPU尝试。备用 `gpt-oss` 在23,219输入token的中性测试中，10.4秒返回有效结构化工具调用，因此后继控制器改用该托管接口。实际服务模型为 `openai/gpt-oss-120b`，仅用于编排；待后训练底座仍是8B，没有训练120B，也没有改变8B方案。
 
 完整框架准入修正：直接把NRP短服务别名 `gpt-oss` 填入ABA，会被锁定版本的OpenAI模型目录校验拒绝；对应尝试在创建Run前退出2，没有GPU任务。收集器此前先读不存在的Run目录，掩盖了启动细节；现改为先保存原生日志，再读取可选的Run日志。后继使用目录已知的 `gpt-oss-120b`，由明确的传输别名映射转为NRP的 `gpt-oss`，不改消息或工具参数，不放宽目录校验。真实SDK在默认权限和thinking=0下完成1次加法工具调用并收到正确最终答案；安装后的完整AgentConfig校验复现旧短名拒绝、新完整名接受。原生运行 `8379339d347f4c5087a1cfe060665130` 已创建，尚不是新的SFT成绩。见[完整配置准入记录](../results/kali-8b-verified64-study-2026-11-12/controller-config-preflight.json)和[真实SDK工具记录](../results/kali-8b-verified64-study-2026-11-12/controller-sdk-tool-probe.json)。
+
+## 辅助资源规范修正（ABA仍无更新）
+
+运行 `8379339d347f4c5087a1cfe060665130` 实际提交P13，但一直Pending、无节点；在任何GPU分配或训练更新之前停止，原始记录保留且清理无错误。复核NRP政策后，将旧的待机式权重导出Job改为600秒上限、零GPU的短期交互CPU Pod；已真实重新导出P11适配器，30,690,184字节、144张量，SHA与原件完全一致，辅助Pod已删除。控制VM计算容器请求与上限改为相等，并实际核对生成的Pod；Broker在超时/异常时先验证任务UID再清理，两个隔离控制测试通过。后继运行采用相同训练/数据/评分/门槛，final64仍未查询。这是基础设施修正，不是新的8B成绩；此前两组固定对照结果不改写。见[公开记录](../results/kali-8b-verified64-study-2026-11-12/infrastructure-policy-amendment.json)及[NRP使用政策](https://nrp.ai/documentation/userdocs/start/policies/)。

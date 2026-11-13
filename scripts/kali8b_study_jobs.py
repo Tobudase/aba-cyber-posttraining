@@ -69,13 +69,15 @@ def delete_training(cid,record):
 
 def export_adapter(cid,node):
  d,run,name=paths(cid);export=name+'-export';res={'cpu':'1','memory':'256Mi','ephemeral-storage':'128Mi'}
- job={'apiVersion':'batch/v1','kind':'Job','metadata':{'name':export,'labels':labels(cid)},'spec':{'activeDeadlineSeconds':600,'backoffLimit':0,'ttlSecondsAfterFinished':300,'template':{'metadata':{'labels':labels(cid)},'spec':{'restartPolicy':'Never','automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/hostname':node},'containers':[{'name':'export','image':json.loads((ROOT/'configs/gpu-runtime-image.lock.json').read_text())['image'],'command':['python','-c','import time;print("EXPORT_READY",flush=True);time.sleep(550)'],'resources':{'requests':res,'limits':res},'volumeMounts':[{'name':'cache','mountPath':'/cache','readOnly':True}]}],'volumes':[{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache','readOnly':True}}]}}}}
- assert k('get','job',export,check=False).returncode!=0
+ pod={'apiVersion':'v1','kind':'Pod','metadata':{'name':export,'labels':labels(cid)},'spec':{'activeDeadlineSeconds':600,'restartPolicy':'Never','automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/hostname':node},'containers':[{'name':'export','image':json.loads((ROOT/'configs/gpu-runtime-image.lock.json').read_text())['image'],'command':['python','-c','import time;print("EXPORT_READY",flush=True);time.sleep(550)'],'resources':{'requests':res,'limits':res},'volumeMounts':[{'name':'cache','mountPath':'/cache','readOnly':True}]}],'volumes':[{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache','readOnly':True}}]}}
+ # This is a short interactive CPU Pod (manual exec is allowed),never an idle
+ # Job. GPU batch Jobs above still execute their computation and terminate.
+ assert k('get','pod',export,check=False).returncode!=0
  try:
-  k('create','-f','-',payload=json.dumps(job));deadline=time.monotonic()+240;pod=None
+  k('create','-f','-',payload=json.dumps(pod));deadline=time.monotonic()+240;pod=None
   while time.monotonic()<deadline:
-   pods=json.loads(k('get','pods','-l','job-name='+export,'-o','json').stdout)['items']
-   if pods and pods[0].get('status',{}).get('phase')=='Running' and any(s.get('ready') for s in pods[0].get('status',{}).get('containerStatuses',[])):pod=pods[0]['metadata']['name'];break
+   response=k('get','pod',export,'-o','json',check=False);item=json.loads(response.stdout) if response.returncode==0 else None
+   if item and item.get('status',{}).get('phase')=='Running' and any(s.get('ready') for s in item.get('status',{}).get('containerStatuses',[])):pod=item['metadata']['name'];break
    time.sleep(3)
   assert pod,'CPU adapter exporter unavailable'
   archive=run/'adapter-bundle-private.tar.gz'
@@ -89,7 +91,7 @@ def export_adapter(cid,node):
   with weights.open('rb') as f:n=struct.unpack('<Q',f.read(8))[0];header=json.loads(f.read(n))
   tensor_keys=[k for k in header if k!='__metadata__'];assert len(tensor_keys)==144 and all('lora_' in k for k in tensor_keys)
   out={'status':'ADAPTER_EXPORTED_AND_HASH_VERIFIED','adapter_sha256':sha(weights),'tensor_count':144,'archive_sha256':sha(archive),'bytes':weights.stat().st_size};(run/'adapter-export-private.json').write_text(json.dumps(out,indent=2)+'\n');return out
- finally:k('delete','job',export,'--ignore-not-found=true','--wait=true','--timeout=60s',check=False)
+ finally:k('delete','pod',export,'--ignore-not-found=true','--wait=true','--timeout=60s',check=False)
 
 def check_once(cid):
  d,run,name=paths(cid);record=json.loads((run/'host-private.json').read_text())
