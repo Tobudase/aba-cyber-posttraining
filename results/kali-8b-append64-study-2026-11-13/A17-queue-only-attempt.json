@@ -1,0 +1,15 @@
+{
+  "status": "QUEUE_DEADLINE_NO_GPU_NO_TRAINING_NO_OUTPUT",
+  "at_utc": "2026-11-13T23:27:16.790165+00:00",
+  "job_uid": "b0758991-3a0c-4336-9693-c8d3c8e51737",
+  "last_observation_at": "2026-11-13T23:25:38.713866+00:00",
+  "last_Pod_phase": "Pending",
+  "last_node_name": null,
+  "container_statuses": [],
+  "worker_log_bytes": 0,
+  "events_deadline_exceeded": true,
+  "events_scheduled_or_container_started": false,
+  "optimizer_updates": 0,
+  "candidate_outputs": 0,
+  "cleanup_errors": []
+}

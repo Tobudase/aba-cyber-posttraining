@@ -45,17 +45,27 @@
     "at_utc": "2026-11-13T05:37:40.009005+00:00",
     "reason": "Correct host3h watchdog to honor existing6hJob+10mincollection. Discard interruptedP13 withnoadapter/noCandidateDEVscore;restart original frozen733step recipe. Restore originalCPU2 atcreation toavoid500mthrottling;use wider exact-product ordinary pool withadvertiseddrivers615.71.09/.10. No activePodownershipmigration or in-place resize.",
     "allowed_hostnames": [
+      "emporia.gp-argo.greatplains.net",
+      "gp-argo.usd.edu",
       "gp-engine.beocat.ksu.edu",
       "gp-engine.usd.edu",
       "gpengine-uams.areon.net",
+      "gpengine-uark.areon.net",
+      "gpn-fiona-mizzou-3.rnet.missouri.edu",
       "gpn-fiona-mizzou-4.rnet.missouri.edu",
       "gpn-fiona-mizzou-6.rnet.missouri.edu",
       "hcc-gpengine-shor-c5303.unl.edu",
+      "k8s-a100-01.suncorridor.org",
+      "nautilus-it-gpu07.fullerton.edu",
+      "nautilus-it-gpu08.fullerton.edu",
       "node-1-1.sdsc.optiputer.net",
       "node-1-3.sdsc.optiputer.net",
       "node-1-4.sdsc.optiputer.net",
-      "node-2-2.sdsc.optiputer.net",
       "node-2-3.sdsc.optiputer.net",
+      "oru.gp-argo.greatplains.net",
+      "rci-nrp-gpu-05.sdsu.edu",
+      "ren-gp-argo-01.madren.org",
+      "sdsu.gp-argo.greatplains.net",
       "sphinx.sdstate.edu",
       "tu.gp-engine.greatplains.net"
     ],
@@ -239,7 +249,12 @@
       "host_daemon_wait_seconds": 61500,
       "VM_shutdown_minutes": 1080,
       "numeric_recipe_unchanged": true
-    }
+    },
+    "GPU_products": [
+      "NVIDIA-A100-80GB-PCIe",
+      "NVIDIA-A100-PCIE-40GB",
+      "NVIDIA-A100-SXM4-80GB"
+    ]
   },
   "decision": "Diagnostic contrasts append-minus-replay per seed, report all arms and retention failures. No model promotion, no candidate selection from final64.",
   "data_quality": "64 AI authored locally behavior verified silver;32 related families;4tools;not expertgold.",
@@ -257,11 +272,25 @@
     "submitted_jobs": 0,
     "prior_freeze_preserved": "initial-preparation-freeze.json"
   },
-  "controller_sha256": "c7d502a39fb024225d213a24677577a43fa7aad1bf675c91ef11824fd424d646",
+  "controller_sha256": "7b3b30ce0c2007bd7646b823c4e85d8465c05eab28e82b5583f6a3e1e78a574f",
   "DEV_grading_module_sha256": "8dc6819446ceac3aff0952a8e4a00d611ba3a77c81ed55423394678b6557bbeb",
   "DEV_grading_lock_sha256": "bdb4e1a0076a63fb28143af5a724bfbff67d4ba5e71fa8f5e0c50746ac6f92b2",
   "pre_submission_controller_reliability_revision": {
     "prior_sha256": "61458b067ae46e0a297e2eed30267ec5e11813b441428fff3a5bd47116a1dd2c",
     "reason": "Bounded read-only network retries and durable PVC log tee; no new jobs yet and no data/training changes."
+  },
+  "resource_resume_amendment": {
+    "at_utc": "2026-11-13T23:28:16.650722+00:00",
+    "reason": "OriginalA17deadline after6hPending,0GPU/updates/outputs. Retain A15/A16;retryA17once in ordinary compatible frozen-worker A100family pool;A18mustmatchA17GPUproduct.",
+    "prior_controller_sha256": "c7d502a39fb024225d213a24677577a43fa7aad1bf675c91ef11824fd424d646",
+    "worker_recipe_protocols_unchanged": true,
+    "job_seconds": 28800,
+    "pending_queue_cap_seconds": 21660,
+    "pod_runtime_seconds": 7200,
+    "host_watch_seconds": 29400,
+    "source_provenance": "Original controller/freeze preserved inqueue-recovery-original-private;this is not a second training ofA15/A16",
+    "global_deadline_unchanged": "2026-11-14T18:33:27.850976+00:00",
+    "hardware_limit": "Different A100SKU between seed42 and43 may confound cross-seed comparisons;withinseed43pair productmatched. Fresh baseline/prefix guards still mandatory.",
+    "preflight_note": "DryrunA18checks allallowedSKUs beforeA17exists; actualsubmission always requires A17receipt andpinsmatchingproduct."
   }
 }

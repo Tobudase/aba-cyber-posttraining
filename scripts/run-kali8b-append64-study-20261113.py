@@ -53,14 +53,17 @@ def prepare():
  lock={'status':'FROZEN_BEFORE_ANY_NEW_ARM_OUTPUT','at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'arms':ARMS,'protocol_sha256':frozen,'worker_sha256':sha(S/'worker.py'),'recipe_sha256':sha(S/'kali_append64_sft_recipe.py'),'parent_worker_sha256':sha(oldworker),'parent_recipe_sha256':sha(oldrecipe),'training_rows_and_updates':797,'supervised_tokens_per_arm':tokenbudget,'original733_preserved':True,'replay_rows_are_duplicates_not_novel':True,'matched_append_target_lengths':True,'seeds':[42,43],'learning_rate':1e-5,'GPU_parallel_limit':1,'placement':placement_pool(),'decision':'Diagnostic contrasts append-minus-replay per seed, report all arms and retention failures. No model promotion, no candidate selection from final64.','data_quality':'64 AI authored locally behavior verified silver;32 related families;4tools;not expertgold.','DEV128_exposed':True,'official_TEST_rows':0,'final64_queries_planned':0,'expected_completed_worker_hours_upper_bound':8,'queue_deadline_per_job':21600,'pod_runtime_per_job':7200,'total_wall_deadline':100800,'independent_confirmation':'Not available in this study. Requires a separate new frozen set before any independent improvement claim.'}
  write(S/'freeze.json',lock);print(json.dumps(lock),flush=True)
 def name(cid):return 'miw113-kali8b-append64-'+cid.lower()
-def objects(cid):
+def objects(cid,preflight=False):
  p=read(S/cid/'protocol.json');pool=read(S/'freeze.json')['placement'];n=name(cid);labels={'app.kubernetes.io/managed-by':'miw113','app.kubernetes.io/part-of':'kali8b-append64-study'}
  cm={'apiVersion':'v1','kind':'ConfigMap','metadata':{'name':n,'labels':labels},'data':{'worker.py':(S/'worker.py').read_text(),'kali_append64_sft_recipe.py':(S/'kali_append64_sft_recipe.py').read_text(),'protocol.json':json.dumps(p,indent=2)+'\n','control-base-reference.json':json.dumps({r['id']:r['response'] for r in read(OLD/'P11/run/base-predictions-private.json')})}}
  sec={'apiVersion':'v1','kind':'Secret','metadata':{'name':n+'-input','labels':labels},'data':{'payload.json.gz':base64.b64encode((S/cid/'payload.json.gz').read_bytes()).decode()}}
  resources={'cpu':'2','memory':'12Gi','ephemeral-storage':'24Gi','nvidia.com/a100':'1'}
- expr=[{'key':'kubernetes.io/hostname','operator':'In','values':pool['allowed_hostnames']},{'key':'nvidia.com/gpu.product','operator':'In','values':[pool['GPU_product']]},{'key':'nvidia.com/cuda.driver-version.full','operator':'In','values':pool['allowed_driver_full']}]
+ allowed_products=pool.get('GPU_products',[pool['GPU_product']])
+ if cid=='A18' and not preflight:
+  gpu=read(S/'A17/run/receipt-private.json')['GPU'];allowed_products=[{'NVIDIA A100-SXM4-80GB':'NVIDIA-A100-SXM4-80GB','NVIDIA A100 80GB PCIe':'NVIDIA-A100-80GB-PCIe','NVIDIA A100-PCIE-40GB':'NVIDIA-A100-PCIE-40GB'}[gpu]]
+ expr=[{'key':'kubernetes.io/hostname','operator':'In','values':pool['allowed_hostnames']},{'key':'nvidia.com/gpu.product','operator':'In','values':allowed_products},{'key':'nvidia.com/cuda.driver-version.full','operator':'In','values':pool['allowed_driver_full']}]
  pod={'restartPolicy':'Never','activeDeadlineSeconds':7200,'automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/arch':'amd64'},'affinity':{'nodeAffinity':{'requiredDuringSchedulingIgnoredDuringExecution':{'nodeSelectorTerms':[{'matchExpressions':expr}]},'preferredDuringSchedulingIgnoredDuringExecution':[{'weight':100,'preference':{'matchExpressions':[{'key':'topology.kubernetes.io/region','operator':'In','values':['us-west']}]}}]}},'containers':[{'name':'train','image':read(ROOT/'configs/gpu-runtime-image.lock.json')['image'],'command':['/bin/bash','-lc','set -euo pipefail; mkdir -p /cache/kali-8b-append64-study/logs; python -u /input/worker.py 2>&1 | tee /cache/kali-8b-append64-study/logs/'+cid+'.log'],'env':[{'name':'HF_HUB_OFFLINE','value':'1'},{'name':'OMP_NUM_THREADS','value':'2'},{'name':'CUBLAS_WORKSPACE_CONFIG','value':':4096:8'},{'name':'PYTHONDONTWRITEBYTECODE','value':'1'}],'resources':{'requests':resources,'limits':resources},'volumeMounts':[{'name':'input','mountPath':'/input','readOnly':True},{'name':'cache','mountPath':'/cache'},{'name':'scratch','mountPath':'/scratch'}]}],'volumes':[{'name':'input','projected':{'defaultMode':256,'sources':[{'configMap':{'name':n}},{'secret':{'name':n+'-input'}}]}},{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache'}},{'name':'scratch','emptyDir':{'sizeLimit':'24Gi'}}]}
- job={'apiVersion':'batch/v1','kind':'Job','metadata':{'name':n,'labels':labels},'spec':{'activeDeadlineSeconds':21600,'backoffLimit':0,'ttlSecondsAfterFinished':3600,'template':{'metadata':{'labels':labels},'spec':pod}}}
+ job={'apiVersion':'batch/v1','kind':'Job','metadata':{'name':n,'labels':labels},'spec':{'activeDeadlineSeconds':28800,'backoffLimit':0,'ttlSecondsAfterFinished':3600,'template':{'metadata':{'labels':labels},'spec':pod}}}
  return [cm,sec,job]
 def export(cid,node):
  # Reuse reviewed interactive CPU exporter in a separate module namespace.
@@ -79,13 +82,14 @@ def run_arm(cid):
   for obj in objects(cid):k('create','--dry-run=server','-f','-',payload=json.dumps(obj))
   for obj in objects(cid):k('create','-f','-',payload=json.dumps(obj));made.append((obj['kind'].lower(),obj['metadata']['name']))
   job=json.loads(k('get','job',name(cid),'-o','json').stdout);record.update(status='QUEUED',job_uid=job['metadata']['uid'],submitted_at_utc=datetime.datetime.now(datetime.timezone.utc).isoformat());write(run/'host-private.json',record)
-  until=time.monotonic()+22200;last=None
+  until=time.monotonic()+29400;queue_until=time.monotonic()+21660;last=None
   while time.monotonic()<until:
    job=json.loads(k('get','job',name(cid),'-o','json').stdout);assert job['metadata']['uid']==record['job_uid']
    pods=json.loads(k('get','pods','-l','job-name='+name(cid),'-o','json').stdout)['items'];pod=pods[0] if pods else None;phase=pod.get('status',{}).get('phase','QUEUED') if pod else 'QUEUED'
    if phase!=last:print(cid+' '+phase,flush=True);last=phase
    if pod and pod['spec'].get('nodeName'):record.update(node_name=pod['spec']['nodeName'],resources=pod['spec']['containers'][0]['resources'])
    if job.get('status',{}).get('succeeded') or job.get('status',{}).get('failed'):break
+   if time.monotonic()>queue_until and not (pod and pod['spec'].get('nodeName')):raise RuntimeError('Pending queue cap6h plus60s pollmargin expired;no further retry')
    time.sleep(30)
   logs=k('logs','job/'+name(cid),check=False).stdout;(run/'worker-log-private.txt').write_text(logs);assert job.get('status',{}).get('succeeded'),'Job did not succeed; preserve attempt, stop study'
   def marker(key):
@@ -101,17 +105,31 @@ def run_arm(cid):
    if q.returncode:record['cleanup_errors'].append(kind+':'+q.stderr[-200:])
   write(run/'host-private.json',record)
  export(cid,record['node_name']);score_arm(cid,run);record['status']='COLLECTED';write(run/'host-private.json',record);print(cid+' COLLECTED',flush=True)
+def verify_collected(cid):
+ run=S/cid/'run';p=read(S/cid/'protocol.json');h=read(run/'host-private.json');r=read(run/'receipt-private.json')
+ assert h['status']=='COLLECTED' and not h['cleanup_errors']
+ assert r['optimizer_steps']==r['nonzero_gradient_steps']==797 and r['supervised_token_presentations']==19065
+ assert r['protocol_sha256']==sha(S/cid/'protocol.json') and r['worker_sha256']==sha(S/'worker.py')
+ assert sha(run/'adapter-bundle-private/adapter/adapter_model.safetensors')==r['adapter_sha256']
+ assert sha(run/'adapter-bundle-private/adapter/adapter_config.json')==r['adapter_config_sha256']
+ assert read(run/'base-predictions-private.json')==read(OLD/'P11/run/base-predictions-private.json')
+ assert read(run/'scores-private.json')['official_TEST_rows']==0
+ print(cid+' VERIFIED_ALREADY_COLLECTED_NO_NEW_UPDATES',flush=True)
+
 def main():
  if '--prepare' in sys.argv:prepare();return
  assert S.exists()
  if '--dry-run' in sys.argv:
   for cid in ARMS:
-   for obj in objects(cid):k('create','--dry-run=server','-f','-',payload=json.dumps(obj))
+   for obj in objects(cid,preflight=True):k('create','--dry-run=server','-f','-',payload=json.dumps(obj))
   print('ALL_FOUR_SERVER_DRY_RUNS_PASS');return
  host={'status':'RUNNING','arms':list(ARMS),'official_TEST_rows':0,'final64_queries':0};write(S/'host-private.json',host)
  if __import__('shutil').which('caffeinate'):subprocess.Popen(['caffeinate','-i','-w',str(os.getpid())])
  try:
-  for cid in ARMS:run_arm(cid)
+  for cid in ARMS:
+   remaining=(__import__('datetime').datetime.fromisoformat(read(S/'conditional-queue-retry-plan-private.json')['global_deadline_utc'])-__import__('datetime').datetime.now(__import__('datetime').timezone.utc)).total_seconds();assert remaining>29400,'Insufficient remaining original globalbudget for another boundedJob'
+   if (S/cid/'run/host-private.json').exists():verify_collected(cid)
+   else:run_arm(cid)
   host['status']='COMPLETE';write(S/'host-private.json',host)
  except BaseException as e:host.update(status='FAILED',error=str(e)[:300]);write(S/'host-private.json',host);raise
 if __name__=='__main__':main()

@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1];S=ROOT/'data/benchkit/kali-8b-append64-
 read=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 def cmd(a):return subprocess.run(list(map(str,a)),cwd=PUB,text=True,capture_output=True,check=True).stdout.strip()
 def main():
- initial=cmd(['git','rev-parse','HEAD']);assert not cmd(['git','status','--porcelain']);until=time.monotonic()+100800
+ initial=cmd(['git','rev-parse','HEAD']);assert not cmd(['git','status','--porcelain']);until=time.monotonic()+max(0,(datetime.datetime.fromisoformat(read(S/'conditional-queue-retry-plan-private.json')['global_deadline_utc'])-datetime.datetime.now(datetime.timezone.utc)).total_seconds())
  if shutil.which('caffeinate'):subprocess.Popen(['caffeinate','-i','-w',str(os.getpid())])
  last=None
  while True:
@@ -36,7 +36,7 @@ def main():
   p=a['score']['summary']['candidate']['combined'];lines.append(f'| {cid} | COLLECTED | {p["strict_correct"]} | {100*p["native_total_mean"]:.3f} | {p["format_errors"]} | {p["truncations"]} | {a["score"]["passes_all_gates"]} |')
  for pair,e in result.get('paired_effects',{}).items():lines+=['',f'{pair}: native变化 {100*e["native_delta"]:+.3f}分，strict变化 {e["strict_count_delta"]:+d}题。']
  lines+=['','这是保留原始数据后的新增内容与原数据重放对照，两个种子只提供方向诊断，不证明稳定增益。与旧733步结果跨实验比较还混入更新次数和数据顺序变化，不能单独称作删除旧数据的因果效应。所有128题已暴露；没有独立确认或官方成绩，不晋升模型。','', '[完整汇总](summary.json) · [冻结设计](DESIGN_ZH.md)','']
- (R/'RESULT_ZH.md').write_text('\n'.join(lines));p=PUB/'README.md';t=p.read_text();anchor='[Submission status](results/kali-8b-append64-study-2026-11-13/status.json).';assert anchor in t;t=t.replace(anchor,anchor+' Final recorded state: **'+host['status']+'**. [Actual results](results/kali-8b-append64-study-2026-11-13/RESULT_ZH.md).',1);p.write_text(t)
+ (R/'RESULT_ZH.md').write_text('\n'.join(lines));p=PUB/'README.md';t=p.read_text();t=re.sub(r' Final recorded state: \*\*.*?\*\*\. \[Actual results\]\([^\n]*?\)\.', '', t);anchor='[Submission status](results/kali-8b-append64-study-2026-11-13/status.json).';assert anchor in t;t=t.replace(anchor,anchor+' Final recorded state: **'+host['status']+'**. [Actual results](results/kali-8b-append64-study-2026-11-13/RESULT_ZH.md).',1);p.write_text(t)
  shutil.copy2(Path(__file__),PUB/'scripts'/Path(__file__).name)
  files=['README.md','scripts/'+Path(__file__).name]+[str((R/n).relative_to(PUB)) for n in ['summary.json','status.json','RESULT_ZH.md']]
  key=(ROOT/'.secrets/nrp_api_key').read_bytes().strip()

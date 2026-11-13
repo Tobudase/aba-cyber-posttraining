@@ -1,0 +1,130 @@
+{
+  "status": "CONDITIONAL_RESOURCE_RECOVERY_V2_BEFORE_SEED43_OUTPUTS",
+  "at_utc": "2026-11-13T23:14:56.545888+00:00",
+  "condition": "OriginalA17ends with verified noGPU/noTRAIN/no modeloutput;nevercancel runningtraining",
+  "reason": "Original13hostsubset has remained fully busy for nearly6hours. AllthreeA100SKUs already allowed by frozen worker protocols.",
+  "eligible_hosts": [
+    {
+      "hostname": "emporia.gp-argo.greatplains.net",
+      "product": "NVIDIA-A100-PCIE-40GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "gp-argo.usd.edu",
+      "product": "NVIDIA-A100-PCIE-40GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "gp-engine.beocat.ksu.edu",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "gp-engine.usd.edu",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "gpengine-uams.areon.net",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "gpengine-uark.areon.net",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "gpn-fiona-mizzou-3.rnet.missouri.edu",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.10"
+    },
+    {
+      "hostname": "gpn-fiona-mizzou-4.rnet.missouri.edu",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.10"
+    },
+    {
+      "hostname": "gpn-fiona-mizzou-6.rnet.missouri.edu",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.10"
+    },
+    {
+      "hostname": "hcc-gpengine-shor-c5303.unl.edu",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.10"
+    },
+    {
+      "hostname": "k8s-a100-01.suncorridor.org",
+      "product": "NVIDIA-A100-PCIE-40GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "nautilus-it-gpu07.fullerton.edu",
+      "product": "NVIDIA-A100-80GB-PCIe",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "nautilus-it-gpu08.fullerton.edu",
+      "product": "NVIDIA-A100-80GB-PCIe",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "node-1-1.sdsc.optiputer.net",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "node-1-3.sdsc.optiputer.net",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "node-1-4.sdsc.optiputer.net",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "node-2-3.sdsc.optiputer.net",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "oru.gp-argo.greatplains.net",
+      "product": "NVIDIA-A100-PCIE-40GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "rci-nrp-gpu-05.sdsu.edu",
+      "product": "NVIDIA-A100-80GB-PCIe",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "ren-gp-argo-01.madren.org",
+      "product": "NVIDIA-A100-PCIE-40GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "sdsu.gp-argo.greatplains.net",
+      "product": "NVIDIA-A100-PCIE-40GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "sphinx.sdstate.edu",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    },
+    {
+      "hostname": "tu.gp-engine.greatplains.net",
+      "product": "NVIDIA-A100-SXM4-80GB",
+      "driver": "615.71.09"
+    }
+  ],
+  "no_new_tolerations_or_priority": true,
+  "max_queue_only_retries": 1,
+  "A18_must_match_A17_actual_GPU_product": true,
+  "numeric_protocols_unchanged": true,
+  "host_monitor_and_job_budget": "Pendingqueue cap6h;allow up to2h actualPodruntime;Job8h plus10minhostcollection. Originalglobal28hdeadline retained.",
+  "limitations": "If seed43 uses different A100SKU fromseed42,do notattribute crossseed variation solely toseed. Same-seed contrasts match GPUproduct;freshE0DEV128 andinitialization/prefix checks remain mandatory.",
+  "old_plan_preserved": "conditional-queue-retry-plan-private.json"
+}

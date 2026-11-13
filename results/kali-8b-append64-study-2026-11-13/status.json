@@ -1,12 +1,14 @@
 {
-  "status": "FAILED",
+  "status": "RECOVERY_RUNNING",
+  "at_utc": "2026-11-13T23:30:30.484148+00:00",
   "arms": {
     "A15": "COLLECTED",
     "A16": "COLLECTED",
-    "A17": "FAILED",
+    "A17": "QUEUED",
     "A18": "NOT_STARTED"
   },
+  "old_A17_attempt": "6h queue deadline;zero GPU/optimizer updates/model outputs;archived",
+  "no_retraining_completed_controls": true,
   "official_TEST_rows": 0,
-  "final64_queries": 0,
-  "at_utc": "2026-11-13T23:26:51.882222+00:00"
+  "final64_queries": 0
 }
