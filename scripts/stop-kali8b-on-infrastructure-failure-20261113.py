@@ -14,7 +14,7 @@ def main():
  until=time.monotonic()+18*3600;save('WATCHING_INFRASTRUCTURE_ONLY')
  while time.monotonic()<until:
   try:
-   h=json.loads((O/'host-private.json').read_text());j=json.loads((O/'journal-private.json').read_text())
+   h=json.loads((O/'host-private.json').read_text());journal=O/'monitor-private/journal-private.json';journal=journal if journal.exists() else O/'journal-private.json';j=json.loads(journal.read_text())
    if j['run_id']!=RUN:save('SUPERSEDED_NO_SIGNAL');return
    if h['status'] in ['FAILED','COMPLETE_VERIFIED_NATIVE_8B_STUDY']:save('CONTROLLER_ENDED_NO_SIGNAL',controller_status=h['status']);return
    for cid in ['P13','P14']:
