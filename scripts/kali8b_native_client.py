@@ -1,15 +1,27 @@
 #!/usr/bin/env python3
 """Execute only the preregistered 8B recipes; asynchronous GPU queue and training."""
-import argparse,base64,gzip,hashlib,json,os,urllib.request
+import argparse,base64,gzip,hashlib,json,os,time,urllib.error,urllib.request
 from pathlib import Path
 URL='http://127.0.0.1:29847/candidate'
-def call(req):
+def call(req,timeout=100):
  r=urllib.request.Request(URL,data=json.dumps(req).encode(),headers={'Content-Type':'application/json'})
- with urllib.request.urlopen(r,timeout=100) as s:result=json.load(s)
+ with urllib.request.urlopen(r,timeout=timeout) as s:result=json.load(s)
  if result.get('status')=='FAILED':raise RuntimeError('Backend failed: '+result.get('error_type','unknown'))
  return result
+def wait_candidate(candidate,seconds=420,poll_seconds=30):
+ assert 0<=seconds<=480 and 0<poll_seconds<=30
+ if seconds:print('The Python client waits internally up to '+str(seconds)+'seconds. Use Bash timeout600000;no shorter shell timeout and no model polling each minute.',file=__import__('sys').stderr,flush=True)
+ until=time.monotonic()+seconds
+ while True:
+  remaining=max(0,until-time.monotonic())
+  try:result=call({'action':'status','candidate_id':candidate},timeout=max(1,min(30,remaining)) if seconds else 30)
+  except (TimeoutError,urllib.error.URLError):
+   if time.monotonic()>=until:raise
+   time.sleep(min(5,max(0,until-time.monotonic())));continue
+  if result['status']!='IN_PROGRESS' or time.monotonic()>=until:return result
+  time.sleep(min(poll_seconds,max(0,until-time.monotonic())))
 def main():
- p=argparse.ArgumentParser();p.add_argument('action',choices=['health','export-train','submit','wait','finalize']);p.add_argument('--candidate',choices=['P13','P14']);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('action',choices=['health','export-train','submit','wait','finalize']);p.add_argument('--candidate',choices=['P13','P14']);p.add_argument('--seconds',type=int,default=420);a=p.parse_args()
  if a.action=='health':result=call({'action':'health'})
  elif a.action=='export-train':
   manifest=Path(os.environ['DATA_DIR'])/'training_manifest.json';metadata=json.loads(manifest.read_text());result=call({'action':'train_data','manifest_sha256':hashlib.sha256(manifest.read_bytes()).hexdigest()});raw=gzip.decompress(base64.b64decode(result['train_gzip_base64'],validate=True));assert hashlib.sha256(raw).hexdigest()==metadata['train_encoded_sha256'];rows=json.loads(raw);assert len(rows)==733 and all(r['split']=='train' and r['official_test'] is False for r in rows)
@@ -19,6 +31,7 @@ def main():
   if a.action=='submit':
    manifest=Path(os.environ['DATA_DIR'])/'training_manifest.json'
    result=call({'action':'submit','candidate_id':a.candidate,'manifest_sha256':hashlib.sha256(manifest.read_bytes()).hexdigest()})
+  elif a.action=='wait':result=wait_candidate(a.candidate,a.seconds)
   else:result=call({'action':'status','candidate_id':a.candidate})
   if a.action=='finalize':
    assert result['status']=='REAL_GPU_TRAINING_COMPLETE','Wait for actual optimizer updates and verified adapter collection'

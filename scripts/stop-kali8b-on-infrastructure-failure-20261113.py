@@ -16,6 +16,8 @@ def main():
   try:
    h=json.loads((O/'host-private.json').read_text());journal=O/'monitor-private/journal-private.json';journal=journal if journal.exists() else O/'journal-private.json';j=json.loads(journal.read_text())
    if j['run_id']!=RUN:save('SUPERSEDED_NO_SIGNAL');return
+   if j.get('head',{}).get('result') is not None or h.get('native_unit_state') in ['inactive','failed']:
+    save('NATIVE_ALREADY_ENDING_NO_SIGNAL',native_result=j.get('head',{}).get('result'));return
    if h['status'] in ['FAILED','COMPLETE_VERIFIED_NATIVE_8B_STUDY']:save('CONTROLLER_ENDED_NO_SIGNAL',controller_status=h['status']);return
    for cid in ['P13','P14']:
     p=S/cid/'run/host-private.json'

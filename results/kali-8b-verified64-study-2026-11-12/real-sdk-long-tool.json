@@ -1,0 +1,16 @@
+{
+  "status": "PASS_REAL_SDK_BASH_OVER120SECONDS",
+  "started_at_utc": "2026-11-13T10:26:52.736765+00:00",
+  "accepted_tools": 1,
+  "denied_tools": 0,
+  "training_calls": 0,
+  "benchmark_questions": 0,
+  "result_seen": true,
+  "result_is_error": false,
+  "num_turns": 2,
+  "result_text": "LONG_WAIT_CHECK_PASSED",
+  "seconds": 141.85,
+  "seconds_after_permission": 137.62,
+  "passed": true,
+  "finished_at_utc": "2026-11-13T10:29:14.614435+00:00"
+}

@@ -2,6 +2,7 @@
 import base64,gzip,hashlib,json,shlex,subprocess,threading,time
 from pathlib import Path
 import kali8b_study_jobs as jobs
+from kali8b_native_reuse import certified_reuse
 ROOT=jobs.ROOT;S=jobs.S;CIDS=('P13','P14')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -35,14 +36,15 @@ def backend_watch_seconds(protocol):
 class Broker:
  def __init__(self,driver):
   self.driver=driver;self.baseline=freeze_baseline();self.lock=threading.Lock();self.states={};self.threads=[];self.started=[];self.current=None
-  self.manifest_sha256=sha(driver.OUT/'task/training_manifest.json');self.placement_sha256=json.loads((driver.OUT/'task/training_manifest.json').read_text()).get('placement_amendment_sha256')
+  self.manifest_sha256=sha(driver.OUT/'task/training_manifest.json');manifest=json.loads((driver.OUT/'task/training_manifest.json').read_text());self.placement_sha256=manifest.get('placement_amendment_sha256');self.reuse=manifest.get('certified_cache_reuse',{})
  def train(self,cid):
   try:
    if self.placement_sha256:assert sha(S/'placement-amendment-private.json')==self.placement_sha256,'Placement addendum changed after native freeze'
    jobs.submit(cid);host=jobs.watch(cid,seconds=backend_watch_seconds(jobs.protocol(cid)))
    assert host['status']=='COLLECTED',host.get('error','Training did not complete')
    r=json.loads((S/cid/'run/receipt-private.json').read_text());assert r['optimizer_steps']==r['nonzero_gradient_steps']==733 and r['changed_tensors']>0
-   state={'status':'REAL_GPU_TRAINING_COMPLETE','candidate_id':cid,'pointer':pointer(cid),'training_receipt':r,'official_TEST_rows':0}
+   provenance={'execution':'FRESH_NATIVE_GPU_TRAINING','source_native_run_id':json.loads((self.driver.OUT/(cid+'-native-dispatch-private.json')).read_text())['run_id'],'original_optimizer_steps':733,'new_optimizer_steps_this_run':733,'reuse_is_not_new_training':False};view=dict(r);view['execution_provenance']=provenance
+   state={'status':'REAL_GPU_TRAINING_COMPLETE','candidate_id':cid,'pointer':pointer(cid),'training_receipt':view,'training_provenance':provenance,'official_TEST_rows':0}
   except BaseException as e:
    # A bounded watcher/provider failure must not orphan its still-live GPU Job.
    _,run,name=jobs.paths(cid);f=run/'host-private.json'
@@ -70,11 +72,20 @@ class Broker:
    cid=req['candidate_id'];assert cid in CIDS and req['manifest_sha256']==self.manifest_sha256
    with self.lock:
     assert self.current is None,'Parallel GPU submission prohibited'
-    assert cid not in self.started and not (S/cid/'run').exists(),'No duplicate or replay training'
+    assert cid not in self.started,'No duplicate submission'
+    reuse_allowed=cid=='P13' and cid in self.reuse
+    assert not (S/cid/'run').exists() or reuse_allowed,'No duplicate or replay training without frozen certified-native cache proof'
     assert len(self.started)<2
     journal=self.driver.collect_journal();assert any(a['target'].endswith('/setup_1') and a['output'].get('failed') is False for a in journal['actions'])
     active=set(journal['started_actions'])-{a['target'] for a in journal['actions']}
     assert any('/worker_' in a for a in active),'Only an active native Worker can dispatch'
+    if reuse_allowed:
+     assert sha(S/'P13-certified-native-reuse-private.json')==self.reuse[cid]['source_proof_sha256']
+     state=certified_reuse(study=S);assert state['training_provenance']==self.reuse[cid]
+     self.started.append(cid);self.states[cid]=state
+     (self.driver.OUT/(cid+'-backend-private.json')).write_text(json.dumps(state,indent=2)+'\n')
+     (self.driver.OUT/(cid+'-native-dispatch-private.json')).write_text(json.dumps({'run_id':journal['run_id'],'active_actions':sorted(active),'request':req,'execution':'CERTIFIED_CACHE_REUSE_NO_NEW_TRAINING','provenance':state['training_provenance']},indent=2)+'\n')
+     return {'status':'CERTIFIED_PRIOR_NATIVE_ARM_REUSED','candidate_id':cid,'new_optimizer_steps_this_run':0,'source_native_run_id':state['training_provenance']['source_native_run_id']}
     self.started.append(cid);self.current=cid;self.states[cid]={'status':'IN_PROGRESS','candidate_id':cid}
     (self.driver.OUT/(cid+'-native-dispatch-private.json')).write_text(json.dumps({'run_id':journal['run_id'],'active_actions':sorted(active),'request':req},indent=2)+'\n')
     t=threading.Thread(target=self.train,args=(cid,),daemon=True);self.threads.append(t);t.start()

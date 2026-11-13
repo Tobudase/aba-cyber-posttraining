@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN_ORCHESTRATION_RECOVERY_BEFORE_P14_OUTPUTS",
+  "at_utc": "2026-11-13T10:30:55.844103+00:00",
+  "prior_native_run_id": "a7309a918547431cb77ba60bcf2675f7",
+  "prior_native_root_result": "completed",
+  "prior_complete_native_training_candidates": [
+    "P13"
+  ],
+  "prior_failed_worker": "P14 hit150turns whileGPUqueued;noGPUallocationorupdates",
+  "native_resume_unsupported": "Pinnedstartup refuses finishedruns;no journal/durable-state mutation attempted.",
+  "recovery": "Newnative2candidate run explicitlyreuses priorgenuineP13 training/score/deliverableafterSHAandlineagevalidation;onlyP14freshGPUtraining. Reuse isnotnewtraining.",
+  "cache_provenance": {
+    "execution": "CERTIFIED_PREVIOUS_NATIVE_ARM_REUSED",
+    "source_native_run_id": "a7309a918547431cb77ba60bcf2675f7",
+    "source_proof_sha256": "91a158b9c423936498e8e215a57c6ad12c868b0cbfe7d608e37aed9bceb447ac",
+    "original_optimizer_steps": 733,
+    "new_optimizer_steps_this_run": 0,
+    "reuse_is_not_new_training": true
+  },
+  "P14_new_model_outputs_before_amendment": 0,
+  "P14_new_optimizer_updates_before_amendment": 0,
+  "wait_seconds_per_Bash": 420,
+  "Bash_timeout_ms": 600000,
+  "worker_max_turns_unchanged": 150,
+  "maximum_job_watch_seconds": 22200,
+  "worst_case_wait_model_turns": 53,
+  "reserve_other_worker_turns": 30,
+  "numeric_protocols_unchanged": {
+    "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+    "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+    "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+    "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+  },
+  "scoring_selection_gates_unchanged": true,
+  "new_recipe_candidates_added": 0,
+  "official_TEST_rows": 0,
+  "final64_queries": 0,
+  "controller_cost_limitation": "ServedDeepSeekV4.1alias lacks upstreampricingtier;do nottreatreportedUSD ascompletecontrollercost. Reporttime/tokenusageinstead."
+}

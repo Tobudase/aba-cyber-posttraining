@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r13';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r14';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
@@ -97,6 +97,8 @@ def main():
    matches=[v for p,v in art['files'].items() if p.endswith('/deliverable/'+name)];assert len(matches)==1;assert matches[0]==files[name];deliveries[name]=matches[0]['sha256']
   p=json.loads(files['final_model/model.json']['text']);cid=p['candidate_id'];expected=BROKER.call({'action':'score','pointer':p});assert abs(selected['score']-expected['score'])<1e-8
   assert set(BROKER.started)=={'P13','P14'} and all(BROKER.states[c]['status']=='REAL_GPU_TRAINING_COMPLETE' for c in BROKER.started),'Two real ABA candidates required'
+  provenance={c:BROKER.states[c]['training_provenance'] for c in BROKER.started};assert provenance['P13']['new_optimizer_steps_this_run']==0 and provenance['P13']['reuse_is_not_new_training'] and provenance['P14']['new_optimizer_steps_this_run']==733
+  record['native_training_provenance']=provenance
   candidates=[(c,BROKER.call({'action':'score','pointer':BROKER.states[c]['pointer']})['score']) for c in BROKER.started]
   assert expected['score']==max(s for _,s in candidates),'Native final selection is not highest-scoring certified ABA candidate'
   # Pinned nb_tree initializes selected_output=None; baseline verification is
@@ -109,16 +111,22 @@ def main():
   selection={'status':'NATIVE_SEARCH_COMPLETE_SELECTION_FROZEN','candidate_id':retained_cid,'pointer':retained_pointer,'native_selected_candidate':cid,'native_selected_pointer':p,'native_run_id':j['run_id'],'DEV_score':retained_score,'native_selected_DEV_score':expected['score'],'all_available_scores':available,'deliverable_sha256':deliveries,'native_deliverable_candidate':cid,'retention_policy':'Native winner competes with preregistered fixed champion/E0 on DEV;ties retain the fixed champion. Never choose using final64.','final64_used':False,'official_TEST_rows':0}
   (S/'native-selection-private.json').write_text(json.dumps(selection,indent=2)+'\n');record.update(status='COMPLETE_VERIFIED_NATIVE_8B_STUDY',native_completed=True,native_selected_candidate=cid,retained_candidate=retained_cid,native_run_id=j['run_id']);save(record)
  except BaseException as e:
-  record.update(status='FAILED',error_type=type(e).__name__,error=str(e)[:300]);print(json.dumps({'status':'FAILED','error_type':type(e).__name__,'error':str(e)[:200]}),flush=True)
+  record.update(status='FAILED',error_type=type(e).__name__,error=str(e)[:300],cleanup_pending=True);save(record);print(json.dumps({'status':'FAILED','error_type':type(e).__name__,'error':str(e)[:200]}),flush=True)
   if made:
    try:collect_journal()
    except Exception:pass
  finally:
-  stop.set()
-  if t:t.join(timeout=120)
-  if made:
-   for args in [('delete','vm',NAME,'--ignore-not-found=true','--wait=true','--timeout=60s'),('wait','--for=delete','vmi/'+NAME,'--timeout=60s')]:
-    r=call(m.BASE+list(args),timeout=75)
-    if r.returncode:record['cleanup_errors'].append(r.stderr[-200:])
-  KNOWN.unlink(missing_ok=True);save(record);print(json.dumps(record),flush=True)
+  cleanup(record,made,stop,t)
+def cleanup(record,made,stop,thread):
+ stop.set()
+ try:
+  if thread:thread.join(timeout=120)
+ finally:
+  try:
+   if made:
+    for args in [('delete','vm',NAME,'--ignore-not-found=true','--wait=true','--timeout=60s'),('wait','--for=delete','vmi/'+NAME,'--timeout=60s')]:
+     r=call(m.BASE+list(args),timeout=75)
+     if r.returncode:record['cleanup_errors'].append(r.stderr[-200:])
+  finally:
+   KNOWN.unlink(missing_ok=True);record['cleanup_pending']=False;save(record);print(json.dumps(record),flush=True)
 if __name__=='__main__':main()
