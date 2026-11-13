@@ -2,6 +2,10 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 13, 2026 — append versus replay follow-up
+
+Submitted a separate four-arm diagnostic: preserve all 733 original TRAIN rows, append either 64 verified silver rows or 64 target-length-matched publisher replays, and run both seeds 42/43. Each arm has 797 updates and 19,065 supervised tokens, with one A100 at a time. Evaluation uses exposed DEV128 only; no official TEST or previously queried final64 calls, no new native ABA claim or model promotion. [Frozen design](results/kali-8b-append64-study-2026-11-13/DESIGN_ZH.md) · [Submission status](results/kali-8b-append64-study-2026-11-13/status.json).
+
 ## November 12, 2026 — completed bounded 8B study
 
 Completed **four unique real 8B SFT arms**, with 733 nonzero-gradient updates each, **two native-scored ABA candidates**, and **one frozen 64-example internal confirmation**. Recovery reused previously native-trained, scored and finalized P13 with **0 new updates**; only P14 was freshly trained in the final native run. The native winner was **P13**, while the predeclared DEV retention rules kept **E0**.
