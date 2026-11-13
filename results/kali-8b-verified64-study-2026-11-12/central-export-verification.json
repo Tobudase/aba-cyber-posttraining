@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-11-13T01:41:52.007203+00:00",
+  "GPU_count": 0,
+  "CPU": "250m",
+  "node": "gpn-fiona-mizzou-4.rnet.missouri.edu",
+  "status": "PASS_CENTRAL_REAL_ADAPTER_EXPORT",
+  "result": {
+    "status": "ADAPTER_EXPORTED_AND_HASH_VERIFIED",
+    "adapter_sha256": "5bde4612a0012fe3b6e9cfa0762cc77eb7b2b07fa92997452b465ad03a02a86f",
+    "tensor_count": 144,
+    "archive_sha256": "89e5f1716978757218120c0dab09ae62499a68dd73b0c63e9b35cc01c34b55a5",
+    "bytes": 30690184
+  },
+  "finished_at_utc": "2026-11-13T01:43:20.428359+00:00"
+}

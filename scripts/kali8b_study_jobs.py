@@ -21,7 +21,7 @@ def protocol(cid):
 def placement_pool():
  p=S/'placement-amendment-private.json'
  if not p.exists():return None
- x=json.loads(p.read_text());assert x['status']=='FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES' and x['GPU_product']=='NVIDIA-A100-SXM4-80GB' and x['driver_full']=='615.71.09' and len(x['allowed_hostnames'])==5
+ x=json.loads(p.read_text());assert x['status']=='FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES' and x['GPU_product']=='NVIDIA-A100-SXM4-80GB' and x['driver_full'] in {'615.71.09','615.71.10'} and 1<=len(set(x['allowed_hostnames']))==len(x['allowed_hostnames'])<=16
  return x
 
 def objects(cid):
@@ -36,7 +36,9 @@ def objects(cid):
   data['control-base-reference.json']=json.dumps({r['id']:r['response'] for r in json.loads((control/'base-predictions-private.json').read_text())})
  cm={'apiVersion':'v1','kind':'ConfigMap','metadata':{'name':name,'labels':labels(cid)},'data':data}
  secret={'apiVersion':'v1','kind':'Secret','metadata':{'name':name+'-input','labels':labels(cid)},'type':'Opaque','data':{'payload.json.gz':base64.b64encode((d/'payload-private.json.gz').read_bytes()).decode()}}
- pod={'restartPolicy':'Never','activeDeadlineSeconds':p['pod_runtime_seconds'],'automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/arch':'amd64'},'affinity':{'nodeAffinity':{'requiredDuringSchedulingIgnoredDuringExecution':{'nodeSelectorTerms':[{'matchExpressions':expr}]}}},'containers':[{'name':'train','image':json.loads((ROOT/'configs/gpu-runtime-image.lock.json').read_text())['image'],'command':['/bin/bash','-lc','set -euo pipefail; mkdir -p /cache/kali-8b-verified64-study/logs; python -u /input/worker.py 2>&1 | tee /cache/kali-8b-verified64-study/logs/'+cid.lower()+'.log'],'env':[{'name':'HF_HUB_OFFLINE','value':'1'},{'name':'OMP_NUM_THREADS','value':'2'},{'name':'CUBLAS_WORKSPACE_CONFIG','value':':4096:8'},{'name':'PYTHONDONTWRITEBYTECODE','value':'1'}],'resources':{'requests':p['resource_request'],'limits':p['resource_request']},'volumeMounts':[{'name':'input','mountPath':'/input','readOnly':True},{'name':'cache','mountPath':'/cache'},{'name':'scratch','mountPath':'/scratch'}]}],'volumes':[{'name':'input','projected':{'defaultMode':256,'sources':[{'configMap':{'name':name}},{'secret':{'name':name+'-input'}}]}},{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache'}},{'name':'scratch','emptyDir':{'sizeLimit':'24Gi'}}]}
+ resources=dict(p['resource_request'])
+ if cid in {'P13','P14'}:resources.update(placement_pool().get('resource_request_overrides',{}))
+ pod={'restartPolicy':'Never','activeDeadlineSeconds':p['pod_runtime_seconds'],'automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/arch':'amd64'},'affinity':{'nodeAffinity':{'requiredDuringSchedulingIgnoredDuringExecution':{'nodeSelectorTerms':[{'matchExpressions':expr}]}}},'containers':[{'name':'train','image':json.loads((ROOT/'configs/gpu-runtime-image.lock.json').read_text())['image'],'command':['/bin/bash','-lc','set -euo pipefail; mkdir -p /cache/kali-8b-verified64-study/logs; python -u /input/worker.py 2>&1 | tee /cache/kali-8b-verified64-study/logs/'+cid.lower()+'.log'],'env':[{'name':'HF_HUB_OFFLINE','value':'1'},{'name':'OMP_NUM_THREADS','value':'2'},{'name':'CUBLAS_WORKSPACE_CONFIG','value':':4096:8'},{'name':'PYTHONDONTWRITEBYTECODE','value':'1'}],'resources':{'requests':resources,'limits':resources},'volumeMounts':[{'name':'input','mountPath':'/input','readOnly':True},{'name':'cache','mountPath':'/cache'},{'name':'scratch','mountPath':'/scratch'}]}],'volumes':[{'name':'input','projected':{'defaultMode':256,'sources':[{'configMap':{'name':name}},{'secret':{'name':name+'-input'}}]}},{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache'}},{'name':'scratch','emptyDir':{'sizeLimit':'24Gi'}}]}
  job={'apiVersion':'batch/v1','kind':'Job','metadata':{'name':name,'labels':labels(cid)},'spec':{'activeDeadlineSeconds':p['queue_deadline_seconds'],'backoffLimit':0,'ttlSecondsAfterFinished':p['result_ttl_seconds'],'template':{'metadata':{'labels':labels(cid)},'spec':pod}}}
  return cm,secret,job
 
@@ -68,7 +70,7 @@ def delete_training(cid,record):
   if p.returncode:record['cleanup_errors'].append(kind+':'+p.stderr[-200:])
 
 def export_adapter(cid,node):
- d,run,name=paths(cid);export=name+'-export';res={'cpu':'1','memory':'256Mi','ephemeral-storage':'128Mi'}
+ d,run,name=paths(cid);export=name+'-export';res={'cpu':'250m','memory':'256Mi','ephemeral-storage':'128Mi'}
  pod={'apiVersion':'v1','kind':'Pod','metadata':{'name':export,'labels':labels(cid)},'spec':{'activeDeadlineSeconds':600,'restartPolicy':'Never','automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/hostname':node},'containers':[{'name':'export','image':json.loads((ROOT/'configs/gpu-runtime-image.lock.json').read_text())['image'],'command':['python','-c','import time;print("EXPORT_READY",flush=True);time.sleep(550)'],'resources':{'requests':res,'limits':res},'volumeMounts':[{'name':'cache','mountPath':'/cache','readOnly':True}]}],'volumes':[{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache','readOnly':True}}]}}
  # This is a short interactive CPU Pod (manual exec is allowed),never an idle
  # Job. GPU batch Jobs above still execute their computation and terminate.
@@ -98,7 +100,7 @@ def check_once(cid):
  if record['status'] in ['COLLECTED','FAILED']:return True,record
  job=json.loads(k('get','job',name,'-o','json').stdout);assert job['metadata']['uid']==record['job_uid'];pods=json.loads(k('get','pods','-l','job-name='+name,'-o','json').stdout)['items'];pod=pods[0] if pods else None
  if pod and pod['spec'].get('nodeName'):
-  record['node_name']=pod['spec']['nodeName']
+  record['node_name']=pod['spec']['nodeName'];record['observed_pod_resources']=pod['spec']['containers'][0]['resources']
   if cid=='P11' and not (S/'hardware-lock-private.json').exists():
    nodes=json.loads(k('get','nodes','-o','json').stdout)['items'];n=next(n for n in nodes if n['metadata']['name']==record['node_name']);h={'hostname_label':n['metadata']['labels']['kubernetes.io/hostname'],'node_name':record['node_name'],'product':n['metadata']['labels']['nvidia.com/gpu.product']};(S/'hardware-lock-private.json').write_text(json.dumps(h,indent=2)+'\n')
  if not (job.get('status',{}).get('succeeded') or job.get('status',{}).get('failed')):

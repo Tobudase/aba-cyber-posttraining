@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r10';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r11';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m

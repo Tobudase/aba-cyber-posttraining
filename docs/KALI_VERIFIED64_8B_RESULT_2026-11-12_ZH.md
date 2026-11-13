@@ -43,3 +43,7 @@ P13 原始排队 Job 在取消前为 Pending、无 nodeName、无训练记录，
 ## 辅助资源规范修正（ABA仍无更新）
 
 运行 `8379339d347f4c5087a1cfe060665130` 实际提交P13，但一直Pending、无节点；在任何GPU分配或训练更新之前停止，原始记录保留且清理无错误。复核NRP政策后，将旧的待机式权重导出Job改为600秒上限、零GPU的短期交互CPU Pod；已真实重新导出P11适配器，30,690,184字节、144张量，SHA与原件完全一致，辅助Pod已删除。控制VM计算容器请求与上限改为相等，并实际核对生成的Pod；Broker在超时/异常时先验证任务UID再清理，两个隔离控制测试通过。后继运行采用相同训练/数据/评分/门槛，final64仍未查询。这是基础设施修正，不是新的8B成绩；此前两组固定对照结果不改写。见[公开记录](../results/kali-8b-verified64-study-2026-11-12/infrastructure-policy-amendment.json)及[NRP使用政策](https://nrp.ai/documentation/userdocs/start/policies/)。
+
+## 已实际通过的中部资源路径（当前修订）
+
+在原五节点等待期间，另一广告驱动版本615.71.10的同型号A100-SXM4-80GB以250mCPU实际分配成功，固定PyTorch2.8/CUDA12.8的BF16运算和现有缓存读取通过。同节点500mCPU、12Gi内存、24Gi临时存储的计算任务也实际通过；250mCPU交互容器成功取回原P11适配器并核对原SHA。故在P13/P14仍为0更新、final64为0查询时，保留原资源修订，新增公开的中部三节点/driver615.71.10/CPU500m修订，并重建原生任务，未悄悄修改活动Task。原P11/P12仍为driver615.71.09、CPU2，不能宣称完全相同硬件。模型、训练行、遮罩、优化器、733更新、生成配置、评分/选择门槛及确认题目哈希不变。首步梯度等一致性检查仍为硬性条件；任何不一致都会阻止最终确认，而不是放宽门槛。资源实际可用是探测时点证据，不是独占GPU预留或SFT增益证明。见[资源修订及实测](../results/kali-8b-verified64-study-2026-11-12/central-resource-amendment.json)和[实际跨节点权重回收](../results/kali-8b-verified64-study-2026-11-12/central-export-verification.json)。

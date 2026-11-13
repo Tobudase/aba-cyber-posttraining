@@ -462,5 +462,110 @@
     },
     "CPU_only_node": "rci-tide-cpu-04.sdsu.edu",
     "VM_compute_request_limit_check": "PASS"
+  },
+  "central_resource_amendment": {
+    "status": "FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES",
+    "at_utc": "2026-11-13T01:41:46.005671+00:00",
+    "reason": "Positive actual allocation/cache/BF16 probe on central A100SXM80 driver615.71.10;1CPU request blocked,250m GPU probe and500mCPU/12Gi/24Gi CPU/cache probe passed. Resource-only amendment before any ABA update;numeric data/algorithm/gates unchanged.",
+    "original_host": "node-1-4.sdsc.optiputer.net",
+    "allowed_hostnames": [
+      "gpn-fiona-mizzou-4.rnet.missouri.edu",
+      "gpn-fiona-mizzou-6.rnet.missouri.edu",
+      "hcc-gpengine-shor-c5303.unl.edu"
+    ],
+    "GPU_product": "NVIDIA-A100-SXM4-80GB",
+    "driver_label": "nvidia.com/cuda.driver-version.full",
+    "driver_full": "615.71.10",
+    "regions": [
+      "us-central"
+    ],
+    "resource": "nvidia.com/a100",
+    "GPUs_per_job": 1,
+    "parallel_GPU_limit": 1,
+    "priority": "ordinary unchanged,no additionaltolerations",
+    "fixed_control_results_already_observed": true,
+    "P13_P14_optimizer_updates_before_amendment": 0,
+    "cancelled_job_uid": "cae3ce26-934f-4551-81b6-fa6f35402c0c",
+    "cancelled_pod_uid": "2a49967b-c443-4caf-aca3-0397384e7b59",
+    "new_control_source_scope": "P11/P12 originalhost/driver615.71.09/CPU2;native candidates and confirmation sameGPUmodel,central threehostpool/driver615.71.10/CPU500m. Crosshost,crossdriver,CPUquota comparison;not exacthardware replication.",
+    "numeric_protocols_unchanged": {
+      "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+    },
+    "unchanged": [
+      "base weights/tokenizer",
+      "TRAINmembership/orderseeds/733updates/17439supervisedtokens",
+      "LoRA/optimizer settings",
+      "greedy generation configuration",
+      "native/strict score andretentiongates",
+      "final64 input/reference hashes"
+    ],
+    "required_checks": [
+      "freshE0 DEV128 exactbyteagreementwithP11 beforeanytraining",
+      "seed42 initialLoRAbyteagreement",
+      "P12/P14 first preupdate loss/gradient/token record exactagreement",
+      "allfouractualtrainingreceipts/modelSHA/reloadchecks",
+      "completefour-armconsistencybeforeselection/final64"
+    ],
+    "official_TEST_rows": 0,
+    "final64_queries": 0,
+    "limit": "Declared resource-only addendum after observing fixed controls,before any ABA update. Exact fresh E0/init/first-gradient checks are required,not proof of complete hardware equivalence.",
+    "resource_request_overrides": {
+      "cpu": "500m"
+    },
+    "fixed_control_driver_full": "615.71.09",
+    "prior_resource_amendment_sha256": "1b9de0db2dfe11722241dca60e048932532bd2a028b78e069607d88c3d7641cc",
+    "resource_probe": {
+      "started_at_utc": "2026-11-13T01:36:43.537695+00:00",
+      "scope": "Short hardware/compatible-BF16 check only;no model weights,training data,benchmark examples or optimizer",
+      "GPU_count": 1,
+      "created": true,
+      "A100_paused": true,
+      "cleanup_errors": [],
+      "A100_prepause_pod_uid": "255d68f4-133f-47be-84f1-d1a4f1aff11c",
+      "node": "gpn-fiona-mizzou-4.rnet.missouri.edu",
+      "result": {
+        "GPU": "NVIDIA A100-SXM4-80GB",
+        "memory_bytes": 85125496832,
+        "BF16_matmul_pass": true,
+        "torch": "2.8.0+cu128",
+        "torch_CUDA": "12.8",
+        "optimizer_steps": 0,
+        "LLM_model_calls": 0
+      },
+      "node_inventory": {
+        "name": "gpn-fiona-mizzou-4.rnet.missouri.edu",
+        "product": "NVIDIA-A100-SXM4-80GB",
+        "region": "us-central",
+        "driver": "615.71.10",
+        "resources": {
+          "nvidia.com/a100": "4",
+          "nvidia.com/gpu": "0",
+          "nvidia.com/mig-small": "0"
+        }
+      },
+      "status": "COMPLETE_HARDWARE_PROBE",
+      "finished_at_utc": "2026-11-13T01:37:55.273377+00:00"
+    },
+    "CPU_probe": {
+      "started_at_utc": "2026-11-13T01:39:35.874842+00:00",
+      "GPU_count": 0,
+      "resources": {
+        "cpu": "500m",
+        "memory": "12Gi",
+        "ephemeral-storage": "24Gi"
+      },
+      "status": "PASS",
+      "result": {
+        "status": "CPU500_CACHE_CHECK_PASS",
+        "config_sha256": "8729d2255cda98f506efc0bd6e68585bd1300af6a5715287f259c057cdcd43ef",
+        "CPU_quota": "50000 100000",
+        "optimizer_steps": 0
+      },
+      "cleanup_returncode": 0,
+      "finished_at_utc": "2026-11-13T01:40:22.745963+00:00"
+    }
   }
 }
