@@ -13,7 +13,7 @@ def start_and_wait(driver,token,record):
  result=safe_ssh(driver,'python3 -c '+shlex.quote(keycode),payload=token);assert result is not None and result.returncode==0,'Unable to deliver transient service credential'
  launch="""import os,subprocess,json
 e=os.environ.copy();e.update(XDG_RUNTIME_DIR='/run/user/1000',DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus')
-p=subprocess.run(['systemd-run','--user','--collect','--unit=kali8b-native-controller.service','--property=Delegate=yes','--property=RuntimeMaxSec=27090','--property=StandardInput=file:/mnt/aba-scratch/study/.nrp-runtime-key-private','--property=StandardOutput=append:/mnt/aba-scratch/study/supervisor-private.log','--property=StandardError=append:/mnt/aba-scratch/study/supervisor-private.log','/mnt/aba-scratch/conda/envs/manager/bin/python','/mnt/aba-scratch/study/native_supervisor.py'],env=e,capture_output=True,text=True)
+p=subprocess.run(['systemd-run','--user','--collect','--unit=kali8b-native-controller.service','--property=Delegate=yes','--property=RuntimeMaxSec=61290','--property=StandardInput=file:/mnt/aba-scratch/study/.nrp-runtime-key-private','--property=StandardOutput=append:/mnt/aba-scratch/study/supervisor-private.log','--property=StandardError=append:/mnt/aba-scratch/study/supervisor-private.log','/mnt/aba-scratch/conda/envs/manager/bin/python','/mnt/aba-scratch/study/native_supervisor.py'],env=e,capture_output=True,text=True)
 print(json.dumps({'returncode':p.returncode,'stderr':p.stderr[-500:]}))
 """
  result=safe_ssh(driver,'python3 -c '+shlex.quote(launch))
@@ -25,7 +25,7 @@ print(json.dumps({'returncode':p.returncode,'stderr':p.stderr[-500:]}))
 r=pathlib.Path('/mnt/aba-scratch/study');e=os.environ.copy();e.update(XDG_RUNTIME_DIR='/run/user/1000',DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus');p=subprocess.run(['systemctl','--user','show','kali8b-native-controller.service','--property=ActiveState','--value'],capture_output=True,text=True,env=e)
 print(json.dumps({'exit':json.loads((r/'exit.json').read_text()) if (r/'exit.json').exists() else None,'unit_state':p.stdout.strip(),'credential_source_removed':not (r/'.nrp-runtime-key-private').exists(),'native_log_tail':(r/'native.log').read_text(errors='replace')[-6000:] if (r/'native.log').exists() else None,'supervisor_error':json.loads((r/'supervisor-error-private.json').read_text()) if (r/'supervisor-error-private.json').exists() else None}))
 """
- until=time.monotonic()+27300;failures=0;inactive=0
+ until=time.monotonic()+61500;failures=0;inactive=0
  while time.monotonic()<until:
   response=safe_ssh(driver,'python3 -c '+shlex.quote(status),timeout=40)
   if response is None or response.returncode:

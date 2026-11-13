@@ -28,6 +28,10 @@ def freeze_baseline():
  else:path.write_text(raw)
  return record
 
+def backend_watch_seconds(protocol):
+ seconds=int(protocol['queue_deadline_seconds']);assert seconds>0
+ return seconds+600  # Honor actual Job budget,then allow bounded collection.
+
 class Broker:
  def __init__(self,driver):
   self.driver=driver;self.baseline=freeze_baseline();self.lock=threading.Lock();self.states={};self.threads=[];self.started=[];self.current=None
@@ -35,7 +39,7 @@ class Broker:
  def train(self,cid):
   try:
    if self.placement_sha256:assert sha(S/'placement-amendment-private.json')==self.placement_sha256,'Placement addendum changed after native freeze'
-   jobs.submit(cid);host=jobs.watch(cid,seconds=3*3600)
+   jobs.submit(cid);host=jobs.watch(cid,seconds=backend_watch_seconds(jobs.protocol(cid)))
    assert host['status']=='COLLECTED',host.get('error','Training did not complete')
    r=json.loads((S/cid/'run/receipt-private.json').read_text());assert r['optimizer_steps']==r['nonzero_gradient_steps']==733 and r['changed_tensors']>0
    state={'status':'REAL_GPU_TRAINING_COMPLETE','candidate_id':cid,'pointer':pointer(cid),'training_receipt':r,'official_TEST_rows':0}

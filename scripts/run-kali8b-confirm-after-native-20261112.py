@@ -3,7 +3,7 @@
 import json,os,pathlib,subprocess,sys,time
 ROOT=pathlib.Path(__file__).resolve().parents[1];HOST=ROOT/'docs/verification/kali8b-native-v64-20261112/host-private.json';S=ROOT/'data/benchkit/kali-8b-verified64-study-2026-11-12'
 def main():
- subprocess.Popen(['caffeinate','-i','-w',str(os.getpid())],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL);until=time.monotonic()+12*3600;last=None
+ subprocess.Popen(['caffeinate','-i','-w',str(os.getpid())],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL);until=time.monotonic()+18*3600;last=None
  while time.monotonic()<until:
   try:r=json.loads(HOST.read_text()) if HOST.exists() else {'status':'WAITING_NATIVE_CONTROLLER'}
   except json.JSONDecodeError:time.sleep(2);continue

@@ -14,7 +14,7 @@ def main():
   controller_model=json.loads((ROOT/'config.json').read_text())['llm']['default']['model']
   for name in ['SMALL_FAST','HAIKU','SONNET','OPUS','SUBAGENT']:env['AIBUILDAI_'+name+'_MODEL']=controller_model
   with (ROOT/'native.log').open('w') as log:
-   try:result=subprocess.run(['/mnt/aba-scratch/conda/envs/manager/bin/aibuildai','run',str(ROOT/'config.json')],cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=27000);rc=result.returncode
+   try:result=subprocess.run(['/mnt/aba-scratch/conda/envs/manager/bin/aibuildai','run',str(ROOT/'config.json')],cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=61200);rc=result.returncode
    except subprocess.TimeoutExpired:rc=124
  except BaseException as exc:(ROOT/'supervisor-error-private.json').write_text(json.dumps({'error_type':type(exc).__name__}))
  finally:

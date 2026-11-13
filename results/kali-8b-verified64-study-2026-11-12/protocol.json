@@ -57,7 +57,7 @@
     "maximum_panel_native_drop": 0.02,
     "maximum_untargeted_native_drop": 0.02
   },
-  "hardware_policy": "P11/P12 originalhost. Resource-only addendum afterfixedcontroloutputs,beforeanyABAoptimizerupdate: P13/P14/confirmation5SDSChostswithsameA100-SXM4-80GBproductandadvertiseddriver615.71.09. FreshbaseDEV128mustmatchexactly;allfourarmconsistencygatebeforeconfirmation. Ordinarypriority,oneGPU.",
+  "hardware_policy": "P11/P12 originalSDSChost/advertiseddriver615.71.09/CPU2. After one discarded P13partialattempt withno certifiedadapter orcandidateDEVscore, nativeandconfirmation may use declared13 sameGPUproduct hosts,advertiseddriver615.71.09/.10,CPU2. Ordinarypriority,1GPU,unchangeddata/recipe/scoring. ExactfreshE0 andall4armconsistencyrequired;notexacthardwareequivalence.",
   "independent_confirmation": {
     "rows": 64,
     "arms": [
@@ -121,15 +121,15 @@
     "status": "CONFIRMATION_IMPLEMENTATION_FROZEN_BEFORE_OUTPUTS",
     "created_at_utc": "2026-11-12T18:27:54.180407+00:00",
     "worker_sha256": "6ca5f77ea82a7bedb1215742f6e9dda19e166de9d771f63f288fceadc69ff7c0",
-    "runner_sha256": "4cdcbf5480466fce620e674ec38800c57586a2857f4ac9232b7452ceab205047",
+    "runner_sha256": "5d5829ca6c634fa0c1438d533532fa8efc087bfeb64da77c06e957e9337ad498",
     "references_sha256": "6593bbcd7001928c538abb7fd4037bd91cc3f27af9ccc119b1b440cacd65d20a",
     "query_inputs_sha256": "0ad15f884e892164d69705665bdfab6f242a371898d2325e4370647466167b84",
     "model_outputs": 0,
     "official_TEST_rows": 0,
     "implementation_amendment_at_utc": "2026-11-12T18:40:40.573351+00:00",
     "amendment_reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected.",
-    "resource_amendment_at_utc": "2026-11-12T23:42:41.705175+00:00",
-    "resource_amendment_reason": "Finaleval uses same exact-product/advertiseddriver fivehostpool,notonepinnedhost. worker/data/scoring/selection unchanged;final64still0queries.",
+    "resource_amendment_at_utc": "2026-11-13T05:40:50.068165+00:00",
+    "resource_amendment_reason": "Normal exact-product broadpooldriver615.71.09/.10,CPU2creationrequest. No active ownership migration,no inplaceresize,numeric worker/scoring/selection unchanged,zero final64queries. Prior locks preserved.",
     "prior_runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94"
   },
   "selection_implementation_clarification": {
@@ -690,5 +690,257 @@
       "transport_alias": "identity:deepseek-v4-flash",
       "training_model_unchanged": true
     }
+  },
+  "budget_resource_retry_amendment": {
+    "status": "FROZEN_RESOURCE_ONLY_RETRY_AFTER_MONITOR_TIMEOUT_NO_COMPLETED_NATIVE_CANDIDATE",
+    "at_utc": "2026-11-13T05:37:40.009005+00:00",
+    "reason": "Correct host3h watchdog to honor existing6hJob+10mincollection. Discard interruptedP13 withnoadapter/noCandidateDEVscore;restart original frozen733step recipe. Restore originalCPU2 atcreation toavoid500mthrottling;use wider exact-product ordinary pool withadvertiseddrivers615.71.09/.10. No activePodownershipmigration or in-place resize.",
+    "allowed_hostnames": [
+      "gp-engine.beocat.ksu.edu",
+      "gp-engine.usd.edu",
+      "gpengine-uams.areon.net",
+      "gpn-fiona-mizzou-4.rnet.missouri.edu",
+      "gpn-fiona-mizzou-6.rnet.missouri.edu",
+      "hcc-gpengine-shor-c5303.unl.edu",
+      "node-1-1.sdsc.optiputer.net",
+      "node-1-3.sdsc.optiputer.net",
+      "node-1-4.sdsc.optiputer.net",
+      "node-2-2.sdsc.optiputer.net",
+      "node-2-3.sdsc.optiputer.net",
+      "sphinx.sdstate.edu",
+      "tu.gp-engine.greatplains.net"
+    ],
+    "GPU_product": "NVIDIA-A100-SXM4-80GB",
+    "driver_full": "615.71.10",
+    "allowed_driver_full": [
+      "615.71.09",
+      "615.71.10"
+    ],
+    "regions": [
+      "us-west",
+      "us-central"
+    ],
+    "host_inventory": [
+      {
+        "hostname": "gp-engine.beocat.ksu.edu",
+        "node_name": "gp-engine.beocat.ksu.edu",
+        "driver_full": "615.71.09",
+        "region": "us-central"
+      },
+      {
+        "hostname": "gp-engine.usd.edu",
+        "node_name": "gp-engine.usd.edu",
+        "driver_full": "615.71.09",
+        "region": "us-central"
+      },
+      {
+        "hostname": "gpengine-uams.areon.net",
+        "node_name": "gpengine-uams.areon.net",
+        "driver_full": "615.71.09",
+        "region": "us-central"
+      },
+      {
+        "hostname": "gpn-fiona-mizzou-4.rnet.missouri.edu",
+        "node_name": "gpn-fiona-mizzou-4.rnet.missouri.edu",
+        "driver_full": "615.71.10",
+        "region": "us-central"
+      },
+      {
+        "hostname": "gpn-fiona-mizzou-6.rnet.missouri.edu",
+        "node_name": "gpn-fiona-mizzou-6.rnet.missouri.edu",
+        "driver_full": "615.71.10",
+        "region": "us-central"
+      },
+      {
+        "hostname": "hcc-gpengine-shor-c5303.unl.edu",
+        "node_name": "hcc-gpengine-shor-c5303.unl.edu",
+        "driver_full": "615.71.10",
+        "region": "us-central"
+      },
+      {
+        "hostname": "node-1-1.sdsc.optiputer.net",
+        "node_name": "node-1-1.sdsc.optiputer.net",
+        "driver_full": "615.71.09",
+        "region": "us-west"
+      },
+      {
+        "hostname": "node-1-3.sdsc.optiputer.net",
+        "node_name": "node-1-3.sdsc.optiputer.net",
+        "driver_full": "615.71.09",
+        "region": "us-west"
+      },
+      {
+        "hostname": "node-1-4.sdsc.optiputer.net",
+        "node_name": "node-1-4.sdsc.optiputer.net",
+        "driver_full": "615.71.09",
+        "region": "us-west"
+      },
+      {
+        "hostname": "node-2-2.sdsc.optiputer.net",
+        "node_name": "node-2-2.sdsc.optiputer.net",
+        "driver_full": "615.71.09",
+        "region": "us-west"
+      },
+      {
+        "hostname": "node-2-3.sdsc.optiputer.net",
+        "node_name": "node-2-3.sdsc.optiputer.net",
+        "driver_full": "615.71.09",
+        "region": "us-west"
+      },
+      {
+        "hostname": "sphinx.sdstate.edu",
+        "node_name": "sphinx.sdstate.edu",
+        "driver_full": "615.71.09",
+        "region": "us-central"
+      },
+      {
+        "hostname": "tu.gp-engine.greatplains.net",
+        "node_name": "tu.gp-engine.greatplains.net",
+        "driver_full": "615.71.09",
+        "region": "us-central"
+      }
+    ],
+    "resource": "nvidia.com/a100",
+    "resource_request_overrides": {
+      "cpu": "2"
+    },
+    "preferred_region": "us-west",
+    "GPUs_per_job": 1,
+    "parallel_GPU_limit": 1,
+    "priority": "ordinary unchanged,no new tolerations",
+    "fixed_control_results_already_observed": true,
+    "completed_native_candidates_before_amendment": 0,
+    "candidate_DEV_outputs_before_amendment": 0,
+    "discarded_partial_native_attempts": [
+      {
+        "status": "DISCARDED_INCOMPLETE_NATIVE_P13_NO_CERTIFIED_CHECKPOINT",
+        "at_utc": "2026-11-13T05:34:02.576844+00:00",
+        "native_run_id": "b4805d63f5e94b42bda76e3eac035452",
+        "job_uid": "f71e249c-3b89-42d8-a1e1-9d805615e20a",
+        "last_logged_optimizer_update": 704,
+        "optimizer_updates_lower_bound": 704,
+        "optimizer_updates_upper_bound": 733,
+        "nonzero_gradient_steps_not_certified": true,
+        "completed_733_receipt": false,
+        "usable_adapter": false,
+        "candidate_DEV_outputs": 0,
+        "fresh_base_rows": 128,
+        "fresh_base_full_rows_equal_P11": true,
+        "live_log_sha256": "7654210cd036e88d985929a8f1b5ece4654c6d0f12a96cc8dfd89c2f634d69b7",
+        "readonly_cache_audit": {
+          "started_at_utc": "2026-11-13T05:26:58.191632+00:00",
+          "GPU_count": 0,
+          "file_writes_in_cache": 0,
+          "status": "COMPLETE",
+          "result": {
+            "directory_exists": false,
+            "files": {},
+            "receipts": {}
+          },
+          "cleanup_returncode": 0,
+          "finished_at_utc": "2026-11-13T05:27:40.108964+00:00"
+        },
+        "cause": "Host watcher3h counted queue135min and slow staging24to26min,then stopped before full733receipt;KubernetesJobbudget6h/Pod2h had not expired. Monitor timeout design error,not a measured model-quality failure.",
+        "ownership_handoff_executed": false,
+        "auto_review_rejected_handoff": true,
+        "safer_resolution": "Archive partialattempt;restart fromoriginalbase withsame733step recipe,hostwatch>=Job6h+collectionmargin;no partialweightreuse.",
+        "official_TEST_rows": 0,
+        "final64_queries": 0,
+        "GPU_assigned_at_utc": "2026-11-13T04:36:48Z",
+        "container_started_at_utc": "2026-11-13T04:37:23Z",
+        "log_stream_ended_at_utc": "2026-11-13T05:22:07.247937+00:00",
+        "approximate_GPU_allocation_window_hours": 0.7553466491666667,
+        "cost_scope": "Approximate observed allocation-to-log-end window;not exactGPUrelease,activecompute,FLOPs or billing. Adds real discarded training >=704 logged updates;733/nonzero completion uncertified."
+      }
+    ],
+    "prior_resource_amendment_sha256": "dd11ef69509a571b232c4fd5e3007c78409f016d99d42a56a23d48aeca7f9dd4",
+    "numeric_protocols_unchanged": {
+      "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+    },
+    "unchanged": [
+      "base/tokenizer andhashedfiles",
+      "TRAINmembership andtargettokens",
+      "733updates percompletedarm",
+      "optimizer/LoRA/masking/dtype/attention/seeds",
+      "generation settings",
+      "grading/retention/selectiongates",
+      "final64inputs/refs/worker"
+    ],
+    "required_checks": [
+      "freshE0 DEV128 byteagreementbeforetraining",
+      "seed42 initializationagreement",
+      "P12/P14 first preupdate loss/gradient equality",
+      "four-arm actualreceipts/checkpointSHA/reloadchecks beforeselection"
+    ],
+    "official_TEST_rows": 0,
+    "final64_queries": 0,
+    "limit": "Resource/budget revision afterdiscardedpartialtraining andoldfixedcontrols,butwithoutanytrainedcandidateDEVoutputs. Not equalwall/FLOP budget;reportdiscardedcostseparately. No exacthardwareequivalenceclaim.",
+    "budget_retry": {
+      "job_seconds": 21600,
+      "pod_runtime_seconds": 7200,
+      "host_watch_seconds": 22200,
+      "worker_minutes": 400,
+      "training_minutes": 390,
+      "root_minutes": 960,
+      "native_supervisor_seconds": 61200,
+      "systemd_seconds": 61290,
+      "host_daemon_wait_seconds": 61500,
+      "VM_shutdown_minutes": 1080,
+      "numeric_recipe_unchanged": true
+    }
+  },
+  "confirmation_implementation_before_budget_retry": {
+    "status": "CONFIRMATION_IMPLEMENTATION_FROZEN_BEFORE_OUTPUTS",
+    "created_at_utc": "2026-11-12T18:27:54.180407+00:00",
+    "worker_sha256": "6ca5f77ea82a7bedb1215742f6e9dda19e166de9d771f63f288fceadc69ff7c0",
+    "runner_sha256": "4cdcbf5480466fce620e674ec38800c57586a2857f4ac9232b7452ceab205047",
+    "references_sha256": "6593bbcd7001928c538abb7fd4037bd91cc3f27af9ccc119b1b440cacd65d20a",
+    "query_inputs_sha256": "0ad15f884e892164d69705665bdfab6f242a371898d2325e4370647466167b84",
+    "model_outputs": 0,
+    "official_TEST_rows": 0,
+    "implementation_amendment_at_utc": "2026-11-12T18:40:40.573351+00:00",
+    "amendment_reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected.",
+    "resource_amendment_at_utc": "2026-11-12T23:42:41.705175+00:00",
+    "resource_amendment_reason": "Finaleval uses same exact-product/advertiseddriver fivehostpool,notonepinnedhost. worker/data/scoring/selection unchanged;final64still0queries.",
+    "prior_runner_sha256": "ce580dd3d8b41d04e7449183a5479ac7e7c1ca4821af6b3decb56c14c0b23b94"
+  },
+  "current_placement_amendment_sha256": "8c93ea1d2033de508080fc31dc0acfda5a77051d49c952d83ae87f33b958cb09",
+  "retry_preflight": {
+    "status": "SAFE_FRESH_RETRY_PREFLIGHT_PASS",
+    "at_utc": "2026-11-13T05:49:19.327773+00:00",
+    "old_native_run_id": "b4805d63f5e94b42bda76e3eac035452",
+    "old_native_status": "FAILED",
+    "old_cleanup_errors": [],
+    "previous_partial_checkpoint_reused": false,
+    "complete_fixed_controls_preserved": [
+      "P11",
+      "P12"
+    ],
+    "training_PROTOCOL_sha_unchanged": {
+      "P11": "0cd8c642cc856f6f0f8b87d83933417ac228bb2a7bf966776919ea3b4f0a0849",
+      "P12": "0758ec21a8853042b9490ecd49b77c382040896bb01c1feaa0ab7933e382408f",
+      "P13": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4",
+      "P14": "a91aeb5ace89423eafc5dfe8e12c2a04c648eebee5eea6a55de72c791e46f28a"
+    },
+    "checks": [
+      "11budget/ownedcleanup/queueguardtests",
+      "nativecontracttests",
+      "detach/reconnecttests",
+      "training+confirmationKubernetesServerDryRun",
+      "worker/recipe/final64workerSHAunchanged",
+      "no64queries"
+    ],
+    "numeric_changes": [],
+    "host_watch_seconds": 22200,
+    "GPU_job_deadline_seconds": 21600,
+    "root_minutes": 960,
+    "controller_minutes": 1020,
+    "VM_shutdown_minutes": 1080,
+    "oneGPU_at_once": true,
+    "no_reserved_tolerations": true,
+    "no_ownership_migration": true
   }
 }

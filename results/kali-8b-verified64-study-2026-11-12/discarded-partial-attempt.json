@@ -1,0 +1,40 @@
+{
+  "status": "DISCARDED_INCOMPLETE_NATIVE_P13_NO_CERTIFIED_CHECKPOINT",
+  "at_utc": "2026-11-13T05:34:02.576844+00:00",
+  "native_run_id": "b4805d63f5e94b42bda76e3eac035452",
+  "job_uid": "f71e249c-3b89-42d8-a1e1-9d805615e20a",
+  "last_logged_optimizer_update": 704,
+  "optimizer_updates_lower_bound": 704,
+  "optimizer_updates_upper_bound": 733,
+  "nonzero_gradient_steps_not_certified": true,
+  "completed_733_receipt": false,
+  "usable_adapter": false,
+  "candidate_DEV_outputs": 0,
+  "fresh_base_rows": 128,
+  "fresh_base_full_rows_equal_P11": true,
+  "live_log_sha256": "7654210cd036e88d985929a8f1b5ece4654c6d0f12a96cc8dfd89c2f634d69b7",
+  "readonly_cache_audit": {
+    "started_at_utc": "2026-11-13T05:26:58.191632+00:00",
+    "GPU_count": 0,
+    "file_writes_in_cache": 0,
+    "status": "COMPLETE",
+    "result": {
+      "directory_exists": false,
+      "files": {},
+      "receipts": {}
+    },
+    "cleanup_returncode": 0,
+    "finished_at_utc": "2026-11-13T05:27:40.108964+00:00"
+  },
+  "cause": "Host watcher3h counted queue135min and slow staging24to26min,then stopped before full733receipt;KubernetesJobbudget6h/Pod2h had not expired. Monitor timeout design error,not a measured model-quality failure.",
+  "ownership_handoff_executed": false,
+  "auto_review_rejected_handoff": true,
+  "safer_resolution": "Archive partialattempt;restart fromoriginalbase withsame733step recipe,hostwatch>=Job6h+collectionmargin;no partialweightreuse.",
+  "official_TEST_rows": 0,
+  "final64_queries": 0,
+  "GPU_assigned_at_utc": "2026-11-13T04:36:48Z",
+  "container_started_at_utc": "2026-11-13T04:37:23Z",
+  "log_stream_ended_at_utc": "2026-11-13T05:22:07.247937+00:00",
+  "approximate_GPU_allocation_window_hours": 0.7553466491666667,
+  "cost_scope": "Approximate observed allocation-to-log-end window;not exactGPUrelease,activecompute,FLOPs or billing. Adds real discarded training >=704 logged updates;733/nonzero completion uncertified."
+}

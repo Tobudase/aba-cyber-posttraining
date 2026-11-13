@@ -21,7 +21,7 @@ def protocol(cid):
 def placement_pool():
  p=S/'placement-amendment-private.json'
  if not p.exists():return None
- x=json.loads(p.read_text());assert x['status']=='FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES' and x['GPU_product']=='NVIDIA-A100-SXM4-80GB' and x['driver_full'] in {'615.71.09','615.71.10'} and 1<=len(set(x['allowed_hostnames']))==len(x['allowed_hostnames'])<=16
+ x=json.loads(p.read_text());assert x['status'] in {'FROZEN_RESOURCE_POOL_AMENDMENT_BEFORE_ABA_UPDATES','FROZEN_RESOURCE_ONLY_RETRY_AFTER_MONITOR_TIMEOUT_NO_COMPLETED_NATIVE_CANDIDATE'} and x['GPU_product']=='NVIDIA-A100-SXM4-80GB' and set(x.get('allowed_driver_full',[x['driver_full']])) <= {'615.71.09','615.71.10'} and 1<=len(set(x['allowed_hostnames']))==len(x['allowed_hostnames'])<=16
  return x
 
 def objects(cid):
@@ -31,7 +31,7 @@ def objects(cid):
  if cid!='P11':
   control=S/'P11/run';c=json.loads((control/'host-private.json').read_text());assert c['status']=='COLLECTED';h=json.loads((S/'hardware-lock-private.json').read_text());pool=placement_pool() if cid in {'P13','P14'} else None
   if pool:
-   expr[0]['values']=[pool['GPU_product']];expr.append({'key':'kubernetes.io/hostname','operator':'In','values':pool['allowed_hostnames']});expr.append({'key':'nvidia.com/cuda.driver-version.full','operator':'In','values':[pool['driver_full']]})
+   expr[0]['values']=[pool['GPU_product']];expr.append({'key':'kubernetes.io/hostname','operator':'In','values':pool['allowed_hostnames']});expr.append({'key':'nvidia.com/cuda.driver-version.full','operator':'In','values':pool.get('allowed_driver_full',[pool['driver_full']])})
   else:expr.append({'key':'kubernetes.io/hostname','operator':'In','values':[h['hostname_label']]})
   data['control-base-reference.json']=json.dumps({r['id']:r['response'] for r in json.loads((control/'base-predictions-private.json').read_text())})
  cm={'apiVersion':'v1','kind':'ConfigMap','metadata':{'name':name,'labels':labels(cid)},'data':data}
@@ -39,6 +39,7 @@ def objects(cid):
  resources=dict(p['resource_request'])
  if cid in {'P13','P14'}:resources.update(placement_pool().get('resource_request_overrides',{}))
  pod={'restartPolicy':'Never','activeDeadlineSeconds':p['pod_runtime_seconds'],'automountServiceAccountToken':False,'nodeSelector':{'kubernetes.io/arch':'amd64'},'affinity':{'nodeAffinity':{'requiredDuringSchedulingIgnoredDuringExecution':{'nodeSelectorTerms':[{'matchExpressions':expr}]}}},'containers':[{'name':'train','image':json.loads((ROOT/'configs/gpu-runtime-image.lock.json').read_text())['image'],'command':['/bin/bash','-lc','set -euo pipefail; mkdir -p /cache/kali-8b-verified64-study/logs; python -u /input/worker.py 2>&1 | tee /cache/kali-8b-verified64-study/logs/'+cid.lower()+'.log'],'env':[{'name':'HF_HUB_OFFLINE','value':'1'},{'name':'OMP_NUM_THREADS','value':'2'},{'name':'CUBLAS_WORKSPACE_CONFIG','value':':4096:8'},{'name':'PYTHONDONTWRITEBYTECODE','value':'1'}],'resources':{'requests':resources,'limits':resources},'volumeMounts':[{'name':'input','mountPath':'/input','readOnly':True},{'name':'cache','mountPath':'/cache'},{'name':'scratch','mountPath':'/scratch'}]}],'volumes':[{'name':'input','projected':{'defaultMode':256,'sources':[{'configMap':{'name':name}},{'secret':{'name':name+'-input'}}]}},{'name':'cache','persistentVolumeClaim':{'claimName':'miw113-kali-cuda-cache'}},{'name':'scratch','emptyDir':{'sizeLimit':'24Gi'}}]}
+ if cid in {'P13','P14'} and placement_pool().get('preferred_region'):pod['affinity']['nodeAffinity']['preferredDuringSchedulingIgnoredDuringExecution']=[{'weight':100,'preference':{'matchExpressions':[{'key':'topology.kubernetes.io/region','operator':'In','values':[placement_pool()['preferred_region']]}]}}]
  job={'apiVersion':'batch/v1','kind':'Job','metadata':{'name':name,'labels':labels(cid)},'spec':{'activeDeadlineSeconds':p['queue_deadline_seconds'],'backoffLimit':0,'ttlSecondsAfterFinished':p['result_ttl_seconds'],'template':{'metadata':{'labels':labels(cid)},'spec':pod}}}
  return cm,secret,job
 

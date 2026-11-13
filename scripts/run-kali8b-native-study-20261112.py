@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r12';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r13';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
@@ -56,7 +56,7 @@ def main():
  record={'status':'WAITING_FIXED_CONTROLS_NO_VM','local_controller_pid':os.getpid(),'driver_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'started_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'cleanup_errors':[],'official_TEST_rows':0,'native_completed':False};made=False;stop=threading.Event();t=None;token=''
  try:
   wait_controls(record);config=build_task(OUT)
-  obj=m.manifest();obj['metadata']['name']=NAME;obj['spec']['template']['spec']['volumes'][1]['emptyDisk']['capacity']='20Gi';obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData']=obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData'].replace('+20','+480')
+  obj=m.manifest();obj['metadata']['name']=NAME;obj['spec']['template']['spec']['volumes'][1]['emptyDisk']['capacity']='20Gi';obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData']=obj['spec']['template']['spec']['volumes'][2]['cloudInitNoCloud']['userData'].replace('+20','+1080')
   k('create','--dry-run=server','-f','-',payload=json.dumps(obj));assert call(m.BASE+['get','vm',NAME]).returncode!=0;k('create','-f','-',payload=json.dumps(obj));made=True;record['status']='VM_STARTING';save(record);print('FORMAL_NATIVE_VM_CREATED',flush=True)
   until=time.monotonic()+420
   while time.monotonic()<until:
