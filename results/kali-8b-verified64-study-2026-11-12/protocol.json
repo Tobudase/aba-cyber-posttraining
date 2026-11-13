@@ -322,5 +322,41 @@
     "official_TEST_rows": 0,
     "implementation_amendment_at_utc": "2026-11-12T18:40:40.573351+00:00",
     "amendment_reason": "Pinned nb_tree selects among Workers only,notSetupbaseline. Keep nativeWinner and retainedChampion distinct; include actualnativewinner infinal64 evenifretainedmodelisfixed. No scoring/training/gates changed,no newcandidate outputs orscores inspected."
+  },
+  "controller_gptoss_retry": {
+    "at_utc": "2026-11-12T23:59:47.133745+00:00",
+    "prior_native_run_id": "5ded375c2b9b4ac8bd937305f912a971",
+    "reason": "NRP qwen3-small repeated upstream240s timeout stalledSetup;healthybackup longcontext toolprobe passed",
+    "change": "Nativecontroller alias only: gpt-oss servedopenai/gpt-oss-120b;trainingbase remainsRedSage8B;nottraining120B.",
+    "prior_P13_P14_GPU_submissions": 0,
+    "prior_P13_P14_updates": 0,
+    "final64_queries": 0,
+    "official_TEST_rows": 0,
+    "numeric_protocols_unchanged": true,
+    "probe": {
+      "neutral_probe_only": true,
+      "training_calls": 0,
+      "results": [
+        {
+          "model": "gpt-oss",
+          "status": "TYPED_MESSAGE_VALID",
+          "served_model": "openai/gpt-oss-120b",
+          "blocks": [
+            {
+              "type": "tool_use",
+              "input_type": "dict"
+            }
+          ],
+          "stop_reason": "tool_use",
+          "usage": {
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "input_tokens": 23219,
+            "output_tokens": 258
+          },
+          "seconds": 10.4
+        }
+      ]
+    }
   }
 }
