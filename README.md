@@ -4,11 +4,15 @@ Research code and traceable experiment summaries for adapting open-weight langua
 
 ## November 12, 2026 — completed bounded 8B study
 
-Completed four unique real 8B SFT arms (733 nonzero-gradient updates each),two native-scored ABA candidates,and one frozen 64-example internal confirmation. Recovery reused previously native-trained/scored/finalized P13 with0newupdates;onlyP14 was freshlytrained in the finalnative run. Native winner: **P13**;DEV-preselected model: **E0**. Confirmation gate: **not passed**. Official TEST queries: **0**. This completes the bounded experiment;it does not by itself establish reliable improvement or an official benchmark gain.
+Completed **four unique real 8B SFT arms**, with 733 nonzero-gradient updates each, **two native-scored ABA candidates**, and **one frozen 64-example internal confirmation**. Recovery reused previously native-trained, scored and finalized P13 with **0 new updates**; only P14 was freshly trained in the final native run. The native winner was **P13**, while the predeclared DEV retention rules kept **E0**.
+
+On the previously unqueried internal 64-example panel, E0 scored **24/64 strict and 76.11 native points**; P13 scored **27/64 and 75.96**. Strict correctness increased, but native score did not. No trained candidate is promoted, and **reliable improvement has not been established**. Official TEST queries: **0**. These are publisher-TRAIN/silver internal results, not leaderboard scores.
 
 ![Complete bounded study](results/kali-8b-verified64-study-2026-11-12/study-results.png)
 
 [Detailed results and limitations](docs/KALI_VERIFIED64_8B_RESULT_2026-11-12_ZH.md) · [Machine-readable results](results/kali-8b-verified64-study-2026-11-12/summary.json). Resource amendment and controller recovery remain disclosed in the frozen protocol.
+
+The dated entries below are historical snapshots; earlier statements about pending work describe their status at that time. The completed study and current decision are reported above.
 
 ## November 12, 2026 — behavior-verified TRAIN supplement
 

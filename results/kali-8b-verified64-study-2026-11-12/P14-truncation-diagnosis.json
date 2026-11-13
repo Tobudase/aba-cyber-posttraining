@@ -1,0 +1,35 @@
+{
+  "status": "POSTHOC_EXPOSED_DEV_TRUNCATION_DIAGNOSIS_ONLY",
+  "at_utc": "2026-11-13T13:32:59.057536+00:00",
+  "rows": [
+    {
+      "id_sha256": "6e6667f594b66cb4dbdae5eef2e206d3690d750a5161db029927338397645cf1",
+      "in_DEV2": true,
+      "tool": "metacam",
+      "generated_tokens": 1024,
+      "base_score": {
+        "native_total": 0.6666666666666666,
+        "strict": false,
+        "format_error": false,
+        "truncated": false
+      },
+      "candidate_score": {
+        "native_total": 0.3333333333333333,
+        "strict": false,
+        "format_error": true,
+        "truncated": true
+      },
+      "contains_think_close": true,
+      "max_8word_ngram_repeat": 208,
+      "character_count": 5980
+    }
+  ],
+  "observed_DEV2_delta": -0.026213774651274613,
+  "hypothetical_DEV2_delta_if_truncated_rows_kept_base_points": -0.02100544131794128,
+  "counterfactual_not_actual_recovery": true,
+  "selection_rules_or_scores_changed": false,
+  "model_calls": 0,
+  "official_TEST_rows": 0,
+  "final64_used": false,
+  "scope": "Sensitivity of observedgatefailure totruncatedrow,not proofof cause or validreplacement score. No question,responseorGT text exported."
+}

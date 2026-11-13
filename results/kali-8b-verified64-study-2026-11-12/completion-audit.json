@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETED_BOUNDED_LOOP_AND_REVIEWED_PUBLICATION",
+  "checked_at_utc": "2026-11-13T14:29:27.208596+00:00",
+  "bounded_loop_complete": true,
+  "reliable_gain_established": false,
+  "retained_candidate": "E0",
+  "official_TEST_rows": 0,
+  "public_runtime_source_and_aggregate_verifier": "PASS_COMPLETED_8B_STUDY_PUBLIC_INVARIANTS",
+  "published_controller_regression_tests": {
+    "passed": 18,
+    "scope": "Mocked control/ownership/cleanup and source contracts,not extra model experiments."
+  },
+  "private_additional_archived_queue_guard_tests": 6,
+  "final_confirmation": {
+    "rows_per_arm": 64,
+    "arms": [
+      "E0",
+      "P11",
+      "P12",
+      "P13"
+    ],
+    "optimizer_steps": 0,
+    "attempts_with_model_outputs": 1,
+    "source": "Frozen confirmation receipt;no replay or post-confirmation selection."
+  },
+  "resource_cleanup": {
+    "study_compute_objects_remaining": 0,
+    "owned_running_GPU_pods": 0,
+    "owned_active_VMI": 0,
+    "historical_pilot_VM_state": "Stopped / Halted, preserved without a VMI",
+    "scope": "Read-only namespace inventory and explicit stopped-VM check at end of experiment."
+  },
+  "figure_review": {
+    "png_sha256": "900ec5975c22685f4983f5c94edc51b00afb511c92bd79593096c6b46b2ffe10",
+    "svg_sha256": "1b0cf4d3a985e40bd7545a7c02a73da39f7e8b25a9cf4a7df783d9cea3a108a4",
+    "method": "Rendered PNG inspected by the assistant; legible labels and no observed clipping or overlap. No human review claimed."
+  },
+  "immutable_aggregate_sha256": {
+    "summary.json": "214cda1da7e8675053d3e83cdca886b6c9024d3211d2148ede5a2958d9a14391",
+    "protocol.json": "fe415a15e3314b0aa89fc332f3fa3a379dd947ae16d4286caab9263ace2efdee",
+    "four-arm-consistency.json": "b29c74b8f202c8a027a0973a89dc53eec4eb07d81d1ef57331d3990d9fde4729",
+    "native-score-audit.json": "7c47e8ba6e03c6be6fd5ae8bccdbd3ec5705c4d15c302c4c770ec264a1a78728"
+  },
+  "posthoc_diagnostics_scope": "Exposed DEV only;no new model calls,no changed scores,gates,selection or confirmation queries."
+}

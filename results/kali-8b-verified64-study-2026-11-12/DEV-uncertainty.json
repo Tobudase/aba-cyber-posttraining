@@ -1,0 +1,60 @@
+{
+  "status": "POSTHOC_EXPOSED_DEV_UNCERTAINTY_ONLY",
+  "selection_changed": false,
+  "model_calls": 0,
+  "confirmation_used": false,
+  "official_TEST_rows": 0,
+  "bootstrap_draws": 10000,
+  "seed": 20261113,
+  "limits": "Paired item bootstrap and unadjusted exact McNemar on exposed DEV only. Exploratory; sample dependence and prior adaptation prevent independent generalization or confirmatory significance claims. No selection or score changes.",
+  "arms": {
+    "P11": {
+      "rows": 128,
+      "native_delta": 0.011295807780182777,
+      "paired_bootstrap_percentile_95_interval": [
+        -0.03309978505291005,
+        0.05945428992303992
+      ],
+      "strict_gained": 10,
+      "strict_lost": 4,
+      "strict_delta_correct": 6,
+      "unadjusted_exact_McNemar_two_sided": 0.1795654296875
+    },
+    "P12": {
+      "rows": 128,
+      "native_delta": -0.010489004629629635,
+      "paired_bootstrap_percentile_95_interval": [
+        -0.05688244047619048,
+        0.03876281415343915
+      ],
+      "strict_gained": 8,
+      "strict_lost": 5,
+      "strict_delta_correct": 3,
+      "unadjusted_exact_McNemar_two_sided": 0.5810546875
+    },
+    "P13": {
+      "rows": 128,
+      "native_delta": -0.007785631613756617,
+      "paired_bootstrap_percentile_95_interval": [
+        -0.05279431216931218,
+        0.04028397817460318
+      ],
+      "strict_gained": 8,
+      "strict_lost": 6,
+      "strict_delta_correct": 2,
+      "unadjusted_exact_McNemar_two_sided": 0.79052734375
+    },
+    "P14": {
+      "rows": 128,
+      "native_delta": 0.007809117965367963,
+      "paired_bootstrap_percentile_95_interval": [
+        -0.03912243716931217,
+        0.057591352513227514
+      ],
+      "strict_gained": 11,
+      "strict_lost": 4,
+      "strict_delta_correct": 7,
+      "unadjusted_exact_McNemar_two_sided": 0.11846923828125
+    }
+  }
+}
