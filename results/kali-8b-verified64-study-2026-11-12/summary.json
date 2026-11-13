@@ -1,6 +1,6 @@
 {
   "status": "IN_PROGRESS",
-  "updated_at_utc": "2026-11-13T01:45:55.516522+00:00",
+  "updated_at_utc": "2026-11-13T02:29:19.215909+00:00",
   "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
   "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
   "study_protocol_freeze_sha256": "d393a2ac89ca98b491dcfa2d9aad24f01eca1ab2f3aaf7cd81305c79d29c54e2",
@@ -237,7 +237,7 @@
       "cleanup_errors": []
     },
     "P13": {
-      "status": "NOT_STARTED",
+      "status": "Pending",
       "protocol_sha256": "b716ae5c49fef86423ebb3a35fdde28598e43f4dce532898bd5ce5aabccfade4"
     },
     "P14": {
@@ -358,6 +358,14 @@
       "cleanup_returncode": 0,
       "finished_at_utc": "2026-11-13T01:40:22.745963+00:00"
     }
+  },
+  "native_progress": {
+    "status": "NATIVE_RUNNING",
+    "native_completed": false,
+    "run_id": "b4805d63f5e94b42bda76e3eac035452",
+    "run_result": null,
+    "controller_requested_model": "deepseek-v4-flash",
+    "cleanup_errors": []
   },
   "research_experiment_complete": false,
   "matched_replacement_effect_P12_minus_P11": {

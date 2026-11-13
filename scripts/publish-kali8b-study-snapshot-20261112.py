@@ -17,6 +17,9 @@ def main():
  if placement.exists():result['placement_amendment']=json.loads(placement.read_text());result['limitations'].append('P11/P12 originalhost/driver615.71.09/CPU2;ABA/confirmation central sameGPUproduct/driver615.71.10/CPU500m after zero-update queue cancellation. Report amended placement,not exact hardware equivalence.')
  consistency=s/'four-arm-consistency-aggregate.json'
  if consistency.exists():result['consistency']=json.loads(consistency.read_text())
+ folder=ROOT/'docs/verification/kali8b-native-v64-20261112'
+ if (folder/'host-private.json').exists():
+  h=json.loads((folder/'host-private.json').read_text());jpath=folder/'monitor-private/journal-private.json';j=json.loads(jpath.read_text()) if jpath.exists() else {};result['native_progress']={'status':h['status'],'native_completed':h['native_completed'],'run_id':j.get('run_id'),'run_result':j.get('head',{}).get('result'),'controller_requested_model':json.loads((folder/'config.json').read_text())['llm']['default']['model'] if (folder/'config.json').exists() else None,'cleanup_errors':h['cleanup_errors']}
  complete=all(x['status']=='COLLECTED' for x in result['arms'].values());selection=s/'native-selection-private.json'
  if selection.exists():
   selected=json.loads(selection.read_text());result['selection']={k:selected[k] for k in ['status','candidate_id','pointer','native_selected_candidate','native_selected_pointer','native_run_id','DEV_score','native_selected_DEV_score','all_available_scores','deliverable_sha256','native_deliverable_candidate','retention_policy','final64_used','official_TEST_rows']}
