@@ -13,6 +13,13 @@ from datetime import datetime,timezone
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 
 UPSTREAM='https://ellm.nrp-nautilus.io/anthropic'
+# Explicit compatibility alias: ABA's catalog uses the full model name;NRP
+# publishes the short service alias. Message/tool content is never rewritten.
+MODEL_ALIASES={'gpt-oss-120b':'gpt-oss'}
+def route_payload(payload):
+ result=dict(payload)
+ if result.get('model') in MODEL_ALIASES:result['model']=MODEL_ALIASES[result['model']]
+ return result
 
 def route_target(target):
  parsed=urlsplit(target)
@@ -58,7 +65,7 @@ class Handler(BaseHTTPRequestHandler):
   try:
    n=int(self.headers.get('Content-Length','0'))
    if not 0<n<=12*1024**2:raise ValueError('Invalid request size')
-   payload=json.loads(self.rfile.read(n));stream=bool(payload.get('stream'))
+   payload=route_payload(json.loads(self.rfile.read(n)));stream=bool(payload.get('stream'))
    if path=='/v1/messages':payload['stream']=False
    headers={k:v for k,v in self.headers.items() if k.lower() in ['content-type','authorization','x-api-key','anthropic-version','anthropic-beta']}
    headers['Content-Type']='application/json'

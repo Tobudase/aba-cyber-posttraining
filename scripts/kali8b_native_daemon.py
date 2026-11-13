@@ -23,14 +23,14 @@ print(json.dumps({'returncode':p.returncode,'stderr':p.stderr[-500:]}))
  record.update(status='NATIVE_RUNNING',native_service=UNIT,transport='detached_systemd_with_reconnecting_SSH');driver.save(record);print('FORMAL_NATIVE_DAEMON_RUNNING',flush=True)
  status="""import os,pathlib,json,subprocess
 r=pathlib.Path('/mnt/aba-scratch/study');e=os.environ.copy();e.update(XDG_RUNTIME_DIR='/run/user/1000',DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus');p=subprocess.run(['systemctl','--user','show','kali8b-native-controller.service','--property=ActiveState','--value'],capture_output=True,text=True,env=e)
-print(json.dumps({'exit':json.loads((r/'exit.json').read_text()) if (r/'exit.json').exists() else None,'unit_state':p.stdout.strip(),'credential_source_removed':not (r/'.nrp-runtime-key-private').exists(),'supervisor_error':json.loads((r/'supervisor-error-private.json').read_text()) if (r/'supervisor-error-private.json').exists() else None}))
+print(json.dumps({'exit':json.loads((r/'exit.json').read_text()) if (r/'exit.json').exists() else None,'unit_state':p.stdout.strip(),'credential_source_removed':not (r/'.nrp-runtime-key-private').exists(),'native_log_tail':(r/'native.log').read_text(errors='replace')[-6000:] if (r/'native.log').exists() else None,'supervisor_error':json.loads((r/'supervisor-error-private.json').read_text()) if (r/'supervisor-error-private.json').exists() else None}))
 """
  until=time.monotonic()+27300;failures=0;inactive=0
  while time.monotonic()<until:
   response=safe_ssh(driver,'python3 -c '+shlex.quote(status),timeout=40)
   if response is None or response.returncode:
    failures+=1;record.update(SSH_reconnect_failures=failures,transport_state='RECONNECTING_WITHOUT_CANCELLING_NATIVE');driver.save(record);time.sleep(15);continue
-  state=json.loads(response.stdout);record.update(transport_state='CONNECTED',credential_source_removed=state['credential_source_removed'],native_unit_state=state['unit_state']);driver.save(record)
+  state=json.loads(response.stdout.replace(token,'[REDACTED]'));record.update(transport_state='CONNECTED',credential_source_removed=state['credential_source_removed'],native_unit_state=state['unit_state']);driver.save(record)
   if state['exit'] is not None:
    (driver.OUT/'detached-supervisor-private.json').write_text(json.dumps(state,indent=2)+'\n');return state
   inactive=inactive+1 if state['unit_state'] in ['failed','inactive',''] else 0

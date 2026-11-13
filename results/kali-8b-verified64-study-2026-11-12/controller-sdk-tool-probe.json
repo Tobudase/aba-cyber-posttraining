@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-11-13T00:17:00.561684+00:00",
+  "endpoint": "http://127.0.0.1:18743",
+  "model": "gpt-oss-120b",
+  "sdk_version_pinned": "0.2.148",
+  "max_turns": 3,
+  "allowed_tool": "mcp__calc__add_numbers",
+  "tool_invocations": 1,
+  "valid_tool_input": true,
+  "invalid_tool_input": false,
+  "assistant_tool_block_seen": true,
+  "assistant_final_answer_is_15": true,
+  "result_message_seen": true,
+  "result_is_error": false,
+  "passed": true,
+  "training_performed": false,
+  "benchmark_tasks_used": 0,
+  "upstream_alias": "gpt-oss",
+  "permission_mode": "default",
+  "max_thinking_tokens": 0
+}

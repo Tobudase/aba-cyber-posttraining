@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build_kali8b_native_study_import import build_task
 from kali8b_native_bridge import S,bridge
-NAME='miw113-kali8b-native-v64-20261112-r8';REMOTE='/mnt/aba-scratch/study'
+NAME='miw113-kali8b-native-v64-20261112-r9';REMOTE='/mnt/aba-scratch/study'
 OUT=ROOT/'docs/verification/kali8b-native-v64-20261112';KNOWN=OUT/'ssh-known-private'
 TASK_NAME='kali8b-verified64';BROKER=None
 import kali8b_native_vm as m
@@ -79,14 +79,16 @@ def main():
   r=ssh('python3 -c '+shlex.quote(stage),payload=json.dumps(data));assert r.returncode==0
   for src,dest in [('nrp_anthropic_transport.py','transport.py'),('kali8b_native_mailbox.py','mailbox_server.py')]:
    r=ssh('mkdir -p /mnt/aba-scratch/.tools; cat > '+REMOTE+'/'+dest,payload=(ROOT/'scripts'/src).read_text());assert r.returncode==0
+  preflight="from aibuildai_version import preload_source_runtime;preload_source_runtime();import json,copy;from pathlib import Path;from config import AgentConfig;raw=json.loads(Path('/mnt/aba-scratch/study/config.json').read_text());new=AgentConfig.model_validate(raw);assert new.llm.default.model=='gpt-oss-120b' and new.llm.endpoint_provider=='openai';old=copy.deepcopy(raw);old['llm']['default']['model']='gpt-oss';rejected=False\ntry:AgentConfig.model_validate(old)\nexcept Exception as e:rejected='not in the model catalog' in str(e)\nassert rejected;print(json.dumps({'status':'PINNED_FULL_AGENT_CONFIG_PASS','old_short_alias_rejected':True,'catalog_model':new.llm.default.model,'provider':new.llm.endpoint_provider,'transport_alias':'gpt-oss-120b->gpt-oss','training_model_unchanged':True}))"
+  result=ssh('cd /mnt/aba-scratch/aba && /mnt/aba-scratch/conda/envs/manager/bin/python -',payload=preflight,timeout=90);(OUT/'config-preflight-private.json').write_text(json.dumps({'returncode':result.returncode,'stdout':result.stdout[-3000:],'stderr':result.stderr[-3000:]},indent=2)+'\n');assert result.returncode==0 and 'PINNED_FULL_AGENT_CONFIG_PASS' in result.stdout,'Pinned framework config preflight failed;no native/GPU submission'
   t=threading.Thread(target=bridge,args=(sys.modules[__name__],stop),daemon=True);t.start()
   from kali8b_native_daemon import start_and_wait
   token=(ROOT/'.secrets/nrp_api_key').read_text().strip();assert token and '\n' not in token;record.update(status='NATIVE_STARTING',config_sha256=hashlib.sha256((OUT/'config.json').read_bytes()).hexdigest());save(record)
   state=start_and_wait(sys.modules[__name__],token,record)
   (OUT/'client-private.json').write_text(json.dumps({'transport':'detached_systemd','exit':state['exit'],'SSH_reconnect_failures':record.get('SSH_reconnect_failures',0),'credential_source_removed':state['credential_source_removed']}))
-  j=collect_journal();freeze=json.loads((OUT/'native-task-freeze-private.json').read_text());assert j['task_hashes']==freeze['task_sha256'],'Native task mutated'
   collect="import json,pathlib,hashlib;r=pathlib.Path('/mnt/aba-scratch/study');files={str(p.relative_to(r)):{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'text':p.read_text(errors='replace')} for p in (r/'playground').rglob('*') if p.is_file() and not p.is_symlink() and p.stat().st_size<200000 and 'deliverable' in p.parts};print(json.dumps({'files':files,'exit':json.loads((r/'exit.json').read_text()) if (r/'exit.json').exists() else None,'log_tail':(r/'native.log').read_text(errors='replace')[-5000:]}))"
   a=ssh('python3 -c '+shlex.quote(collect));assert a.returncode==0;raw=a.stdout.replace(token,'[REDACTED]');(OUT/'native-artifacts-private.json').write_text(raw);art=json.loads(raw)
+  j=collect_journal();freeze=json.loads((OUT/'native-task-freeze-private.json').read_text());assert j['task_hashes']==freeze['task_sha256'],'Native task mutated'
   assert j['head']['result']=='completed' and not j['failures'],'Native run did not complete'
   selected=next(x['output']['output'] for x in reversed(j['actions']) if x['target']=='search_1');directory=selected['output_dir'];files=j['scored_outputs'][directory]
   names=['run.py','README.md','train_metrics.json','final_model/model.json'];assert set(files)==set(names)

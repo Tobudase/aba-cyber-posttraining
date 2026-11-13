@@ -358,5 +358,52 @@
         }
       ]
     }
+  },
+  "controller_catalog_alias_fix": {
+    "at_utc": "2026-11-13T00:19:14.380634+00:00",
+    "reason": "BareNRPservicealiasgpt-oss is catalog-unknown OpenAI id in pinnedABA;nativeCLIexited2beforecreatingRun. Use catalog-known gpt-oss-120b and explicittransport mappingtoNRPwirealiasgpt-oss. No validator relaxed.",
+    "evidence": {
+      "pinned_model_catalog_source_sha256": "d47e8a82c8df675a7068646c0e99857aaaeab312154ce26e15eebbb7f86794d6",
+      "short_alias_catalog_key": null,
+      "full_alias_catalog_key": "openai/gpt-oss-120b",
+      "CLI_returncode": 2,
+      "native_Run_created": false
+    },
+    "actual_SDK_probe": {
+      "checked_at_utc": "2026-11-13T00:17:00.561684+00:00",
+      "endpoint": "http://127.0.0.1:18743",
+      "model": "gpt-oss-120b",
+      "sdk_version_pinned": "0.2.148",
+      "max_turns": 3,
+      "allowed_tool": "mcp__calc__add_numbers",
+      "tool_invocations": 1,
+      "valid_tool_input": true,
+      "invalid_tool_input": false,
+      "assistant_tool_block_seen": true,
+      "assistant_final_answer_is_15": true,
+      "result_message_seen": true,
+      "result_is_error": false,
+      "passed": true,
+      "training_performed": false,
+      "benchmark_tasks_used": 0,
+      "upstream_alias": "gpt-oss",
+      "permission_mode": "default",
+      "max_thinking_tokens": 0
+    },
+    "additional_preflight": "Real pinned AgentConfig.model_validate on installed manager before CLI; reproduce oldaliasrejection and accept fullmodelname.",
+    "observability_fix": "Collect native log/deliverables before reading optionalrunjournal;daemonstate redactsandpreservesnative log tail evenwhenstartupfails.",
+    "P13_P14_GPU_updates": 0,
+    "final64_queries": 0,
+    "official_TEST_rows": 0,
+    "numeric_recipes_and_gates_unchanged": true,
+    "actual_pinned_full_config_preflight": {
+      "status": "PINNED_FULL_AGENT_CONFIG_PASS",
+      "old_short_alias_rejected": true,
+      "catalog_model": "gpt-oss-120b",
+      "provider": "openai",
+      "transport_alias": "gpt-oss-120b->gpt-oss",
+      "training_model_unchanged": true
+    },
+    "pinned_config_source_sha256": "900c68f29fc24e034232532ee1b9b21bee92101fecc526b2a60ee4e2b1858439"
   }
 }

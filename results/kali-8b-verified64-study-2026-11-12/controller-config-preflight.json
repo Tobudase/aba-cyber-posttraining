@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "{\"status\": \"PINNED_FULL_AGENT_CONFIG_PASS\", \"old_short_alias_rejected\": true, \"catalog_model\": \"gpt-oss-120b\", \"provider\": \"openai\", \"transport_alias\": \"gpt-oss-120b->gpt-oss\", \"training_model_unchanged\": true}\n",
+  "stderr": ""
+}
