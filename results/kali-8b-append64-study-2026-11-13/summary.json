@@ -248,7 +248,7 @@
       }
     },
     "A17": {
-      "status": "FAILED"
+      "status": "COMPUTE_COLLECTED"
     },
     "A18": {
       "status": "NOT_STARTED"

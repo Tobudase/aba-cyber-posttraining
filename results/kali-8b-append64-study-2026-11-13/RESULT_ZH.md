@@ -6,7 +6,7 @@ Operator append-versus-replay diagnosis on exposed DEV;not native ABA or indepen
 | --- | --- | ---: | ---: | ---: | ---: | --- |
 | A15 | COLLECTED | 55 | 77.354 | 0 | 0 | False |
 | A16 | COLLECTED | 52 | 74.936 | 0 | 0 | False |
-| A17 | FAILED | — | — | — | — | — |
+| A17 | COMPUTE_COLLECTED | — | — | — | — | — |
 | A18 | NOT_STARTED | — | — | — | — | — |
 
 这是保留原始数据后的新增内容与原数据重放对照，两个种子只提供方向诊断，不证明稳定增益。与旧733步结果跨实验比较还混入更新次数和数据顺序变化，不能单独称作删除旧数据的因果效应。所有128题已暴露；没有独立确认或官方成绩，不晋升模型。
