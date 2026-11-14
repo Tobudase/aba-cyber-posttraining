@@ -248,10 +248,130 @@
       }
     },
     "A17": {
-      "status": "COMPUTE_COLLECTED"
+      "status": "COLLECTED",
+      "score": {
+        "status": "FROZEN_INTERNAL_DEV_STUDY_SCORE",
+        "candidate_id": "A17",
+        "summary": {
+          "base": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7559337797619048,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7562872023809524,
+              "strict_correct": 27,
+              "format_errors": 3,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7555803571428571,
+              "strict_correct": 21,
+              "format_errors": 2,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7527969790066564,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            }
+          },
+          "candidate": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7558304398148148,
+              "strict_correct": 52,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7938905423280423,
+              "strict_correct": 31,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7177703373015872,
+              "strict_correct": 21,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7567225635774022,
+              "strict_correct": 52,
+              "format_errors": 0,
+              "truncations": 0
+            }
+          }
+        },
+        "native_delta": -0.00010333994708999761,
+        "selection_gates": {
+          "native_gain": false,
+          "strict_retained": true,
+          "format_retained": true,
+          "truncation_retained": true,
+          "DEV_panel_retention": false,
+          "untargeted_retention": true
+        },
+        "passes_all_gates": false,
+        "ABA_score": -1.0,
+        "paired_strict": {
+          "gained": 8,
+          "lost": 4
+        },
+        "official_TEST_rows": 0,
+        "sealed_final64_used": false,
+        "scope": "Exposed publisher-TRAIN DEV diagnosis; not independent or official score."
+      },
+      "receipt": {
+        "status": "COMPLETE_8B_STUDY_ARM",
+        "candidate_id": "A17",
+        "run_kind": "operator_append64_diagnostic",
+        "initial_lora_sha256": "c2fab29277e34611479b20056efbc3a8b6fb680c268b7fd11c9657e7d9366846",
+        "quality_counts": {
+          "publisher_verified": 797,
+          "source_silver": 0
+        },
+        "deterministic_algorithms": true,
+        "attention_backend": "math_sdpa",
+        "adapter_config_sha256": "86f6c8e5282c9c35cba1fc9e3402be9d9a35cbe9ec9619d15f226e5df1cc48b2",
+        "adapter_sha256": "372ec33429bf896ed8dbeba97781d4d50db4117fdad20cc09fea62795f95563d",
+        "adapter_reload_max_logit_delta": 0.0,
+        "GPU": "NVIDIA A100 80GB PCIe",
+        "GPU_count": 1,
+        "dev_predictions": 128,
+        "dev_truncations": 0,
+        "base_anchors_compared": 4,
+        "official_TEST_rows": 0,
+        "worker_sha256": "f4cf6a09e747619237f77ce8213cb8c240ead1ff6f70836af7c14fd623ebc371",
+        "protocol_sha256": "ac593230f317accf4e43c1811094f3ee0c996fe8623b6e328b21d2cb8db4f883",
+        "wall_seconds": 907.85,
+        "peak_cuda_allocated_bytes": 17685551616,
+        "optimizer_steps": 797,
+        "nonzero_gradient_steps": 797,
+        "changed_tensors": 144,
+        "supervised_token_presentations": 19065
+      },
+      "adapter_export": {
+        "status": "ADAPTER_EXPORTED_AND_HASH_VERIFIED",
+        "adapter_sha256": "372ec33429bf896ed8dbeba97781d4d50db4117fdad20cc09fea62795f95563d",
+        "tensor_count": 144,
+        "archive_sha256": "c0820c6fad159160564590fbd2474583a8b28d87c313e14a341ff9aab3b6f46e",
+        "bytes": 30690184
+      }
     },
     "A18": {
-      "status": "NOT_STARTED"
+      "status": "FAILED"
     }
   },
   "official_TEST_rows": 0,

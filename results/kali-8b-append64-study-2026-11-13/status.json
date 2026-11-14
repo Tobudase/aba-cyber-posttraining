@@ -3,10 +3,10 @@
   "arms": {
     "A15": "COLLECTED",
     "A16": "COLLECTED",
-    "A17": "COMPUTE_COLLECTED",
-    "A18": "NOT_STARTED"
+    "A17": "COLLECTED",
+    "A18": "FAILED"
   },
   "official_TEST_rows": 0,
   "final64_queries": 0,
-  "at_utc": "2026-11-14T00:05:42.675213+00:00"
+  "at_utc": "2026-11-14T06:09:08.641975+00:00"
 }
