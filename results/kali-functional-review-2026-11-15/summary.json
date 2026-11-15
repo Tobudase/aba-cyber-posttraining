@@ -1,0 +1,1935 @@
+{
+  "status": "CONDITIONAL_DECISION_STOP_NO_ELIGIBLE_CANDIDATE",
+  "scope": "Adaptive four-tool development diagnostic; operator controls, not a new native ABA search or official benchmark evaluation. Artifact export and live resource cleanup are outside this publication snapshot.",
+  "model": "RISys-Lab/RedSage-K-SFT-GRPO",
+  "initialization": "All three arms continue from F22 BPE step128; F22 previously used TRAIN16. E0 and F22 are measured baselines.",
+  "GPU": "NVIDIA GeForce RTX 3090",
+  "optimizer_steps": {
+    "R": 256,
+    "RK": 256,
+    "RKstrong": 256
+  },
+  "beta": 0.1,
+  "strong_beta": 0.4,
+  "source_adapter_sha256": "24a8e44adde9818c54a4978be0ca61c4fdfd0da97c6ee109b7c30b58e9839d53",
+  "model_promotion": false,
+  "official_TEST_queries": 0,
+  "metrics": {
+    "E0": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 39.786706349206334,
+        "strict": 2,
+        "complete": 29,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 75.1963458994709,
+        "strict": 20,
+        "complete": 35,
+        "format_error": 2,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 41.097877816627815,
+        "strict": 1,
+        "complete": 20,
+        "format_error": 1,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 37.58124687812189,
+        "strict": 0,
+        "complete": 13,
+        "format_error": 2,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 40.11904761904761,
+        "strict": 0,
+        "complete": 10,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    },
+    "F22": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 92.58680555555556,
+        "strict": 48,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 74.69328703703707,
+        "strict": 20,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 86.3357128982129,
+        "strict": 10,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 79.57192980630482,
+        "strict": 6,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 100.0,
+        "strict": 16,
+        "complete": 16,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    },
+    "R_step128": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 97.1875,
+        "strict": 57,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 68.55139652014653,
+        "strict": 20,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 98.37962962962963,
+        "strict": 26,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 98.95833333333334,
+        "strict": 31,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 100.0,
+        "strict": 16,
+        "complete": 16,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    },
+    "R_step256": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 98.50694444444444,
+        "strict": 60,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 69.33738425925927,
+        "strict": 22,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 30,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 32,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 100.0,
+        "strict": 16,
+        "complete": 16,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    },
+    "RK_step128": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 95.15873015873017,
+        "strict": 54,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 75.30175264550265,
+        "strict": 21,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 97.9050925925926,
+        "strict": 24,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 98.2638888888889,
+        "strict": 30,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 100.0,
+        "strict": 16,
+        "complete": 16,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    },
+    "RK_step256": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 98.05555555555556,
+        "strict": 59,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 75.88252314814814,
+        "strict": 24,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 99.65277777777779,
+        "strict": 29,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 32,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 100.0,
+        "strict": 16,
+        "complete": 16,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    },
+    "RKstrong_step128": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 95.45138888888889,
+        "strict": 55,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 77.73272156084656,
+        "strict": 23,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 92.35844017094018,
+        "strict": 20,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 92.08829365079364,
+        "strict": 23,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 100.0,
+        "strict": 16,
+        "complete": 16,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    },
+    "RKstrong_step256": {
+      "legacy_new64": {
+        "rows": 64,
+        "native_points": 97.01388888888887,
+        "strict": 58,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "old64": {
+        "rows": 64,
+        "native_points": 77.01388888888889,
+        "strict": 23,
+        "complete": 64,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 99.27083333333333,
+        "strict": 28,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 32,
+        "complete": 32,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "native_points": 100.0,
+        "strict": 16,
+        "complete": 16,
+        "format_error": 0,
+        "truncated": 0,
+        "blank": 0,
+        "early_EOS": 0
+      }
+    }
+  },
+  "behavior_counts_under_frozen_v5": {
+    "E0": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "unknown_unreviewed_command": 29,
+          "invalid_output": 35
+        },
+        "lower": 0,
+        "upper": 29
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "unknown_unreviewed_command": 19,
+          "invalid_output": 13
+        },
+        "lower": 0,
+        "upper": 19
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "unknown_unreviewed_command": 13,
+          "invalid_output": 19
+        },
+        "lower": 0,
+        "upper": 13
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "invalid_output": 6,
+          "unknown_unreviewed_command": 10
+        },
+        "lower": 0,
+        "upper": 10
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "unknown_unreviewed_command": 12,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 12
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "unknown_unreviewed_command": 2,
+          "invalid_output": 18
+        },
+        "lower": 0,
+        "upper": 2
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "invalid_output": 10,
+          "unknown_unreviewed_command": 6
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "unknown_unreviewed_command": 9,
+          "invalid_output": 5
+        },
+        "lower": 0,
+        "upper": 9
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "invalid_output": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 0,
+        "upper": 2
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 5,
+          "invalid_output": 3
+        },
+        "lower": 0,
+        "upper": 5
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 2,
+          "invalid_output": 6
+        },
+        "lower": 0,
+        "upper": 2
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "invalid_output": 8
+        },
+        "lower": 0,
+        "upper": 0
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 5,
+          "invalid_output": 3
+        },
+        "lower": 0,
+        "upper": 5
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "unknown_unreviewed_command": 4
+        },
+        "lower": 0,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "invalid_output": 4
+        },
+        "lower": 0,
+        "upper": 0
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "unknown_unreviewed_command": 3,
+          "invalid_output": 1
+        },
+        "lower": 0,
+        "upper": 3
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "unknown_unreviewed_command": 3,
+          "invalid_output": 1
+        },
+        "lower": 0,
+        "upper": 3
+      }
+    },
+    "F22": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "fixture_pass": 51,
+          "fixture_fail": 12,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 51,
+        "upper": 52
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "unknown_unreviewed_command": 18,
+          "fixture_pass": 12,
+          "fixture_fail": 2
+        },
+        "lower": 12,
+        "upper": 30
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 6,
+          "unknown_unreviewed_command": 23,
+          "fixture_fail": 3
+        },
+        "lower": 6,
+        "upper": 29
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 8,
+          "fixture_fail": 5,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 8,
+        "upper": 9
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "fixture_pass": 13,
+          "fixture_fail": 7
+        },
+        "lower": 13,
+        "upper": 13
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 14
+        },
+        "lower": 14,
+        "upper": 14
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_fail": 2,
+          "unknown_unreviewed_command": 4,
+          "fixture_pass": 2
+        },
+        "lower": 2,
+        "upper": 6
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 2,
+          "unknown_unreviewed_command": 6
+        },
+        "lower": 2,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 5,
+          "fixture_fail": 3
+        },
+        "lower": 0,
+        "upper": 5
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 6,
+        "upper": 8
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      }
+    },
+    "R_step128": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "fixture_pass": 59,
+          "unknown_unreviewed_command": 2,
+          "fixture_fail": 3
+        },
+        "lower": 59,
+        "upper": 61
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 26,
+          "unknown_unreviewed_command": 2,
+          "fixture_fail": 4
+        },
+        "lower": 26,
+        "upper": 28
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 31,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 31,
+        "upper": 32
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 10,
+          "fixture_fail": 3,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 10,
+        "upper": 11
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "fixture_pass": 20
+        },
+        "lower": 20,
+        "upper": 20
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 15,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 15,
+        "upper": 16
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 14
+        },
+        "lower": 14,
+        "upper": 14
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 6,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "fixture_fail": 2
+        },
+        "lower": 6,
+        "upper": 6
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_fail": 2,
+          "fixture_pass": 6
+        },
+        "lower": 6,
+        "upper": 6
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 1,
+          "fixture_pass": 7
+        },
+        "lower": 7,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      }
+    },
+    "R_step256": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "fixture_pass": 61,
+          "unknown_unreviewed_command": 3
+        },
+        "lower": 61,
+        "upper": 64
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 30,
+          "fixture_fail": 2
+        },
+        "lower": 30,
+        "upper": 30
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 32
+        },
+        "lower": 32,
+        "upper": 32
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 12,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 12,
+        "upper": 14
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "fixture_pass": 19,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 19,
+        "upper": 20
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 14
+        },
+        "lower": 14,
+        "upper": 14
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "fixture_fail": 2
+        },
+        "lower": 6,
+        "upper": 6
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      }
+    },
+    "RK_step128": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "fixture_pass": 57,
+          "unknown_unreviewed_command": 5,
+          "fixture_fail": 2
+        },
+        "lower": 57,
+        "upper": 62
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 25,
+          "unknown_unreviewed_command": 4,
+          "fixture_fail": 3
+        },
+        "lower": 25,
+        "upper": 29
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 30,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 30,
+        "upper": 32
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 10,
+          "unknown_unreviewed_command": 2,
+          "fixture_fail": 2
+        },
+        "lower": 10,
+        "upper": 12
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "fixture_pass": 19,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 19,
+        "upper": 20
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 14,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 14,
+        "upper": 16
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 14
+        },
+        "lower": 14,
+        "upper": 14
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 4,
+          "unknown_unreviewed_command": 4
+        },
+        "lower": 4,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "fixture_fail": 2
+        },
+        "lower": 6,
+        "upper": 6
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_fail": 1,
+          "fixture_pass": 7
+        },
+        "lower": 7,
+        "upper": 7
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 6,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      }
+    },
+    "RK_step256": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "fixture_pass": 61,
+          "unknown_unreviewed_command": 3
+        },
+        "lower": 61,
+        "upper": 64
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 29,
+          "unknown_unreviewed_command": 1,
+          "fixture_fail": 2
+        },
+        "lower": 29,
+        "upper": 30
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 32
+        },
+        "lower": 32,
+        "upper": 32
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 12,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 12,
+        "upper": 14
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "fixture_pass": 20
+        },
+        "lower": 20,
+        "upper": 20
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 15,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 15,
+        "upper": 16
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 14
+        },
+        "lower": 14,
+        "upper": 14
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 7,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 7,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "fixture_fail": 2
+        },
+        "lower": 6,
+        "upper": 6
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      }
+    },
+    "RKstrong_step128": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "fixture_pass": 59,
+          "unknown_unreviewed_command": 2,
+          "fixture_fail": 3
+        },
+        "lower": 59,
+        "upper": 61
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 21,
+          "unknown_unreviewed_command": 10,
+          "fixture_fail": 1
+        },
+        "lower": 21,
+        "upper": 31
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 23,
+          "unknown_unreviewed_command": 8,
+          "fixture_fail": 1
+        },
+        "lower": 23,
+        "upper": 31
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 10,
+          "unknown_unreviewed_command": 2,
+          "fixture_fail": 2
+        },
+        "lower": 10,
+        "upper": 12
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "fixture_pass": 19,
+          "fixture_fail": 1
+        },
+        "lower": 19,
+        "upper": 19
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 14
+        },
+        "lower": 14,
+        "upper": 14
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 5,
+          "unknown_unreviewed_command": 2,
+          "fixture_fail": 1
+        },
+        "lower": 5,
+        "upper": 7
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_fail": 1,
+          "fixture_pass": 7
+        },
+        "lower": 7,
+        "upper": 7
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      }
+    },
+    "RKstrong_step256": {
+      "legacy_new64": {
+        "rows": 64,
+        "counts": {
+          "fixture_pass": 60,
+          "unknown_unreviewed_command": 2,
+          "fixture_fail": 2
+        },
+        "lower": 60,
+        "upper": 62
+      },
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 28,
+          "fixture_fail": 2,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 28,
+        "upper": 30
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 32
+        },
+        "lower": 32,
+        "upper": 32
+      },
+      "legacy_fit16": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:hardlink": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 12,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 12,
+        "upper": 14
+      },
+      "legacy_new64:pyi-makespec": {
+        "rows": 20,
+        "counts": {
+          "fixture_pass": 18,
+          "fixture_fail": 2
+        },
+        "lower": 18,
+        "upper": 18
+      },
+      "legacy_new64:virtualenv": {
+        "rows": 16,
+        "counts": {
+          "fixture_pass": 16
+        },
+        "lower": 16,
+        "upper": 16
+      },
+      "legacy_new64:dnstwist": {
+        "rows": 14,
+        "counts": {
+          "fixture_pass": 14
+        },
+        "lower": 14,
+        "upper": 14
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 6,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 6,
+          "fixture_fail": 2
+        },
+        "lower": 6,
+        "upper": 6
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "legacy_fit16:hardlink": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:pyi-makespec": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:virtualenv": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      },
+      "legacy_fit16:dnstwist": {
+        "rows": 4,
+        "counts": {
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 4
+      }
+    }
+  },
+  "gates": {
+    "R_step128": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": false,
+      "TRAINprobe_behavior": true
+    },
+    "R_step256": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": true,
+      "TRAINprobe_behavior": true
+    },
+    "RK_step128": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": false,
+      "TRAINprobe_behavior": true
+    },
+    "RK_step256": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": true,
+      "TRAINprobe_behavior": true
+    },
+    "RKstrong_step128": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": false,
+      "TRAINprobe_behavior": false
+    },
+    "RKstrong_step256": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": true,
+      "TRAINprobe_behavior": true
+    }
+  },
+  "statistics": {
+    "R_step128": {
+      "new_dev_pass": 26,
+      "legacy_pass": 59,
+      "fit_pass": 31,
+      "old_retained": 15,
+      "old_base_correct": 20
+    },
+    "R_step256": {
+      "new_dev_pass": 30,
+      "legacy_pass": 61,
+      "fit_pass": 32,
+      "old_retained": 16,
+      "old_base_correct": 20
+    },
+    "RK_step128": {
+      "new_dev_pass": 25,
+      "legacy_pass": 57,
+      "fit_pass": 30,
+      "old_retained": 17,
+      "old_base_correct": 20
+    },
+    "RK_step256": {
+      "new_dev_pass": 29,
+      "legacy_pass": 61,
+      "fit_pass": 32,
+      "old_retained": 18,
+      "old_base_correct": 20
+    },
+    "RKstrong_step128": {
+      "new_dev_pass": 21,
+      "legacy_pass": 59,
+      "fit_pass": 23,
+      "old_retained": 18,
+      "old_base_correct": 20
+    },
+    "RKstrong_step256": {
+      "new_dev_pass": 28,
+      "legacy_pass": 60,
+      "fit_pass": 32,
+      "old_retained": 18,
+      "old_base_correct": 20
+    }
+  },
+  "selection": {
+    "action": "stop",
+    "candidate": null,
+    "eligible": []
+  },
+  "source_sha256": {
+    "receipt.json": "d78f723f85388a510d501f6a26260ca14176ab313d5343ed6ed1968174942f34",
+    "summary.json": "2d9e7d7b89486fa35d4b062d8cd4e573d729a19eb1747a2cc3155be8ee37df5a",
+    "conditional-selection.json": "7b9172f53fd28135b1e556ba2e53b234066678518b1f557708b567df478887ac",
+    "behavior-primary-summary.json": "51a6060c12f4a11ed060eeb872f766a271cd29c4e0626f96940e38d761f2e8a7",
+    "behavior-conditional-summary.json": "72e2ee5be675e3f21a47af7e659596c240fb9dc335cecb7c0b5d9c3850f4d31f"
+  },
+  "caveats": [
+    "Native score is partial matching, not execution accuracy.",
+    "Dry-run oracle checks no mutation but not preview correctness; frozen PASS counts are provisional for that behavior.",
+    "Unknown commands remain unknown.",
+    "One seed; shared generator and only four tools.",
+    "R/RK match CE exposure; RK requires additional reference forwards.",
+    "All results are exposed development results, not independent confirmation."
+  ]
+}

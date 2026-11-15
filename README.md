@@ -2,9 +2,15 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 15, 2026 — replay/KL diagnostic and implementation review
+
+Three bounded 256-update controls on four authored tool domains completed training and development scoring. Replay-only scored **69.34** on the old native panel with **30/32** new DEV fixture passes; replay+KL scored **75.88** with **29/32**, and stronger KL **77.01** with **28/32**. E0 old native score was **75.20**. The KL arms retained **18/20** previously strict-correct old cases; no arm passed all frozen gates, and the conditional decision is **stop / no promotion**. These are operator controls, not a new native ABA search or official benchmark scores.
+
+Read-only review reproduced **1,152 saved primary-stage predictions' scores** and checked **512 update traces**. It also identified a **dry-run oracle blind spot**: unchanged files and a successful return do not establish correct preview behavior. Existing fixture PASS counts are disclosed with that limitation; frozen scores were not silently rewritten. [Chinese review and next steps](docs/KALI_EXPERIMENT_REVIEW_2026-11-15_ZH.md) · [Aggregate results](results/kali-functional-review-2026-11-15/summary.json) · [Implementation audit](results/kali-functional-review-2026-11-15/implementation-audit.json).
+
 ## November 13, 2026 — append versus replay follow-up
 
-Submitted a separate four-arm diagnostic: preserve all 733 original TRAIN rows, append either 64 verified silver rows or 64 target-length-matched publisher replays, and run both seeds 42/43. Each arm has 797 updates and 19,065 supervised tokens, with one A100 at a time. Evaluation uses exposed DEV128 only; no official TEST or previously queried final64 calls, no new native ABA claim or model promotion. [Frozen design](results/kali-8b-append64-study-2026-11-13/DESIGN_ZH.md) · [Submission status](results/kali-8b-append64-study-2026-11-13/status.json). Final recorded state: **FAILED**. [Actual results](results/kali-8b-append64-study-2026-11-13/RESULT_ZH.md). A15/A16 completed; A17 hit its queue-only deadline with zero training, and the remaining arms are being recovered without retraining the controls. [Resource-only recovery and limitations](results/kali-8b-append64-study-2026-11-13/RESOURCE_RECOVERY_ZH.md).
+Completed the four-arm append-versus-replay diagnostic: all original 733 TRAIN rows retained, 797 actual updates and 19,065 supervised tokens per arm. The appended verified64 effect was -2.417 native points at seed42 and +0.421 at seed43; strict changes were -3 and 0. All four arms failed the frozen DEV panel retention gate, so no model is promoted. A18 completed after an explicitly requested retry of its queue-only failure, preserving numerical protocols and matching A17’s A100 80GB PCIe product. Only exposed DEV128 was evaluated; no official TEST or final64 re-query. [Frozen design](results/kali-8b-append64-study-2026-11-13/DESIGN_ZH.md) · [Completed status](results/kali-8b-append64-study-2026-11-13/status.json) · [Actual results](results/kali-8b-append64-study-2026-11-13/RESULT_ZH.md).
 
 ## November 12, 2026 — completed bounded 8B study
 

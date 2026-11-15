@@ -1,0 +1,47 @@
+{
+  "status": "IMPLEMENTATION_CHECKS_PASS_WITH_DESIGN_FINDINGS",
+  "scope": "Saved primary R/RK CPU audit only; no training, generation, cluster mutation, or confirmation-model query.",
+  "checks": {
+    "config_hash": true,
+    "frozen_worker_hash": true,
+    "frozen_module_hashes": true,
+    "payload_hash": true,
+    "same_exact_initial_adapter": true,
+    "same_epoch_order": true,
+    "finite_nonzero_512_step_traces": true,
+    "equal_CE_token_budget": true,
+    "prompt_mask_and_completion_labels": true,
+    "no_eval_ID_in_training": true,
+    "family_disjoint_splits": true,
+    "exact_per_case_score_reproduction": true,
+    "aggregate_scores_reproduce_with_float_tolerance": true
+  },
+  "optimizer_steps_checked": 512,
+  "outputs_rescored": 1152,
+  "CE_token_budgets": {
+    "R": 35196,
+    "RK": 35196
+  },
+  "RK_extra_reference_forwards": 512,
+  "max_native_aggregate_float_difference": 2.842170943040401e-14,
+  "float_note": "Per-case results are exact. Python set iteration changes floating-point summation order; aggregate tolerance 1e-12 points only, not an experimental gate change.",
+  "oracle_probe": {
+    "dry_run_success_with_empty_preview_and_unchanged_files_accepted": true,
+    "candidate_commands_executed": 0,
+    "interpretation": "Dry-run oracle checks no mutation but not whether intended duplicate links were previewed. A mocked rc=0 is accepted without executing any tool. This proves an oracle blind spot, not exploitation by any actual model prediction.",
+    "action": "Preserve frozen results; version and validate a stronger dry-run oracle, then rescore every comparison uniformly. Do not silently alter the running experiment."
+  },
+  "limitations": [
+    "No proof of pretraining decontamination",
+    "Shared four-tool generator across splits",
+    "One seed in this repair study",
+    "Equal CE budgets do not mean equal compute",
+    "Adaptive development is not official benchmark evaluation or ABA superiority"
+  ],
+  "primary_inputs_sha256": {
+    "receipt": "c49e69fe46ab1ba387b68e758168cc5f042db18d62a3eac591e1fbdcb3063c57",
+    "predictions": "79bdd52f38665fdb7c668cf9b9607490f84234ebe0f14f2645649665f4b9e50b",
+    "summary": "21dba3f957a58bdc5f519cc49aacf0e0e14ef29735bf1e5295693360b2f3f682",
+    "details": "723c26842be2a732e6f02ad9ac31fee233c8a1920d1188dcf6627500c7b876e0"
+  }
+}

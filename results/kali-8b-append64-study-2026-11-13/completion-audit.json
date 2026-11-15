@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_FOUR_ARM_VERIFIED_AND_CLEANED",
+  "checked_at_utc": "2026-11-14T08:01:28.757427+00:00",
+  "all_four_artifacts_and_all3188_training_trace_steps_verified": true,
+  "all128_predictions_per_arm_rescored_exactly": true,
+  "all_adapter_hashes_verified": true,
+  "same_seed_baseline_initialization_and_shared_prefix_checks_passed": true,
+  "completed_optimizer_updates": 3188,
+  "official_TEST_rows": 0,
+  "final64_queries": 0,
+  "retained_model": "E0",
+  "independent_gain_established": false,
+  "owned_pods_jobs_configmaps_remaining": 0,
+  "A18_input_secret_absent_name_only_check": true,
+  "old_A18_queue_failure_archived": true,
+  "remote_publication_performed_this_turn": false,
+  "figure_review": "PASS_RENDERED_PNG_VISUALLY_INSPECTED",
+  "summary_sha256": "1a13049186fc5d44404b57075eaa970f37147bca3085120ca7b7c1c5d5061c72",
+  "report_sha256": "e984918061a25357216514049af7590deeccae833e005fdbaf7769a4b4612e38"
+}

@@ -1,5 +1,5 @@
 {
-  "status": "FAILED",
+  "status": "COMPLETE",
   "arms": {
     "A15": {
       "status": "COLLECTED",
@@ -371,11 +371,399 @@
       }
     },
     "A18": {
-      "status": "FAILED"
+      "status": "COLLECTED",
+      "score": {
+        "status": "FROZEN_INTERNAL_DEV_STUDY_SCORE",
+        "candidate_id": "A18",
+        "summary": {
+          "base": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7559337797619048,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7562872023809524,
+              "strict_correct": 27,
+              "format_errors": 3,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.7555803571428571,
+              "strict_correct": 21,
+              "format_errors": 2,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.7527969790066564,
+              "strict_correct": 48,
+              "format_errors": 5,
+              "truncations": 0
+            }
+          },
+          "candidate": {
+            "combined": {
+              "rows": 128,
+              "native_total_mean": 0.7600405092592593,
+              "strict_correct": 52,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev1": {
+              "rows": 64,
+              "native_total_mean": 0.7973627645502646,
+              "strict_correct": 32,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "dev2": {
+              "rows": 64,
+              "native_total_mean": 0.722718253968254,
+              "strict_correct": 20,
+              "format_errors": 0,
+              "truncations": 0
+            },
+            "untargeted": {
+              "rows": 124,
+              "native_total_mean": 0.761068441713603,
+              "strict_correct": 52,
+              "format_errors": 0,
+              "truncations": 0
+            }
+          }
+        },
+        "native_delta": 0.004106729497354467,
+        "selection_gates": {
+          "native_gain": false,
+          "strict_retained": true,
+          "format_retained": true,
+          "truncation_retained": true,
+          "DEV_panel_retention": false,
+          "untargeted_retention": true
+        },
+        "passes_all_gates": false,
+        "ABA_score": -1.0,
+        "paired_strict": {
+          "gained": 9,
+          "lost": 5
+        },
+        "official_TEST_rows": 0,
+        "sealed_final64_used": false,
+        "scope": "Exposed publisher-TRAIN DEV diagnosis; not independent or official score."
+      },
+      "receipt": {
+        "status": "COMPLETE_8B_STUDY_ARM",
+        "candidate_id": "A18",
+        "run_kind": "operator_append64_diagnostic",
+        "initial_lora_sha256": "c2fab29277e34611479b20056efbc3a8b6fb680c268b7fd11c9657e7d9366846",
+        "quality_counts": {
+          "publisher_verified": 733,
+          "source_silver": 64
+        },
+        "deterministic_algorithms": true,
+        "attention_backend": "math_sdpa",
+        "adapter_config_sha256": "731066a0cb3857ecc290ee0e2b2b3de721d10465cd540cba81d16ae8f9184f27",
+        "adapter_sha256": "6438a5fa05317bca0e6cc5dd94eadae45cd048326fe3b4655bfb4fa657412cb0",
+        "adapter_reload_max_logit_delta": 0.0,
+        "GPU": "NVIDIA A100 80GB PCIe",
+        "GPU_count": 1,
+        "dev_predictions": 128,
+        "dev_truncations": 0,
+        "base_anchors_compared": 4,
+        "official_TEST_rows": 0,
+        "worker_sha256": "f4cf6a09e747619237f77ce8213cb8c240ead1ff6f70836af7c14fd623ebc371",
+        "protocol_sha256": "9d4215f702c4abbf618dd858979d2a9a9931a57795b8a9199d5110516c9905c8",
+        "wall_seconds": 909.16,
+        "peak_cuda_allocated_bytes": 17685551616,
+        "optimizer_steps": 797,
+        "nonzero_gradient_steps": 797,
+        "changed_tensors": 144,
+        "supervised_token_presentations": 19065
+      },
+      "adapter_export": {
+        "status": "ADAPTER_EXPORTED_AND_HASH_VERIFIED",
+        "adapter_sha256": "6438a5fa05317bca0e6cc5dd94eadae45cd048326fe3b4655bfb4fa657412cb0",
+        "tensor_count": 144,
+        "archive_sha256": "f7d86babd214b29ce23d7c5904a6b46f936ff2f17a24ace72ff73fd02af4f499",
+        "bytes": 30690184
+      }
     }
   },
   "official_TEST_rows": 0,
   "final64_queries": 0,
-  "scope": "Operator append-versus-replay diagnosis on exposed DEV;not native ABA or independent validation.",
-  "model_promotion_allowed": false
+  "scope": "Operator append-versus-replay diagnosis on exposed DEV; not native ABA or independent validation.",
+  "model_promotion_allowed": false,
+  "paired_effects": {
+    "A16-minus-A15": {
+      "native_delta": -0.024173280423280485,
+      "strict_count_delta": -3
+    },
+    "A18-minus-A17": {
+      "native_delta": 0.004210069444444464,
+      "strict_count_delta": 0
+    }
+  },
+  "total_successful_worker_hours": 1.4104916666666665,
+  "completed_optimizer_updates": 3188,
+  "A18_retry": {
+    "prior_outcome": "Pending queue timeout without assigned node or training receipt",
+    "explicit_user_requested_retry": true,
+    "numeric_protocol_modified": false,
+    "placement_modified": false
+  },
+  "diagnosis": {
+    "status": "POSTHOC_EXPOSED_DEV_DIAGNOSIS",
+    "model_calls": 0,
+    "official_TEST_rows": 0,
+    "final64_used": false,
+    "selection_or_scores_changed": false,
+    "arms": {
+      "A15": {
+        "all": {
+          "rows": 128,
+          "strict_correct": 55,
+          "tool_score": 0.8515625,
+          "optional_f1": 0.674156746031746,
+          "positional_f1": 0.794890873015873,
+          "total_score": 0.7735367063492063
+        },
+        "targeted": {
+          "rows": 4,
+          "strict_correct": 0,
+          "tool_score": 1.0,
+          "optional_f1": 0.5595238095238095,
+          "positional_f1": 0.625,
+          "total_score": 0.7281746031746031
+        },
+        "untargeted": {
+          "rows": 124,
+          "strict_correct": 55,
+          "tool_score": 0.8467741935483871,
+          "optional_f1": 0.6778545826932924,
+          "positional_f1": 0.8003712237583206,
+          "total_score": 0.7749999999999999
+        },
+        "DEV1": {
+          "rows": 64,
+          "strict_correct": 33,
+          "tool_score": 0.890625,
+          "optional_f1": 0.7521577380952381,
+          "positional_f1": 0.7977430555555556,
+          "total_score": 0.8135085978835979
+        },
+        "DEV2": {
+          "rows": 64,
+          "strict_correct": 22,
+          "tool_score": 0.8125,
+          "optional_f1": 0.5961557539682539,
+          "positional_f1": 0.7920386904761905,
+          "total_score": 0.7335648148148148
+        }
+      },
+      "A16": {
+        "all": {
+          "rows": 128,
+          "strict_correct": 52,
+          "tool_score": 0.84375,
+          "optional_f1": 0.6284598214285715,
+          "positional_f1": 0.7758804563492063,
+          "total_score": 0.7493634259259259
+        },
+        "targeted": {
+          "rows": 4,
+          "strict_correct": 0,
+          "tool_score": 1.0,
+          "optional_f1": 0.5595238095238095,
+          "positional_f1": 0.625,
+          "total_score": 0.7281746031746031
+        },
+        "untargeted": {
+          "rows": 124,
+          "strict_correct": 52,
+          "tool_score": 0.8387096774193549,
+          "optional_f1": 0.6306835637480799,
+          "positional_f1": 0.780747567844342,
+          "total_score": 0.7500469363372589
+        },
+        "DEV1": {
+          "rows": 64,
+          "strict_correct": 30,
+          "tool_score": 0.875,
+          "optional_f1": 0.6896577380952381,
+          "positional_f1": 0.7753472222222222,
+          "total_score": 0.7800016534391534
+        },
+        "DEV2": {
+          "rows": 64,
+          "strict_correct": 22,
+          "tool_score": 0.8125,
+          "optional_f1": 0.5672619047619047,
+          "positional_f1": 0.7764136904761905,
+          "total_score": 0.7187251984126984
+        }
+      },
+      "A17": {
+        "all": {
+          "rows": 128,
+          "strict_correct": 52,
+          "tool_score": 0.84375,
+          "optional_f1": 0.6426525297619048,
+          "positional_f1": 0.7810887896825397,
+          "total_score": 0.7558304398148148
+        },
+        "targeted": {
+          "rows": 4,
+          "strict_correct": 0,
+          "tool_score": 1.0,
+          "optional_f1": 0.5595238095238095,
+          "positional_f1": 0.625,
+          "total_score": 0.7281746031746031
+        },
+        "untargeted": {
+          "rows": 124,
+          "strict_correct": 52,
+          "tool_score": 0.8387096774193549,
+          "optional_f1": 0.6453341013824885,
+          "positional_f1": 0.7861239119303636,
+          "total_score": 0.7567225635774022
+        },
+        "DEV1": {
+          "rows": 64,
+          "strict_correct": 31,
+          "tool_score": 0.890625,
+          "optional_f1": 0.7000744047619047,
+          "positional_f1": 0.7909722222222222,
+          "total_score": 0.7938905423280423
+        },
+        "DEV2": {
+          "rows": 64,
+          "strict_correct": 21,
+          "tool_score": 0.796875,
+          "optional_f1": 0.5852306547619047,
+          "positional_f1": 0.7712053571428571,
+          "total_score": 0.7177703373015872
+        }
+      },
+      "A18": {
+        "all": {
+          "rows": 128,
+          "strict_correct": 52,
+          "tool_score": 0.8515625,
+          "optional_f1": 0.6422619047619048,
+          "positional_f1": 0.7862971230158731,
+          "total_score": 0.7600405092592593
+        },
+        "targeted": {
+          "rows": 4,
+          "strict_correct": 0,
+          "tool_score": 1.0,
+          "optional_f1": 0.5595238095238095,
+          "positional_f1": 0.625,
+          "total_score": 0.7281746031746031
+        },
+        "untargeted": {
+          "rows": 124,
+          "strict_correct": 52,
+          "tool_score": 0.8467741935483871,
+          "optional_f1": 0.6449308755760369,
+          "positional_f1": 0.7915002560163851,
+          "total_score": 0.761068441713603
+        },
+        "DEV1": {
+          "rows": 64,
+          "strict_correct": 32,
+          "tool_score": 0.890625,
+          "optional_f1": 0.7104910714285714,
+          "positional_f1": 0.7909722222222222,
+          "total_score": 0.7973627645502646
+        },
+        "DEV2": {
+          "rows": 64,
+          "strict_correct": 20,
+          "tool_score": 0.8125,
+          "optional_f1": 0.5740327380952381,
+          "positional_f1": 0.7816220238095238,
+          "total_score": 0.722718253968254
+        }
+      }
+    },
+    "paired": {
+      "A16-minus-A15": {
+        "changed_responses": 23,
+        "targeted_responses_changed": 0,
+        "component_delta": {
+          "tool_score": -0.0078125,
+          "optional_f1": -0.04569692460317454,
+          "positional_f1": -0.019010416666666696,
+          "total_score": -0.024173280423280485
+        },
+        "counts": {
+          "native_lower": 11,
+          "native_higher": 3,
+          "strict_gained": 1,
+          "strict_lost": 4,
+          "tool_score_lower_among_native_losses": 1,
+          "optional_f1_lower_among_native_losses": 11,
+          "positional_f1_lower_among_native_losses": 5
+        },
+        "surface_syntax_only_loss_cases": 0,
+        "surface_syntax_only_native_delta_sum": 0,
+        "input_prompt_token_delta": -654
+      },
+      "A18-minus-A17": {
+        "changed_responses": 20,
+        "targeted_responses_changed": 0,
+        "component_delta": {
+          "tool_score": 0.0078125,
+          "optional_f1": -0.0003906249999999778,
+          "positional_f1": 0.00520833333333337,
+          "total_score": 0.004210069444444464
+        },
+        "counts": {
+          "native_lower": 3,
+          "native_higher": 6,
+          "strict_gained": 2,
+          "strict_lost": 2,
+          "tool_score_lower_among_native_losses": 0,
+          "optional_f1_lower_among_native_losses": 2,
+          "positional_f1_lower_among_native_losses": 2
+        },
+        "surface_syntax_only_loss_cases": 0,
+        "surface_syntax_only_native_delta_sum": 0,
+        "input_prompt_token_delta": -654
+      }
+    },
+    "limits": "Metric decomposition describes observed changes,not unique training cause. Out-of-reference flags are not necessarily invalid CLI flags. Same supervisedtokens/steps do not equal same inputtokens orFLOPs. Exposed DEV and only2seeds cannot prove independent gain.",
+    "baseline_surface_syntax_diagnosis": {
+      "A15": {
+        "native_loss_cases": 30,
+        "normalized_flag_value_syntax_only_loss_cases": 3,
+        "syntax_only_native_delta_sum": -0.26984126984126977,
+        "interpretation": "Same whitespace/equals-normalized command tokens under frozen parser;diagnostic metric interaction,not a changed score or proof of runtime equivalence."
+      },
+      "A16": {
+        "native_loss_cases": 34,
+        "normalized_flag_value_syntax_only_loss_cases": 4,
+        "syntax_only_native_delta_sum": -0.6031746031746031,
+        "interpretation": "Same whitespace/equals-normalized command tokens under frozen parser;diagnostic metric interaction,not a changed score or proof of runtime equivalence."
+      },
+      "A17": {
+        "native_loss_cases": 34,
+        "normalized_flag_value_syntax_only_loss_cases": 3,
+        "syntax_only_native_delta_sum": -0.26984126984126977,
+        "interpretation": "Same whitespace/equals-normalized command tokens under frozen parser;diagnostic metric interaction,not a changed score or proof of runtime equivalence."
+      },
+      "A18": {
+        "native_loss_cases": 33,
+        "normalized_flag_value_syntax_only_loss_cases": 3,
+        "syntax_only_native_delta_sum": -0.26984126984126977,
+        "interpretation": "Same whitespace/equals-normalized command tokens under frozen parser;diagnostic metric interaction,not a changed score or proof of runtime equivalence."
+      }
+    }
+  }
 }
