@@ -1,0 +1,123 @@
+{
+  "status": "PREVIEW_V6_UNIFORM_REVIEW_COMPLETE",
+  "revision": "legacy_v6_preview+new_compositional_v2",
+  "controls": {
+    "valid_long": true,
+    "valid_short": true,
+    "filtered_all_rejected": true,
+    "wrong_scope_rejected": true,
+    "wrong_name_filter_rejected": true,
+    "real_mutation_rejected": true
+  },
+  "fixture_controls_all_passed": true,
+  "models": {
+    "E0": {
+      "unknown_unreviewed_command": 61,
+      "invalid_output": 67
+    },
+    "F22": {
+      "fixture_pass": 69,
+      "fixture_fail": 17,
+      "unknown_unreviewed_command": 42
+    },
+    "R_step128": {
+      "fixture_pass": 116,
+      "fixture_fail": 7,
+      "unknown_unreviewed_command": 5
+    },
+    "R_step256": {
+      "fixture_pass": 123,
+      "unknown_unreviewed_command": 3,
+      "fixture_fail": 2
+    },
+    "RK_step128": {
+      "fixture_pass": 112,
+      "unknown_unreviewed_command": 11,
+      "fixture_fail": 5
+    },
+    "RK_step256": {
+      "fixture_pass": 122,
+      "unknown_unreviewed_command": 4,
+      "fixture_fail": 2
+    },
+    "RKstrong_step128": {
+      "fixture_pass": 103,
+      "unknown_unreviewed_command": 20,
+      "fixture_fail": 5
+    },
+    "RKstrong_step256": {
+      "fixture_pass": 120,
+      "unknown_unreviewed_command": 4,
+      "fixture_fail": 4
+    },
+    "repair_E0_plain": {
+      "unknown_unreviewed_command": 29,
+      "invalid_output": 35
+    },
+    "repair_E0_guard": {
+      "unknown_unreviewed_command": 29,
+      "invalid_output": 35
+    },
+    "repair_F24_plain": {
+      "fixture_pass": 51,
+      "fixture_fail": 12,
+      "invalid_output": 1
+    },
+    "repair_F24_guard": {
+      "fixture_pass": 51,
+      "fixture_fail": 12,
+      "unknown_unreviewed_command": 1
+    },
+    "repair_batch1_cacheFalse": {
+      "fixture_pass": 50,
+      "fixture_fail": 13,
+      "unknown_unreviewed_command": 1
+    },
+    "repair_batch1_cacheTrue": {
+      "fixture_pass": 50,
+      "fixture_fail": 13,
+      "unknown_unreviewed_command": 1
+    },
+    "repair_batch4_cacheFalse": {
+      "fixture_pass": 50,
+      "fixture_fail": 13,
+      "unknown_unreviewed_command": 1
+    },
+    "repair_batch4_cacheTrue": {
+      "fixture_pass": 51,
+      "fixture_fail": 12,
+      "unknown_unreviewed_command": 1
+    }
+  },
+  "source_hashes": {
+    "module_sha256": {
+      "kali_functional_behavior_worker_v6_20261115.py": "2303d9ad61e745b0c650b3925b4d4d76d4e491893acc98cfd4d0b71646f60ce8",
+      "kali_hardlink_oracle_v6_20261115.py": "58341d786d946b5d3d34e39f755e5d032a3fb1b0b5aab8386a9851e248337613",
+      "kali_data_release_20261114.py": "fbce8bfeb7867d0493c973377f81dc10a3b21cca2200aaa7f2970a26f22c05ff",
+      "kali_functional_data_20261115.py": "157630599b5d6055711bbea275e2b5d133be5b2fb5fdd4570e2868dd1cdd9405",
+      "kali_functional_data_v2_20261115.py": "977fc0975999fd4bf96ba1bc8a2a20502649677b17ed43c7fa877996798f882a",
+      "kali_fit64_behavior_review_v5_20261115.py": "bae5dc0fe7e998ea20d79a76ecfbb150ede879e222c0b589e65efee337eab0a6",
+      "kali-behavior-fixture-worker-v2-20261112.py": "1cfc20c0a896aa351490ce2c92d69fc97398053525a2335b0de097978eff193b"
+    },
+    "payload_sha256": "2a21fe8ae46baed201737b678897b1142a9d26e099dcfbfb9c5d9e3e33da462b",
+    "official_TEST_rows": 0,
+    "model_queries": 0,
+    "source_predictions_sha256": "d327b0dbdc012ceba9ef7be43ab369d0242b973a3bb41719681261eebc2f8dd9",
+    "scope": "Uniform versioned rescore, not overwrite; original predictions unchanged."
+  },
+  "old_scores_preserved": true,
+  "model_queries": 0,
+  "scope": "Uniform v6 review of 1536 historical saved responses; no new model generation or training. Counts span different panels and cannot be compared without the panel definition.",
+  "R_RK_eight_checkpoint_changes_vs_frozen_v5": {
+    "E0": 0,
+    "F22": 0,
+    "R_step128": 0,
+    "R_step256": 0,
+    "RK_step128": 0,
+    "RK_step256": 0,
+    "RKstrong_step128": 0,
+    "RKstrong_step256": 0
+  },
+  "CPU_review_resources_cleaned": true,
+  "source_artifact_sha256": "132a88d49dd2d4af42be61b5eb4ad63618a3138437fc16c79b30ef7e8d3d5201"
+}

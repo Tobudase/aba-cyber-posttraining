@@ -1,0 +1,100 @@
+{
+  "status": "FROZEN_BEFORE_NEW_GPU_OUTPUTS",
+  "experiment": "Two-original-model model+native-recipe pilot, not a pure architecture causal ablation",
+  "models": {
+    "redsage": {
+      "id": "RISys-Lab/RedSage-K-SFT-GRPO",
+      "revision": "843e2e3096e7de68f5c35eb16238f4909f21695a"
+    },
+    "qwen": {
+      "id": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+    }
+  },
+  "source": "Original publisher checkpoints, fresh zero-B q/v LoRA; no F22 adapter loaded",
+  "data": {
+    "new_rows": 128,
+    "old_replay_rows": 128,
+    "source_sha256": "c0f2d5dafa882a03c397a1d04399f32dd53986a57f73204b8da6a17a361889d5",
+    "four_new_tools": true,
+    "exposed_DEV32": true,
+    "old_DEV64": true,
+    "TRAINprobe32": true,
+    "independent_confirmation_queried": false
+  },
+  "recipe": {
+    "seed": 42,
+    "LoRA_r": 16,
+    "LoRA_alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "dropout": 0,
+    "lr": 2e-05,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0,
+    "microbatch": 1,
+    "accumulation": 4,
+    "epochs": 4,
+    "updates": 256,
+    "checkpoints": [
+      128,
+      256
+    ],
+    "grad_clip": 1,
+    "base_dtype": "BF16",
+    "adapter_dtype": "FP32",
+    "KL": 0
+  },
+  "inference": {
+    "greedy": true,
+    "batch": 4,
+    "max_new_tokens": 1024,
+    "seed": 3407,
+    "primary": "Same command-only ngram8 guard for both baselines and both SFT models",
+    "raw_diagnostic": "DEV32 baseline and final only, no guard; no checkpoint selection using raw outputs"
+  },
+  "metrics": [
+    "v6 behavioral PASS/FAIL/UNKNOWN on DEV32 and TRAINprobe32",
+    "Old64 native partial score, strict total and baseline-correct retained/lost",
+    "format/EOS/truncation",
+    "actual training time, generation tokens and GPU memory"
+  ],
+  "decision": "Report fixed final256 plus intermediate128 for every model; no best-checkpoint selection, no model promotion. Do not change recipes based on outputs. Stop each arm at256 updates even if scores are poor.",
+  "fairness": "Same sample exposure/update order and nominal LoRA hyperparameters; tokenizers and format differ, so not equal token/FLOP budget. Compare improvement relative to each model own paired baseline. One seed only.",
+  "gpu": "One GPU at a time; same GPU product for both model arms; <=4 allocated hours total for new model pilot, no priority/toleration bypass",
+  "validation": "V6 Linux oracle controls and uniform old-output review must pass before submitting GPU job. Input/source hashes, labels, real gradients, weight export/reload must be verified.",
+  "official_TEST_queries": 0,
+  "old_final64_queries": 0,
+  "protected_confirm384_queries": 0,
+  "new_confirm64_queries": 0,
+  "inputs_gzip_sha256": "5cf12c58a638e605fb364a75a068b1a7f6aa1ab721eccd7812c14cc03d2622a9",
+  "encoding_audits": {
+    "redsage": {
+      "rows": 256,
+      "supervised_tokens_per_epoch": 8799,
+      "prompt_tokens_per_epoch": 100782,
+      "max_sequence": 484,
+      "tokenizer_sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+      "encoding_sha256": "cf631a0b3e926417304db44087afb0036caea210b6569f9f5a63fed7b6046905",
+      "format": "Unchanged RedSage inference prefill plus explicitly declared BPE empty-think completion intervention"
+    },
+    "qwen": {
+      "rows": 256,
+      "supervised_tokens_per_epoch": 7775,
+      "prompt_tokens_per_epoch": 101550,
+      "max_sequence": 483,
+      "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "encoding_sha256": "7aafa1593da7b6119d9a0f6a5c690a94795d1eeee06532a50e43b77157a13eb7",
+      "format": "Official Qwen native non-thinking prompt; direct output completion; no RedSage BPE patch"
+    }
+  },
+  "oracle_method": "v6: actual dry-run must report expected aggregate links and preserve all files; separate disposable shadow fixture removes only explicit dry-run flag and verifies intended link partition. This is evaluator verification, not a model-authored real execution.",
+  "pending_conflict": "An already-authorized owned GPU task from another conversation is observed without cancellation; this pilot waits to avoid duplicate GPU usage."
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": {
+    "same_training_IDs_and_order": true,
+    "same_old_new_origin": true,
+    "each_epoch_256_unique_indices": true,
+    "256_updates": true,
+    "references_absent_from_eval_payload": true,
+    "DEV_and_old64_disjoint_from_TRAIN": true,
+    "no_prior_adapter_in_payload": true
+  },
+  "input_sha256": "5cf12c58a638e605fb364a75a068b1a7f6aa1ab721eccd7812c14cc03d2622a9",
+  "new_model_calls": 0,
+  "new_optimizer_steps": 0
+}

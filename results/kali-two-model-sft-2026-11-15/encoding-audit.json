@@ -1,0 +1,20 @@
+{
+  "redsage": {
+    "rows": 256,
+    "supervised_tokens_per_epoch": 8799,
+    "prompt_tokens_per_epoch": 100782,
+    "max_sequence": 484,
+    "tokenizer_sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+    "encoding_sha256": "cf631a0b3e926417304db44087afb0036caea210b6569f9f5a63fed7b6046905",
+    "format": "Unchanged RedSage inference prefill plus explicitly declared BPE empty-think completion intervention"
+  },
+  "qwen": {
+    "rows": 256,
+    "supervised_tokens_per_epoch": 7775,
+    "prompt_tokens_per_epoch": 101550,
+    "max_sequence": 483,
+    "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "encoding_sha256": "7aafa1593da7b6119d9a0f6a5c690a94795d1eeee06532a50e43b77157a13eb7",
+    "format": "Official Qwen native non-thinking prompt; direct output completion; no RedSage BPE patch"
+  }
+}

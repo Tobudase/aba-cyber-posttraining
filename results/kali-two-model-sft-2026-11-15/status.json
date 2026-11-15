@@ -1,0 +1,12 @@
+{
+  "status": "PREPARED_WAITING_FOR_EXISTING_OWNED_GPU_TASK",
+  "new_model_outputs": 0,
+  "new_optimizer_updates": 0,
+  "oracle_v6_review_complete": true,
+  "planned_updates_per_model": 256,
+  "planned_models": [
+    "RISys-Lab/RedSage-K-SFT-GRPO",
+    "Qwen/Qwen3-8B"
+  ],
+  "note": "This is preparation, not a completed model comparison. Controller waits without changing or cancelling another conversation GPU task."
+}

@@ -2,6 +2,12 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 15, 2026 — dry-run oracle fixed; two-model pilot prepared
+
+Validated a versioned **hardlink dry-run oracle v6** on util-linux 2.37.2 and uniformly rescored **1,536 saved responses**, with no new model calls. Six Linux regression controls and five local unit tests passed. All eight main replay/KL-stage outcomes were unchanged relative to v5; historical scores are preserved. [Repair and review](results/kali-preview-v6-review-2026-11-15/RESULT_ZH.md).
+
+Prepared a fixed **original RedSage-K 8B versus original Qwen3-8B** pilot: fresh LoRA, the same 256 TRAIN rows and update order, 256 planned updates per model, model-specific serialization. **No new model-training result exists at this publication snapshot**; the controller waits for another authorized GPU task. [Frozen protocol](results/kali-two-model-sft-2026-11-15/protocol.json) · [Current pilot status](results/kali-two-model-sft-2026-11-15/status.json).
+
 ## November 15, 2026 — replay/KL diagnostic and implementation review
 
 Three bounded 256-update controls on four authored tool domains completed training and development scoring. Replay-only scored **69.34** on the old native panel with **30/32** new DEV fixture passes; replay+KL scored **75.88** with **29/32**, and stronger KL **77.01** with **28/32**. E0 old native score was **75.20**. The KL arms retained **18/20** previously strict-correct old cases; no arm passed all frozen gates, and the conditional decision is **stop / no promotion**. These are operator controls, not a new native ABA search or official benchmark scores.
