@@ -1,3 +1,5 @@
+> 后续两模型对照已完成：[完整结果与限制](../kali-two-model-sft-2026-11-15/RESULT_ZH.md)。下文末段的等待状态是本页首次发布时的历史快照。
+
 # hardlink dry-run 验收器 v6 修复与统一复核
 
 已在util-linux 2.37.2 Linux环境完成修复验证，并统一复核1,536条保存输出。没有新模型调用或训练；CPU作业和专用NetworkPolicy已清理。

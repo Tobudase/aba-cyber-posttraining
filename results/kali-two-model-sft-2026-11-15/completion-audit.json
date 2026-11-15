@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE_ARTIFACTS_VERIFIED",
+  "public_summary_sha256": "0096bf9f58abe1b4908aa81f433ad305967780ffa765a146d541abff53ce1401",
+  "512_steps_checked": true,
+  "all_four_adapters_verified": true,
+  "same_GPU": "NVIDIA GeForce RTX 3090",
+  "this_pilot_resources_cleaned": true,
+  "needs_visual_figure_inspection_before_push": false,
+  "figure_review": "PASS_RENDERED_PNG_VISUALLY_INSPECTED_AFTER_FIXING_LEGEND_OVERLAP",
+  "public_report_sha256": "61e7d6ba0db38f96fa2f599d84ad2a42d83bc5224ea9c237b5d8679faf67d750",
+  "public_png_sha256": "62abc8b1a313222e7b47f53b1dab959e6f6697116700ea0573510222b665863f",
+  "all912_saved_outputs_rescored_exactly": true,
+  "published_metrics_match_private_sources": true,
+  "unit_tests_passed": 11,
+  "additional_CPU_objective_checks_passed": 6,
+  "final_resources_audit_sha256": "fbc00d9aaf4a2a9508facf6724485453dd4f5e905225139875cbf5032c57d8e1"
+}

@@ -2,6 +2,16 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 15, 2026 — original-model SFT comparison completed
+
+Completed the repaired-oracle pilot on **one RTX 3090**, with **256 actual updates per original model**, four verified exported checkpoints, and **912 generation tasks**. On exposed four-tool DEV32, final **Qwen3-8B passed 32/32 fixtures** and **RedSage-K passed 29/32 with 3 UNKNOWN**. Old64 native partial scores changed **63.44→67.64 for Qwen** and **75.20→71.73 for RedSage**; previously strict-correct retention was **11/13** and **16/20**, respectively. Neither model is free of per-case regression.
+
+Qwen is a useful next ABA starting-point candidate under this pilot recipe, while RedSage remains the stronger old-panel reference in absolute score. **Qwen baseline fixture outcomes are all UNKNOWN, not 0% semantic success**; this prevents claiming a proven 32-case behavioral gain. The comparison is one seed, shared four-tool fixtures and model-specific serialization, with **no official TEST, independent confirmation or model promotion**. Pilot compute/scoring Jobs are cleaned; a dedicated 8Gi cache is retained.
+
+![Original-model comparison with unresolved cases shown](results/kali-two-model-sft-2026-11-15/comparison.png)
+
+[Results, interpretation and limitations](results/kali-two-model-sft-2026-11-15/RESULT_ZH.md) · [Machine-readable results](results/kali-two-model-sft-2026-11-15/summary.json) · [Frozen numerical protocol and pre-output infrastructure amendments](results/kali-two-model-sft-2026-11-15/protocol.json).
+
 ## November 15, 2026 — dry-run oracle fixed; two-model pilot prepared
 
 Validated a versioned **hardlink dry-run oracle v6** on util-linux 2.37.2 and uniformly rescored **1,536 saved responses**, with no new model calls. Six Linux regression controls and five local unit tests passed. All eight main replay/KL-stage outcomes were unchanged relative to v5; historical scores are preserved. [Repair and review](results/kali-preview-v6-review-2026-11-15/RESULT_ZH.md).

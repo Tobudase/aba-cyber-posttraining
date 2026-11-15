@@ -55,12 +55,15 @@ def behavior():
 
  def panelsummary():
   data=json.loads(gzip.decompress((DATA/'gpu-inputs.json.gz').read_bytes()));details=result['details'];summary={}
+  tool_by_id={row['id']:row['tool'] for row in rows}
   for arm,dd in details.items():
    summary[arm]={}
    for panel in ['new_dev32','train_probe32']:
     ids={r['id'] for r in data['panels'][panel]}
     if not ids<=set(dd):continue
     counts=dict(collections.Counter(dd[i] for i in ids));passed=counts.get('fixture_pass',0);unknown=sum(n for k,n in counts.items() if k.startswith('unknown'));summary[arm][panel]={'rows':len(ids),'counts':counts,'lower':passed,'upper':passed+unknown}
+    for tool in ['hardlink','pyi-makespec','virtualenv','dnstwist']:
+     subset={i for i in ids if tool_by_id[i]==tool};cc=dict(collections.Counter(dd[i] for i in subset));pp=cc.get('fixture_pass',0);uu=sum(n for k,n in cc.items() if k.startswith('unknown'));summary[arm][panel+':'+tool]={'rows':len(subset),'counts':cc,'lower':pp,'upper':pp+uu}
   return summary
  write(DATA/'behavior-summary.json',panelsummary());write(DATA/'behavior-audit.json',{'network_isolation_verified':True,'all_fixture_controls_passed':True,'all_preview_regression_controls_passed':True,'versions':result['hardlink_version'],'prediction_sha256':cfg['source_predictions_sha256'],'oracle_sources':cfg['module_sha256'],'original_frozen_scores_overwritten':False})
 

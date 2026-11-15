@@ -68,7 +68,7 @@
   ],
   "decision": "Report fixed final256 plus intermediate128 for every model; no best-checkpoint selection, no model promotion. Do not change recipes based on outputs. Stop each arm at256 updates even if scores are poor.",
   "fairness": "Same sample exposure/update order and nominal LoRA hyperparameters; tokenizers and format differ, so not equal token/FLOP budget. Compare improvement relative to each model own paired baseline. One seed only.",
-  "gpu": "One GPU at a time; same GPU product for both model arms; <=4 allocated hours total for new model pilot, no priority/toleration bypass",
+  "gpu": "One GPU for both pilot arms sequentially, same GPU product. At most two owned GPU requests total including one other independent authorized study; <=4h pilot cap; no priority/toleration or namespace quota bypass. H100/H200/GH200 excluded, driver>=570.",
   "validation": "V6 Linux oracle controls and uniform old-output review must pass before submitting GPU job. Input/source hashes, labels, real gradients, weight export/reload must be verified.",
   "official_TEST_queries": 0,
   "old_final64_queries": 0,
@@ -96,5 +96,7 @@
     }
   },
   "oracle_method": "v6: actual dry-run must report expected aggregate links and preserve all files; separate disposable shadow fixture removes only explicit dry-run flag and verifies intended link partition. This is evaluator verification, not a model-authored real execution.",
-  "pending_conflict": "An already-authorized owned GPU task from another conversation is observed without cancellation; this pilot waits to avoid duplicate GPU usage."
+  "pending_conflict": "After read-only quota review, the earlier global serialization rule was narrowed: preserve the existing one-GPU study and allow this distinct one-GPU pilot. No model outputs preceded this resource-only decision.",
+  "storage_amendment": "Initial Job reserved a GPU but container never started because shared 40Gi RWO cache was mounted by another authorized study on a different node. It was cancelled with zero model calls/updates, and its records retained. Retry uses a dedicated8Gi RWO cache, CPU-staged pinned runtime only; no other study files changed. Numeric recipes/data/order/scorer unchanged; decision before any new model outputs.",
+  "startup_fix": "Dedicated-cache retry r2 exited before runtime/model loading: missing parent in new output-directory creation. mkdir(parents=True,exist_ok=False) fixes fresh-volume startup while retaining overwrite protection. Unit regression test PASS; no training or model calls occurred. Previous worker/log retained. Numerical recipe/encoding/order/scorer unchanged."
 }

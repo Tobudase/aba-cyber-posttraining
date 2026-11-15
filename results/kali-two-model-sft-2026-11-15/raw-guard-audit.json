@@ -1,0 +1,18 @@
+{
+  "redsage_base_raw": {
+    "rows": 32,
+    "exact_response_matches": 32
+  },
+  "redsage_final_raw": {
+    "rows": 32,
+    "exact_response_matches": 32
+  },
+  "qwen_base_raw": {
+    "rows": 32,
+    "exact_response_matches": 24
+  },
+  "qwen_final_raw": {
+    "rows": 32,
+    "exact_response_matches": 32
+  }
+}

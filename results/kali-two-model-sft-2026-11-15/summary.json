@@ -1,0 +1,1181 @@
+{
+  "status": "COMPLETE_VERIFIED_NO_MODEL_PROMOTION",
+  "scope": "One-seed four-tool adaptive development SFT pilot; original released models, model-specific templates; no native ABA or official benchmark gain claim",
+  "models": {
+    "redsage": {
+      "model_id": "RISys-Lab/RedSage-K-SFT-GRPO",
+      "model_revision": "843e2e3096e7de68f5c35eb16238f4909f21695a",
+      "optimizer_steps": 256,
+      "nonzero_gradient_steps": 256,
+      "supervised_tokens": 35196,
+      "initial_adapter_sha256": "dd7b5fef0f1883d87ec12e734e81189cd45568fafe2b7723b133cb9c18fe8033",
+      "initial_zero_B_probe_difference": 0.0,
+      "checkpoints": {
+        "redsage_step128": {
+          "optimizer_steps": 128,
+          "weights_sha256": "7346981f6449ef4e4a7229ffb896276c28605f9a9147572a32bac2629879d8ca",
+          "config_sha256": "86f6c8e5282c9c35cba1fc9e3402be9d9a35cbe9ec9619d15f226e5df1cc48b2",
+          "changed_tensors": 144,
+          "adapter_relative_path": "redsage_step128/adapter"
+        },
+        "redsage_step256": {
+          "optimizer_steps": 256,
+          "weights_sha256": "fbd4ef37d9ebd7d0c1ffcdb075095e36eecc39fc6f4a881d292534be12f73e3a",
+          "config_sha256": "86f6c8e5282c9c35cba1fc9e3402be9d9a35cbe9ec9619d15f226e5df1cc48b2",
+          "changed_tensors": 144,
+          "adapter_relative_path": "redsage_step256/adapter"
+        }
+      },
+      "reload_audit": {
+        "adapter": "check",
+        "tensors": 144,
+        "before_max_abs": 6.103515625e-05,
+        "after_max_abs": 0.0,
+        "dtype": "FP32",
+        "exact_source_equality": true
+      },
+      "reload_complete_responses_identical": true,
+      "wall_seconds": 1330.1585347240034,
+      "training_and_checkpoint_eval_seconds": 868.8945763240044,
+      "peak_cuda_bytes": 17329026048,
+      "order_sha256": [
+        "b5fd07f3cecbc5ff438f318815ed5ece5fb42da099a3f39f64bc94af69be60a4",
+        "22c1c13a455ea5c994990c66af5d37c76cc2cb90ce9a53bb676148fb9a12df40",
+        "662d6ef2ed0b876cbbb72bbcd6bd462c58c72cd7666383069314d8275b8159a6",
+        "f3cd9b7970162b13c1cff1f0f457306d7c492aa0431b61485ffbec85ab40cbab"
+      ]
+    },
+    "qwen": {
+      "model_id": "Qwen/Qwen3-8B",
+      "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "optimizer_steps": 256,
+      "nonzero_gradient_steps": 256,
+      "supervised_tokens": 31100,
+      "initial_adapter_sha256": "dd7b5fef0f1883d87ec12e734e81189cd45568fafe2b7723b133cb9c18fe8033",
+      "initial_zero_B_probe_difference": 0.0,
+      "checkpoints": {
+        "qwen_step128": {
+          "optimizer_steps": 128,
+          "weights_sha256": "29995c28ff9b68b3accf0cbbd0ad3bb30f4f7707c72d8d1745ac9e65e1c4ab82",
+          "config_sha256": "e114b5c518d535ee576fd825cce902c5589b9233369b7099b249c585446375bc",
+          "changed_tensors": 144,
+          "adapter_relative_path": "qwen_step128/adapter"
+        },
+        "qwen_step256": {
+          "optimizer_steps": 256,
+          "weights_sha256": "9bce6a5511642b4f45762ed7ee7032aa52d96db233a8c4008e5700fddaf91c93",
+          "config_sha256": "e114b5c518d535ee576fd825cce902c5589b9233369b7099b249c585446375bc",
+          "changed_tensors": 144,
+          "adapter_relative_path": "qwen_step256/adapter"
+        }
+      },
+      "reload_audit": {
+        "adapter": "check",
+        "tensors": 144,
+        "before_max_abs": 6.103515625e-05,
+        "after_max_abs": 0.0,
+        "dtype": "FP32",
+        "exact_source_equality": true
+      },
+      "reload_complete_responses_identical": true,
+      "wall_seconds": 1268.0215628480073,
+      "training_and_checkpoint_eval_seconds": 908.9033585909929,
+      "peak_cuda_bytes": 18355484160,
+      "order_sha256": [
+        "b5fd07f3cecbc5ff438f318815ed5ece5fb42da099a3f39f64bc94af69be60a4",
+        "22c1c13a455ea5c994990c66af5d37c76cc2cb90ce9a53bb676148fb9a12df40",
+        "662d6ef2ed0b876cbbb72bbcd6bd462c58c72cd7666383069314d8275b8159a6",
+        "f3cd9b7970162b13c1cff1f0f457306d7c492aa0431b61485ffbec85ab40cbab"
+      ]
+    }
+  },
+  "GPU": "NVIDIA GeForce RTX 3090",
+  "native_scores": {
+    "redsage_base": {
+      "old64": {
+        "rows": 64,
+        "native_points": 75.1963458994709,
+        "strict": 20,
+        "format_error": 2,
+        "complete": 35,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1296
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 41.097877816627815,
+        "strict": 1,
+        "format_error": 1,
+        "complete": 19,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1292
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 37.581246878121874,
+        "strict": 0,
+        "format_error": 2,
+        "complete": 13,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1291
+      }
+    },
+    "redsage_base_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 41.097877816627815,
+        "strict": 1,
+        "format_error": 1,
+        "complete": 19,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1292
+      }
+    },
+    "redsage_step128": {
+      "old64": {
+        "rows": 64,
+        "native_points": 73.89219576719577,
+        "strict": 20,
+        "format_error": 0,
+        "complete": 64,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1524
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 89.8931623931624,
+        "strict": 17,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1278
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 91.22786935286935,
+        "strict": 22,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1405
+      }
+    },
+    "redsage_step256": {
+      "old64": {
+        "rows": 64,
+        "native_points": 71.73363095238095,
+        "strict": 21,
+        "format_error": 0,
+        "complete": 64,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1534
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 98.84691697191698,
+        "strict": 29,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1259
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 32,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1390
+      }
+    },
+    "redsage_final_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 98.84691697191698,
+        "strict": 29,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1259
+      }
+    },
+    "redsage_before_reload": {},
+    "redsage_after_reload": {},
+    "qwen_base": {
+      "old64": {
+        "rows": 64,
+        "native_points": 63.43530601343102,
+        "strict": 13,
+        "format_error": 0,
+        "complete": 64,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1570
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 22.923974173974173,
+        "strict": 0,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1822
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 26.86581358456358,
+        "strict": 0,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1749
+      }
+    },
+    "qwen_base_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 22.881379707037603,
+        "strict": 0,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1851
+      }
+    },
+    "qwen_step128": {
+      "old64": {
+        "rows": 64,
+        "native_points": 66.05823863636363,
+        "strict": 15,
+        "format_error": 0,
+        "complete": 64,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1470
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 91.99314574314575,
+        "strict": 18,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1131
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 92.5801917989418,
+        "strict": 24,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1263
+      }
+    },
+    "qwen_step256": {
+      "old64": {
+        "rows": 64,
+        "native_points": 67.64000312510487,
+        "strict": 18,
+        "format_error": 0,
+        "complete": 64,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1847
+      },
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 30,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1124
+      },
+      "train_probe32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 32,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1262
+      }
+    },
+    "qwen_final_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "native_points": 100.0,
+        "strict": 30,
+        "format_error": 0,
+        "complete": 32,
+        "truncated": 0,
+        "early_EOS": 0,
+        "generated_tokens": 1124
+      }
+    },
+    "qwen_before_reload": {},
+    "qwen_after_reload": {}
+  },
+  "behavior": {
+    "redsage_base": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "invalid_output": 13,
+          "unknown_unreviewed_command": 19
+        },
+        "lower": 0,
+        "upper": 19
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "invalid_output": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 0,
+        "upper": 2
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 5,
+          "invalid_output": 3
+        },
+        "lower": 0,
+        "upper": 5
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "unknown_unreviewed_command": 13,
+          "invalid_output": 19
+        },
+        "lower": 0,
+        "upper": 13
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "invalid_output": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 0,
+        "upper": 2
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "invalid_output": 8
+        },
+        "lower": 0,
+        "upper": 0
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 5,
+          "invalid_output": 3
+        },
+        "lower": 0,
+        "upper": 5
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      }
+    },
+    "redsage_base_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "invalid_output": 13,
+          "unknown_unreviewed_command": 19
+        },
+        "lower": 0,
+        "upper": 19
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "invalid_output": 6,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 0,
+        "upper": 2
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 6,
+          "invalid_output": 2
+        },
+        "lower": 0,
+        "upper": 6
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 5,
+          "invalid_output": 3
+        },
+        "lower": 0,
+        "upper": 5
+      }
+    },
+    "redsage_step128": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 17,
+          "fixture_fail": 2,
+          "unknown_unreviewed_command": 13
+        },
+        "lower": 17,
+        "upper": 30
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 2,
+          "fixture_pass": 4,
+          "fixture_fail": 2
+        },
+        "lower": 4,
+        "upper": 6
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 5,
+          "unknown_unreviewed_command": 3
+        },
+        "lower": 5,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 23,
+          "unknown_unreviewed_command": 9
+        },
+        "lower": 23,
+        "upper": 32
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 1,
+          "fixture_pass": 7
+        },
+        "lower": 7,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      }
+    },
+    "redsage_step256": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 29,
+          "unknown_unreviewed_command": 3
+        },
+        "lower": 29,
+        "upper": 32
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 2,
+          "fixture_pass": 6
+        },
+        "lower": 6,
+        "upper": 8
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 7,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 7,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 32
+        },
+        "lower": 32,
+        "upper": 32
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      }
+    },
+    "redsage_final_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 29,
+          "unknown_unreviewed_command": 3
+        },
+        "lower": 29,
+        "upper": 32
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 2,
+          "fixture_pass": 6
+        },
+        "lower": 6,
+        "upper": 8
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 7,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 7,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      }
+    },
+    "redsage_before_reload": {},
+    "redsage_after_reload": {},
+    "qwen_base": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "unknown_unreviewed_command": 32
+        },
+        "lower": 0,
+        "upper": 32
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "unknown_unreviewed_command": 32
+        },
+        "lower": 0,
+        "upper": 32
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      }
+    },
+    "qwen_base_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "unknown_unreviewed_command": 32
+        },
+        "lower": 0,
+        "upper": 32
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      }
+    },
+    "qwen_step128": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 20,
+          "unknown_unreviewed_command": 12
+        },
+        "lower": 20,
+        "upper": 32
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 4,
+          "fixture_pass": 4
+        },
+        "lower": 4,
+        "upper": 8
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 24,
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 24,
+        "upper": 32
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "unknown_unreviewed_command": 8
+        },
+        "lower": 0,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      }
+    },
+    "qwen_step256": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 32
+        },
+        "lower": 32,
+        "upper": 32
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 32
+        },
+        "lower": 32,
+        "upper": 32
+      },
+      "train_probe32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "train_probe32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      }
+    },
+    "qwen_final_raw": {
+      "new_dev32": {
+        "rows": 32,
+        "counts": {
+          "fixture_pass": 32
+        },
+        "lower": 32,
+        "upper": 32
+      },
+      "new_dev32:hardlink": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:pyi-makespec": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:virtualenv": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      },
+      "new_dev32:dnstwist": {
+        "rows": 8,
+        "counts": {
+          "fixture_pass": 8
+        },
+        "lower": 8,
+        "upper": 8
+      }
+    },
+    "qwen_before_reload": {},
+    "qwen_after_reload": {}
+  },
+  "paired_retention": {
+    "redsage_step128": {
+      "old_base_correct": 20,
+      "old_retained": 16,
+      "old_lost": 4,
+      "old_gained": 4,
+      "old_native_delta": -1.3041501322751259
+    },
+    "redsage_step256": {
+      "old_base_correct": 20,
+      "old_retained": 16,
+      "old_lost": 4,
+      "old_gained": 5,
+      "old_native_delta": -3.4627149470899496
+    },
+    "qwen_step128": {
+      "old_base_correct": 13,
+      "old_retained": 11,
+      "old_lost": 2,
+      "old_gained": 4,
+      "old_native_delta": 2.622932622932609
+    },
+    "qwen_step256": {
+      "old_base_correct": 13,
+      "old_retained": 11,
+      "old_lost": 2,
+      "old_gained": 7,
+      "old_native_delta": 4.204697111673852
+    }
+  },
+  "actual_optimizer_steps": 512,
+  "primary_fixed_checkpoint": 256,
+  "all_512_trace_steps_verified": true,
+  "actual_generations": 912,
+  "official_TEST_queries": 0,
+  "previous_final64_requeries": 0,
+  "independent_confirmation_queries": 0,
+  "model_promotion": false,
+  "this_pilot_resources_cleaned": "All pilot Job/Pod/ConfigMap and scoring NetworkPolicy resources cleaned; dedicated cache storage retained separately.",
+  "oracle_v6": {
+    "network_isolation_verified": true,
+    "all_fixture_controls_passed": true,
+    "all_preview_regression_controls_passed": true,
+    "versions": "hardlink from util-linux 2.37.2",
+    "prediction_sha256": "7b2e4db09ecdd4f3dc54a0718798f168e10199a9dad2eddc1ea50790badbc4c4",
+    "oracle_sources": {
+      "kali_functional_behavior_worker_v6_20261115.py": "2303d9ad61e745b0c650b3925b4d4d76d4e491893acc98cfd4d0b71646f60ce8",
+      "kali_hardlink_oracle_v6_20261115.py": "58341d786d946b5d3d34e39f755e5d032a3fb1b0b5aab8386a9851e248337613",
+      "kali_data_release_20261114.py": "fbce8bfeb7867d0493c973377f81dc10a3b21cca2200aaa7f2970a26f22c05ff",
+      "kali_functional_data_20261115.py": "157630599b5d6055711bbea275e2b5d133be5b2fb5fdd4570e2868dd1cdd9405",
+      "kali_functional_data_v2_20261115.py": "977fc0975999fd4bf96ba1bc8a2a20502649677b17ed43c7fa877996798f882a",
+      "kali_fit64_behavior_review_v5_20261115.py": "bae5dc0fe7e998ea20d79a76ecfbb150ede879e222c0b589e65efee337eab0a6",
+      "kali-behavior-fixture-worker-v2-20261112.py": "1cfc20c0a896aa351490ce2c92d69fc97398053525a2335b0de097978eff193b"
+    },
+    "original_frozen_scores_overwritten": false
+  },
+  "protocol_sha256": "f3257eb9bcc05ba2f830053b29da64b679e64f45681881c9402b93f20fd396f8",
+  "receipt_sha256": "8f0e953c002b6e7f6650db5416a6edafc5c0359df258498e3f84ed28899ca64b",
+  "prediction_sha256": "7b2e4db09ecdd4f3dc54a0718798f168e10199a9dad2eddc1ea50790badbc4c4",
+  "limitations": [
+    "Different original model and serialization recipes; not an architecture-only causal ablation",
+    "Same data/row exposure, different target token counts and compute",
+    "One seed and four tools from a shared fixture generator",
+    "Old64 and newDEV32 are exposed adaptive development sets",
+    "Original E0 is task-specialized; its prior pretraining contamination is not audited",
+    "Old64 partial/strict outcomes are not behaviorally certified",
+    "All unknown commands remain unknown"
+  ],
+  "resource_attempts": {
+    "initial": "GPU reserved on a node, container never started due to shared RWO Multi-Attach; cancelled, zero training/model calls. Queue and reserved idle time are not counted as zero cost.",
+    "failure_proof_sha256": "6bdb618f2317732cc90b1c7cea3d1272f625460cb1fef64d02b12d9a4b0b89af",
+    "numerical_protocol_unchanged": true,
+    "dedicated_cache_stage": {
+      "node": "nautilus-it-gpu06.fullerton.edu",
+      "claim": "miw113-kali-two-model-cache-1115",
+      "source_claim_read_only": true,
+      "runtime_sha256": "c47d41129fdb9e25d874b5bae9e69010f323cf65850fffa98ab5e53341e746dd",
+      "runtime_bytes": 295516160,
+      "source_read_only": true,
+      "GPU": 0
+    },
+    "r2_startup_failure": {
+      "details": {
+        "failure": "Missing output parent directory on dedicated new volume",
+        "container_started": true,
+        "runtime_or_model_loaded": false,
+        "model_calls": 0,
+        "optimizer_steps": 0,
+        "GPU_was_reserved": true,
+        "original_worker_and_logs_retained": true
+      },
+      "proof_sha256": "f9b0a73af91c71e5722f84d613c6da613410e242b8d0af4efa2bfdde17ace2f0",
+      "fix": "Create missing parent directories on a fresh dedicated cache, retaining no-overwrite behavior; regression test passed."
+    }
+  },
+  "retained_storage": {
+    "claim": "miw113-kali-two-model-cache-1115",
+    "capacity": "8Gi",
+    "purpose": "Pinned runtime and private experimental artifacts; no running GPU. Existing shared40Gi cache untouched."
+  },
+  "paired_behavior_delta_bounds": {
+    "redsage_step128": {
+      "confirmed_PASS_delta": 17,
+      "conservative_lower": -2,
+      "conservative_upper": 30,
+      "interpretation": "Deterministic UNKNOWN bounds, not a statistical confidence interval. A positive lower bound supports gain even if every baseline UNKNOWN were successful."
+    },
+    "redsage_step256": {
+      "confirmed_PASS_delta": 29,
+      "conservative_lower": 10,
+      "conservative_upper": 32,
+      "interpretation": "Deterministic UNKNOWN bounds, not a statistical confidence interval. A positive lower bound supports gain even if every baseline UNKNOWN were successful."
+    },
+    "qwen_step128": {
+      "confirmed_PASS_delta": 20,
+      "conservative_lower": -12,
+      "conservative_upper": 32,
+      "interpretation": "Deterministic UNKNOWN bounds, not a statistical confidence interval. A positive lower bound supports gain even if every baseline UNKNOWN were successful."
+    },
+    "qwen_step256": {
+      "confirmed_PASS_delta": 32,
+      "conservative_lower": 0,
+      "conservative_upper": 32,
+      "interpretation": "Deterministic UNKNOWN bounds, not a statistical confidence interval. A positive lower bound supports gain even if every baseline UNKNOWN were successful."
+    }
+  },
+  "strict_metric": "Project strict_option_values parameter matching, not an assertion of identical official leaderboard Exact Correct.",
+  "runtime_template_audits": {
+    "redsage": {
+      "model": "redsage",
+      "runtime_training_vs_inference_prompt_checks": 32,
+      "all_equal": true,
+      "tokenizer_sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09",
+      "model_forward_calls": 0,
+      "optimizer_updates": 0
+    },
+    "qwen": {
+      "model": "qwen",
+      "runtime_training_vs_inference_prompt_checks": 32,
+      "all_equal": true,
+      "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "official_non_thinking_prompt_verified": true,
+      "model_forward_calls": 0,
+      "optimizer_updates": 0
+    }
+  }
+}

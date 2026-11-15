@@ -12,9 +12,13 @@ def sha(path):
   for block in iter(lambda:f.read(8*1024**2),b''):h.update(block)
  return h.hexdigest()
 
+def prepare_output_directory(path):
+ """Allow a brand-new cache volume, but never overwrite an existing run."""
+ out=Path(path);out.mkdir(parents=True,exist_ok=False);return out
+
 def main():
  started=time.monotonic();cfg=json.loads(Path('/input/config.json').read_text());raw=Path('/input/inputs.json.gz').read_bytes();assert sha('/input/worker.py')==cfg['worker_sha256'] and hashlib.sha256(raw).hexdigest()==cfg['inputs_sha256']
- data=json.loads(gzip.decompress(raw));protocols=cfg['model_protocols'];out=Path(cfg['durable_output']);out.mkdir(exist_ok=False)
+ data=json.loads(gzip.decompress(raw));protocols=cfg['model_protocols'];out=prepare_output_directory(cfg['durable_output'])
  def save(name,value):
   p=out/name;t=p.with_suffix(p.suffix+'.tmp');t.write_text(json.dumps(value)+'\n');t.replace(p)
  assert sha('/cache/runtime-deps.tar')==protocols['redsage']['runtime_archive_sha256'];deps=Path('/scratch/deps');deps.mkdir()

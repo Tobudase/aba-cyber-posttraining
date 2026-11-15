@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-11-15T13:29:38.509594+00:00",
+  "pilot_pods_remaining": [],
+  "score_networkpolicy_deleted": true,
+  "dedicated_cache_retained_capacity": {
+    "storage": "8Gi"
+  },
+  "other_conversation_jobs_not_modified": true
+}
