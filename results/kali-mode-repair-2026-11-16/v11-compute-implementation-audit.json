@@ -1,0 +1,10 @@
+{
+  "status": "SOURCE_COST_AUDIT",
+  "v11_CE_unused_new_teacher_forwards": 768,
+  "affects_CE_loss": false,
+  "v13_new_task_teacher_forwards": 0,
+  "v13_old_anchor_forwards_per_update": 2,
+  "v11_body_sha256": "8632626f1388f32374a3a231c92da04bc7c7e37669c4d8259d50eb3023f3eb88",
+  "v13_body_sha256": "5753cab09fa880a170d87715d9c69d7cc84c0d87c41ec64e647cb6f8df001932",
+  "interpretation": "The completed objective comparison retained an unused no-grad teacher forward in the CE branch. Similar measured wall time does not establish equally optimized method cost. The already-frozen v13 direct-CE body removes this unused new-task forward; required old-anchor KL forwards remain."
+}

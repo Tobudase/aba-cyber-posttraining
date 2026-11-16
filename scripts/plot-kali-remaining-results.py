@@ -77,6 +77,15 @@ if (ROOT/'v13-analysis.json').exists():
     axes[1,1].set_ylabel('Strict-correct retention (%)')
     aux=a['auxiliary24_training_fit_only']
     bars(axes[1,2],labels,[aux[r['label']]['source_parser_contract_matches'] for r in rows],[24,24],'New auxiliary TRAIN parser fit')
+    source=json.loads((ROOT/'v11-analysis.json').read_text())['results']['direct_command_CE']
+    source_counts=[(source[key]['pass'],source[key]['n']) for key in ['train384','legacy64','new_dev32','shifted_dev64']]
+    source_counts += [(source['old_retained'],source['old_base_correct']),(aux['W0']['source_parser_contract_matches'],24)]
+    for ax,(value,total) in zip(axes.flat,source_counts):
+        ax.axhline(100*value/total,color='#30343b',linestyle='--',linewidth=1.2)
+        for annotation in ax.texts:
+            x,y=annotation.get_position()
+            annotation.set_position((x,max(y,100*value/total+3)))
     fig.suptitle('Replay-content comparison: same source, 96 updates per arm',fontweight='bold',fontsize=15)
-    fig.text(.5,.015,'Single-seed adaptive DEV comparison. Auxiliary24 is training fit, not held-out performance; old64 uses native/strict scoring, not runtime behavior.',ha='center',fontsize=9)
+    fig.text(.5,.035,'Dashed lines: frozen CE source. Confirmed PASS excludes UNKNOWN; unresolved counts are reported in the accompanying table.',ha='center',fontsize=9)
+    fig.text(.5,.015,'Single-seed adaptive DEV comparison. Auxiliary24 is TRAIN fit; old64 uses native/strict scoring, not runtime behavior. No independent-test claim.',ha='center',fontsize=9)
     fig.tight_layout(rect=[0,.05,1,.95]);fig.savefig(ROOT/'replay-content-comparison.png',dpi=180);plt.close(fig)

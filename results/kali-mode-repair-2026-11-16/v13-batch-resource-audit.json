@@ -1,0 +1,181 @@
+{
+  "status": "ALL_NAMED_STUDIES_TERMINAL_AND_CLEANED",
+  "checked_at_utc": "2026-11-16T14:58:34.869710+00:00",
+  "exports_reverified_from_local_bytes": {
+    "miw113-kali-objective-v11-r2-1116": {
+      "archive_sha256": "01db05a022862ebb2a8fdac9e9aea21458efd20ca3590d77fc93d0cb786a9bf3",
+      "reverified_weight_sha256": {
+        "R_step192": "5a7966d8addcabe820706272a45bc58b001aeaec87b4eedf1fd62bb58b546afb",
+        "RK_step192": "942505ba01aa99e312fa277ca57b44e641f755271c4b07d33f3b0d2fc43d9e8d"
+      }
+    },
+    "miw113-kali-retention-v13-1116": {
+      "archive_sha256": "aece8787cab0993aeaa03d614c3d1627c2df960daf546c945de2c9c4413b50c3",
+      "reverified_weight_sha256": {
+        "R_step96": "e51a0a3b4dcb72f39dfbb68e15e675281374b0f48e7332cca4f812159845a0f2",
+        "RK_step96": "edc39e7de72d21b67876181100e19c3ee57b273c9015850148df1b56c2c13e06"
+      }
+    }
+  },
+  "jobs": [
+    {
+      "job": "miw113-kali-objective-v11-1116",
+      "uid": "4002535f-f86f-41d3-a620-5aad6332eadd",
+      "status": "FAILED",
+      "GPU_requested": 1,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T11:03:01Z",
+      "container_finished_at": "2026-11-16T11:07:32Z",
+      "activeDeadlineSeconds": 10800,
+      "host_receipt_sha256": "eaa41fba829f55774af74938fdfbd40c345885c5c54d3ae865c2c2563b742141"
+    },
+    {
+      "job": "miw113-kali-objective-v11-r2-1116",
+      "uid": "e2a6c804-057e-4b5a-9f8c-280d7f82c1c1",
+      "status": "SUCCEEDED",
+      "GPU_requested": 1,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T11:10:13Z",
+      "container_finished_at": "2026-11-16T13:06:57Z",
+      "activeDeadlineSeconds": 10489,
+      "host_receipt_sha256": "1a4db510046e090046d79d6ff726e0f9dbe6ebc6c382aec1a3e6192ae5b1a781"
+    },
+    {
+      "job": "miw113-kali-cf-teacher-v11-1116",
+      "uid": "4523b81e-7c03-40d0-9ce1-50c877fb2d11",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T11:15:49Z",
+      "container_finished_at": "2026-11-16T11:16:32Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "680ee6143cdb63e3608f4b3fb000aea4d386f1418dfb0b75397a28db6a8612a6"
+    },
+    {
+      "job": "miw113-kali-cf-early-v11-1116",
+      "uid": "e9045fb5-48e4-45d6-8143-b6db4162c663",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T12:12:23Z",
+      "container_finished_at": "2026-11-16T12:13:40Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "6547b4488e8ce0502c52c64be55b1b9c251dc09219fcf6e3756c1e6c189c5366"
+    },
+    {
+      "job": "miw113-kali-cf-fit-v11-1116",
+      "uid": "b6108f66-2d42-48a8-9502-65f9bf59cf11",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T12:58:07Z",
+      "container_finished_at": "2026-11-16T13:02:41Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "1eba15382b8e9ed0e5b4d22f60e7448e32e38e71db13048aa3f41e35b39f30bb"
+    },
+    {
+      "job": "miw113-kali-cf-primary-v11-1116",
+      "uid": "78a1f53a-288c-4f73-acae-9d2945997c3b",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T13:03:03Z",
+      "container_finished_at": "2026-11-16T13:04:51Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "470d5ff824849df6bd74fe752791c9a87d61eb5c78fd6e9d6ff496b4ef0f975d"
+    },
+    {
+      "job": "miw113-kali-cf-shifted-v11-1116",
+      "uid": "15a902c2-862b-4461-9ae8-7b8bbfd13e59",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T13:05:05Z",
+      "container_finished_at": "2026-11-16T13:06:41Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "62a3deeb057c8dc53f6e0f3a2b8d7274b22369b966178f7d7a23da55fa10f195"
+    },
+    {
+      "job": "miw113-kali-path-v12-1116",
+      "uid": "e7b74d2d-f45a-4b21-9864-25013af1d6a4",
+      "status": "SUCCEEDED",
+      "GPU_requested": 1,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T13:08:00Z",
+      "container_finished_at": "2026-11-16T13:24:04Z",
+      "activeDeadlineSeconds": 3600,
+      "host_receipt_sha256": "5841d1229f7853bc9087b577ec5279680e0120382cda845c6a07efe81df10f22"
+    },
+    {
+      "job": "miw113-kali-path-grade-v12-1116",
+      "uid": "d7bc1a67-3f5e-46ab-9538-eb8e2e5d29f4",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T13:24:31Z",
+      "container_finished_at": "2026-11-16T13:25:00Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "cdb27f6ed08f9f057272aba3008d3b2d336b7a8e2ae4c184930a2fe4b25bd4f1"
+    },
+    {
+      "job": "miw113-kali-retention-v13-1116",
+      "uid": "03a2409f-6e95-4876-8bc4-cdcddbfb8d97",
+      "status": "SUCCEEDED",
+      "GPU_requested": 1,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T13:26:14Z",
+      "container_finished_at": "2026-11-16T14:50:49Z",
+      "activeDeadlineSeconds": 10800,
+      "host_receipt_sha256": "410a93a5d47fe8536f73c23029e54118aa4e8d859643e31809313b5640a88ea7"
+    },
+    {
+      "job": "miw113-kali-cf-early-v13-1116",
+      "uid": "9e88a848-7d70-45ee-bf28-7146b135aa35",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T14:16:06Z",
+      "container_finished_at": "2026-11-16T14:17:40Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "4a5eb661dbdef2190d873dd287848fbf9605f5d3ed6d19b6fd0cac1bf3e1c366"
+    },
+    {
+      "job": "miw113-kali-cf-fit-v13-1116",
+      "uid": "2d85b648-25ac-4249-94e2-2c3fb8000817",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T14:51:06Z",
+      "container_finished_at": "2026-11-16T14:54:50Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "0a75c45dfe37701432a00d922603c705afeb870c51f0f112dc662b0df2edb9a7"
+    },
+    {
+      "job": "miw113-kali-cf-primary-v13-1116",
+      "uid": "02435239-5651-4cdc-a858-cab3b5d49d77",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T14:55:16Z",
+      "container_finished_at": "2026-11-16T14:56:31Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "9f4fde521940bbc555f30e1dee663bee4ef4c6b5d8fcba3c978ab2848c2dcb19"
+    },
+    {
+      "job": "miw113-kali-cf-shifted-v13-1116",
+      "uid": "e383c1e2-30aa-4c3a-aab9-414ffdd4bc7f",
+      "status": "SUCCEEDED",
+      "GPU_requested": 0,
+      "resources_cleaned": true,
+      "container_started_at": "2026-11-16T14:56:47Z",
+      "container_finished_at": "2026-11-16T14:57:56Z",
+      "activeDeadlineSeconds": 2400,
+      "host_receipt_sha256": "e707364dbdfb2da82be605b33b2572743987facb51f36c890c6b6e2a7fa2440b"
+    }
+  ],
+  "named_jobs": 14,
+  "GPU_containers_sequential": true,
+  "container_wall_GPU_seconds": 13314.0,
+  "cost_scope": "Container wall time, including load/inference/waits and the zero-update failed attempt; not billed GPU time or pure training time.",
+  "scope": "Only v11/v12/v13 owned objects; persistent data caches retained and other namespace users untouched."
+}

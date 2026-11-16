@@ -2,6 +2,7 @@
 import collections
 import hashlib
 import json
+import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]/'results/kali-mode-repair-2026-11-16'
@@ -35,7 +36,10 @@ for version in ['v11', 'v13']:
     assert training['order_hashes']['R'] == training['order_hashes']['RK']
     for arm in ['R', 'RK']:
         assert [t['step'] for t in training['traces'][arm]] == list(range(1, steps+1))
+        assert all(math.isfinite(t['grad_norm_before_clip']) and t['grad_norm_before_clip'] > 0
+                   for t in training['traces'][arm])
     old_base = {i for i in panels['primary']['old64'] if native['E0'][i]['strict']}
+    old_source = {i for i in panels['primary']['old64'] if native['W0'][i]['strict']}
     for value in a['results'].values():
         label = value['storage_label'] if version == 'v11' else value['label']
         check(value['train384'], detail['finalfit'][label], panels['train'])
@@ -51,8 +55,26 @@ for version in ['v11', 'v13']:
         got = {i for i in panels['primary']['old64'] if native[label][i]['strict']}
         assert value['old_retained' if version == 'v11' else 'old_base_retained'] == len(old_base & got)
         assert value['old_base_correct'] == len(old_base)
+        if version == 'v13':
+            assert value['old_strict'] == len(got)
+            assert value['old_lost_vs_base'] == sorted(old_base - got)
+            assert value['old_gained_vs_source'] == sorted(got - old_source)
+            assert value['old_lost_vs_source'] == sorted(old_source - got)
+            assert abs(value['old_native_points'] - 100*sum(native[label][i]['native'] for i in panels['primary']['old64'])/64) < 1e-10
     assert a['official_TEST_queries'] == a['fresh_confirmation_queries'] == 0 and not a['promotion']
     if version == 'v13':
+        for value in a['results'].values():
+            label=value['label']
+            for tool,ids in panels['shifted_by_tool'].items():
+                check(value['shifted_by_tool'][tool],detail['shifted'][label],ids)
+            change=a['shifted_change_diagnosis'][label]
+            assert change['gained_PASS_vs_source'] == sorted(i for i in panels['shifted'] if detail['shifted'][label][i]=='fixture_pass' and detail['shifted']['W0'][i]!='fixture_pass')
+            assert change['lost_PASS_vs_source'] == sorted(i for i in panels['shifted'] if detail['shifted']['W0'][i]=='fixture_pass' and detail['shifted'][label][i]!='fixture_pass')
+        for label, value in a['trusted64_training_fit_only'].items():
+            assert len(value['per_id']) == value['n'] == 64
+            assert sum(x['strict'] for x in value['per_id'].values()) == value['strict']
+            assert abs(100*sum(x['native'] for x in value['per_id'].values())/64-value['native_points']) < 1e-10
+            assert sum(x['truncated'] for x in value['per_id'].values()) == value['truncated']
         for label, value in a['auxiliary24_training_fit_only'].items():
             assert len(value['per_id']) == value['n'] == 24
             assert sum(x['parser_matches'] for x in value['per_id'].values()) == value['source_parser_contract_matches']

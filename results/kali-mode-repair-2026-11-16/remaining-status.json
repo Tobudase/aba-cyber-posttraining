@@ -1,16 +1,77 @@
 {
-  "status": "REMAINING_EXPERIMENTS_IN_PROGRESS",
+  "status": "ALL_PLANNED_DIAGNOSTIC_EXPERIMENTS_COMPLETED_VERIFIED",
   "completed": [
-    "v10 direct CE microfit and Linux functional scoring",
-    "v12 path probes prepared with matched token-length controls",
-    "24 old-intent source-parser and target-encoding checks",
-    "v11 paired objective experiment: both192 real updates, all functional scores, exports verified, GPU cleaned",
-    "v12 192 root/batch/cache diagnostic generations and Linux scoring; GPU/CPU cleaned"
+    "v11 two192-step objective arms, functional/native scoring and verified exports",
+    "v12 192 no-training root/batch/cache probes and functional scoring",
+    "v13 two96-step replay arms, all scoring and verified exports",
+    "all14 named owned jobs terminal and cleaned; final resource audit passed"
   ],
-  "running": "v13 matched-step replay-content comparison, submitted; results pending",
-  "sequential_next": "Collect both96-step arms, functional/native scores, exports; reconcile and publish",
-  "not_started": [
-    "new native ABA after stable-baseline decision"
-  ],
-  "no_new_independent_test_claim": true
+  "running": null,
+  "promotion": false,
+  "official_TEST_queries": 0,
+  "fresh_confirmation_queries": 0,
+  "new_native_ABA_run_performed_in_this_batch": false,
+  "v13_results": {
+    "existing_intents": {
+      "old_strict": 23,
+      "old_base_retained": 19,
+      "legacy64": {
+        "n": 64,
+        "pass": 63,
+        "fail": 1,
+        "unknown": 0,
+        "lower": 63,
+        "upper": 63
+      },
+      "newDEV32": {
+        "n": 32,
+        "pass": 30,
+        "fail": 2,
+        "unknown": 0,
+        "lower": 30,
+        "upper": 30
+      },
+      "shiftedDEV64": {
+        "n": 64,
+        "pass": 48,
+        "fail": 10,
+        "unknown": 6,
+        "lower": 48,
+        "upper": 54
+      }
+    },
+    "missing_intents": {
+      "old_strict": 25,
+      "old_base_retained": 20,
+      "legacy64": {
+        "n": 64,
+        "pass": 62,
+        "fail": 2,
+        "unknown": 0,
+        "lower": 62,
+        "upper": 62
+      },
+      "newDEV32": {
+        "n": 32,
+        "pass": 31,
+        "fail": 1,
+        "unknown": 0,
+        "lower": 31,
+        "upper": 31
+      },
+      "shiftedDEV64": {
+        "n": 64,
+        "pass": 50,
+        "fail": 8,
+        "unknown": 6,
+        "lower": 50,
+        "upper": 56
+      }
+    }
+  },
+  "decision": "Targeted old-intent recovery verified; combined legacy/shifted gates still fail. No promotion.",
+  "next_research_stage_not_started": "TRAIN-only context/combination diversity with verified labels, then a frozen fixed-SFT versus native-ABA comparison.",
+  "no_new_independent_test_claim": true,
+  "resource_audit": "v13-batch-resource-audit.json",
+  "completed_at_utc": "2026-11-16T15:01:33.882119+00:00"
 }

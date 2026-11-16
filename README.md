@@ -2,13 +2,29 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## November 16, 2026 — matched objective comparison verified; follow-ups running
+## November 16, 2026 — three diagnostic studies completed and verified
 
-On the same A10, two RedSage R120 continuation arms completed **192 real updates each** with identical data/order. Direct command CE improved full-TRAIN functional PASS from **353/384 (KL) to 379/384**, including **36→63/64** on the balanced PyInstaller mode subset. However, exposed shifted-DEV PASS fell **56→52/64**, and both retained only **19/20** originally correct old cases. **Neither endpoint is promoted; these are adaptive diagnostics, not independent test or ABA gains.** The read-only path study is also complete: across all four batch/cache settings, changing only root-directory text changed confirmed PASS from **0/12 to 8/12** on selected, shared-template cases. This sensitivity already exists at R120; it is not proof that later training caused it. The matched replay-content study is running.
+Completed the matched objective comparison (v11), directory/batch/cache probe (v12), and replay-content comparison (v13). These are **fixed operator-run RedSage 8B continuation diagnostics, not a new native ABA search or official KaliBench evaluation**. The earlier native Qwen ABA study is documented separately below.
 
-![Matched objective comparison](results/kali-mode-repair-2026-11-16/objective-comparison.png)
+| Current replay study | Frozen CE source | More existing-intent replay | Missing-intent replay |
+|---|---:|---:|---:|
+| Actual continuation updates | 0 in v13 | 96 | 96 |
+| Full TRAIN functional PASS | 379/384 from v11 | 379/384 | 379/384 |
+| Previously correct original old cases retained | 19/20 | 19/20 | **20/20** |
+| Old64 strict correctness | 24/64 | 23/64 | **25/64** |
+| Legacy functional fixtures PASS | 62/64 | 63/64 | 62/64 |
+| Exposed DEV32 PASS | 30/32 | 30/32 | **31/32** |
+| Shifted exposed DEV64 PASS | 52/64 | 48/64 | **50/64** |
 
-[Verified comparison, causal limits and evidence checks](results/kali-mode-repair-2026-11-16/RESULT_ZH.md).
+Adding missing intent coverage recovered the old port-setting case and preserved all 24 source-correct old cases. Parser-only auxiliary TRAIN fit increased from **4/24 to 24/24**, while existing replay stayed at 4/24. However, both continuations lost two previously passing shifted PyInstaller cases by omitting `--noupx`; missing-intent replay still fails the frozen legacy and shifted-development gates. **This is a targeted recovery, not a complete solution or independent generalization gain. Neither endpoint is promoted.** UNKNOWN cases remain unresolved, not counted as known failures or successes.
+
+The earlier objective comparison improved TRAIN fit **353→379/384** with direct CE, but shifted DEV declined **56→52/64**. The no-training root substitution study found **0/12 versus 8/12 confirmed PASS** on selected shared-template cases, across four batch/cache settings; original-root outcomes include 10 UNKNOWN. This sensitivity predates the later continuation and is not proof of training-induced directory memorization.
+
+All 576 updates across v11/v13, exported adapter hashes, paired outcomes and resource cleanup were checked. The batch's 14 owned Jobs are terminal and cleaned (13 successful, one zero-update failed preflight retained in the audit); GPU containers ran sequentially, totaling **3.70 container-hours**, including staging/inference/waits. Official TEST and this phase's fresh confirmation64 queries stayed at **0**.
+
+![Replay content, fitting and retention](results/kali-mode-repair-2026-11-16/replay-content-comparison.png)
+
+[Full Chinese results, figures and causal limitations](results/kali-mode-repair-2026-11-16/RESULT_ZH.md) · [Verified per-arm results](results/kali-mode-repair-2026-11-16/v13-analysis.json) · [Completed status and next research step](results/kali-mode-repair-2026-11-16/remaining-status.json) · [Resource and export audit](results/kali-mode-repair-2026-11-16/v13-batch-resource-audit.json).
 
 ## November 16, 2026 — full-TRAIN fitting and retention diagnosis
 

@@ -1,0 +1,62 @@
+{
+  "config_sha256": "be33d7e31afa62fec1c292a6f90fb0c64cf482183ededbb0c11955f585db1cf8",
+  "checks": {
+    "R_step96": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "historical_old_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": true,
+      "TRAINprobe_behavior": true,
+      "exposed_shift64_atleast56_eachtool14": false
+    },
+    "RK_step96": {
+      "all192_complete": true,
+      "old_paired_retention": true,
+      "historical_old_retention": true,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": true,
+      "TRAINprobe_behavior": true,
+      "exposed_shift64_atleast56_eachtool14": false
+    }
+  },
+  "statistics": {
+    "R_step96": {
+      "new_dev_pass": 30,
+      "legacy_pass": 63,
+      "fit_pass": 32,
+      "original_TRAIN_fit16_pass": 16,
+      "old_retained": 19,
+      "old_base_correct": 20,
+      "old_lost_ids": [
+        "sample_4867"
+      ],
+      "historical_old_retained": 19,
+      "historical_old_total": 20,
+      "historical_old_lost_ids": [
+        "sample_4867"
+      ],
+      "shifted_dev_PASS": 48
+    },
+    "RK_step96": {
+      "new_dev_pass": 31,
+      "legacy_pass": 62,
+      "fit_pass": 32,
+      "original_TRAIN_fit16_pass": 16,
+      "old_retained": 20,
+      "old_base_correct": 20,
+      "old_lost_ids": [],
+      "historical_old_retained": 20,
+      "historical_old_total": 20,
+      "historical_old_lost_ids": [],
+      "shifted_dev_PASS": 50
+    }
+  },
+  "eligible": [],
+  "selection_policy": null,
+  "action": "stop",
+  "candidate": null,
+  "reason": "Replay-content diagnosis only; no fresh confirmation or promotion"
+}

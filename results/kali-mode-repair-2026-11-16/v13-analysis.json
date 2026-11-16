@@ -1,0 +1,1406 @@
+{
+  "status": "REPLAY_CONTENT_COMPARISON_VERIFIED",
+  "results": {
+    "existing_intents": {
+      "label": "R_step96",
+      "training_seconds": 1079.876897315029,
+      "clipped_steps": 12,
+      "logged_loss_trends": {
+        "auxiliary_replay_loss_example_mean": {
+          "first16_mean": 0.000823957888599125,
+          "last16_mean": 0.00046815375171149753
+        },
+        "new_primary_objective_example_mean": {
+          "first16_mean": 0.004888440038484987,
+          "last16_mean": 0.006924493497535877
+        },
+        "old_source_KL_token_mean": {
+          "first16_mean": 0.003132780892623059,
+          "last16_mean": 0.002314118608960196
+        }
+      },
+      "train384": {
+        "n": 384,
+        "pass": 379,
+        "fail": 1,
+        "unknown": 4,
+        "lower": 379,
+        "upper": 383
+      },
+      "train_by_tool": {
+        "dnstwist": {
+          "n": 40,
+          "pass": 39,
+          "fail": 0,
+          "unknown": 1,
+          "lower": 39,
+          "upper": 40
+        },
+        "hardlink": {
+          "n": 128,
+          "pass": 128,
+          "fail": 0,
+          "unknown": 0,
+          "lower": 128,
+          "upper": 128
+        },
+        "pyi-makespec": {
+          "n": 152,
+          "pass": 151,
+          "fail": 1,
+          "unknown": 0,
+          "lower": 151,
+          "upper": 151
+        },
+        "virtualenv": {
+          "n": 64,
+          "pass": 61,
+          "fail": 0,
+          "unknown": 3,
+          "lower": 61,
+          "upper": 64
+        }
+      },
+      "legacy64": {
+        "n": 64,
+        "pass": 63,
+        "fail": 1,
+        "unknown": 0,
+        "lower": 63,
+        "upper": 63
+      },
+      "newDEV32": {
+        "n": 32,
+        "pass": 30,
+        "fail": 2,
+        "unknown": 0,
+        "lower": 30,
+        "upper": 30
+      },
+      "shiftedDEV64": {
+        "n": 64,
+        "pass": 48,
+        "fail": 10,
+        "unknown": 6,
+        "lower": 48,
+        "upper": 54
+      },
+      "shifted_by_tool": {
+        "dnstwist": {
+          "n": 16,
+          "pass": 16,
+          "fail": 0,
+          "unknown": 0,
+          "lower": 16,
+          "upper": 16
+        },
+        "hardlink": {
+          "n": 16,
+          "pass": 8,
+          "fail": 2,
+          "unknown": 6,
+          "lower": 8,
+          "upper": 14
+        },
+        "pyi-makespec": {
+          "n": 16,
+          "pass": 8,
+          "fail": 8,
+          "unknown": 0,
+          "lower": 8,
+          "upper": 8
+        },
+        "virtualenv": {
+          "n": 16,
+          "pass": 16,
+          "fail": 0,
+          "unknown": 0,
+          "lower": 16,
+          "upper": 16
+        }
+      },
+      "old_base_retained": 19,
+      "old_base_correct": 20,
+      "old_lost_vs_base": [
+        "sample_4867"
+      ],
+      "old_gained_vs_source": [],
+      "old_lost_vs_source": [
+        "sample_2933"
+      ],
+      "old_strict": 23,
+      "old_native_points": 76.00694444444444,
+      "truncated_primary": 0,
+      "truncated_fullTRAIN": 0,
+      "truncated_shifted": 0,
+      "weights_sha256": "e51a0a3b4dcb72f39dfbb68e15e675281374b0f48e7332cca4f812159845a0f2"
+    },
+    "missing_intents": {
+      "label": "RK_step96",
+      "training_seconds": 1080.654511703935,
+      "clipped_steps": 40,
+      "logged_loss_trends": {
+        "auxiliary_replay_loss_example_mean": {
+          "first16_mean": 0.5431619775190484,
+          "last16_mean": 0.0007065986665111268
+        },
+        "new_primary_objective_example_mean": {
+          "first16_mean": 0.005176846183758244,
+          "last16_mean": 0.007577935642530065
+        },
+        "old_source_KL_token_mean": {
+          "first16_mean": 0.0032873567038361816,
+          "last16_mean": 0.007250818000223622
+        }
+      },
+      "train384": {
+        "n": 384,
+        "pass": 379,
+        "fail": 1,
+        "unknown": 4,
+        "lower": 379,
+        "upper": 383
+      },
+      "train_by_tool": {
+        "dnstwist": {
+          "n": 40,
+          "pass": 39,
+          "fail": 0,
+          "unknown": 1,
+          "lower": 39,
+          "upper": 40
+        },
+        "hardlink": {
+          "n": 128,
+          "pass": 128,
+          "fail": 0,
+          "unknown": 0,
+          "lower": 128,
+          "upper": 128
+        },
+        "pyi-makespec": {
+          "n": 152,
+          "pass": 151,
+          "fail": 1,
+          "unknown": 0,
+          "lower": 151,
+          "upper": 151
+        },
+        "virtualenv": {
+          "n": 64,
+          "pass": 61,
+          "fail": 0,
+          "unknown": 3,
+          "lower": 61,
+          "upper": 64
+        }
+      },
+      "legacy64": {
+        "n": 64,
+        "pass": 62,
+        "fail": 2,
+        "unknown": 0,
+        "lower": 62,
+        "upper": 62
+      },
+      "newDEV32": {
+        "n": 32,
+        "pass": 31,
+        "fail": 1,
+        "unknown": 0,
+        "lower": 31,
+        "upper": 31
+      },
+      "shiftedDEV64": {
+        "n": 64,
+        "pass": 50,
+        "fail": 8,
+        "unknown": 6,
+        "lower": 50,
+        "upper": 56
+      },
+      "shifted_by_tool": {
+        "dnstwist": {
+          "n": 16,
+          "pass": 16,
+          "fail": 0,
+          "unknown": 0,
+          "lower": 16,
+          "upper": 16
+        },
+        "hardlink": {
+          "n": 16,
+          "pass": 10,
+          "fail": 0,
+          "unknown": 6,
+          "lower": 10,
+          "upper": 16
+        },
+        "pyi-makespec": {
+          "n": 16,
+          "pass": 8,
+          "fail": 8,
+          "unknown": 0,
+          "lower": 8,
+          "upper": 8
+        },
+        "virtualenv": {
+          "n": 16,
+          "pass": 16,
+          "fail": 0,
+          "unknown": 0,
+          "lower": 16,
+          "upper": 16
+        }
+      },
+      "old_base_retained": 20,
+      "old_base_correct": 20,
+      "old_lost_vs_base": [],
+      "old_gained_vs_source": [
+        "sample_4867"
+      ],
+      "old_lost_vs_source": [],
+      "old_strict": 25,
+      "old_native_points": 76.875,
+      "truncated_primary": 0,
+      "truncated_fullTRAIN": 0,
+      "truncated_shifted": 0,
+      "weights_sha256": "edc39e7de72d21b67876181100e19c3ee57b273c9015850148df1b56c2c13e06"
+    }
+  },
+  "auxiliary24_training_fit_only": {
+    "W0": {
+      "source_parser_contract_matches": 4,
+      "n": 24,
+      "per_id": {
+        "kold-intent-69f863e75e733666": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-a160e988614cc259": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-ca398553f4d84340": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-260035f0cceffed2": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-63ff96a717e609be": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-475922088e2455b4": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-9a438948fe6b5137": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-aac485df35da5479": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-dfe057e0acc66bf2": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-8551646b500c3f87": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-35010104d0e6ede0": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-048821ffe1d61990": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-b6e705e31734fe45": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-b1f16a6dfe09a3a6": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-5af83e1a377b931d": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-14201abbdbd46605": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-68bef63ab3d69882": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-6e84524eb7b79e85": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-5be4b05e5d78f8fa": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-19e250cb5f9e1460": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-3900310d8699e5e8": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-a85fbddff80d19cd": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-de4819da4fe7d4de": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-8e4bb9228cb3e329": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        }
+      },
+      "per_tool": {
+        "smb2-quota": 4,
+        "sprayhound": 0
+      }
+    },
+    "R_step96": {
+      "source_parser_contract_matches": 4,
+      "n": 24,
+      "per_id": {
+        "kold-intent-69f863e75e733666": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-a160e988614cc259": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-ca398553f4d84340": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-260035f0cceffed2": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-63ff96a717e609be": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-475922088e2455b4": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-9a438948fe6b5137": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-aac485df35da5479": {
+          "tool": "smb2-quota",
+          "parser_matches": false
+        },
+        "kold-intent-dfe057e0acc66bf2": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-8551646b500c3f87": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-35010104d0e6ede0": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-048821ffe1d61990": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-b6e705e31734fe45": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-b1f16a6dfe09a3a6": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-5af83e1a377b931d": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-14201abbdbd46605": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-68bef63ab3d69882": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-6e84524eb7b79e85": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-5be4b05e5d78f8fa": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-19e250cb5f9e1460": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-3900310d8699e5e8": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-a85fbddff80d19cd": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-de4819da4fe7d4de": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        },
+        "kold-intent-8e4bb9228cb3e329": {
+          "tool": "sprayhound",
+          "parser_matches": false
+        }
+      },
+      "per_tool": {
+        "smb2-quota": 4,
+        "sprayhound": 0
+      }
+    },
+    "RK_step96": {
+      "source_parser_contract_matches": 24,
+      "n": 24,
+      "per_id": {
+        "kold-intent-69f863e75e733666": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-a160e988614cc259": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-ca398553f4d84340": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-260035f0cceffed2": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-63ff96a717e609be": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-475922088e2455b4": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-9a438948fe6b5137": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-aac485df35da5479": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-dfe057e0acc66bf2": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-8551646b500c3f87": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-35010104d0e6ede0": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-048821ffe1d61990": {
+          "tool": "smb2-quota",
+          "parser_matches": true
+        },
+        "kold-intent-b6e705e31734fe45": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-b1f16a6dfe09a3a6": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-5af83e1a377b931d": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-14201abbdbd46605": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-68bef63ab3d69882": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-6e84524eb7b79e85": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-5be4b05e5d78f8fa": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-19e250cb5f9e1460": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-3900310d8699e5e8": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-a85fbddff80d19cd": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-de4819da4fe7d4de": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        },
+        "kold-intent-8e4bb9228cb3e329": {
+          "tool": "sprayhound",
+          "parser_matches": true
+        }
+      },
+      "per_tool": {
+        "smb2-quota": 12,
+        "sprayhound": 12
+      }
+    }
+  },
+  "trusted64_training_fit_only": {
+    "R_step96": {
+      "n": 64,
+      "strict": 64,
+      "native_points": 100.0,
+      "truncated": 0,
+      "per_id": {
+        "ktr7-08f256412b92377b7ce2": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-5b8435c7b445d8f42060": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-b89ba13f404348e0de85": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-24dfb72d0ff62aa622e6": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c04395336d8e8697e074": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-6b99943e5769f081d101": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-923d39ea0680d94def64": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-fab563ee2cbd5c9ab5de": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-fc89bb254ee9233bf88b": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-8ac218df084b7bba9834": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-5f6ea68ae0890bf93577": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-cbf65aec40183057dc72": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-e532aebe16156f5e7337": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-9cc8196fa0694cc40436": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-4c1984220dddf3a46813": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-ef392197b21bd60f09a5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-46eb4eddc3ce24133f96": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-10a19c91361a4f09d715": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-aba343563be490b04ac5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-2d59c259bbe4b40b1f9d": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-5b326412a3763cade671": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-b96cfb9f190249d2e61e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-6a6a263fc51667905d56": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-bb530db11fd0bba8f270": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-30ae9a2690e3ec088b37": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-f91b4c06a8ecef264f4c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c9ba501477d2719da8cd": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-8155604931068de8954e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-ddcc0a628b8f6418d03c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-7279ffb518168c560606": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c51a3022c069cea12202": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c4f9f6fdf7d964886888": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-ab6d9d068dd14b51c5f8": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-d2a01974d63ba6e629dc": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-6859d58f849463eddccd": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-6bb0588293e78b9ce8b6": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-8456cc7c21bb65e6c8f5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-ed16dd5bde0d354e9987": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-2ba494014f1332f91763": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-b24647e545be5c37bc3c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-79c18567b4ab4ffa519e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-47163860424f9b882515": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-c128d7fae26036fa394d": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-bb92bb4a07779c960299": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-98c95b1cd90d3e4c8acd": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-1b7d20f78142643e7d8f": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-b666c9e7f9c08600a70c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-01cffd3f6e2ce8531f7e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-49ccb2188d20953868f8": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-5399bf17c4f561b8109c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-6467ee65fffa1740e6a5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-50c139f3ddaf5fe61621": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-d0b126d34c3ee3fceff0": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-f51e963f6272ac1038f0": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-cc2600cfd6500ee3bb38": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-2c12d487a97f36f0c287": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-f841bc31837fb2ea99b9": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-337cfce7e39c3c852c96": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-0eae2663b20e3e8ad6d5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-bbe1d41f9e50cd9334e3": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-d948044c4aa53f9120dc": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-e991bfd848bfbac94f6d": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-35c1f6f946d98287dc57": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-5edbd4b167d909a78f58": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        }
+      }
+    },
+    "RK_step96": {
+      "n": 64,
+      "strict": 64,
+      "native_points": 100.0,
+      "truncated": 0,
+      "per_id": {
+        "ktr7-08f256412b92377b7ce2": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-5b8435c7b445d8f42060": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-b89ba13f404348e0de85": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-24dfb72d0ff62aa622e6": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c04395336d8e8697e074": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-6b99943e5769f081d101": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-923d39ea0680d94def64": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-fab563ee2cbd5c9ab5de": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-fc89bb254ee9233bf88b": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-8ac218df084b7bba9834": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-5f6ea68ae0890bf93577": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-cbf65aec40183057dc72": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-e532aebe16156f5e7337": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-9cc8196fa0694cc40436": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-4c1984220dddf3a46813": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-ef392197b21bd60f09a5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-46eb4eddc3ce24133f96": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-10a19c91361a4f09d715": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-aba343563be490b04ac5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-2d59c259bbe4b40b1f9d": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-5b326412a3763cade671": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-b96cfb9f190249d2e61e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-6a6a263fc51667905d56": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-bb530db11fd0bba8f270": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-30ae9a2690e3ec088b37": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-f91b4c06a8ecef264f4c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c9ba501477d2719da8cd": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-8155604931068de8954e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-ddcc0a628b8f6418d03c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-7279ffb518168c560606": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c51a3022c069cea12202": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr7-c4f9f6fdf7d964886888": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-ab6d9d068dd14b51c5f8": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-d2a01974d63ba6e629dc": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-6859d58f849463eddccd": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-6bb0588293e78b9ce8b6": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-8456cc7c21bb65e6c8f5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-ed16dd5bde0d354e9987": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-2ba494014f1332f91763": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-b24647e545be5c37bc3c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-79c18567b4ab4ffa519e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-47163860424f9b882515": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-c128d7fae26036fa394d": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-bb92bb4a07779c960299": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-98c95b1cd90d3e4c8acd": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-1b7d20f78142643e7d8f": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-b666c9e7f9c08600a70c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-01cffd3f6e2ce8531f7e": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-49ccb2188d20953868f8": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-5399bf17c4f561b8109c": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-6467ee65fffa1740e6a5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-50c139f3ddaf5fe61621": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-d0b126d34c3ee3fceff0": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-f51e963f6272ac1038f0": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-cc2600cfd6500ee3bb38": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-2c12d487a97f36f0c287": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-f841bc31837fb2ea99b9": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-337cfce7e39c3c852c96": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-0eae2663b20e3e8ad6d5": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-bbe1d41f9e50cd9334e3": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-d948044c4aa53f9120dc": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-e991bfd848bfbac94f6d": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-35c1f6f946d98287dc57": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        },
+        "ktr8-5edbd4b167d909a78f58": {
+          "native": 1.0,
+          "strict": true,
+          "truncated": false
+        }
+      }
+    }
+  },
+  "GPU": "NVIDIA A10",
+  "cross_run_baseline_replication": {
+    "E0": {
+      "previous_label": "E0",
+      "n": 192,
+      "identical_responses": 192,
+      "identical_all_fields": 192
+    },
+    "F22": {
+      "previous_label": "F22",
+      "n": 192,
+      "identical_responses": 192,
+      "identical_all_fields": 192
+    },
+    "W0": {
+      "previous_label": "RK_step192",
+      "n": 192,
+      "identical_responses": 192,
+      "identical_all_fields": 192
+    },
+    "W0_shifted": {
+      "previous_label": "RK_step192",
+      "n": 64,
+      "identical_responses": 64,
+      "identical_all_fields": 64
+    }
+  },
+  "source_is_frozen_v11_CE_endpoint": true,
+  "old_anchor_is_original_R120": true,
+  "source_old_strict": 24,
+  "base_old_strict": 20,
+  "optimizer_steps_each": 96,
+  "auxiliary_exposures_each": 384,
+  "evidence_sha256": {
+    "receipt.json": "4e18a2c3ebed0af75b5914484fd96e3ca87c30539e00aaa325298f3b9ea39ed6",
+    "export-audit.json": "a3b1d40f37ddf4171ad6afc45dccedeaf5c20ee8abf05bb75902ccfff0c9cb23",
+    "behavior-primary-details.json": "807011b3c5fed820597d69b1b268ca72571fee61e429f21974dc24b46e68d4ea",
+    "behavior-finalfit-details.json": "82ccf012edcbcca648cb96715f3f1d52930f8e75c4ae142e930cb829cefbf086",
+    "behavior-shifted-details.json": "2d6ceb8cc699aad9e005a11d9971db737630b0305d48c43456234c8e468a0c48",
+    "native-details.json": "232d753f36bafb3814d058fda8df6229d4822028eee9b9529fd42d190dfcd9f4",
+    "summary.json": "965904725a666b315bd3b04f0a0c513cfc9e8862b07a5ab4a97aae81bb8de3a5",
+    "primary-selection.json": "919dde8d8cae6ef219d253592769ee8dd456f0bfdd943bbf48fe4d103899ef80"
+  },
+  "old_cases_source_parser": {
+    "sample_2933": {
+      "W0": {
+        "parser_accepts": true,
+        "argument_values_match_reference": true,
+        "unsupported_option_names": []
+      },
+      "R_step96": {
+        "parser_accepts": false,
+        "argument_values_match_reference": false,
+        "unsupported_option_names": [
+          "--details",
+          "--layout"
+        ]
+      },
+      "RK_step96": {
+        "parser_accepts": true,
+        "argument_values_match_reference": true,
+        "unsupported_option_names": []
+      }
+    },
+    "sample_4867": {
+      "W0": {
+        "parser_accepts": false,
+        "argument_values_match_reference": false,
+        "unsupported_option_names": [
+          "--bolt-port"
+        ]
+      },
+      "R_step96": {
+        "parser_accepts": false,
+        "argument_values_match_reference": false,
+        "unsupported_option_names": [
+          "--bolt-port"
+        ]
+      },
+      "RK_step96": {
+        "parser_accepts": true,
+        "argument_values_match_reference": true,
+        "unsupported_option_names": []
+      }
+    }
+  },
+  "shifted_change_diagnosis": {
+    "R_step96": {
+      "gained_PASS_vs_source": [],
+      "lost_PASS_vs_source": [
+        "kfr2-295030628e43faa937d6",
+        "kfr2-2c3b7f3d608fc588619a",
+        "kfr2-bed5c064c8ac5aaa13a0",
+        "kfr2-c23619cb41a36852a992"
+      ],
+      "lost_case_option_changes": {
+        "kfr2-295030628e43faa937d6": {
+          "tool": "pyi-makespec",
+          "added_option_names": [],
+          "removed_option_names": [
+            "--noupx"
+          ]
+        },
+        "kfr2-2c3b7f3d608fc588619a": {
+          "tool": "pyi-makespec",
+          "added_option_names": [],
+          "removed_option_names": [
+            "--noupx"
+          ]
+        },
+        "kfr2-bed5c064c8ac5aaa13a0": {
+          "tool": "hardlink",
+          "added_option_names": [
+            "--name"
+          ],
+          "removed_option_names": []
+        },
+        "kfr2-c23619cb41a36852a992": {
+          "tool": "hardlink",
+          "added_option_names": [
+            "--dry-run"
+          ],
+          "removed_option_names": []
+        }
+      },
+      "interpretation": "Observed output option differences only; not a separate counterfactual execution or a unique optimization-mechanism proof."
+    },
+    "RK_step96": {
+      "gained_PASS_vs_source": [],
+      "lost_PASS_vs_source": [
+        "kfr2-295030628e43faa937d6",
+        "kfr2-2c3b7f3d608fc588619a"
+      ],
+      "lost_case_option_changes": {
+        "kfr2-295030628e43faa937d6": {
+          "tool": "pyi-makespec",
+          "added_option_names": [],
+          "removed_option_names": [
+            "--noupx"
+          ]
+        },
+        "kfr2-2c3b7f3d608fc588619a": {
+          "tool": "pyi-makespec",
+          "added_option_names": [],
+          "removed_option_names": [
+            "--noupx"
+          ]
+        }
+      },
+      "interpretation": "Observed output option differences only; not a separate counterfactual execution or a unique optimization-mechanism proof."
+    }
+  },
+  "source_parser_business_logic_executions": 0,
+  "official_TEST_queries": 0,
+  "fresh_confirmation_queries": 0,
+  "promotion": false,
+  "scope": "One seed, adaptive exposed development diagnosis. Auxiliary24 checks TRAIN fit with an argument parser, not runtime behavior or independent generalization."
+}
