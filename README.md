@@ -6,7 +6,7 @@ Research code and traceable experiment summaries for adapting open-weight langua
 
 Two RedSage continuation arms completed 192 updates each. Fixed-prefix and student-prefix distillation passed **352/384** and **338/384** full TRAIN fixtures, respectively; both retained **19/20** originally correct old cases. Neither passed all gates. New PyInstaller mode contrasts remain underfit; hardlink fits TRAIN but is sensitive to directory/context changes. **44→56/64 on the exposed combination development panel is adaptive development gain, not independent generalization.**
 
-A bounded, single-GPU direct-CE microfit diagnosis has been submitted to distinguish basic mode learning from the mixed distillation objective. It uses TRAIN only and has no result yet. [Verified results, figure and next-stage protocol](results/kali-mode-repair-2026-11-16/RESULT_ZH.md).
+The single-GPU direct-CE diagnosis completed 128 updates on 16 balanced TRAIN rows. Final microfit functional PASS was **16/16**, and full TRAIN-panel PASS was **64/64**. These are fitting diagnostics, with no old-retention or independent-test claim. [Verified results, figure and next-stage protocol](results/kali-mode-repair-2026-11-16/RESULT_ZH.md).
 
 ## November 15, 2026 — native Qwen3-8B ABA versus fixed SFT completed
 

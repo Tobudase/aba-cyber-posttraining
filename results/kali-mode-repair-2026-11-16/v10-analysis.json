@@ -1,0 +1,158 @@
+{
+  "status": "FUNCTIONAL_GRADED",
+  "microfit_passed": true,
+  "teacher64_passed": true,
+  "summary": {
+    "teacher": {
+      "all64": {
+        "fixture_pass": 64
+      },
+      "micro16": {
+        "fixture_pass": 16
+      },
+      "other_TRAIN48": {
+        "fixture_pass": 48
+      },
+      "modes": {
+        "onedir,console": {
+          "fixture_pass": 16
+        },
+        "onedir,windowed": {
+          "fixture_pass": 16
+        },
+        "onefile,console": {
+          "fixture_pass": 16
+        },
+        "onefile,windowed": {
+          "fixture_pass": 16
+        }
+      }
+    },
+    "source": {
+      "all64": {
+        "unknown_unreviewed_command": 18,
+        "fixture_fail": 24,
+        "fixture_pass": 22
+      },
+      "micro16": {
+        "unknown_unreviewed_command": 5,
+        "fixture_fail": 6,
+        "fixture_pass": 5
+      },
+      "other_TRAIN48": {
+        "unknown_unreviewed_command": 13,
+        "fixture_fail": 18,
+        "fixture_pass": 17
+      },
+      "modes": {
+        "onedir,console": {
+          "unknown_unreviewed_command": 4,
+          "fixture_fail": 8,
+          "fixture_pass": 4
+        },
+        "onedir,windowed": {
+          "unknown_unreviewed_command": 7,
+          "fixture_pass": 9
+        },
+        "onefile,console": {
+          "fixture_fail": 12,
+          "unknown_unreviewed_command": 3,
+          "fixture_pass": 1
+        },
+        "onefile,windowed": {
+          "unknown_unreviewed_command": 4,
+          "fixture_fail": 4,
+          "fixture_pass": 8
+        }
+      }
+    },
+    "micro32": {
+      "all64": {
+        "fixture_fail": 9,
+        "fixture_pass": 55
+      },
+      "micro16": {
+        "fixture_fail": 2,
+        "fixture_pass": 14
+      },
+      "other_TRAIN48": {
+        "fixture_fail": 7,
+        "fixture_pass": 41
+      },
+      "modes": {
+        "onedir,console": {
+          "fixture_fail": 4,
+          "fixture_pass": 12
+        },
+        "onedir,windowed": {
+          "fixture_pass": 15,
+          "fixture_fail": 1
+        },
+        "onefile,console": {
+          "fixture_fail": 4,
+          "fixture_pass": 12
+        },
+        "onefile,windowed": {
+          "fixture_pass": 16
+        }
+      }
+    },
+    "micro64": {
+      "all64": {
+        "fixture_pass": 64
+      },
+      "micro16": {
+        "fixture_pass": 16
+      },
+      "other_TRAIN48": {
+        "fixture_pass": 48
+      },
+      "modes": {
+        "onedir,console": {
+          "fixture_pass": 16
+        },
+        "onedir,windowed": {
+          "fixture_pass": 16
+        },
+        "onefile,console": {
+          "fixture_pass": 16
+        },
+        "onefile,windowed": {
+          "fixture_pass": 16
+        }
+      }
+    },
+    "micro128": {
+      "all64": {
+        "fixture_pass": 64
+      },
+      "micro16": {
+        "fixture_pass": 16
+      },
+      "other_TRAIN48": {
+        "fixture_pass": 48
+      },
+      "modes": {
+        "onedir,console": {
+          "fixture_pass": 16
+        },
+        "onedir,windowed": {
+          "fixture_pass": 16
+        },
+        "onefile,console": {
+          "fixture_pass": 16
+        },
+        "onefile,windowed": {
+          "fixture_pass": 16
+        }
+      }
+    }
+  },
+  "optimizer_steps": 128,
+  "GPU": "NVIDIA A10",
+  "teacher_unchanged": true,
+  "official_TEST_queries": 0,
+  "fresh_confirmation_queries": 0,
+  "scope": "TRAIN-only; other48 are not an independent test because exposed in previous training. No retention evaluated. No model promotion.",
+  "next": "Equal-budget objective comparison plus retention"
+}
