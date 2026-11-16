@@ -2,6 +2,31 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 15, 2026 — native Qwen3-8B ABA versus fixed SFT completed
+
+Expanded selection DEV to **46 tasks / 26 groups / 9 tools** and strengthened old-capability retention with both historical and paired-base correct-case checks. The actual native ABA framework completed **Setup → Designer → two real GPU candidates → scoring → Finalizer**, selecting learning rates `1e-5` and `3e-5`. Both candidates started from original **Qwen3-8B** and trained **128 updates each**; their combined 256 updates and 31,100 target tokens match the previous fixed SFT's total exposure, rather than its per-candidate steps or end-to-end compute. The fixed adapter was reused and reevaluated, not retrained in this round.
+
+**No adapter passed all frozen DEV gates; original Qwen3-8B remains retained.** Fixed SFT and A2 each retained only **11/14** paired-base correct old cases, below the required 12/14; A1 retained 12/14 but still truncated one old response. All three adapters had one truncation on DEV46+old64. Native ABA selected A1 using penalties among ineligible candidates; that selection is **not evidence that A1 beats fixed SFT**.
+
+After freezing selection, all four model states were evaluated once on **384 internal confirmation tasks / 197 groups**, with a stronger full-style oracle. No retraining or reselection used confirmation:
+
+| Frozen model | Internal confirm384 native points | Strict matches | Confirmed group utility | Frozen DEV eligibility |
+|---|---:|---:|---:|---|
+| Original Qwen3-8B | 55.58 | 0/384 | 0.00 | Pass |
+| Fixed SFT, 256 steps | 88.20 | 209/384 | 54.57 | Fail |
+| ABA A1, 128 steps | 70.04 | 20/384 | 7.36 | Fail |
+| ABA A2, 128 steps | 89.39 | 207/384 | 53.05 | Fail |
+
+A2's slightly higher native partial score did **not** translate into better strict matches or confirmed group utility than fixed SFT. Baseline has 383 unresolved behavior cases and one invalid output; **zero confirmed utility or strict matches does not mean zero semantic ability**. The holdout shares its author/generator and is dominated by PyInstaller and clang-format (308/384); it is **not official KaliBench TEST or an external expert test**. Confirmation truncations were 1/1/2/1 for base/fixed/A1/A2, so retaining the base does not claim error-free outputs.
+
+Completed **2,244 subject-model responses**, including DEV base repeats/reload checks, 1,536 confirmation responses and 32 adaptive DEV decoding diagnostics; native controller turns and CPU checks are separate. Official TEST queries and old final64 requeries stayed at **0**. Sixteen CPU regression tests passed; actual updates, hashes, adapter reloads and delivered native artifacts were verified. One A10 was used sequentially; GPU/CPU Jobs and the native CPU VM are cleaned, with persistent caches and private adapters retained.
+
+![Expanded development scoring and old-capability retention](results/kali-qwen-native-aba-2026-11-15/comparison.png)
+
+![Post-selection internal confirmation](results/kali-qwen-native-aba-2026-11-15/confirmation.png)
+
+[Chinese result, failure analysis and limitations](results/kali-qwen-native-aba-2026-11-15/RESULT_ZH.md) · [Machine-readable results](results/kali-qwen-native-aba-2026-11-15/summary.json) · [Code and reproduction conditions](docs/KALI_QWEN_NATIVE_ABA_2026-11-15_ZH.md) · [Private-generator/public-runtime dependency audit](results/kali-qwen-native-aba-2026-11-15/dependency-audit.json).
+
 ## November 15, 2026 — original-model SFT comparison completed
 
 Completed the repaired-oracle pilot on **one RTX 3090**, with **256 actual updates per original model**, four verified exported checkpoints, and **912 generation tasks**. On exposed four-tool DEV32, final **Qwen3-8B passed 32/32 fixtures** and **RedSage-K passed 29/32 with 3 UNKNOWN**. Old64 native partial scores changed **63.44→67.64 for Qwen** and **75.20→71.73 for RedSage**; previously strict-correct retention was **11/13** and **16/20**, respectively. Neither model is free of per-case regression.

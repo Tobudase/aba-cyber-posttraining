@@ -1,0 +1,63 @@
+{
+  "recorded_at_utc": "2026-11-16T00:43:27.960536+00:00",
+  "purpose": "Resolve four missing direct/indirect public runtime dependencies without publishing protected generators. No model calls,score changes or frozen runtime mutation.",
+  "modules": {
+    "kali_data_release_20261114.py": {
+      "mode": "runtime-only extraction;generation and heldout split allocation withheld",
+      "executed_private_sha256": "fbce8bfeb7867d0493c973377f81dc10a3b21cca2200aaa7f2970a26f22c05ff",
+      "public_sha256": "8976052322490318d220e11eb695c9c6adecfb7e6336b3b92e887b3921f40618",
+      "used_functions_AST_identical": [
+        "execute",
+        "expected_domains",
+        "materialize",
+        "oracle"
+      ],
+      "byte_identical": false
+    },
+    "kali_functional_data_v2_20261115.py": {
+      "mode": "exact executed source copy;no serialized question/label/prediction rows",
+      "executed_private_sha256": "977fc0975999fd4bf96ba1bc8a2a20502649677b17ed43c7fa877996798f882a",
+      "public_sha256": "977fc0975999fd4bf96ba1bc8a2a20502649677b17ed43c7fa877996798f882a",
+      "byte_identical": true
+    },
+    "kali_fit64_behavior_review_v5_20261115.py": {
+      "mode": "exact executed source copy;no serialized question/label/prediction rows",
+      "executed_private_sha256": "bae5dc0fe7e998ea20d79a76ecfbb150ede879e222c0b589e65efee337eab0a6",
+      "public_sha256": "bae5dc0fe7e998ea20d79a76ecfbb150ede879e222c0b589e65efee337eab0a6",
+      "byte_identical": true
+    },
+    "kali_functional_data_20261115.py": {
+      "mode": "runtime-only extraction;protected task builders omitted",
+      "executed_private_sha256": "157630599b5d6055711bbea275e2b5d133be5b2fb5fdd4570e2868dd1cdd9405",
+      "public_sha256": "da61ef5df15e8e7558685fa1978959a90ab0f2e0ad8e9b9479dc5d2df4ea4b37",
+      "used_functions_AST_identical": [
+        "h",
+        "materialize",
+        "oracle",
+        "write"
+      ],
+      "byte_identical": false
+    }
+  },
+  "reproduction_limit": "To validate historical CPU module byte hashes,restore both original private generator modules. Their public runtime-only extractions preserve used function ASTs but are documented distinct source artifacts. Protected fixtures and gold remain private.",
+  "public_dependency_check": {
+    "direct_and_indirect_source_import_and_file_modules_checked": 42,
+    "missing": [],
+    "four_dependency_imports_pass": true,
+    "scope": "Own 32 sources/tests plus four dependency sources;checks literal embedded worker module names as well as Python imports"
+  },
+  "historical_V9_module_byte_matches": [
+    "kali_qwen_supplement_behavior_v9_20261115.py",
+    "kali_qwen_full_style_oracle_20261115.py",
+    "kali_qwen_confirm_admission_20261115.py",
+    "kali_qwen_aux_admission_20261115.py",
+    "kali_hardlink_oracle_v6_20261115.py",
+    "kali_functional_data_v2_20261115.py",
+    "kali_fit64_behavior_review_v5_20261115.py",
+    "kali-behavior-fixture-worker-v2-20261112.py"
+  ],
+  "documented_runtime_only_extractions": [
+    "kali_data_release_20261114.py",
+    "kali_functional_data_20261115.py"
+  ]
+}

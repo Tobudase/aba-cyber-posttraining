@@ -1,0 +1,103 @@
+{
+  "status": "FROZEN_BEFORE_NEW_MODEL_OUTPUTS",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "starting_point": "Original publisher Qwen3-8B for every candidate; no prior SFT adapter initialization",
+  "fixed_comparator": {
+    "source": "Completed256-update fixed SFT pilot",
+    "weights_sha256": "9bce6a5511642b4f45762ed7ee7032aa52d96db233a8c4008e5700fddaf91c93",
+    "new_updates": 0,
+    "not_relabelled_as_ABA_training": true
+  },
+  "DEV": {
+    "rows": 46,
+    "tools": {
+      "pyi-makespec": 8,
+      "virtualenv": 8,
+      "dnstwist": 8,
+      "hardlink": 8,
+      "column": 1,
+      "curl": 1,
+      "look": 1,
+      "ls": 3,
+      "clang-format": 8
+    },
+    "groups": 26,
+    "scope": "Adaptive development, not independent; original32 plus14 operator-selected auxiliary CLI fixtures. Family-macro score reduces repeated-variant dominance.",
+    "selection_used_prior_results": true
+  },
+  "old_retention": {
+    "rows": 64,
+    "historical_correct_count": 13,
+    "metrics": [
+      "native partial mean",
+      "project strict total",
+      "historical13 retained/lost",
+      "fresh E0 strict retained/lost"
+    ],
+    "hard_floor": "Old native >= paired E0-2points, historical correct retained>=11/13, paired E0 correct retained>=ceil(.8*n). No candidate earlyEOS/truncation on110rows.",
+    "not_zero_forgetting_claim": true
+  },
+  "score": {
+    "operational_utility": "Mean over task groups of confirmed fixture PASS fraction, times100. UNKNOWN contributes no confirmed utility and is reported separately, not labelled semantically wrong.",
+    "formula": "utility_gain_vs_E0 + .25*(old_native-E0_old_native) - 10*(historical_correct_lost/13)",
+    "baseline_E0": 0,
+    "ineligible_score": "-100 - historical_lost - truncation_count",
+    "comparison": "Same scoring for E0,fixedSFT and ABA candidates; retain highest eligible among all, ties keep existing fixed/E0. Native selected candidate and host-retained model reported separately."
+  },
+  "training": {
+    "same256_rows_as_fixed_pilot": true,
+    "microbatch": 1,
+    "accumulation": 4,
+    "max_updates_per_candidate": 128,
+    "max_candidates": 2,
+    "max_total_new_updates": 256,
+    "candidate_learning_rates": [
+      1e-05,
+      3e-05,
+      5e-05
+    ],
+    "r": 16,
+    "alpha": 32,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "dropout": 0,
+    "seed": 42,
+    "old_new_data_unchanged": true,
+    "KL": 0,
+    "recipe_choice": "Native ABA Designer/Worker chooses two distinct permitted LR recipes; trusted backend executes fixed trainer. Bounded hyperparameter-search pilot, not autonomous data synthesis.",
+    "fairness": "Total ABA update budget equals prior fixed256; selected candidate has<=128 updates. Same rows/CE exposure overall, two fresh initializations; actual GPU wall/optimizer time measured separately. Not claimed equal end-to-end wall/FLOPs."
+  },
+  "inference": {
+    "same_as_fixed_pilot": true,
+    "enable_thinking": false,
+    "greedy": true,
+    "batch": 4,
+    "max_new_tokens": 1024,
+    "EOS": 151645,
+    "command_ngram": 8
+  },
+  "final_confirmation": {
+    "source": "Previously reserved release confirmation384, if manifest/audits still show no prior model query",
+    "read_only_after_selection_frozen": true,
+    "compare": "OriginalE0,fixedSFT256,native-selected candidate once each unique weights;0 furthertraining/selection using confirmation",
+    "if_prior_queries_found": "Report contamination and do not call it independent; no relabelling as fresh",
+    "official_TEST": false,
+    "quality": "Same authored generator; not source-separated expert gold"
+  },
+  "native_requirements": [
+    "Pinned ABA framework with unchanged native guards/verifiers/reviewers",
+    "Real Setup→Designer→Worker→Score→Finalizer journal",
+    "Native Worker dispatch receipts and actual nonzero updates",
+    "No cached SFT is counted as a fresh native candidate"
+  ],
+  "official_TEST_queries": 0,
+  "previous_final64_requeries": 0,
+  "sources": {
+    "fixed_receipt": "8f0e953c002b6e7f6650db5416a6edafc5c0359df258498e3f84ed28899ca64b",
+    "fixed_encoded": "5cf12c58a638e605fb364a75a068b1a7f6aa1ab721eccd7812c14cc03d2622a9",
+    "release_dev": "411b450256c9e84a852526a742bceca9ff6825f6f57b671765b64ed4b13ff56d"
+  }
+}

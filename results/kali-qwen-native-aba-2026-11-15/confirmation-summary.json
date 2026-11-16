@@ -1,0 +1,233 @@
+{
+  "status": "POST_SELECTION_CONFIRM384_COMPLETE_NO_RESELECTION",
+  "freeze": {
+    "at_utc": "2026-11-15T23:49:18.997930+00:00",
+    "selection_sha256": "000fc64aa4fec1e3d93b6e945a1d04fdda76a00a4840d71d49737866167e2465",
+    "native_selected_candidate": "A1",
+    "comparison_cohort": [
+      "E0",
+      "fixedSFT256",
+      "A1",
+      "A2"
+    ],
+    "scope_amendment_sha256": "fb27956b5668db525a6fc6e683e8f603911c289931e882fdc3d8de1835d6096e",
+    "records_sha256": "85fd4afe785c7bb8529f4170efcb90c79b0418c701b91835eed6fe81ab914085",
+    "fixtures_sha256": "55a33dcd9b09a32274217534334d8f686ff2939a90fcb2b8f24203bf59cd340e",
+    "rows": 384,
+    "groups": 197,
+    "tools": {
+      "dnstwist": 24,
+      "iconv": 2,
+      "look": 1,
+      "ls": 6,
+      "rev": 1,
+      "pyi-makespec": 154,
+      "clang-format": 154,
+      "virtualenv": 42
+    },
+    "source": "Internal authored constraint-combination holdout;same generator/author,not external expert gold or official TEST",
+    "no_retraining_or_reselection": true,
+    "exact_train_ID_and_message_overlap": 0,
+    "score_source": "Pinned native partial+project strict plus V9 behavioral review;UNKNOWN unresolved"
+  },
+  "native": {
+    "qwen_base": {
+      "native_points": 55.57564901478166,
+      "strict": 0,
+      "truncated": 1,
+      "early_EOS": 0,
+      "rows": 384
+    },
+    "fixedSFT256": {
+      "native_points": 88.19981812169311,
+      "strict": 209,
+      "truncated": 1,
+      "early_EOS": 0,
+      "rows": 384
+    },
+    "A1": {
+      "native_points": 70.04437113062068,
+      "strict": 20,
+      "truncated": 2,
+      "early_EOS": 0,
+      "rows": 384
+    },
+    "A2": {
+      "native_points": 89.38574735449735,
+      "strict": 207,
+      "truncated": 1,
+      "early_EOS": 0,
+      "rows": 384
+    }
+  },
+  "behavior": {
+    "qwen_base": {
+      "rows": 384,
+      "groups": 197,
+      "confirmed_utility_points": 0.0,
+      "unresolved_upper_points": 99.74619289340102,
+      "counts": {
+        "unknown_unreviewed_command": 383,
+        "invalid_output": 1
+      },
+      "by_tool": {
+        "clang-format": {
+          "unknown_unreviewed_command": 153,
+          "invalid_output": 1
+        },
+        "dnstwist": {
+          "unknown_unreviewed_command": 24
+        },
+        "iconv": {
+          "unknown_unreviewed_command": 2
+        },
+        "look": {
+          "unknown_unreviewed_command": 1
+        },
+        "ls": {
+          "unknown_unreviewed_command": 6
+        },
+        "pyi-makespec": {
+          "unknown_unreviewed_command": 154
+        },
+        "rev": {
+          "unknown_unreviewed_command": 1
+        },
+        "virtualenv": {
+          "unknown_unreviewed_command": 42
+        }
+      }
+    },
+    "fixedSFT256": {
+      "rows": 384,
+      "groups": 197,
+      "confirmed_utility_points": 54.568527918781726,
+      "unresolved_upper_points": 97.20812182741116,
+      "counts": {
+        "fixture_pass": 214,
+        "unknown_unreviewed_command": 161,
+        "invalid_output": 1,
+        "fixture_fail": 8
+      },
+      "by_tool": {
+        "clang-format": {
+          "unknown_unreviewed_command": 154
+        },
+        "dnstwist": {
+          "fixture_pass": 17,
+          "fixture_fail": 7
+        },
+        "iconv": {
+          "unknown_unreviewed_command": 2
+        },
+        "look": {
+          "invalid_output": 1
+        },
+        "ls": {
+          "fixture_fail": 1,
+          "unknown_unreviewed_command": 5
+        },
+        "pyi-makespec": {
+          "fixture_pass": 154
+        },
+        "rev": {
+          "fixture_pass": 1
+        },
+        "virtualenv": {
+          "fixture_pass": 42
+        }
+      }
+    },
+    "A1": {
+      "rows": 384,
+      "groups": 197,
+      "confirmed_utility_points": 7.3604060913705585,
+      "unresolved_upper_points": 92.63959390862944,
+      "counts": {
+        "unknown_unreviewed_command": 327,
+        "fixture_fail": 26,
+        "invalid_output": 2,
+        "fixture_pass": 29
+      },
+      "by_tool": {
+        "clang-format": {
+          "unknown_unreviewed_command": 154
+        },
+        "dnstwist": {
+          "unknown_unreviewed_command": 22,
+          "invalid_output": 2
+        },
+        "iconv": {
+          "unknown_unreviewed_command": 2
+        },
+        "look": {
+          "unknown_unreviewed_command": 1
+        },
+        "ls": {
+          "fixture_fail": 1,
+          "unknown_unreviewed_command": 5
+        },
+        "pyi-makespec": {
+          "fixture_fail": 25,
+          "unknown_unreviewed_command": 102,
+          "fixture_pass": 27
+        },
+        "rev": {
+          "unknown_unreviewed_command": 1
+        },
+        "virtualenv": {
+          "unknown_unreviewed_command": 40,
+          "fixture_pass": 2
+        }
+      }
+    },
+    "A2": {
+      "rows": 384,
+      "groups": 197,
+      "confirmed_utility_points": 53.045685279187815,
+      "unresolved_upper_points": 96.7005076142132,
+      "counts": {
+        "fixture_pass": 209,
+        "unknown_unreviewed_command": 163,
+        "fixture_fail": 11,
+        "invalid_output": 1
+      },
+      "by_tool": {
+        "clang-format": {
+          "unknown_unreviewed_command": 153,
+          "invalid_output": 1
+        },
+        "dnstwist": {
+          "fixture_pass": 14,
+          "fixture_fail": 10
+        },
+        "iconv": {
+          "unknown_unreviewed_command": 2
+        },
+        "look": {
+          "unknown_unreviewed_command": 1
+        },
+        "ls": {
+          "fixture_fail": 1,
+          "unknown_unreviewed_command": 5
+        },
+        "pyi-makespec": {
+          "fixture_pass": 153,
+          "unknown_unreviewed_command": 1
+        },
+        "rev": {
+          "unknown_unreviewed_command": 1
+        },
+        "virtualenv": {
+          "fixture_pass": 42
+        }
+      }
+    }
+  },
+  "model_queries": 1536,
+  "additional_adaptive_DEV_guard_diagnostic_queries": 32,
+  "new_optimizer_updates": 0,
+  "official_TEST_queries": 0,
+  "selection_unchanged": true,
+  "actual_GPU": "NVIDIA A10"
+}

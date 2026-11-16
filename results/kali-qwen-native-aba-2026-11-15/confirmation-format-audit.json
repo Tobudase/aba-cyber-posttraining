@@ -1,0 +1,18 @@
+{
+  "qwen_base": {
+    "native_format_errors": 1,
+    "exactly_one_closed_output_block": 383
+  },
+  "fixedSFT256": {
+    "native_format_errors": 1,
+    "exactly_one_closed_output_block": 383
+  },
+  "A1": {
+    "native_format_errors": 2,
+    "exactly_one_closed_output_block": 382
+  },
+  "A2": {
+    "native_format_errors": 1,
+    "exactly_one_closed_output_block": 383
+  }
+}

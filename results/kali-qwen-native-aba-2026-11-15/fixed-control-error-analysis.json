@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-15T23:09:33.826065+00:00",
+  "analysis_only_no_metric_change": true,
+  "candidate_commands_executed": 0,
+  "fixed_SFT_paired_old_losses": 3,
+  "findings": [
+    {
+      "tool": "metacam",
+      "observed_change": "Adds --no-xml after the valid --all option",
+      "support": "Current Kali metacam1.2 help lists --all and opt-in --xml,not --no-xml. This is unsupported-option evidence,not mere argument reordering.",
+      "source": "https://www.kali.org/tools/metacam/"
+    },
+    {
+      "tool": "d2j-decrypt-string",
+      "observed_change": "Replaces -t/--arg-types with --type",
+      "support": "Upstream DecryptStringCmd defines short option t,long option arg-types;type is an argument placeholder. Incorrect option naming is supported by source inspection.",
+      "source": "https://github.com/pxb1988/dex2jar/blob/2.x/dex-tools/src/main/java/com/googlecode/dex2jar/tools/DecryptStringCmd.java"
+    },
+    {
+      "tool": "expect",
+      "observed_change": "Replaces quoted -c script with --inline --log_user and unquoted script tokens",
+      "support": "Primary manual defines -c for inline Tcl commands;log_user belongs inside the script,not as --log_user. This alters CLI/script binding.",
+      "source": "https://www.tcl-lang.org/man/expect5.31/expect.1.html"
+    }
+  ],
+  "new_look_failure": {
+    "TRAIN_examples_for_tool": 0,
+    "fixed_generated_tokens": 1024,
+    "observed": "Unclosed output with a long sequence of grep options and varying --line-buffer-* suffixes,then token-budget truncation",
+    "not_inferred": "No isolated attribution to LR,data ratio,epochs or a specific training row. Weights changed under the same paired inference setup;the old serialization mismatch is not established here."
+  },
+  "target_token_mixture": {
+    "new": 5192,
+    "old_replay": 2583
+  },
+  "causal_scope": "The fixed adapter changes outputs under same current inputs/GPU/generation;which training choice caused it requires separate controlled interventions. Frozen search/retention thresholds remain unchanged."
+}

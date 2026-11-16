@@ -1,0 +1,22 @@
+{
+  "recorded_at_utc": "2026-11-16T00:55:34.590538+00:00",
+  "frozen_native_runtime_files_byte_verified": 15,
+  "current_source_test_private_public_exact_copies": 32,
+  "additional_dependencies": 4,
+  "dependency_extraction_exception": "Two runtime-only modules retain identical used function ASTs;see dependency-audit.json.",
+  "subject_model_responses_verified": 2244,
+  "actual_fresh_optimizer_updates_verified": 256,
+  "native_and_confirmation_scores_independently_recomputed": true,
+  "native_selection_digest_unchanged": true,
+  "all_four_guard_diagnostic_replay_batches_identical": true,
+  "official_TEST_queries": 0,
+  "old_final64_requeries": 0,
+  "new_entry_document_relative_links_valid": 11,
+  "candidate_files_secret_scanned": 57,
+  "stored_NRP_secret_literal_absent": true,
+  "private_key_headers_absent": true,
+  "both_figures_visually_reviewed": true,
+  "final_CPU_tests_passed": 16,
+  "owned_compute_cleanup_verified": true,
+  "full_external_benchmark_gain_claimed": false
+}

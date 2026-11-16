@@ -1,0 +1,32 @@
+"""Freeze expanded, host-only DEV and retention policy before new model outputs."""
+import collections,copy,gzip,hashlib,json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+DATA=ROOT/'data/benchkit/kali-qwen-aba-validation-2026-11-15'
+FIXED=ROOT/'data/benchkit/kali-two-model-sft-2026-11-15'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def write(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
+def build():
+ DATA.mkdir(exist_ok=False)
+ v2=ROOT/'data/benchkit/kali-functional-repair-v2-2026-11-15';fx=json.loads((v2/'fixtures.json').read_text());original=[json.loads(s) for s in (ROOT/'data/benchkit/kali-data-release-2026-11-14/release/evaluation/dev-fixtures.jsonl').read_text().splitlines()]
+ extra=[r for r in original if r['tool'] in ['ls','column','look','curl']]
+ clang=collections.defaultdict(list)
+ for r in original:
+  if r['tool']=='clang-format':clang[r['constraint_group']].append(r)
+ groups=sorted(clang,key=lambda g:hashlib.sha256(('expanded-v1:'+g).encode()).hexdigest())[:4]
+ for g in groups:extra.extend(sorted(clang[g],key=lambda r:r['id'])[:2])
+ rows=copy.deepcopy(fx['dev']+extra);assert len(rows)==46 and len({r['id'] for r in rows})==46
+ inputs=json.loads(gzip.decompress((FIXED/'gpu-inputs.json.gz').read_bytes()));train=inputs['encoded']['qwen'];dev_ids={r['id'] for r in rows};assert not dev_ids&{r['id'] for r in train}
+ references=json.loads((FIXED/'references-private.json').read_text());references.update({r['id']:r['native_label'] for r in rows})
+ from benchkit import kali_prompts
+ messages,_=kali_prompts([r['native_label'] for r in rows])
+ evaluation=[{'id':r['id'],'native_messages':messages[r['id']]} for r in rows]+inputs['panels']['old64']
+ assert len(evaluation)==110 and len({r['id'] for r in evaluation})==110
+ fixed_receipt=json.loads((FIXED/'receipt.json').read_text());baseline=json.loads((FIXED/'native-details-private.json').read_text())['qwen_base'];historical_correct=sorted(r['id'] for r in inputs['panels']['old64'] if baseline[r['id']]['strict']);assert len(historical_correct)==13
+ write(DATA/'dev-fixtures-private.json',rows);write(DATA/'references-private.json',{r['id']:references[r['id']] for r in evaluation});write(DATA/'eval-inputs-private.json',evaluation);write(DATA/'train-encoded-private.json',train)
+ meta={'new46':{r['id']:{'tool':r['tool'],'group':r['constraint_group']} for r in rows},'old64_ids':[r['id'] for r in inputs['panels']['old64']],'historical_correct13':historical_correct}
+ write(DATA/'grading-metadata-private.json',meta)
+ protocol={'status':'FROZEN_BEFORE_NEW_MODEL_OUTPUTS','model_id':'Qwen/Qwen3-8B','model_revision':'b968826d9c46dd6066d109eabc6255188de91218','starting_point':'Original publisher Qwen3-8B for every candidate; no prior SFT adapter initialization','fixed_comparator':{'source':'Completed256-update fixed SFT pilot','weights_sha256':fixed_receipt['models']['qwen']['checkpoints']['qwen_step256']['weights_sha256'],'new_updates':0,'not_relabelled_as_ABA_training':True},'DEV':{'rows':46,'tools':dict(collections.Counter(r['tool'] for r in rows)),'groups':len({r['constraint_group'] for r in rows}),'scope':'Adaptive development, not independent; original32 plus14 operator-selected auxiliary CLI fixtures. Family-macro score reduces repeated-variant dominance.','selection_used_prior_results':True},'old_retention':{'rows':64,'historical_correct_count':13,'metrics':['native partial mean','project strict total','historical13 retained/lost','fresh E0 strict retained/lost'],'hard_floor':'Old native >= paired E0-2points, historical correct retained>=11/13, paired E0 correct retained>=ceil(.8*n). No candidate earlyEOS/truncation on110rows.','not_zero_forgetting_claim':True},'score':{'operational_utility':'Mean over task groups of confirmed fixture PASS fraction, times100. UNKNOWN contributes no confirmed utility and is reported separately, not labelled semantically wrong.','formula':'utility_gain_vs_E0 + .25*(old_native-E0_old_native) - 10*(historical_correct_lost/13)','baseline_E0':0,'ineligible_score':'-100 - historical_lost - truncation_count','comparison':'Same scoring for E0,fixedSFT and ABA candidates; retain highest eligible among all, ties keep existing fixed/E0. Native selected candidate and host-retained model reported separately.'},'training':{'same256_rows_as_fixed_pilot':True,'microbatch':1,'accumulation':4,'max_updates_per_candidate':128,'max_candidates':2,'max_total_new_updates':256,'candidate_learning_rates':[1e-5,3e-5,5e-5],'r':16,'alpha':32,'target_modules':['q_proj','v_proj'],'dropout':0,'seed':42,'old_new_data_unchanged':True,'KL':0,'recipe_choice':'Native ABA Designer/Worker chooses two distinct permitted LR recipes; trusted backend executes fixed trainer. Bounded hyperparameter-search pilot, not autonomous data synthesis.','fairness':'Total ABA update budget equals prior fixed256; selected candidate has<=128 updates. Same rows/CE exposure overall, two fresh initializations; actual GPU wall/optimizer time measured separately. Not claimed equal end-to-end wall/FLOPs.'},'inference':{'same_as_fixed_pilot':True,'enable_thinking':False,'greedy':True,'batch':4,'max_new_tokens':1024,'EOS':151645,'command_ngram':8},'final_confirmation':{'source':'Previously reserved release confirmation384, if manifest/audits still show no prior model query','read_only_after_selection_frozen':True,'compare':'OriginalE0,fixedSFT256,native-selected candidate once each unique weights;0 furthertraining/selection using confirmation','if_prior_queries_found':'Report contamination and do not call it independent; no relabelling as fresh','official_TEST':False,'quality':'Same authored generator; not source-separated expert gold'},'native_requirements':['Pinned ABA framework with unchanged native guards/verifiers/reviewers','Real Setup→Designer→Worker→Score→Finalizer journal','Native Worker dispatch receipts and actual nonzero updates','No cached SFT is counted as a fresh native candidate'],'official_TEST_queries':0,'previous_final64_requeries':0,'sources':{name:sha(path) for name,path in {'fixed_receipt':FIXED/'receipt.json','fixed_encoded':FIXED/'gpu-inputs.json.gz','release_dev':ROOT/'data/benchkit/kali-data-release-2026-11-14/release/evaluation/dev-fixtures.jsonl'}.items()}}
+ write(DATA/'protocol.json',protocol)
+ print(json.dumps({'rows':len(rows),'tools':protocol['DEV']['tools'],'groups':protocol['DEV']['groups'],'training_rows':len(train),'new_model_queries':0},indent=2))
+if __name__=='__main__':build()

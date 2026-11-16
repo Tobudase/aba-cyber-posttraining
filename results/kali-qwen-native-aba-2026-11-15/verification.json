@@ -1,0 +1,15 @@
+{
+  "all46_controls_and_counterexamples_passed": true,
+  "predictions_native_rescored": true,
+  "grades_recomputed_identical": true,
+  "real_native_worker_active_at_GPU_dispatch": true,
+  "all256_updates_have_finite_nonzero_gradients": true,
+  "both_adapters_exported_hash_verified": true,
+  "both_reload_response_checks_identical": true,
+  "GPU_payload_trainer_modules_and_pinned_model_identical": true,
+  "common_GPU_product_for_all_new_evaluations_and_ABA_training": true,
+  "prior_fixed_training_was_RTX3090": true,
+  "native_finalizer_exact_fourfile_copy": true,
+  "no_priority_quota_taint_bypass": true,
+  "native_CPU_VM_cleaned": true
+}

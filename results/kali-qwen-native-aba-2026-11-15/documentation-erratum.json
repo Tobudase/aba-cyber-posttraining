@@ -1,0 +1,8 @@
+{
+  "recorded_at_utc": "2026-11-15T22:57:53.839596+00:00",
+  "frozen_task_readme_stale_phrase": "one ordinary RTX3090 at a time",
+  "actual_current_placement": "One compatible Central GPU;paired control selected NVIDIA A10;all candidates pinned to same NVIDIA A10 product",
+  "authority": "Frozen placement hash in training_manifest,per-Job configs and measured CUDA device receipts",
+  "impact": "Resource wording only;data,masked objective,allowed LRs,step budget,inference,scoring and native task bytes remain unchanged. Do not claim this round ran on RTX3090.",
+  "frozen_task_changed": false
+}

@@ -1,0 +1,232 @@
+{
+  "v9": {
+    "status": "POST_SELECTION_SUPPLEMENTAL_REVIEW",
+    "scope": "Same frozen DEV outputs,0 new model queries;full effective style checks;does not change native score/selection",
+    "bounds": {
+      "E0": {
+        "rows": 46,
+        "groups": 26,
+        "confirmed_utility_points": 0.0,
+        "unresolved_upper_points": 96.15384615384616,
+        "counts": {
+          "unknown_unreviewed_command": 45,
+          "fixture_fail": 1
+        },
+        "by_tool": {
+          "clang-format": {
+            "unknown_unreviewed_command": 8
+          },
+          "column": {
+            "fixture_fail": 1
+          },
+          "curl": {
+            "unknown_unreviewed_command": 1
+          },
+          "dnstwist": {
+            "unknown_unreviewed_command": 8
+          },
+          "hardlink": {
+            "unknown_unreviewed_command": 8
+          },
+          "look": {
+            "unknown_unreviewed_command": 1
+          },
+          "ls": {
+            "unknown_unreviewed_command": 3
+          },
+          "pyi-makespec": {
+            "unknown_unreviewed_command": 8
+          },
+          "virtualenv": {
+            "unknown_unreviewed_command": 8
+          }
+        }
+      },
+      "fixedSFT256": {
+        "rows": 46,
+        "groups": 26,
+        "confirmed_utility_points": 61.53846153846154,
+        "unresolved_upper_points": 88.46153846153845,
+        "counts": {
+          "fixture_pass": 32,
+          "fixture_fail": 2,
+          "unknown_unreviewed_command": 11,
+          "invalid_output": 1
+        },
+        "by_tool": {
+          "clang-format": {
+            "unknown_unreviewed_command": 8
+          },
+          "column": {
+            "fixture_fail": 1
+          },
+          "curl": {
+            "unknown_unreviewed_command": 1
+          },
+          "dnstwist": {
+            "fixture_pass": 8
+          },
+          "hardlink": {
+            "fixture_pass": 8
+          },
+          "look": {
+            "invalid_output": 1
+          },
+          "ls": {
+            "unknown_unreviewed_command": 2,
+            "fixture_fail": 1
+          },
+          "pyi-makespec": {
+            "fixture_pass": 8
+          },
+          "virtualenv": {
+            "fixture_pass": 8
+          }
+        }
+      },
+      "A1": {
+        "rows": 46,
+        "groups": 26,
+        "confirmed_utility_points": 3.8461538461538463,
+        "unresolved_upper_points": 92.3076923076923,
+        "counts": {
+          "unknown_unreviewed_command": 41,
+          "fixture_fail": 3,
+          "fixture_pass": 2
+        },
+        "by_tool": {
+          "clang-format": {
+            "unknown_unreviewed_command": 8
+          },
+          "column": {
+            "fixture_fail": 1
+          },
+          "curl": {
+            "unknown_unreviewed_command": 1
+          },
+          "dnstwist": {
+            "unknown_unreviewed_command": 8
+          },
+          "hardlink": {
+            "unknown_unreviewed_command": 8
+          },
+          "look": {
+            "unknown_unreviewed_command": 1
+          },
+          "ls": {
+            "unknown_unreviewed_command": 3
+          },
+          "pyi-makespec": {
+            "unknown_unreviewed_command": 6,
+            "fixture_fail": 2
+          },
+          "virtualenv": {
+            "unknown_unreviewed_command": 6,
+            "fixture_pass": 2
+          }
+        }
+      },
+      "A2": {
+        "rows": 46,
+        "groups": 26,
+        "confirmed_utility_points": 50.0,
+        "unresolved_upper_points": 90.38461538461539,
+        "counts": {
+          "fixture_pass": 26,
+          "unknown_unreviewed_command": 17,
+          "fixture_fail": 3
+        },
+        "by_tool": {
+          "clang-format": {
+            "unknown_unreviewed_command": 8
+          },
+          "column": {
+            "fixture_fail": 1
+          },
+          "curl": {
+            "unknown_unreviewed_command": 1
+          },
+          "dnstwist": {
+            "fixture_pass": 8
+          },
+          "hardlink": {
+            "unknown_unreviewed_command": 5,
+            "fixture_fail": 1,
+            "fixture_pass": 2
+          },
+          "look": {
+            "unknown_unreviewed_command": 1
+          },
+          "ls": {
+            "unknown_unreviewed_command": 2,
+            "fixture_fail": 1
+          },
+          "pyi-makespec": {
+            "fixture_pass": 8
+          },
+          "virtualenv": {
+            "fixture_pass": 8
+          }
+        }
+      }
+    },
+    "selection_sha256": "000fc64aa4fec1e3d93b6e945a1d04fdda76a00a4840d71d49737866167e2465"
+  },
+  "changes": {
+    "E0": {
+      "changed_cases": 0,
+      "transitions": {}
+    },
+    "fixedSFT256": {
+      "changed_cases": 0,
+      "transitions": {}
+    },
+    "A1": {
+      "changed_cases": 0,
+      "transitions": {}
+    },
+    "A2": {
+      "changed_cases": 0,
+      "transitions": {}
+    }
+  },
+  "guard_diagnostic": {
+    "qwen_base": {
+      "guarded_truncated": false,
+      "raw_truncated": false,
+      "guarded_generated_tokens": 17,
+      "raw_generated_tokens": 17,
+      "four_record_guard_replay_identical_to_development": true,
+      "interpretation": "No guarded truncation in this repeated batch;check replay consistency",
+      "scope": "Adaptive diagnostic on the same four previously exposed DEV prompts,guard on/off within samebatch4/GPU;not extra holdout evidence or model selection"
+    },
+    "fixedSFT256": {
+      "guarded_truncated": true,
+      "raw_truncated": true,
+      "guarded_generated_tokens": 1024,
+      "raw_generated_tokens": 1024,
+      "four_record_guard_replay_identical_to_development": true,
+      "interpretation": "Truncation persists without guard;guard is not its sole cause",
+      "scope": "Adaptive diagnostic on the same four previously exposed DEV prompts,guard on/off within samebatch4/GPU;not extra holdout evidence or model selection"
+    },
+    "A1": {
+      "guarded_truncated": false,
+      "raw_truncated": false,
+      "guarded_generated_tokens": 19,
+      "raw_generated_tokens": 19,
+      "four_record_guard_replay_identical_to_development": true,
+      "interpretation": "No guarded truncation in this repeated batch;check replay consistency",
+      "scope": "Adaptive diagnostic on the same four previously exposed DEV prompts,guard on/off within samebatch4/GPU;not extra holdout evidence or model selection"
+    },
+    "A2": {
+      "guarded_truncated": false,
+      "raw_truncated": false,
+      "guarded_generated_tokens": 20,
+      "raw_generated_tokens": 20,
+      "four_record_guard_replay_identical_to_development": true,
+      "interpretation": "No guarded truncation in this repeated batch;check replay consistency",
+      "scope": "Adaptive diagnostic on the same four previously exposed DEV prompts,guard on/off within samebatch4/GPU;not extra holdout evidence or model selection"
+    }
+  },
+  "frozen_selection_sha256_unchanged": "000fc64aa4fec1e3d93b6e945a1d04fdda76a00a4840d71d49737866167e2465"
+}

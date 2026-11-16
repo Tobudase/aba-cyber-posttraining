@@ -1,0 +1,29 @@
+{
+  "scope": "Read-only saved DEV output review;no command execution or extra model query. Guard/raw diagnosis covers look batch only,not the two old64 truncations.",
+  "truncations": {
+    "fixedSFT256": [
+      {
+        "panel": "new46",
+        "reference_tool": "look",
+        "generated_tokens": 1024,
+        "closed_output": false
+      }
+    ],
+    "A1": [
+      {
+        "panel": "old64",
+        "reference_tool": "lsirq",
+        "generated_tokens": 1024,
+        "closed_output": false
+      }
+    ],
+    "A2": [
+      {
+        "panel": "old64",
+        "reference_tool": "naabu",
+        "generated_tokens": 1024,
+        "closed_output": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-11-16T00:17:00.042970+00:00",
+  "suite": "python3 -m unittest discover -s tests -p test_kali_qwen*.py",
+  "tests_passed": 16,
+  "exit_code": 0,
+  "environment": "Public source checkout;CPU only,no network/model/GPU calls",
+  "includes_future_wait_v2_tests": 4,
+  "v2_used_in_frozen_native_run": false,
+  "tests_sha256": {
+    "test_kali_qwen_aba_grade_20261115.py": "cc9c41fd6fa070465c3bbb05118c40bbfe646c3f5f4fa5a357fab0d30dbd5035",
+    "test_kali_qwen_aux_admission_20261115.py": "c99b85b2a6c09a0716a5df6a8402779dd241bb1663992be6227b66a3b49fbebb",
+    "test_kali_qwen_client_deadline_v2_20261115.py": "7cd91ab479ca96f2204496de29f2ca6ef12e028bbd3185f5d2bfb942fccbfb1c",
+    "test_kali_qwen_full_style_oracle_20261115.py": "028ecae6c8a12118832f4ec30c8d4df2f431ebe78ed21b172dacd7cd123ad03a",
+    "test_kali_qwen_gpu_placement_20261115.py": "56597df6705f8e7e32c6167e97f2d83b6f02aa57bd2db7364e210411e025c804"
+  },
+  "final_rerun_recorded_at_utc": "2026-11-16T00:55:34.590538+00:00"
+}

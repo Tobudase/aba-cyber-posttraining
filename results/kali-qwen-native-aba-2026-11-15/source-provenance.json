@@ -1,0 +1,35 @@
+{
+  "at_utc": "2026-11-16T00:13:47.168199+00:00",
+  "framework_commit": "c8bd734cafd5a7cd609efb5f561594bde4107d5b",
+  "native_run_id": "d3606cecd35a4bc69aac42bd321cbf85",
+  "all_frozen_native_runtime_sources_exactly_copied": true,
+  "runtime_source_sha256": {
+    "run_kali_qwen_native_20261115.py": "64d843fa14afcdbe7f82691e2564252b4e70d5a47138b60bd3b792a86f831c69",
+    "build_kali_qwen_native_20261115.py": "468aa58bc4e73a1988758d5471b197981a36007dc68b302f1ae82b65f4f31211",
+    "kali_qwen_native_bridge_20261115.py": "dbc23de67473ef53458931b486e910e31ce765934a69a16a82290ab9939949f4",
+    "kali_qwen_aba_client_20261115.py": "d14930c61844621eb4d56515ec3cbcc7bb73a573aa84d67767c1db2335a9e72f",
+    "kali_qwen_aba_jobs_20261115.py": "c4b6fc13b08b992b486508a60ce67238ee7518e872c027ac2ba1c385c39d8076",
+    "kali_qwen_aba_worker_20261115.py": "e089bc04ebaef9f19d8e41121411b44e23f4c60b417d07276c919aeeaf2b2c8e",
+    "kali_qwen_gpu_placement_20261115.py": "98ccb2d0a7f17a7f243a990db9a7741d5de517e770510b1069ac163d84154fc7",
+    "kali_qwen_native_daemon_20261115.py": "deb849babe86f7270ac1adc280af46c4c19b38056b5266609ac32dc313472dba",
+    "kali_qwen_native_supervisor_20261115.py": "93dd65ee387c44cc6a33449e3ad64b3193a03330b08b17419010baebffa6ee29",
+    "kali8b_native_install.sh": "9dbbe43e67768fae25175e0c2e06fc701ae85e38abf0ac4c56afb030a8dfb23a",
+    "kali8b_native_vm.py": "f29e98f4dfd3cce8274b6e82afb47515125f7d4670d59c4dd20128e40cf707ff",
+    "kali8b_native_journal.py": "50b76cc8f22ba878082f4c6ac9a48243a4087ad77f6bf85de242cf5378c52a36",
+    "kali8b_native_mailbox.py": "ae8a1250337205afbb6afd9dd917eee3b05f69664416b2eacc5925a821d8f0f8",
+    "nrp_anthropic_transport.py": "5c36391a83bce5d2189fbaf415e8eea297ba4489f4022192fb9a4a62cc38492e",
+    "kali8b_prepare_contract.py": "3ef9fadbe306017ba4e2ced3fc294546b19edce6e03ed8d4365797b693c50bb9"
+  },
+  "shared_execution_helper": {
+    "used_functions": [
+      "k",
+      "write",
+      "poll",
+      "cleanup"
+    ],
+    "published_AST_matches_executed": true,
+    "unrelated_submit_cache_parallelism_change_excluded_from_this_publication": true
+  },
+  "private_data_policy": "No raw TRAIN/DEV/confirmation labels,predictions,weights,credentials or raw agent journals redistributed.",
+  "post_selection_dependency_publication": "See dependency-audit.json:8 V9 helper modules byte-match;2 private task-generator modules are runtime-only public extractions with identical used function ASTs. Historical source-hash verification requires original private modules."
+}

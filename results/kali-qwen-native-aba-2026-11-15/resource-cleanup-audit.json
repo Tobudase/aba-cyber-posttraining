@@ -1,0 +1,8 @@
+{
+  "recorded_at_utc": "2026-11-16T00:54:13.168843+00:00",
+  "current_study_active_managed_resources": [],
+  "native_CPU_VM_absent": true,
+  "central_cache_retained": "Bound 8Gi",
+  "other_users_resources_mutated": false,
+  "scope": "Read-only label-filtered current-study Job/Pod/ConfigMap/NetworkPolicy query plus exact VM and cache checks"
+}

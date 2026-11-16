@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-11-15T23:49:16.783361+00:00",
+  "before_any_protected_rows_or_model_outputs": true,
+  "all_training_finished": true,
+  "scope": "Evaluate all four frozen model states:originalQwen,fixedSFT256,A1,A2,once each on384;also32adaptiveDEVguarddiagnosticresponses.",
+  "reason": "Both native candidates fail DEVeligibility;showing the complete frozen cohort separates rawtask gains from penalty-based native ranking. No cherry-picked heldout winner.",
+  "original_confirmation_plan": "Original,fixedSFT,native-selected only",
+  "new_confirmation_model_responses": 1536,
+  "additional_adaptive_DEV_diagnostic_responses": 32,
+  "new_SGD_updates": 0,
+  "native_selection_or_retention_rule_changed": false,
+  "reselection_or_training_after_confirmation": false,
+  "models_frozen": "OriginalandfixedpinnedSHA;A1andA2actualcompleted128-updateadapters,hashesinreceipts"
+}
