@@ -1,5 +1,5 @@
 {
-  "status": "ZERO_UPDATE_FIRST_ATTEMPT_FAILED_RETRY_PENDING",
+  "status": "RETRY_PREFLIGHT_AND_TEACHER_PASSED_COMPARISON_RUNNING",
   "recipe": {
     "purpose": "Objective-only same-budget comparison after v10 fit",
     "R": "conditional command reverseKL + .1 fullCE",
@@ -14,7 +14,7 @@
   "training_inputs_sha256": "df6c6a7437251565114376ce2334d7595cfab9f5504b234a9f0279f706dc9a81",
   "source_weights_sha256": "4559903c1f540f3a92964bbfb8c47d79eabaea5bf6017710e2cbfbfcd101cc0c",
   "training_modules_sha256": {
-    "kali_objective_body_v11_20261116.py": "390b165c03cae1ac8c08c2900a11f69856b8cd00d599bb347e196aac633d6d92",
+    "kali_objective_body_v11_20261116.py": "8632626f1388f32374a3a231c92da04bc7c7e37669c4d8259d50eb3023f3eb88",
     "kali_rollout_distillation_20261115.py": "5fc8f43e2b83152a7c2935669def1e6e0a0593e6908d86eac5d12daef5bfa0c4",
     "kali_stable_objective_20261114.py": "70b2ff672b709ce6e4a0ac31dff5eb0a8ecd58c431c27bfcfef68e5908770b6b",
     "kali_command_ngram_guard_20261115.py": "9be79f31285631ae81846dbae346096a07d10a69a84a0b77afcbd9adfa42a775",
@@ -24,5 +24,14 @@
   "fresh_confirmation_queries": 0,
   "preflight_revision": "Compare same mask path before/after PEFT, assert exact equality for masked and unmasked paths separately; no numerical tolerance relaxation",
   "retry_GPU_seconds_limit": 10489,
-  "phase_GPU_seconds_limit": 10800
+  "phase_GPU_seconds_limit": 10800,
+  "initial_attempt_training_modules_sha256": {
+    "kali_objective_body_v11_20261116.py": "390b165c03cae1ac8c08c2900a11f69856b8cd00d599bb347e196aac633d6d92",
+    "kali_rollout_distillation_20261115.py": "5fc8f43e2b83152a7c2935669def1e6e0a0593e6908d86eac5d12daef5bfa0c4",
+    "kali_stable_objective_20261114.py": "70b2ff672b709ce6e4a0ac31dff5eb0a8ecd58c431c27bfcfef68e5908770b6b",
+    "kali_command_ngram_guard_20261115.py": "9be79f31285631ae81846dbae346096a07d10a69a84a0b77afcbd9adfa42a775",
+    "kali_exact_adapter_loading_20261115.py": "7e5a895bdf274460e77818336b6fa3d8c3849926543c44b712c89156d6bec579"
+  },
+  "teacher_gate_PASS": 32,
+  "comparison_results_available": false
 }
