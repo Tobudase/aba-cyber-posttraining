@@ -15,4 +15,10 @@ for arm in ['R','RK']:
  assert a['per_tool']['hardlink']['lower']==128 and not a['full_TRAIN_at_least360']
 assert sum(v['rows'] for v in modes.values())==64
 assert s['fresh_v9_confirmation_queries']==s['official_TEST_queries']==0
+a=json.loads((p/'v10-analysis.json').read_text());details=json.loads((p/'v10-functional-details.json').read_text())
+from collections import Counter
+for arm,rows in details.items():
+ assert len(rows)==64 and dict(Counter(rows.values()))==a['summary'][arm]['all64']
+assert a['microfit_passed'] and a['teacher64_passed'] and a['optimizer_steps']==128
+assert a['summary']['micro128']['all64']=={'fixture_pass':64}
 print('PASS: saved evidence hashes, denominators, per-tool/mode totals, unresolved bounds. No full model reproduction claim.')
