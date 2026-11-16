@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "balanced_micro_modes": {
+    "(True, True)": 4,
+    "(True, False)": 4,
+    "(False, True)": 4,
+    "(False, False)": 4
+  },
+  "micro_train16_subset_train64": true,
+  "command_CE_causal_shift_and_gradients": true,
+  "inputs_sha256": "fc81d0ed8e314523ddcaf33f244c5d89397f1f7d25cb6673cbb694bfb4e321c0",
+  "scope": "CPU objective/data checks; no capability claim"
+}

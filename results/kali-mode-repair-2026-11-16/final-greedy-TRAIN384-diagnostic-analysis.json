@@ -1,0 +1,212 @@
+{
+  "at_utc": "2026-11-16T06:02:50.883779+00:00",
+  "status": "POST_REJECTION_FINAL_GREEDY_TRAIN_DIAGNOSIS",
+  "GPU": "NVIDIA GeForce RTX 3090",
+  "optimizer_updates": 0,
+  "new_fresh_queries": 0,
+  "candidates": {
+    "R_step192": {
+      "full_TRAIN": {
+        "rows": 384,
+        "counts": {
+          "fixture_pass": 352,
+          "fixture_fail": 30,
+          "unknown_unreviewed_command": 2
+        },
+        "lower": 352,
+        "upper": 354
+      },
+      "full_TRAIN_at_least360": false,
+      "all384_complete": true,
+      "overlap_with_original_primary": {
+        "rows": 48,
+        "responses_equal": 48,
+        "all_fields_equal": 48
+      },
+      "per_tool": {
+        "hardlink": {
+          "rows": 128,
+          "counts": {
+            "fixture_pass": 128
+          },
+          "lower": 128,
+          "upper": 128
+        },
+        "pyi-makespec": {
+          "rows": 152,
+          "counts": {
+            "fixture_pass": 122,
+            "fixture_fail": 30
+          },
+          "lower": 122,
+          "upper": 122
+        },
+        "virtualenv": {
+          "rows": 64,
+          "counts": {
+            "fixture_pass": 63,
+            "unknown_unreviewed_command": 1
+          },
+          "lower": 63,
+          "upper": 64
+        },
+        "dnstwist": {
+          "rows": 40,
+          "counts": {
+            "fixture_pass": 39,
+            "unknown_unreviewed_command": 1
+          },
+          "lower": 39,
+          "upper": 40
+        }
+      },
+      "subgroups": {
+        "new144": {
+          "rows": 144,
+          "counts": {
+            "fixture_fail": 28,
+            "fixture_pass": 116
+          },
+          "PASS_lower": 116,
+          "PASS_upper": 116
+        },
+        "new_hardlink80": {
+          "rows": 80,
+          "counts": {
+            "fixture_pass": 80
+          },
+          "PASS_lower": 80,
+          "PASS_upper": 80
+        },
+        "new_PyI64": {
+          "rows": 64,
+          "counts": {
+            "fixture_fail": 28,
+            "fixture_pass": 36
+          },
+          "PASS_lower": 36,
+          "PASS_upper": 36
+        },
+        "prior240": {
+          "rows": 240,
+          "counts": {
+            "fixture_pass": 236,
+            "fixture_fail": 2,
+            "unknown_unreviewed_command": 2
+          },
+          "PASS_lower": 236,
+          "PASS_upper": 238
+        }
+      }
+    },
+    "RK_step192": {
+      "full_TRAIN": {
+        "rows": 384,
+        "counts": {
+          "fixture_pass": 338,
+          "fixture_fail": 45,
+          "unknown_unreviewed_command": 1
+        },
+        "lower": 338,
+        "upper": 339
+      },
+      "full_TRAIN_at_least360": false,
+      "all384_complete": true,
+      "overlap_with_original_primary": {
+        "rows": 48,
+        "responses_equal": 48,
+        "all_fields_equal": 48
+      },
+      "per_tool": {
+        "hardlink": {
+          "rows": 128,
+          "counts": {
+            "fixture_pass": 128
+          },
+          "lower": 128,
+          "upper": 128
+        },
+        "pyi-makespec": {
+          "rows": 152,
+          "counts": {
+            "fixture_pass": 107,
+            "fixture_fail": 45
+          },
+          "lower": 107,
+          "upper": 107
+        },
+        "virtualenv": {
+          "rows": 64,
+          "counts": {
+            "fixture_pass": 64
+          },
+          "lower": 64,
+          "upper": 64
+        },
+        "dnstwist": {
+          "rows": 40,
+          "counts": {
+            "fixture_pass": 39,
+            "unknown_unreviewed_command": 1
+          },
+          "lower": 39,
+          "upper": 40
+        }
+      },
+      "subgroups": {
+        "new144": {
+          "rows": 144,
+          "counts": {
+            "fixture_fail": 43,
+            "fixture_pass": 101
+          },
+          "PASS_lower": 101,
+          "PASS_upper": 101
+        },
+        "new_hardlink80": {
+          "rows": 80,
+          "counts": {
+            "fixture_pass": 80
+          },
+          "PASS_lower": 80,
+          "PASS_upper": 80
+        },
+        "new_PyI64": {
+          "rows": 64,
+          "counts": {
+            "fixture_fail": 43,
+            "fixture_pass": 21
+          },
+          "PASS_lower": 21,
+          "PASS_upper": 21
+        },
+        "prior240": {
+          "rows": 240,
+          "counts": {
+            "fixture_pass": 237,
+            "fixture_fail": 2,
+            "unknown_unreviewed_command": 1
+          },
+          "PASS_lower": 237,
+          "PASS_upper": 238
+        }
+      }
+    }
+  },
+  "scope": "Full TRAIN fit only, no reopened selection and no holdout success claim. UNKNOWN is not converted to FAIL.",
+  "argument_invariance_summary": {
+    "R_step192": {
+      "matched_shifted_rows": 12,
+      "shifted_nonPASS_with_matched_TRAIN_PASS_and_different_command": 7,
+      "clear_FAIL_subset": 3,
+      "UNKNOWN_subset": 4
+    },
+    "RK_step192": {
+      "matched_shifted_rows": 12,
+      "shifted_nonPASS_with_matched_TRAIN_PASS_and_different_command": 7,
+      "clear_FAIL_subset": 3,
+      "UNKNOWN_subset": 4
+    }
+  },
+  "R_RK_functional_verdict_differences": 18
+}

@@ -1,0 +1,29 @@
+{
+  "new_PyI64_modes": {
+    "onedir,console": {
+      "rows": 16,
+      "R_PASS": 0,
+      "RK_PASS": 0
+    },
+    "onedir,windowed": {
+      "rows": 16,
+      "R_PASS": 4,
+      "RK_PASS": 0
+    },
+    "onefile,console": {
+      "rows": 16,
+      "R_PASS": 16,
+      "RK_PASS": 10
+    },
+    "onefile,windowed": {
+      "rows": 16,
+      "R_PASS": 16,
+      "RK_PASS": 11
+    }
+  },
+  "conditional_teacher_PyI_quality_rows": 8,
+  "conditional_teacher_exact_gold_argv": 8,
+  "student_R_PASS_on_same_teacher_checked8": 5,
+  "student_RK_PASS_on_same_teacher_checked8": 2,
+  "scope": "Teacher output advantage established for these8 TRAIN rows, not a full64 teacher certificate. No new generation or training."
+}

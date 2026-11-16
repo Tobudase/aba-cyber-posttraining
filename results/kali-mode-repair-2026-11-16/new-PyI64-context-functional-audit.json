@@ -1,0 +1,22 @@
+{
+  "0": {
+    "rows": 16,
+    "R_PASS": 12,
+    "RK_PASS": 4
+  },
+  "1": {
+    "rows": 16,
+    "R_PASS": 8,
+    "RK_PASS": 8
+  },
+  "2": {
+    "rows": 16,
+    "R_PASS": 8,
+    "RK_PASS": 8
+  },
+  "3": {
+    "rows": 16,
+    "R_PASS": 8,
+    "RK_PASS": 1
+  }
+}

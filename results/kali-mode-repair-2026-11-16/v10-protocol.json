@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_BEFORE_RUN",
+  "purpose": "Teacher64 completeness and pure command-CE TRAIN microfit",
+  "source": "v8 R120, same as v9",
+  "micro_train_rows": 16,
+  "evaluation_train_rows": 64,
+  "teacher_rows": 64,
+  "steps": 128,
+  "checkpoints": [
+    32,
+    64,
+    128
+  ],
+  "lr": 5e-06,
+  "seed": 42,
+  "microbatch": 1,
+  "accumulation": 4,
+  "loss": "per-example command CE only",
+  "old_loss": false,
+  "acceptance": "micro16 all functional PASS and each mode4/4 at128; failure triggers objective/optimization diagnosis; no promotion",
+  "future_stages": [
+    "same-budget CE versus KL+0.1CE with old loss fixed",
+    "hardlink controlled path invariance",
+    "old intent coverage",
+    "ABA after stable fixed SFT"
+  ],
+  "maximum_GPU_seconds": 3600,
+  "inputs_sha256": "fc81d0ed8e314523ddcaf33f244c5d89397f1f7d25cb6673cbb694bfb4e321c0",
+  "official_TEST_queries": 0,
+  "fresh_confirmation_queries": 0
+}

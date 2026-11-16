@@ -1,0 +1,34 @@
+{
+  "status": "V9_COMPLETED_NO_ACCEPTED_MODEL",
+  "model": "RedSage-K, continued from experimental R120",
+  "R": {
+    "new_DEV": 30,
+    "legacy": 61,
+    "original_correct_retained": 19,
+    "exposed_combination_DEV": 56,
+    "TRAIN_PASS": 352
+  },
+  "RK": {
+    "new_DEV": 30,
+    "legacy": 61,
+    "original_correct_retained": 19,
+    "exposed_combination_DEV": 56,
+    "TRAIN_PASS": 338
+  },
+  "denominators": {
+    "new_DEV": 32,
+    "legacy": 64,
+    "original_correct_retained": 20,
+    "exposed_combination_DEV": 64,
+    "TRAIN_PASS": 384
+  },
+  "scope": "Adaptive internal development and TRAIN diagnostics; not official benchmark improvement. Former confirmation64 is exposed DEV. Qwen study already queried its separate confirm384.",
+  "fresh_v9_confirmation_queries": 0,
+  "official_TEST_queries": 0,
+  "new_v10_status": "TRAIN microfit diagnosis submitted; no result yet",
+  "evidence_sha256": {
+    "final-greedy-TRAIN384-diagnostic-analysis.json": "bac88b436989e1221cac46908556dba8de49ab6529d01dce4c1436fc85f884f8",
+    "PyI-mode-collapse-and-teacher-advantage-audit.json": "ae37eaaf4cc3d681c5e90945c3a04dde5a239c2c8d6e185874540985bb6cfe4a",
+    "new-PyI64-context-functional-audit.json": "a87e35c24430bab2b23c6088febace14efb57ca235c4cf20c233fa6fa2d15f78"
+  }
+}

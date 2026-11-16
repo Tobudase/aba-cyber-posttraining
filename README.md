@@ -2,6 +2,12 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 16, 2026 — full-TRAIN fitting and retention diagnosis
+
+Two RedSage continuation arms completed 192 updates each. Fixed-prefix and student-prefix distillation passed **352/384** and **338/384** full TRAIN fixtures, respectively; both retained **19/20** originally correct old cases. Neither passed all gates. New PyInstaller mode contrasts remain underfit; hardlink fits TRAIN but is sensitive to directory/context changes. **44→56/64 on the exposed combination development panel is adaptive development gain, not independent generalization.**
+
+A bounded, single-GPU direct-CE microfit diagnosis has been submitted to distinguish basic mode learning from the mixed distillation objective. It uses TRAIN only and has no result yet. [Verified results, figure and next-stage protocol](results/kali-mode-repair-2026-11-16/RESULT_ZH.md).
+
 ## November 15, 2026 — native Qwen3-8B ABA versus fixed SFT completed
 
 Expanded selection DEV to **46 tasks / 26 groups / 9 tools** and strengthened old-capability retention with both historical and paired-base correct-case checks. The actual native ABA framework completed **Setup → Designer → two real GPU candidates → scoring → Finalizer**, selecting learning rates `1e-5` and `3e-5`. Both candidates started from original **Qwen3-8B** and trained **128 updates each**; their combined 256 updates and 31,100 target tokens match the previous fixed SFT's total exposure, rather than its per-candidate steps or end-to-end compute. The fixed adapter was reused and reevaluated, not retrained in this round.
