@@ -20,16 +20,24 @@ def run(name):
  d=OUT/name;assert not (d/'artifact.json').exists()
  wait_marker(name,'FUNCTIONAL_INFER R_step96 192/192');print('INTERIM '+json.dumps(interim(name,96)),flush=True);behavior('miw113-kali-cf-early-v13-1116',name,'early')
  wait_marker(name,'READY_FOR_FUNCTIONAL_DECISION');collect(name);r=json.loads((d/'receipt.json').read_text());write(d/'shifted-dev-predictions.json',r['shifted_dev_outputs'])
- write(d/'final-train-diagnostic-predictions.json',r['full_train_predictions']);behavior('miw113-kali-cf-fit-v13-1116',name,'finalfit');behavior('miw113-kali-cf-primary-v13-1116',name,'primary');behavior('miw113-kali-cf-shifted-v13-1116',name,'shifted');decision=choose(name);decision.update(action='stop',candidate=None,reason='Replay-content diagnosis only; no fresh confirmation or promotion');write(d/'primary-selection.json',decision);gate(name,'/scratch/functional-decision.json',decision);print('PRIMARY_DECISION '+json.dumps(decision),flush=True)
+ write(d/'final-train-diagnostic-predictions.json',r['full_train_predictions'])
+ # No confirmation/selection queries are authorized in this diagnostic phase.
+ # Export and release the GPU before the final CPU-only scoring stages.
+ gate(name,'/scratch/functional-decision.json',{'action':'stop','candidate':None,'reason':'Diagnostic training complete; export all candidates before offline CPU scoring.'})
  wait_marker(name,'READY_FOR_FUNCTIONAL_EXPORT',1800);collect_final(name,'robustness')
- if decision['action']=='verify':
-  behavior('miw113-kali-cf-robust-v13-1116',name,'robustness');verification=freeze_confirmation(name);print('VERIFICATION '+json.dumps(verification),flush=True)
-  if verification['all_passed']:
-   wait_marker(name,'READY_FOR_FUNCTIONAL_FINAL_EXPORT',1800);collect_final(name,'confirm');behavior('miw113-kali-cf-fresh-v13-1116',name,'confirm');print('FRESH_CONFIRMATION '+json.dumps(confirmation_decision(name)),flush=True)
- print('EXPORT '+json.dumps(export(name)),flush=True);print('FINISH '+json.dumps(finish(name)),flush=True)
+ print('EXPORT '+json.dumps(export(name)),flush=True)
+ gate(name,'/scratch/functional-export-decision.json',{'action':'finish','reason':'All weights hash-verified; final functional scoring continues without a GPU.'})
  for _ in range(30):
   state=poll(name)
-  if state['status'] in ['SUCCEEDED','FAILED']:cleanup(name);print('PHASE_FINISHED '+json.dumps({'status':state['status'],'accepted':json.loads((d/'export-audit.json').read_text())['accepted']}),flush=True);return
+  if state['status'] in ['SUCCEEDED','FAILED']:
+   cleanup(name)
+   assert state['status']=='SUCCEEDED','Training/export did not finish successfully'
+   break
   time.sleep(5)
- raise RuntimeError('Finish gate sent, no terminal observed')
+ else:raise RuntimeError('Finish gate sent, no terminal observed')
+ print('GPU_RELEASED_BEFORE_FINAL_CPU_SCORING',flush=True)
+ behavior('miw113-kali-cf-fit-v13-1116',name,'finalfit');behavior('miw113-kali-cf-primary-v13-1116',name,'primary');behavior('miw113-kali-cf-shifted-v13-1116',name,'shifted')
+ decision=choose(name);decision.update(action='stop',candidate=None,reason='Replay-content diagnosis only; no fresh confirmation or promotion');write(d/'primary-selection.json',decision)
+ print('PRIMARY_DECISION '+json.dumps(decision),flush=True)
+ print('PHASE_FINISHED '+json.dumps({'status':state['status'],'accepted':False}),flush=True)
 if __name__=='__main__':run(sys.argv[1])

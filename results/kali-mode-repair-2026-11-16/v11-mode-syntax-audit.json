@@ -1,0 +1,45 @@
+{
+  "scope": "Output-only syntax diagnosis on exposed TRAIN; functional verdicts published separately",
+  "results": {
+    "R_step192": {
+      "onedir_console": {
+        "onefile_console": 12,
+        "onefile_windowed": 4
+      },
+      "onedir_windowed": {
+        "onedir_windowed": 4,
+        "onefile_windowed": 12
+      },
+      "onefile_console": {
+        "onefile_console": 16
+      },
+      "onefile_windowed": {
+        "onefile_windowed": 16
+      }
+    },
+    "RK_step192": {
+      "onedir_console": {
+        "onedir_console": 16
+      },
+      "onedir_windowed": {
+        "onedir_windowed": 15,
+        "onefile_windowed": 1
+      },
+      "onefile_console": {
+        "onefile_console": 16
+      },
+      "onefile_windowed": {
+        "onefile_windowed": 16
+      }
+    }
+  },
+  "correction": {
+    "earlier_whole_response_scan_included_explanatory_flags": true,
+    "frozen_functional_evaluator_changed": false,
+    "raw_generation_changed": false,
+    "reported_KL_onedir_mode_correct_before": 0,
+    "verified_output_only_KL_onedir_mode_correct": 4,
+    "n": 32
+  },
+  "source_sha256": "12c40f9a7828b15f5d74537b69a0246fb36e211406d17536ecd94f720c3fdb46"
+}

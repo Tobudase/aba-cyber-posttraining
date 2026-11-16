@@ -3,10 +3,12 @@
   "rows": 24,
   "targets_roundtrip_exact": true,
   "question_tokens_masked": true,
-  "no_fused_output_marker_token": true,
   "all_lengths_below_2048": true,
   "encoded_sha256": "1d42f431bbfe7cbb4652c764c524c7a034bfe5b0bcef3aa6517225a25d426e70",
   "actual_training_updates": 0,
   "runtime_commands_executed": 0,
-  "scope": "Ready for a frozen source-contract replay ablation; no behavioral-gold or observed retention-recovery claim."
+  "scope": "Ready for a frozen source-contract replay ablation; no behavioral-gold or observed retention-recovery claim.",
+  "no_reserved_closing_think_token_in_targets": true,
+  "token_151668_text": "</think>",
+  "wording_correction": "151668 is the closing-think token, not an output-marker token. Encoded training bytes and decoding are unchanged."
 }

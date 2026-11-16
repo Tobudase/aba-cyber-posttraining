@@ -2,6 +2,8 @@
 import collections
 import hashlib
 import json
+import math
+import shlex
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,9 +32,11 @@ def analyze(name='miw113-kali-objective-v11-r2-1116'):
     preds = read('predictions.json')
     finalfit = read('final-train-diagnostic-predictions.json')
     shifted_preds = read('shifted-dev-predictions.json')
-    fixtures = json.loads((ROOT / cfg['data_directory'] / 'fixtures.json').read_text())['train']
+    refs = json.loads((ROOT / cfg['data_directory'] / 'references-private.json').read_text())
+    fixtures = [{'id': i, 'tool': refs[i]['tool_name'], 'argv': shlex.split(refs[i]['ground_truth_command'])} for i in receipt['training_new_ids']]
     assert len(fixtures) == 384
     fx = {r['id']: r for r in fixtures}
+    assert len(fx) == 384
     delta_ids = {r['id'] for r in json.loads((ROOT / 'data/benchkit/kali-counterfactual-v9-2026-11-16/new-delta144.json').read_text())}
     assert len(delta_ids) == 144 and delta_ids <= fx.keys()
     def counts(details, ids):
@@ -44,6 +48,7 @@ def analyze(name='miw113-kali-objective-v11-r2-1116'):
                 'unknown': u, 'counts': dict(c), 'lower': p, 'upper': p + u}
     old_ids = receipt['panels']['old64']
     old_base_correct = {i for i in old_ids if native['E0'][i]['strict']}
+    old_source_correct = {i for i in old_ids if native['W0'][i]['strict']}
     results = {}
     aliases = {'R_step192': 'conditional_KL', 'RK_step192': 'direct_command_CE'}
     for label, objective in aliases.items():
@@ -52,6 +57,7 @@ def analyze(name='miw113-kali-objective-v11-r2-1116'):
         assert [t['step'] for t in receipt['traces'][arm]] == list(range(1, 193))
         expected = 'conditional_KL' if arm == 'R' else 'command_CE'
         assert all(t['objective'] == expected for t in receipt['traces'][arm])
+        assert all(math.isfinite(t['grad_norm_before_clip']) and t['grad_norm_before_clip'] > 0 for t in receipt['traces'][arm])
         assert set(fit[label]) == set(fx)
         assert len(finalfit[label]) == 384 and len(preds[label]) == 192 and len(shifted_preds[label]) == 64
         by_tool = {tool: counts(fit[label], [i for i, r in fx.items() if r['tool'] == tool])
@@ -73,6 +79,10 @@ def analyze(name='miw113-kali-objective-v11-r2-1116'):
             'old_base_correct': len(old_base_correct),
             'old_retained': len(old_base_correct & correct),
             'old_lost_ids': sorted(old_base_correct - correct),
+            'source_old_strict_retained': len(old_source_correct & correct),
+            'source_old_strict_total': len(old_source_correct),
+            'source_old_strict_lost_ids': sorted(old_source_correct - correct),
+            'source_old_strict_gained_ids': sorted(correct - old_source_correct),
             'truncated': sum(r['truncated'] for r in preds[label] + finalfit[label] + shifted_preds[label]),
             'optimizer_steps': 192,
             'training_seconds': sum(t['window_wall_seconds'] for t in receipt['traces'][arm]),

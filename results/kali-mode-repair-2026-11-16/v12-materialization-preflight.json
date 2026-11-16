@@ -1,0 +1,10 @@
+{
+  "status": "PASS_LOCAL_FIXTURE_MATERIALIZATION",
+  "rows": 48,
+  "pairs": 12,
+  "files_each": 10,
+  "normalized_contents_sizes_modes_timestamps_equal": true,
+  "Linux_command_execution": false,
+  "Linux_positive_alternate_negative_controls": "still required by frozen scorer",
+  "probes_sha256": "ef6fd8966e05ce1f999ad054c2735185370d54b7d346f2ea781506e778551377"
+}

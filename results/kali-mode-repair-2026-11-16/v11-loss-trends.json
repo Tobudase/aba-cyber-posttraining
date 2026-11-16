@@ -1,0 +1,45 @@
+{
+  "arms": {
+    "R": {
+      "new_gold_completion_CE_example_mean": {
+        "first16_mean": 0.04697986716678315,
+        "last16_mean": 0.008701174524446742
+      },
+      "trusted_command_CE_example_mean": {
+        "first16_mean": 0.0024676986626417374,
+        "last16_mean": 0.0009026165866217184
+      },
+      "old_source_KL_token_mean": {
+        "first16_mean": 0.0007143098473196299,
+        "last16_mean": 0.006070661435365941
+      },
+      "grad_norm_before_clip": {
+        "first16_mean": 8.14742162823677,
+        "last16_mean": 1.746433600783348
+      },
+      "steps_with_preclip_norm_above_1": 146,
+      "steps": 192
+    },
+    "RK": {
+      "new_gold_completion_CE_example_mean": {
+        "first16_mean": 0.044514917635297024,
+        "last16_mean": 0.0068587308215910525
+      },
+      "trusted_command_CE_example_mean": {
+        "first16_mean": 0.002546741773443273,
+        "last16_mean": 0.0008274993242913808
+      },
+      "old_source_KL_token_mean": {
+        "first16_mean": 0.000802004532716627,
+        "last16_mean": 0.0033949574156190107
+      },
+      "grad_norm_before_clip": {
+        "first16_mean": 2.1404997427016497,
+        "last16_mean": 0.685876252129674
+      },
+      "steps_with_preclip_norm_above_1": 62,
+      "steps": 192
+    }
+  },
+  "scope": "Descriptive logged teacher-forced losses and gradients; different objectives imply different gradient scales. Not an isolated clipping ablation."
+}

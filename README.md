@@ -2,6 +2,14 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 16, 2026 — matched objective comparison verified; follow-ups running
+
+On the same A10, two RedSage R120 continuation arms completed **192 real updates each** with identical data/order. Direct command CE improved full-TRAIN functional PASS from **353/384 (KL) to 379/384**, including **36→63/64** on the balanced PyInstaller mode subset. However, exposed shifted-DEV PASS fell **56→52/64**, and both retained only **19/20** originally correct old cases. **Neither endpoint is promoted; these are adaptive diagnostics, not independent test or ABA gains.** Path-invariance and replay-content studies follow sequentially.
+
+![Matched objective comparison](results/kali-mode-repair-2026-11-16/objective-comparison.png)
+
+[Verified comparison, causal limits and evidence checks](results/kali-mode-repair-2026-11-16/RESULT_ZH.md).
+
 ## November 16, 2026 — full-TRAIN fitting and retention diagnosis
 
 Two RedSage continuation arms completed 192 updates each. Fixed-prefix and student-prefix distillation passed **352/384** and **338/384** full TRAIN fixtures, respectively; both retained **19/20** originally correct old cases. Neither passed all gates. New PyInstaller mode contrasts remain underfit; hardlink fits TRAIN but is sensitive to directory/context changes. **44→56/64 on the exposed combination development panel is adaptive development gain, not independent generalization.**

@@ -1,0 +1,65 @@
+{
+  "status": "CONFIRMED_INVALID_OPTION_SUPPLEMENT",
+  "frozen_primary_scores_unchanged": true,
+  "runtime_parser": {
+    "binary_sha256": "be5f0a1c7d1f7a9692044cc6907734043ab092b59f7b9eac2c3deedebe74515d",
+    "checks": {
+      "--version": {
+        "rc": 0,
+        "stdout": "hardlink from util-linux 2.37.2\n",
+        "stderr": ""
+      },
+      "--help": {
+        "rc": 0,
+        "stdout_sha256": "88367940bc73bc021a70c23f0a470d2a4b2c2c0df13532653362b4a5f01b567d",
+        "contains_respect_name": true
+      },
+      "--name --help": {
+        "rc": 1,
+        "stdout": "",
+        "stderr": "/usr/bin/hardlink: unrecognized option '--name'\nTry 'hardlink --help' for more information.\n"
+      }
+    },
+    "directory_arguments": 0,
+    "scope": "Read-only CLI parser probe inside identical runtime image; no directory operand, no hardlink file operations. Frozen experimental evaluator is unchanged.",
+    "source": "https://github.com/util-linux/util-linux/blob/v2.37.2/misc-utils/hardlink.1"
+  },
+  "candidates": {
+    "R_step192": {
+      "previous_UNKNOWN_now_parser_confirmed_invalid": 5,
+      "ids": [
+        "kfr2-44ec701108a8855a5ef5",
+        "kfr2-73ed0000d13eef28068b",
+        "kfr2-bed5c064c8ac5aaa13a0",
+        "kfr2-c91acddfc7260c33302d",
+        "kfr2-ff02f95a4835ed01c537"
+      ],
+      "response_sha256": {
+        "kfr2-bed5c064c8ac5aaa13a0": "7a74fd6bfdc2679b64c7ffb271a9749287e27cf1973614de3fd52a76d338f8cc",
+        "kfr2-73ed0000d13eef28068b": "b349c533dd2f1bd3241df4a8ef13cf1988cb38bfada041f0a0e3c0515151882b",
+        "kfr2-44ec701108a8855a5ef5": "7ea6e232a3cc2ffdf2126939cb1bc9b5b427ad6cbe2e949f712010a2af319def",
+        "kfr2-ff02f95a4835ed01c537": "7910b9b129989eb131a425e6346d865fc0fc07f3332b689e200c0cf2703f74cb",
+        "kfr2-c91acddfc7260c33302d": "86ee79c0514157374135842a84bac3548ff6380546bd05bb7bb7fe9cb89da694"
+      },
+      "note": "No new generation or task execution; the same binary rejects the exact invalid long option before inspecting operands."
+    },
+    "RK_step192": {
+      "previous_UNKNOWN_now_parser_confirmed_invalid": 5,
+      "ids": [
+        "kfr2-44ec701108a8855a5ef5",
+        "kfr2-73ed0000d13eef28068b",
+        "kfr2-bed5c064c8ac5aaa13a0",
+        "kfr2-c91acddfc7260c33302d",
+        "kfr2-ff02f95a4835ed01c537"
+      ],
+      "response_sha256": {
+        "kfr2-bed5c064c8ac5aaa13a0": "7a74fd6bfdc2679b64c7ffb271a9749287e27cf1973614de3fd52a76d338f8cc",
+        "kfr2-73ed0000d13eef28068b": "b349c533dd2f1bd3241df4a8ef13cf1988cb38bfada041f0a0e3c0515151882b",
+        "kfr2-44ec701108a8855a5ef5": "7ea6e232a3cc2ffdf2126939cb1bc9b5b427ad6cbe2e949f712010a2af319def",
+        "kfr2-ff02f95a4835ed01c537": "7910b9b129989eb131a425e6346d865fc0fc07f3332b689e200c0cf2703f74cb",
+        "kfr2-c91acddfc7260c33302d": "86ee79c0514157374135842a84bac3548ff6380546bd05bb7bb7fe9cb89da694"
+      },
+      "note": "No new generation or task execution; the same binary rejects the exact invalid long option before inspecting operands."
+    }
+  }
+}

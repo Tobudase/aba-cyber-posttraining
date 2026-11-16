@@ -59,6 +59,8 @@ protocol = {
                    'The extra contracts were authored after inspecting development failures; they cannot support an unseen-test claim.',
                    'Source-parser checks do not certify runtime/network behavior; no sprayhound command is executed.',
                    'No fresh confirmation query, official TEST query, or model promotion.'],
+    'budget_matching': 'Same optimizer steps and row exposures, not exact tokens or wall time. Commands differ in length; each auxiliary loss is normalized per example.',
+    'auxiliary_token_exposures': {k: {'full_completion': 16*sum(sum(t!=-100 for t in r['labels']) for r in rows), 'command': 16*sum(sum(t!=-100 for t in r['kl_labels']) for r in rows)} for k, rows in data['auxiliary_replay'].items()},
     'maximum_optimizer_steps_total': 192,
     'maximum_model_responses': 2200,
     'maximum_GPU_seconds': 10800,

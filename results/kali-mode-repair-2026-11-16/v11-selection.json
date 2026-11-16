@@ -1,0 +1,66 @@
+{
+  "config_sha256": "51a65956c0ca38bfd2c7b21111247983257df91dedee12d5b5ab7a9948dac09e",
+  "checks": {
+    "R_step192": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "historical_old_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": true,
+      "TRAINprobe_behavior": true,
+      "exposed_shift64_atleast56_eachtool14": false
+    },
+    "RK_step192": {
+      "all192_complete": true,
+      "old_paired_retention": false,
+      "historical_old_retention": false,
+      "new_native_not_lower": true,
+      "legacy64_behavior": false,
+      "newDEV_behavior": true,
+      "TRAINprobe_behavior": true,
+      "exposed_shift64_atleast56_eachtool14": false
+    }
+  },
+  "statistics": {
+    "R_step192": {
+      "new_dev_pass": 30,
+      "legacy_pass": 61,
+      "fit_pass": 32,
+      "original_TRAIN_fit16_pass": 16,
+      "old_retained": 19,
+      "old_base_correct": 20,
+      "old_lost_ids": [
+        "sample_4867"
+      ],
+      "historical_old_retained": 19,
+      "historical_old_total": 20,
+      "historical_old_lost_ids": [
+        "sample_4867"
+      ],
+      "shifted_dev_PASS": 56
+    },
+    "RK_step192": {
+      "new_dev_pass": 30,
+      "legacy_pass": 62,
+      "fit_pass": 32,
+      "original_TRAIN_fit16_pass": 16,
+      "old_retained": 19,
+      "old_base_correct": 20,
+      "old_lost_ids": [
+        "sample_4867"
+      ],
+      "historical_old_retained": 19,
+      "historical_old_total": 20,
+      "historical_old_lost_ids": [
+        "sample_4867"
+      ],
+      "shifted_dev_PASS": 52
+    }
+  },
+  "eligible": [],
+  "selection_policy": null,
+  "action": "stop",
+  "candidate": null,
+  "reason": "Objective diagnosis only; later hardlink and retention stages precede fresh confirmation"
+}
