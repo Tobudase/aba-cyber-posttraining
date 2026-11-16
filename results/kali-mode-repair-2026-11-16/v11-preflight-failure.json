@@ -1,0 +1,15 @@
+{
+  "status": "FAILED_BEFORE_TRAINING",
+  "optimizer_steps": 0,
+  "model_generation_calls": 0,
+  "base_check_problem": "Compared no attention_mask before PEFT with all-ones attention_mask after PEFT; exact same-path equality not yet tested",
+  "correction": "Repeat masked and unmasked paths separately before/after PEFT; keep both exact-zero assertions; log cross-path difference",
+  "charged_seconds": 311,
+  "resources_cleaned": true,
+  "retry_preflight": {
+    "matched_mask_difference": 0.0,
+    "matched_unmasked_difference": 0.0,
+    "mask_path_difference": 0.0,
+    "conclusion": "Both same-path exact checks passed on retry. Original attempt did not log numerical values; inconsistent masks were a check-design defect, not a proven unique cause of that failure."
+  }
+}

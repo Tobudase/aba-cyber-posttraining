@@ -1,5 +1,5 @@
 {
-  "status": "SUBMITTED_NO_RESULTS",
+  "status": "ZERO_UPDATE_FIRST_ATTEMPT_FAILED_RETRY_PENDING",
   "recipe": {
     "purpose": "Objective-only same-budget comparison after v10 fit",
     "R": "conditional command reverseKL + .1 fullCE",
@@ -21,5 +21,8 @@
     "kali_exact_adapter_loading_20261115.py": "7e5a895bdf274460e77818336b6fa3d8c3849926543c44b712c89156d6bec579"
   },
   "official_TEST_queries": 0,
-  "fresh_confirmation_queries": 0
+  "fresh_confirmation_queries": 0,
+  "preflight_revision": "Compare same mask path before/after PEFT, assert exact equality for masked and unmasked paths separately; no numerical tolerance relaxation",
+  "retry_GPU_seconds_limit": 10489,
+  "phase_GPU_seconds_limit": 10800
 }

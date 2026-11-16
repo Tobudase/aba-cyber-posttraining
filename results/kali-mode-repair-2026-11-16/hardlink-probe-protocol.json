@@ -1,0 +1,15 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "rows": 48,
+  "pairs": 12,
+  "variants_per_pair": 4,
+  "random_variants_matched_prompt_token_length": true,
+  "protocol": {
+    "evaluation": "same source R120; same-card batch1 and batch4, cache on/off, deterministic greedy; compare normalized command and fixture verdict",
+    "purpose": "Distinguish irrelevant-directory sensitivity from batch/cache numerical sensitivity",
+    "training_updates": 0,
+    "fresh_confirm_queries": 0,
+    "official_TEST_queries": 0,
+    "scope": "All parents previously exposed; these are diagnostics, never a new blind test"
+  }
+}
