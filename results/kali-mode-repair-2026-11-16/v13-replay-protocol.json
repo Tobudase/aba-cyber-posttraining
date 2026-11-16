@@ -1,0 +1,35 @@
+{
+  "status": "PREPARED_NOT_TRAINED",
+  "hypothesis": "Source-parser-verified missing old intents recover old strict correctness more effectively than additional replay of existing trusted intents.",
+  "source": "The direct-CE endpoint of v11, fixed before reading its comparison results; no validation-based source selection.",
+  "old_KL_anchor": "Original R120, unchanged from v11.",
+  "arms": {
+    "R": "24 existing trusted TRAIN rows, proportionally sampled 12/6/6 across existing tools",
+    "RK": "24 source-parser-verified missing-intent TRAIN rows, 12 smb2-quota and 12 sprayhound"
+  },
+  "shared": {
+    "optimizer": "fresh AdamW",
+    "learning_rate": 5e-06,
+    "updates_each": 96,
+    "new_TRAIN_rows_per_update": 4,
+    "trusted_replay_rows_per_update": 4,
+    "generic_old_KL_rows_per_update": 2,
+    "auxiliary_replay_rows_per_update": 4,
+    "auxiliary_weight": 0.5,
+    "auxiliary_loss": "example-mean command CE + 0.1 full-completion CE",
+    "auxiliary_exposures_each": 384,
+    "seed": 42
+  },
+  "data_sha256": "1f01ef92b8aa60d64aad74f2dc04ed25dd2c3162105806cb29e3f9546201e1c8",
+  "encoded_contracts_sha256": "1d42f431bbfe7cbb4652c764c524c7a034bfe5b0bcef3aa6517225a25d426e70",
+  "evaluation": "Same frozen native scoring, legacy64/newDEV32/shiftedDEV64 functional checks, fullTRAIN384, and paired old64 retention. Auxiliary48 is training-fit diagnosis only.",
+  "limitations": [
+    "One continuation seed; replay content and its tool mix change together.",
+    "The extra contracts were authored after inspecting development failures; they cannot support an unseen-test claim.",
+    "Source-parser checks do not certify runtime/network behavior; no sprayhound command is executed.",
+    "No fresh confirmation query, official TEST query, or model promotion."
+  ],
+  "maximum_optimizer_steps_total": 192,
+  "maximum_model_responses": 2200,
+  "maximum_GPU_seconds": 10800
+}

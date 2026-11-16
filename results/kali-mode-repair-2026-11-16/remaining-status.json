@@ -8,7 +8,7 @@
   "running": "v11 fixed-data fixed-budget conditional-KL versus direct-command-CE",
   "sequential_next": "v12 read-only source-R120 path diagnosis after v11 export/cleanup",
   "not_started": [
-    "old-intent replay training comparison",
+    "v13 matched-budget old-intent replay training comparison (prepared; sequential after v12)",
     "new ABA experiment after stable baseline gates"
   ],
   "no_new_independent_test_claim": true

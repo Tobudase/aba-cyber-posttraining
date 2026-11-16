@@ -1,0 +1,30 @@
+{
+  "status": "LOCAL_DATA_AND_SOURCE_PREFLIGHT_PASS",
+  "arms": {
+    "R": {
+      "unique_rows": 24,
+      "exposures_per_row": 16,
+      "total_exposures": 384,
+      "tool_counts": {
+        "setterm": 12,
+        "hashid": 6,
+        "appid_detector_builder.sh": 6
+      }
+    },
+    "RK": {
+      "unique_rows": 24,
+      "exposures_per_row": 16,
+      "total_exposures": 384,
+      "tool_counts": {
+        "smb2-quota": 12,
+        "sprayhound": 12
+      }
+    }
+  },
+  "new_data_bytes_unchanged": true,
+  "same_common_rows_per_arm": true,
+  "actual_GPU_updates": 0,
+  "gpu_behavior_not_yet_verified": true,
+  "new_model_responses_planned": 2192,
+  "budget": 2200
+}
