@@ -2,14 +2,18 @@
   "v11-native-details.json": "1dc2fb38e9506e3b40c5a6218e094ebc781025861807408232e47406f20830a2",
   "v11-protocol.json": "b11273a4bbd8f1b8dd99e8e486a340ef369ac393f9f5efb64fdac22448c2613a",
   "v13-replay-protocol.json": "9a836106b08c93af4b962cc58c4f9d7a6a999c1b4589ac176c325d2fb8033c8b",
+  "v12-interpretation-summary.json": "987916e0aa10d7cce62b001b4b488d0b29bd2b489f5f39f747360b0f8dd08fcf",
   "v11-selection.json": "2073f5bab9d4b8a3ab8f3309e085de662ee43f46e452a105bd1c26fbb6703aac",
   "v11-analysis.json": "8b985f7d279d6df44b952ba5fc0d24dea84f0f9b463ea425512c618a73ab0c07",
   "v11-preflight-failure.json": "21d9329738e4e26b321aa253fbff40a28a0c173193453618a5b5a389d5ae12be",
   "v11-panels.json": "c713261927415383944edfe7e62cf3cc9e1b4353b36f3b3bc156687af8ed80a3",
   "v13-replay-preflight.json": "d02044ca48a9ae3c2a0c2b05edc04ac99dce38f78a57a3a6b4e6e84cff48eb55",
+  "v12-analysis.json": "ace4f140a29e92fe3d419d4e27a66b0dcc8819354f889aaf3ce7ef30a1e64d63",
   "v11-training-audit.json": "6e8e92b8e7502cc0f3ff8e8d677735d2a3331077e65fa2a52d270fb6806d4e34",
   "v11-loss-trends.json": "6a762ba6a127fad1af56fda865e7f890d771e72d2b4fe43126fb4be0d4ee0793",
   "v11-functional-details.json": "c00a3ea834394b007927aa73e8ef52e484cf23a19d54d493db976e8d6cd7525c",
+  "v12-functional-details.json": "63ef5542d3f2af0963afae7ee2fb90e1796969bd1e0140a8c0e3485b31648a8b",
+  "v12-source-exposure-audit.json": "5a9629fa5dccfd6c1035d532d00022d96e701673eef9bae6c1ca7441f8da1ca1",
   "v12-materialization-preflight.json": "33c5cb4c4fdf4cec7ffa83a986bdf743489d2be14bbc4de36363d3e9c9964139",
   "v11-mode-syntax-audit.json": "d14a9756223cdba2f7d2016741ff5a4b0315a18e7e2705ab1fd84db804ed6e67"
 }

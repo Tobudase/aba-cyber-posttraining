@@ -1,0 +1,583 @@
+{
+  "status": "COMPLETE_READ_ONLY_DIAGNOSIS",
+  "arms": {
+    "batch1_cacheFalse": {
+      "counts": {
+        "unknown_unreviewed_command": 22,
+        "fixture_pass": 23,
+        "fixture_fail": 3
+      },
+      "truncated": 0,
+      "pairs": [
+        {
+          "pair": 0,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 1,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 2,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 3,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 4,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 5,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 6,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 7,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 8,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 9,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 10,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_fail"
+          }
+        },
+        {
+          "pair": 11,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        }
+      ]
+    },
+    "batch1_cacheTrue": {
+      "counts": {
+        "unknown_unreviewed_command": 22,
+        "fixture_pass": 23,
+        "fixture_fail": 3
+      },
+      "truncated": 0,
+      "pairs": [
+        {
+          "pair": 0,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 1,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 2,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 3,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 4,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 5,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 6,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 7,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 8,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 9,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 10,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 11,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_fail"
+          }
+        }
+      ]
+    },
+    "batch4_cacheFalse": {
+      "counts": {
+        "unknown_unreviewed_command": 22,
+        "fixture_pass": 22,
+        "fixture_fail": 4
+      },
+      "truncated": 0,
+      "pairs": [
+        {
+          "pair": 0,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 1,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 2,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 3,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 4,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 5,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 6,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 7,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 8,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 9,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 10,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_fail"
+          }
+        },
+        {
+          "pair": 11,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_fail"
+          }
+        }
+      ]
+    },
+    "batch4_cacheTrue": {
+      "counts": {
+        "unknown_unreviewed_command": 22,
+        "fixture_pass": 23,
+        "fixture_fail": 3
+      },
+      "truncated": 0,
+      "pairs": [
+        {
+          "pair": 0,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 1,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 2,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 3,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 4,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 5,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 6,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 7,
+          "normalized_commands_identical": true,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "unknown_unreviewed_command",
+            "matched_length_0": "unknown_unreviewed_command",
+            "matched_length_1": "unknown_unreviewed_command"
+          }
+        },
+        {
+          "pair": 8,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 9,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "fixture_fail",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 10,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_pass"
+          }
+        },
+        {
+          "pair": 11,
+          "normalized_commands_identical": false,
+          "all_commands_parseable": true,
+          "verdicts": {
+            "observed_DEV": "unknown_unreviewed_command",
+            "matched_TRAIN_root": "fixture_pass",
+            "matched_length_0": "fixture_pass",
+            "matched_length_1": "fixture_fail"
+          }
+        }
+      ]
+    }
+  },
+  "responses_equal_to_batch1_cacheTrue": {
+    "batch1_cacheFalse": 42,
+    "batch1_cacheTrue": 48,
+    "batch4_cacheFalse": 44,
+    "batch4_cacheTrue": 45
+  },
+  "official_TEST_queries": 0,
+  "fresh_confirmation_queries": 0,
+  "optimizer_steps": 0,
+  "scope": "Previously exposed root substitutions; no new blind test or training improvement claim"
+}

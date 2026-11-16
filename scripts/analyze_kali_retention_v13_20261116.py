@@ -70,6 +70,7 @@ def analyze(name='miw113-kali-retention-v13-1116'):
             checked[pred['id']] = result
         assert set(checked) == set(expected)
         auxiliary[label] = {'source_parser_contract_matches': sum(checked.values()), 'n': 24,
+                            'per_id': {i: {'tool': expected[i]['tool'], 'parser_matches': verdict} for i, verdict in checked.items()},
                             'per_tool': {t: sum(checked[i] for i, x in expected.items() if x['tool'] == t)
                                          for t in ['smb2-quota', 'sprayhound']}}
     results = {}

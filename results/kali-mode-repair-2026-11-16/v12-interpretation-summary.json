@@ -1,0 +1,113 @@
+{
+  "GPU": "NVIDIA A10",
+  "seconds": 962.1075654170127,
+  "arms": {
+    "batch1_cacheFalse": {
+      "by_root": {
+        "observed_DEV": {
+          "unknown_unreviewed_command": 10,
+          "fixture_fail": 2
+        },
+        "matched_TRAIN_root": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_0": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_1": {
+          "fixture_pass": 7,
+          "unknown_unreviewed_command": 4,
+          "fixture_fail": 1
+        }
+      },
+      "invariant_pairs": 4,
+      "functional_verdicts_equal_to_batch1_cacheTrue": 46,
+      "truncated": 0
+    },
+    "batch1_cacheTrue": {
+      "by_root": {
+        "observed_DEV": {
+          "unknown_unreviewed_command": 10,
+          "fixture_fail": 2
+        },
+        "matched_TRAIN_root": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_0": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_1": {
+          "fixture_pass": 7,
+          "unknown_unreviewed_command": 4,
+          "fixture_fail": 1
+        }
+      },
+      "invariant_pairs": 1,
+      "functional_verdicts_equal_to_batch1_cacheTrue": 48,
+      "truncated": 0
+    },
+    "batch4_cacheFalse": {
+      "by_root": {
+        "observed_DEV": {
+          "unknown_unreviewed_command": 10,
+          "fixture_fail": 2
+        },
+        "matched_TRAIN_root": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_0": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_1": {
+          "fixture_pass": 6,
+          "unknown_unreviewed_command": 4,
+          "fixture_fail": 2
+        }
+      },
+      "invariant_pairs": 4,
+      "functional_verdicts_equal_to_batch1_cacheTrue": 47,
+      "truncated": 0
+    },
+    "batch4_cacheTrue": {
+      "by_root": {
+        "observed_DEV": {
+          "unknown_unreviewed_command": 10,
+          "fixture_fail": 2
+        },
+        "matched_TRAIN_root": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_0": {
+          "fixture_pass": 8,
+          "unknown_unreviewed_command": 4
+        },
+        "matched_length_1": {
+          "fixture_pass": 7,
+          "unknown_unreviewed_command": 4,
+          "fixture_fail": 1
+        }
+      },
+      "invariant_pairs": 1,
+      "functional_verdicts_equal_to_batch1_cacheTrue": 48,
+      "truncated": 0
+    }
+  },
+  "responses_equal_to_batch1_cacheTrue": {
+    "batch1_cacheFalse": 42,
+    "batch1_cacheTrue": 48,
+    "batch4_cacheFalse": 44,
+    "batch4_cacheTrue": 45
+  },
+  "evidence_sha256": {
+    "result.json": "c87cb5d605547016d872e6cd775aec8d89b19c9b5e19cb52369fa2bf312e2a60",
+    "analysis.json": "fbcbee8c5ce224b5de0a42cf56c5db3f8e44b16791772b5f64710f87f42abaae",
+    "behavior-finalfit-details.json": "63ef5542d3f2af0963afae7ee2fb90e1796969bd1e0140a8c0e3485b31648a8b"
+  }
+}

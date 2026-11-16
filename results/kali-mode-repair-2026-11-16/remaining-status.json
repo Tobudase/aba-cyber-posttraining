@@ -4,12 +4,12 @@
     "v10 direct CE microfit and Linux functional scoring",
     "v12 path probes prepared with matched token-length controls",
     "24 old-intent source-parser and target-encoding checks",
-    "v11 paired objective experiment: both192 real updates, all functional scores, exports verified, GPU cleaned"
+    "v11 paired objective experiment: both192 real updates, all functional scores, exports verified, GPU cleaned",
+    "v12 192 root/batch/cache diagnostic generations and Linux scoring; GPU/CPU cleaned"
   ],
-  "running": "v12 read-only source-R120 path diagnosis",
-  "sequential_next": "v13 matched-step replay-content comparison after v12 scoring/cleanup",
+  "running": "v13 matched-step replay-content comparison, submitted; results pending",
+  "sequential_next": "Collect both96-step arms, functional/native scores, exports; reconcile and publish",
   "not_started": [
-    "v13 replay-content comparison (prepared, not yet submitted)",
     "new native ABA after stable-baseline decision"
   ],
   "no_new_independent_test_claim": true

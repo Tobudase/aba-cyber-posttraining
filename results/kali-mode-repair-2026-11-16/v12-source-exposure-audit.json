@@ -1,0 +1,13 @@
+{
+  "source_checkpoint": "v8 R120",
+  "source_new_TRAIN_rows": 240,
+  "diagnostic_pairs": 12,
+  "distinct_matched_v9_TRAIN_ids": 6,
+  "matched_TRAIN_ids_in_source_R120_training": 0,
+  "unique_root_normalized_messages": 6,
+  "source_receipt_sha256": "1c129e3a78294b475178ed978d508b488b561fbc4f5f8ad25d9e85ac4665c4d4",
+  "scope": "Matched TRAIN means later v9 TRAIN, not necessarily R120 training. This probes pre-existing input sensitivity; it cannot establish that v9/v11 training caused it. Selected pairs share templates and are not independent observations.",
+  "matched_root_probe_instances": 12,
+  "exact_native_prompt_matches_in_R120_new_TRAIN": 0,
+  "root_string_instances_seen_in_R120_new_TRAIN": 0
+}

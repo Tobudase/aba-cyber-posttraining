@@ -38,7 +38,7 @@ if (ROOT/'v11-analysis.json').exists():
     for j, r in enumerate(rows):
         ax.bar([i+(j-.5)*.36 for i in range(4)], [r['new_delta_PyI64_modes'][m]['pass'] for m in modes],
                width=.36, color=COLORS[j], label=labels[j])
-    ax.set_xticks(range(4), [m.replace('_','\n') for m in modes]);ax.set_ylim(0,21)
+    ax.set_xticks(range(4), [m.replace('_','\n') for m in modes]);ax.set_ylim(0,21);ax.set_yticks([0,4,8,12,16])
     ax.set_ylabel('Functional PASS / 16');ax.set_title('Balanced new PyInstaller modes',loc='left',fontweight='bold');ax.legend(fontsize=8)
     fig.suptitle('Same-source, same-order, 192-step objective comparison',fontweight='bold',fontsize=15)
     fig.text(.5,.015,'One seed; continued RedSage R120. TRAIN and exposed DEV only. UNKNOWN is not counted as PASS. No independent-test gain claim.',ha='center',fontsize=9)
@@ -48,7 +48,7 @@ if (ROOT/'v12-analysis.json').exists():
     a = json.loads((ROOT/'v12-analysis.json').read_text())
     fig, axes = plt.subplots(2,2,figsize=(11,7))
     names = ['observed_DEV','matched_TRAIN_root','matched_length_0','matched_length_1']
-    labels = ['DEV root','TRAIN root','Matched-length A','Matched-length B']
+    labels = ['DEV root','v9 TRAIN root','Matched-length A','Matched-length B']
     for ax, (arm, r) in zip(axes.flat, a['arms'].items()):
         p = [sum(x['verdicts'][n]=='fixture_pass' for x in r['pairs']) for n in names]
         u = [sum(x['verdicts'][n].startswith('unknown') for x in r['pairs']) for n in names]
@@ -62,7 +62,7 @@ if (ROOT/'v12-analysis.json').exists():
     handles,labels_legend = axes[0,0].get_legend_handles_labels()
     fig.legend(handles,labels_legend,loc='lower center',ncol=3,bbox_to_anchor=(.5,.025))
     fig.suptitle('Directory substitution diagnosis: source R120, no training',fontweight='bold')
-    fig.text(.5,.008,'Selected previously exposed cases; this is a sensitivity diagnostic, not a benchmark score.',ha='center',fontsize=9)
+    fig.text(.5,.008,'12 selected pairs share 6 templates; paired v9 TRAIN rows were not in R120 TRAIN. Sensitivity diagnosis, not a benchmark score.',ha='center',fontsize=9)
     fig.tight_layout(rect=[0,.09,1,.95]);fig.savefig(ROOT/'path-invariance.png',dpi=180);plt.close(fig)
 
 if (ROOT/'v13-analysis.json').exists():

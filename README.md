@@ -4,7 +4,7 @@ Research code and traceable experiment summaries for adapting open-weight langua
 
 ## November 16, 2026 — matched objective comparison verified; follow-ups running
 
-On the same A10, two RedSage R120 continuation arms completed **192 real updates each** with identical data/order. Direct command CE improved full-TRAIN functional PASS from **353/384 (KL) to 379/384**, including **36→63/64** on the balanced PyInstaller mode subset. However, exposed shifted-DEV PASS fell **56→52/64**, and both retained only **19/20** originally correct old cases. **Neither endpoint is promoted; these are adaptive diagnostics, not independent test or ABA gains.** Path-invariance and replay-content studies follow sequentially.
+On the same A10, two RedSage R120 continuation arms completed **192 real updates each** with identical data/order. Direct command CE improved full-TRAIN functional PASS from **353/384 (KL) to 379/384**, including **36→63/64** on the balanced PyInstaller mode subset. However, exposed shifted-DEV PASS fell **56→52/64**, and both retained only **19/20** originally correct old cases. **Neither endpoint is promoted; these are adaptive diagnostics, not independent test or ABA gains.** The read-only path study is also complete: across all four batch/cache settings, changing only root-directory text changed confirmed PASS from **0/12 to 8/12** on selected, shared-template cases. This sensitivity already exists at R120; it is not proof that later training caused it. The matched replay-content study is running.
 
 ![Matched objective comparison](results/kali-mode-repair-2026-11-16/objective-comparison.png)
 

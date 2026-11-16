@@ -52,6 +52,12 @@ for version in ['v11', 'v13']:
         assert value['old_retained' if version == 'v11' else 'old_base_retained'] == len(old_base & got)
         assert value['old_base_correct'] == len(old_base)
     assert a['official_TEST_queries'] == a['fresh_confirmation_queries'] == 0 and not a['promotion']
+    if version == 'v13':
+        for label, value in a['auxiliary24_training_fit_only'].items():
+            assert len(value['per_id']) == value['n'] == 24
+            assert sum(x['parser_matches'] for x in value['per_id'].values()) == value['source_parser_contract_matches']
+            for tool, n in value['per_tool'].items():
+                assert sum(x['parser_matches'] for x in value['per_id'].values() if x['tool'] == tool) == n
     verified.append(version)
 if (ROOT/'v12-analysis.json').exists():
     a = read('v12-analysis.json')
@@ -60,6 +66,15 @@ if (ROOT/'v12-analysis.json').exists():
     for arm, rows in details.items():
         assert len(rows) == 48 and dict(collections.Counter(rows.values())) == a['arms'][arm]['counts']
         assert len(a['arms'][arm]['pairs']) == 12
+        for pair in a['arms'][arm]['pairs']:
+            for variant, verdict in pair['verdicts'].items():
+                assert rows['kpath12-'+str(pair['pair'])+'-'+variant] == verdict
+    if (ROOT/'v12-interpretation-summary.json').exists():
+        extra = read('v12-interpretation-summary.json')
+        for arm, value in extra['arms'].items():
+            for variant, counts in value['by_root'].items():
+                assert dict(collections.Counter(row['verdicts'][variant] for row in a['arms'][arm]['pairs'])) == counts
+            assert value['functional_verdicts_equal_to_batch1_cacheTrue'] == sum(v == details['batch1_cacheTrue'][i] for i, v in details[arm].items())
     verified.append('v12')
 assert verified
 print('PASS: public hashes, row-level verdict totals, paired old retention, and real update counts:', ', '.join(verified))
