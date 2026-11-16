@@ -1,0 +1,15 @@
+{
+  "status": "REMAINING_EXPERIMENTS_IN_PROGRESS",
+  "completed": [
+    "v10 direct CE microfit and Linux functional scoring",
+    "v12 path probes prepared with matched token-length controls",
+    "24 old-intent source-parser and target-encoding checks"
+  ],
+  "running": "v11 fixed-data fixed-budget conditional-KL versus direct-command-CE",
+  "sequential_next": "v12 read-only source-R120 path diagnosis after v11 export/cleanup",
+  "not_started": [
+    "old-intent replay training comparison",
+    "new ABA experiment after stable baseline gates"
+  ],
+  "no_new_independent_test_claim": true
+}

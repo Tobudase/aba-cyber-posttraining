@@ -1,0 +1,134 @@
+{
+  "status": "PASS_SOURCE_PARSER_CONTRACTS",
+  "rows": 24,
+  "checks": [
+    {
+      "id": "kold-intent-69f863e75e733666",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-a160e988614cc259",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-ca398553f4d84340",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-260035f0cceffed2",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-63ff96a717e609be",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-475922088e2455b4",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-9a438948fe6b5137",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-aac485df35da5479",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-dfe057e0acc66bf2",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-8551646b500c3f87",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-35010104d0e6ede0",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-048821ffe1d61990",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-b6e705e31734fe45",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-b1f16a6dfe09a3a6",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-5af83e1a377b931d",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-14201abbdbd46605",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-68bef63ab3d69882",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-6e84524eb7b79e85",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-5be4b05e5d78f8fa",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-19e250cb5f9e1460",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-3900310d8699e5e8",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-a85fbddff80d19cd",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-de4819da4fe7d4de",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    },
+    {
+      "id": "kold-intent-8e4bb9228cb3e329",
+      "expected_values_bound": true,
+      "invalid_option_controls_rejected": true
+    }
+  ],
+  "source_sha256": {
+    "sprayhound": "aabb67533f8dc88c9f563ae47c6f45415811b1f28e37ac3c39b7451a0f3b9dcc",
+    "smb2-quota": "c253ebda399e865c3e08544d7575022196fd8ceac16a5cb80ace4aa653aac473"
+  },
+  "tool_business_logic_executed": false,
+  "network_commands_executed": 0,
+  "no_exact_overlap_with_existing_references": true,
+  "training_admission": "Still requires encoding and frozen replay design; no runtime or network behavior certification"
+}
