@@ -1,6 +1,6 @@
 {
-  "status": "IN_PROGRESS",
-  "checked_at_utc": "2026-11-17T03:49:25.141589+00:00",
+  "status": "BASELINES_AND_GAP_REVIEW_COMPLETE",
+  "checked_at_utc": "2026-11-17T06:18:06.662062+00:00",
   "scope": "TRAIN-only offline binary/forensic/CLI analysis subset; not representative full KaliBench",
   "partition_rows": {
     "confirmation": 24,
@@ -14,7 +14,7 @@
   },
   "student": "Qwen/Qwen3-8B",
   "student_revision": "b968826d9c46dd6066d109eabc6255188de91218",
-  "student_job_status": "Pending",
+  "student_job_status": "SUCCEEDED",
   "arms": {
     "qwen3-small": {
       "requested": 67,
@@ -43,6 +43,30 @@
       "returned_models": [
         "google/gemma-4-12B-it-qat-w4a16-ct"
       ]
+    },
+    "student_nonthinking": {
+      "requested": 67,
+      "recorded": 67,
+      "returned": 67,
+      "native_exact": 5,
+      "strict": 5,
+      "native_total_all_requested": 0.5761351970307195,
+      "truncated": 0,
+      "valid_format": 67,
+      "generated_tokens": 8577,
+      "returned_models": []
+    },
+    "student_thinking": {
+      "requested": 67,
+      "recorded": 67,
+      "returned": 67,
+      "native_exact": 5,
+      "strict": 4,
+      "native_total_all_requested": 0.5962923477848852,
+      "truncated": 0,
+      "valid_format": 67,
+      "generated_tokens": 67300,
+      "returned_models": []
     }
   },
   "publisher_reference_terminal_labels": {
@@ -53,7 +77,7 @@
   "confirmation_queries": 0,
   "training_updates": 0,
   "admitted_reasoning_SFT_rows": 0,
-  "generated_tool_commands_executed": 0,
+  "generated_tool_commands_executed": 36,
   "teacher_versions_pinned": false,
   "decoding": {
     "thinking": {
@@ -84,5 +108,72 @@
     "Native exact/strict matching is not functional correctness",
     "Teacher explanations have not received semantic verification",
     "Historical audit cannot exclude unrecorded or upstream training exposure"
-  ]
+  ],
+  "gap_review": {
+    "status": "BASELINES_AND_GAP_REVIEW_COMPLETE",
+    "scored_response_samples": 268,
+    "teacher_gap_counts": {
+      "qwen3-small": 3,
+      "gemma-small": 3
+    },
+    "unique_reference_score_gaps": 6,
+    "confirmed_local_task_gaps": 4,
+    "reference_scope_holds": 1,
+    "tool_output_holds": 1,
+    "clean_brief_explanation_seeds": 2,
+    "explanations_requiring_correction": 2,
+    "admitted_full_reasoning_traces": 0,
+    "student_pairing": {
+      "strict_both": 1,
+      "thinking_rescues": 3,
+      "thinking_losses": 4
+    },
+    "student_cost": {
+      "GPU": "NVIDIA A10",
+      "GPU_worker_seconds": 2388.5722512930006,
+      "nonthinking_seconds": 209.3023084259985,
+      "thinking_seconds": 2089.3027095439975,
+      "thinking_runtime_ratio": 9.982224874900016,
+      "thinking_token_ratio": 7.846566398507637
+    },
+    "fixture_checks": [
+      {
+        "version": "pev0.81",
+        "cases": 6,
+        "valid_student_failures": 12,
+        "teacher_reference_exit_zero": 12,
+        "confirmed_task_gap": 4,
+        "scope_ambiguity": 1,
+        "tool_XML_defect": 1
+      },
+      {
+        "version": "0.85.1",
+        "cases": 6,
+        "valid_student_failures": 12,
+        "teacher_reference_exit_zero": 12,
+        "confirmed_task_gap": 4,
+        "scope_ambiguity": 1,
+        "tool_XML_defect": 1
+      }
+    ],
+    "fixture_model_command_invocations": 36,
+    "fixture_reference_command_invocations": 12,
+    "fixture_control_invocations": 18,
+    "fixture_model_calls": 0,
+    "generated_binaries_executed": 0,
+    "all_student_and_review_resources_cleaned": true,
+    "SFT_started": false,
+    "recommended_teacher": null,
+    "teacher_decision": "No single reliable dominant teacher established; retain per-case verified candidates, not an automatic rank-based teacher choice.",
+    "reviewer": "AI-assisted source/fixture review, no claim of independent human signoff",
+    "limits": [
+      "Only selected offline TRAIN tasks and one sample per student mode",
+      "Concrete input fixture support, not broad malware detection or all-input verification",
+      "Native scores remain unchanged; fixture review is a separate diagnostic",
+      "Mode comparison also changes decoding defaults; not a pure causal thinking intervention",
+      "Two clean short explanations do not certify full native reasoning or constitute a sufficient SFT dataset"
+    ]
+  },
+  "screen_generated_tool_commands_executed": 0,
+  "student_resources_cleaned": true
 }

@@ -2,22 +2,24 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## November 16, 2026 — isolated teacher screening and student baseline preparation
+## November 16, 2026 — student baselines and teacher-gap verification completed
 
-Frozen a **67 TRAIN / 24 DEV / 24 confirmation** split from previously unmentioned publisher TRAIN records, separated by ID, exact query hash and coarse tool/option schema. Both teacher endpoints completed the same 67 selected offline-analysis tasks. **This is a custom explanation-plus-command TRAIN screen, not an official KaliBench evaluation.**
+Completed both **original Qwen3-8B** modes on one **A10** and collected all **268 teacher/student responses** on the isolated 67-row offline-analysis TRAIN screen. No SFT/ABA training or DEV/confirmation/official TEST query occurred.
 
-| Arm | Returned | Native exact | Supplemental strict | Truncated |
+| Arm | Native partial ×100 | Native exact | Supplemental strict | Truncated |
 |---|---:|---:|---:|---:|
-| Qwen3.8-27B-FP8 teacher | 67/67 | 6/67 | 6/67 | 0 |
-| Gemma 4 12B QAT teacher | 67/67 | 9/67 | 8/67 | 28 |
-| Qwen3-8B non-thinking | Pending | — | — | — |
-| Qwen3-8B thinking | Pending | — | — | — |
+| Qwen3.8-27B-FP8 teacher | 60.86 | 6/67 | 6/67 | 0 |
+| Gemma 4 12B QAT teacher | 43.74 | 9/67 | 8/67 | 28 |
+| Original Qwen3-8B non-thinking | 57.61 | 5/67 | 5/67 | 0 |
+| Original Qwen3-8B thinking | 59.63 | 5/67 | 4/67 | 0 |
 
-The student job is submitted but has no completed artifact. GPU scheduling is the remaining blocker; no student scores or teacher–student gaps are claimed. All 67 reference records carry publisher **PASS_RUNTIME_ERROR**, not successful-execution evidence. Native exact and supplemental strict are reference metrics, not functional correctness. Targeted QA found unsupported explanation details and a shell-quoting false positive; **zero traces are admitted to reasoning SFT**. No DEV, confirmation or official TEST query, training update or generated-tool execution occurred in this stage.
+Thinking rescued 3 strict matches but lost 4, using about **10× inference time**. Among **6 unique teacher-pass / both-student-fail score gaps**, controlled benign-file checks confirmed **4 local task gaps**; **1 reference-scope ambiguity and 1 tool XML-output defect remain held**. Checks repeated on two tool versions; none of the generated binaries was executed. All student/review resources are cleaned.
 
-![Screening scores and truncation](results/kali-teacher-screen-2026-11-16/screening.png)
+Of the four supported gaps, **2 brief explanations are useful seeds and 2 require correction**. No full native reasoning trace is admitted to SFT. Source records all carry publisher `PASS_RUNTIME_ERROR`; neither these labels nor reference matching certify functional correctness. This custom small TRAIN screen is **not an official KaliBench score or proof of a dominant teacher**.
 
-[Chinese protocol, findings and remaining work](results/kali-teacher-screen-2026-11-16/RESULT_ZH.md) · [Sanitized aggregate metrics and GPU status](results/kali-teacher-screen-2026-11-16/aggregate.json).
+![Completed screening comparison](results/kali-teacher-screen-2026-11-16/screening.png)
+
+[Chinese results, checks and limitations](results/kali-teacher-screen-2026-11-16/RESULT_ZH.md) · [Sanitized aggregate metrics](results/kali-teacher-screen-2026-11-16/aggregate.json). Individual questions, outputs and provenance remain private.
 
 ## November 16, 2026 — three diagnostic studies completed and verified
 
