@@ -2,6 +2,23 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 16, 2026 — isolated teacher screening and student baseline preparation
+
+Frozen a **67 TRAIN / 24 DEV / 24 confirmation** split from previously unmentioned publisher TRAIN records, separated by ID, exact query hash and coarse tool/option schema. Both teacher endpoints completed the same 67 selected offline-analysis tasks. **This is a custom explanation-plus-command TRAIN screen, not an official KaliBench evaluation.**
+
+| Arm | Returned | Native exact | Supplemental strict | Truncated |
+|---|---:|---:|---:|---:|
+| Qwen3.8-27B-FP8 teacher | 67/67 | 6/67 | 6/67 | 0 |
+| Gemma 4 12B QAT teacher | 67/67 | 9/67 | 8/67 | 28 |
+| Qwen3-8B non-thinking | Pending | — | — | — |
+| Qwen3-8B thinking | Pending | — | — | — |
+
+The student job is submitted but has no completed artifact. GPU scheduling is the remaining blocker; no student scores or teacher–student gaps are claimed. All 67 reference records carry publisher **PASS_RUNTIME_ERROR**, not successful-execution evidence. Native exact and supplemental strict are reference metrics, not functional correctness. Targeted QA found unsupported explanation details and a shell-quoting false positive; **zero traces are admitted to reasoning SFT**. No DEV, confirmation or official TEST query, training update or generated-tool execution occurred in this stage.
+
+![Screening scores and truncation](results/kali-teacher-screen-2026-11-16/screening.png)
+
+[Chinese protocol, findings and remaining work](results/kali-teacher-screen-2026-11-16/RESULT_ZH.md) · [Sanitized aggregate metrics and GPU status](results/kali-teacher-screen-2026-11-16/aggregate.json).
+
 ## November 16, 2026 — three diagnostic studies completed and verified
 
 Completed the matched objective comparison (v11), directory/batch/cache probe (v12), and replay-content comparison (v13). These are **fixed operator-run RedSage 8B continuation diagnostics, not a new native ABA search or official KaliBench evaluation**. The earlier native Qwen ABA study is documented separately below.

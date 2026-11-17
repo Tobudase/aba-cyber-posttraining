@@ -1,0 +1,88 @@
+{
+  "status": "IN_PROGRESS",
+  "checked_at_utc": "2026-11-17T03:49:25.141589+00:00",
+  "scope": "TRAIN-only offline binary/forensic/CLI analysis subset; not representative full KaliBench",
+  "partition_rows": {
+    "confirmation": 24,
+    "development": 24,
+    "train": 67
+  },
+  "partition_groups": {
+    "confirmation": 22,
+    "development": 23,
+    "train": 57
+  },
+  "student": "Qwen/Qwen3-8B",
+  "student_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "student_job_status": "Pending",
+  "arms": {
+    "qwen3-small": {
+      "requested": 67,
+      "recorded": 67,
+      "returned": 67,
+      "native_exact": 6,
+      "strict": 6,
+      "native_total_all_requested": 0.6085998578535892,
+      "truncated": 0,
+      "valid_format": 67,
+      "generated_tokens": 58760,
+      "returned_models": [
+        "Qwen/Qwen3.8-27B-FP8"
+      ]
+    },
+    "gemma-small": {
+      "requested": 67,
+      "recorded": 67,
+      "returned": 67,
+      "native_exact": 9,
+      "strict": 8,
+      "native_total_all_requested": 0.4374081971096896,
+      "truncated": 28,
+      "valid_format": 39,
+      "generated_tokens": 171046,
+      "returned_models": [
+        "google/gemma-4-12B-it-qat-w4a16-ct"
+      ]
+    }
+  },
+  "publisher_reference_terminal_labels": {
+    "PASS_RUNTIME_ERROR": 67
+  },
+  "official_TEST_queries": 0,
+  "development_queries": 0,
+  "confirmation_queries": 0,
+  "training_updates": 0,
+  "admitted_reasoning_SFT_rows": 0,
+  "generated_tool_commands_executed": 0,
+  "teacher_versions_pinned": false,
+  "decoding": {
+    "thinking": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20
+    },
+    "nonthinking": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20
+    },
+    "max_new_tokens": 4096,
+    "seed": 3407,
+    "student_batch": 4
+  },
+  "prompt_policy": "Identical visible explanation+final instructions; native thinking toggled for student; not the official command-only prompt protocol",
+  "score_policy": "Pinned native metrics on exactly one final output; supplemental value-multiset strict check; no command execution or functional PASS claims",
+  "max_concurrent_stage_GPUs": 1,
+  "pod_runtime_limit_seconds": 10800,
+  "job_deadline_seconds": 12600,
+  "public_disclosure": "Aggregate metrics, narrative and chart only; no individual questions, answers, reasoning, IDs, per-case scores, private manifests or response hashes",
+  "private_verification": "Frozen split/input/scorer hashes verified; 5 isolation/parser tests passed; per-case native rescoring and aggregate recomputation performed privately",
+  "limitations": [
+    "67-row selected offline-analysis subset, not official KaliBench score",
+    "One stochastic student sample per mode, no proven stable inability",
+    "Teacher endpoint versions are reported not immutable revisions",
+    "Native exact/strict matching is not functional correctness",
+    "Teacher explanations have not received semantic verification",
+    "Historical audit cannot exclude unrecorded or upstream training exposure"
+  ]
+}
