@@ -2,11 +2,30 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 17, 2026 — matched SFT pair completed; no validated improvement
+
+Completed **both original-Qwen3-8B SFT arms (48 updates each)**, **264 paired evaluation responses**, and **88 additional untrained-base non-thinking control responses** on one **A100 80GB**. Initialization, data/order, gradients, saved adapters, reloads and local re-scoring were verified. GPU resources are cleaned. These are internal panels, not official KaliBench leaderboard results.
+
+| Model state | Frozen DEV strict /24 | Exposed old-panel strict /64 | Truncated /88 | Retained base-correct old cases |
+|---|---:|---:|---:|---:|
+| Original base, thinking enabled | 2 | 11 | 31 | reference |
+| Answer-only-target SFT, thinking enabled | 2 | 10 | 30 | 9/11 |
+| Brief-rationale-target SFT, thinking enabled | 1† | 12 | 24 | 10/11 |
+| Untrained base, non-thinking control | 1 | 10 | 2 | separate diagnostic |
+
+† The sole DEV decrease is a **source-verified valid option alias omitted by the frozen scorer**. A separately reported, post-hoc alias sensitivity gives **2/24 for all three main arms**; frozen scores remain unchanged. Neither adapter passes the predeclared 95% old-case retention guard, so **the original base is retained**.
+
+Both training losses decreased, but new-task accuracy did not improve. Answer-only training did **not** make the model emit empty thinking blocks on these evaluation prompts. Disabling thinking without training greatly reduced truncation without improving strict correctness. The 48 solution-conditioned short explanations cover only six schemas; this does **not** test the full benefit of independently solved teacher reasoning traces. Greedy thinking decoding with a 1,024-token cap is also a limitation relative to Qwen's recommended settings.
+
+![Completed fixed SFT comparison](results/kali-rationale-sft-results-2026-11-17/comparison.png)
+
+[Detailed Chinese report and cause analysis](results/kali-rationale-sft-results-2026-11-17/RESULT_ZH.md) · [Aggregate results and alias sensitivity](results/kali-rationale-sft-results-2026-11-17/summary.json) · [Training diagnostics](results/kali-rationale-sft-results-2026-11-17/training.png). Run `python3 scripts/verify-kali-rationale-results-20261117.py` to check public aggregate math and artifact hashes. Raw data and per-case evidence remain private. Confirmation24 and official TEST remain unqueried; this completed fixed SFT pilot is not a new ABA search.
+
 ## November 17, 2026 — grounded rationale data and matched SFT pilot prepared
 
 Prepared **48 source-grounded, solution-conditioned teacher explanations** across six TRAIN schemas/five offline-analysis tools. All **48 positive commands and 48 negative controls** passed the intended acceptance checks on benign fixtures. Two earlier explanations were corrected; **36 new explanations remain unchanged and 12 are explicitly AI-edited**. This is a narrow AI-reviewed pilot, not independent teacher-solved benchmark success or raw native reasoning traces.
 
-Both original-Qwen3-8B arms now have the same questions, final commands, prompts, initialization plan and row order: **answer-only versus short rationale + answer**, each planned for **4 epochs / 48 updates**. Official-template encoding, prompt masking and EOS checks passed for **96 rows**. Five CPU tests and both training/evaluation preflights passed. **No student SFT has run yet.**
+Both original-Qwen3-8B arms now have the same questions, final commands, prompts, initialization plan and row order: **answer-only versus short rationale + answer**, each planned for **4 epochs / 48 updates**. Official-template encoding, prompt masking and EOS checks passed for **96 rows**. Five CPU tests and both training/evaluation preflights passed. **At this preparation checkpoint, student SFT had not yet run; the completed execution is reported above.**
 
 The arms are matched on example exposure, not compute: supervised tokens per epoch are **1,296 versus 4,936**. DEV24 and exposed old64 evaluation are prepared for base plus two final adapters; confirmation24 and official TEST remain unqueried. The CPU fixture job is cleaned and no GPU job was submitted in this preparation stage.
 

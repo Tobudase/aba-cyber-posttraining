@@ -1,0 +1,587 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "GPU": "NVIDIA A100 80GB PCIe",
+  "wall_seconds": 2032.281192941009,
+  "training": {
+    "answer_only": {
+      "updates": 48,
+      "epochs": 4,
+      "seconds": 23.418860781006515,
+      "supervised_tokens": 5184,
+      "epoch_mean_loss": [
+        1.3841467538397114,
+        1.2051551491392287,
+        0.9089810715063176,
+        0.6586456852810321
+      ],
+      "epoch_mean_command_loss": [
+        1.1218543371703364,
+        0.9505927299024475,
+        0.6580043791153668,
+        0.44111427251188007
+      ],
+      "gradients_finite_nonzero": true
+    },
+    "reasoning": {
+      "updates": 48,
+      "epochs": 4,
+      "seconds": 23.65952946501784,
+      "supervised_tokens": 19744,
+      "epoch_mean_loss": [
+        2.1910933032692466,
+        2.012186342704091,
+        1.815277866705499,
+        1.6392850710862858
+      ],
+      "epoch_mean_command_loss": [
+        0.3160529711849202,
+        0.2843634438414167,
+        0.20522719113336796,
+        0.14387475667047997
+      ],
+      "gradients_finite_nonzero": true
+    }
+  },
+  "summary": {
+    "base": {
+      "development24": {
+        "n": 24,
+        "strict": 2,
+        "native_partial": 0.2939814814814815,
+        "invalid": 14,
+        "truncated": 14,
+        "tokens": 21685
+      },
+      "old64": {
+        "n": 64,
+        "strict": 11,
+        "native_partial": 0.5104166666666667,
+        "invalid": 17,
+        "truncated": 17,
+        "tokens": 45580
+      }
+    },
+    "answer_only": {
+      "development24": {
+        "n": 24,
+        "strict": 2,
+        "native_partial": 0.386574074074074,
+        "invalid": 9,
+        "truncated": 9,
+        "tokens": 19461
+      },
+      "old64": {
+        "n": 64,
+        "strict": 10,
+        "native_partial": 0.43478422619047624,
+        "invalid": 21,
+        "truncated": 21,
+        "tokens": 46810
+      }
+    },
+    "reasoning": {
+      "development24": {
+        "n": 24,
+        "strict": 1,
+        "native_partial": 0.3214065255731922,
+        "invalid": 9,
+        "truncated": 9,
+        "tokens": 18640
+      },
+      "old64": {
+        "n": 64,
+        "strict": 12,
+        "native_partial": 0.48027033730158736,
+        "invalid": 15,
+        "truncated": 15,
+        "tokens": 44000
+      }
+    }
+  },
+  "retention": {
+    "answer_only": {
+      "kept": 9,
+      "base_correct": 11,
+      "rate": 0.8181818181818182,
+      "guard_pass": false
+    },
+    "reasoning": {
+      "kept": 10,
+      "base_correct": 11,
+      "rate": 0.9090909090909091,
+      "guard_pass": false
+    }
+  },
+  "paired": {
+    "base_to_answer_only": {
+      "development24": {
+        "both_wrong": 22,
+        "both_correct": 2,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "paired_exact_p_two_sided": 1.0,
+        "gain_from_truncated": 0,
+        "gain_from_other_invalid": 0,
+        "gain_from_valid_wrong": 0,
+        "loss_to_truncated": 0,
+        "loss_to_other_invalid": 0,
+        "loss_to_valid_wrong": 0
+      },
+      "old64": {
+        "gain": 1,
+        "both_wrong": 52,
+        "both_correct": 9,
+        "loss": 2,
+        "net": -1,
+        "paired_exact_p_two_sided": 1.0,
+        "gain_from_truncated": 0,
+        "gain_from_other_invalid": 0,
+        "gain_from_valid_wrong": 1,
+        "loss_to_truncated": 1,
+        "loss_to_other_invalid": 0,
+        "loss_to_valid_wrong": 1
+      }
+    },
+    "base_to_reasoning": {
+      "development24": {
+        "both_wrong": 22,
+        "both_correct": 1,
+        "loss": 1,
+        "gain": 0,
+        "net": -1,
+        "paired_exact_p_two_sided": 1.0,
+        "gain_from_truncated": 0,
+        "gain_from_other_invalid": 0,
+        "gain_from_valid_wrong": 0,
+        "loss_to_truncated": 0,
+        "loss_to_other_invalid": 0,
+        "loss_to_valid_wrong": 1
+      },
+      "old64": {
+        "both_wrong": 51,
+        "both_correct": 10,
+        "loss": 1,
+        "gain": 2,
+        "net": 1,
+        "paired_exact_p_two_sided": 1.0,
+        "gain_from_truncated": 1,
+        "gain_from_other_invalid": 0,
+        "gain_from_valid_wrong": 1,
+        "loss_to_truncated": 1,
+        "loss_to_other_invalid": 0,
+        "loss_to_valid_wrong": 0
+      }
+    },
+    "answer_only_to_reasoning": {
+      "development24": {
+        "both_wrong": 22,
+        "both_correct": 1,
+        "loss": 1,
+        "gain": 0,
+        "net": -1,
+        "paired_exact_p_two_sided": 1.0,
+        "gain_from_truncated": 0,
+        "gain_from_other_invalid": 0,
+        "gain_from_valid_wrong": 0,
+        "loss_to_truncated": 0,
+        "loss_to_other_invalid": 0,
+        "loss_to_valid_wrong": 1
+      },
+      "old64": {
+        "loss": 1,
+        "both_wrong": 51,
+        "both_correct": 9,
+        "gain": 3,
+        "net": 2,
+        "paired_exact_p_two_sided": 0.625,
+        "gain_from_truncated": 0,
+        "gain_from_other_invalid": 0,
+        "gain_from_valid_wrong": 3,
+        "loss_to_truncated": 0,
+        "loss_to_other_invalid": 0,
+        "loss_to_valid_wrong": 1
+      }
+    }
+  },
+  "output_diagnostics": {
+    "base": {
+      "development24": {
+        "closed_think": 11,
+        "empty_think": 0,
+        "mean_generated_tokens": 903.5416666666666,
+        "median_generated_tokens": 1024.0,
+        "valid_but_strict_wrong": 8,
+        "no_closed_think": 13
+      },
+      "old64": {
+        "closed_think": 47,
+        "empty_think": 0,
+        "mean_generated_tokens": 712.1875,
+        "median_generated_tokens": 701.0,
+        "valid_but_strict_wrong": 36,
+        "no_closed_think": 17
+      },
+      "evaluation_seconds": 551.2512110529933
+    },
+    "answer_only": {
+      "development24": {
+        "closed_think": 15,
+        "empty_think": 0,
+        "mean_generated_tokens": 810.875,
+        "median_generated_tokens": 915.5,
+        "valid_but_strict_wrong": 13,
+        "no_closed_think": 9
+      },
+      "old64": {
+        "closed_think": 44,
+        "empty_think": 0,
+        "mean_generated_tokens": 731.40625,
+        "median_generated_tokens": 754.5,
+        "valid_but_strict_wrong": 33,
+        "no_closed_think": 20
+      },
+      "evaluation_seconds": 605.4829823100008
+    },
+    "reasoning": {
+      "development24": {
+        "closed_think": 15,
+        "empty_think": 0,
+        "mean_generated_tokens": 776.6666666666666,
+        "median_generated_tokens": 882.0,
+        "valid_but_strict_wrong": 14,
+        "no_closed_think": 9
+      },
+      "old64": {
+        "closed_think": 49,
+        "empty_think": 0,
+        "mean_generated_tokens": 687.5,
+        "median_generated_tokens": 646.5,
+        "valid_but_strict_wrong": 37,
+        "no_closed_think": 15
+      },
+      "evaluation_seconds": 607.4225829589996
+    }
+  },
+  "DEV_tool_overlap_diagnostic": {
+    "base": {
+      "seen_tools": {
+        "n": 4,
+        "strict": 0,
+        "truncated": 2,
+        "invalid": 2,
+        "mean_generated_tokens": 871
+      },
+      "unseen_tools": {
+        "n": 20,
+        "strict": 2,
+        "truncated": 12,
+        "invalid": 12,
+        "mean_generated_tokens": 910.05
+      }
+    },
+    "answer_only": {
+      "seen_tools": {
+        "n": 4,
+        "strict": 0,
+        "truncated": 2,
+        "invalid": 2,
+        "mean_generated_tokens": 819
+      },
+      "unseen_tools": {
+        "n": 20,
+        "strict": 2,
+        "truncated": 7,
+        "invalid": 7,
+        "mean_generated_tokens": 809.25
+      }
+    },
+    "reasoning": {
+      "seen_tools": {
+        "n": 4,
+        "strict": 0,
+        "truncated": 2,
+        "invalid": 2,
+        "mean_generated_tokens": 703
+      },
+      "unseen_tools": {
+        "n": 20,
+        "strict": 1,
+        "truncated": 7,
+        "invalid": 7,
+        "mean_generated_tokens": 791.4
+      }
+    }
+  },
+  "nonthinking_control": {
+    "summary": {
+      "development24": {
+        "n": 24,
+        "strict": 1,
+        "native_partial": 0.44028245417134304,
+        "invalid": 2,
+        "truncated": 2,
+        "tokens": 2946
+      },
+      "old64": {
+        "n": 64,
+        "strict": 10,
+        "native_partial": 0.5076961233211233,
+        "invalid": 3,
+        "truncated": 0,
+        "tokens": 1547
+      }
+    },
+    "evaluation_seconds": 71.55614505999256,
+    "paired": {
+      "base": {
+        "development24": {
+          "gain_over_nonthinking": 1,
+          "loss_vs_nonthinking": 0,
+          "net": 1,
+          "paired_exact_p_two_sided": 1.0
+        },
+        "old64": {
+          "gain_over_nonthinking": 4,
+          "loss_vs_nonthinking": 3,
+          "net": 1,
+          "paired_exact_p_two_sided": 1.0
+        }
+      },
+      "answer_only": {
+        "development24": {
+          "gain_over_nonthinking": 1,
+          "loss_vs_nonthinking": 0,
+          "net": 1,
+          "paired_exact_p_two_sided": 1.0
+        },
+        "old64": {
+          "gain_over_nonthinking": 3,
+          "loss_vs_nonthinking": 3,
+          "net": 0,
+          "paired_exact_p_two_sided": 1.0
+        }
+      },
+      "reasoning": {
+        "development24": {
+          "gain_over_nonthinking": 0,
+          "loss_vs_nonthinking": 0,
+          "net": 0,
+          "paired_exact_p_two_sided": 1.0
+        },
+        "old64": {
+          "gain_over_nonthinking": 5,
+          "loss_vs_nonthinking": 3,
+          "net": 2,
+          "paired_exact_p_two_sided": 0.7265625
+        }
+      }
+    },
+    "old_correct_retention": {
+      "answer_only": {
+        "kept": 7,
+        "base_nonthinking_correct": 10,
+        "rate": 0.7
+      },
+      "reasoning": {
+        "kept": 7,
+        "base_nonthinking_correct": 10,
+        "rate": 0.7
+      }
+    },
+    "training_updates": 0,
+    "scope": "Additional prompt-mode diagnostic; not the preregistered primary baseline"
+  },
+  "native_score_components": {
+    "base": {
+      "development24": {
+        "tool_score": 0.3333333333333333,
+        "optional_f1": 0.2013888888888889,
+        "positional_f1": 0.3472222222222222
+      },
+      "old64": {
+        "tool_score": 0.609375,
+        "optional_f1": 0.3802083333333333,
+        "positional_f1": 0.5416666666666666
+      }
+    },
+    "answer_only": {
+      "development24": {
+        "tool_score": 0.4583333333333333,
+        "optional_f1": 0.16666666666666666,
+        "positional_f1": 0.5347222222222222
+      },
+      "old64": {
+        "tool_score": 0.53125,
+        "optional_f1": 0.3222098214285714,
+        "positional_f1": 0.45089285714285715
+      }
+    },
+    "reasoning": {
+      "development24": {
+        "tool_score": 0.375,
+        "optional_f1": 0.1531084656084656,
+        "positional_f1": 0.4361111111111111
+      },
+      "old64": {
+        "tool_score": 0.578125,
+        "optional_f1": 0.36179315476190477,
+        "positional_f1": 0.5008928571428571
+      }
+    },
+    "base_nonthinking": {
+      "development24": {
+        "tool_score": 0.5833333333333334,
+        "optional_f1": 0.1575757575757576,
+        "positional_f1": 0.5799382716049383
+      },
+      "old64": {
+        "tool_score": 0.625,
+        "optional_f1": 0.4003720238095238,
+        "positional_f1": 0.49771634615384613
+      }
+    }
+  },
+  "adapter_tensor_checks": {
+    "answer_only": {
+      "arm": "answer_only",
+      "tensor_count": 144,
+      "trainable_parameters": 7667712,
+      "all_finite": true,
+      "all_72_B_matrices_nonzero": true,
+      "receipt_hash_matches": true,
+      "dtypes": [
+        "torch.float32"
+      ]
+    },
+    "reasoning": {
+      "arm": "reasoning",
+      "tensor_count": 144,
+      "trainable_parameters": 7667712,
+      "all_finite": true,
+      "all_72_B_matrices_nonzero": true,
+      "receipt_hash_matches": true,
+      "dtypes": [
+        "torch.float32"
+      ]
+    }
+  },
+  "local_rescoring_matches_cluster": true,
+  "initial_adapters_identical": true,
+  "adapter_reload_hashes_verified": true,
+  "training_order_verified": true,
+  "official_TEST_queries": 0,
+  "confirmation_queries": 0,
+  "no_promotion": true,
+  "GPU_resources_cleaned": true,
+  "coverage": {
+    "development24": {
+      "rows": 24,
+      "training_tool_overlap_rows": 4,
+      "unique_tools": 17
+    },
+    "old64": {
+      "rows": 64,
+      "training_tool_overlap_rows": 0,
+      "unique_tools": 62
+    }
+  },
+  "source_preparation": "../kali-rationale-sft-prep-2026-11-17/RESULT_ZH.md",
+  "decoding_limitations": {
+    "thinking": true,
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "Qwen_recommended_thinking_decoding": false,
+    "source": "https://huggingface.co/Qwen/Qwen3-8B#best-practices",
+    "inference": "This is a fixed bounded-decoding pilot, not model capability under recommended decoding."
+  },
+  "target_kind": "Reviewed short, verified-answer-conditioned visible explanations; not full independent teacher solution traces",
+  "tool_cue_audit": {
+    "TRAIN": {
+      "rows": 48,
+      "literal_required_tool_name_in_query": 48
+    },
+    "metric": "Case-insensitive literal tool-name match; aliases and paraphrases are not counted; descriptive post-hoc covariate, not a causal estimate",
+    "development24": {
+      "rows": 24,
+      "literal_required_tool_name_in_query": 14
+    },
+    "old64": {
+      "rows": 64,
+      "literal_required_tool_name_in_query": 52
+    }
+  },
+  "alias_sensitivity": {
+    "classification": "Post-hoc source-verified alias sensitivity, not the frozen primary score or full functional validation",
+    "source": "https://github.com/llvm/llvm-project/blob/llvmorg-14.0.6/llvm/tools/dsymutil/Options.td",
+    "scope": "One confirmed option-spelling alias; same rule checked across all four model states and both panels",
+    "summary": {
+      "base": {
+        "development24": {
+          "n": 24,
+          "frozen_strict": 2,
+          "alias_normalized_strict": 2,
+          "normalized_commands": 0
+        },
+        "old64": {
+          "n": 64,
+          "frozen_strict": 11,
+          "alias_normalized_strict": 11,
+          "normalized_commands": 0
+        }
+      },
+      "answer_only": {
+        "development24": {
+          "n": 24,
+          "frozen_strict": 2,
+          "alias_normalized_strict": 2,
+          "normalized_commands": 0
+        },
+        "old64": {
+          "n": 64,
+          "frozen_strict": 10,
+          "alias_normalized_strict": 10,
+          "normalized_commands": 0
+        }
+      },
+      "reasoning": {
+        "development24": {
+          "n": 24,
+          "frozen_strict": 1,
+          "alias_normalized_strict": 2,
+          "normalized_commands": 1
+        },
+        "old64": {
+          "n": 64,
+          "frozen_strict": 12,
+          "alias_normalized_strict": 12,
+          "normalized_commands": 0
+        }
+      },
+      "base-nonthinking": {
+        "development24": {
+          "n": 24,
+          "frozen_strict": 1,
+          "alias_normalized_strict": 1,
+          "normalized_commands": 0
+        },
+        "old64": {
+          "n": 64,
+          "frozen_strict": 10,
+          "alias_normalized_strict": 10,
+          "normalized_commands": 0
+        }
+      }
+    },
+    "frozen_primary_unchanged": true,
+    "new_model_queries": 0
+  },
+  "raw_responses_or_training_data_public": false,
+  "discarded_hardware_attempt": {
+    "GPU": "RTX3090",
+    "reason": "Confirmed software thermal throttling at 87C and 270-300MHz",
+    "training_updates": 0,
+    "partial_baseline_included_in_final_scores": false,
+    "resources_cleaned": true
+  }
+}
