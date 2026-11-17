@@ -2,6 +2,18 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 17, 2026 — grounded rationale data and matched SFT pilot prepared
+
+Prepared **48 source-grounded, solution-conditioned teacher explanations** across six TRAIN schemas/five offline-analysis tools. All **48 positive commands and 48 negative controls** passed the intended acceptance checks on benign fixtures. Two earlier explanations were corrected; **36 new explanations remain unchanged and 12 are explicitly AI-edited**. This is a narrow AI-reviewed pilot, not independent teacher-solved benchmark success or raw native reasoning traces.
+
+Both original-Qwen3-8B arms now have the same questions, final commands, prompts, initialization plan and row order: **answer-only versus short rationale + answer**, each planned for **4 epochs / 48 updates**. Official-template encoding, prompt masking and EOS checks passed for **96 rows**. Five CPU tests and both training/evaluation preflights passed. **No student SFT has run yet.**
+
+The arms are matched on example exposure, not compute: supervised tokens per epoch are **1,296 versus 4,936**. DEV24 and exposed old64 evaluation are prepared for base plus two final adapters; confirmation24 and official TEST remain unqueried. The CPU fixture job is cleaned and no GPU job was submitted in this preparation stage.
+
+![Verified preparation counts and token exposure](results/kali-rationale-sft-prep-2026-11-17/preparation.png)
+
+[Chinese protocol, provenance and limitations](results/kali-rationale-sft-prep-2026-11-17/RESULT_ZH.md) · [Sanitized preparation summary](results/kali-rationale-sft-prep-2026-11-17/summary.json) · [Frozen training configuration](results/kali-rationale-sft-prep-2026-11-17/protocol.json).
+
 ## November 16, 2026 — student baselines and teacher-gap verification completed
 
 Completed both **original Qwen3-8B** modes on one **A10** and collected all **268 teacher/student responses** on the isolated 67-row offline-analysis TRAIN screen. No SFT/ABA training or DEV/confirmation/official TEST query occurred.

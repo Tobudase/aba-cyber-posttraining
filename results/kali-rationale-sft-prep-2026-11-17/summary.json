@@ -1,0 +1,78 @@
+{
+  "status": "PREPARED_NOT_TRAINED",
+  "data_review": {
+    "authored_rows": 48,
+    "admitted_pilot_rows": 48,
+    "families": {
+      "relocations": 8,
+      "packer_format": 8,
+      "scanner_defaults": 8,
+      "imports_exports": 8,
+      "optional_directories": 8,
+      "defined_symbols": 8
+    },
+    "teacher_returned": 48,
+    "teacher_truncated": 0,
+    "teacher_models": [
+      "Qwen/Qwen3.8-27B-FP8"
+    ],
+    "teacher_content_json_and_command_checks": 48,
+    "fixture_positive_pass": 48,
+    "fixture_negative_rejected": 48,
+    "symbol_size_and_sort_checks": 8,
+    "AI_edited_explanations": 12,
+    "unchanged_teacher_explanations": 36,
+    "original_seed_explanations_repaired": 2,
+    "reviewer": "AI source and executable-fixture aided review; no independent human signoff",
+    "target_kind": "Short source-grounded, solution-conditioned visible rationale; not full raw reasoning traces",
+    "limitations": [
+      "48 variants cover only six schemas and five tools",
+      "Fixtures are benign locally generated binaries, never executed",
+      "Single-teacher explanations, some AI-edited with changes recorded",
+      "Not independently solved teacher advantage examples",
+      "No official TEST/DEV/confirmation queries; no student SFT yet"
+    ]
+  },
+  "encoding": {
+    "answer_only": {
+      "rows": 48,
+      "supervised_tokens_per_epoch": 1296,
+      "max_sequence_length": 107
+    },
+    "reasoning": {
+      "rows": 48,
+      "supervised_tokens_per_epoch": 4936,
+      "max_sequence_length": 192
+    }
+  },
+  "checks": {
+    "status": "PREPARATION_VERIFIED",
+    "unit_tests_passed": 5,
+    "training_arm_preflights_passed": 2,
+    "evaluation_preflight_rows": 88,
+    "execution_launcher_preflight": "PASS",
+    "fixture_positive_pass": 48,
+    "fixture_negative_rejected": 48,
+    "native_template_roundtrip_passed": 96,
+    "runtime_model_training_tested": false,
+    "8B_training_updates": 0,
+    "model_eval_queries": 0,
+    "GPU_jobs_submitted_this_phase": 0,
+    "CPU_fixture_job_cleaned": true,
+    "AI_reviewed_explanations": 48,
+    "human_signoff_claimed": false
+  },
+  "isolation": {
+    "rows": 48,
+    "families": 6,
+    "unique_parent_schemas": 6,
+    "held_schema_overlap": 0,
+    "held_query_overlap": 0,
+    "official_TEST_read_or_queried": false,
+    "development_or_confirmation_queried": false
+  },
+  "actual_training_updates": 0,
+  "actual_student_eval_queries": 0,
+  "CPU_fixture_resources_cleaned": true,
+  "raw_training_data_public": false
+}

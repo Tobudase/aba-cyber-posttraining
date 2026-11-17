@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN_NOT_QUERIED",
+  "states": [
+    "original_base",
+    "answer_only_step48",
+    "reasoning_step48"
+  ],
+  "development_rows": 24,
+  "exposed_retention_rows": 64,
+  "planned_responses": 264,
+  "prompt": "Solve the local analysis request. Put exactly one final command in <output>...</output>.",
+  "enable_thinking": true,
+  "do_sample": false,
+  "max_new_tokens": 1024,
+  "batch_size": 4,
+  "score": "Same frozen native/strict final-output scorer; record malformed/empty/truncated separately",
+  "primary": "Paired strict correctness difference between the two final adapters on DEV24",
+  "secondary": [
+    "native partial",
+    "previously base-correct old-case retention",
+    "all-old strict/partial",
+    "truncation",
+    "output cost"
+  ],
+  "retention_guard": "Retain >=95% of newly paired base-correct old64 cases, with no increase in invalid/truncated outputs; always report numerator/denominator",
+  "confirmation": "24 frozen rows remain unqueried and excluded from jobs; any later confirmation decision is separate",
+  "promotion": "No model promotion from this one-seed narrow pilot alone",
+  "scorer_sha256": "eba42588d692dfbe2a45d8dc22645fec5176664c85a46b15859dc805630460a9"
+}

@@ -1,0 +1,50 @@
+{
+  "status": "PREPARED_NOT_TRAINED",
+  "rows": 48,
+  "families": 6,
+  "epochs": 4,
+  "effective_batch": 4,
+  "microbatch": 1,
+  "optimizer_updates_per_arm": 48,
+  "seed": 3407,
+  "learning_rate": 2e-05,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_targets": [
+    "q_proj",
+    "v_proj"
+  ],
+  "lora_dropout": 0,
+  "weight_decay": 0,
+  "max_grad_norm": 1,
+  "max_sequence_length": 1024,
+  "dtype": "bfloat16",
+  "optimizer": "AdamW",
+  "loss": "Causal assistant-token cross-entropy, prompt masked; token-mean within each effective batch",
+  "checkpoint_rule": "Use final fixed step48; no development-based checkpoint/hyperparameter selection in this pilot",
+  "format": "Identical official Qwen thinking-enabled prompt. Native empty think for answer-only; reviewed short explanation inside native think for rationale arm.",
+  "equalized": [
+    "original model revision",
+    "seed and fresh LoRA initialization",
+    "TRAIN questions and final commands",
+    "row order",
+    "epochs",
+    "optimizer updates",
+    "optimizer/hyperparameters",
+    "evaluation prompts and decoding"
+  ],
+  "not_equalized": [
+    "supervised token count",
+    "sequence length",
+    "GPU time",
+    "relative answer-token weight under standard token-mean SFT"
+  ],
+  "claim_limit": "Practical explanation-target SFT comparison; not pure reasoning causality or equal-compute experiment",
+  "teacher": "NRP qwen3-small; actual response model recorded privately",
+  "teacher_conditioning": "Verified TRAIN solution plus documented facts",
+  "target_kind": "Reviewed concise visible explanation, not raw hidden/native reasoning trace",
+  "DEV_queries": 0,
+  "confirmation_queries": 0,
+  "official_TEST_queries": 0,
+  "training_updates": 0
+}
