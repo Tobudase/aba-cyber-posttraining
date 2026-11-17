@@ -1,5 +1,5 @@
 # Execution status
 
-Data and screening are verified. The fixed-comparison job is active; native ABA and confirmation wait for verified prerequisites. New SFT/ABA results are not yet available. The checkpoint-resume replay matched all16 outputs and reused224 completed baseline outputs.
+Baseline624 responses complete; answer-only32 real optimizer updates verified. Paired evaluation remains active; native ABA and post-selection confirmation wait for prerequisites. No new final training gain is claimed.
 
-Official TEST stays untouched. Primary data:23 independent-U tasks,8 tools,3 strong scoped gaps; the64-task/32-gap goal was not reached. Historical experiments are separate.
+Evidence correction: three low-success candidates contain only one gap with repeated certified student failures in both modes; two remain UNKNOWN-limited. [Correction](CORRECTION_ZH.md). Frozen training/metrics unchanged; official TEST untouched.

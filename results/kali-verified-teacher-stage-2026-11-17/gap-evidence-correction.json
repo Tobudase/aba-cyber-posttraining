@@ -1,0 +1,76 @@
+{
+  "original_low_success_gap_candidates": 3,
+  "both_modes_repeated_failure_certified": 1,
+  "uncertain_candidates": 2,
+  "unknown_is_not_certified_failure": true,
+  "main_teacher_rows_unchanged": 23,
+  "training_payload_unchanged": true,
+  "scope": "All selected teacher answers remain fixture-verified. The correction concerns evidence of student inability, not teacher answer validity.",
+  "status": "GAP_EVIDENCE_CORRECTION_TRAINING_UNCHANGED",
+  "updated_at_utc": "2026-11-17T18:39:12.535447+00:00",
+  "raw_cases_public": false,
+  "attempt_outcomes_by_student_mode": {
+    "thinking": {
+      "PASS": 2,
+      "FAIL": 7
+    },
+    "nonthinking": {
+      "UNKNOWN": 3,
+      "PASS": 3,
+      "FAIL": 3
+    }
+  },
+  "anonymized_candidate_counts": [
+    {
+      "candidate": "candidate_1",
+      "teacher_passes_of_three": 3,
+      "student_counts": {
+        "thinking": {
+          "PASS": 1,
+          "FAIL": 2,
+          "UNKNOWN": 0
+        },
+        "nonthinking": {
+          "PASS": 1,
+          "FAIL": 0,
+          "UNKNOWN": 2
+        }
+      },
+      "repeated_failure_in_both_modes_certified": false
+    },
+    {
+      "candidate": "candidate_2",
+      "teacher_passes_of_three": 3,
+      "student_counts": {
+        "thinking": {
+          "PASS": 1,
+          "FAIL": 2,
+          "UNKNOWN": 0
+        },
+        "nonthinking": {
+          "PASS": 1,
+          "FAIL": 2,
+          "UNKNOWN": 0
+        }
+      },
+      "repeated_failure_in_both_modes_certified": true
+    },
+    {
+      "candidate": "candidate_3",
+      "teacher_passes_of_three": 3,
+      "student_counts": {
+        "thinking": {
+          "PASS": 0,
+          "FAIL": 3,
+          "UNKNOWN": 0
+        },
+        "nonthinking": {
+          "PASS": 1,
+          "FAIL": 1,
+          "UNKNOWN": 1
+        }
+      },
+      "repeated_failure_in_both_modes_certified": false
+    }
+  ]
+}

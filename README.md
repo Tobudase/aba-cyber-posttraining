@@ -6,6 +6,8 @@ Research code and traceable experiment summaries for adapting open-weight langua
 
 Verified **23 independent-U teacher reasoning tasks / 8 tools**, plus **6 verified publisher TRAIN replay rows**. Only **3** tasks meet the three-sample teacher-pass/student-low-pass gap rule. The broader64-task/32-gap target was not reached; this is a limited feasibility study. On the separate67-task authored TRAIN candidate pool, untrained Qwen3-8B passes **30/67 thinking** and **14/67 non-thinking**, versus teacher **42/67** on the first independent attempt. These are scoped fixture checks, not official KaliBench accuracy.
 
+**Evidence correction:** the three low-success-rule candidates contain **only one gap with repeated certified student failures in both modes**; two remain limited by UNKNOWN checks. Training rows and scoring are unchanged. [Correction and counts](results/kali-verified-teacher-stage-2026-11-17/CORRECTION_ZH.md). The preparation figure’s gap count refers to the original rule, not three certified failures.
+
 The full workflow is launched: the fixed-comparison job is active; real two-candidate native ABA and once-after-selection confirmation wait for verified prerequisites. **No new training gain is claimed yet.** One ordinary RTX A6000 is used serially; official TEST stays untouched. Historical completed experiments below are unchanged.
 
 ![Verified teacher-data stage](results/kali-verified-teacher-stage-2026-11-17/preparation.png)

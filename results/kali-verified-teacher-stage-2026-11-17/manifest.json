@@ -1,7 +1,9 @@
 {
   "preparation-summary.json": "72dc861ce7699eb4eb966e8ab1c944897d1f6487fd920df66f01265ea6a60b96",
   "training-protocol.json": "e200e31a0b48430492412d644c8f2d53c398eb774a45b661cdaf40b16b0869c6",
-  "RESULT_ZH.md": "4853ff268a8981ec1d1ac3fb8c27a56bdb33013838b384aca4beedccfdb1ce51",
-  "STATUS.md": "349085237c20d5b75fe884919f4072515e91b0737151ba23d278b015db48913e",
-  "preparation.png": "397900b224696b5255d07f74c33d5f985984fe27f11e19bf7536818a354ff24b"
+  "RESULT_ZH.md": "2d3decec1ac9e387dd54024968d529504a14dc3d02b521aafd281f54c8ecb97e",
+  "STATUS.md": "c1c207a9ea3b72805bdcce41629849e38485a56265940a2a4b8a1dd3f87f234b",
+  "preparation.png": "3d3412b4ea830a25c5bddba18292dc1a2864d03afeeb6405aee46b105a654ede",
+  "CORRECTION_ZH.md": "4e29ef2d9abdde16c099fb4d0c60d10b972ac16fd7811de7c0bda8ef5d30c7f3",
+  "gap-evidence-correction.json": "c022498430e5ce52a4d487c70f13a9b27d701ffe5335f22cc851b1db5394ff68"
 }
