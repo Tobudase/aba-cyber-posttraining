@@ -2,6 +2,16 @@
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
+## November 17, 2026 — independent teacher data verified; full experiment running
+
+Verified **23 independent-U teacher reasoning tasks / 8 tools**, plus **6 verified publisher TRAIN replay rows**. Only **3** tasks meet the three-sample teacher-pass/student-low-pass gap rule. The broader64-task/32-gap target was not reached; this is a limited feasibility study. On the separate67-task authored TRAIN candidate pool, untrained Qwen3-8B passes **30/67 thinking** and **14/67 non-thinking**, versus teacher **42/67** on the first independent attempt. These are scoped fixture checks, not official KaliBench accuracy.
+
+The full workflow is launched: the fixed-comparison job is active; real two-candidate native ABA and once-after-selection confirmation wait for verified prerequisites. **No new training gain is claimed yet.** One ordinary RTX A6000 is used serially; official TEST stays untouched. Historical completed experiments below are unchanged.
+
+![Verified teacher-data stage](results/kali-verified-teacher-stage-2026-11-17/preparation.png)
+
+[Chinese protocol and limitations](results/kali-verified-teacher-stage-2026-11-17/RESULT_ZH.md) · [Verified preparation aggregates](results/kali-verified-teacher-stage-2026-11-17/preparation-summary.json) · [Execution status](results/kali-verified-teacher-stage-2026-11-17/STATUS.md) · [Core code snapshots](code-snapshots/teacher-sft-20261117/README.md).
+
 ## November 17, 2026 — matched SFT pair completed; no validated improvement
 
 Completed **both original-Qwen3-8B SFT arms (48 updates each)**, **264 paired evaluation responses**, and **88 additional untrained-base non-thinking control responses** on one **A100 80GB**. Initialization, data/order, gradients, saved adapters, reloads and local re-scoring were verified. GPU resources are cleaned. These are internal panels, not official KaliBench leaderboard results.

@@ -1,0 +1,168 @@
+{
+  "status": "DATA_VERIFIED_FULL_EXPERIMENT_RUNNING",
+  "updated_at_utc": "2026-11-17T15:15:42.218487+00:00",
+  "not_final_SFT_or_ABA_results": true,
+  "candidate_tasks": 67,
+  "candidate_tools": 14,
+  "metric": "Scoped acceptance on two benign fixture variants, not official leaderboard or universal semantics",
+  "accepted_task_counts": {
+    "teacher_U_0": 42,
+    "teacher_U_1": 45,
+    "teacher_H_0": 67,
+    "student_thinking": 30,
+    "student_nonthinking": 14
+  },
+  "positive_reference_checks": 134,
+  "negative_checks": 286,
+  "false_passed_negative_checks": 0,
+  "admission": {
+    "status": "AI_REVIEWED_EXECUTION_VERIFIED",
+    "main_independent_teacher_rows": 23,
+    "publisher_replay_rows": 6,
+    "actual_replay_fraction": 0.20689655172413793,
+    "main_tools": {
+      "llvm-readelf": 11,
+      "llvm-readobj": 3,
+      "llvm-nm": 2,
+      "llvm-size": 1,
+      "llvm-as": 2,
+      "llvm-dis": 1,
+      "pescan": 1,
+      "llvm-objdump": 2
+    },
+    "all_tools": {
+      "llvm-readelf": 11,
+      "llvm-readobj": 3,
+      "llvm-nm": 2,
+      "llvm-size": 1,
+      "llvm-as": 2,
+      "llvm-dis": 1,
+      "pescan": 2,
+      "llvm-objdump": 2,
+      "readpe": 1,
+      "pepack": 1,
+      "llvm-tblgen": 1,
+      "galleta": 2
+    },
+    "main_coarse_schemas": 23,
+    "strong_gaps": 3,
+    "held_main_candidates": 1,
+    "target64_reached": false,
+    "primary_condition": "U independent, unedited teacher field; H separate and excluded",
+    "admission_sha256": "1ac0b40f2e08e4480686acf8fb9f3178971dab64504e81b443d7d9848a834865",
+    "confirmation_queries": 0,
+    "official_TEST_queries": 0,
+    "scope": "Limited feasibility study meeting16-task/4-tool minimum, not64-task/12-tool main-data target. Replayed rows do not increase independent teacher-task counts."
+  },
+  "encoding": {
+    "rows": 29,
+    "tools": 12,
+    "groups": 27,
+    "native_template_roundtrips": 58,
+    "prompt_masked_rows": 58,
+    "truncated_rows": 0,
+    "arms": {
+      "answer_only": {
+        "target_tokens_per_epoch": 569,
+        "max_sequence_tokens": 110
+      },
+      "reasoning": {
+        "target_tokens_per_epoch": 6377,
+        "max_sequence_tokens": 641
+      }
+    }
+  },
+  "training_protocol": {
+    "status": "FROZEN_BEFORE_SFT",
+    "rows": 29,
+    "families": 27,
+    "tools": 12,
+    "epochs": 8,
+    "effective_batch": 8,
+    "microbatch": 1,
+    "optimizer_updates_per_arm": 32,
+    "seed": 3407,
+    "learning_rate": 1e-05,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lora_dropout": 0,
+    "weight_decay": 0,
+    "max_grad_norm": 1,
+    "max_sequence_length": 2048,
+    "dtype": "bfloat16",
+    "optimizer": "AdamW",
+    "main_teacher_rows": 23,
+    "replay_rows": 6,
+    "replay_exposure_fraction": 0.20689655172413793,
+    "target": "Unedited publicly returned independent U teacher reasoning for main rows, plus executed final commands; verified publisher-derived TRAIN replay has identical empty reasoning in both arms; answer-only always has native empty think",
+    "loss": "Assistant-token causal CE, token mean per effective batch; prompt masked",
+    "update_budget_rationale": "Eight small-data exposures provide the actual recorded update count; two epochs of a tiny curriculum would offer few optimizer updates to test learning. Fixed before outcomes, identical exposure/order in both arms. No claim of exact official KaliBench recipe replication.",
+    "not_equalized": [
+      "supervised token count",
+      "relative answer weight",
+      "GPU time"
+    ],
+    "promotion": "Fixed final checkpoint only; development and retention guard before any confirmation; no guaranteed gain",
+    "official_TEST_queries": 0,
+    "confirmation_queries": 0
+  },
+  "inference_protocol": {
+    "unique_development_tasks": 24,
+    "historical_old_tasks": 64,
+    "train_fit_tasks": 16,
+    "seeds": [
+      3407,
+      4407,
+      5407
+    ],
+    "training_seed": 3407,
+    "modes": [
+      "thinking",
+      "nonthinking"
+    ],
+    "cap": 4096,
+    "sampling": true,
+    "batch_size": 16,
+    "new_pair_planned_responses": 1872
+  },
+  "new_native_search": {
+    "status": "WAITING_FIXED_PAIR",
+    "max_candidates": 2,
+    "updates_each": 32,
+    "fresh_original_initialization": true,
+    "max_GPU_concurrency": 1,
+    "max_search_GPU_hours": 8,
+    "native_journal_required": true,
+    "not_a_24h_search": true
+  },
+  "confirmation": {
+    "status": "UNQUERIED_AT_PREPARATION",
+    "unique_tasks": 24,
+    "once_after_selection": true,
+    "endpoints": [
+      "E0",
+      "fixed_answer_only",
+      "fixed_reasoning",
+      "native_search_selected"
+    ],
+    "dedup_identical_weights": true,
+    "no_reselection": true
+  },
+  "official_TEST_queries": 0,
+  "raw_cases_public": false,
+  "hardware": "One ordinary RTX A6000 48GB; batch Job, no reserved-node tolerations",
+  "execution_recovery": {
+    "original_zero_update_attempt_interrupted_for_runtime_extension": true,
+    "baseline_completed_responses_recovered": 224,
+    "read_only_CPU_recovery_SHA_verified": true,
+    "framed_artifact_transport": true,
+    "resume_first_batch_check_required": true,
+    "no_retraining_in_recovery": true,
+    "first_batch_replay_identical": true,
+    "replayed_responses": 16
+  }
+}

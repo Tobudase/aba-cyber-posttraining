@@ -1,0 +1,14 @@
+{
+  "snapshots": {
+    "train_kali_curriculum_sft_20261117.py": "ed99d8773426a7a23eb5edcbee637a427d93a56b143619ef8ff5ee382a97bf79",
+    "eval_kali_curriculum_sft_20261117.py": "c71ccd8bc1bc00c9f27afd3ffd55df0bc64985c1936f875e9e4862f7d499eae3",
+    "eval_kali_curriculum_sft_resume_20261117.py": "1f5bfa8cebf3ce64dcfef12743bf65d386b9764fc64f9a6c6d36938812df016d",
+    "kali_exact_adapter_loading_20261115.py": "7e5a895bdf274460e77818336b6fa3d8c3849926543c44b712c89156d6bec579",
+    "kali_reference_score_v2_20261117.py": "0113c93e648f54e9888956623b169e483343145c681063caae0b9775e6bb19d5",
+    "kali_reference_score_v3_20261117.py": "b7c3a364d0556c0bed2693124b1acc90fc8aed207b4b6ae1b9c29baa6afe77af",
+    "kali_framed_artifacts_20261117.py": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190"
+  },
+  "derived_metric_sha256": "965cb43a431e1b3d57b629683129bdd4096d7e89052ce4fb8663cb7873126957",
+  "derived_metric_origin": "Unchanged grade() function from host scoring module; private I/O excluded",
+  "raw_cases_released": false
+}

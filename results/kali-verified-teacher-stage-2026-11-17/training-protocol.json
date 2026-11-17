@@ -1,0 +1,38 @@
+{
+  "status": "FROZEN_BEFORE_SFT",
+  "rows": 29,
+  "families": 27,
+  "tools": 12,
+  "epochs": 8,
+  "effective_batch": 8,
+  "microbatch": 1,
+  "optimizer_updates_per_arm": 32,
+  "seed": 3407,
+  "learning_rate": 1e-05,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_targets": [
+    "q_proj",
+    "v_proj"
+  ],
+  "lora_dropout": 0,
+  "weight_decay": 0,
+  "max_grad_norm": 1,
+  "max_sequence_length": 2048,
+  "dtype": "bfloat16",
+  "optimizer": "AdamW",
+  "main_teacher_rows": 23,
+  "replay_rows": 6,
+  "replay_exposure_fraction": 0.20689655172413793,
+  "target": "Unedited publicly returned independent U teacher reasoning for main rows, plus executed final commands; verified publisher-derived TRAIN replay has identical empty reasoning in both arms; answer-only always has native empty think",
+  "loss": "Assistant-token causal CE, token mean per effective batch; prompt masked",
+  "update_budget_rationale": "Eight small-data exposures provide the actual recorded update count; two epochs of a tiny curriculum would offer few optimizer updates to test learning. Fixed before outcomes, identical exposure/order in both arms. No claim of exact official KaliBench recipe replication.",
+  "not_equalized": [
+    "supervised token count",
+    "relative answer weight",
+    "GPU time"
+  ],
+  "promotion": "Fixed final checkpoint only; development and retention guard before any confirmation; no guaranteed gain",
+  "official_TEST_queries": 0,
+  "confirmation_queries": 0
+}
