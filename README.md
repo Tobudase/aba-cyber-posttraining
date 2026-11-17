@@ -1,14 +1,19 @@
 # ABA Cybersecurity Post-training Research
 
+<!-- teacher-fixed-pair-interim:begin -->
+**2026-11-17 audited fixed-SFT update:** Both 32-update SFT arms and all 1,872 paired evaluation responses are complete. Thinking DEV reference matches were **7/72 (base), 7/72 (answer), 5/72 (reasoning)**. Both adapters failed the frozen retention/reliability gate; retain the base model. **Native ABA and independent confirmation are still pending in this snapshot.** [Stage report and figure](results/kali-verified-teacher-stage-2026-11-17/PAIRED_SFT_INTERIM_ZH.md).
+<!-- teacher-fixed-pair-interim:end -->
+
+
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
 
-## November 17, 2026 — independent teacher data verified; full experiment running
+## November 17, 2026 — historical independent-teacher preparation checkpoint
 
 Verified **23 independent-U teacher reasoning tasks / 8 tools**, plus **6 verified publisher TRAIN replay rows**. Only **3** tasks meet the three-sample teacher-pass/student-low-pass gap rule. The broader64-task/32-gap target was not reached; this is a limited feasibility study. On the separate67-task authored TRAIN candidate pool, untrained Qwen3-8B passes **30/67 thinking** and **14/67 non-thinking**, versus teacher **42/67** on the first independent attempt. These are scoped fixture checks, not official KaliBench accuracy.
 
 **Evidence correction:** the three low-success-rule candidates contain **only one gap with repeated certified student failures in both modes**; two remain limited by UNKNOWN checks. Training rows and scoring are unchanged. [Correction and counts](results/kali-verified-teacher-stage-2026-11-17/CORRECTION_ZH.md). The preparation figure’s gap count refers to the original rule, not three certified failures.
 
-The full workflow is launched: the fixed-comparison job is active; real two-candidate native ABA and once-after-selection confirmation wait for verified prerequisites. **No new training gain is claimed yet.** One ordinary RTX A6000 is used serially; official TEST stays untouched. Historical completed experiments below are unchanged.
+At this historical preparation checkpoint, execution was still pending. The audited fixed pair is now reported above; native ABA and independent confirmation remain pending in the interim snapshot. Original preparation figures below are preserved. Official TEST stays untouched.
 
 ![Verified teacher-data stage](results/kali-verified-teacher-stage-2026-11-17/preparation.png)
 
