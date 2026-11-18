@@ -1,0 +1,589 @@
+{
+  "status": "HASH_MATCHED_EXECUTED_SOURCE_SNAPSHOT",
+  "files": {
+    "fixed-core/train_kali_curriculum_sft_20261117.py": {
+      "sha256": "ed99d8773426a7a23eb5edcbee637a427d93a56b143619ef8ff5ee382a97bf79",
+      "origin": "actual fixed-pair submitted bundle"
+    },
+    "fixed-core/eval_kali_curriculum_sft_resume_20261117.py": {
+      "sha256": "1f5bfa8cebf3ce64dcfef12743bf65d386b9764fc64f9a6c6d36938812df016d",
+      "origin": "actual fixed-pair submitted bundle"
+    },
+    "fixed-core/kali_exact_adapter_loading_20261115.py": {
+      "sha256": "7e5a895bdf274460e77818336b6fa3d8c3849926543c44b712c89156d6bec579",
+      "origin": "actual fixed-pair submitted bundle"
+    },
+    "fixed-core/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual fixed-pair submitted bundle"
+    },
+    "fixed-core/kali_curriculum_sft_resume_worker_20261117.py": {
+      "sha256": "eb06a816c3026e7ddce8f87d4b77f38768e585b7dfa97bb17cd72c7faf56ea8a",
+      "origin": "actual fixed-pair worker"
+    },
+    "scoring/kali_reference_score_v3_20261117.py": {
+      "sha256": "b7c3a364d0556c0bed2693124b1acc90fc8aed207b4b6ae1b9c29baa6afe77af",
+      "origin": "frozen strict scorer"
+    },
+    "scoring/score_kali_curriculum_sft_20261117.py": {
+      "sha256": "475f0b256a0ca743a3120bc1352d7b00a691dec8c13031901f066fcbb650bf0a",
+      "origin": "frozen host-only scoring/retention implementation"
+    },
+    "native-core/train_kali_curriculum_sft_20261117.py": {
+      "sha256": "ed99d8773426a7a23eb5edcbee637a427d93a56b143619ef8ff5ee382a97bf79",
+      "origin": "actual native candidate submitted bundle"
+    },
+    "native-core/eval_kali_curriculum_sft_20261117.py": {
+      "sha256": "c71ccd8bc1bc00c9f27afd3ffd55df0bc64985c1936f875e9e4862f7d499eae3",
+      "origin": "actual native candidate submitted bundle"
+    },
+    "native-core/kali_exact_adapter_loading_20261115.py": {
+      "sha256": "7e5a895bdf274460e77818336b6fa3d8c3849926543c44b712c89156d6bec579",
+      "origin": "actual native candidate submitted bundle"
+    },
+    "native-core/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual native candidate submitted bundle"
+    },
+    "native-core/kali_curriculum_sft_framed_worker_20261117.py": {
+      "sha256": "ce189847355581ac47d28c7106f3d1799ea78715e65fdc0cd0db0e574da6610a",
+      "origin": "actual native GPU worker"
+    },
+    "native-current/run_kali_curriculum_native_20261117.py": {
+      "sha256": "013b029b6556d957e3d1b9bb5a72efcc54539afc6cb0a4ced57146fcad240a51",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/build_kali_curriculum_native_20261117.py": {
+      "sha256": "d4a628ab8f275c6d4b25ce2eae5f0decc95010549a0abd6d9e6ef94d692b5815",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_native_bridge_20261117.py": {
+      "sha256": "64434bb8cbe293896a2b9b3d29754442287d052f7dd705a25fcf74903bf8b84b",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_aba_client_20261117.py": {
+      "sha256": "2e646eba8a8c83585d1b4ce48301316ce9344718dc894e39912e5cb3f675a347",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_sft_jobs_20261117.py": {
+      "sha256": "9a50ba45d1c13b7b39f9fd65f9b737e334f4c425616fd992f336c5efc946fc6b",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_admission_retry_20261117.py": {
+      "sha256": "8a6c6bde3f209551f79722d8cc87422b0599f28f8ba1bf57fa0743c24128b1a9",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_sft_framed_worker_20261117.py": {
+      "sha256": "ce189847355581ac47d28c7106f3d1799ea78715e65fdc0cd0db0e574da6610a",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/train_kali_curriculum_sft_20261117.py": {
+      "sha256": "ed99d8773426a7a23eb5edcbee637a427d93a56b143619ef8ff5ee382a97bf79",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/eval_kali_curriculum_sft_20261117.py": {
+      "sha256": "c71ccd8bc1bc00c9f27afd3ffd55df0bc64985c1936f875e9e4862f7d499eae3",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/score_kali_curriculum_sft_20261117.py": {
+      "sha256": "475f0b256a0ca743a3120bc1352d7b00a691dec8c13031901f066fcbb650bf0a",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_qwen_native_bridge_20261115.py": {
+      "sha256": "dbc23de67473ef53458931b486e910e31ce765934a69a16a82290ab9939949f4",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_native_daemon_20261117.py": {
+      "sha256": "59cc6ffd09a4be52d5941c97581af538ebed7d713fd7aa0bfdd372bac1c7bf4d",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_native_supervisor_20261117.py": {
+      "sha256": "35bab7a49710492d6fd7531e0736a8cd77e96351d9f0205de804aa647c52083e",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali8b_native_install.sh": {
+      "sha256": "9dbbe43e67768fae25175e0c2e06fc701ae85e38abf0ac4c56afb030a8dfb23a",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali8b_native_vm.py": {
+      "sha256": "f29e98f4dfd3cce8274b6e82afb47515125f7d4670d59c4dd20128e40cf707ff",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali8b_native_journal.py": {
+      "sha256": "50b76cc8f22ba878082f4c6ac9a48243a4087ad77f6bf85de242cf5378c52a36",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali8b_native_mailbox.py": {
+      "sha256": "ae8a1250337205afbb6afd9dd917eee3b05f69664416b2eacc5925a821d8f0f8",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/nrp_anthropic_transport.py": {
+      "sha256": "5c36391a83bce5d2189fbaf415e8eea297ba4489f4022192fb9a4a62cc38492e",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali8b_prepare_contract.py": {
+      "sha256": "3ef9fadbe306017ba4e2ced3fc294546b19edce6e03ed8d4365797b693c50bb9",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/run_kali_curriculum_protocol_completion_20261117.py": {
+      "sha256": "ca24cd6bc494e2822914328cd9830554cf36e3d80d07f1d78d3de7adbcb486db",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/build_kali_curriculum_protocol_completion_20261117.py": {
+      "sha256": "8ca1c8dfe658d4043cb024443f779057aeaea47beb74cea21ac4b81d90da27cb",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_protocol_completion_bridge_20261117.py": {
+      "sha256": "b71a4c09e56fb84a28e56adb509eec64598e1ca9fb517316da65f818ede70b1d",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_protocol_completion_client_20261117.py": {
+      "sha256": "893644cf670fefee4c3756e08694e09cbbfce6f711771acb68aa838b63fea97b",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/collect_kali_curriculum_existing_candidate_20261117.py": {
+      "sha256": "f68329cf8e5af25e7d9076c733820e5241155e3f5029162510237a191ae551a9",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_native_facts_20261117.py": {
+      "sha256": "7cd99d1d995fbbc85832cfcc07e9c9bb544bfff57c76735b818df439d8b0b43e",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/audit_kali_curriculum_complete_20261117.py": {
+      "sha256": "45dd13c79dd0bf14fa793234469e0ed122fc8baac5adb3f329ffd7abfa96b4fc",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "49dc79b7d0bce00c0d463c413ce97b1409e611b1336309de583b18e2d0270006",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-current/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "871e6321f318d180a9a5d9516c2488734fc56805400e349d2b9704713bf85e7f",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/run_kali_curriculum_native_20261117.py": {
+      "sha256": "e1457edb54e8a68aaa58e85d97ec1a593581ac0cd1f6baa36adeda7690564b41",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/build_kali_curriculum_native_20261117.py": {
+      "sha256": "d4a628ab8f275c6d4b25ce2eae5f0decc95010549a0abd6d9e6ef94d692b5815",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_curriculum_native_bridge_20261117.py": {
+      "sha256": "64434bb8cbe293896a2b9b3d29754442287d052f7dd705a25fcf74903bf8b84b",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_curriculum_aba_client_20261117.py": {
+      "sha256": "2e646eba8a8c83585d1b4ce48301316ce9344718dc894e39912e5cb3f675a347",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_curriculum_sft_jobs_20261117.py": {
+      "sha256": "addd561604eb05e1b35719ca7c7bba8d84b1bedfb7e341619cd8d989bdcabca8",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_curriculum_admission_retry_20261117.py": {
+      "sha256": "fa647c8323486fe3fc1e67712994f52222b7c26ece0f0b84855976be7858e01b",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_curriculum_sft_framed_worker_20261117.py": {
+      "sha256": "ce189847355581ac47d28c7106f3d1799ea78715e65fdc0cd0db0e574da6610a",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/train_kali_curriculum_sft_20261117.py": {
+      "sha256": "ed99d8773426a7a23eb5edcbee637a427d93a56b143619ef8ff5ee382a97bf79",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/eval_kali_curriculum_sft_20261117.py": {
+      "sha256": "c71ccd8bc1bc00c9f27afd3ffd55df0bc64985c1936f875e9e4862f7d499eae3",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/score_kali_curriculum_sft_20261117.py": {
+      "sha256": "475f0b256a0ca743a3120bc1352d7b00a691dec8c13031901f066fcbb650bf0a",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_qwen_native_bridge_20261115.py": {
+      "sha256": "dbc23de67473ef53458931b486e910e31ce765934a69a16a82290ab9939949f4",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_curriculum_native_daemon_20261117.py": {
+      "sha256": "59cc6ffd09a4be52d5941c97581af538ebed7d713fd7aa0bfdd372bac1c7bf4d",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali_curriculum_native_supervisor_20261117.py": {
+      "sha256": "35bab7a49710492d6fd7531e0736a8cd77e96351d9f0205de804aa647c52083e",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali8b_native_install.sh": {
+      "sha256": "9dbbe43e67768fae25175e0c2e06fc701ae85e38abf0ac4c56afb030a8dfb23a",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali8b_native_vm.py": {
+      "sha256": "f29e98f4dfd3cce8274b6e82afb47515125f7d4670d59c4dd20128e40cf707ff",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali8b_native_journal.py": {
+      "sha256": "50b76cc8f22ba878082f4c6ac9a48243a4087ad77f6bf85de242cf5378c52a36",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali8b_native_mailbox.py": {
+      "sha256": "ae8a1250337205afbb6afd9dd917eee3b05f69664416b2eacc5925a821d8f0f8",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/nrp_anthropic_transport.py": {
+      "sha256": "5c36391a83bce5d2189fbaf415e8eea297ba4489f4022192fb9a4a62cc38492e",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-prior-invalid-candidate/kali8b_prepare_contract.py": {
+      "sha256": "3ef9fadbe306017ba4e2ced3fc294546b19edce6e03ed8d4365797b693c50bb9",
+      "origin": "actual native runtime source freeze"
+    },
+    "native-evaluation-replay/run_kali_curriculum_a2_tail_20261118.py": {
+      "sha256": "516313e5ce40f94aeece77d7d80c21563a7836fb3fcdbb85140caf631cd9dea6",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay/kali_curriculum_a2_prefix_resume_worker_20261118.py": {
+      "sha256": "9add4a71fc9826eabc741942d95e28ecf2360b557ea810d87fc3fa8389b2b9c0",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay/kali_curriculum_prefix_resume_20261118.py": {
+      "sha256": "005788f0572af2374e4c9ff88d93a27a634ad73636e8e49978d9cb32789a0a8f",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay/eval_kali_curriculum_prefix_resume_20261118.py": {
+      "sha256": "942f876b488c22a7a4b458f8633421e00090b96770199fc0138ec525c2f18ba2",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "871e6321f318d180a9a5d9516c2488734fc56805400e349d2b9704713bf85e7f",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay/audit_kali_curriculum_a2_tail_20261118.py": {
+      "sha256": "9c3fecc5ed65a9f672e3555a791572e3642f908eaa64f97fe5949e146183027d",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "49dc79b7d0bce00c0d463c413ce97b1409e611b1336309de583b18e2d0270006",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "2c0a9ad4ca821fad4349d4a95b906167fc56f825891c060e3446abda1b096d42",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-prior-CUDA-failure/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "828e99ca7d73ba2a4f13f5c3b9fa21c50aa98d0a892ad44b3a4b291574278cf5",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-prior-CUDA-failure/kali_curriculum_a2_eval_replay_worker_20261118.py": {
+      "sha256": "d27a2121da54ab275aacfcd35a2ee6d2d603f277f17100b16921022c8c003d70",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-prior-CUDA-failure/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "3a023c02336f5f95df6843516c5c5b4c21eb51c51b81e717219b123a2b38b2b9",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-prior-CUDA-failure/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "9167f29a4d35d016ca941a1d48b8e973afededf086ce9d06850edb83fd31d235",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "a4c3d3fddb9a917e93f3ae02bb64ebd8d0c4f5899a208849903a9306cdc5169a",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000/kali_curriculum_a2_eval_replay_worker_20261118.py": {
+      "sha256": "d27a2121da54ab275aacfcd35a2ee6d2d603f277f17100b16921022c8c003d70",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "4bf1476e92793f6ca241f97d2f196c21dcdeb2cc561770f8d50f867e6f3838bb",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "9167f29a4d35d016ca941a1d48b8e973afededf086ce9d06850edb83fd31d235",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A100/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "6e59f20f1796eda396afa8db562607d959d4c459f56e61001cd4026e4e15206c",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A100/kali_curriculum_a2_eval_replay_worker_20261118.py": {
+      "sha256": "d27a2121da54ab275aacfcd35a2ee6d2d603f277f17100b16921022c8c003d70",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A100/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "d28ae5afe0bf998a80ccfdad88d4fd71a89275725247d09f146e3e152fae0bc8",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A100/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "de5f5aafdb9de458ac59d4686746bb5135ea422c337e453c02e716dcafb95c8d",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A100/collect_kali_curriculum_queued_a2_20261118.py": {
+      "sha256": "a3b10f16ec72a0128097985b0b1338fecfc46063de8cb8e62cff69fbb1a0ecd3",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-A100-fingerprint-failure/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "526aabbe2116cc36163db01ac6bee94b2572688e5ce98f73d757a06a759cc349",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-A100-fingerprint-failure/kali_curriculum_a2_eval_replay_worker_20261118.py": {
+      "sha256": "d27a2121da54ab275aacfcd35a2ee6d2d603f277f17100b16921022c8c003d70",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-A100-fingerprint-failure/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "2de5fdbda32eef1d35a6f86200f8dca9ebf444eeb84328415c4d1c33ce88f8f3",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-A100-fingerprint-failure/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "de5f5aafdb9de458ac59d4686746bb5135ea422c337e453c02e716dcafb95c8d",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-A100-fingerprint-failure/collect_kali_curriculum_queued_a2_20261118.py": {
+      "sha256": "a3b10f16ec72a0128097985b0b1338fecfc46063de8cb8e62cff69fbb1a0ecd3",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000-CPU1/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "02d519fb103ef1d5a21ea5296cc3d86de44c9a9685a83ca33e6833f8f5ecf5bb",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000-CPU1/kali_curriculum_a2_eval_replay_worker_20261118.py": {
+      "sha256": "d27a2121da54ab275aacfcd35a2ee6d2d603f277f17100b16921022c8c003d70",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000-CPU1/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "5382cb647aba91c226675a3ceddbdc9d12b53f20e363bd62d4c98500b05a0fe2",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000-CPU1/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "de5f5aafdb9de458ac59d4686746bb5135ea422c337e453c02e716dcafb95c8d",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-unassigned-A6000-CPU1/collect_kali_curriculum_queued_a2_20261118.py": {
+      "sha256": "a3b10f16ec72a0128097985b0b1338fecfc46063de8cb8e62cff69fbb1a0ecd3",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-R6-deadline-failure/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "faa6ae4114c6bd4e4ecb43934d236ba9d48c85de1ffba94df2706186a88debe4",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-R6-deadline-failure/kali_curriculum_a2_eval_replay_worker_20261118.py": {
+      "sha256": "d27a2121da54ab275aacfcd35a2ee6d2d603f277f17100b16921022c8c003d70",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-R6-deadline-failure/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "db7b09243cec0e7662ed5ffe5557d31cc40f7a6dd2e4ad6f444a951f1420bb02",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-R6-deadline-failure/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "de5f5aafdb9de458ac59d4686746bb5135ea422c337e453c02e716dcafb95c8d",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-R6-deadline-failure/collect_kali_curriculum_queued_a2_20261118.py": {
+      "sha256": "a3b10f16ec72a0128097985b0b1338fecfc46063de8cb8e62cff69fbb1a0ecd3",
+      "origin": "actual zero-update A2 evaluation replay after NodeNotReady eviction; prior first replay failed before outputs"
+    },
+    "native-evaluation-replay-queue-collector/collect_kali_curriculum_queued_a2_20261118.py": {
+      "sha256": "2e89054294e6fc6221e07f0486d03aee9f6d17851f2c1e6712987942c698998e",
+      "origin": "actual same-Job collector after queue-only deadline amendment; GPU worker and Pod runtime unchanged"
+    },
+    "native-evaluation-replay-queue-collector/run_kali_curriculum_a2_eval_replay_20261118.py": {
+      "sha256": "cdc0f050f2c3d57d6f1eb5316961b55619c0b76754b508f3759060847c1b45e8",
+      "origin": "actual same-Job collector after queue-only deadline amendment; GPU worker and Pod runtime unchanged"
+    },
+    "native-evaluation-replay-queue-collector/audit_kali_curriculum_a2_eviction_replay_20261118.py": {
+      "sha256": "4bf1476e92793f6ca241f97d2f196c21dcdeb2cc561770f8d50f867e6f3838bb",
+      "origin": "actual same-Job collector after queue-only deadline amendment; GPU worker and Pod runtime unchanged"
+    },
+    "native-evaluation-replay-queue-collector/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "de5f5aafdb9de458ac59d4686746bb5135ea422c337e453c02e716dcafb95c8d",
+      "origin": "actual same-Job collector after queue-only deadline amendment; GPU worker and Pod runtime unchanged"
+    },
+    "confirmation-runtime/run_kali_curriculum_confirmation_20261117.py": {
+      "sha256": "16a938f68513879d841f1e9c0fb4afd905bbf7240fedd1648df8a1b4c3ae472a",
+      "origin": "actual once-frozen confirmation plus pre-query original-TRAIN receipt logit probes"
+    },
+    "confirmation-runtime/kali_curriculum_confirmation_with_gap_worker_20261117.py": {
+      "sha256": "e6e1d9ec82751a5c2b781a59ac35844279954c5f350c07887b02a9cc619d08d9",
+      "origin": "actual once-frozen confirmation plus pre-query original-TRAIN receipt logit probes"
+    },
+    "confirmation-runtime/eval_kali_curriculum_sft_20261117.py": {
+      "sha256": "c71ccd8bc1bc00c9f27afd3ffd55df0bc64985c1936f875e9e4862f7d499eae3",
+      "origin": "actual once-frozen confirmation plus pre-query original-TRAIN receipt logit probes"
+    },
+    "confirmation-runtime/kali_exact_adapter_loading_20261115.py": {
+      "sha256": "7e5a895bdf274460e77818336b6fa3d8c3849926543c44b712c89156d6bec579",
+      "origin": "actual once-frozen confirmation plus pre-query original-TRAIN receipt logit probes"
+    },
+    "confirmation-runtime/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual once-frozen confirmation plus pre-query original-TRAIN receipt logit probes"
+    },
+    "confirmation-runtime/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "49dc79b7d0bce00c0d463c413ce97b1409e611b1336309de583b18e2d0270006",
+      "origin": "actual once-frozen confirmation plus pre-query original-TRAIN receipt logit probes"
+    },
+    "confirmation-deadline-tail/run_kali_curriculum_confirmation_tail_20261118.py": {
+      "sha256": "a337da9ff1e2d206e2a76fe5234f4277697b7dd6e11b1ed11a06cb24d41240d8",
+      "origin": "actual same-frozen-cohort deadline tail; all committed prefixes retained and partial first batches replayed exactly"
+    },
+    "confirmation-deadline-tail/audit_kali_curriculum_confirmation_tail_20261118.py": {
+      "sha256": "8c38fa438c4b7bf53502377d983753b70f7d614a93c10d24ff0b0b3142dd8d82",
+      "origin": "actual same-frozen-cohort deadline tail; all committed prefixes retained and partial first batches replayed exactly"
+    },
+    "confirmation-deadline-tail/kali_curriculum_confirmation_tail_worker_20261118.py": {
+      "sha256": "5285c67ab584524c725e16870edc2886458e375bd5ac91d85f1a21a1d1230c16",
+      "origin": "actual same-frozen-cohort deadline tail; all committed prefixes retained and partial first batches replayed exactly"
+    },
+    "confirmation-deadline-tail/eval_kali_curriculum_confirmation_resume_20261118.py": {
+      "sha256": "72e2ba8967257d00800c5ce452de6f781eb31c60fb59f732f7d81bc000042bb4",
+      "origin": "actual same-frozen-cohort deadline tail; all committed prefixes retained and partial first batches replayed exactly"
+    },
+    "confirmation-deadline-tail/kali_curriculum_prefix_resume_20261118.py": {
+      "sha256": "005788f0572af2374e4c9ff88d93a27a634ad73636e8e49978d9cb32789a0a8f",
+      "origin": "actual same-frozen-cohort deadline tail; all committed prefixes retained and partial first batches replayed exactly"
+    },
+    "confirmation-deadline-tail/kali_curriculum_gpu_budget_20261117.py": {
+      "sha256": "49dc79b7d0bce00c0d463c413ce97b1409e611b1336309de583b18e2d0270006",
+      "origin": "actual same-frozen-cohort deadline tail; all committed prefixes retained and partial first batches replayed exactly"
+    },
+    "private-backup-verification/audit_kali_curriculum_adapter_backup_20261118.py": {
+      "sha256": "75587868bc34a3425b946b16b63d93a7ed1528841a3c2747894c89ceb6215f11",
+      "origin": "actual CPU-only local archive integrity and finite FP32 tensor verification; no weights exported"
+    },
+    "private-backup-verification/backup_kali_curriculum_adapters_20261117.py": {
+      "sha256": "713801cd4e941642183e0fb1fd438207c90072e0c3c14197bd9c8d5402b53685",
+      "origin": "actual CPU-only local archive integrity and finite FP32 tensor verification; no weights exported"
+    },
+    "output-completion-analysis/analyze_kali_curriculum_output_behavior_20261118.py": {
+      "sha256": "2b527d66d0b02a2af1f0a4fb7ea81d2dfb904b4fd2e9a7188b4f8b43c49cdd63",
+      "origin": "actual post-hoc output-completion analysis; no reference labels, model calls or score changes"
+    },
+    "output-completion-analysis/kali_reference_score_v2_20261117.py": {
+      "sha256": "0113c93e648f54e9888956623b169e483343145c681063caae0b9775e6bb19d5",
+      "origin": "actual post-hoc output-completion analysis; no reference labels, model calls or score changes"
+    },
+    "public-plotting/plot_kali_curriculum_final_20261118.py": {
+      "sha256": "e5d52b463d0dfdde76e756ec892dfcaa6281ae4a5107917943f400a54f5f7526",
+      "origin": "actual figure recipe using only published aggregate counts and anonymous 32-step command CE curves"
+    },
+    "final-host-audit/audit_kali_curriculum_complete_20261117.py": {
+      "sha256": "340c68ad1f36688d4eff1c1b12aefe997b413bf3205150dd6ad455841d336dbc",
+      "origin": "actual final receipt/source/prediction recomputation audit and frozen-cohort scoring"
+    },
+    "final-host-audit/analyze_kali_curriculum_confirmation_20261117.py": {
+      "sha256": "e02a1a737c3261adde5d98e0a1abae18dc3d09a4185a911ced681989410770b4",
+      "origin": "actual final receipt/source/prediction recomputation audit and frozen-cohort scoring"
+    },
+    "final-publication/publish_kali_curriculum_final_20261117.py": {
+      "sha256": "1a28ba49861a9b570d5e1dd2e1bf29355ea6f808e13e3d5c0fdf5e96990b17bc",
+      "origin": "actual report publication or secondary analysis invoked in this publication process"
+    },
+    "final-publication/analyze_kali_curriculum_strata_20261117.py": {
+      "sha256": "3436541f055bb998d253a140af37cf599a583718406d3fa007ad055e3d82b661",
+      "origin": "actual report publication or secondary analysis invoked in this publication process"
+    },
+    "auxiliary-TRAIN-replay-fit/known4/check_kali_curriculum_replay_fit_20261118.py": {
+      "sha256": "2d88c4b26f203503998e6fc357cde4a3895c0ce0518414dc53b80e9396770f87",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/known4/kali_cpu_node_pool_20261118.py": {
+      "sha256": "2fe761fa03b8154cbad898c8454e869fc50b10e297c5ef10da488a5641606a2d",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/known4/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/known4/original-oracle.py": {
+      "sha256": "1574d2232c52d8000d1bdf992e970535cfb46c967e9b92fafbeb105be505a6d3",
+      "origin": "actual earlier submitted reference oracle; no hidden tasks"
+    },
+    "auxiliary-TRAIN-replay-fit/known4/actually-submitted-worker.py": {
+      "sha256": "5bd2087196d17a2d57051b40f7b54a2adc7cabd1894831d20ac1bbdf796bcd27",
+      "origin": "exact submitted successful worker; parse errors become UNKNOWN, task checks unchanged"
+    },
+    "auxiliary-TRAIN-replay-fit/a2/check_kali_curriculum_replay_fit_20261118.py": {
+      "sha256": "0cb0e9dec9472564c97bd68796ccadb4fb85d53e0cd6b30a3b7a65a052c9317d",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/a2/kali_cpu_node_pool_20261118.py": {
+      "sha256": "2fe761fa03b8154cbad898c8454e869fc50b10e297c5ef10da488a5641606a2d",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/a2/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/a2/original-oracle.py": {
+      "sha256": "1574d2232c52d8000d1bdf992e970535cfb46c967e9b92fafbeb105be505a6d3",
+      "origin": "actual earlier submitted reference oracle; no hidden tasks"
+    },
+    "auxiliary-TRAIN-replay-fit/a2/actually-submitted-worker.py": {
+      "sha256": "5bd2087196d17a2d57051b40f7b54a2adc7cabd1894831d20ac1bbdf796bcd27",
+      "origin": "exact submitted successful worker; parse errors become UNKNOWN, task checks unchanged"
+    },
+    "auxiliary-TRAIN-replay-fit/known4-attempt1-malformed-command-private/check_kali_curriculum_replay_fit_20261118.py": {
+      "sha256": "7378148e620d0fbbe70b0334c14e795e9483b3b20c87542ffab0bfec980191d6",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/known4-attempt1-malformed-command-private/kali_cpu_node_pool_20261118.py": {
+      "sha256": "2fe761fa03b8154cbad898c8454e869fc50b10e297c5ef10da488a5641606a2d",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/known4-attempt1-malformed-command-private/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual CPU-only already-seen TRAIN replay fit; prior parsing failure retained"
+    },
+    "auxiliary-TRAIN-replay-fit/known4-attempt1-malformed-command-private/original-oracle.py": {
+      "sha256": "1574d2232c52d8000d1bdf992e970535cfb46c967e9b92fafbeb105be505a6d3",
+      "origin": "actual earlier submitted reference oracle; no hidden tasks"
+    },
+    "auxiliary-TRAIN-replay-fit/known4-attempt1-malformed-command-private/actually-submitted-worker.py": {
+      "sha256": "0a789b4ae8f386b0efa5c45206b01e5af05f3c833dc99870d0fe316a339751c6",
+      "origin": "exact failed worker; unhandled quotation parsing error, never counted as completed"
+    },
+    "auxiliary-TRAIN-replay-fit/audit_kali_curriculum_replay_fit_20261118.py": {
+      "sha256": "bc34524ae8a7dce2d1dbe8c1fa313bce6804dd90d224e9c1b4599f0d459e61ac",
+      "origin": "actual CPU artifact and canonical-prediction correspondence audit"
+    },
+    "main-TRAIN-and-gap-fixtures/check_kali_curriculum_posttrain_fit_20261117.py": {
+      "sha256": "919999dd97384852caec043b7c629a3c422febe9aefec07cda7725282a67b07f",
+      "origin": "actual CPU batch host analysis/transport source, frozen before submission; no held-out commands"
+    },
+    "main-TRAIN-and-gap-fixtures/kali_cpu_node_pool_20261118.py": {
+      "sha256": "2fe761fa03b8154cbad898c8454e869fc50b10e297c5ef10da488a5641606a2d",
+      "origin": "actual CPU batch host analysis/transport source, frozen before submission; no held-out commands"
+    },
+    "main-TRAIN-and-gap-fixtures/kali_curriculum_acceptance_20261117.py": {
+      "sha256": "0ace8a8e0151fc5e5d390d87daa98c255b049232ce04d6b008106faa9aa0bf92",
+      "origin": "actual CPU batch host analysis/transport source, frozen before submission; no held-out commands"
+    },
+    "main-TRAIN-and-gap-fixtures/kali_framed_artifacts_20261117.py": {
+      "sha256": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "origin": "actual CPU batch host analysis/transport source, frozen before submission; no held-out commands"
+    },
+    "main-TRAIN-and-gap-fixtures/original-oracle.py": {
+      "sha256": "24f212ea8828b77bb68093290a9d7f1dab8d924fd9a0523a7ff0fc13c3f4eda2",
+      "origin": "unchanged actual admitted postconditions, two benign fixtures and positive/negative controls"
+    },
+    "main-TRAIN-and-gap-fixtures/actually-submitted-worker.py": {
+      "sha256": "8fab3d0a434a357f94cd6ad04460c80894880202cd78f51c3e41b4e2354f0f1c",
+      "origin": "exact successful CPU main TRAIN/gap worker; only framed transport differs from admitted oracle"
+    },
+    "main-TRAIN-and-gap-fixtures/audit_kali_curriculum_main_fit_20261118.py": {
+      "sha256": "9dc16f32806af50c6ad6b97850035253830524617e78c83e548fae09366e1bb3",
+      "origin": "actual source/prediction-to-command mapping/full CPU result recomputation audit"
+    }
+  },
+  "private_cases_public": false,
+  "credentials_public": false,
+  "weights_public": false,
+  "standalone_public_dataset_reproduction": false
+}

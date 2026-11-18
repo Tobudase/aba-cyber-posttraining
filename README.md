@@ -1,8 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
-<!-- teacher-fixed-pair-interim:begin -->
-**2026-11-17 verified interim:** Fixed SFT and the native-dispatched A1 backend are audited. Thinking DEV matches: **7/72 base, 7/72 answer SFT, 5/72 reasoning SFT, 6/72 A1**; no adapter passes the retention gate, so retain the base. A2's 32-step weights are recovered, but its full evaluation, valid whole native ABA and independent confirmation remain pending after infrastructure failures. **No A2 score or final gain is claimed.** [Audited results, figure and recovery details](results/kali-verified-teacher-stage-2026-11-17/RECOVERY_INTERIM_ZH.md).
-<!-- teacher-fixed-pair-interim:end -->
+## Verified teacher reasoning: completed internal study (started 2026-11-17)
+
+Completed the independent-teacher data → paired SFT → native completion of two original-native-trained checkpoints (0 new completion steps) → once-frozen internal confirmation cycle on original Qwen3-8B. Only 23 primary traces; 3 low-success gap candidates, of which just 1 has repeated certified student failures in both modes (2 remain uncertain); one training seed. Retained model: **E0**. No trained adapter met the predefined retention gate. Thinking confirmation reasoning-minus-answer: **+4.17 pp**. This is **not an official KaliBench/CyberGym score**. [Audited final report](results/kali-verified-teacher-stage-2026-11-17/FINAL_RESULT_ZH.md) · [Results figure](results/kali-verified-teacher-stage-2026-11-17/final-results.png).
+
+![Audited internal results](results/kali-verified-teacher-stage-2026-11-17/final-results.png)
+
+
+
 
 
 Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
@@ -13,7 +18,7 @@ Verified **23 independent-U teacher reasoning tasks / 8 tools**, plus **6 verifi
 
 **Evidence correction:** the three low-success-rule candidates contain **only one gap with repeated certified student failures in both modes**; two remain limited by UNKNOWN checks. Training rows and scoring are unchanged. [Correction and counts](results/kali-verified-teacher-stage-2026-11-17/CORRECTION_ZH.md). The preparation figure’s gap count refers to the original rule, not three certified failures.
 
-At this historical preparation checkpoint, execution was still pending. The audited fixed pair is now reported above; native ABA and independent confirmation remain pending in the interim snapshot. Original preparation figures below are preserved. Official TEST stays untouched.
+At this historical preparation checkpoint, full execution was still pending. The completed audited study is now reported above; the original preparation figures and aggregates below are preserved. Official TEST stays untouched.
 
 ![Verified teacher-data stage](results/kali-verified-teacher-stage-2026-11-17/preparation.png)
 
