@@ -1,5 +1,5 @@
 # Execution status
 
-Baseline624 responses complete; answer-only32 real optimizer updates verified. Paired evaluation remains active; native ABA and post-selection confirmation wait for prerequisites. No new final training gain is claimed.
+Fixed answer/reasoning SFT and the native-dispatched A1 backend have completed verified training/evaluation. A2 weights and 32 training updates are recovered; its evaluation is queued after node eviction and a zero-response CUDA failure. Valid whole native ABA and post-selection confirmation remain incomplete. Original base retained provisionally; official TEST and confirmation queries: 0.
 
-Evidence correction: three low-success candidates contain only one gap with repeated certified student failures in both modes; two remain UNKNOWN-limited. [Correction](CORRECTION_ZH.md). Frozen training/metrics unchanged; official TEST untouched.
+See the dated [recovery snapshot](RECOVERY_INTERIM_ZH.md) and project homepage for subsequent completion.

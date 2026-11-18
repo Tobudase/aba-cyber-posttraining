@@ -1,7 +1,7 @@
 # ABA Cybersecurity Post-training Research
 
 <!-- teacher-fixed-pair-interim:begin -->
-**2026-11-17 audited fixed-SFT update:** Both 32-update SFT arms and all 1,872 paired evaluation responses are complete. Thinking DEV reference matches were **7/72 (base), 7/72 (answer), 5/72 (reasoning)**. Both adapters failed the frozen retention/reliability gate; retain the base model. **Native ABA and independent confirmation are still pending in this snapshot.** [Stage report and figure](results/kali-verified-teacher-stage-2026-11-17/PAIRED_SFT_INTERIM_ZH.md).
+**2026-11-17 verified interim:** Fixed SFT and the native-dispatched A1 backend are audited. Thinking DEV matches: **7/72 base, 7/72 answer SFT, 5/72 reasoning SFT, 6/72 A1**; no adapter passes the retention gate, so retain the base. A2's 32-step weights are recovered, but its full evaluation, valid whole native ABA and independent confirmation remain pending after infrastructure failures. **No A2 score or final gain is claimed.** [Audited results, figure and recovery details](results/kali-verified-teacher-stage-2026-11-17/RECOVERY_INTERIM_ZH.md).
 <!-- teacher-fixed-pair-interim:end -->
 
 
