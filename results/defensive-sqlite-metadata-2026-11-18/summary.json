@@ -1,0 +1,438 @@
+{
+  "student_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "teacher": [
+    "Qwen/Qwen3.8-27B-FP8"
+  ],
+  "screened": 32,
+  "teacher_pass_two": 12,
+  "dual_mode_confirmed_gaps": 0,
+  "by_family": {
+    "application_identifier": 0,
+    "number_of_free_pages": 0,
+    "release_marker": 0,
+    "schema_generation": 0
+  },
+  "trained": 6,
+  "steps_per_arm": 24,
+  "coefficients": {
+    "answer": 1,
+    "replay": 0.25,
+    "evidence_reasoning_only": 0.5
+  },
+  "answer_replay_tokens_and_order_match": true,
+  "base_init_sha": "f75eb729acfbbfe3c27b66f4ec9ff6d5bc4c1c32ebd0afc63ae65ee0c218bfc6",
+  "final_sha": {
+    "answer": "448b84473035b98132fe4f0fc9c7522afcb847413e8942d0f66d406aebc10f26",
+    "reason": "0d997951aefd5424ef3e210342121866d3dc6988f8811b8ba56fe450585cba23"
+  },
+  "freeze_sha": "ca076b43a923f506fea4a10a556fb2696a6a1d4f4a66ac625612fbda6495f655",
+  "panels": {
+    "holdout": {
+      "files": 24,
+      "outcomes": {
+        "base": {
+          "unknown": 22,
+          "fail": 2
+        },
+        "answer": {
+          "unknown": 10,
+          "fail": 14
+        },
+        "reason": {
+          "unknown": 13,
+          "fail": 11
+        }
+      },
+      "paired": {
+        "answer-base": {
+          "wins": 0,
+          "losses": 0,
+          "descriptive_exact_p": 1
+        },
+        "reason-base": {
+          "wins": 0,
+          "losses": 0,
+          "descriptive_exact_p": 1
+        },
+        "reason-answer": {
+          "wins": 0,
+          "losses": 0,
+          "descriptive_exact_p": 1
+        }
+      },
+      "typed_field_matches": {
+        "base": {
+          "offset": 0,
+          "width": 0,
+          "value": 0
+        },
+        "answer": {
+          "offset": 0,
+          "width": 0,
+          "value": 0
+        },
+        "reason": {
+          "offset": 0,
+          "width": 0,
+          "value": 0
+        }
+      },
+      "per_field": {
+        "application_identifier": {
+          "base": 0,
+          "answer": 0,
+          "reason": 0
+        },
+        "number_of_free_pages": {
+          "base": 0,
+          "answer": 0,
+          "reason": 0
+        },
+        "release_marker": {
+          "base": 0,
+          "answer": 0,
+          "reason": 0
+        },
+        "schema_generation": {
+          "base": 0,
+          "answer": 0,
+          "reason": 0
+        }
+      }
+    },
+    "retention": {
+      "files": 12,
+      "outcomes": {
+        "base": {
+          "unknown": 10,
+          "fail": 2
+        },
+        "answer": {
+          "fail": 6,
+          "unknown": 6
+        },
+        "reason": {
+          "fail": 6,
+          "unknown": 6
+        }
+      },
+      "paired": {
+        "answer-base": {
+          "wins": 0,
+          "losses": 0,
+          "descriptive_exact_p": 1
+        },
+        "reason-base": {
+          "wins": 0,
+          "losses": 0,
+          "descriptive_exact_p": 1
+        },
+        "reason-answer": {
+          "wins": 0,
+          "losses": 0,
+          "descriptive_exact_p": 1
+        }
+      },
+      "typed_field_matches": {
+        "base": {
+          "offset": 2,
+          "width": 1,
+          "value": 0
+        },
+        "answer": {
+          "offset": 6,
+          "width": 1,
+          "value": 0
+        },
+        "reason": {
+          "offset": 6,
+          "width": 1,
+          "value": 0
+        }
+      },
+      "per_field": {
+        "page_size_bytes": {
+          "base": 0,
+          "answer": 0,
+          "reason": 0
+        },
+        "total_pages": {
+          "base": 0,
+          "answer": 0,
+          "reason": 0
+        }
+      }
+    }
+  },
+  "teacher_verified_repeated_student_failure_by_mode": {
+    "False": 0,
+    "True": 0
+  },
+  "screen_by_mode": {
+    "True": {
+      "pass": 0,
+      "fail": 0,
+      "unknown": 96
+    },
+    "False": {
+      "pass": 0,
+      "fail": 10,
+      "unknown": 86
+    }
+  },
+  "examples_in_training_by_field": {
+    "application_identifier": 0,
+    "number_of_free_pages": 3,
+    "release_marker": 0,
+    "schema_generation": 3
+  },
+  "confirmed_gap_student_wrong_fields": {},
+  "optimizer_protocol": {
+    "base": "Qwen/Qwen3-8B",
+    "precision": "BF16 base, FP32 trainable adapters",
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0,
+    "adamw_lr": 1e-05,
+    "weight_decay": 0,
+    "gradient_clip_norm": 1,
+    "epochs": 4,
+    "initialization_seed": 3407,
+    "optimizer_seeds_tested": 1,
+    "main_evaluation": "nonthinking greedy, one response per file, max 320 new tokens"
+  },
+  "immutable_inputs": {
+    "inputs": "ff313d6abee9a78b6f2708388b58327f2f28a75c1f0b97280a8d5011ce29ecb0",
+    "worker": "47f6a608f2b542ac06e189cadc221a145cec0d30487d4dee266ea9bbe302da5a",
+    "teacher_screen": "4cb5ce057e9e1eeae9b9de41d8f5c11f9920904d8a7e0cef6e47e37c624ac195",
+    "matched_screen": "225c36cfb333428186069858a34a34213358a388bcc254a269fbfa3ffc64495f",
+    "holdout": "db17505c8e83fa69796d84871b3a4646100df27ed76675e199e28bfc3b20c214",
+    "replay": "73b699f3fad0baccaae440d62624ac18f1d2e1abd9e40031d77aab879ac91acb",
+    "retention": "cbba20009ee377be2d7ee392d41e1c817d81f5d481eb292bcc99a108ae23d50c",
+    "train": "81b2503039e1a4d82adfe74f6d9d1afb9f773b8cd2004a686db35c73438de26a"
+  },
+  "numeric_response_diagnostics": {
+    "holdout": {
+      "base": {
+        "ended": 18,
+        "no_recorded_eos": 6,
+        "complete_numeric": 14,
+        "offset_histogram": {
+          "0": 14
+        },
+        "width_histogram": {
+          "16": 11,
+          "4": 3
+        },
+        "correct_by_field": {
+          "offset": 0,
+          "width": 3,
+          "value": 0
+        }
+      },
+      "answer": {
+        "ended": 14,
+        "no_recorded_eos": 10,
+        "complete_numeric": 14,
+        "offset_histogram": {
+          "0": 14
+        },
+        "width_histogram": {
+          "16": 14
+        },
+        "correct_by_field": {
+          "offset": 0,
+          "width": 0,
+          "value": 0
+        }
+      },
+      "reason": {
+        "ended": 12,
+        "no_recorded_eos": 12,
+        "complete_numeric": 11,
+        "offset_histogram": {
+          "0": 11
+        },
+        "width_histogram": {
+          "16": 11
+        },
+        "correct_by_field": {
+          "offset": 0,
+          "width": 0,
+          "value": 0
+        }
+      }
+    },
+    "retention": {
+      "base": {
+        "ended": 12,
+        "no_recorded_eos": 0,
+        "complete_numeric": 10,
+        "offset_histogram": {
+          "0": 6,
+          "16": 4
+        },
+        "width_histogram": {
+          "16": 6,
+          "2": 1,
+          "4": 3
+        },
+        "correct_by_field": {
+          "offset": 4,
+          "width": 1,
+          "value": 0
+        }
+      },
+      "answer": {
+        "ended": 7,
+        "no_recorded_eos": 5,
+        "complete_numeric": 6,
+        "offset_histogram": {
+          "16": 6
+        },
+        "width_histogram": {
+          "4": 5,
+          "2": 1
+        },
+        "correct_by_field": {
+          "offset": 6,
+          "width": 1,
+          "value": 0
+        }
+      },
+      "reason": {
+        "ended": 6,
+        "no_recorded_eos": 6,
+        "complete_numeric": 6,
+        "offset_histogram": {
+          "16": 6
+        },
+        "width_histogram": {
+          "4": 5,
+          "2": 1
+        },
+        "correct_by_field": {
+          "offset": 6,
+          "width": 1,
+          "value": 0
+        }
+      }
+    }
+  },
+  "supplement_and_verification": {
+    "jobs": {
+      "screen": {
+        "uid": "3f62ab20-fdfd-48d0-b930-4531de9085f6",
+        "submitted": "2026-11-18T21:02:22.644957+00:00",
+        "finished": "2026-11-18T21:27:29Z",
+        "gpu": null,
+        "task_sha256": "f1f4399fecdae26c1e39dbfd75ac915be6b519d0dff903a3147f5a4f64d67e38",
+        "result_sha256": "6243b58d6753dfeb4366c69b9fcc83069ca3a0faddfba598c5f3839933122be3"
+      },
+      "pair": {
+        "uid": "e18caadf-d6e1-4751-8132-2a2e24a4eab8",
+        "submitted": "2026-11-18T22:23:45.080934+00:00",
+        "finished": "2026-11-18T22:35:21Z",
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "task_sha256": "bc33f57d66651324baeb189fdb1270190e2680467710feedb9eaeab6ac4a3da7",
+        "result_sha256": "0affee4a24901efad48fe47859961668609f6db102a4ea93904a0a97c10eec7a"
+      }
+    },
+    "operational_attempts_excluded": {
+      "failed_long_gpu_kernel_launch": {
+        "uid": "4c5ae909-6b03-433c-b717-9fcba2f3db82",
+        "predictions_scored": 0
+      },
+      "unassigned_generic_training_route": {
+        "uid": "c603b79e-2937-40a4-a0e4-edaa2af6970f",
+        "verified_unassigned": true,
+        "reason": "ordinary compatible pool still pending; research namespace A100 quota 0/12 and two compatible nodes reporting unused cards, requesting one serial GPU"
+      }
+    },
+    "teacher_verified_counts_histogram": {
+      "3": 7,
+      "0": 15,
+      "2": 5,
+      "1": 5
+    },
+    "deployment_gap_files": 6,
+    "trained_files": 6,
+    "long_screen_complete": false,
+    "also_confirmed_with_long_thinking": null,
+    "long_student_responses": null,
+    "nonthinking_on_matched_files": {
+      "fail": 16,
+      "unknown": 2
+    },
+    "short_thinking_cutoffs": 96,
+    "long_thinking_cutoffs": null,
+    "semantic_panels": {
+      "holdout": {
+        "base": {
+          "fail": 14,
+          "unknown": 10
+        },
+        "answer": {
+          "unknown": 10,
+          "fail": 14
+        },
+        "reason": {
+          "unknown": 13,
+          "fail": 11
+        },
+        "paired": {
+          "answer-base": {
+            "wins": 0,
+            "losses": 0
+          },
+          "reason-base": {
+            "wins": 0,
+            "losses": 0
+          },
+          "reason-answer": {
+            "wins": 0,
+            "losses": 0
+          }
+        }
+      },
+      "retention": {
+        "base": {
+          "unknown": 2,
+          "fail": 10
+        },
+        "answer": {
+          "fail": 6,
+          "unknown": 6
+        },
+        "reason": {
+          "fail": 6,
+          "unknown": 6
+        },
+        "paired": {
+          "answer-base": {
+            "wins": 0,
+            "losses": 0
+          },
+          "reason-base": {
+            "wins": 0,
+            "losses": 0
+          },
+          "reason-answer": {
+            "wins": 0,
+            "losses": 0
+          }
+        }
+      }
+    },
+    "protocol_amendment": {
+      "frozen_utc": "2026-11-18T21:32:56.120121+00:00",
+      "primary": "Original strict metric and 1024 thinking token screen retained.",
+      "supplement": "Train only on files with >=2/3 completed, explicit incorrect nonthinking answers, >=2/3 teacher answers and byte evidence certified, and a checked teacher derivation. An unambiguous JSON answer alone or in one JSON fence is accepted by the supplementary metric. Unknown and cutoffs never count as failures. Assess these files on 3 new thinking runs at cap 6144; report dual-mode confirmation separately. Selection is independent of longer thinking outcome.",
+      "evaluation": "Report both original strict protocol and secondary format-independent paired descriptive counts. No change to held-out files or decoding."
+    }
+  }
+}

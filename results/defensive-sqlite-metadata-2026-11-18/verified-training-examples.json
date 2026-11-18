@@ -1,0 +1,68 @@
+[
+  {
+    "prompt": "For the read-only inventory, report the schema generation from snapshot-6bfd2fc4c044f50f.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 10 00 01 01 00 40 20 20 00 00 00 03 00 00 00 17\n0020: 00 00 00 04 00 00 00 15 00 00 f1 b4 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 54 e7\n0040: 00 00 00 00 00 00 eb 8e 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "field": "schema_generation",
+    "file_sha256": "b1f89b0171fe8547e61304e1cc2817b69523fa24473b8ea6331585dfe5aab732",
+    "answer": {
+      "offset": 40,
+      "width": 4,
+      "value": 61876
+    },
+    "teacher_evidence_steps": "I locate schema cookie at decimal offset 40. I read 4 bytes in file order: 0000f1b4. Decoding 0000f1b4 as an unsigned big-endian integer gives 61876."
+  },
+  {
+    "prompt": "For the read-only inventory, report the number of free pages from snapshot-e89b1b73d394ddd3.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 08 00 01 01 00 40 20 20 00 00 00 03 00 00 00 2c\n0020: 00 00 00 04 00 00 00 2a 00 00 03 98 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 3c 05\n0040: 00 00 00 00 00 00 e0 53 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "field": "number_of_free_pages",
+    "file_sha256": "f7d86eefaf7747feaef79d607a505ce793ba61b6569da480e7a5d728466fae50",
+    "answer": {
+      "offset": 36,
+      "width": 4,
+      "value": 42
+    },
+    "teacher_evidence_steps": "I locate freelist count at decimal offset 36. I read 4 bytes in file order: 0000002a. Decoding 0000002a as an unsigned big-endian integer gives 42."
+  },
+  {
+    "prompt": "For the read-only inventory, report the schema generation from snapshot-b302175737b1e31c.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 08 00 01 01 00 40 20 20 00 00 00 03 00 00 00 10\n0020: 00 00 00 04 00 00 00 0e 00 00 4c bf 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 3a 43\n0040: 00 00 00 00 00 00 0c 00 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "field": "schema_generation",
+    "file_sha256": "9fc01553843f682f3cbf02499a80adb122e85fe4f533e2740726c39cf83458d0",
+    "answer": {
+      "offset": 40,
+      "width": 4,
+      "value": 19647
+    },
+    "teacher_evidence_steps": "I locate schema cookie at decimal offset 40. I read 4 bytes in file order: 00004cbf. Decoding 00004cbf as an unsigned big-endian integer gives 19647."
+  },
+  {
+    "prompt": "For the read-only inventory, report the number of free pages from snapshot-38c74868c3b95426.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 00 01 01 01 00 40 20 20 00 00 00 03 00 00 00 04\n0020: 00 00 00 04 00 00 00 02 00 00 c9 a2 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 52 11\n0040: 00 00 00 00 00 00 cd a1 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "field": "number_of_free_pages",
+    "file_sha256": "fdebad8e6c0eae3076ad7e5880492da399b5d474a4ea490830cdd8a8a5c3421a",
+    "answer": {
+      "offset": 36,
+      "width": 4,
+      "value": 2
+    },
+    "teacher_evidence_steps": "I locate freelist count at decimal offset 36. I read 4 bytes in file order: 00000002. Decoding 00000002 as an unsigned big-endian integer gives 2."
+  },
+  {
+    "prompt": "For the read-only inventory, report the number of free pages from snapshot-34985358bc39873a.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 10 00 01 01 00 40 20 20 00 00 00 03 00 00 00 18\n0020: 00 00 00 04 00 00 00 16 00 00 8e c5 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 58 bb\n0040: 00 00 00 00 00 00 5a 60 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "field": "number_of_free_pages",
+    "file_sha256": "96fc1ed92850d260b14c1122f1ea4d817c94b22e3cb2ef9d5a97ff7dd2118e40",
+    "answer": {
+      "offset": 36,
+      "width": 4,
+      "value": 22
+    },
+    "teacher_evidence_steps": "I locate freelist count at decimal offset 36. I read 4 bytes in file order: 00000016. Decoding 00000016 as an unsigned big-endian integer gives 22."
+  },
+  {
+    "prompt": "For the read-only inventory, report the schema generation from snapshot-1f0b4e44ee07318d.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 02 00 01 01 00 40 20 20 00 00 00 03 00 00 00 4b\n0020: 00 00 00 04 00 00 00 49 00 00 dc 4a 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 91 bd\n0040: 00 00 00 00 00 00 ca d2 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "field": "schema_generation",
+    "file_sha256": "90f9597101b697ac9142dcddead31d9781aa8f850b1538ee7f6e83e6c36c3102",
+    "answer": {
+      "offset": 40,
+      "width": 4,
+      "value": 56394
+    },
+    "teacher_evidence_steps": "I locate schema cookie at decimal offset 40. I read 4 bytes in file order: 0000dc4a. Decoding 0000dc4a as an unsigned big-endian integer gives 56394."
+  }
+]

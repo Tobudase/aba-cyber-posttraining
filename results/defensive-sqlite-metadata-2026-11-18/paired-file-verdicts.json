@@ -1,0 +1,794 @@
+[
+  {
+    "file_sha256": "27d2c0e3ff4e9679eb597230f60e846e5be89c4e9fc0350d28a193cbe119817d",
+    "split": "holdout",
+    "field": "schema_generation",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "7a6a3dd4bbfa9e2bfd594057d200bd097b7bbe012e5f965fd1a8f9c9540913d6",
+    "split": "holdout",
+    "field": "release_marker",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "f38a2de7ec30be7ca589d7e1c5ad98a5029cce1552864f660f53b295b2bfdeff",
+    "split": "holdout",
+    "field": "application_identifier",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "77ecec9c2b0fec2ba035a3c1d850b2ddae21fa03877abbda68457d3938f9bd94",
+    "split": "holdout",
+    "field": "number_of_free_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "87f3eddee4b3b381626027d5d7d788672806455698be58db2bdc5a816c371683",
+    "split": "holdout",
+    "field": "schema_generation",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "a0e1d0b763a0444fb98f78b8b7698cec2112342294fbaa5694f894f45a42dedc",
+    "split": "holdout",
+    "field": "release_marker",
+    "arms": {
+      "base": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "d9ddde4a42cc66251ac4b6310ec8ab043ff839382b0bf18cac9663650390ce53",
+    "split": "holdout",
+    "field": "application_identifier",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "6e04793f9c692260ab40ed57cd3d2ab635ae72a030fa84a000d4a0c3ec39c4c7",
+    "split": "holdout",
+    "field": "number_of_free_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "5d2628a6212f15d4091b0de7f8a61516f20ba3f57761f4f6aad4a7dacfdb8bf9",
+    "split": "holdout",
+    "field": "schema_generation",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "01e78db1d724373bcb22a6b605bd280b58519fe4d3d11ad1122e5e20ae5181eb",
+    "split": "holdout",
+    "field": "release_marker",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "e0e88a4f5b40940ab8da7d0c96b7beadb2beec2f13500cd136a229b32bfda33a",
+    "split": "holdout",
+    "field": "application_identifier",
+    "arms": {
+      "base": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "ee166d6f69374ed4ca54bbae6946ee97710875c7417fe2dfb1e703fdef78617b",
+    "split": "holdout",
+    "field": "number_of_free_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "fec1d277014858404742b6dc7dd522532cfe63292319a5ddae23d509b30b2ca4",
+    "split": "holdout",
+    "field": "schema_generation",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "1d6fa3c405dda58b69d2e7444d0c6cf4c8ae6f9ae5de7da1a985f2708201c7c8",
+    "split": "holdout",
+    "field": "release_marker",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "0194912b54393158d97a23ed910a05faf9907984dcf204d084664dba448853cb",
+    "split": "holdout",
+    "field": "application_identifier",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "c30becc24d5cd7c9b609725e456b47a41a6d0bb33d3c3e51fa57b494d6112628",
+    "split": "holdout",
+    "field": "number_of_free_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "bc4162208767e69064050e2d6191e7c7dcc78ea468d584a0ec8e24eb47ab8f0a",
+    "split": "holdout",
+    "field": "schema_generation",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "2eccdb6873095c6edeed7dd47e7c4feab3aacfd082c38b6cec2af2c9ada7e030",
+    "split": "holdout",
+    "field": "release_marker",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "f32a6a1bb8805e4b87a46837206eba4c410856876669477f88807f53bb35b5f5",
+    "split": "holdout",
+    "field": "application_identifier",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "dc7260e0a78e40761b77a6b3412dabfe08a5c037cfd51d0c5eee8fa7ca0ec3ee",
+    "split": "holdout",
+    "field": "number_of_free_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "83cc3b7348fc54dfaf79debe0605cba66efd9b8e6c504771b061b1749f3d221f",
+    "split": "holdout",
+    "field": "schema_generation",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "8e5f48b03b9700763659d35cf61c05e83cdd81e2b4deb0654dbd88ded568d56d",
+    "split": "holdout",
+    "field": "release_marker",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "3b88235b17781768e937240b4ebad48cd4043602888e0ec5778191d0afc03033",
+    "split": "holdout",
+    "field": "application_identifier",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "63961a09b9b46106357a86e5dd1da7821bdd7ad691bbaacb479626e652d1db51",
+    "split": "holdout",
+    "field": "number_of_free_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "fba0e59174b3de93d7725ebc92403bca26b1fd7a9290e97ee1827ac1ecbc8280",
+    "split": "retention",
+    "field": "page_size_bytes",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "21de5c86561303b00805f263bff597130ba77e116d05c0aaf75d065bfa2cbf49",
+    "split": "retention",
+    "field": "total_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "3df4abfa8e3c4d0486615336cdda9c76ec3895af56c875fd9a725555d2dc9e62",
+    "split": "retention",
+    "field": "page_size_bytes",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "a02fb9c67f22915bb197d5f0685db9864c03d83e32262e23d3e20bf7c2915bf5",
+    "split": "retention",
+    "field": "total_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": true
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "3e731daa7138d6c55e0baf5bc216f26186f2ca91e3559296e3ed86be099cdfbe",
+    "split": "retention",
+    "field": "page_size_bytes",
+    "arms": {
+      "base": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "fe53c8b10cfcba3faa9fcced71f7b04bf71b98213478dd965f0aac52fb3c8b0a",
+    "split": "retention",
+    "field": "total_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "fa44ca5ada1ffceafd77f6902cc61df8317ce0b9d9300ea25f45916eebe2475e",
+    "split": "retention",
+    "field": "page_size_bytes",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "0b413600371875af6633868394b9917549fd323f236597d4bb47b92649aa19c8",
+    "split": "retention",
+    "field": "total_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "31621a28869fbe04b632c606f8cb25eec9411657b2567acc5d7bdefbf5db24da",
+    "split": "retention",
+    "field": "page_size_bytes",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "db57502d3f2c44d550f354333957e0a8cc46e5aa4ec0f64b0cd99e9e36363c49",
+    "split": "retention",
+    "field": "total_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  },
+  {
+    "file_sha256": "1d1ba3158adc9b1a23264127e2ccb8d39cf743dbc372fe2cbc891eff987cfd9d",
+    "split": "retention",
+    "field": "page_size_bytes",
+    "arms": {
+      "base": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      },
+      "reason": {
+        "strict": "fail",
+        "numeric": "fail",
+        "ended": true
+      }
+    }
+  },
+  {
+    "file_sha256": "b7da6623917e2d792c492f050665fa8c1ed20d1a435678898f8d29dee3f3071b",
+    "split": "retention",
+    "field": "total_pages",
+    "arms": {
+      "base": {
+        "strict": "unknown",
+        "numeric": "fail",
+        "ended": true
+      },
+      "answer": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      },
+      "reason": {
+        "strict": "unknown",
+        "numeric": "unknown",
+        "ended": false
+      }
+    }
+  }
+]

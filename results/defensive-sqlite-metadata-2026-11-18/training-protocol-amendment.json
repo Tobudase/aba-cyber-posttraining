@@ -1,0 +1,6 @@
+{
+  "frozen_utc": "2026-11-18T21:32:56.120121+00:00",
+  "primary": "Original strict metric and 1024 thinking token screen retained.",
+  "supplement": "Train only on files with >=2/3 completed, explicit incorrect nonthinking answers, >=2/3 teacher answers and byte evidence certified, and a checked teacher derivation. An unambiguous JSON answer alone or in one JSON fence is accepted by the supplementary metric. Unknown and cutoffs never count as failures. Assess these files on 3 new thinking runs at cap 6144; report dual-mode confirmation separately. Selection is independent of longer thinking outcome.",
+  "evaluation": "Report both original strict protocol and secondary format-independent paired descriptive counts. No change to held-out files or decoding."
+}

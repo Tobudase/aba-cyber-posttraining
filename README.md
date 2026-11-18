@@ -1,5 +1,7 @@
 # ABA Cybersecurity Post-training Research
 
+On 24 fresh SQLite evidence files, original Qwen3-8B, answer SFT and evidence SFT scored **0/24, 0/24 and 0/24**. [Paired experiment and training-data verification](results/defensive-sqlite-metadata-2026-11-18/README_ZH.md).
+
 ## Verified teacher reasoning: completed internal study (started 2026-11-17)
 
 Completed the independent-teacher data → paired SFT → native completion of two original-native-trained checkpoints (0 new completion steps) → once-frozen internal confirmation cycle on original Qwen3-8B. Only 23 primary traces; 3 low-success gap candidates, of which just 1 has repeated certified student failures in both modes (2 remain uncertain); one training seed. Retained model: **E0**. No trained adapter met the predefined retention gate. Thinking confirmation reasoning-minus-answer: **+4.17 pp**. This is **not an official KaliBench/CyberGym score**. [Audited final report](results/kali-verified-teacher-stage-2026-11-17/FINAL_RESULT_ZH.md) · [Results figure](results/kali-verified-teacher-stage-2026-11-17/final-results.png).

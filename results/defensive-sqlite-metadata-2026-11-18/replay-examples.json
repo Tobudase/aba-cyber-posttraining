@@ -1,0 +1,42 @@
+[
+  {
+    "id": "snapshot-83049a939f32f2f3",
+    "prompt": "For the read-only inventory, report the page size bytes from snapshot-83049a939f32f2f3.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 02 00 01 01 00 40 20 20 00 00 00 03 00 00 00 2f\n0020: 00 00 00 04 00 00 00 2d 00 00 20 f2 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 cc cf\n0040: 00 00 00 00 00 00 28 8b 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":16,\"width\":2,\"value\":512}</answer>"
+  },
+  {
+    "id": "snapshot-5dbb159b0e8c16e5",
+    "prompt": "For the read-only inventory, report the total pages from snapshot-5dbb159b0e8c16e5.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 04 00 01 01 00 40 20 20 00 00 00 03 00 00 00 40\n0020: 00 00 00 04 00 00 00 3e 00 00 51 c2 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 90 93\n0040: 00 00 00 00 00 00 77 26 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":28,\"width\":4,\"value\":64}</answer>"
+  },
+  {
+    "id": "snapshot-f7f1337ffef0b84b",
+    "prompt": "For the read-only inventory, report the page size bytes from snapshot-f7f1337ffef0b84b.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 10 00 01 01 00 40 20 20 00 00 00 03 00 00 00 0f\n0020: 00 00 00 04 00 00 00 0d 00 00 1b 44 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 a7 16\n0040: 00 00 00 00 00 00 81 7f 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":16,\"width\":2,\"value\":4096}</answer>"
+  },
+  {
+    "id": "snapshot-5147ea85b83a4114",
+    "prompt": "For the read-only inventory, report the total pages from snapshot-5147ea85b83a4114.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 00 01 01 01 00 40 20 20 00 00 00 03 00 00 00 03\n0020: 00 00 00 03 00 00 00 01 00 00 cd 93 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 ed bd\n0040: 00 00 00 00 00 00 66 e6 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":28,\"width\":4,\"value\":3}</answer>"
+  },
+  {
+    "id": "snapshot-3f76b286e3d8e7eb",
+    "prompt": "For the read-only inventory, report the page size bytes from snapshot-3f76b286e3d8e7eb.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 08 00 01 01 00 40 20 20 00 00 00 03 00 00 00 1a\n0020: 00 00 00 04 00 00 00 18 00 00 5c 77 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 0c cd\n0040: 00 00 00 00 00 00 0b c0 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":16,\"width\":2,\"value\":2048}</answer>"
+  },
+  {
+    "id": "snapshot-f08b9f48e370152e",
+    "prompt": "For the read-only inventory, report the total pages from snapshot-f08b9f48e370152e.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 08 00 01 01 00 40 20 20 00 00 00 03 00 00 00 1b\n0020: 00 00 00 04 00 00 00 19 00 00 4c 5f 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 4f e4\n0040: 00 00 00 00 00 00 35 2e 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":28,\"width\":4,\"value\":27}</answer>"
+  },
+  {
+    "id": "snapshot-7d9363839ac5f17a",
+    "prompt": "For the read-only inventory, report the page size bytes from snapshot-7d9363839ac5f17a.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 02 00 01 01 00 40 20 20 00 00 00 03 00 00 00 81\n0020: 00 00 00 7d 00 00 00 7f 00 00 02 0d 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 33 c6\n0040: 00 00 00 00 00 00 26 73 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":16,\"width\":2,\"value\":512}</answer>"
+  },
+  {
+    "id": "snapshot-d361103aaa3689ba",
+    "prompt": "For the read-only inventory, report the total pages from snapshot-d361103aaa3689ba.db. The od byte dump has hexadecimal offsets on the left.\n0000: 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00\n0010: 04 00 01 01 00 40 20 20 00 00 00 03 00 00 00 40\n0020: 00 00 00 04 00 00 00 3e 00 00 7f d1 00 00 00 04\n0030: 00 00 00 00 00 00 00 00 00 00 00 01 00 00 04 c9\n0040: 00 00 00 00 00 00 58 00 00 00 00 00 00 00 00 00\n0050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03\n0060: 00 2e 6e b9",
+    "target": "<answer>{\"offset\":28,\"width\":4,\"value\":64}</answer>"
+  }
+]
