@@ -333,6 +333,14 @@
         "task_sha256": "f1f4399fecdae26c1e39dbfd75ac915be6b519d0dff903a3147f5a4f64d67e38",
         "result_sha256": "6243b58d6753dfeb4366c69b9fcc83069ca3a0faddfba598c5f3839933122be3"
       },
+      "long": {
+        "uid": "3b6256ac-973e-481f-abde-3cf722408dd8",
+        "submitted": "2026-11-18T22:35:27.291802+00:00",
+        "finished": "2026-11-19T00:16:26Z",
+        "gpu": "NVIDIA A100-PCIE-40GB",
+        "task_sha256": "580a8e8eebcb7e3930ee3bd9a63e3888d86c761408abe48007a041488caf100a",
+        "result_sha256": "cc4c73be7244d94a2f32918c0ccb3d30e302e4e7687e78dee6447e87dc80b30a"
+      },
       "pair": {
         "uid": "e18caadf-d6e1-4751-8132-2a2e24a4eab8",
         "submitted": "2026-11-18T22:23:45.080934+00:00",
@@ -361,15 +369,18 @@
     },
     "deployment_gap_files": 6,
     "trained_files": 6,
-    "long_screen_complete": false,
-    "also_confirmed_with_long_thinking": null,
-    "long_student_responses": null,
+    "long_screen_complete": true,
+    "also_confirmed_with_long_thinking": 2,
+    "long_student_responses": {
+      "fail": 8,
+      "unknown": 10
+    },
     "nonthinking_on_matched_files": {
       "fail": 16,
       "unknown": 2
     },
     "short_thinking_cutoffs": 96,
-    "long_thinking_cutoffs": null,
+    "long_thinking_cutoffs": 9,
     "semantic_panels": {
       "holdout": {
         "base": {
