@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 19, 2026 — Can Qwen3-8B transfer a one-example teacher demonstration?
+
+After 32 updates, Qwen3-8B reproduced the teacher’s short explanation and answered the training question correctly. On 12 held-out read-only inventory prompts sampled three times each in thinking mode, the original model passed **12/36**, answer-only SFT **18/36**, and explanation-plus-answer SFT **17/36**. Both trained models passed **12/12** on questions about the tool’s own version and **0/12** when asked for version records inside the file.
+
+A separate screen of 48 official KaliBench TRAIN candidates yielded no new cases meeting the repeated semantic-error criterion. The original model was retained. [Chinese report](results/readelf-transfer-2026-11-19/RESULT_ZH.md) · [Aggregate results](results/readelf-transfer-2026-11-19/summary.json)
+
+![Functional outcomes by query target and decoding mode](results/readelf-transfer-2026-11-19/paired-outcomes.png)
+
 ## November 19, 2026 — Qwen3 teacher–student screening on read-only ELF inventory
 
 Across **72 internal candidate prompts**, Qwen3-8B repeatedly made a semantic error on 9. The Qwen3.8-27B-FP8 teacher produced verified answers on at least two of three attempts for 4 of those prompts. **Three** also passed explanation review and a fresh student retest. All three concerned the distinction between the reader’s own version and version information inside a library. The study required 8 prompts across 3 task types to start training, so it ended at screening. The official KaliBench test set stayed sealed.

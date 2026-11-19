@@ -1,0 +1,170 @@
+{
+  "student": "Qwen/Qwen3-8B",
+  "student_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "teacher": "Qwen/Qwen3.8-27B-FP8",
+  "training_examples": 1,
+  "training_seeds": 1,
+  "steps": 64,
+  "training_arms": {
+    "A": "answer only",
+    "B": "public explanation and answer"
+  },
+  "evaluation": {
+    "holdout_prompts": 12,
+    "artifact_families": 4,
+    "draws_per_prompt": 3,
+    "generation_token_cap": 4096,
+    "official_test_queried": false
+  },
+  "functional_pass_counts": {
+    "think": {
+      "base": {
+        "same": 0,
+        "reverse": 4,
+        "adjacent": 8,
+        "original": 0
+      },
+      "A": {
+        "same": 12,
+        "reverse": 0,
+        "adjacent": 6,
+        "original": 3
+      },
+      "B": {
+        "same": 12,
+        "reverse": 0,
+        "adjacent": 5,
+        "original": 3
+      }
+    },
+    "direct": {
+      "base": {
+        "same": 0,
+        "reverse": 6,
+        "adjacent": 0,
+        "original": 0
+      },
+      "A": {
+        "same": 12,
+        "reverse": 0,
+        "adjacent": 7,
+        "original": 3
+      },
+      "B": {
+        "same": 9,
+        "reverse": 1,
+        "adjacent": 3,
+        "original": 3
+      }
+    }
+  },
+  "same_and_reverse_both_pass": {
+    "think": {
+      "base": 0,
+      "A": 0,
+      "B": 0
+    },
+    "direct": {
+      "base": 0,
+      "A": 0,
+      "B": 0
+    }
+  },
+  "final_checkpoint": 64,
+  "reloaded_checkpoints": {
+    "A": {
+      "16": {
+        "functional": "pass",
+        "reproduced_public_explanation": false,
+        "completed": true
+      },
+      "32": {
+        "functional": "pass",
+        "reproduced_public_explanation": false,
+        "completed": true
+      },
+      "64": {
+        "functional": "pass",
+        "reproduced_public_explanation": false,
+        "completed": true
+      }
+    },
+    "B": {
+      "16": {
+        "functional": "pass",
+        "reproduced_public_explanation": false,
+        "completed": true
+      },
+      "32": {
+        "functional": "pass",
+        "reproduced_public_explanation": true,
+        "completed": true
+      },
+      "64": {
+        "functional": "pass",
+        "reproduced_public_explanation": true,
+        "completed": true
+      }
+    }
+  },
+  "reverse_answer_behavior": {
+    "base": {
+      "think": {
+        "named_requested_file": 12
+      },
+      "direct": {
+        "named_requested_file": 12
+      }
+    },
+    "A": {
+      "think": {
+        "training_command": 12
+      },
+      "direct": {
+        "training_command": 12
+      }
+    },
+    "B": {
+      "think": {
+        "named_requested_file": 10
+      },
+      "direct": {
+        "named_requested_file": 6
+      }
+    }
+  },
+  "screening": {
+    "primary": {
+      "candidates": 24,
+      "verified": 15,
+      "teacher_two": 7,
+      "factual": 6
+    },
+    "extra": {
+      "candidates": 24,
+      "verified": 10,
+      "teacher_two": 6,
+      "factual": 5
+    }
+  },
+  "student_screening": {
+    "first": {
+      "cases": 11,
+      "counts": {
+        "pass": 30,
+        "unsupported": 3
+      },
+      "recurrent": []
+    },
+    "repeat": {
+      "cases": 0,
+      "counts": {},
+      "recurrent": []
+    }
+  },
+  "prior_internal_gaps": 3,
+  "new_official_train_gaps": 0,
+  "eligible_for_multiexample": false,
+  "gpu_container_minutes": 45.68,
+  "teacher_calls": 75
+}
