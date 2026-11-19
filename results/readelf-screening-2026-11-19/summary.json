@@ -1,0 +1,110 @@
+{
+  "student": "Qwen/Qwen3-8B",
+  "teacher": "Qwen/Qwen3.8-27B-FP8",
+  "screening_backend": "cuda",
+  "cap": 4096,
+  "counts": {
+    "cal": 8,
+    "train": 48,
+    "dev": 16,
+    "test": 32,
+    "keep": 16,
+    "extra": 24
+  },
+  "files": 288,
+  "screen": {
+    "train": {
+      "screened": 48,
+      "student_gap": 6,
+      "teacher_functional": 3,
+      "teacher_factual": 2,
+      "replicated": 2,
+      "student_thinking": {
+        "pass": 79,
+        "semantic": 24,
+        "unsupported": 40,
+        "format": 1
+      },
+      "student_direct": {
+        "semantic": 26,
+        "unsupported": 62,
+        "pass": 46,
+        "format": 9,
+        "cutoff": 1
+      }
+    },
+    "extra": {
+      "screened": 24,
+      "student_gap": 3,
+      "teacher_functional": 1,
+      "teacher_factual": 1,
+      "replicated": 1,
+      "student_thinking": {
+        "semantic": 15,
+        "unsupported": 12,
+        "pass": 45
+      },
+      "student_direct": {
+        "unsupported": 41,
+        "pass": 23,
+        "semantic": 5,
+        "cutoff": 3
+      }
+    }
+  },
+  "admitted": 3,
+  "outcome": "Screening endpoint: training admission threshold not met",
+  "minimum_confirmed_prompts": 8,
+  "minimum_distinct_strata": 3,
+  "stages": {
+    "screened": 72,
+    "student_gap": 9,
+    "teacher_functional": 4,
+    "teacher_factual": 3,
+    "replicated": 3
+  },
+  "by_stratum": {
+    "two_requested_sections": {
+      "initial_student_gap": 3,
+      "confirmed": 0
+    },
+    "tool_vs_library_version": {
+      "initial_student_gap": 5,
+      "confirmed": 3
+    },
+    "single_section_with_distractor": {
+      "initial_student_gap": 1,
+      "confirmed": 0
+    },
+    "symbols_vs_version_records": {
+      "initial_student_gap": 0,
+      "confirmed": 0
+    }
+  },
+  "costs": {
+    "recorded_teacher_responses": 35,
+    "student_generated_tokens_completed_jobs": 302786,
+    "supervised_tokens_completed_jobs": 0,
+    "gpu_container_minutes_completed": 110.22
+  },
+  "maximum_gradient_error_by_loss": {
+    "direct-mean": 0.0,
+    "joint-mean": 0.0,
+    "joint-balanced": 0.0,
+    "aux-mean": 0.0
+  },
+  "student_thinking": {
+    "pass": 124,
+    "semantic": 39,
+    "unsupported": 52,
+    "format": 1
+  },
+  "student_direct": {
+    "semantic": 31,
+    "unsupported": 103,
+    "pass": 69,
+    "format": 9,
+    "cutoff": 4
+  },
+  "figure_sha256": "369d2de9b31da1a870cffd9759b8f4827009c6c4389188679c0b9b37f8536c7c"
+}

@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 19, 2026 — Qwen3 teacher–student screening on read-only ELF inventory
+
+Across **72 internal candidate prompts**, Qwen3-8B repeatedly made a semantic error on 9. The Qwen3.8-27B-FP8 teacher produced verified answers on at least two of three attempts for 4 of those prompts. **Three** also passed explanation review and a fresh student retest. All three concerned the distinction between the reader’s own version and version information inside a library. The study required 8 prompts across 3 task types to start training, so it ended at screening. The official KaliBench test set stayed sealed.
+
+[Chinese report](results/readelf-screening-2026-11-19/RESULT_ZH.md) · [Aggregate results](results/readelf-screening-2026-11-19/summary.json)
+
+![Screening outcomes for 72 read-only inventory prompts](results/readelf-screening-2026-11-19/verified-screening.png)
+
 On 24 fresh SQLite evidence files, original Qwen3-8B, answer SFT and evidence SFT scored **0/24, 0/24 and 0/24**. [Paired experiment and training-data verification](results/defensive-sqlite-metadata-2026-11-18/README_ZH.md).
 
 ## Verified teacher reasoning: completed internal study (started 2026-11-17)
