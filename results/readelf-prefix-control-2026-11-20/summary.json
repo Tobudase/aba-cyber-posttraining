@@ -1,0 +1,756 @@
+{
+  "student": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "teacher": "Qwen/Qwen3.8-27B-FP8",
+  "teacher_support": "Reference-assisted explanations and commands, verified per training example.",
+  "arms": {
+    "A": "answer only",
+    "B": "inline public explanation plus answer",
+    "C": "same direct answer sequence as A plus separate explanation task"
+  },
+  "training": {
+    "paired_files": 2,
+    "prompts": 4,
+    "updates": 64,
+    "seed": 3407,
+    "steps": [
+      16,
+      32,
+      64
+    ],
+    "weights": {
+      "answer": 1,
+      "common_format": 0.1,
+      "explanation": 0.5
+    },
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "targets": [
+      "q_proj",
+      "v_proj"
+    ],
+    "lr": 0.0001,
+    "precision": "BF16 base and FP32 adapters"
+  },
+  "development": {
+    "files": 4,
+    "prompts": 12,
+    "draws_per_prompt": 3,
+    "seeds": [
+      9713,
+      9721,
+      9733
+    ],
+    "paired_completions_all_models_modes": 720,
+    "official_test_accessed": false
+  },
+  "metrics": {
+    "think": {
+      "base": {
+        "same": 1,
+        "reverse": 5,
+        "adjacent": 11,
+        "total": 17,
+        "pair_both": 0,
+        "outcomes": {
+          "semantic": 10,
+          "unsupported": 8,
+          "pass": 17,
+          "cutoff": 1
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 0,
+          "retained": 11
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 0,
+          "retained": 17
+        }
+      },
+      "A-16": {
+        "same": 12,
+        "reverse": 11,
+        "adjacent": 10,
+        "total": 33,
+        "pair_both": 11,
+        "outcomes": {
+          "pass": 33,
+          "unsupported": 2,
+          "semantic": 1
+        },
+        "retention_vs_base": {
+          "lost": 2,
+          "gained": 1,
+          "retained": 9
+        },
+        "all_vs_base": {
+          "lost": 2,
+          "gained": 18,
+          "retained": 15
+        }
+      },
+      "B-16": {
+        "same": 6,
+        "reverse": 10,
+        "adjacent": 7,
+        "total": 23,
+        "pair_both": 5,
+        "outcomes": {
+          "unsupported": 8,
+          "semantic": 4,
+          "pass": 23,
+          "cutoff": 1
+        },
+        "retention_vs_base": {
+          "lost": 4,
+          "gained": 0,
+          "retained": 7
+        },
+        "all_vs_base": {
+          "lost": 5,
+          "gained": 11,
+          "retained": 12
+        }
+      },
+      "C-16": {
+        "same": 2,
+        "reverse": 8,
+        "adjacent": 9,
+        "total": 19,
+        "pair_both": 2,
+        "outcomes": {
+          "semantic": 9,
+          "unsupported": 6,
+          "pass": 19,
+          "cutoff": 2
+        },
+        "retention_vs_base": {
+          "lost": 3,
+          "gained": 1,
+          "retained": 8
+        },
+        "all_vs_base": {
+          "lost": 6,
+          "gained": 8,
+          "retained": 11
+        }
+      },
+      "A-32": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 6,
+        "total": 30,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 30,
+          "unsupported": 6
+        },
+        "retention_vs_base": {
+          "lost": 5,
+          "gained": 0,
+          "retained": 6
+        },
+        "all_vs_base": {
+          "lost": 5,
+          "gained": 18,
+          "retained": 12
+        }
+      },
+      "B-32": {
+        "same": 10,
+        "reverse": 11,
+        "adjacent": 8,
+        "total": 29,
+        "pair_both": 9,
+        "outcomes": {
+          "pass": 29,
+          "semantic": 2,
+          "unsupported": 5
+        },
+        "retention_vs_base": {
+          "lost": 4,
+          "gained": 1,
+          "retained": 7
+        },
+        "all_vs_base": {
+          "lost": 4,
+          "gained": 16,
+          "retained": 13
+        }
+      },
+      "C-32": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 7,
+        "total": 31,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 31,
+          "unsupported": 5
+        },
+        "retention_vs_base": {
+          "lost": 4,
+          "gained": 0,
+          "retained": 7
+        },
+        "all_vs_base": {
+          "lost": 4,
+          "gained": 18,
+          "retained": 13
+        }
+      },
+      "A-64": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 6,
+        "total": 30,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 30,
+          "unsupported": 6
+        },
+        "retention_vs_base": {
+          "lost": 5,
+          "gained": 0,
+          "retained": 6
+        },
+        "all_vs_base": {
+          "lost": 5,
+          "gained": 18,
+          "retained": 12
+        }
+      },
+      "B-64": {
+        "same": 11,
+        "reverse": 12,
+        "adjacent": 5,
+        "total": 28,
+        "pair_both": 11,
+        "outcomes": {
+          "pass": 28,
+          "format": 1,
+          "semantic": 2,
+          "unsupported": 5
+        },
+        "retention_vs_base": {
+          "lost": 6,
+          "gained": 0,
+          "retained": 5
+        },
+        "all_vs_base": {
+          "lost": 6,
+          "gained": 17,
+          "retained": 11
+        }
+      },
+      "C-64": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 6,
+        "total": 30,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 30,
+          "unsupported": 6
+        },
+        "retention_vs_base": {
+          "lost": 5,
+          "gained": 0,
+          "retained": 6
+        },
+        "all_vs_base": {
+          "lost": 5,
+          "gained": 18,
+          "retained": 12
+        }
+      }
+    },
+    "direct": {
+      "base": {
+        "same": 0,
+        "reverse": 3,
+        "adjacent": 0,
+        "total": 3,
+        "pair_both": 0,
+        "outcomes": {
+          "unsupported": 25,
+          "semantic": 6,
+          "format": 2,
+          "pass": 3
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 0,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 0,
+          "retained": 3
+        }
+      },
+      "A-16": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 10,
+        "total": 34,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 34,
+          "unsupported": 2
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 10,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 31,
+          "retained": 3
+        }
+      },
+      "B-16": {
+        "same": 9,
+        "reverse": 6,
+        "adjacent": 8,
+        "total": 23,
+        "pair_both": 3,
+        "outcomes": {
+          "unsupported": 13,
+          "pass": 23
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 8,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 20,
+          "retained": 3
+        }
+      },
+      "C-16": {
+        "same": 9,
+        "reverse": 6,
+        "adjacent": 10,
+        "total": 25,
+        "pair_both": 3,
+        "outcomes": {
+          "unsupported": 9,
+          "pass": 25,
+          "cutoff": 1,
+          "semantic": 1
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 10,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 1,
+          "gained": 23,
+          "retained": 2
+        }
+      },
+      "A-32": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 4,
+        "total": 28,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 28,
+          "unsupported": 8
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 4,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 25,
+          "retained": 3
+        }
+      },
+      "B-32": {
+        "same": 9,
+        "reverse": 10,
+        "adjacent": 9,
+        "total": 28,
+        "pair_both": 7,
+        "outcomes": {
+          "semantic": 3,
+          "pass": 28,
+          "unsupported": 5
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 9,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 25,
+          "retained": 3
+        }
+      },
+      "C-32": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 6,
+        "total": 30,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 30,
+          "unsupported": 6
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 6,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 27,
+          "retained": 3
+        }
+      },
+      "A-64": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 4,
+        "total": 28,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 28,
+          "unsupported": 8
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 4,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 25,
+          "retained": 3
+        }
+      },
+      "B-64": {
+        "same": 9,
+        "reverse": 12,
+        "adjacent": 7,
+        "total": 28,
+        "pair_both": 9,
+        "outcomes": {
+          "semantic": 3,
+          "pass": 28,
+          "unsupported": 5
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 7,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 25,
+          "retained": 3
+        }
+      },
+      "C-64": {
+        "same": 12,
+        "reverse": 12,
+        "adjacent": 3,
+        "total": 27,
+        "pair_both": 12,
+        "outcomes": {
+          "pass": 27,
+          "unsupported": 9
+        },
+        "retention_vs_base": {
+          "lost": 0,
+          "gained": 3,
+          "retained": 0
+        },
+        "all_vs_base": {
+          "lost": 0,
+          "gained": 24,
+          "retained": 3
+        }
+      }
+    }
+  },
+  "transitions": {
+    "think": {
+      "A": {
+        "first_observed_step": {
+          "any_baseline_correct_adjacent_lost": 16,
+          "net_adjacent_below_base": 16,
+          "net_total_below_base": null,
+          "net_total_below_previous": 32,
+          "net_adjacent_below_previous": 16
+        },
+        "relative_to_previous": {
+          "16": {
+            "total_delta_vs_previous": 16,
+            "adjacent_delta_vs_previous": -1
+          },
+          "32": {
+            "total_delta_vs_previous": -3,
+            "adjacent_delta_vs_previous": -4
+          },
+          "64": {
+            "total_delta_vs_previous": 0,
+            "adjacent_delta_vs_previous": 0
+          }
+        }
+      },
+      "B": {
+        "first_observed_step": {
+          "any_baseline_correct_adjacent_lost": 16,
+          "net_adjacent_below_base": 16,
+          "net_total_below_base": null,
+          "net_total_below_previous": 64,
+          "net_adjacent_below_previous": 16
+        },
+        "relative_to_previous": {
+          "16": {
+            "total_delta_vs_previous": 6,
+            "adjacent_delta_vs_previous": -4
+          },
+          "32": {
+            "total_delta_vs_previous": 6,
+            "adjacent_delta_vs_previous": 1
+          },
+          "64": {
+            "total_delta_vs_previous": -1,
+            "adjacent_delta_vs_previous": -3
+          }
+        }
+      },
+      "C": {
+        "first_observed_step": {
+          "any_baseline_correct_adjacent_lost": 16,
+          "net_adjacent_below_base": 16,
+          "net_total_below_base": null,
+          "net_total_below_previous": 64,
+          "net_adjacent_below_previous": 16
+        },
+        "relative_to_previous": {
+          "16": {
+            "total_delta_vs_previous": 2,
+            "adjacent_delta_vs_previous": -2
+          },
+          "32": {
+            "total_delta_vs_previous": 12,
+            "adjacent_delta_vs_previous": -2
+          },
+          "64": {
+            "total_delta_vs_previous": -1,
+            "adjacent_delta_vs_previous": -1
+          }
+        }
+      }
+    },
+    "direct": {
+      "A": {
+        "first_observed_step": {
+          "any_baseline_correct_adjacent_lost": null,
+          "net_adjacent_below_base": null,
+          "net_total_below_base": null,
+          "net_total_below_previous": 32,
+          "net_adjacent_below_previous": 32
+        },
+        "relative_to_previous": {
+          "16": {
+            "total_delta_vs_previous": 31,
+            "adjacent_delta_vs_previous": 10
+          },
+          "32": {
+            "total_delta_vs_previous": -6,
+            "adjacent_delta_vs_previous": -6
+          },
+          "64": {
+            "total_delta_vs_previous": 0,
+            "adjacent_delta_vs_previous": 0
+          }
+        }
+      },
+      "B": {
+        "first_observed_step": {
+          "any_baseline_correct_adjacent_lost": null,
+          "net_adjacent_below_base": null,
+          "net_total_below_base": null,
+          "net_total_below_previous": null,
+          "net_adjacent_below_previous": 64
+        },
+        "relative_to_previous": {
+          "16": {
+            "total_delta_vs_previous": 20,
+            "adjacent_delta_vs_previous": 8
+          },
+          "32": {
+            "total_delta_vs_previous": 5,
+            "adjacent_delta_vs_previous": 1
+          },
+          "64": {
+            "total_delta_vs_previous": 0,
+            "adjacent_delta_vs_previous": -2
+          }
+        }
+      },
+      "C": {
+        "first_observed_step": {
+          "any_baseline_correct_adjacent_lost": null,
+          "net_adjacent_below_base": null,
+          "net_total_below_base": null,
+          "net_total_below_previous": 64,
+          "net_adjacent_below_previous": 32
+        },
+        "relative_to_previous": {
+          "16": {
+            "total_delta_vs_previous": 22,
+            "adjacent_delta_vs_previous": 10
+          },
+          "32": {
+            "total_delta_vs_previous": 5,
+            "adjacent_delta_vs_previous": -4
+          },
+          "64": {
+            "total_delta_vs_previous": -3,
+            "adjacent_delta_vs_previous": -3
+          }
+        }
+      }
+    }
+  },
+  "paired_arm_comparisons": {
+    "think": {
+      "16": {
+        "C_vs_A": {
+          "lost": 16,
+          "gained": 2,
+          "retained": 17
+        },
+        "B_vs_A": {
+          "lost": 11,
+          "gained": 1,
+          "retained": 22
+        },
+        "C_vs_B": {
+          "lost": 7,
+          "gained": 3,
+          "retained": 16
+        }
+      },
+      "32": {
+        "C_vs_A": {
+          "lost": 0,
+          "gained": 1,
+          "retained": 30
+        },
+        "B_vs_A": {
+          "lost": 6,
+          "gained": 5,
+          "retained": 24
+        },
+        "C_vs_B": {
+          "lost": 4,
+          "gained": 6,
+          "retained": 25
+        }
+      },
+      "64": {
+        "C_vs_A": {
+          "lost": 0,
+          "gained": 0,
+          "retained": 30
+        },
+        "B_vs_A": {
+          "lost": 4,
+          "gained": 2,
+          "retained": 26
+        },
+        "C_vs_B": {
+          "lost": 2,
+          "gained": 4,
+          "retained": 26
+        }
+      }
+    },
+    "direct": {
+      "16": {
+        "C_vs_A": {
+          "lost": 11,
+          "gained": 2,
+          "retained": 23
+        },
+        "B_vs_A": {
+          "lost": 13,
+          "gained": 2,
+          "retained": 21
+        },
+        "C_vs_B": {
+          "lost": 1,
+          "gained": 3,
+          "retained": 22
+        }
+      },
+      "32": {
+        "C_vs_A": {
+          "lost": 0,
+          "gained": 2,
+          "retained": 28
+        },
+        "B_vs_A": {
+          "lost": 5,
+          "gained": 5,
+          "retained": 23
+        },
+        "C_vs_B": {
+          "lost": 3,
+          "gained": 5,
+          "retained": 25
+        }
+      },
+      "64": {
+        "C_vs_A": {
+          "lost": 1,
+          "gained": 0,
+          "retained": 27
+        },
+        "B_vs_A": {
+          "lost": 3,
+          "gained": 3,
+          "retained": 25
+        },
+        "C_vs_B": {
+          "lost": 4,
+          "gained": 3,
+          "retained": 24
+        }
+      }
+    }
+  },
+  "first_step_A_C_answer_loss": 0.7706124782562256,
+  "verified_checkpoints": 9,
+  "adapter_sha256": {
+    "A-16": "86fd9b47d23cbf3a1a3c72fc9202b788ee6d56b1aa332e985173d9850f69d73a",
+    "A-32": "6ba8ee153e4156cdff2a761087f4303381e19308db270facc3d02b0f87457df6",
+    "A-64": "b1c74ad4649c8ebc6cce7bd7bbd71b840d083ee1c3dba022a33d57fdc47a82ac",
+    "B-16": "80177ba05731c591b4c10f38d4f7c2a7b56a3bf0c4fb78b1aaaafeb582793a5c",
+    "B-32": "bb4b270f439564cd012ad250da0b7eb44c2fdcee8a9a2932b6e282d111eb8f41",
+    "B-64": "8a1193f9169bc03d54711ec5122be98e02f25a667a0dc6c1bd14b4193b96a1d1",
+    "C-16": "8945bfea96e9feab3dc6f7934cadf82e8f20f2c4fe63a8d8538ae3bb86770ecf",
+    "C-32": "9cb4a1475888e3798638aa89767356a44c3edce595daa2e6adad45862c0183fd",
+    "C-64": "c2470525154962c2ff385da00d8a6818976187990835bc0398e41e5975108fb4"
+  },
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_container_minutes": 39.85
+}

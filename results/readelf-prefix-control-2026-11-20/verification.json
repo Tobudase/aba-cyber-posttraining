@@ -1,0 +1,11 @@
+{
+  "verified_generation_decisions": 720,
+  "verified_checkpoint_files": 18,
+  "adapter_tensors_and_payload_bytes_per_checkpoint": [
+    144,
+    30670848
+  ],
+  "student_token_audit_matches_gpu": true,
+  "submitted_code_matches_freeze": true,
+  "weights_and_configs_match_local_export": true
+}

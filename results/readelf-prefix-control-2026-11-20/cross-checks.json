@@ -1,0 +1,28 @@
+{
+  "independently_rescored_step_0_and_16_decisions": 288,
+  "disagreements": 0,
+  "maximum_toy_model_gradient_difference": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0
+  },
+  "at_step_64_thinking_adjacent_nonpasses": {
+    "A-64": {
+      "--dynamic-symbols": 3,
+      "--dynamic-tags": 3
+    },
+    "C-64": {
+      "--dynamic-symbols": 3,
+      "--dynamic-tags": 3
+    }
+  },
+  "unrecognized_options_tested_on_two_fixtures": [
+    "--dynamic-symbols",
+    "--dynamic-tags",
+    "--dynsym"
+  ],
+  "valid_controls": [
+    "--dynamic",
+    "--dyn-syms"
+  ]
+}

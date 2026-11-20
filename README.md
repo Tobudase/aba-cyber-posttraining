@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 20, 2026 — Matched answer-prefix SFT on paired inventory tasks
+
+Three Qwen3-8B adapters learned the same four inventory prompts for 64 updates. On 12 independent development prompts sampled three times each in thinking mode, the original model passed **17/36**. At step 64, answer-only SFT passed **30/36**, inline-explanation SFT **28/36**, and separate-explanation SFT **30/36**. The separate-explanation arm used exactly the same direct-answer inputs and labels as the answer-only arm. On paired draws it gained 0 passes and lost 0 relative to answer-only at step 64. All nine adapters were saved, reloaded, and verified. The curves show internal development results from one training seed.
+
+[Chinese report and regression analysis](results/readelf-prefix-control-2026-11-20/RESULT_ZH.md) · [Checkpoint metrics and weight hashes](results/readelf-prefix-control-2026-11-20/summary.json)
+
+![Development outcomes at 0, 16, 32, and 64 updates](results/readelf-prefix-control-2026-11-20/development-curves.png)
+
 ## November 19, 2026 — Can Qwen3-8B transfer a one-example teacher demonstration?
 
 After 32 updates, Qwen3-8B reproduced the teacher’s short explanation and answered the training question correctly. On 12 held-out read-only inventory prompts sampled three times each in thinking mode, the original model passed **12/36**, answer-only SFT **18/36**, and explanation-plus-answer SFT **17/36**. Both trained models passed **12/12** on questions about the tool’s own version and **0/12** when asked for version records inside the file.

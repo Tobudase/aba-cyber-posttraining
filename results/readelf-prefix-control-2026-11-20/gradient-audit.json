@@ -1,0 +1,9 @@
+{
+  "four_training_rows_per_arm": true,
+  "implementation": "Production shifted CE and A/B/C backward expressions; CPU toy model with reindexed genuine token sequences",
+  "maximum_absolute_gradient_difference": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0
+  }
+}
