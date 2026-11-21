@@ -1,0 +1,37 @@
+{
+  "stage": "parameter-only follow-up, separate from the preceding semantics-only screen",
+  "source_digest": "aab0ad32fa9518d583029f072c1fd340a0ca9e1c3169a01a6fe611c2de09e12b",
+  "diagnostic_digest": "f309b90e484221fdadf9100b6a156ca18007107217c83ac2a8c1c02111cbc6c5",
+  "prompts": {
+    "sample_7106": "Format only lines 10 through 20 of the file utils.c using the LLVM style.",
+    "sample_6137": "Generate a minimal schema from 'temp.mdb' that only includes table definitions without any constraints, indexes, or comments.",
+    "sample_2632": "To assess binary hardening, use the 'pesec' tool on 'explorer.exe' and generate a textual report (explicitly specify text format).",
+    "sample_2634": "Check security features in 'cmd.exe' using the pesec alias and output in XML format."
+  },
+  "original_parameter_error_counts": {
+    "sample_7106": 3,
+    "sample_6137": 3,
+    "sample_2632": 2,
+    "sample_2634": 2
+  },
+  "returned_model": "Qwen/Qwen3.8-27B-FP8",
+  "alias": "qwen3-small",
+  "teacher_seeds": [
+    8407,
+    9407,
+    10407
+  ],
+  "system": "Answer this offline, read-only question with exactly two JSON string fields: command and explanation. Give one command and one or two short factual sentences explaining which requirement determines your parameter choice. Do not assume any unobserved file contents.",
+  "student": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "student_retest_seeds": [
+    11003,
+    11027,
+    11047
+  ],
+  "teacher_pass": "completed JSON response; direct read-only answer correct on both fixtures and follows explicit requirements. Its own public explanation accurately identifies what the request changes in the invocation and does not assert an incorrect rule. Assess separately and jointly per draw. Require >=2/3 joint.",
+  "student_error": "same-tool invalid option name, binding or value rejected by the pinned executable. Require >=2/3 in original draw set and >=2/3 in retest. Additional mistakes may coexist; label separately. Do not convert untested commands, output-format mistakes or unsupported grader cases into parameter errors.",
+  "expansion": "If a repeated teacher-student gap survives, screen additional eligible official TRAIN rows from the same read-only skills. Protect prior development/confirmation allocations; cluster identical intents, source and files; keep internal transfer tests separate. Limit additional survey to at most 24 new source IDs over these validated tool families for this pilot. Report exhaustion and limitations; at least 8 confirmed source items across 3 skills for SFT, then condition ABA on matched fixed SFT results.",
+  "controls": "put source ID, tool group, references and fixtures in evaluator only; no official TEST, GPU not required for screening the teacher",
+  "transfer": "Secondary original-question variants for a surviving clang-format rules gap: held file name changed with 10-20; range changes to 4-8; neighbor task requests whole file. Original untrained student only before SFT. Any other gap gets a separate analogous diagnostic. Do not count variants as official independent cases."
+}

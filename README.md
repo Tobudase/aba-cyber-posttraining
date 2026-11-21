@@ -1,5 +1,11 @@
 # ABA Cybersecurity Post-training Research
 
+## November 20, 2026 — Blind teacher versus the same teacher with tool help
+
+On four selected KaliBench TRAIN questions where Qwen3-8B repeatedly used invalid parameters, the same-family teacher passed both execution and explanation checks on **2/12 blind responses** and **12/12 with the installed tools’ help**. None of the four reached the blind threshold of two passes in three attempts. No student retraining was triggered. Both PE questions test the same output-format skill.
+
+[Results and paired comparison figure](results/qwen-parameter-gap-pilot/RESULT_ZH.md) · [Per-response checks](results/qwen-parameter-gap-pilot/summary.json) · [Offline recount](results/qwen-parameter-gap-pilot/verify.py)
+
 ## November 20, 2026 — Official TRAIN inventory screening
 
 Two rounds of source review produced 12 offline, read-only questions with verified positive and negative controls. Original Qwen3-8B passed 6/36 generations. One question met the initial repeated semantic-error criterion. The same-family teacher passed 0/3 blind draws on that question. No new example met the full teacher–student gap criterion, so the original checkpoint was retained and no new SFT or ABA run was started. These are selected TRAIN questions; official TEST remained sealed.

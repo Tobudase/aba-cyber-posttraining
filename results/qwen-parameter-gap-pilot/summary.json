@@ -1,0 +1,765 @@
+{
+  "teacher": "Qwen/Qwen3.8-27B-FP8",
+  "student": "Qwen/Qwen3-8B",
+  "student_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "seeds": [
+    8407,
+    9407,
+    10407
+  ],
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "max_tokens": 1200,
+  "thinking": false,
+  "protocol_sha256": "273e4fa66d8b9ddd5890709dbaee0a1c9f2fdebfc8c74ae0e95c2c1b81d9b036",
+  "manual_protocol_sha256": "045fd25f09619dbee249eee7b9560893d9c061ea369892ee1067d6afeb58839b",
+  "tool_help_sha256": {
+    "clang-format": "3b2caac8a9d8a6fa10017deb2b027797bed0cc79b475de59276409a00bc68096",
+    "mdb-schema": "1203b9d09b3723c73fa2b5570f34469c8c9466c426150d9b2ad5d2930cb1b14f",
+    "pesec": "a6e0c57bf29f8b605d030f40e4d4808a367fffa40d51c45671b4e7fb73b3a6f0"
+  },
+  "new_student_retest_items": 0,
+  "new_training_runs": 0,
+  "split": "official TRAIN only",
+  "explanation_review": "AI factual review of the visible short explanation against the pinned help, task and controlled replay; no independent human rating",
+  "cases": {
+    "sample_7106": {
+      "task": "clang-format line range",
+      "split": "train",
+      "prior_parameter_errors": 3,
+      "blind": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "2db08f66ea0bdeac5daed6ed3348526b79fba40c57c43f31c81a724feda78fa2",
+              "49b025a0ff9f12b3721fd04d923927fde44b969671b01495be18be09867b0a3b"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              1,
+              1
+            ],
+            "stdout_hash": [
+              "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "reason": "invalid_arguments"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct range separator and LLVM style.",
+            "response_sha256": "3f0f370a66792c37c0ad5cb911a7d00ed02af84397dca5178c52af8bd2c1cb91",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ]
+          },
+          "9407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "invalid_arguments",
+            "fact_reason": "Says the hyphenated range is accepted. It is rejected.",
+            "response_sha256": "425f68572f5fdd5c628ddaf0698d51fc767c91c9791bef834ab097154755f4ed",
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              1,
+              1
+            ]
+          },
+          "10407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "invalid_arguments",
+            "fact_reason": "Says the hyphenated range selects the requested lines. It is rejected.",
+            "response_sha256": "9b151700b91d2ef28053f432f3abd1e08febd5c38d5ff04679a618defcf15144",
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              1,
+              1
+            ]
+          }
+        }
+      },
+      "manual": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "2db08f66ea0bdeac5daed6ed3348526b79fba40c57c43f31c81a724feda78fa2",
+              "49b025a0ff9f12b3721fd04d923927fde44b969671b01495be18be09867b0a3b"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              1,
+              1
+            ],
+            "stdout_hash": [
+              "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "reason": "invalid_arguments"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct span syntax and style selection.",
+            "response_sha256": "850af667363298c1b57f47e692943a88990910ef6ed923e0e921c7b33888cd0a",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The requirement to format specific lines 10 through 20 determines the use of the --lines=10:20 parameter. The requirement to use the LLVM style determines the use of the --style=LLVM parameter."
+          },
+          "9407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct 1-based span and style options.",
+            "response_sha256": "e7df1b35851c85be54c9988020b557fc457964d6ce5c9a5f27f5ed7adcd90dec",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The --lines option specifies the 1-based start and end line range to format. The --style option sets the formatting rules to the LLVM standard."
+          },
+          "10407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct span interpretation and style.",
+            "response_sha256": "a26127def75b7bf9844984f40ea0c79f821c715d62996988929d5b518966bb13",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The --lines option specifies the 1-based start and end line numbers to format, and --style=LLVM selects the required LLVM coding style."
+          }
+        }
+      }
+    },
+    "sample_6137": {
+      "task": "Access table definitions",
+      "split": "train",
+      "prior_parameter_errors": 3,
+      "blind": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "a83889b90ffdb9b4117b298e873183821522663f6d9654ef351d38a6642a9c7a",
+              "697ba243bab5649c94c978c15951afd87f42f371196147bb0769a23921fa917b"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "f3d317a0421417a92888d7b2df5cb901908610a30b3a563564589f1b4dd2c36f",
+              "bce308fae1d9bb59545c04eda5103c6cba5d1c1c1e284fcfe1b21b46cb1ad06d"
+            ],
+            "reason": "wrong_view_or_constraint"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "outside_reviewed_readers_or_arguments",
+            "fact_reason": "PostgreSQL export options do not operate on the supplied Access file.",
+            "response_sha256": "b614f8949616edab53b3f429c58761cb87aca9d62928f54e7075d756985c2bdb",
+            "executed": false,
+            "fixtures": null,
+            "rc": null
+          },
+          "9407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "outside_reviewed_readers_or_arguments",
+            "fact_reason": "SQLite's schema command is inapplicable to the Access source; assuming it lacks constraints does not satisfy the task.",
+            "response_sha256": "7f32bddb5fe2dabde88c7ba04ac49a1cbdf7860de949d87aed9bc90737b2a382",
+            "executed": false,
+            "fixtures": null,
+            "rc": null
+          },
+          "10407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "outside_reviewed_readers_or_arguments",
+            "fact_reason": "Describes database restoration rather than schema extraction and incorrectly denies an applicable direct tool.",
+            "response_sha256": "3864574348494e30c174b50befff3971ae4f1c687ad60aadf27cc30392e59112",
+            "executed": false,
+            "fixtures": null,
+            "rc": null
+          }
+        }
+      },
+      "manual": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "a83889b90ffdb9b4117b298e873183821522663f6d9654ef351d38a6642a9c7a",
+              "697ba243bab5649c94c978c15951afd87f42f371196147bb0769a23921fa917b"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "f3d317a0421417a92888d7b2df5cb901908610a30b3a563564589f1b4dd2c36f",
+              "bce308fae1d9bb59545c04eda5103c6cba5d1c1c1e284fcfe1b21b46cb1ad06d"
+            ],
+            "reason": "wrong_view_or_constraint"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Listed supported switches for minimal table definitions.",
+            "response_sha256": "f9446c3bd5b44a9496feeaa97df2641e7c80609c492c40c7369a95fa3326a402",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The requirement to include only table definitions without constraints, indexes, or comments is met by using the --no-not-null, --no-default-values, --no-not_empty, --no-comments, --no-indexes, and --no-relations flags."
+          },
+          "9407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "The six exclusion switches select the requested minimal schema.",
+            "response_sha256": "223aa770e6bb5ed1c82c1b2f854dbb6183012aa1ee11dfcf28d042454517b6b4",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The requirement to exclude constraints, indexes, and comments determines the use of the --no-not-null, --no-default-values, --no-not_empty, --no-comments, --no-indexes, and --no-relations flags to strip all non-structural elements from the schema output."
+          },
+          "10407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct mapping of schema exclusions to supported options.",
+            "response_sha256": "1fca3cc390bf5bb0fc8d5a4620d08a96b82be0080c622788321ec93e57e2b10c",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The requirement to exclude all constraints, indexes, and comments necessitates using the negative flags for each: --no-not-null, --no-default-values, --no-not_empty, --no-comments, --no-indexes, and --no-relations."
+          }
+        }
+      }
+    },
+    "sample_2632": {
+      "task": "PE report, explicit text",
+      "split": "train",
+      "prior_parameter_errors": 2,
+      "blind": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "2456cb7e277c502fa62e5243fdd1d8d4373eef05bfd0af213b0ce05fe05e1138",
+              "4ca6bd3bfbf0e22a71adbf19e7cd3da80e45af630497f5c80c668bfa57245f6e"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "289125957797a500e7cb1017ddcdb82bb812d8714fd4f54a49e662648e7b27fc",
+              "30154c05e460fdda1bbc4c533c5e3a6d0d20ad56d47aaeaf1ba269ade096612e"
+            ],
+            "reason": "wrong_view_or_constraint"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "outside_reviewed_readers_or_arguments",
+            "fact_reason": "The submitted -t is not the report format selector.",
+            "response_sha256": "6558f959990ad238d8871183a0cdabcbfe8459cd790dc8ef0bb750583781a701",
+            "executed": false,
+            "fixtures": null,
+            "rc": null
+          },
+          "9407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct mapping from the requested explicit text output to -f text and the input operand.",
+            "response_sha256": "14f7196626e21aa692b6f4885b293d0b9473b691cdf06d18a15971b56bd9b493",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ]
+          },
+          "10407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "outside_reviewed_readers_or_arguments",
+            "fact_reason": "Correct text format flag but incorrectly identifies -i as the input selector.",
+            "response_sha256": "e7f4d9c156dcddaa373a1a7032a619ab3966060eeb46229908b7fb2834265d24",
+            "executed": false,
+            "fixtures": null,
+            "rc": null
+          }
+        }
+      },
+      "manual": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "2456cb7e277c502fa62e5243fdd1d8d4373eef05bfd0af213b0ce05fe05e1138",
+              "4ca6bd3bfbf0e22a71adbf19e7cd3da80e45af630497f5c80c668bfa57245f6e"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "289125957797a500e7cb1017ddcdb82bb812d8714fd4f54a49e662648e7b27fc",
+              "30154c05e460fdda1bbc4c533c5e3a6d0d20ad56d47aaeaf1ba269ade096612e"
+            ],
+            "reason": "wrong_view_or_constraint"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Explicit text format and positional target.",
+            "response_sha256": "684d8b87185522f07aa287067f1912e4a10c4f17807faaaa25bcef107a40ca60",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The requirement to generate a textual report determines the use of the '-f text' option to explicitly specify the output format. The target file 'explorer.exe' is provided as the positional argument to the tool."
+          },
+          "9407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correctly distinguishes explicit selection from default text.",
+            "response_sha256": "fc4d33b0ad15c3bf055767225c5187a69ea8c8cbbf037d1ae96e22755252c27b",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The requirement to generate a textual report explicitly specifies the output format, which is controlled by the -f option. The default format is text, but it is explicitly set to 'text' to satisfy the condition."
+          },
+          "10407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Valid text format selector and target.",
+            "response_sha256": "aff9565271ab33b912d7b2545254f8a71d1d6fa98e6eaf2872bef34beab5be02",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The user explicitly requested a textual report, which maps to the -f text option. The target file is specified as explorer.exe."
+          }
+        }
+      }
+    },
+    "sample_2634": {
+      "task": "PE report, XML",
+      "split": "train",
+      "prior_parameter_errors": 2,
+      "blind": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "7679611bfc9232ad09bb8ecbb720bbc126b3e8e0630c1e492aa63d133eca5f79",
+              "375581a53dccbb53b249d4ebb2578d50eb16f8907dd7c07e839576a5de688254"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "2456cb7e277c502fa62e5243fdd1d8d4373eef05bfd0af213b0ce05fe05e1138",
+              "4ca6bd3bfbf0e22a71adbf19e7cd3da80e45af630497f5c80c668bfa57245f6e"
+            ],
+            "reason": "wrong_view_or_constraint"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "invalid_arguments",
+            "fact_reason": "Claims -xml is a valid format selector.",
+            "response_sha256": "ab5fd3d74877c91d8ef495fea717d30c7984b853466e950c214aee3cca752ec4",
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              1,
+              1
+            ]
+          },
+          "9407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "outside_reviewed_readers_or_arguments",
+            "fact_reason": "Claims -i and -o specify the input and XML format.",
+            "response_sha256": "82b7618c611c47efa87c72cfc4444d6e48ddaccb51c82bab608126845f32d7eb",
+            "executed": false,
+            "fixtures": null,
+            "rc": null
+          },
+          "10407": {
+            "behavior": false,
+            "fact": false,
+            "joint": false,
+            "reason": "outside_reviewed_readers_or_arguments",
+            "fact_reason": "Treats the named Linux tool as a PowerShell alias and conversion of other output as its XML report.",
+            "response_sha256": "2de155224a6f73b62bf83a54d1b9105c81899cdc88c8ddba8ebc6bd759415fcf",
+            "executed": false,
+            "fixtures": null,
+            "rc": null
+          }
+        }
+      },
+      "manual": {
+        "controls": [
+          {
+            "pass": true,
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "7679611bfc9232ad09bb8ecbb720bbc126b3e8e0630c1e492aa63d133eca5f79",
+              "375581a53dccbb53b249d4ebb2578d50eb16f8907dd7c07e839576a5de688254"
+            ],
+            "reason": "correct"
+          },
+          {
+            "pass": false,
+            "executed": true,
+            "fixtures": [
+              false,
+              false
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "stdout_hash": [
+              "2456cb7e277c502fa62e5243fdd1d8d4373eef05bfd0af213b0ce05fe05e1138",
+              "4ca6bd3bfbf0e22a71adbf19e7cd3da80e45af630497f5c80c668bfa57245f6e"
+            ],
+            "reason": "wrong_view_or_constraint"
+          }
+        ],
+        "draws": {
+          "8407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct XML selector and file.",
+            "response_sha256": "a6d7030bfcfd3fd4b316bc34fac2d7f1c9b3812301de52a4045d3a896ae3eb33",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The requirement to output in XML format is satisfied by the -f xml option. The target file is specified as cmd.exe."
+          },
+          "9407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct format requirement and file operand.",
+            "response_sha256": "9b77391ddecfc227f2b7d1746ae0e9e064a82092c476b7237470c2ae744a0b52",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The '-f, --format' option determines the output format, and the user requested XML. The file argument is 'cmd.exe' as specified."
+          },
+          "10407": {
+            "behavior": true,
+            "fact": true,
+            "joint": true,
+            "reason": "correct",
+            "fact_reason": "Correct supplied format and positional target.",
+            "response_sha256": "a184e3dc1c05a8543f4ff6bdd4c8549a7435e354ed33af4e431c966f6c0bc4fe",
+            "executed": true,
+            "fixtures": [
+              true,
+              true
+            ],
+            "rc": [
+              0,
+              0
+            ],
+            "public_explanation": "The -f option sets the output format to XML as requested. The positional argument specifies the target PE file, cmd.exe."
+          }
+        }
+      }
+    }
+  },
+  "recount": {
+    "totals": {
+      "blind": {
+        "behavior": 2,
+        "joint": 2,
+        "stable_cases": 0
+      },
+      "manual": {
+        "behavior": 12,
+        "joint": 12,
+        "stable_cases": 4
+      }
+    },
+    "paired_joint": {
+      "both": 2,
+      "manual_only": 10,
+      "blind_only": 0,
+      "neither": 0
+    }
+  }
+}

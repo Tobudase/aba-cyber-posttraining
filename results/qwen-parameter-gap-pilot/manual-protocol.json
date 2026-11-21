@@ -1,0 +1,16 @@
+{
+  "trigger": "no stable blind teacher items",
+  "condition": "same four prompts plus complete unedited --help for the corresponding pinned tool; no gold answer, no student predictions or grader feedback",
+  "teacher_system": "Answer this offline, read-only question with exactly two JSON string fields: command and explanation. Give one command and one or two short factual sentences explaining which requirement determines your parameter choice. Do not assume any unobserved file contents.",
+  "seeds": [
+    8407,
+    9407,
+    10407
+  ],
+  "docs": {
+    "clang-format": "3b2caac8a9d8a6fa10017deb2b027797bed0cc79b475de59276409a00bc68096",
+    "mdb-schema": "1203b9d09b3723c73fa2b5570f34469c8c9466c426150d9b2ad5d2930cb1b14f",
+    "pesec": "a6e0c57bf29f8b605d030f40e4d4808a367fffa40d51c45671b4e7fb73b3a6f0"
+  },
+  "limit": "Do not count these examples as unaided teacher gaps or use them to authorize training. Giving the mdb-schema help also identifies the tool."
+}
