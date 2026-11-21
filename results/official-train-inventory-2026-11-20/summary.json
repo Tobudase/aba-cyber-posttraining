@@ -1,0 +1,767 @@
+{
+  "student_first_generation_seconds_by_seed": {
+    "9713": 2273,
+    "9721": 2411,
+    "9733": 4146
+  },
+  "student_first_generation_minutes": 147.17,
+  "source": {
+    "publisher_train_sha256": "93dc4ddff6d9df73bed4b9e92716470e7a73df513f5ca2f1b201c85f2329f909",
+    "export_sha256": "ca7cd7ef94073f13c9371a27392579dbda9e01d81f86a805dff4d9b87b132c7a",
+    "history_manifests": 112,
+    "historical_or_reserved_ids_total": 2052,
+    "allowlisted_tools": 52,
+    "source_rows": 3504,
+    "tool_scope": 206,
+    "prior_or_reserved_within_scope": 151,
+    "fresh_relative_to_manifests": 55,
+    "split_counts": {
+      "exclude": 30,
+      "retention": 2,
+      "dev": 2,
+      "confirmation": 6,
+      "train": 15
+    },
+    "publisher_receipts": {
+      "PASS_RUNTIME_ERROR": 54,
+      "PASS_EXECUTED": 1
+    },
+    "tracked_intent_or_literal_filename_cross_split_collisions": 0,
+    "model_queries_to_official_test": 0,
+    "training_source_ids": [
+      "sample_1764",
+      "sample_1780",
+      "sample_1782",
+      "sample_1784",
+      "sample_2632",
+      "sample_2634",
+      "sample_6106",
+      "sample_6137",
+      "sample_6139",
+      "sample_6144",
+      "sample_6241",
+      "sample_7106",
+      "sample_7109",
+      "sample_7523",
+      "sample_7527"
+    ],
+    "split_id_sha256": {
+      "train": "0827dd96c45f8c6610b6b15bcdc20074fd3f9780a8535938716083ccdbd66f74",
+      "dev": "87c87b59bfd080e681d1cb5a95c3caa8d140a80be728e8661cdb128381542300",
+      "confirmation": "73af0cf398fc226b7ac01b4e4477b6850ffff119fa48466e79dd7885abb21a64",
+      "retention": "c20e29365b18fec515a59edcdabf730b57526dccf5c72257aa09a0e8dff29dfd",
+      "exclude": "46b90a576bbc7f437173ebac6232e6c5bb1088cef6845cff00ba8bb21fc58fce"
+    }
+  },
+  "first_seeds": [
+    9713,
+    9721,
+    9733
+  ],
+  "student_device": "cpu-native-bf16",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "decoding": {
+    "enable_thinking": true,
+    "do_sample": true,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0,
+    "max_new_tokens": 4096,
+    "batch_size": 12,
+    "dtype": "bfloat16",
+    "system": "For this offline, read-only inventory question, return exactly one command in <output>...</output>. Use the requested tool when the question names one."
+  },
+  "controls": {
+    "admitted": [
+      "sample_2632",
+      "sample_2634",
+      "sample_6106",
+      "sample_6137",
+      "sample_6144",
+      "sample_6241",
+      "sample_7106",
+      "sample_7109",
+      "sample_1764",
+      "sample_1780",
+      "sample_1782",
+      "sample_1784"
+    ],
+    "excluded": {
+      "sample_7523": "Invalid symbol for the publisher's specified demangler on both fixtures.",
+      "sample_7527": "Invalid symbol for the publisher's specified demangler on both fixtures.",
+      "sample_6139": "The default Access exporter in mdbtools 0.9.1 masks indexes, relationships and comments. The requested full view cannot be certified."
+    },
+    "receipt": {
+      "sample_1764": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_1780": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_1782": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_1784": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_2632": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          1,
+          1
+        ]
+      },
+      "sample_2634": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          1,
+          1
+        ]
+      },
+      "sample_6106": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          1,
+          1
+        ]
+      },
+      "sample_6137": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_6139": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          1,
+          1
+        ]
+      },
+      "sample_6144": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_6241": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_7106": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          3,
+          3
+        ]
+      },
+      "sample_7109": {
+        "positive_exit": [
+          0,
+          0
+        ],
+        "wrong_controls_per_fixture": [
+          2,
+          2
+        ]
+      },
+      "sample_7523": {
+        "positive_exit": [
+          1,
+          1
+        ],
+        "wrong_controls_per_fixture": [
+          1,
+          1
+        ]
+      },
+      "sample_7527": {
+        "positive_exit": [
+          1,
+          1
+        ],
+        "wrong_controls_per_fixture": [
+          1,
+          1
+        ]
+      }
+    },
+    "selftest_known_labels": 50
+  },
+  "student": [
+    {
+      "id": "sample_2632",
+      "tool": "pesec",
+      "group": "hardening_report_format",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "unresolved",
+          "secondary_category": "wrong_executable_name_for_linux",
+          "upstream_exact": 0,
+          "output_tokens": 1100,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 732,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 519,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_2634",
+      "tool": "pesec",
+      "group": "hardening_report_format",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 634,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 694,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "pass",
+          "secondary_category": "verified_pass",
+          "upstream_exact": 1,
+          "output_tokens": 735,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_6106",
+      "tool": "mdb-export",
+      "group": "boolean_export",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "format",
+          "secondary_category": "global_substitution_corrupts_non_boolean_fields_and_requests_write",
+          "upstream_exact": 0,
+          "output_tokens": 1159,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "text_description_without_invocation",
+          "upstream_exact": 0,
+          "output_tokens": 1138,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "format",
+          "secondary_category": "global_substitution_corrupts_non_boolean_fields_and_requests_write",
+          "upstream_exact": 0,
+          "output_tokens": 1543,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_6137",
+      "tool": "mdb-schema",
+      "group": "schema_features",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 1237,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 578,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 904,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_6144",
+      "tool": "mdb-tables",
+      "group": "table_delimiter",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "unresolved",
+          "secondary_category": "multi_invocation_equivalent_on_two_fixtures",
+          "upstream_exact": 0,
+          "output_tokens": 1352,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 535,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "unresolved",
+          "secondary_category": "multi_invocation_changes_table_listing",
+          "upstream_exact": 0,
+          "output_tokens": 1826,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_6241",
+      "tool": "ul",
+      "group": "underline_indicator",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "semantic",
+          "secondary_category": "verified_wrong_output",
+          "upstream_exact": 0,
+          "output_tokens": 719,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "appended_line_does_not_mark_requested_character_positions",
+          "upstream_exact": 0,
+          "output_tokens": 1099,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "semantic",
+          "secondary_category": "verified_wrong_output",
+          "upstream_exact": 0,
+          "output_tokens": 1092,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_7106",
+      "tool": "clang-format",
+      "group": "range_format",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 741,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 466,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "unresolved",
+          "secondary_category": "unsupported_option_or_value_reproduced",
+          "upstream_exact": 0,
+          "output_tokens": 357,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_7109",
+      "tool": "clang-format",
+      "group": "range_format",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "unresolved",
+          "secondary_category": "byte_display_reproduced_instead_of_source_formatting",
+          "upstream_exact": 0,
+          "output_tokens": 631,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "unresolved",
+          "secondary_category": "byte_display_reproduced_instead_of_source_formatting",
+          "upstream_exact": 0,
+          "output_tokens": 1384,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "unresolved",
+          "secondary_category": "editor_invocation_not_replayed",
+          "upstream_exact": 0,
+          "output_tokens": 546,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_1764",
+      "tool": "svnadmin",
+      "group": "repository_integrity",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "pass",
+          "secondary_category": "verified_pass",
+          "upstream_exact": 1,
+          "output_tokens": 290,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "pass",
+          "secondary_category": "verified_pass",
+          "upstream_exact": 1,
+          "output_tokens": 349,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "pass",
+          "secondary_category": "verified_pass",
+          "upstream_exact": 1,
+          "output_tokens": 333,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_1780",
+      "tool": "svndumpfilter",
+      "group": "include_dump_paths",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "format",
+          "secondary_category": "unaccepted_filter_syntax_with_unrequested_file_io",
+          "upstream_exact": 0,
+          "output_tokens": 582,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "format",
+          "secondary_category": "unaccepted_filter_syntax_with_unrequested_file_io",
+          "upstream_exact": 0,
+          "output_tokens": 547,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "format",
+          "secondary_category": "unaccepted_filter_syntax_with_unrequested_file_io",
+          "upstream_exact": 0,
+          "output_tokens": 375,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_1782",
+      "tool": "svndumpfilter",
+      "group": "include_dump_paths",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "pass",
+          "secondary_category": "verified_pass",
+          "upstream_exact": 1,
+          "output_tokens": 726,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "format",
+          "secondary_category": "correct_filter_core_with_unrequested_file_io",
+          "upstream_exact": 0,
+          "output_tokens": 437,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "format",
+          "secondary_category": "correct_filter_core_with_unrequested_file_io",
+          "upstream_exact": 0,
+          "output_tokens": 367,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "id": "sample_1784",
+      "tool": "svndumpfilter",
+      "group": "include_dump_paths",
+      "draws": [
+        {
+          "seed": 9713,
+          "functional": "pass",
+          "secondary_category": "verified_pass",
+          "upstream_exact": 1,
+          "output_tokens": 488,
+          "finished": true
+        },
+        {
+          "seed": 9721,
+          "functional": "format",
+          "secondary_category": "correct_filter_core_with_unrequested_file_io",
+          "upstream_exact": 0,
+          "output_tokens": 422,
+          "finished": true
+        },
+        {
+          "seed": 9733,
+          "functional": "format",
+          "secondary_category": "correct_filter_core_with_unrequested_file_io",
+          "upstream_exact": 0,
+          "output_tokens": 379,
+          "finished": true
+        }
+      ]
+    }
+  ],
+  "secondary_category_counts": {
+    "wrong_executable_name_for_linux": 1,
+    "unsupported_option_or_value_reproduced": 11,
+    "verified_pass": 6,
+    "global_substitution_corrupts_non_boolean_fields_and_requests_write": 2,
+    "text_description_without_invocation": 1,
+    "multi_invocation_equivalent_on_two_fixtures": 1,
+    "multi_invocation_changes_table_listing": 1,
+    "verified_wrong_output": 2,
+    "appended_line_does_not_mark_requested_character_positions": 1,
+    "byte_display_reproduced_instead_of_source_formatting": 2,
+    "editor_invocation_not_replayed": 1,
+    "unaccepted_filter_syntax_with_unrequested_file_io": 3,
+    "correct_filter_core_with_unrequested_file_io": 4
+  },
+  "teacher_returned_models": [
+    "Qwen/Qwen3.8-27B-FP8"
+  ],
+  "teacher_facts_review_source": "AI review of the public explanations against the reference, two variants and controls",
+  "teacher_factual_review": {
+    "sample_6241": {
+      "8407": {
+        "pass": false,
+        "reason": "The explanation attributes the separate indicator line to the submitted default invocation. Both fixture outputs instead use terminal formatting."
+      },
+      "9407": {
+        "pass": false,
+        "reason": "The explanation describes a separate line as typical for the submitted default invocation; both reference/negative controls distinguish that behavior."
+      },
+      "10407": {
+        "pass": false,
+        "reason": "The indicator marks the underlined character positions, not the length of every line. Concatenation does not activate separate indicator lines."
+      }
+    }
+  },
+  "scorer_pass_agreement": 36,
+  "first_verdict_counts": {
+    "unresolved": 19,
+    "pass": 6,
+    "format": 9,
+    "semantic": 2
+  },
+  "upstream_exact_total": 6,
+  "first_repeatable_semantic_ids": [
+    "sample_6241"
+  ],
+  "teacher_draws": {
+    "sample_6241": {
+      "8407": {
+        "behavior": "semantic",
+        "facts_pass": false
+      },
+      "9407": {
+        "behavior": "semantic",
+        "facts_pass": false
+      },
+      "10407": {
+        "behavior": "unresolved",
+        "facts_pass": false
+      }
+    }
+  },
+  "teacher_both_pass_ids": [],
+  "retest_scores": {},
+  "confirmed_ids": [],
+  "gate_met": false,
+  "official_test_rows_queried": 0,
+  "development_confirmation_retention_queries": 0,
+  "preregistered_protocol": {
+    "scope": "Local offline read-only analysis of synthetic artifacts. Original STUDENT and teacher receive publisher TRAIN wording only. Official TEST remains sealed.",
+    "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "selection_unit": "source query; report intent-group counts separately and never describe paraphrases as independent skills",
+    "primary_mode": "thinking",
+    "first_seeds": [
+      9713,
+      9721,
+      9733
+    ],
+    "retest_seeds": [
+      11003,
+      11027,
+      11047
+    ],
+    "teacher": {
+      "expected_returned_model": "Qwen/Qwen3.8-27B-FP8",
+      "seeds": [
+        8407,
+        9407,
+        10407
+      ],
+      "reference_available": false,
+      "request": "brief public factual explanation and one read-only answer"
+    },
+    "gate": "Each counted query requires >=2/3 execution-certified student semantic errors in each of two independent-seed rounds, and >=2/3 blind teacher draws passing both behavior and factual review. Require >=8 such queries across >=3 distinct skills. Disclose functional, explicit-format, unsupported and truncated separately.",
+    "if_gate_met": {
+      "arms": [
+        "frozen base",
+        "A answer only",
+        "C same answer input and labels, plus separate explanation"
+      ],
+      "training_seeds": [
+        3407,
+        3413,
+        3421
+      ],
+      "initial_fixed_recipe": "BF16 student, FP32 LoRA q/v r16 alpha32 dropout0, AdamW lr0.0001 clip1; supervised segments averaged independently; answer1, format0.1, explanation0.5 in C only. Matched answer exposures, replay composition and batch order. Report per-segment tokens, per-item exposures and compute.",
+      "checkpoints": [
+        0,
+        4,
+        8,
+        16
+      ],
+      "selection": "Use DEV only. Require no net loss on old-ability DEV relative to base, then select by task DEV functional score, then earliest checkpoint. Keep base if none qualify. Record individual failures even for a net tie.",
+      "aba": "Compare against fixed SFT at equal aggregate search GPU time, same DEV and grading, choices limited to explanation weight and stopping time; keep independent confirmation out of all search.",
+      "confirmation": "Once-only original vs selected fixed SFT and ABA; report pair counts per independent question and family, cluster repeated generations, and report limitations from the small sample."
+    },
+    "if_gate_fails": "Stop new SFT and ABA, report all denominators, keep original model. Do not call new DEV/confirmation/retention."
+  },
+  "fixture_sha256": {
+    "v0.mdb": "3f244766c828c13da91974ee2b258c1c1f97df949aedbdd287aa74bdfbf5c3a3",
+    "v1.mdb": "5610825bd322d9023dfa13fde05c5ca4c11a7bbcc1d5c459b53c5432f6f82d3a"
+  },
+  "new_model_queries": {
+    "student_first": 36,
+    "teacher": 3,
+    "student_retest": 0
+  },
+  "hashes": {
+    "freeze.json": "aab0ad32fa9518d583029f072c1fd340a0ca9e1c3169a01a6fe611c2de09e12b",
+    "freeze-batch-two.json": "e619463ec818c4d74a517acbe5ce2a592449f3b2fab44baf8c2af1d4cf7dc3a6",
+    "conditional-protocol.json": "cb260c8087b9e422da1b5c8480a9af015ec95af333254323e8f258ee20a0198f",
+    "selftest.json": "8cb02c8fba30539f2cbf697fe50de53c3660137d0d8efe7697bafc8370c60063",
+    "baseline.json": "2fe2b3cab60e59435b3be06294e7e1b766154abaf6ef0142c82bb024c73847ed",
+    "controls.json": "69ba3ded764f45c669b6c0bce7ebb49838bfa6a4adaf092a9571025f9a1fffdb",
+    "supplement.json": "6cc40a91d6e274e923ff6b2964d429d1e019ddc9ab783d54aa8ccc8a340c8e87",
+    "predictions.json": "ae6426dd5ddda972643c0dc36987e390917c01e63f58c0c5fc28fc55331825b5",
+    "native-train-scores.json": "04d0907bc80fa2c3ef9ce3d47de26edd26edbef45f9c010b3b437015d220d70a",
+    "blind-teacher.json": "348efebef8895eb191b2de87cd24bbddc7bb6ca6daa949f9e3390515520c1b84",
+    "diagnostics.json": "f309b90e484221fdadf9100b6a156ca18007107217c83ac2a8c1c02111cbc6c5",
+    "teacher.json": "53ebf430fef08df74c0295276aa077862cf6093202ed488561e1304d0182ce58",
+    "teacher-facts.json": "2e31ef9351f39ec560e7c90caaa936b26c0253454c8b4731430db928a53d0c50"
+  },
+  "upstream_scorer_sha256": "eba42588d692dfbe2a45d8dc22645fec5176664c85a46b15859dc805630460a9"
+}

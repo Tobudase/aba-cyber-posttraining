@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 20, 2026 — Official TRAIN inventory screening
+
+Two rounds of source review produced 12 offline, read-only questions with verified positive and negative controls. Original Qwen3-8B passed 6/36 generations. One question met the initial repeated semantic-error criterion. The same-family teacher passed 0/3 blind draws on that question. No new example met the full teacher–student gap criterion, so the original checkpoint was retained and no new SFT or ABA run was started. These are selected TRAIN questions; official TEST remained sealed.
+
+[Chinese report and error analysis](results/official-train-inventory-2026-11-20/RESULT_ZH.md) · [Per-question results and offline recount](results/official-train-inventory-2026-11-20/summary.json)
+
+![Screening decisions and the 36 original-student draws](results/official-train-inventory-2026-11-20/screening.png)
+
 ## November 20, 2026 — Matched answer-prefix SFT on paired inventory tasks
 
 Three Qwen3-8B adapters learned the same four inventory prompts for 64 updates. On 12 independent development prompts sampled three times each in thinking mode, the original model passed **17/36**. At step 64, answer-only SFT passed **30/36**, inline-explanation SFT **28/36**, and separate-explanation SFT **30/36**. The separate-explanation arm used exactly the same direct-answer inputs and labels as the answer-only arm. On paired draws it gained 0 passes and lost 0 relative to answer-only at step 64. All nine adapters were saved, reloaded, and verified. The curves show internal development results from one training seed.
