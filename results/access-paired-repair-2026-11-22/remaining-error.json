@@ -1,0 +1,37 @@
+{
+  "case": "explain4096_24109_2",
+  "original_flags": [
+    "--no-comments",
+    "--no-default-values",
+    "--no-indexes",
+    "--no-relations"
+  ],
+  "gold": [
+    "a83889b90ffdb9b4117b298e873183821522663f6d9654ef351d38a6642a9c7a",
+    "697ba243bab5649c94c978c15951afd87f42f371196147bb0769a23921fa917b",
+    "4cff4abad1405a6448dfe7fed5946610de5cc548cc29189a402a9c7898d62b49"
+  ],
+  "observed": {
+    "--no-comments --no-default-values --no-indexes --no-relations": [
+      "f3d317a0421417a92888d7b2df5cb901908610a30b3a563564589f1b4dd2c36f",
+      "bce308fae1d9bb59545c04eda5103c6cba5d1c1c1e284fcfe1b21b46cb1ad06d",
+      "4cff4abad1405a6448dfe7fed5946610de5cc548cc29189a402a9c7898d62b49"
+    ],
+    "--no-comments --no-default-values --no-indexes --no-not-null --no-relations": [
+      "a83889b90ffdb9b4117b298e873183821522663f6d9654ef351d38a6642a9c7a",
+      "697ba243bab5649c94c978c15951afd87f42f371196147bb0769a23921fa917b",
+      "4cff4abad1405a6448dfe7fed5946610de5cc548cc29189a402a9c7898d62b49"
+    ],
+    "--no-comments --no-default-values --no-indexes --no-not_empty --no-relations": [
+      "f3d317a0421417a92888d7b2df5cb901908610a30b3a563564589f1b4dd2c36f",
+      "bce308fae1d9bb59545c04eda5103c6cba5d1c1c1e284fcfe1b21b46cb1ad06d",
+      "4cff4abad1405a6448dfe7fed5946610de5cc548cc29189a402a9c7898d62b49"
+    ],
+    "--no-comments --no-default-values --no-indexes --no-not-null --no-not_empty --no-relations": [
+      "a83889b90ffdb9b4117b298e873183821522663f6d9654ef351d38a6642a9c7a",
+      "697ba243bab5649c94c978c15951afd87f42f371196147bb0769a23921fa917b",
+      "4cff4abad1405a6448dfe7fed5946610de5cc548cc29189a402a9c7898d62b49"
+    ]
+  },
+  "source": "Archived exhaustive flag-subset replay on the same three DB fixture contents, using temp.mdb as filename."
+}

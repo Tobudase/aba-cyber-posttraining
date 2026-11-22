@@ -1,5 +1,11 @@
 # ABA Cybersecurity Post-training Research
 
+## November 22, 2026 — Which repair preserves both directions of a schema request?
+
+On three new pairs of prompts, sampled twice and scored on three databases, the existing answer-only step-16 adapter passed **12/12** responses. Adding an opposite-direction example at the same 16-step budget passed **8/12**. Adding a separate short teacher-explanation task passed **6/12** at a 1,024-token cap and **11/12** at 4,096. All four failures of paired answer-only training passed after correcting a single constraint flag. These probes cover one read-only tool.
+
+[Chinese report and sources](results/access-paired-repair-2026-11-22/RESULT_ZH.md) · [Per-response checks](results/access-paired-repair-2026-11-22/results.json) · [Offline recount](results/access-paired-repair-2026-11-22/verify.py)
+
 ## November 22, 2026 — Reproduced a documented Access schema error
 
 On one read-only KaliBench TRAIN question with the same installed-tool help, original Qwen3-8B passed **0/3**, Qwen3.8-27B-FP8 **3/3**, and DeepSeek 4.1 Flash **2/3**. Fixing one character in each historical student response restored the reference output on all three database fixtures. These are repeated draws on one question.

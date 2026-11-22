@@ -1,0 +1,1438 @@
+{
+  "primary": "Both directions correct, three wording/file pairs times two seeds, /6",
+  "counts": {
+    "base": {
+      "both": 0,
+      "omit": 1,
+      "retain": 0,
+      "format": 4,
+      "semantic": 1,
+      "strict": 1
+    },
+    "historical-A16": {
+      "both": 6,
+      "omit": 6,
+      "retain": 6,
+      "format": 12,
+      "semantic": 12,
+      "strict": 12
+    },
+    "paired-A16": {
+      "both": 2,
+      "omit": 6,
+      "retain": 2,
+      "format": 12,
+      "semantic": 8,
+      "strict": 8
+    },
+    "paired-explain16": {
+      "both": 2,
+      "omit": 4,
+      "retain": 2,
+      "format": 6,
+      "semantic": 6,
+      "strict": 6
+    }
+  },
+  "draws": {
+    "base": [
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": false,
+        "strict": false,
+        "executed": true,
+        "issue": null,
+        "tokens": 711,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-relations --no-not-null --no-not-empty --no-default-values --no-indexes --no-comments catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 893,
+        "ended": true,
+        "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-default-values books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": false,
+        "strict": false,
+        "executed": true,
+        "issue": null,
+        "tokens": 709,
+        "ended": true,
+        "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-relations --no-not-null --no-not-empty --default-values stock.mdb",
+        "fixtures": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": false,
+        "strict": false,
+        "executed": true,
+        "issue": null,
+        "tokens": 899,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-not-empty --no-relations --no-indexes --no-comments --no-default-values catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION\u2026] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      }
+    ],
+    "historical-A16": [
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 41,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 41,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 41,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 41,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 41,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 41,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      }
+    ],
+    "paired-A16": [
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 37,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-indexes --no-comments --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 38,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-comments --no-indexes --no-relations books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": false,
+        "strict": false,
+        "executed": true,
+        "issue": null,
+        "tokens": 36,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --not-null --default-values --no-comments --no-indexes --no-relations books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": false,
+        "strict": false,
+        "executed": true,
+        "issue": null,
+        "tokens": 36,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --not-null --default-values --no-indexes --no-comments --no-relations stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 38,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-comments --no-indexes --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 37,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-comments --no-indexes --no-relations catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 38,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-comments --no-indexes --no-relations books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": false,
+        "strict": false,
+        "executed": true,
+        "issue": null,
+        "tokens": 40,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --not-null --default-values --no-not_empty --no-comments --no-indexes --no-relations books.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 42,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": false,
+        "strict": false,
+        "executed": true,
+        "issue": null,
+        "tokens": 36,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --not-null --default-values --no-indexes --no-comments --no-relations stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      }
+    ],
+    "paired-explain16": [
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 594,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-indexes --no-comments catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24107,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 478,
+        "ended": true,
+        "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-not-null --no-default-values --no-relations stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24107,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 592,
+        "ended": true,
+        "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-relations --no-not-null --no-not_empty --default-values stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 498,
+        "ended": true,
+        "command": "mdb-schema --no-relations --no-not-null --no-default-values --no-indexes --no-comments --no-drop-table catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "catalog.mdb",
+        "retain": true,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 565,
+        "ended": true,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-indexes --no-comments --no-relations --default-values catalog.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": false,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24109,
+        "file": "books.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": false,
+        "format_ok": true,
+        "semantic": true,
+        "strict": true,
+        "executed": true,
+        "issue": null,
+        "tokens": 488,
+        "ended": true,
+        "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-default-values --no-relations --no-not-null --no-not_empty stock.mdb",
+        "fixtures": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ]
+      },
+      {
+        "seed": 24109,
+        "file": "stock.mdb",
+        "retain": true,
+        "format_ok": false,
+        "semantic": false,
+        "strict": false,
+        "executed": false,
+        "issue": "length_limit",
+        "tokens": 1024,
+        "ended": false,
+        "command": "",
+        "fixtures": []
+      }
+    ]
+  },
+  "controls": {
+    "control_0_gold": {
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "executed": true
+    },
+    "control_0_wrong_defaults": {
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        }
+      ],
+      "executed": true
+    },
+    "control_0_wrong_constraint": {
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "executed": true
+    },
+    "control_1_gold": {
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "executed": true
+    },
+    "control_1_wrong_defaults": {
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        }
+      ],
+      "executed": true
+    },
+    "control_1_wrong_constraint": {
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": false,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "executed": true
+    }
+  },
+  "losses": {
+    "paired-A16": [
+      0.8600533604621887,
+      1.664776086807251,
+      0.6997934579849243,
+      1.2992279529571533,
+      0.3743745684623718,
+      0.885297954082489,
+      0.24020585417747498,
+      0.5425989627838135,
+      0.20996716618537903,
+      0.18955720961093903,
+      0.16383594274520874,
+      0.13225919008255005,
+      0.07087203860282898,
+      0.01046972069889307,
+      0.00030875790980644524,
+      0.0006807905156165361
+    ],
+    "paired-explain16": [
+      4.4343953132629395,
+      4.791189193725586,
+      4.071926116943359,
+      4.090298175811768,
+      3.1167633533477783,
+      3.00760555267334,
+      2.393562078475952,
+      2.2114133834838867,
+      1.9166040420532227,
+      1.664365530014038,
+      1.6402314901351929,
+      1.2532410621643066,
+      1.4335592985153198,
+      1.0120370388031006,
+      1.2557308673858643,
+      0.8472292423248291
+    ]
+  },
+  "adapter_parameter_sha256": {
+    "paired-A16": "4492a10682e7a9bb658c8094c7bcbe8281292b309eaf87173820a895d4ce265f",
+    "paired-explain16": "85d7b2eea91ddc2f37b2128a1e010126bb0da29e750eb110a329586c6be39895"
+  },
+  "identical_init_sha256": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1",
+  "hardware": [
+    "NVIDIA RTX A6000",
+    "NVIDIA RTX A6000"
+  ]
+}

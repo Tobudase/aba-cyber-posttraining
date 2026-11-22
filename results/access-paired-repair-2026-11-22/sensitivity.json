@@ -1,0 +1,398 @@
+{
+  "base4096_24107_0": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 711,
+    "short_ended": true,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-relations --no-not-null --no-not-empty --no-default-values --no-indexes --no-comments catalog.mdb"
+  },
+  "base4096_24107_1": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1370,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-indexes --no-comments --no-relations --no-not-null --no-not-empty --default-values catalog.mdb"
+  },
+  "base4096_24107_2": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 893,
+    "short_ended": true,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-default-values books.mdb"
+  },
+  "base4096_24107_3": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1313,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-not-empty --default-values books.mdb"
+  },
+  "base4096_24107_4": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1680,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-default-values stock.mdb"
+  },
+  "base4096_24107_5": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 709,
+    "short_ended": true,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-relations --no-not-null --no-not-empty --default-values stock.mdb"
+  },
+  "base4096_24109_0": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 899,
+    "short_ended": true,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-not-null --no-not-empty --no-relations --no-indexes --no-comments --no-default-values catalog.mdb"
+  },
+  "base4096_24109_1": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1292,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-indexes --no-comments --no-relations --no-not-null --no-not-empty --default-values catalog.mdb"
+  },
+  "base4096_24109_2": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1040,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-not-empty --no-default-values --no-drop-table books.mdb"
+  },
+  "base4096_24109_3": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1719,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-not-empty --default-values books.mdb"
+  },
+  "base4096_24109_4": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1110,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-default-values --no-not-null --no-not-empty --no-relations stock.mdb"
+  },
+  "base4096_24109_5": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1215,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-relations --no-not-null --no-not-empty --default-values stock.mdb"
+  },
+  "paired-A16_3_repair": {
+    "arm": "paired-A16",
+    "index": 3,
+    "intervention": "replace --not-null with --no-not-null",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-comments --no-indexes --no-relations books.mdb"
+  },
+  "paired-A16_5_repair": {
+    "arm": "paired-A16",
+    "index": 5,
+    "intervention": "replace --not-null with --no-not-null",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-indexes --no-comments --no-relations stock.mdb"
+  },
+  "paired-A16_9_repair": {
+    "arm": "paired-A16",
+    "index": 9,
+    "intervention": "replace --not-null with --no-not-null",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-not_empty --no-comments --no-indexes --no-relations books.mdb"
+  },
+  "paired-A16_11_repair": {
+    "arm": "paired-A16",
+    "index": 11,
+    "intervention": "replace --not-null with --no-not-null",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-indexes --no-comments --no-relations stock.mdb"
+  }
+}

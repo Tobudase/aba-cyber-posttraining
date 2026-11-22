@@ -1,0 +1,12 @@
+[
+  {
+    "teacher": "Qwen/Qwen3.8-27B-FP8",
+    "input_hash": "a39fa111a0b396a48f8497bd8c2de90c5e260e028d3ec57604b1e33d3bfad7d3",
+    "sentence": "The command uses `--no-default-values` to omit default-value choices, which is distinct from `--no-not-null` that disables NOT NULL constraints."
+  },
+  {
+    "teacher": "Qwen/Qwen3.8-27B-FP8",
+    "input_hash": "9b017252ff1cde93471eafa88a9f023d505834b9775e699d97a7be89bdab18d7",
+    "sentence": "The command dumps the schema for temp.mdb, excluding DROP TABLE, NOT NULL, not empty, comments, indexes, and relations, while explicitly including default values."
+  }
+]

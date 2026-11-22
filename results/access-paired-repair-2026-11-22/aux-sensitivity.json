@@ -1,0 +1,314 @@
+{
+  "explain4096_24107_0": {
+    "format_ok": true,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-indexes --no-comments catalog.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 594,
+    "short_ended": true,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24107_1": {
+    "format_ok": true,
+    "command": "mdb-schema --no-drop-table --no-indexes --no-comments --no-relations --no-not-null --default-values catalog.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 1960,
+    "short_ended": false,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24107_2": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-default-values --no-not-null --no-relations books.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 1633,
+    "short_ended": false,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24107_3": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --default-values books.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 1586,
+    "short_ended": false,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24107_4": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-not-null --no-default-values --no-relations stock.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 478,
+    "short_ended": true,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24107_5": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-relations --no-not-null --no-not_empty --default-values stock.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 592,
+    "short_ended": true,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24109_0": {
+    "format_ok": true,
+    "command": "mdb-schema --no-relations --no-not-null --no-default-values --no-indexes --no-comments --no-drop-table catalog.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 498,
+    "short_ended": true,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24109_1": {
+    "format_ok": true,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-indexes --no-comments --no-relations --default-values catalog.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 565,
+    "short_ended": true,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24109_2": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-default-values --no-relations books.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 1776,
+    "short_ended": false,
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24109_3": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-not_empty --default-values books.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 1273,
+    "short_ended": false,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24109_4": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-default-values --no-relations --no-not-null --no-not_empty stock.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 488,
+    "short_ended": true,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "explain4096_24109_5": {
+    "format_ok": true,
+    "command": "mdb-schema --no-indexes --no-comments --no-drop-table --no-relations --no-not-null --no-not_empty --default-values stock.mdb",
+    "issue": null,
+    "ended": true,
+    "tokens": 1191,
+    "short_ended": false,
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  }
+}

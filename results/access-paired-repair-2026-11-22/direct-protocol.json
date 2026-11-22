@@ -1,0 +1,11 @@
+{
+  "condition": "paired-explain16",
+  "enable_thinking": false,
+  "seeds": [
+    24107,
+    24109
+  ],
+  "cap": 1024,
+  "fixed_sampler": "temperature .6, top_p .95, top_k 20, min_p 0, matched to thinking mode",
+  "acceptance": "EOS plus exactly one output block as the entire final answer, passed on all three DB files."
+}
