@@ -1,0 +1,595 @@
+{
+  "study": "Offline behavior and raw-trace screen on four TRAIN questions",
+  "teacher": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "student": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "teacher_plan_sha256": "739459111f87853b53f1694fed3d5cefa02a2129b4e03f9ddf54f7af9c489222",
+  "official_test_calls": 0,
+  "arms": {
+    "studentblind": {
+      "sample_7106": [
+        {
+          "seed": 11003,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "Missing line selector and requests in-place modification.",
+          "tokens": 900
+        },
+        {
+          "seed": 11027,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "Invalid hyphenated line range and requests in-place modification.",
+          "tokens": 498
+        },
+        {
+          "seed": 11047,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "Invalid hyphenated line range.",
+          "tokens": 702
+        }
+      ],
+      "sample_6137": [
+        {
+          "seed": 11003,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "Unsupported general constraints switch.",
+          "tokens": 506
+        },
+        {
+          "seed": 11027,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "Unsupported general constraints switch.",
+          "tokens": 747
+        },
+        {
+          "seed": 11047,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "wrong_view_or_constraint",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Defaults do not give the minimal schema on the fixtures.",
+          "tokens": 393
+        }
+      ],
+      "sample_2632": [
+        {
+          "seed": 11003,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "not_single_direct_invocation",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "Invalid text switch; additionally requests a file write. The option alone was probed without redirection.",
+          "tokens": 409,
+          "repeated_parameter_error": true
+        },
+        {
+          "seed": 11027,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "Unsupported output option; read-only argument probe rejected it.",
+          "tokens": 481,
+          "repeated_parameter_error": true
+        },
+        {
+          "seed": 11047,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "Unsupported file/output options; read-only argument probe rejected the invocation.",
+          "tokens": 433,
+          "repeated_parameter_error": true
+        }
+      ],
+      "sample_2634": [
+        {
+          "seed": 11003,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct XML selector and displayed feature inventory.",
+          "tokens": 495
+        },
+        {
+          "seed": 11027,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "Certificate-output option mistaken for report format.",
+          "tokens": 312
+        },
+        {
+          "seed": 11047,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "Invalid XML selector.",
+          "tokens": 603
+        }
+      ]
+    },
+    "studentmanual": {
+      "sample_7106": [
+        {
+          "seed": 11003,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "Range and style correct, but requests in-place write.",
+          "tokens": 338
+        },
+        {
+          "seed": 11027,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct span and LLVM style.",
+          "tokens": 468
+        },
+        {
+          "seed": 11047,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct span and LLVM style.",
+          "tokens": 690
+        }
+      ],
+      "sample_6137": [
+        {
+          "seed": 11003,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "Unsupported --no-not-empty spelling.",
+          "tokens": 1005
+        },
+        {
+          "seed": 11027,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "Unsupported --no-not-empty spelling.",
+          "tokens": 660
+        },
+        {
+          "seed": 11047,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "Unsupported --no-not-empty spelling.",
+          "tokens": 633
+        }
+      ],
+      "sample_2632": [
+        {
+          "seed": 11003,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct explicit text selector and accurate default.",
+          "tokens": 252
+        },
+        {
+          "seed": 11027,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct explicit text selector and accurate default.",
+          "tokens": 218
+        },
+        {
+          "seed": 11047,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct explicit text selector and accurate default.",
+          "tokens": 282
+        }
+      ],
+      "sample_2634": [
+        {
+          "seed": 11003,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct XML selector and file argument.",
+          "tokens": 222
+        },
+        {
+          "seed": 11027,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct XML selector and file argument.",
+          "tokens": 230
+        },
+        {
+          "seed": 11047,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Correct XML selector and file argument.",
+          "tokens": 324
+        }
+      ]
+    }
+  },
+  "additional_unassigned_sources": {
+    "pesec": {
+      "train_total": 5,
+      "protected_or_previous": [
+        "sample_1632",
+        "sample_2631",
+        "sample_2633"
+      ],
+      "already_frozen": [
+        "sample_2632",
+        "sample_2634"
+      ],
+      "new_unassigned": []
+    },
+    "clang-format": {
+      "train_total": 4,
+      "protected_or_previous": [
+        "sample_7107"
+      ],
+      "already_frozen": [
+        "sample_7106",
+        "sample_7108",
+        "sample_7109"
+      ],
+      "new_unassigned": []
+    },
+    "mdb-schema": {
+      "train_total": 3,
+      "protected_or_previous": [
+        "sample_6138"
+      ],
+      "already_frozen": [
+        "sample_6137",
+        "sample_6139"
+      ],
+      "new_unassigned": []
+    }
+  },
+  "raw_trace_fact_probes": {
+    "pesec -h": 1,
+    "pesec --help": 0,
+    "pesec -v explorer.exe": 1,
+    "pesec --verbose explorer.exe": 1,
+    "pesec -V": 0,
+    "pesec -t explorer.exe": 1,
+    "pesec -FilePath cmd.exe -OutputFormat XML": 1
+  },
+  "token_labels": {
+    "teacher-sample_2632-8407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 649,
+        "masked": 62,
+        "trace": 569,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "teacher-sample_2632-9407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 669,
+        "masked": 62,
+        "trace": 589,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "teacher-sample_2632-10407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 834,
+        "masked": 62,
+        "trace": 754,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "long-sample_2632-8407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 714,
+        "masked": 62,
+        "trace": 634,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "long-sample_2632-9407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 510,
+        "masked": 62,
+        "trace": 430,
+        "answer": 14,
+        "format": 4
+      }
+    }
+  },
+  "fresh_blind_parameter_probes": {
+    "pesec --text explorer.exe": 1,
+    "pesec explorer.exe --output=text": 1,
+    "pesec --file explorer.exe --output text": 1
+  },
+  "paired_student_joint_counts": {
+    "neither": 4,
+    "manual_only": 7,
+    "both": 1
+  },
+  "training_decision": {
+    "historically_repeated_verified_gap": [
+      "sample_2632"
+    ],
+    "raw_trace_ready_cases": 0,
+    "new_sft_jobs": 0,
+    "new_aba_jobs": 0,
+    "base_retained": true
+  }
+}

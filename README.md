@@ -4,6 +4,8 @@
 
 On four selected read-only KaliBench TRAIN questions, DeepSeek passed **3/12** blind attempts at a 1,200-token cap and **2/12** at 4,096. Only the explicit-text question met the two-of-three threshold. All five correct responses contained unsupported option claims in the raw trace. The final answers and visible explanations passed on those draws. No raw-trace SFT was started.
 
+The original Qwen3-8B passed **1/12 blind** and **8/12 with tool help** on fresh seeds. On the one confirmed blind gap (PE text), documentation took the student from 0/3 to 3/3.
+
 [Chinese report](results/deepseek41-blind-readonly/RESULT_ZH.md) · [Per-response checks and token audit](results/deepseek41-blind-readonly/teacher-summary.json)
 
 ## November 20, 2026 — Blind teacher versus the same teacher with tool help
