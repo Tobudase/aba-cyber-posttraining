@@ -1,5 +1,11 @@
 # ABA Cybersecurity Post-training Research
 
+## November 22, 2026 — Reproduced a documented Access schema error
+
+On one read-only KaliBench TRAIN question with the same installed-tool help, original Qwen3-8B passed **0/3**, Qwen3.8-27B-FP8 **3/3**, and DeepSeek 4.1 Flash **2/3**. Fixing one character in each historical student response restored the reference output on all three database fixtures. These are repeated draws on one question.
+
+[Chinese report](results/access-schema-2026-11-22/RESULT_ZH.md) · [Fixture outcomes and offline recount](results/access-schema-2026-11-22/screen.json)
+
 ## November 21, 2026 — DeepSeek 4.1 Flash blind teacher screen
 
 On four selected read-only KaliBench TRAIN questions, DeepSeek passed **3/12** blind attempts at a 1,200-token cap and **2/12** at 4,096. Only the explicit-text question met the two-of-three threshold. All five correct responses contained unsupported option claims in the raw trace. The final answers and visible explanations passed on those draws. No raw-trace SFT was started.

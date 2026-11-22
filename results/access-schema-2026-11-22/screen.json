@@ -1,0 +1,337 @@
+{
+  "source": "official TRAIN sample_6137",
+  "student_commit": "b968826d9c46dd6066d109eabc6255188de91218",
+  "tool": "mdbtools 0.9.1",
+  "teachers": {
+    "qwen": "Qwen/Qwen3.8-27B-FP8",
+    "deepseek": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+  },
+  "same_help_sha256": "1203b9d09b3723c73fa2b5570f34469c8c9466c426150d9b2ad5d2930cb1b14f",
+  "seeds": [
+    22103,
+    22109,
+    22111
+  ],
+  "draws": [
+    {
+      "arm": "student",
+      "seed": 22103,
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        }
+      ],
+      "explanation_correct": false
+    },
+    {
+      "arm": "student",
+      "seed": 22109,
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        }
+      ],
+      "explanation_correct": false
+    },
+    {
+      "arm": "student",
+      "seed": 22111,
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        }
+      ],
+      "explanation_correct": false
+    },
+    {
+      "arm": "qwen",
+      "seed": 22103,
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "explanation_correct": true
+    },
+    {
+      "arm": "qwen",
+      "seed": 22109,
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "explanation_correct": true
+    },
+    {
+      "arm": "qwen",
+      "seed": 22111,
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "explanation_correct": true
+    },
+    {
+      "arm": "deepseek",
+      "seed": 22103,
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "explanation_correct": true
+    },
+    {
+      "arm": "deepseek",
+      "seed": 22109,
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "explanation_correct": true
+    },
+    {
+      "arm": "deepseek",
+      "seed": 22111,
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+        }
+      ],
+      "explanation_correct": false
+    }
+  ],
+  "prior_counterfactuals": {
+    "11003": {
+      "old_option": "--no-not-empty",
+      "corrected_option": "--no-not_empty",
+      "checks": [
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        },
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        },
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        }
+      ]
+    },
+    "11027": {
+      "old_option": "--no-not-empty",
+      "corrected_option": "--no-not_empty",
+      "checks": [
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        },
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        },
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        }
+      ]
+    },
+    "11047": {
+      "old_option": "--no-not-empty",
+      "corrected_option": "--no-not_empty",
+      "checks": [
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        },
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        },
+        {
+          "before": 1,
+          "after": 0,
+          "match_gold": true
+        }
+      ]
+    }
+  },
+  "reverse_control": [
+    1,
+    1,
+    1
+  ],
+  "default_37_observed": true,
+  "selected": "qwen-22103",
+  "reason": "First eligible seed of first eligible teacher in the frozen protocol.",
+  "labels": {
+    "A": {
+      "format": 4,
+      "answer": 39,
+      "masked": 275
+    },
+    "B": {
+      "format": 4,
+      "answer": 39,
+      "masked": 275,
+      "trace": 1027
+    }
+  },
+  "extension_controls": {
+    "sample_1546": [
+      true,
+      true
+    ],
+    "sample_7717": [
+      true,
+      true
+    ],
+    "sample_1502": [
+      false,
+      false
+    ],
+    "sample_6691": [
+      false,
+      false
+    ],
+    "sample_7719": [
+      true,
+      true
+    ],
+    "sample_1506": [
+      true,
+      true
+    ]
+  },
+  "official_test_used": false
+}
