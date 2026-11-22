@@ -1,0 +1,258 @@
+{
+  "thinking_24107_0": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 470,
+    "command": "mdb-schema --no-not-null --no-not_empty --no-default-values --no-indexes --no-comments --no-drop-table catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24107_1": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 530,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --default-values --no-comments --no-indexes --no-relations catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24107_2": {
+    "format_ok": false,
+    "ended": false,
+    "tokens": 1024,
+    "command": "",
+    "semantic": false,
+    "fixtures": []
+  },
+  "thinking_24107_3": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 504,
+    "command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-not_empty --default-values books.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24107_4": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 330,
+    "command": "mdb-schema --no-drop-table --no-indexes --no-comments --no-not-null --no-default-values --no-not_empty --no-relations stock.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24107_5": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 858,
+    "command": "mdb-schema --no-indexes --no-drop-table --no-comments --no-not-null --no-not_empty --default-values stock.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24109_0": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 712,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24109_1": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 424,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-indexes --no-comments --no-relations --default-values catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24109_2": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 1005,
+    "command": "mdb-schema --no-indexes --no-comments --no-default-values --no-not-null --no-not_empty --no-relations books.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24109_3": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 785,
+    "command": "mdb-schema --no-indexes --no-comments --no-not-null --no-not_empty --no-relations --default-values books.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "thinking_24109_4": {
+    "format_ok": false,
+    "ended": false,
+    "tokens": 1024,
+    "command": "",
+    "semantic": false,
+    "fixtures": []
+  },
+  "thinking_24109_5": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 437,
+    "command": "mdb-schema --no-indexes --no-drop-table --no-not-null --no-not_empty --no-comments --no-relations --default-values stock.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  }
+}

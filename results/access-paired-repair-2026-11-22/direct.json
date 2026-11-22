@@ -1,0 +1,290 @@
+{
+  "direct_24107_0": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 38,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24107_1": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 33,
+    "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-indexes --no-comments --no-relations catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24107_2": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 34,
+    "command": "mdb-schema --no-default-values --no-not-null --no-not_empty --no-comments --no-indexes --no-relations books.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24107_3": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 25,
+    "command": "mdb-schema --no-indexes --no-comments --no-constraints --default-values books.mdb",
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-constraints\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help               "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-constraints\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help               "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-constraints\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help               "
+      }
+    ]
+  },
+  "direct_24107_4": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 38,
+    "command": "mdb-schema --no-drop-table --no-default-values --no-indexes --no-comments --no-not-null --no-not_empty --no-relations stock.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24107_5": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 32,
+    "command": "mdb-schema --no-drop-table --not-null --default-values --no-indexes --no-comments --no-relations stock.mdb",
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24109_0": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 38,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24109_1": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 33,
+    "command": "mdb-schema --no-drop-table --no-not-null --default-values --no-indexes --no-relations --no-comments catalog.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24109_2": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 34,
+    "command": "mdb-schema --no-default-values --no-not-null --no-not_empty --no-comments --no-indexes --no-relations books.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24109_3": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 37,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values books.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24109_4": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 38,
+    "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations stock.mdb",
+    "semantic": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  },
+  "direct_24109_5": {
+    "format_ok": true,
+    "ended": true,
+    "tokens": 32,
+    "command": "mdb-schema --no-drop-table --not-null --default-values --no-indexes --no-comments --no-relations stock.mdb",
+    "semantic": false,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ]
+  }
+}

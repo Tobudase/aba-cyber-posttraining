@@ -2,7 +2,7 @@
 
 ## November 22, 2026 — Which repair preserves both directions of a schema request?
 
-On three new pairs of prompts, sampled twice and scored on three databases, the existing answer-only step-16 adapter passed **12/12** responses. Adding an opposite-direction example at the same 16-step budget passed **8/12**. Adding a separate short teacher-explanation task passed **6/12** at a 1,024-token cap and **11/12** at 4,096. All four failures of paired answer-only training passed after correcting a single constraint flag. These probes cover one read-only tool.
+On three new pairs of prompts, sampled twice and scored on three databases, the existing answer-only step-16 adapter passed **12/12** responses. Adding an opposite-direction example at the same 16-step budget passed **8/12**. Adding a separate short teacher-explanation task passed **6/12** at a 1,024-token cap and **11/12** at 4,096. All four failures of paired answer-only training passed after correcting a single constraint flag. On a matched A10 inference run, disabling thinking removed both truncations and changed correctness from 10/12 to 9/12. These probes cover one read-only tool.
 
 [Chinese report and sources](results/access-paired-repair-2026-11-22/RESULT_ZH.md) · [Per-response checks](results/access-paired-repair-2026-11-22/results.json) · [Offline recount](results/access-paired-repair-2026-11-22/verify.py)
 
