@@ -1,0 +1,561 @@
+{
+  "study": "Offline behavior and raw-trace screen on four TRAIN questions",
+  "teacher": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "student": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "teacher_plan_sha256": "739459111f87853b53f1694fed3d5cefa02a2129b4e03f9ddf54f7af9c489222",
+  "official_test_calls": 0,
+  "arms": {
+    "teacher": {
+      "sample_7106": [
+        {
+          "seed": 8407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 1166,
+          "trace_sha256": "1507c61a169f0f16213896ee73deef9f360ba92625afa93531707cf11e141e56",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 1209,
+          "trace_sha256": "e2e29144643e12b4b765a1e2bcc9e5c9cf1803d071a4c50f8e4d8df946f10349",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 1233,
+          "trace_sha256": "17b701d452027992e2ba275ee371b4a76b7c355e8c43bc492b33f651ac3a7bac",
+          "raw_fit_eligible": false
+        }
+      ],
+      "sample_6137": [
+        {
+          "seed": 8407,
+          "behavior": false,
+          "joint": false,
+          "ended": false,
+          "parsed": false,
+          "replay_reason": "malformed_or_truncated",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 4142,
+          "trace_sha256": "62540f549925c54c81793a84adf0dd823b1fb6ed066184cdaf6be9acc6d51010",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": false,
+          "joint": false,
+          "ended": false,
+          "parsed": false,
+          "replay_reason": "malformed_or_truncated",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 4500,
+          "trace_sha256": "a51bd0eb3182ff22b2ff2a1e9aa474a2cfa9438915fba3a3aafa168a137f72ca",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": false,
+          "joint": false,
+          "ended": false,
+          "parsed": false,
+          "replay_reason": "malformed_or_truncated",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 4386,
+          "trace_sha256": "64c60c3878808eb38ae381edbb5d872b4fd86c6b83bd648e38752e26c22810a6",
+          "raw_fit_eligible": false
+        }
+      ],
+      "sample_2632": [
+        {
+          "seed": 8407,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Lists -h as help in a proposed usage block; rejected by the installed binary.",
+          "trace_chars": 2356,
+          "trace_sha256": "46fc7a725e38364923f8d9ce99e6f8949012248d3dd71d0c1909a615589cd628",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "States that -v/--verbose exists; the installed binary rejects both.",
+          "trace_chars": 2421,
+          "trace_sha256": "50abd47964d67a49b8691130bf229750eef7d513460c25f518268acfee090290",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Includes -h as the short help option; the installed binary rejects it, and the trace does not correct that claim.",
+          "trace_chars": 2867,
+          "trace_sha256": "a807f08967bae4c78db7244ac4e8292d2ebe5feeefcb6a132fbe18f05694ebb9",
+          "raw_fit_eligible": false
+        }
+      ],
+      "sample_2634": [
+        {
+          "seed": 8407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 2010,
+          "trace_sha256": "1916e79abb28a20b239deba0b7d95f1699c7a5fcf9d962705221d2420fa50340",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 3252,
+          "trace_sha256": "e5d8fa357ad251b3a24d165773d780ac50839f375f6871b9674a3f4ad8d8c6ed",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": false,
+          "joint": false,
+          "ended": false,
+          "parsed": false,
+          "replay_reason": "malformed_or_truncated",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 4486,
+          "trace_sha256": "e43ce05d8049eb134847eb404b86d078fdacead335fd97b1efff9850148f9e63",
+          "raw_fit_eligible": false
+        }
+      ]
+    },
+    "long": {
+      "sample_7106": [
+        {
+          "seed": 8407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 1456,
+          "trace_sha256": "5bc7aeaed5ff91e1b71cf4fe5a7ae096a7e5cd429cd5c4c5e493f8bd84627e69",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 1304,
+          "trace_sha256": "c15af1ef2bc302ef410fdaa943b86874944e0435b5d8a093219478072e1dd62c",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 1594,
+          "trace_sha256": "b862dc343396810f73ff54851ff117092842990c1c0d15462b198f912643528a",
+          "raw_fit_eligible": false
+        }
+      ],
+      "sample_6137": [
+        {
+          "seed": 8407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "invalid_arguments",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            1,
+            1
+          ],
+          "review": "No behavior-correct final response.",
+          "trace_chars": 4154,
+          "trace_sha256": "34c7929a70eebe35f3bbb1c90ddae819fac2c69a821c55f2c461e1bbb9a4bdd9",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "wrong_view_or_constraint",
+          "executed": true,
+          "fixtures": [
+            false,
+            false
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "No behavior-correct final response.",
+          "trace_chars": 3162,
+          "trace_sha256": "13d81e38eb6fcb86d258499c7dfef83940ab32db3ec67601f6b85243a9d3967e",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 13017,
+          "trace_sha256": "b3ef5f3b9408eec523a166229ec734d83c3662a6bd436f4aa0e894727140adad",
+          "raw_fit_eligible": false
+        }
+      ],
+      "sample_2632": [
+        {
+          "seed": 8407,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Uncorrected -h shorthand in a speculative usage block. The installed version rejects it.",
+          "trace_chars": 2538,
+          "trace_sha256": "73370b085879ddca6e9c670ad25352acb63f3d2ae383d2be8039505571659d00",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": true,
+          "joint": true,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "correct",
+          "executed": true,
+          "fixtures": [
+            true,
+            true
+          ],
+          "rc": [
+            0,
+            0
+          ],
+          "review": "Twice includes unsupported -v in a usage synopsis.",
+          "trace_chars": 1815,
+          "trace_sha256": "213b85f48e4dab58725e06d9c209bb761a2e6ee43eeadaf87b1f6caead4d00ad",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "not_single_direct_invocation",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 4461,
+          "trace_sha256": "ec484e746653463332c4dfe99807f38fe87842e38b7f4b60ddf1819dac430e7d",
+          "raw_fit_eligible": false
+        }
+      ],
+      "sample_2634": [
+        {
+          "seed": 8407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 2781,
+          "trace_sha256": "55a4940c70e50ca59148c361b9e9e316b92724a7e7562e775f0bc6f4f1ce9ef5",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 9407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 3739,
+          "trace_sha256": "3f6130acc36b47a36876c670ec2b30adf16a61a2d5af8dad281b0b0d63fade71",
+          "raw_fit_eligible": false
+        },
+        {
+          "seed": 10407,
+          "behavior": false,
+          "joint": false,
+          "ended": true,
+          "parsed": true,
+          "replay_reason": "outside_reviewed_readers_or_arguments",
+          "executed": false,
+          "fixtures": null,
+          "rc": null,
+          "review": "No behavior-correct final response.",
+          "trace_chars": 10130,
+          "trace_sha256": "71606f28a037700b5124fb9292197821e8b9d75cc77bc2db5d748adb514e293d",
+          "raw_fit_eligible": false
+        }
+      ]
+    }
+  },
+  "additional_unassigned_sources": {
+    "pesec": {
+      "train_total": 5,
+      "protected_or_previous": [
+        "sample_1632",
+        "sample_2631",
+        "sample_2633"
+      ],
+      "already_frozen": [
+        "sample_2632",
+        "sample_2634"
+      ],
+      "new_unassigned": []
+    },
+    "clang-format": {
+      "train_total": 4,
+      "protected_or_previous": [
+        "sample_7107"
+      ],
+      "already_frozen": [
+        "sample_7106",
+        "sample_7108",
+        "sample_7109"
+      ],
+      "new_unassigned": []
+    },
+    "mdb-schema": {
+      "train_total": 3,
+      "protected_or_previous": [
+        "sample_6138"
+      ],
+      "already_frozen": [
+        "sample_6137",
+        "sample_6139"
+      ],
+      "new_unassigned": []
+    }
+  },
+  "raw_trace_fact_probes": {
+    "pesec -h": 1,
+    "pesec --help": 0,
+    "pesec -v explorer.exe": 1,
+    "pesec --verbose explorer.exe": 1,
+    "pesec -V": 0,
+    "pesec -t explorer.exe": 1,
+    "pesec -FilePath cmd.exe -OutputFormat XML": 1
+  },
+  "token_labels": {
+    "teacher-sample_2632-8407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 649,
+        "masked": 62,
+        "trace": 569,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "teacher-sample_2632-9407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 669,
+        "masked": 62,
+        "trace": 589,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "teacher-sample_2632-10407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 834,
+        "masked": 62,
+        "trace": 754,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "long-sample_2632-8407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 714,
+        "masked": 62,
+        "trace": 634,
+        "answer": 14,
+        "format": 4
+      }
+    },
+    "long-sample_2632-9407": {
+      "answer": {
+        "tokens": 80,
+        "masked": 62,
+        "trace": 0,
+        "answer": 14,
+        "format": 4
+      },
+      "trace": {
+        "tokens": 510,
+        "masked": 62,
+        "trace": 430,
+        "answer": 14,
+        "format": 4
+      }
+    }
+  }
+}

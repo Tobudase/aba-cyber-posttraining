@@ -1,5 +1,11 @@
 # ABA Cybersecurity Post-training Research
 
+## November 21, 2026 — DeepSeek 4.1 Flash blind teacher screen
+
+On four selected read-only KaliBench TRAIN questions, DeepSeek passed **3/12** blind attempts at a 1,200-token cap and **2/12** at 4,096. Only the explicit-text question met the two-of-three threshold. All five correct responses contained unsupported option claims in the raw trace. The final answers and visible explanations passed on those draws. No raw-trace SFT was started.
+
+[Chinese report](results/deepseek41-blind-readonly/RESULT_ZH.md) · [Per-response checks and token audit](results/deepseek41-blind-readonly/teacher-summary.json)
+
 ## November 20, 2026 — Blind teacher versus the same teacher with tool help
 
 On four selected KaliBench TRAIN questions where Qwen3-8B repeatedly used invalid parameters, the same-family teacher passed both execution and explanation checks on **2/12 blind responses** and **12/12 with the installed tools’ help**. None of the four reached the blind threshold of two passes in three attempts. No student retraining was triggered. Both PE questions test the same output-format skill.
