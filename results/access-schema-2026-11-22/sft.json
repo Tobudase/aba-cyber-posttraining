@@ -1,0 +1,1784 @@
+{
+  "probes": {
+    "base": {
+      "train": {
+        "ended": true,
+        "generated_tokens": 448,
+        "command": "mdb-schema --no-not-null --no-default-values --no-not-empty --no-comments --no-indexes --no-relations temp.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "fresh": {
+        "ended": true,
+        "generated_tokens": 222,
+        "command": "mdb-schema --no-default-values --no-not-null --no-not-empty --no-comments --no-indexes --no-relations ledger.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "contrast": {
+        "ended": true,
+        "generated_tokens": 537,
+        "command": "mdb-schema --default-values --no-not-null --no-not-empty --no-comments --no-indexes --no-relations --no-drop-table inventory.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ],
+        "trace_names_correct_flag": false
+      }
+    },
+    "A-16": {
+      "train": {
+        "ended": true,
+        "generated_tokens": 42,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations temp.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "fresh": {
+        "ended": true,
+        "generated_tokens": 42,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations ledger.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "contrast": {
+        "ended": true,
+        "generated_tokens": 41,
+        "command": "mdb-schema --default-values --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations inventory.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      }
+    },
+    "A-32": {
+      "train": {
+        "ended": true,
+        "generated_tokens": 42,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations temp.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "fresh": {
+        "ended": true,
+        "generated_tokens": 42,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations ledger.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "contrast": {
+        "ended": true,
+        "generated_tokens": 40,
+        "command": "mdb-schema --no-drop-table --not-null --default-values --no-not_empty --no-comments --no-indexes --no-relations inventory.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      }
+    },
+    "A-64": {
+      "train": {
+        "ended": true,
+        "generated_tokens": 42,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations temp.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "fresh": {
+        "ended": true,
+        "generated_tokens": 42,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations ledger.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "contrast": {
+        "ended": true,
+        "generated_tokens": 40,
+        "command": "mdb-schema --no-drop-table --not-null --default-values --no-not_empty --no-comments --no-indexes --no-relations inventory.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": false,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      }
+    },
+    "B-16": {
+      "train": {
+        "ended": true,
+        "generated_tokens": 377,
+        "command": "mdb-schema --no-not-null --no-default-values --no-not-empty --no-comments --no-indexes --no-relations temp.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "fresh": {
+        "ended": true,
+        "generated_tokens": 478,
+        "command": "mdb-schema --no-default-values --no-not-null --no-not-empty --no-comments --no-indexes ledger.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ],
+        "trace_names_correct_flag": true
+      },
+      "contrast": {
+        "ended": true,
+        "generated_tokens": 637,
+        "command": "mdb-schema --default-values --no-not-null --no-not-empty --no-indexes --no-comments --no-relations --no-drop-table inventory.mdb",
+        "passed": false,
+        "fixture_checks": [
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          },
+          {
+            "rc": 1,
+            "match": false,
+            "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+          }
+        ],
+        "trace_names_correct_flag": false
+      }
+    },
+    "B-32": {
+      "train": {
+        "ended": true,
+        "generated_tokens": 402,
+        "command": "",
+        "passed": false,
+        "fixture_checks": [],
+        "trace_names_correct_flag": false
+      },
+      "fresh": {
+        "ended": true,
+        "generated_tokens": 331,
+        "command": "mdb-schema --no-default-values --no-not-null --no-comments --no-indexes --no-relations ledger.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": false
+      },
+      "contrast": {
+        "ended": true,
+        "generated_tokens": 468,
+        "command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-relations --no-indexes --no-comments --default-values inventory.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": true
+      }
+    },
+    "B-64": {
+      "train": {
+        "ended": true,
+        "generated_tokens": 630,
+        "command": "mdb-schema --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations --no-drop-table temp.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": true
+      },
+      "fresh": {
+        "ended": true,
+        "generated_tokens": 535,
+        "command": "mdb-schema --no-default-values --no-not-null --no-not_empty --no-comments --no-indexes --no-drop-table --no-relations ledger.mdb",
+        "passed": true,
+        "fixture_checks": [
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          },
+          {
+            "rc": 0,
+            "match": true,
+            "err": ""
+          }
+        ],
+        "trace_names_correct_flag": true
+      },
+      "contrast": {
+        "ended": true,
+        "generated_tokens": 188,
+        "command": "",
+        "passed": false,
+        "fixture_checks": [],
+        "trace_names_correct_flag": false
+      }
+    }
+  },
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "source": "one TRAIN sample; two diagnostic probes on one tool",
+  "init_equal": true,
+  "adapters": {
+    "A": {
+      "16": {
+        "weights": "f152642100ff901c37898469435ca3551f387e8e3d637225d90a9440ad2ac076",
+        "state": "bdfdbffc2e907796a2083e25f78120b9895601cc698afdf26710c13a0d0211fe"
+      },
+      "32": {
+        "weights": "618c4b71cf18c48b1385e92d9325eca7098d41ee4dc5e1e4ba77be5cff1ad141",
+        "state": "c9513273308ccd618bd6b699a61ab6acfc3c26e686d49ac80aed446cd3e9ca14"
+      },
+      "64": {
+        "weights": "630e318966d33b503765bc77d1cd9b28e6788769ac0ac9a243fe11aa60e2fc55",
+        "state": "7d6bddd91b5739bba4f75b53416e4514adc980fc74dbd56a0679750bb5026ef6"
+      }
+    },
+    "B": {
+      "16": {
+        "weights": "dc3c93c8a3baec7853a3ae91d745b0732ff43232fca854df1a7766fd01557b55",
+        "state": "9a7f45b3d1d9f76a723d24a01d39c229740d3a82a58f7b914dac51e11c20b8ab"
+      },
+      "32": {
+        "weights": "c291d7d3dedbeeec077c950b59e4512173318873fe62fdf96b727fa4bab21d19",
+        "state": "264150b623b2c1e5af177c6aef03c2d5f0d2061ad8be535f005031db83746c15"
+      },
+      "64": {
+        "weights": "ff08e1e31fcd7ef8e08a45a88169931013af8abaa171fb7d75bb81f994e05e4a",
+        "state": "4b5c0a8d8cfc4ee8d71687815cf04bb7bb8df47d98bdbb55ab03db0ccf0a3417"
+      }
+    }
+  },
+  "device": "cuda",
+  "losses": {
+    "A": [
+      {
+        "step": 1,
+        "loss": {
+          "answer": 0.5787472724914551,
+          "format": 2.813060760498047
+        },
+        "grad": 2.0822017192840576
+      },
+      {
+        "step": 2,
+        "loss": {
+          "answer": 0.5275033116340637,
+          "format": 2.750563621520996
+        },
+        "grad": 2.12070369720459
+      },
+      {
+        "step": 3,
+        "loss": {
+          "answer": 0.39908066391944885,
+          "format": 2.688220500946045
+        },
+        "grad": 2.4347803592681885
+      },
+      {
+        "step": 4,
+        "loss": {
+          "answer": 0.19788168370723724,
+          "format": 2.5646848678588867
+        },
+        "grad": 1.95229172706604
+      },
+      {
+        "step": 5,
+        "loss": {
+          "answer": 0.06141555681824684,
+          "format": 2.5021908283233643
+        },
+        "grad": 1.8555775880813599
+      },
+      {
+        "step": 6,
+        "loss": {
+          "answer": 0.0013345882762223482,
+          "format": 2.4415581226348877
+        },
+        "grad": 0.41138485074043274
+      },
+      {
+        "step": 7,
+        "loss": {
+          "answer": 0.0009047379717230797,
+          "format": 2.2558932304382324
+        },
+        "grad": 0.4558039903640747
+      },
+      {
+        "step": 8,
+        "loss": {
+          "answer": 0.0007086985860951245,
+          "format": 2.066617488861084
+        },
+        "grad": 0.5162035226821899
+      },
+      {
+        "step": 9,
+        "loss": {
+          "answer": 0.0006005441537126899,
+          "format": 1.7530345916748047
+        },
+        "grad": 0.6333189606666565
+      },
+      {
+        "step": 10,
+        "loss": {
+          "answer": 0.0005739751504734159,
+          "format": 1.3777276277542114
+        },
+        "grad": 0.8669710159301758
+      },
+      {
+        "step": 11,
+        "loss": {
+          "answer": 0.00044839424663223326,
+          "format": 0.7037164568901062
+        },
+        "grad": 1.269049882888794
+      },
+      {
+        "step": 12,
+        "loss": {
+          "answer": 0.0005093671497888863,
+          "format": 0.07888562232255936
+        },
+        "grad": 0.5105363130569458
+      },
+      {
+        "step": 13,
+        "loss": {
+          "answer": 0.0002723757061176002,
+          "format": 0.0009469998185522854
+        },
+        "grad": 0.018084591254591942
+      },
+      {
+        "step": 14,
+        "loss": {
+          "answer": 0.00027973586111329496,
+          "format": 8.575942774768919e-05
+        },
+        "grad": 0.020304977893829346
+      },
+      {
+        "step": 15,
+        "loss": {
+          "answer": 0.00019968757987953722,
+          "format": 2.4973158360808156e-05
+        },
+        "grad": 0.01547196414321661
+      },
+      {
+        "step": 16,
+        "loss": {
+          "answer": 0.00013220123946666718,
+          "format": 1.1473635822767392e-05
+        },
+        "grad": 0.009843030944466591
+      },
+      {
+        "step": 17,
+        "loss": {
+          "answer": 8.920967229641974e-05,
+          "format": 8.046500624914188e-06
+        },
+        "grad": 0.006206893362104893
+      },
+      {
+        "step": 18,
+        "loss": {
+          "answer": 5.443120971904136e-05,
+          "format": 9.119347851083148e-06
+        },
+        "grad": 0.0032342395279556513
+      },
+      {
+        "step": 19,
+        "loss": {
+          "answer": 3.716476203408092e-05,
+          "format": 7.986897799128201e-06
+        },
+        "grad": 0.002413592766970396
+      },
+      {
+        "step": 20,
+        "loss": {
+          "answer": 2.352751835132949e-05,
+          "format": 6.765038961020764e-06
+        },
+        "grad": 0.001419326406903565
+      },
+      {
+        "step": 21,
+        "loss": {
+          "answer": 2.5840563466772437e-05,
+          "format": 7.063053089950699e-06
+        },
+        "grad": 0.0018368292367085814
+      },
+      {
+        "step": 22,
+        "loss": {
+          "answer": 1.5849365809117444e-05,
+          "format": 7.688883670198265e-06
+        },
+        "grad": 0.0009454981191083789
+      },
+      {
+        "step": 23,
+        "loss": {
+          "answer": 1.3254822988528758e-05,
+          "format": 7.152457783377031e-06
+        },
+        "grad": 0.0007285004248842597
+      },
+      {
+        "step": 24,
+        "loss": {
+          "answer": 1.2506323400884867e-05,
+          "format": 7.748487405478954e-06
+        },
+        "grad": 0.0007683807052671909
+      },
+      {
+        "step": 25,
+        "loss": {
+          "answer": 1.0473988368175924e-05,
+          "format": 7.2120624281524215e-06
+        },
+        "grad": 0.0005750895943492651
+      },
+      {
+        "step": 26,
+        "loss": {
+          "answer": 8.230858838942368e-06,
+          "format": 6.88424552208744e-06
+        },
+        "grad": 0.000451650150353089
+      },
+      {
+        "step": 27,
+        "loss": {
+          "answer": 5.7583483794587664e-06,
+          "format": 6.8842473410768434e-06
+        },
+        "grad": 0.0003017665003426373
+      },
+      {
+        "step": 28,
+        "loss": {
+          "answer": 5.275507646729238e-06,
+          "format": 7.778292456350755e-06
+        },
+        "grad": 0.00027936490369029343
+      },
+      {
+        "step": 29,
+        "loss": {
+          "answer": 6.556088010256644e-06,
+          "format": 7.0034534473961685e-06
+        },
+        "grad": 0.0003552779962774366
+      },
+      {
+        "step": 30,
+        "loss": {
+          "answer": 4.5114366002962925e-06,
+          "format": 6.616034170292551e-06
+        },
+        "grad": 0.00024190914700739086
+      },
+      {
+        "step": 31,
+        "loss": {
+          "answer": 4.4655353121925145e-06,
+          "format": 6.794844921387266e-06
+        },
+        "grad": 0.00023548761964775622
+      },
+      {
+        "step": 32,
+        "loss": {
+          "answer": 3.927644229406724e-06,
+          "format": 6.765042598999571e-06
+        },
+        "grad": 0.00020337681053206325
+      },
+      {
+        "step": 33,
+        "loss": {
+          "answer": 3.7228578548820224e-06,
+          "format": 6.37762150290655e-06
+        },
+        "grad": 0.0001875974703580141
+      },
+      {
+        "step": 34,
+        "loss": {
+          "answer": 3.4997256079805084e-06,
+          "format": 7.510081104555866e-06
+        },
+        "grad": 0.00018451397772878408
+      },
+      {
+        "step": 35,
+        "loss": {
+          "answer": 2.628661604830995e-06,
+          "format": 6.973653398745228e-06
+        },
+        "grad": 0.00012489831715356559
+      },
+      {
+        "step": 36,
+        "loss": {
+          "answer": 2.9098439426888945e-06,
+          "format": 7.68889094615588e-06
+        },
+        "grad": 0.00014305004151538014
+      },
+      {
+        "step": 37,
+        "loss": {
+          "answer": 2.998487843797193e-06,
+          "format": 7.569687113573309e-06
+        },
+        "grad": 0.00014729774557054043
+      },
+      {
+        "step": 38,
+        "loss": {
+          "answer": 2.9342977541091386e-06,
+          "format": 8.34452293929644e-06
+        },
+        "grad": 0.00014620830188505352
+      },
+      {
+        "step": 39,
+        "loss": {
+          "answer": 3.093240138696274e-06,
+          "format": 8.314722435898148e-06
+        },
+        "grad": 0.0001581442338647321
+      },
+      {
+        "step": 40,
+        "loss": {
+          "answer": 3.5272346394776832e-06,
+          "format": 7.4504787335172296e-06
+        },
+        "grad": 0.00018504829495213926
+      },
+      {
+        "step": 41,
+        "loss": {
+          "answer": 2.915958020821563e-06,
+          "format": 7.92730315879453e-06
+        },
+        "grad": 0.0001491641451139003
+      },
+      {
+        "step": 42,
+        "loss": {
+          "answer": 2.3169016003521392e-06,
+          "format": 9.029954526340589e-06
+        },
+        "grad": 0.00011525599256856367
+      },
+      {
+        "step": 43,
+        "loss": {
+          "answer": 2.610323690532823e-06,
+          "format": 8.404126674577128e-06
+        },
+        "grad": 0.00013297259283717722
+      },
+      {
+        "step": 44,
+        "loss": {
+          "answer": 2.527793867557193e-06,
+          "format": 8.970352610049304e-06
+        },
+        "grad": 0.00012764504936058074
+      },
+      {
+        "step": 45,
+        "loss": {
+          "answer": 2.3719226192042697e-06,
+          "format": 8.016708306968212e-06
+        },
+        "grad": 0.00011066177830798551
+      },
+      {
+        "step": 46,
+        "loss": {
+          "answer": 2.0693173610197846e-06,
+          "format": 8.582933332945686e-06
+        },
+        "grad": 0.00010168200242333114
+      },
+      {
+        "step": 47,
+        "loss": {
+          "answer": 2.863997679014574e-06,
+          "format": 8.463729500363115e-06
+        },
+        "grad": 0.00015282153617590666
+      },
+      {
+        "step": 48,
+        "loss": {
+          "answer": 3.03211027130601e-06,
+          "format": 8.5233314166544e-06
+        },
+        "grad": 0.00016086368123069406
+      },
+      {
+        "step": 49,
+        "loss": {
+          "answer": 2.6011548470705748e-06,
+          "format": 9.149161996901967e-06
+        },
+        "grad": 0.0001309047220274806
+      },
+      {
+        "step": 50,
+        "loss": {
+          "answer": 2.598097580630565e-06,
+          "format": 9.119360584008973e-06
+        },
+        "grad": 0.00012747806613333523
+      },
+      {
+        "step": 51,
+        "loss": {
+          "answer": 2.4850014597177505e-06,
+          "format": 9.923992365656886e-06
+        },
+        "grad": 0.00013111917360220104
+      },
+      {
+        "step": 52,
+        "loss": {
+          "answer": 2.54002202382253e-06,
+          "format": 8.880950190359727e-06
+        },
+        "grad": 0.00012697379861492664
+      },
+      {
+        "step": 53,
+        "loss": {
+          "answer": 2.732589109655237e-06,
+          "format": 9.566377229930367e-06
+        },
+        "grad": 0.00014356631436385214
+      },
+      {
+        "step": 54,
+        "loss": {
+          "answer": 2.054034666798543e-06,
+          "format": 9.68558197200764e-06
+        },
+        "grad": 0.0001092276070266962
+      },
+      {
+        "step": 55,
+        "loss": {
+          "answer": 2.439154286548728e-06,
+          "format": 8.523335054633208e-06
+        },
+        "grad": 0.00012419310223776847
+      },
+      {
+        "step": 56,
+        "loss": {
+          "answer": 2.515568667149637e-06,
+          "format": 8.910752512747422e-06
+        },
+        "grad": 0.00012648077972698957
+      },
+      {
+        "step": 57,
+        "loss": {
+          "answer": 2.222149078079383e-06,
+          "format": 1.0758421922218986e-05
+        },
+        "grad": 0.00012220289499964565
+      },
+      {
+        "step": 58,
+        "loss": {
+          "answer": 2.5308529529866064e-06,
+          "format": 1.0043197107734159e-05
+        },
+        "grad": 0.00014007963181938976
+      },
+      {
+        "step": 59,
+        "loss": {
+          "answer": 2.3933198463055305e-06,
+          "format": 9.536576726532076e-06
+        },
+        "grad": 0.00012463139137253165
+      },
+      {
+        "step": 60,
+        "loss": {
+          "answer": 2.197696403527516e-06,
+          "format": 9.953794688044582e-06
+        },
+        "grad": 0.00011304685176583007
+      },
+      {
+        "step": 61,
+        "loss": {
+          "answer": 2.133506995960488e-06,
+          "format": 8.761745448282454e-06
+        },
+        "grad": 0.00010824704077094793
+      },
+      {
+        "step": 62,
+        "loss": {
+          "answer": 2.6561733648122754e-06,
+          "format": 8.612735655333381e-06
+        },
+        "grad": 0.000131484805024229
+      },
+      {
+        "step": 63,
+        "loss": {
+          "answer": 1.620009015823598e-06,
+          "format": 8.642537977721076e-06
+        },
+        "grad": 7.48376696719788e-05
+      },
+      {
+        "step": 64,
+        "loss": {
+          "answer": 2.188525741075864e-06,
+          "format": 9.08955917111598e-06
+        },
+        "grad": 0.0001092385282390751
+      }
+    ],
+    "B": [
+      {
+        "step": 1,
+        "loss": {
+          "answer": 0.8626527190208435,
+          "trace": 2.211944580078125,
+          "format": 3.8988535404205322
+        },
+        "grad": 2.374910831451416
+      },
+      {
+        "step": 2,
+        "loss": {
+          "answer": 0.8073253035545349,
+          "trace": 2.200061321258545,
+          "format": 3.8215694427490234
+        },
+        "grad": 2.449608564376831
+      },
+      {
+        "step": 3,
+        "loss": {
+          "answer": 0.6816083788871765,
+          "trace": 2.1710703372955322,
+          "format": 3.577589511871338
+        },
+        "grad": 2.6984877586364746
+      },
+      {
+        "step": 4,
+        "loss": {
+          "answer": 0.5210193395614624,
+          "trace": 2.1334125995635986,
+          "format": 3.264143228530884
+        },
+        "grad": 3.0523905754089355
+      },
+      {
+        "step": 5,
+        "loss": {
+          "answer": 0.3199308514595032,
+          "trace": 2.0908827781677246,
+          "format": 2.9786875247955322
+        },
+        "grad": 4.007873058319092
+      },
+      {
+        "step": 6,
+        "loss": {
+          "answer": 0.09864768385887146,
+          "trace": 2.0550670623779297,
+          "format": 2.5720138549804688
+        },
+        "grad": 2.95866322517395
+      },
+      {
+        "step": 7,
+        "loss": {
+          "answer": 0.006618865299969912,
+          "trace": 2.018368721008301,
+          "format": 2.1622610092163086
+        },
+        "grad": 1.5304579734802246
+      },
+      {
+        "step": 8,
+        "loss": {
+          "answer": 0.00571636576205492,
+          "trace": 1.9793087244033813,
+          "format": 1.5613411664962769
+        },
+        "grad": 1.4560381174087524
+      },
+      {
+        "step": 9,
+        "loss": {
+          "answer": 0.003657832508906722,
+          "trace": 1.9421741962432861,
+          "format": 1.0240907669067383
+        },
+        "grad": 1.2565668821334839
+      },
+      {
+        "step": 10,
+        "loss": {
+          "answer": 0.002033086260780692,
+          "trace": 1.9056168794631958,
+          "format": 0.5518679618835449
+        },
+        "grad": 1.0073177814483643
+      },
+      {
+        "step": 11,
+        "loss": {
+          "answer": 0.0009262567618861794,
+          "trace": 1.8751895427703857,
+          "format": 0.20797549188137054
+        },
+        "grad": 0.6946841478347778
+      },
+      {
+        "step": 12,
+        "loss": {
+          "answer": 0.0006784956203773618,
+          "trace": 1.839870572090149,
+          "format": 0.0615692064166069
+        },
+        "grad": 0.5241261124610901
+      },
+      {
+        "step": 13,
+        "loss": {
+          "answer": 0.0006427208427339792,
+          "trace": 1.805953860282898,
+          "format": 0.016548776999115944
+        },
+        "grad": 0.48399823904037476
+      },
+      {
+        "step": 14,
+        "loss": {
+          "answer": 0.0005153572419658303,
+          "trace": 1.7783491611480713,
+          "format": 0.005595222115516663
+        },
+        "grad": 0.461254745721817
+      },
+      {
+        "step": 15,
+        "loss": {
+          "answer": 0.0005002545076422393,
+          "trace": 1.7440698146820068,
+          "format": 0.0023166360333561897
+        },
+        "grad": 0.42942991852760315
+      },
+      {
+        "step": 16,
+        "loss": {
+          "answer": 0.0004408890672493726,
+          "trace": 1.7135045528411865,
+          "format": 0.0015182228526100516
+        },
+        "grad": 0.39006662368774414
+      },
+      {
+        "step": 17,
+        "loss": {
+          "answer": 0.000493438565172255,
+          "trace": 1.6851344108581543,
+          "format": 0.0009711778839118779
+        },
+        "grad": 0.363702654838562
+      },
+      {
+        "step": 18,
+        "loss": {
+          "answer": 0.0004665084998123348,
+          "trace": 1.6580476760864258,
+          "format": 0.0007915342575870454
+        },
+        "grad": 0.3392738997936249
+      },
+      {
+        "step": 19,
+        "loss": {
+          "answer": 0.00047663896111771464,
+          "trace": 1.6334176063537598,
+          "format": 0.0007551999879069626
+        },
+        "grad": 0.3245558440685272
+      },
+      {
+        "step": 20,
+        "loss": {
+          "answer": 0.00045394038897939026,
+          "trace": 1.6111915111541748,
+          "format": 0.0006371534545905888
+        },
+        "grad": 0.31776905059814453
+      },
+      {
+        "step": 21,
+        "loss": {
+          "answer": 0.0003977018059231341,
+          "trace": 1.5891445875167847,
+          "format": 0.0006535029388032854
+        },
+        "grad": 0.3174322247505188
+      },
+      {
+        "step": 22,
+        "loss": {
+          "answer": 0.0004058113554492593,
+          "trace": 1.5676584243774414,
+          "format": 0.0008063311688601971
+        },
+        "grad": 0.31873321533203125
+      },
+      {
+        "step": 23,
+        "loss": {
+          "answer": 0.00044961905223317444,
+          "trace": 1.5446014404296875,
+          "format": 0.0008996928809210658
+        },
+        "grad": 0.32228943705558777
+      },
+      {
+        "step": 24,
+        "loss": {
+          "answer": 0.0004259509441908449,
+          "trace": 1.5235635042190552,
+          "format": 0.0010394391138106585
+        },
+        "grad": 0.32449865341186523
+      },
+      {
+        "step": 25,
+        "loss": {
+          "answer": 0.00042758157360367477,
+          "trace": 1.5018281936645508,
+          "format": 0.001042669522576034
+        },
+        "grad": 0.3283897042274475
+      },
+      {
+        "step": 26,
+        "loss": {
+          "answer": 0.0004102447419427335,
+          "trace": 1.477362871170044,
+          "format": 0.0011317030293866992
+        },
+        "grad": 0.3309716582298279
+      },
+      {
+        "step": 27,
+        "loss": {
+          "answer": 0.00040922380867414176,
+          "trace": 1.4543477296829224,
+          "format": 0.0012356002116575837
+        },
+        "grad": 0.33296388387680054
+      },
+      {
+        "step": 28,
+        "loss": {
+          "answer": 0.00037495774449780583,
+          "trace": 1.4303635358810425,
+          "format": 0.0010082253720611334
+        },
+        "grad": 0.33355095982551575
+      },
+      {
+        "step": 29,
+        "loss": {
+          "answer": 0.0003631576255429536,
+          "trace": 1.4046653509140015,
+          "format": 0.001083747367374599
+        },
+        "grad": 0.3327163755893707
+      },
+      {
+        "step": 30,
+        "loss": {
+          "answer": 0.0003386028402019292,
+          "trace": 1.37887442111969,
+          "format": 0.0009629724081605673
+        },
+        "grad": 0.3325923681259155
+      },
+      {
+        "step": 31,
+        "loss": {
+          "answer": 0.00028913927963003516,
+          "trace": 1.3548883199691772,
+          "format": 0.001027993974275887
+        },
+        "grad": 0.33006492257118225
+      },
+      {
+        "step": 32,
+        "loss": {
+          "answer": 0.0002578030398581177,
+          "trace": 1.3271688222885132,
+          "format": 0.0008752060239203274
+        },
+        "grad": 0.3262637257575989
+      },
+      {
+        "step": 33,
+        "loss": {
+          "answer": 0.00021655122691299766,
+          "trace": 1.2974941730499268,
+          "format": 0.0007348015788011253
+        },
+        "grad": 0.32004785537719727
+      },
+      {
+        "step": 34,
+        "loss": {
+          "answer": 0.00018753956828732044,
+          "trace": 1.2713277339935303,
+          "format": 0.000696706585586071
+        },
+        "grad": 0.3147323429584503
+      },
+      {
+        "step": 35,
+        "loss": {
+          "answer": 0.0001597194786882028,
+          "trace": 1.2407559156417847,
+          "format": 0.0005772559670731425
+        },
+        "grad": 0.3104574680328369
+      },
+      {
+        "step": 36,
+        "loss": {
+          "answer": 0.00012547726510092616,
+          "trace": 1.211360216140747,
+          "format": 0.0004785759374499321
+        },
+        "grad": 0.3052779734134674
+      },
+      {
+        "step": 37,
+        "loss": {
+          "answer": 0.00010119270882569253,
+          "trace": 1.183356761932373,
+          "format": 0.00047013044240884483
+        },
+        "grad": 0.30293962359428406
+      },
+      {
+        "step": 38,
+        "loss": {
+          "answer": 8.076935046119615e-05,
+          "trace": 1.151919960975647,
+          "format": 0.000366643798770383
+        },
+        "grad": 0.3037026822566986
+      },
+      {
+        "step": 39,
+        "loss": {
+          "answer": 7.085959805408493e-05,
+          "trace": 1.119866132736206,
+          "format": 0.0003627701080404222
+        },
+        "grad": 0.30611452460289
+      },
+      {
+        "step": 40,
+        "loss": {
+          "answer": 5.3820702305529267e-05,
+          "trace": 1.0897773504257202,
+          "format": 0.0003345885779708624
+        },
+        "grad": 0.3121711015701294
+      },
+      {
+        "step": 41,
+        "loss": {
+          "answer": 4.718907075584866e-05,
+          "trace": 1.0549330711364746,
+          "format": 0.0003200054925400764
+        },
+        "grad": 0.31701260805130005
+      },
+      {
+        "step": 42,
+        "loss": {
+          "answer": 3.8154146750457585e-05,
+          "trace": 1.0195322036743164,
+          "format": 0.00027749527362175286
+        },
+        "grad": 0.3260307013988495
+      },
+      {
+        "step": 43,
+        "loss": {
+          "answer": 3.2359486795030534e-05,
+          "trace": 0.9849966764450073,
+          "format": 0.00026987181627191603
+        },
+        "grad": 0.33527225255966187
+      },
+      {
+        "step": 44,
+        "loss": {
+          "answer": 2.8053698770236224e-05,
+          "trace": 0.9476437568664551,
+          "format": 0.0002153847017325461
+        },
+        "grad": 0.3447984755039215
+      },
+      {
+        "step": 45,
+        "loss": {
+          "answer": 1.9894261640729383e-05,
+          "trace": 0.9077035784721375,
+          "format": 0.00018968530639540404
+        },
+        "grad": 0.35386136174201965
+      },
+      {
+        "step": 46,
+        "loss": {
+          "answer": 1.624206743144896e-05,
+          "trace": 0.8671218752861023,
+          "format": 0.0001613622735021636
+        },
+        "grad": 0.36122480034828186
+      },
+      {
+        "step": 47,
+        "loss": {
+          "answer": 1.4683252629765775e-05,
+          "trace": 0.8209349513053894,
+          "format": 0.0001296104455832392
+        },
+        "grad": 0.37887343764305115
+      },
+      {
+        "step": 48,
+        "loss": {
+          "answer": 1.3827308066538535e-05,
+          "trace": 0.7767423987388611,
+          "format": 0.0001088180870283395
+        },
+        "grad": 0.38367804884910583
+      },
+      {
+        "step": 49,
+        "loss": {
+          "answer": 1.0639649190125056e-05,
+          "trace": 0.7280800342559814,
+          "format": 8.39412969071418e-05
+        },
+        "grad": 0.4037511646747589
+      },
+      {
+        "step": 50,
+        "loss": {
+          "answer": 9.14813244889956e-06,
+          "trace": 0.6786056160926819,
+          "format": 8.292863640235737e-05
+        },
+        "grad": 0.42293763160705566
+      },
+      {
+        "step": 51,
+        "loss": {
+          "answer": 7.045330221444601e-06,
+          "trace": 0.6253030896186829,
+          "format": 5.3461069910554215e-05
+        },
+        "grad": 0.4441223442554474
+      },
+      {
+        "step": 52,
+        "loss": {
+          "answer": 5.935840817983262e-06,
+          "trace": 0.5698405504226685,
+          "format": 4.219746188027784e-05
+        },
+        "grad": 0.4573467969894409
+      },
+      {
+        "step": 53,
+        "loss": {
+          "answer": 4.8721913117333315e-06,
+          "trace": 0.5103974938392639,
+          "format": 4.684602390625514e-05
+        },
+        "grad": 0.4687255024909973
+      },
+      {
+        "step": 54,
+        "loss": {
+          "answer": 6.058118742657825e-06,
+          "trace": 0.45069029927253723,
+          "format": 4.175053254584782e-05
+        },
+        "grad": 0.4863405227661133
+      },
+      {
+        "step": 55,
+        "loss": {
+          "answer": 7.983524483279325e-06,
+          "trace": 0.3914852738380432,
+          "format": 3.984346039942466e-05
+        },
+        "grad": 0.5141362547874451
+      },
+      {
+        "step": 56,
+        "loss": {
+          "answer": 9.422876246389933e-06,
+          "trace": 0.3300226926803589,
+          "format": 3.7519224861171097e-05
+        },
+        "grad": 0.5361585021018982
+      },
+      {
+        "step": 57,
+        "loss": {
+          "answer": 1.2001895811408758e-05,
+          "trace": 0.27359500527381897,
+          "format": 3.46584856742993e-05
+        },
+        "grad": 0.529654860496521
+      },
+      {
+        "step": 58,
+        "loss": {
+          "answer": 1.4388117961061653e-05,
+          "trace": 0.22011832892894745,
+          "format": 3.513529009069316e-05
+        },
+        "grad": 0.5019481778144836
+      },
+      {
+        "step": 59,
+        "loss": {
+          "answer": 9.28219196794089e-06,
+          "trace": 0.1741734743118286,
+          "format": 2.8072865461581387e-05
+        },
+        "grad": 0.45110949873924255
+      },
+      {
+        "step": 60,
+        "loss": {
+          "answer": 9.853568371909205e-06,
+          "trace": 0.13422082364559174,
+          "format": 3.2364125218009576e-05
+        },
+        "grad": 0.40887144207954407
+      },
+      {
+        "step": 61,
+        "loss": {
+          "answer": 1.0284335985488724e-05,
+          "trace": 0.10478591918945312,
+          "format": 3.72213835362345e-05
+        },
+        "grad": 0.38028252124786377
+      },
+      {
+        "step": 62,
+        "loss": {
+          "answer": 1.4656525308964774e-05,
+          "trace": 0.08009880036115646,
+          "format": 3.4628934372449294e-05
+        },
+        "grad": 0.3558914363384247
+      },
+      {
+        "step": 63,
+        "loss": {
+          "answer": 1.1906794497917872e-05,
+          "trace": 0.059686094522476196,
+          "format": 3.3258169423788786e-05
+        },
+        "grad": 0.2865462899208069
+      },
+      {
+        "step": 64,
+        "loss": {
+          "answer": 1.1552287105587311e-05,
+          "trace": 0.04461889714002609,
+          "format": 3.224503598175943e-05
+        },
+        "grad": 0.23714452981948853
+      }
+    ]
+  },
+  "trace_checks": {
+    "base": {
+      "train": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.0985,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": true
+      },
+      "fresh": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.0963,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": true
+      },
+      "contrast": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.099,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": true
+      }
+    },
+    "A-16": {
+      "train": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "fresh": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "contrast": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      }
+    },
+    "A-32": {
+      "train": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "fresh": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "contrast": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      }
+    },
+    "A-64": {
+      "train": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "fresh": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "contrast": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      }
+    },
+    "B-16": {
+      "train": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.0775,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": true
+      },
+      "fresh": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.2094,
+        "mentions_correct_spelling": true,
+        "mentions_wrong_spelling": true
+      },
+      "contrast": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.1953,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": true
+      }
+    },
+    "B-32": {
+      "train": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "fresh": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.0804,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      },
+      "contrast": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.1373,
+        "mentions_correct_spelling": true,
+        "mentions_wrong_spelling": false
+      }
+    },
+    "B-64": {
+      "train": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.1682,
+        "mentions_correct_spelling": true,
+        "mentions_wrong_spelling": false
+      },
+      "fresh": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0.1217,
+        "mentions_correct_spelling": true,
+        "mentions_wrong_spelling": false
+      },
+      "contrast": {
+        "exact": false,
+        "word_punctuation_sequence_ratio": 0,
+        "mentions_correct_spelling": false,
+        "mentions_wrong_spelling": false
+      }
+    }
+  },
+  "training": {
+    "model": "Qwen3-8B",
+    "weights": "BF16",
+    "update_seed": 3407,
+    "eval_seed": 11341,
+    "optimizer": "AdamW",
+    "lr": 0.0001,
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.0,
+    "modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "loss_weights": {
+      "answer": 1,
+      "format": 0.1,
+      "trace": 0.5
+    },
+    "eval_token_cap": 2048,
+    "hardware": "one NVIDIA RTX A6000 (48GB)",
+    "fixture_files": 3,
+    "note": "All seven evaluations were sampled, not teacher-forced. One response per probe in each evaluation. The number of DB files is not the number of independent prompts."
+  }
+}

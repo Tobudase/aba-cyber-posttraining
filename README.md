@@ -4,7 +4,11 @@
 
 On one read-only KaliBench TRAIN question with the same installed-tool help, original Qwen3-8B passed **0/3**, Qwen3.8-27B-FP8 **3/3**, and DeepSeek 4.1 Flash **2/3**. Fixing one character in each historical student response restored the reference output on all three database fixtures. These are repeated draws on one question.
 
-[Chinese report](results/access-schema-2026-11-22/RESULT_ZH.md) · [Fixture outcomes and offline recount](results/access-schema-2026-11-22/screen.json)
+Single-example Qwen3-8B SFT fixed the error. Answer-only training passed all three prompts at step 16. At step 64 both arms passed the training prompt and a new-file prompt, and both failed the request to retain defaults. Each cell below is one sampled response evaluated against three databases.
+
+![Checkpoint outcomes across three Access schema prompts](results/access-schema-2026-11-22/checkpoint-probes.png)
+
+[Chinese report](results/access-schema-2026-11-22/RESULT_ZH.md) · [Training losses and checkpoint results](results/access-schema-2026-11-22/sft.json) · [Verification script](results/access-schema-2026-11-22/verify.py)
 
 ## November 21, 2026 — DeepSeek 4.1 Flash blind teacher screen
 

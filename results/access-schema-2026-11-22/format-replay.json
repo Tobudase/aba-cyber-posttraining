@@ -1,0 +1,108 @@
+{
+  "counters": {
+    "32-train": {
+      "tokens": 402,
+      "strict_final_reproduced": true,
+      "ended": true,
+      "closing_think_tags": 0,
+      "opening_output_tags": 1,
+      "closing_output_tags": 1
+    },
+    "32-fresh": {
+      "tokens": 331,
+      "strict_final_reproduced": true,
+      "ended": true,
+      "closing_think_tags": 1,
+      "opening_output_tags": 1,
+      "closing_output_tags": 1
+    },
+    "32-contrast": {
+      "tokens": 468,
+      "strict_final_reproduced": true,
+      "ended": true,
+      "closing_think_tags": 1,
+      "opening_output_tags": 1,
+      "closing_output_tags": 1
+    },
+    "64-train": {
+      "tokens": 630,
+      "strict_final_reproduced": true,
+      "ended": true,
+      "closing_think_tags": 1,
+      "opening_output_tags": 2,
+      "closing_output_tags": 2
+    },
+    "64-fresh": {
+      "tokens": 535,
+      "strict_final_reproduced": true,
+      "ended": true,
+      "closing_think_tags": 1,
+      "opening_output_tags": 1,
+      "closing_output_tags": 1
+    },
+    "64-contrast": {
+      "tokens": 188,
+      "strict_final_reproduced": true,
+      "ended": true,
+      "closing_think_tags": 0,
+      "opening_output_tags": 1,
+      "closing_output_tags": 1
+    }
+  },
+  "recovered": {
+    "32-train": {
+      "command": "mdb-schema temp.mdb --no-not-null --no-default-values --no-not_empty --no-relations --no-indexes --no-comments",
+      "file": "temp.mdb",
+      "defaults": false
+    },
+    "64-contrast": {
+      "command": "mdb-schema --default-values --no-not-null --no-no-empty --no-indexes --no-comments --no-drop-table inventory.mdb",
+      "file": "inventory.mdb",
+      "defaults": true
+    }
+  },
+  "checks": {
+    "32-train": {
+      "passed": true,
+      "fixtures": [
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        },
+        {
+          "rc": 0,
+          "match": true,
+          "err": ""
+        }
+      ],
+      "executed": true
+    },
+    "64-contrast": {
+      "passed": false,
+      "fixtures": [
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-no-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                  "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-no-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                  "
+        },
+        {
+          "rc": 1,
+          "match": false,
+          "err": "option parsing failed: Unknown option --no-no-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                  "
+        }
+      ],
+      "executed": true
+    }
+  }
+}

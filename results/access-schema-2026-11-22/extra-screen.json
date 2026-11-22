@@ -1,0 +1,160 @@
+{
+  "source": "official TRAIN only, distinct from the Access prompt",
+  "model": "original Qwen3-8B BF16, one RTX A6000, thinking mode",
+  "eligible_control_sources": 4,
+  "attempted_control_sources": 6,
+  "draws": {
+    "sample_1506": {
+      "22103": {
+        "command": "scriptreplay --version",
+        "tokens": 191,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22109": {
+        "command": "scriptreplay --version",
+        "tokens": 208,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22111": {
+        "command": "scriptreplay --version",
+        "tokens": 273,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      }
+    },
+    "sample_1546": {
+      "22103": {
+        "command": "findmnt -s -O ro -f",
+        "tokens": 2097,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22109": {
+        "command": "findmnt --fstab -O ro -f",
+        "tokens": 571,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22111": {
+        "command": "findmnt -s -O ro --first-only",
+        "tokens": 384,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      }
+    },
+    "sample_7717": {
+      "22103": {
+        "command": "hg status",
+        "tokens": 274,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22109": {
+        "command": "hg status",
+        "tokens": 263,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22111": {
+        "command": "hg status",
+        "tokens": 232,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      }
+    },
+    "sample_7719": {
+      "22103": {
+        "command": "hg branch",
+        "tokens": 202,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22109": {
+        "command": "hg branch",
+        "tokens": 199,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      },
+      "22111": {
+        "command": "hg branch",
+        "tokens": 279,
+        "fixture_pass": [
+          true,
+          true
+        ],
+        "rc": [
+          0,
+          0
+        ]
+      }
+    }
+  }
+}
