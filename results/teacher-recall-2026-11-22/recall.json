@@ -1,0 +1,768 @@
+{
+  "source": "sample_6137",
+  "training_seed": 3407,
+  "decoding_seed": 11341,
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "teachers": {
+    "B": {
+      "model": "Qwen/Qwen3.8-27B-FP8",
+      "tokens": 1027,
+      "raw_sha256": "41b73900e528daa8517a3e1012efb2aca17b731e2251fcd976998ee4aa05681d",
+      "leading_whitespace": 0,
+      "trailing_whitespace": 1,
+      "normalized_sha256": "51153b75f0a5b4329b505cfccd300fac93f5da231a5a8e0a5723665e137fcc7e"
+    },
+    "C": {
+      "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "tokens": 430,
+      "raw_sha256": "48c7dc5acc2a270f0def1f8ef7a68327dee01b6d562db6f8ef388166cf458449",
+      "leading_whitespace": 0,
+      "trailing_whitespace": 0,
+      "normalized_sha256": "48c7dc5acc2a270f0def1f8ef7a68327dee01b6d562db6f8ef388166cf458449"
+    }
+  },
+  "rows": {
+    "base": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 504,
+        "trace_sha256": "91c4b65483355fba784de87e3f9af6bd93785d1a4621072cd8c7858ba454893b",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 4
+        },
+        "native_behavior": false,
+        "strict": false
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 455,
+        "trace_sha256": "2b94599f09f6086abd8cb7dc310c19b431281d3126a18f0224795d1d766a6ad6",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 5
+        },
+        "native_behavior": false,
+        "strict": false
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 344,
+        "trace_sha256": "c75aa6924ccb63619c8f738e3cfe8ce60c5e8dfe18550b6a41a0bc4fc22b8e0e",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 3
+        },
+        "native_behavior": false,
+        "strict": false
+      }
+    },
+    "base_recheck": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 504,
+        "trace_sha256": "91c4b65483355fba784de87e3f9af6bd93785d1a4621072cd8c7858ba454893b",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 4
+        },
+        "native_behavior": false,
+        "strict": false
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 455,
+        "trace_sha256": "2b94599f09f6086abd8cb7dc310c19b431281d3126a18f0224795d1d766a6ad6",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 5
+        },
+        "native_behavior": false,
+        "strict": false
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 344,
+        "trace_sha256": "c75aa6924ccb63619c8f738e3cfe8ce60c5e8dfe18550b6a41a0bc4fc22b8e0e",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 3
+        },
+        "native_behavior": false,
+        "strict": false
+      }
+    },
+    "A16": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      }
+    },
+    "A32": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      }
+    },
+    "A64": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 0,
+        "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": false,
+        "strict": false
+      }
+    },
+    "B16": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 1208,
+        "trace_sha256": "507bca0a26bb3b689db45431c48a202135b60807b500e5f2ef7da98ff53d4bfe",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 11
+        },
+        "native_behavior": false,
+        "strict": false
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 371,
+        "trace_sha256": "f8625c20799259169376fd4caaa7f7402d56bb51818068a4e5b1b668413af488",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 4,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 347,
+        "trace_sha256": "95fd67537561ad3ffd933a77bb192dad2a28f6583b1affc90cc26a1e165418c6",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 3
+        },
+        "native_behavior": false,
+        "strict": false
+      }
+    },
+    "B32": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 244,
+        "trace_sha256": "798898038216ad245ed7c589ae13becf3202758c51dbac36600e37f7981b3ff5",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 2,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 95,
+        "trace_sha256": "500fdad4ab0114ecc7b20fc99fbc8e3c4af30ccc75dfb1ef26b9c460bffb48c1",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 2,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": false,
+        "closed": false,
+        "trace_tokens": null,
+        "trace_sha256": null,
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": null,
+        "native_behavior": false,
+        "strict": false
+      }
+    },
+    "B64": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 1027,
+        "trace_sha256": "51153b75f0a5b4329b505cfccd300fac93f5da231a5a8e0a5723665e137fcc7e",
+        "comparison": {
+          "B": {
+            "exact": true,
+            "common_prefix_tokens": 1027
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 3
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 8,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 1772,
+        "trace_sha256": "296232f799bfeda4fc56466140c7b4695fa7e6cedefab3803cea98fea82877d4",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 8
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 3
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 16,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 760,
+        "trace_sha256": "40923377f24148f5fb5f09cb936369f3d527f6fd6a5d1432d4e2f7346d4c841d",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 5,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": false
+      }
+    },
+    "C16": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 134,
+        "trace_sha256": "84842e87fe044b5c9f1243fcebac985804bf2a340e6c04e62a5dda6132d356fd",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 1,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 345,
+        "trace_sha256": "8f0d334ca4fe85c026de804dfe357bd67d016cbb6388f7f19e1c62936914bffb",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 3,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 692,
+        "trace_sha256": "4b8d16e881334905252ff745623f9d8d9d7e8a21f72bdd17940d73320cc899d9",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 6,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      }
+    },
+    "C32": {
+      "train": {
+        "ended": false,
+        "closed": false,
+        "trace_tokens": null,
+        "trace_sha256": null,
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 0
+          }
+        },
+        "spelling_mentions": null,
+        "native_behavior": false,
+        "strict": false
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 191,
+        "trace_sha256": "8db94bd3402802f884f0e0698f3ed2bec822b69f55b3349e4b8a0ddfc70afb44",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 2,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 390,
+        "trace_sha256": "9666631e6dca6f17f0ade3e00b652ad85e0d4695886587edb8cb37d66cf23af5",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 2
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 2,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      }
+    },
+    "C64": {
+      "train": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 430,
+        "trace_sha256": "48c7dc5acc2a270f0def1f8ef7a68327dee01b6d562db6f8ef388166cf458449",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 3
+          },
+          "C": {
+            "exact": true,
+            "common_prefix_tokens": 430
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 3,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      },
+      "fresh": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 449,
+        "trace_sha256": "45e190e4992de77202cc4110f11402d8a680a0574b293fede8b56576d2d7a95d",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 3
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 13
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 0,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": false
+      },
+      "contrast": {
+        "ended": true,
+        "closed": true,
+        "trace_tokens": 277,
+        "trace_sha256": "e31d24fafb7ec445506f96ef758ed7ff1b814dd472ff8fcfd2eebd6f6b28ec26",
+        "comparison": {
+          "B": {
+            "exact": false,
+            "common_prefix_tokens": 3
+          },
+          "C": {
+            "exact": false,
+            "common_prefix_tokens": 13
+          }
+        },
+        "spelling_mentions": {
+          "--no-not_empty": 2,
+          "--no-not-empty": 0
+        },
+        "native_behavior": true,
+        "strict": true
+      }
+    }
+  }
+}

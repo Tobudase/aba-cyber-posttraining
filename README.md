@@ -1,5 +1,11 @@
 # ABA Cybersecurity Post-training Research
 
+## November 22, 2026 — Single-example recall and cross-tool transfer
+
+Qwen3-8B reproduced the full Qwen and DeepSeek teacher trajectories on the original training prompt at step 64 (1,027 and 430 tokens). On two other previously screened TRAIN questions, the DeepSeek-trained checkpoint passed **5/6** strict checks, the base model **2/6**, the Qwen-trained checkpoint **1/6**, and answer-only **0/6**. The DeepSeek gain came entirely from one LLVM question where it supplied the missing executable in all three draws. Each draw was checked on two files. These are diagnostic results from one training source and one training seed.
+
+[Chinese report and figure](results/teacher-recall-2026-11-22/RESULT_ZH.md) · [Per-draw scores and replay](results/teacher-recall-2026-11-22/transfer.json) · [Recount](results/teacher-recall-2026-11-22/recount.py)
+
 ## November 22, 2026 — What did teacher supervision change on a matched pair?
 
 On a same-file schema task, the original Qwen3-8B passed **0/6** because of one misspelled option. Correcting one character in each saved command recovered **6/6**. At step 64, the Qwen trajectory checkpoint passed **6/6**, answer-only **4/6**, and DeepSeek trajectory **4/6**. The answer-only checkpoint passed both directions with both decoding seeds, then dropped the required option both times when an irrelevant sentence was added. These six responses come from one source.

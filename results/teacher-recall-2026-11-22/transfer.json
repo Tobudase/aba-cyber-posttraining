@@ -1,0 +1,450 @@
+{
+  "training_source": "sample_6137",
+  "source_selection": "Both other previously admitted TRAIN gaps. Selection used prior base errors. They were not used to fit these adapters.",
+  "seeds": [
+    22103,
+    22109,
+    22111
+  ],
+  "prompt_sha256": {
+    "sample_7293": "12d15093264f747066c5830678a4ac773eaa231f7e1c24b5665915c82360ab59",
+    "sample_6118": "930d715abb3bad6ae1320793d8add0f136505480811a77ca71eb28d5ee2ca486"
+  },
+  "system_sha256": "b5e8b1876746db3782b9019f007e17dba36af09e6227a67b0e6f85224ac8b8e1",
+  "model": "Qwen/Qwen3-8B",
+  "gpu": "NVIDIA A10",
+  "max_new_tokens": 4096,
+  "checkpoints": {
+    "base": null,
+    "A64": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255",
+    "B64": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3",
+    "C64": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d"
+  },
+  "sources": {
+    "sample_7293": {
+      "base": {
+        "22103": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "28a4a45459150510513a1d7b54e4ba7d910df0d285509b123110fd5f5ad64b3a",
+          "json_valid": true,
+          "generated_tokens": 161,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        },
+        "22109": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "8bccd2ca5e4a16002f09289ee46feb6b8900ab9ed8307ba37789c24610a66ff5",
+          "json_valid": true,
+          "generated_tokens": 161,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        },
+        "22111": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "d2c0211e05cf5afc42be90a3f81fa0aa0e950831497c4b26b6ee849992a8fedf",
+          "json_valid": true,
+          "generated_tokens": 206,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        }
+      },
+      "A64": {
+        "22103": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "c0a68141e23000b1d3b61f8d893373096690f4a4a64abb123b93db49fc5457aa",
+          "json_valid": true,
+          "generated_tokens": 47,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        },
+        "22109": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "1ac590f0661e4863d153561fb2cd23bd6fc688aa568b63e1e3919d5069c6804f",
+          "json_valid": true,
+          "generated_tokens": 55,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        },
+        "22111": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "e0baa912b4a81dc6d2af6bc524da266e2470a0b12e3cd59dd0af70d13c89b693",
+          "json_valid": true,
+          "generated_tokens": 52,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        }
+      },
+      "B64": {
+        "22103": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "07a3a887e7020f2f6effb839cb35537ff024f6237e40952a54c34954373db780",
+          "json_valid": true,
+          "generated_tokens": 294,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        },
+        "22109": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "bc95b6f85baabb38f44a73d64a29ce9d44eb4c442d4e478656fde55e7e1754fa",
+          "json_valid": true,
+          "generated_tokens": 347,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        },
+        "22111": {
+          "result": "missing-executable",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "1c67b348b1afa6cc951b75f4aaf50d2205b30160fe639fedf128a00178fccdcf",
+          "json_valid": true,
+          "generated_tokens": 272,
+          "native_fixture_matches": null,
+          "command": "--module-list-functions",
+          "after_adding_executable": [
+            true,
+            true
+          ]
+        }
+      },
+      "C64": {
+        "22103": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "a9cf6c6af37741e7b80515b784296733f0a4eb9bf0eec8f668946329eda77d1e",
+          "json_valid": true,
+          "generated_tokens": 175,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "llvm-c-test --module-list-functions"
+        },
+        "22109": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "81b7558b379fcd74bac2fdddd8a06a1d7ba8a15244a9a6498d9586524473c983",
+          "json_valid": true,
+          "generated_tokens": 637,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "llvm-c-test --module-list-functions"
+        },
+        "22111": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "7762399f911cdb0f75afeaee9bdbee9fd8990baeca6dddae27de10b96e60d4ed",
+          "json_valid": true,
+          "generated_tokens": 215,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "llvm-c-test --module-list-functions"
+        }
+      }
+    },
+    "sample_6118": {
+      "base": {
+        "22103": {
+          "result": "format",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "ecb233e1a641ca564b4915bfb696b465e8a121ff24a6314c5b63884e75f91532",
+          "json_valid": false,
+          "generated_tokens": 241,
+          "native_fixture_matches": null,
+          "one_escape_replay": {
+            "command": "mdb-json network.mdb devices",
+            "insertions": 1,
+            "fixture_matches": [
+              true,
+              true
+            ],
+            "exit_codes": [
+              0,
+              0
+            ]
+          }
+        },
+        "22109": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "0d32787e2bef5273053487f23dc88225091e18944589d0f2b76b127f48e3d53e",
+          "json_valid": true,
+          "generated_tokens": 326,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "mdb-json network.mdb devices"
+        },
+        "22111": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "3a53521796ed4c6860440e63b3c48b8ec076c8c590528301d5e75cf031f682c4",
+          "json_valid": true,
+          "generated_tokens": 359,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "mdb-json network.mdb devices"
+        }
+      },
+      "A64": {
+        "22103": {
+          "result": "behavior-error",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "f5bd05d837f32f2b2b98f844bdfb26a1fe20e820eb95ce58d16aa97d1db0a4aa",
+          "json_valid": true,
+          "generated_tokens": 45,
+          "native_fixture_matches": [
+            false,
+            false
+          ],
+          "command": "mdb-json -U network.mdb devices"
+        },
+        "22109": {
+          "result": "behavior-error",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "7ed8cbf397500e9f5075888b976806f4d67e7c364f58413faf9b34e10ab57b2a",
+          "json_valid": true,
+          "generated_tokens": 61,
+          "native_fixture_matches": [
+            false,
+            false
+          ],
+          "command": "mdb-json -U network.mdb devices"
+        },
+        "22111": {
+          "result": "behavior-error",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "3cdc17d9e8301e4996ceca5d1fe8af6dcd316a961c548b174a5b5ddfcd0778f3",
+          "json_valid": true,
+          "generated_tokens": 62,
+          "native_fixture_matches": [
+            false,
+            false
+          ],
+          "command": "mdb-json -U network.mdb devices"
+        }
+      },
+      "B64": {
+        "22103": {
+          "result": "format",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "f9b460f7e1b245522fb86c7526a38577d412ba8e7f75e2723f80ba4f5eb2f1f3",
+          "json_valid": false,
+          "generated_tokens": 892,
+          "native_fixture_matches": null,
+          "one_escape_replay": {
+            "command": "mdb-json network.mdb devices",
+            "insertions": 1,
+            "fixture_matches": [
+              true,
+              true
+            ],
+            "exit_codes": [
+              0,
+              0
+            ]
+          }
+        },
+        "22109": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "3dd2e38a3914ffcd7f8934ed560e48ee18ef0cd6f644110004cde27b52fd159d",
+          "json_valid": true,
+          "generated_tokens": 470,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "mdb-json network.mdb devices"
+        },
+        "22111": {
+          "result": "format",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "a9d9b243754ab555a00be6ba06d47a822484d02270c487207b5d4cba24ab2a03",
+          "json_valid": false,
+          "generated_tokens": 356,
+          "native_fixture_matches": null,
+          "one_escape_replay": {
+            "command": "mdb-json network.mdb devices",
+            "insertions": 1,
+            "fixture_matches": [
+              true,
+              true
+            ],
+            "exit_codes": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "C64": {
+        "22103": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "27e665dbe8fee10100f43546cc8a26e65b483dd26cf99c78fddb85a1e555efec",
+          "json_valid": true,
+          "generated_tokens": 503,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "mdb-json network.mdb devices"
+        },
+        "22109": {
+          "result": "format",
+          "strict_pass": false,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "11e59128dcfba2d504870581c26b02f7c8bd7c17477aefc676e6dc635e36d9a3",
+          "json_valid": false,
+          "generated_tokens": 439,
+          "native_fixture_matches": null,
+          "one_escape_replay": {
+            "command": "mdb-json network.mdb devices -",
+            "insertions": 1,
+            "fixture_matches": [
+              false,
+              false
+            ],
+            "exit_codes": [
+              1,
+              1
+            ]
+          }
+        },
+        "22111": {
+          "result": "pass",
+          "strict_pass": true,
+          "ended": true,
+          "closed": true,
+          "visible_sha256": "f2d3d90f4072169ccede31931f84051beb8468f1a12e75aba595d50d35f75662",
+          "json_valid": true,
+          "generated_tokens": 609,
+          "native_fixture_matches": [
+            true,
+            true
+          ],
+          "command": "mdb-json network.mdb devices"
+        }
+      }
+    }
+  },
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "inference_worker_sha256": "f6098f3b3d8cc8b50709611d84f8092236b7a224174f62fd9b5cebc98ac791bb",
+  "grader_sha256": {
+    "sample_7293": "7bdbb50d7bc3343cf7027a499d2b29c9c10fda8a8e8d125b4d899f652e071bb4",
+    "sample_6118": "f0ead2ec2b2a0034bd5add7549dc1158d5c305845d6a188a87f350bc50e09873"
+  },
+  "jobs": {
+    "miw113-fit-transfer23": {
+      "released": true,
+      "start": "2026-11-23T04:52:25Z",
+      "end": "2026-11-23T05:03:17Z"
+    },
+    "miw113-fit-grade-7293x23": {
+      "released": true,
+      "start": "2026-11-23T05:03:32Z",
+      "end": "2026-11-23T05:03:39Z"
+    },
+    "miw113-fit-grade-6118x23": {
+      "released": true,
+      "start": "2026-11-23T05:03:47Z",
+      "end": "2026-11-23T05:03:59Z"
+    },
+    "miw113-transfer-json-replay23": {
+      "released": true,
+      "start": "2026-11-23T05:04:27Z",
+      "end": "2026-11-23T05:04:38Z"
+    }
+  }
+}
