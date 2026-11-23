@@ -1,0 +1,44 @@
+{
+  "blocks": [
+    [
+      "7411",
+      "7413",
+      "7500"
+    ],
+    [
+      "1605",
+      "2617"
+    ]
+  ],
+  "calibration_only_before_freeze": true,
+  "candidate_count": 3,
+  "grouping": {
+    "1605": "PE signature reporting",
+    "2289": "external variables in local detection rules",
+    "2617": "PE signature reporting"
+  },
+  "questions": {
+    "1605": "ddafa1bbf2bfc573d0113377d23f98a1ebaf9b3cdc647d42a2817c88e89c9550",
+    "2617": "620b5b85a7e7af72ef224d43497999beaefa5ce9c1d1a3bd606643699a87ae32"
+  },
+  "same_checkpoints": {
+    "A64": {
+      "folder": "miw113-json-triad-a6e70841c63c9b5d",
+      "weights": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255"
+    },
+    "B64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3"
+    },
+    "C64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d"
+    },
+    "base": null
+  },
+  "seeds": [
+    22103,
+    22109,
+    22111
+  ]
+}

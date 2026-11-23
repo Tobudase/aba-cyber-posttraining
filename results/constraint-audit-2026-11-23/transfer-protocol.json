@@ -1,0 +1,34 @@
+{
+  "held_out_from_these_adapters": [
+    "7411",
+    "7413",
+    "7500"
+  ],
+  "models": {
+    "A64": {
+      "folder": "miw113-json-triad-a6e70841c63c9b5d",
+      "weights": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255"
+    },
+    "B64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3"
+    },
+    "C64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d"
+    },
+    "base": null
+  },
+  "primary": "paired native execution by source and seed; report all arms, all three sources, unreviewed variants separately; descriptive small diagnostic",
+  "prompts": {
+    "7411": "e0e60178b58dc229e486c5093bfd93d5f3c1521091f6e1cd1411001a52f0471d",
+    "7413": "2d127403bb19efd855400b7002c8883dd9d2d8822123c1a8fc3337f2fa526921",
+    "7500": "ad2f59db04894dac33b0b34a1b7ee033e6989193edef235035f43a49dc230f86"
+  },
+  "seeds": [
+    22103,
+    22109,
+    22111
+  ],
+  "selected_before_outputs": true
+}

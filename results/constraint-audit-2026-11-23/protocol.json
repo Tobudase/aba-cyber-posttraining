@@ -1,0 +1,45 @@
+{
+  "allocation": {
+    "7411": [
+      "cddd2b5bb05e5d70202f745f4ac4ca07706c36719be02f9dfaa6edefb75d48ea",
+      "7beda0194acca89ce118dc5678ede092a892ae304acee2c7664e2cb71fc4e31f"
+    ],
+    "7413": [
+      "46c17ac384b41a16094948659c1c11da74e7d0bc6fff80033aadb933b6e24045",
+      "961ec0c12e1d9f3a54573c418fba284727c68858db85c6e7472ae61edf42a427"
+    ],
+    "7500": [
+      "59aeaac052ac7f0d9a03608f81f83aab35416e96dd1bfc343e503c661fc9059f",
+      "22443499c15983e359bcaac5b094542cf0881c7176d56d53537193f5c35f92e6"
+    ]
+  },
+  "arms": {
+    "a": "unchanged original baseline",
+    "b": "neutral local-input reminder",
+    "c": "check executable and exact option spelling without giving any command or option",
+    "d": "previously correct Qwen teacher visible explanation on the same question; contains direct hints"
+  },
+  "prompt_sha256": {
+    "a-6118": "6f68fb9f81f07b360d02ebfa3aab1844ea452d78bd5813d3550de71d14f71c56",
+    "a-6137": "c17a145c1a06f9cb0c7c500120af1f4def5c6f0e73a06111e082a7f0e0a95d3f",
+    "a-7293": "602b15b6ed20db4e21881855fd2f556eda0107ca028d7c83c5a57297537c549b",
+    "b-6118": "03b3080b31c1e4eaf7f9f953e05d051012c0fd56e5a5181d818ef3a50c49d8c5",
+    "b-6137": "62035672a8e68c60db8edc919feb5f61e6a1f5869df45020857ac9193102c51b",
+    "b-7293": "b1759e52452cd04141512fc62498e8e77ce7eace1cfaaa953cf78449041605ab",
+    "c-6118": "868c5a4ff4151e556d316ec042f4154275017feaf0321640ec79ef1a79f6c0d1",
+    "c-6137": "c7d5358e917f40d04acd1323eceb5018bef17c5e4dc75f5b7d5b089e6581dfd0",
+    "c-7293": "b7bd6de1e0d74374e2744ab450a2005ba4bbfff92e8651c5c2f381796cf702dd",
+    "d-6118": "f597749c107b0bb3957dcd965a54f58414dc62619744ae0ecdaea28c25b5e462",
+    "d-6137": "719e95ce4e12939adb40d27d15c6f2f87239b54e3e9d75b5b465cc464a563208",
+    "d-7293": "95b6b48db9047802f4194616d32814fc0e50e8b542f43aebe3bba9856f8680b9",
+    "e-7411": "e0e60178b58dc229e486c5093bfd93d5f3c1521091f6e1cd1411001a52f0471d",
+    "e-7413": "2d127403bb19efd855400b7002c8883dd9d2d8822123c1a8fc3337f2fa526921",
+    "e-7500": "ad2f59db04894dac33b0b34a1b7ee033e6989193edef235035f43a49dc230f86"
+  },
+  "scope": "All three historical reversed prompts ordered identically in blocks of three. Extra original sources are TRAIN only. No held-out data or weight update. One completion is one observation regardless of number of fixtures. Independent origins required for training: 8 across at least 3 skills. Prior cohort screened IDs excluded from new-source count.",
+  "seeds": [
+    22103,
+    22109,
+    22111
+  ]
+}
