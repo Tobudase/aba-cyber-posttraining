@@ -1,0 +1,97 @@
+{
+  "source": "sample_6137",
+  "training_seeds": [
+    3407,
+    3413,
+    3433
+  ],
+  "decoding_seeds": [
+    11341,
+    11351
+  ],
+  "steps": [
+    16,
+    32,
+    64
+  ],
+  "primary_step": 64,
+  "cap": 4096,
+  "auxiliary": {
+    "answer_only": "",
+    "background": "This task reads metadata from the local relational database, not rows, while its table structures appear as rendered text.\nThe example concerns a file stored locally on disk. The text output can be read directly after the program has finished reading the file at the end of the run for this local database file.",
+    "rule": "Because some synthetic tables declare field defaults, applying the minimal schema requirement changes the emitted schema by excluding those defaults.\nThe example concerns a file stored locally on disk. The text output can be read directly after the program has finished reading the file at the end of the run for this local database file.",
+    "background_copy": "This task reads metadata from the local relational database, not rows, while its table structures appear as rendered text.\nThe complete command is mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations temp.mdb.",
+    "rule_copy": "Because some synthetic tables declare field defaults, applying the minimal schema requirement changes the emitted schema by excluding those defaults.\nThe complete command is mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations temp.mdb."
+  },
+  "common_aux_tokens": 59,
+  "estimand": "Replace topical context with the decisive condition, and neutral filler with one verbatim answer. All four auxiliary segments have the same length. Report within-seed changes for all cells; answer-only is an unbalanced reference.",
+  "endpoint": "Strict fixture pass for the three catalog probes at step 64; original separately. No checkpoint selection.",
+  "input_sha256": "d70295026bb7874fcb680659391fdc6aaeabb36c39b03b089533812df5b4c28d",
+  "worker_sha256": "c1d9beb681fd430b517cbe2342605bbed56a0010ae562b0e75ea245b55a96ef4",
+  "training_token_counts": {
+    "answer_only": {
+      "prompt": 303,
+      "answer": 32,
+      "visible": 43,
+      "trace": 0,
+      "format": 13
+    },
+    "background": {
+      "prompt": 303,
+      "answer": 32,
+      "visible": 43,
+      "trace": 59,
+      "format": 13
+    },
+    "rule": {
+      "prompt": 303,
+      "answer": 32,
+      "visible": 43,
+      "trace": 59,
+      "format": 13
+    },
+    "background_copy": {
+      "prompt": 303,
+      "answer": 32,
+      "visible": 43,
+      "trace": 59,
+      "format": 13
+    },
+    "rule_copy": {
+      "prompt": 303,
+      "answer": 32,
+      "visible": 43,
+      "trace": 59,
+      "format": 13
+    }
+  },
+  "transfer": {
+    "prompts": {
+      "sample_6402": "6234ea012f81f1e15c73434e614b33c99c6c119b79295ed9b91c1c7608d3aec3",
+      "sample_7395": "e7dcd473bbaacaafaaa70c00a55d596e6775c17ff0a4f9b253e39a3e1cc879b2",
+      "sample_7538": "8dc26842b8f0cb13be67eb47a2f814162883a0b1015aae687d078222b5d26c70"
+    },
+    "decoding_seeds": [
+      22103,
+      22109,
+      22111
+    ],
+    "adapters": {
+      "base": null,
+      "A64": {
+        "folder": "miw113-json-triad-a6e70841c63c9b5d",
+        "weights": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255"
+      },
+      "B64": {
+        "folder": "miw113-json-triad-8242cd82b918a98e",
+        "weights": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3"
+      },
+      "C64": {
+        "folder": "miw113-json-triad-8242cd82b918a98e",
+        "weights": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d"
+      }
+    },
+    "source": "previous sample_6137 checkpoints",
+    "role": "New TRAIN diagnostics; selected on fixture quality before new student generations."
+  }
+}
