@@ -1,0 +1,202 @@
+{
+  "one_character_replay": {
+    "6137": {
+      "deepseek-22109": {
+        "issue": "pass",
+        "strict": true
+      },
+      "deepseek-22111": {
+        "issue": "pass",
+        "strict": true
+      }
+    }
+  },
+  "sources": {
+    "6118": {
+      "student": {
+        "22103": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "22109": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "22111": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        }
+      },
+      "teachers": {
+        "deepseek-22103": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "deepseek-22109": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "deepseek-22111": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22103": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22109": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22111": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        }
+      }
+    },
+    "6137": {
+      "student": {
+        "22103": {
+          "issue": "native-error",
+          "strict": false
+        },
+        "22109": {
+          "issue": "native-error",
+          "strict": false
+        },
+        "22111": {
+          "issue": "native-error",
+          "strict": false
+        }
+      },
+      "teachers": {
+        "deepseek-22103": {
+          "issue": "pass",
+          "strict": true
+        },
+        "deepseek-22109": {
+          "issue": "native-error",
+          "strict": false
+        },
+        "deepseek-22111": {
+          "issue": "native-error",
+          "strict": false
+        },
+        "qwen-22103": {
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22109": {
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22111": {
+          "issue": "pass",
+          "strict": true
+        }
+      }
+    },
+    "7293": {
+      "student": {
+        "22103": {
+          "issue": "needs-review",
+          "strict": false
+        },
+        "22109": {
+          "issue": "needs-review",
+          "strict": false
+        },
+        "22111": {
+          "issue": "needs-review",
+          "strict": false
+        }
+      },
+      "teachers": {
+        "deepseek-22103": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "deepseek-22109": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "deepseek-22111": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22103": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22109": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        },
+        "qwen-22111": {
+          "files": [
+            true,
+            true
+          ],
+          "issue": "pass",
+          "strict": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "historical_reversals_command_edit": {
+    "6137": {
+      "22103": {
+        "issue": "pass",
+        "strict": true
+      },
+      "22109": {
+        "issue": "pass",
+        "strict": true
+      },
+      "22111": {
+        "issue": "pass",
+        "strict": true
+      }
+    },
+    "7293": {
+      "22103": {
+        "files": [
+          true,
+          true
+        ],
+        "issue": "pass",
+        "strict": true
+      },
+      "22109": {
+        "files": [
+          true,
+          true
+        ],
+        "issue": "pass",
+        "strict": true
+      },
+      "22111": {
+        "files": [
+          true,
+          true
+        ],
+        "issue": "pass",
+        "strict": true
+      }
+    }
+  },
+  "new_original_output_name": {
+    "7208": {
+      "22103": "pass"
+    },
+    "7475": {
+      "22111": "pass"
+    }
+  },
+  "scope": "Only the saved command was edited. Counts certify native behavior. Unedited free-text explanations were not rescored for factual correctness."
+}

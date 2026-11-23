@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 23, 2026 — Screening new KaliBench TRAIN sources
+
+Original Qwen3-8B passed **55/57** draws on **19 newly screened sources**. On two static file-report questions, replacing a plugin error with the actual installed help changed the student's score from **0/6 to 6/6** with matched seeds. The unchanged control passed **3/3 in both conditions**. The two remaining errors on new sources both omitted an output name and each recovered with that single edit.
+
+On reversed requests for three previously identified sources, the student passed **3/9**, the Qwen teacher **9/9**, and the DeepSeek teacher **7/9**. The study now has **3 qualifying original sources across 51 screened**. Two have matched labels for both directions in all five arms. The eight-source threshold for multi-source SFT remains unmet.
+
+[Results figure](results/paired-source-wave-2026-11-23/screening-results.png) · [Chinese report](results/paired-source-wave-2026-11-23/RESULT_ZH.md) · [Paired help experiment](results/paired-source-wave-2026-11-23/help-replay.json) · [Recount](results/paired-source-wave-2026-11-23/recount.py)
+
 ## November 23, 2026 — What did the student learn from a teacher explanation?
 
 All five Qwen3-8B training conditions passed the original database question in **6/6** draws. On three variants of that question, repeated across three training seeds, answer-only SFT passed **17/18**. Adding a 59-token target explaining why the original question required suppressing field defaults gave **8/18**. When the request explicitly reversed that condition, answer-only passed **6/6** and the explanation arm **0/6**. Changing just the defaults option restored correct execution in four of those six failures.

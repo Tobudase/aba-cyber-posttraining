@@ -1,0 +1,142 @@
+{
+  "arms": {
+    "a": "plugin error in place of help",
+    "b": "actual installed help"
+  },
+  "control": "2828 used the identical prompt in both arms",
+  "original_receipts": {
+    "1623": {
+      "22103": "88b07054596b43f9f98c226710a2f67b0890e7e2d069964dd5ef5664d3b3f85b",
+      "22109": "be6798eabfc5d56cec8ec084bcb9b14e4bb2417bd1823721c488c6275e488d14",
+      "22111": "4c161622613cd2cf7a772d1db4ca9b8404b22f94e7ac6e540e401e07cb3a9775"
+    },
+    "2630": {
+      "22103": "dafbcfbbd9f22496f0d2af1123b14b0535fb3a017600be9f57de1e424cf721b9",
+      "22109": "9d4f86fa7e8261a8d6c0aef125aaada05924785f575c83017aaa4cd6a4a450e1",
+      "22111": "2f767f3f8137361b96804a7959cda61f8d2a67659d70b000399f85bc6bdf6891"
+    },
+    "2828": {
+      "22103": "cbe9fa6bf5347d1229107db7388a0db7b1ce224a22f164799be344b38d92fb01",
+      "22109": "184f0ae634f5e5e29f76e81ca68386d608ecdb49f3832276f4fe001d99e805e4",
+      "22111": "c47f9eefc481b4ade52880fbde0c3a5192a26b0279c6158ed6de575877963279"
+    }
+  },
+  "prompt_digests": {
+    "a-1623": "2b19798744c74e944493c322833bf4e96865a1ec39bd2f665fadbea6d8a09a6e",
+    "a-2630": "e8819f3852c7d5840b52fe844bae9924135714439aaa857888b65464c7a66115",
+    "a-2828": "f3811be40f5c97ef6dbed839d9a633a0657803232b073593a68537a6bda2f7fa",
+    "b-1623": "844c25480f5c27deff8d33736788557e0527867044f54f4a664152600a664b67",
+    "b-2630": "2a0715891b19a965620ad3adca4bb3f127347f8b4eb552c47c2411a800fda0f1",
+    "b-2828": "f3811be40f5c97ef6dbed839d9a633a0657803232b073593a68537a6bda2f7fa"
+  },
+  "rows": {
+    "1623": {
+      "a": {
+        "22103": {
+          "native": "different-behavior",
+          "tokens": 522,
+          "visible_sha256": "88b07054596b43f9f98c226710a2f67b0890e7e2d069964dd5ef5664d3b3f85b"
+        },
+        "22109": {
+          "native": "different-behavior",
+          "tokens": 634,
+          "visible_sha256": "be6798eabfc5d56cec8ec084bcb9b14e4bb2417bd1823721c488c6275e488d14"
+        },
+        "22111": {
+          "native": "different-behavior",
+          "tokens": 632,
+          "visible_sha256": "4c161622613cd2cf7a772d1db4ca9b8404b22f94e7ac6e540e401e07cb3a9775"
+        }
+      },
+      "b": {
+        "22103": {
+          "native": "pass",
+          "tokens": 196,
+          "visible_sha256": "63582c9785041c7aebc603b2841d64d7e9825f019787241434329f309d598ead"
+        },
+        "22109": {
+          "native": "pass",
+          "tokens": 196,
+          "visible_sha256": "2dc31894d0a7c48d6a5f04f105cb7962716c9868481b584385479907aa42e794"
+        },
+        "22111": {
+          "native": "pass",
+          "tokens": 230,
+          "visible_sha256": "cccf557fd8d00e9f203138bd59450235bf2505c94b0278f6d2696b6d78ea036b"
+        }
+      }
+    },
+    "2630": {
+      "a": {
+        "22103": {
+          "native": "different-behavior",
+          "tokens": 325,
+          "visible_sha256": "dafbcfbbd9f22496f0d2af1123b14b0535fb3a017600be9f57de1e424cf721b9"
+        },
+        "22109": {
+          "native": "different-behavior",
+          "tokens": 409,
+          "visible_sha256": "9d4f86fa7e8261a8d6c0aef125aaada05924785f575c83017aaa4cd6a4a450e1"
+        },
+        "22111": {
+          "native": "different-behavior",
+          "tokens": 406,
+          "visible_sha256": "2f767f3f8137361b96804a7959cda61f8d2a67659d70b000399f85bc6bdf6891"
+        }
+      },
+      "b": {
+        "22103": {
+          "native": "pass",
+          "tokens": 229,
+          "visible_sha256": "16645a37c4086e0accc62c5c556d0a9c7d746c613fce460dfb4b051fe188a84d"
+        },
+        "22109": {
+          "native": "pass",
+          "tokens": 258,
+          "visible_sha256": "e9b8831bff084a8fea498f35e07e0bf07a6cc63ab1d9a312af3f391e7932d012"
+        },
+        "22111": {
+          "native": "pass",
+          "tokens": 244,
+          "visible_sha256": "5be21de446cb7419691f03d8c72637bf06b99c1481d1ffb3fc78a7bd3075ed23"
+        }
+      }
+    },
+    "2828": {
+      "a": {
+        "22103": {
+          "native": "pass",
+          "tokens": 259,
+          "visible_sha256": "cbe9fa6bf5347d1229107db7388a0db7b1ce224a22f164799be344b38d92fb01"
+        },
+        "22109": {
+          "native": "pass",
+          "tokens": 269,
+          "visible_sha256": "184f0ae634f5e5e29f76e81ca68386d608ecdb49f3832276f4fe001d99e805e4"
+        },
+        "22111": {
+          "native": "pass",
+          "tokens": 303,
+          "visible_sha256": "c47f9eefc481b4ade52880fbde0c3a5192a26b0279c6158ed6de575877963279"
+        }
+      },
+      "b": {
+        "22103": {
+          "native": "pass",
+          "tokens": 259,
+          "visible_sha256": "cbe9fa6bf5347d1229107db7388a0db7b1ce224a22f164799be344b38d92fb01"
+        },
+        "22109": {
+          "native": "pass",
+          "tokens": 269,
+          "visible_sha256": "184f0ae634f5e5e29f76e81ca68386d608ecdb49f3832276f4fe001d99e805e4"
+        },
+        "22111": {
+          "native": "pass",
+          "tokens": 303,
+          "visible_sha256": "c47f9eefc481b4ade52880fbde0c3a5192a26b0279c6158ed6de575877963279"
+        }
+      }
+    }
+  }
+}
