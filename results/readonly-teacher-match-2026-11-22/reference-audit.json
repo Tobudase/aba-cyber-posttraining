@@ -1,0 +1,145 @@
+{
+  "new": {
+    "sample_7138": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_7139": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_7122": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_7140": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_7184": {
+      "verified": false,
+      "available": false,
+      "reason": "utility unavailable in pinned image"
+    },
+    "sample_7292": {
+      "verified": false,
+      "available": true,
+      "reason": null
+    },
+    "sample_7293": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_7316": {
+      "verified": false,
+      "available": true,
+      "reason": "Conditional terminal highlighting needs a pseudo-terminal and a COFF attribute witness."
+    },
+    "sample_7376": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_7569": {
+      "verified": false,
+      "available": false,
+      "reason": "utility unavailable in pinned image"
+    },
+    "sample_6878": {
+      "verified": false,
+      "available": false,
+      "reason": "utility unavailable in pinned image"
+    },
+    "sample_6643": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_6442": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_6683": {
+      "verified": false,
+      "available": true,
+      "reason": "A kernel profile and symbol map with known counters are required."
+    },
+    "sample_2129": {
+      "verified": false,
+      "available": false,
+      "reason": "utility unavailable in pinned image"
+    },
+    "sample_5844": {
+      "verified": false,
+      "available": false,
+      "reason": "utility unavailable in pinned image"
+    },
+    "sample_1935": {
+      "verified": false,
+      "available": false,
+      "reason": "utility unavailable in pinned image"
+    },
+    "sample_7115": {
+      "verified": false,
+      "available": true,
+      "reason": "Differentiating summary from staging changes requires a controlled Git index."
+    },
+    "sample_7543": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_7546": {
+      "verified": true,
+      "available": true,
+      "reason": null
+    },
+    "sample_85": {
+      "verified": false,
+      "available": false,
+      "reason": "utility unavailable in pinned image"
+    }
+  },
+  "supplement": {
+    "sample_6643": [
+      {
+        "gold_rc": 1,
+        "valid": true
+      },
+      {
+        "gold_rc": 1,
+        "valid": true
+      }
+    ],
+    "sample_7115": [
+      {
+        "gold_rc": 1,
+        "valid": false
+      },
+      {
+        "gold_rc": 1,
+        "valid": false
+      }
+    ],
+    "sample_85": [
+      {
+        "gold_rc": 2,
+        "valid": false,
+        "alternative_rc": 0,
+        "observed_permission": "r"
+      },
+      {
+        "gold_rc": 2,
+        "valid": false,
+        "alternative_rc": 0,
+        "observed_permission": "rw"
+      }
+    ]
+  }
+}

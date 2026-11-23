@@ -1,0 +1,478 @@
+{
+  "hardware": "NVIDIA A10",
+  "seed": 3407,
+  "decode_seed": 11341,
+  "details": {
+    "base-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 585,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "base-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 544,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "base-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 420,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "base_recheck-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 585,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "base_recheck-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 544,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "base_recheck-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 420,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "A16-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 99,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A16-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 106,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A16-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 78,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A32-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 99,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A32-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 103,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A32-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 80,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A64-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 103,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A64-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 103,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "A64-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 90,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "B16-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 1289,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "B16-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 458,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "B16-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 430,
+      "mentions_literal": false,
+      "mentions_alternative": true,
+      "behavior": false,
+      "strict": false,
+      "executed": true
+    },
+    "B32-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 317,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "B32-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 161,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "B32-contrast": {
+      "format": false,
+      "ended": false,
+      "tokens": 4096,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": false,
+      "strict": false,
+      "executed": false
+    },
+    "B64-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 1107,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "B64-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 1854,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "B64-contrast": {
+      "format": false,
+      "ended": true,
+      "tokens": 851,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": false,
+      "executed": true,
+      "secondary_format": "two disjoint JSON objects, exactly one command"
+    },
+    "C16-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 242,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "C16-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 442,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "C16-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 775,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "C32-train": {
+      "format": false,
+      "ended": false,
+      "tokens": 4096,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": false,
+      "strict": false,
+      "executed": false
+    },
+    "C32-fresh": {
+      "format": true,
+      "ended": true,
+      "tokens": 283,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "C32-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 459,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "C64-train": {
+      "format": true,
+      "ended": true,
+      "tokens": 516,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    },
+    "C64-fresh": {
+      "format": false,
+      "ended": true,
+      "tokens": 522,
+      "mentions_literal": false,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": false,
+      "executed": true,
+      "secondary_format": "two disjoint JSON objects, exactly one command"
+    },
+    "C64-contrast": {
+      "format": true,
+      "ended": true,
+      "tokens": 373,
+      "mentions_literal": true,
+      "mentions_alternative": false,
+      "behavior": true,
+      "strict": true,
+      "executed": true
+    }
+  },
+  "checkpoints": {
+    "A": {
+      "loss_first": {
+        "step": 1,
+        "loss": {
+          "answer": 0.5730758309364319,
+          "format": 3.3705625534057617
+        },
+        "grad": 2.88400936126709
+      },
+      "loss_last": {
+        "step": 64,
+        "loss": {
+          "answer": 1.1454108971520327e-05,
+          "format": 0.0001072882951120846
+        },
+        "grad": 0.0008178949356079102
+      },
+      "token_counts": {
+        "format": 13,
+        "answer": 32,
+        "visible_masked": 43,
+        "masked": 303
+      },
+      "hashes": {
+        "16": {
+          "weights": "3e171a98143790e35d5b8cb977ffdad231fcd38a7dff11df315bdb2a9384f9dd",
+          "state": "b452ef2e55e21af6ae5f2a817075fa7c450d8bca464b101663ed998f7051289c"
+        },
+        "32": {
+          "weights": "bc14d5d41bed3c65e37043e93f7a600e8d81fa0e3f70fc0d9cc02d9272cc5974",
+          "state": "bded5e47fab791c8aff94ec419e7b27063bef4b9fd03f4db04f0698c48b79a50"
+        },
+        "64": {
+          "weights": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255",
+          "state": "5d647c3887df411668901c55d5ebe853eabcda7e4a96c64d87149f814f0bd45a"
+        }
+      },
+      "initial_state": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1"
+    },
+    "B": {
+      "loss_first": {
+        "step": 1,
+        "loss": {
+          "answer": 8.4819839685224e-05,
+          "trace": 2.0594370365142822,
+          "format": 2.1375014781951904
+        },
+        "grad": 0.8128541707992554
+      },
+      "loss_last": {
+        "step": 64,
+        "loss": {
+          "answer": 2.1076575649203733e-05,
+          "trace": 0.002085077576339245,
+          "format": 4.4075924961362034e-05
+        },
+        "grad": 0.037794921547174454
+      },
+      "token_counts": {
+        "trace": 1027,
+        "masked": 303,
+        "format": 13,
+        "visible_masked": 43,
+        "answer": 32
+      },
+      "hashes": {
+        "16": {
+          "weights": "788a775e4ef7318dadcdb9250ce8467208b3498d47aac9dba38e5f80de88378f",
+          "state": "84d31e1b40aa4ac50f866af0b5dc531223dabe1e58c1acf27fd130c027e85913"
+        },
+        "32": {
+          "weights": "4a2676ea589276fee8268eb3e346499077a959775b8a769ba900633f441aa208",
+          "state": "05c9b4a6ffb4f96c1fa9e1a13545baf65d41658069ad8179858b9b6b394c31a7"
+        },
+        "64": {
+          "weights": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3",
+          "state": "88478856c98b0ec29ef12c99eaa7a1cc73076ed5fcceaa766db80437c49b5aa6"
+        }
+      },
+      "initial_state": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1"
+    },
+    "C": {
+      "loss_first": {
+        "step": 1,
+        "loss": {
+          "answer": 0.3359561264514923,
+          "trace": 2.259065628051758,
+          "format": 0.45487815141677856
+        },
+        "grad": 1.8666342496871948
+      },
+      "loss_last": {
+        "step": 64,
+        "loss": {
+          "answer": 1.3290513379615732e-05,
+          "trace": 0.0007675907108932734,
+          "format": 4.6448170905932784e-05
+        },
+        "grad": 0.03054702654480934
+      },
+      "token_counts": {
+        "trace": 430,
+        "masked": 303,
+        "format": 13,
+        "visible_masked": 43,
+        "answer": 32
+      },
+      "hashes": {
+        "16": {
+          "weights": "05dcfa8296d4b3addfca541fe4dd4ac3a325dde233c22450155efe2da9651369",
+          "state": "359b2eed063137c19b6203458584bef1ae310784a6bd78945fe2d87d019caff6"
+        },
+        "32": {
+          "weights": "154e46c273bd8a6dfb8bd4828a757f36b07a994007d4e01c0e814d330aedc5c7",
+          "state": "87313ee26df713ddf42ac674b3ddc611610161e6dd19d7777b17e183ca936bae"
+        },
+        "64": {
+          "weights": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d",
+          "state": "cd09e42dbd1ca344f5c9dd17dcb9003f782014267999b0c4d3e4b2d16b3b931f"
+        }
+      },
+      "initial_state": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1"
+    }
+  },
+  "xml": {
+    "xml-qwen-22103": true,
+    "xml-qwen-22109": true,
+    "xml-qwen-22111": true,
+    "xml-deepseek-22103": false,
+    "xml-deepseek-22109": false,
+    "xml-deepseek-22111": false,
+    "json-qwen-22103": true,
+    "json-qwen-22109": true,
+    "json-qwen-22111": true,
+    "json-deepseek-22103": true,
+    "json-deepseek-22109": false,
+    "json-deepseek-22111": true
+  }
+}

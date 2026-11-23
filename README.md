@@ -1,5 +1,15 @@
 # ABA Cybersecurity Post-training Research
 
+## November 22, 2026 — Can Qwen3-8B learn a verified teacher example?
+
+On one read-only KaliBench TRAIN source and two same-source variations, the base student passed **0/3**. At step 16, answer-only SFT and DeepSeek trajectory SFT each passed **3/3**. Qwen teacher trajectory SFT passed **1/3**. At step 64, all three passed **2/3** under strict scoring. Both trajectory-trained students generated the correct command on all three prompts, with one JSON-format error each.
+
+Across 19 screened TRAIN sources, **two** had verified examples from both teachers and a repeatable student error. This fell below the prespecified eight-source threshold for multi-source training. The official test set remains untouched.
+
+![Execution and format checks at three SFT checkpoints](results/readonly-teacher-match-2026-11-22/matched-checkpoints.png)
+
+[Chinese report](results/readonly-teacher-match-2026-11-22/RESULT_ZH.md) · [Per-source evidence](results/readonly-teacher-match-2026-11-22/screen-summary.json) · [Offline recount](results/readonly-teacher-match-2026-11-22/recount.py)
+
 ## November 22, 2026 — Which repair preserves both directions of a schema request?
 
 On three new pairs of prompts, sampled twice and scored on three databases, the existing answer-only step-16 adapter passed **12/12** responses. Adding an opposite-direction example at the same 16-step budget passed **8/12**. Adding a separate short teacher-explanation task passed **6/12** at a 1,024-token cap and **11/12** at 4,096. All four failures of paired answer-only training passed after correcting a single constraint flag. On a matched A10 inference run, disabling thinking removed both truncations and changed correctness from 10/12 to 9/12. These probes cover one read-only tool.

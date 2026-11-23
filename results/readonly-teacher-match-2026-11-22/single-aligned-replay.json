@@ -1,0 +1,1009 @@
+{
+  "base-train": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "base-fresh": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "base-contrast": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "base_recheck-train": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "base_recheck-fresh": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "base_recheck-contrast": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "A16-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A16-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A16-contrast": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A32-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A32-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A32-contrast": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A64-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A64-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "A64-contrast": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": false,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B16-train": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "B16-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B16-contrast": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "B32-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B32-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B32-contrast": {
+    "passed": false,
+    "reason": "outside audited invocation or incomplete",
+    "executed": false
+  },
+  "B64-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B64-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B64-contrast": {
+    "passed": false,
+    "reason": "outside audited invocation or incomplete",
+    "executed": false
+  },
+  "C16-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C16-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C16-contrast": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C32-train": {
+    "passed": false,
+    "reason": "outside audited invocation or incomplete",
+    "executed": false
+  },
+  "C32-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C32-contrast": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C64-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C64-fresh": {
+    "passed": false,
+    "reason": "outside audited invocation or incomplete",
+    "executed": false
+  },
+  "C64-contrast": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "xml-qwen-22103": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "xml-qwen-22109": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "xml-qwen-22111": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "xml-deepseek-22103": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "xml-deepseek-22109": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "xml-deepseek-22111": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "json-qwen-22103": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "json-qwen-22109": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "json-qwen-22111": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "json-deepseek-22103": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "json-deepseek-22109": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "json-deepseek-22111": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "control-gold-train": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "control-wrong-train": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "control-gold-fresh": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "control-wrong-fresh": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "control-gold-contrast": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "control-wrong-contrast": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  }
+}

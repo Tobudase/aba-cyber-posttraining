@@ -1,0 +1,14 @@
+{
+  "qwen": {
+    "prompt_tokens": 32574,
+    "completion_tokens": 39228,
+    "calls": 54,
+    "length_stops": 1
+  },
+  "deepseek": {
+    "prompt_tokens": 31833,
+    "completion_tokens": 22797,
+    "calls": 54,
+    "length_stops": 0
+  }
+}

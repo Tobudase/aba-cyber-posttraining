@@ -1,0 +1,800 @@
+{
+  "rows": {
+    "sample_7138": {
+      "split": "train",
+      "skill": "clang-check",
+      "intent": "clang-declarations",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7139": {
+      "split": "train",
+      "skill": "clang-check",
+      "intent": "clang-compiler-options",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7122": {
+      "split": "train",
+      "skill": "clang-tidy",
+      "intent": "clang-compiler-options",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7140": {
+      "split": "train",
+      "skill": "clang-check",
+      "intent": "clang-tokens",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7293": {
+      "split": "train",
+      "skill": "llvm-c-test",
+      "intent": "bitcode-function-list",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "missing-executable",
+          "22109": "missing-executable",
+          "22111": "missing-executable"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 0
+      },
+      "students_same_diagnosis": 3,
+      "diagnosis": "On three fresh draws the student returned the correct option alone, omitting the executable. Bare invocation failed; prepending only llvm-c-test listed the expected synthetic symbol from stdin on each fixture.",
+      "raw_review": {
+        "qwen": {
+          "seed": "22103",
+          "trace_sha256": "67fb5355177d8ce85b61c833da8b6568595cd32089296a73472eb938fad088ae",
+          "basis": "Maps stdin and the function-listing action to the documented option. Both program name and option are included. The trace considers a file redirection and correctly omits it because the task supplies stdin.",
+          "review": "assistant audit against installed help and native execution"
+        },
+        "deepseek": {
+          "seed": "22103",
+          "trace_sha256": "444097f38966a4ba7aedf4d84df6d34a7044bb565215b8c7f375053b1ece7622",
+          "basis": "Maps stdin and the function-listing action to the documented option. Both program name and option are included. The trace considers a file redirection and correctly omits it because the task supplies stdin.",
+          "review": "assistant audit against installed help and native execution"
+        }
+      },
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": true
+    },
+    "sample_7376": {
+      "split": "train",
+      "skill": "llvm-lto2",
+      "intent": "lto-symbol-table",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_6643": {
+      "split": "train",
+      "skill": "mountpoint",
+      "intent": "mountpoint-check",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_6442": {
+      "split": "train",
+      "skill": "dmesg",
+      "intent": "stored-kernel-log",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7543": {
+      "split": "train",
+      "skill": "verify-uselistorder",
+      "intent": "bitcode-shuffles",
+      "draws": {
+        "qwen": {
+          "22103": "native-error",
+          "22109": "native-error",
+          "22111": "native-error"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "native-error",
+          "22109": "native-error",
+          "22111": "native-error"
+        }
+      },
+      "native_pass": {
+        "qwen": 0,
+        "deepseek": 3,
+        "student": 0
+      },
+      "students_same_diagnosis": 3,
+      "diagnosis": "All three student invocations used an unrecognized shuffle-count flag. DeepSeek passed on all three draws; Qwen teacher also failed all three. No common-teacher example. The supplied 5,000-character help excerpts omit both relevant options.",
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7546": {
+      "split": "train",
+      "skill": "verify-uselistorder",
+      "intent": "bitcode-shuffles",
+      "draws": {
+        "qwen": {
+          "22103": "native-error",
+          "22109": "native-error",
+          "22111": "native-error"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 0,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": "The publisher asks for one shuffle and no retained files; the installed tool performs both by default. The student omitted the redundant count option.",
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_6106": {
+      "split": "historical-train",
+      "skill": "mdb-export",
+      "intent": "xml-boolean-export",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_6144": {
+      "split": "historical-train",
+      "skill": "mdb-tables",
+      "intent": "table-delimiter",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "native-error",
+          "22109": "pass",
+          "22111": "semantic-error"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 1
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_6139": {
+      "split": "historical-train",
+      "skill": "mdb-schema",
+      "intent": "schema-features",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7106": {
+      "split": "historical-train",
+      "skill": "clang-format",
+      "intent": "code-format-range",
+      "draws": {
+        "qwen": {
+          "22103": "unresolved-arguments",
+          "22109": "truncated",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "unresolved-arguments",
+          "22109": "unresolved-arguments",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "unresolved-arguments",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 1,
+        "deepseek": 1,
+        "student": 2
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": "One student answer requests in-place formatting. The other two match the read-only task. In-place answers are recorded separately.",
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22111"
+        ],
+        "deepseek": [
+          "22111"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_7109": {
+      "split": "historical-train",
+      "skill": "clang-format",
+      "intent": "code-format-range",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_6241": {
+      "split": "historical-train",
+      "skill": "ul",
+      "intent": "text-underline",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_2632": {
+      "split": "historical-train",
+      "skill": "pesec",
+      "intent": "security-metadata-format",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_2634": {
+      "split": "historical-train",
+      "skill": "pesec",
+      "intent": "security-metadata-format",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "student": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 3,
+        "student": 3
+      },
+      "students_same_diagnosis": 0,
+      "diagnosis": null,
+      "raw_review": {},
+      "teacher_explanation_seeds": {
+        "qwen": [
+          "22103",
+          "22109"
+        ],
+        "deepseek": [
+          "22103",
+          "22109"
+        ]
+      },
+      "admitted": false
+    },
+    "sample_6137": {
+      "split": "historical-train",
+      "skill": "mdb-schema",
+      "intent": "schema-features",
+      "draws": {
+        "qwen": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "pass"
+        },
+        "deepseek": {
+          "22103": "pass",
+          "22109": "pass",
+          "22111": "native-error"
+        },
+        "student": {
+          "22103": "native-error",
+          "22109": "native-error",
+          "22111": "native-error"
+        }
+      },
+      "native_pass": {
+        "qwen": 3,
+        "deepseek": 2,
+        "student": 0
+      },
+      "students_same_diagnosis": 3,
+      "diagnosis": "Misspelled documented underscore; correcting just that character repaired three earlier outputs on three databases.",
+      "raw_review": {
+        "qwen": {
+          "seed": "22103",
+          "trace_sha256": "41b73900e528daa8517a3e1012efb2aca17b731e2251fcd976998ee4aa05681d"
+        },
+        "deepseek": {
+          "seed": "22103",
+          "trace_sha256": "48c7dc5acc2a270f0def1f8ef7a68327dee01b6d562db6f8ef388166cf458449"
+        }
+      },
+      "admitted": true
+    }
+  },
+  "qualified_count": 2,
+  "skills": [
+    "llvm-c-test",
+    "mdb-schema"
+  ],
+  "accepted": [
+    "sample_7293",
+    "sample_6137"
+  ],
+  "run_nine": false,
+  "screened_returned_calls": 108,
+  "student_new_draws": 54,
+  "official_test_calls": 0
+}

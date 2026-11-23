@@ -1,0 +1,14 @@
+{
+  "source_sha256": "ca7cd7ef94073f13c9371a27392579dbda9e01d81f86a805dff4d9b87b132c7a",
+  "manifest_sha256": "bc506526ba43f49920e3012e97e5f88a5824a492e362623e2958c2cd6055b3b5",
+  "counts": {
+    "train": 21,
+    "dev": 3,
+    "confirmation": 4,
+    "retention": 2,
+    "exclude": 8,
+    "historical-train": 10
+  },
+  "groups": 37,
+  "official_test_calls": 0
+}

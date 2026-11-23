@@ -1,0 +1,16 @@
+{
+  "student": "Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218",
+  "seeds_train": [3407, 3413, 3433],
+  "seeds_decode": [11341, 11351],
+  "teacher_draws": [22103, 22109, 22111],
+  "json_contract": "Original two-field JSON, command first in supervised targets. Visible explanation tokens have zero loss. Same command, visible example and format across arms. Only the raw-trace supervision differs.",
+  "single_arms": {"A": "command supervision only", "B": "command plus Qwen raw trajectory", "C": "command plus DeepSeek raw trajectory"},
+  "single_points": [0, 16, 32, 64],
+  "single_cap": 4096,
+  "promotion": {
+    "training_eligibility": "At least 8 distinct official TRAIN source questions across 3 skills; report count by intent as well. On each, each teacher must pass on at least 2 of 3 draws (native outcome plus checked explanation); at least one admissible raw trace each. Student must show at least two certified instances of the same attributable error in 3 draws. Output truncation and an unreviewed command are separate categories.",
+    "independent_eval": "Use frozen source partitions. Do not report held-out accuracy unless actually scored. Never select topics or checkpoints using confirmation.",
+    "checkpoint": "Choose highest paired behavior pass rate on DEV, then highest retention on separate development retention, then earliest step. Keep final held-out retention scores locked. With this small holdout report exact paired counts by source.",
+    "multisource": "3 matched arms x 3 training seeds, common canonical answer and matched command loss weight. Save 16/32/64; compare frozen confirmation and retention at 4096, then budget sensitivity at 1024. Report GPU time and generated tokens."
+  }
+}

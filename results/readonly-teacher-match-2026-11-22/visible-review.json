@@ -1,0 +1,246 @@
+{
+  "sample_7138": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Declaration-name output and compile database path match the installed help and synthetic declaration.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7139": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Prepending the macro and appending the warning option match the compiler database fixture.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7122": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "The two arguments are assigned their requested positions; the fixture requires the macro and optimization.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7140": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Expanded tokens and build-directory selection were reproduced.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7293": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Reads bitcode on stdin and enumerates synthetic functions.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7376": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "The named subcommand reports the symbol in the generated bitcode object.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_6643": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "The follow and stdout controls distinguish the two requested behaviors.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_6442": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "File mode reads an offline kernel-message fixture. The extra kernel filter is valid on this corpus.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7543": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Observed two iterations, zero residual files with default or explicitly false save setting; explicitly saving leaves files.",
+    "seeds": {
+      "qwen": [],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7546": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Observed a single iteration and zero residual files when saving is omitted.",
+    "seeds": {
+      "qwen": [],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_6106": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Boolean word formatting was observed on synthetic data.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_6144": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Default excludes system tables; a real tab separates names.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_6139": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "Positive switches correspond to the requested schema elements in the installed help.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_7106": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "The returned non-mutating candidate selects the inclusive range and style.",
+    "seeds": {
+      "qwen": [
+        "22111"
+      ],
+      "deepseek": [
+        "22111"
+      ]
+    }
+  },
+  "sample_7109": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "The offset and byte count specify the range; the default formatting choice is left intact.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_6241": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "The indicated display shows underlining on a separate line on both fixtures.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_2632": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "An explicit text-format choice is present.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  },
+  "sample_2634": {
+    "scope": "First two native-successful visible explanations, reviewed against tool help and controlled output. Raw trajectories require separate review.",
+    "basis": "The explicit XML format is confirmed in output.",
+    "seeds": {
+      "qwen": [
+        "22103",
+        "22109"
+      ],
+      "deepseek": [
+        "22103",
+        "22109"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "A": {
+    "counts": {
+      "masked": 303,
+      "format": 13,
+      "answer": 32,
+      "visible_masked": 43
+    },
+    "length": 391,
+    "effective_answer_hash": "531593dd0e0c680ec170bbb341651558044d5129753ab1790b20de60487c3516"
+  },
+  "B": {
+    "counts": {
+      "masked": 303,
+      "format": 13,
+      "trace": 1027,
+      "answer": 32,
+      "visible_masked": 43
+    },
+    "length": 1418,
+    "effective_answer_hash": "531593dd0e0c680ec170bbb341651558044d5129753ab1790b20de60487c3516"
+  },
+  "C": {
+    "counts": {
+      "masked": 303,
+      "format": 13,
+      "trace": 430,
+      "answer": 32,
+      "visible_masked": 43
+    },
+    "length": 821,
+    "effective_answer_hash": "531593dd0e0c680ec170bbb341651558044d5129753ab1790b20de60487c3516"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "B-format-only": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B-positive": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "B-negative": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  },
+  "C-format-only": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C-plus---no-not_empty": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C-plus---no-relations": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C-plus---no-not_empty---no-relations": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C-positive": {
+    "passed": true,
+    "fixtures": [
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      },
+      {
+        "rc": 0,
+        "match": true,
+        "err": ""
+      }
+    ],
+    "executed": true
+  },
+  "C-negative": {
+    "passed": false,
+    "fixtures": [
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      },
+      {
+        "rc": 1,
+        "match": false,
+        "err": "option parsing failed: Unknown option --no-not-empty\nUsage:\n  mdb-schema [OPTION…] <file> [<backend>] - Dump schema\n\nHelp Options:\n  -h, --help                 "
+      }
+    ],
+    "executed": true
+  }
+}

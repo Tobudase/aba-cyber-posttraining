@@ -1,0 +1,17 @@
+{
+  "changed_flag": [
+    "--not-null",
+    "--no-not-null"
+  ],
+  "untouched_match": [
+    false,
+    false,
+    true
+  ],
+  "after_exact_reference": [
+    true,
+    true,
+    true
+  ],
+  "only_one_token_in_argv_changed": true
+}

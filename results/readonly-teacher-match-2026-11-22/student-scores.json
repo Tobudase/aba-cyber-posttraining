@@ -1,0 +1,461 @@
+{
+  "sample_7138": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7139": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7122": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7140": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7293": {
+    "student": {
+      "22103": {
+        "result": "missing-executable",
+        "repair_on_both": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "missing-executable",
+        "repair_on_both": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "missing-executable",
+        "repair_on_both": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7376": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6643": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6442": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7543": {
+    "student": {
+      "22103": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffles=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--nu"
+      },
+      "22109": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffles=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--nu"
+      },
+      "22111": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffle=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--mhw"
+      }
+    }
+  },
+  "sample_7546": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ],
+        "uses_verified_default": true
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ],
+        "uses_verified_default": true
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ],
+        "uses_verified_default": true
+      }
+    }
+  },
+  "sample_6106": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6144": {
+    "student": {
+      "22103": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "option parsing failed: Unknown option -d\t\nUsage:\n  mdb-tables [OPTION…] <file> - show MDB files tables/entries\n\nHelp Options:\n  -h, --help            "
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "semantic-error",
+        "equal": [
+          false,
+          false
+        ]
+      }
+    }
+  },
+  "sample_6139": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7106": {
+    "student": {
+      "22103": {
+        "result": "unresolved-arguments"
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7109": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6241": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_2632": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_2634": {
+    "student": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  }
+}

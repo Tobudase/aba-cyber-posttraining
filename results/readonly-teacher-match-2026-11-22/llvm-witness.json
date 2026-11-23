@@ -1,0 +1,104 @@
+{
+  "options": [
+    "--num-shuffles=<uint>                                           - Number of times to shuffle and verify use-lists",
+    "--save-temps                                                    - Save temp files"
+  ],
+  "observations": [
+    {
+      "fixture": 0,
+      "condition": "default",
+      "rc": 0,
+      "shuffles": 1,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 0,
+      "condition": "once",
+      "rc": 0,
+      "shuffles": 1,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 0,
+      "condition": "twice",
+      "rc": 0,
+      "shuffles": 2,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 0,
+      "condition": "explicit_false",
+      "rc": 0,
+      "shuffles": 2,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 0,
+      "condition": "retained",
+      "rc": 0,
+      "shuffles": 1,
+      "extra_files": 8,
+      "stderr": ""
+    },
+    {
+      "fixture": 0,
+      "condition": "wrong_spelling",
+      "rc": 1,
+      "shuffles": 0,
+      "extra_files": 0,
+      "stderr": "verify-uselistorder: Unknown command line argument '--shuffles=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-us"
+    },
+    {
+      "fixture": 1,
+      "condition": "default",
+      "rc": 0,
+      "shuffles": 1,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 1,
+      "condition": "once",
+      "rc": 0,
+      "shuffles": 1,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 1,
+      "condition": "twice",
+      "rc": 0,
+      "shuffles": 2,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 1,
+      "condition": "explicit_false",
+      "rc": 0,
+      "shuffles": 2,
+      "extra_files": 0,
+      "stderr": ""
+    },
+    {
+      "fixture": 1,
+      "condition": "retained",
+      "rc": 0,
+      "shuffles": 1,
+      "extra_files": 8,
+      "stderr": ""
+    },
+    {
+      "fixture": 1,
+      "condition": "wrong_spelling",
+      "rc": 1,
+      "shuffles": 0,
+      "extra_files": 0,
+      "stderr": "verify-uselistorder: Unknown command line argument '--shuffles=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-us"
+    }
+  ]
+}

@@ -1,0 +1,868 @@
+{
+  "sample_7138": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7139": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7122": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7140": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7293": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7376": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6643": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6442": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7543": {
+    "qwen": {
+      "22103": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffles=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--nu"
+      },
+      "22109": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '-shuffles=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--num"
+      },
+      "22111": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffles=2'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--nu"
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7546": {
+    "qwen": {
+      "22103": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffle=1'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--mhw"
+      },
+      "22109": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffle=1'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--mhw"
+      },
+      "22111": {
+        "result": "native-error",
+        "rc": [
+          1,
+          1
+        ],
+        "diagnosis": "verify-uselistorder: Unknown command line argument '--shuffle=1'.  Try: '/usr/bin/verify-uselistorder --help'\nverify-uselistorder: Did you mean '--mhw"
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6106": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6144": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6139": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7106": {
+    "qwen": {
+      "22103": {
+        "result": "unresolved-arguments"
+      },
+      "22109": {
+        "result": "truncated"
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "unresolved-arguments"
+      },
+      "22109": {
+        "result": "unresolved-arguments"
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_7109": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_6241": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_2632": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "sample_2634": {
+    "qwen": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    },
+    "deepseek": {
+      "22103": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22109": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      },
+      "22111": {
+        "result": "pass",
+        "equal": [
+          true,
+          true
+        ]
+      }
+    }
+  }
+}

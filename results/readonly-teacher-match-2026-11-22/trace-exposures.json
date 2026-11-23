@@ -1,0 +1,16 @@
+{
+  "B": {
+    "raw_chars": 4914,
+    "exact_final_command_occurrences": 3,
+    "correct_option_occurrences": 8,
+    "incorrect_option_occurrences": 0,
+    "raw_sha256": "41b73900e528daa8517a3e1012efb2aca17b731e2251fcd976998ee4aa05681d"
+  },
+  "C": {
+    "raw_chars": 2092,
+    "exact_final_command_occurrences": 1,
+    "correct_option_occurrences": 3,
+    "incorrect_option_occurrences": 0,
+    "raw_sha256": "48c7dc5acc2a270f0def1f8ef7a68327dee01b6d562db6f8ef388166cf458449"
+  }
+}
