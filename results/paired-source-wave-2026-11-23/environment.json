@@ -1,0 +1,116 @@
+{
+  "miw113-pairwave-catalog-control": {
+    "image": "mirror.gcr.io/library/python@sha256:48d884813cf44e927cf64c5529dd630dd3b18338c6dc727991eef9b71e934a20",
+    "input_script_sha256": {
+      "kali_framed_artifacts_20261117.py": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "worker.py": "6451827021063d0f0a1f3fe305d0017c36c2a5145d7dc4707f16045d7d57f527"
+    },
+    "requests": {
+      "cpu": "1",
+      "ephemeral-storage": "2Gi",
+      "memory": "1Gi"
+    }
+  },
+  "miw113-pairwave-combined": {
+    "batch_size": 3,
+    "decoding_seeds": [
+      22103,
+      22109,
+      22111
+    ],
+    "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+    "input_script_sha256": {
+      "bootstrap.py": "92527a554dfa1c5a1abcbe3734a961b4bc0add04a9cddf105a1f7d9e2b4cfcf6",
+      "kali_framed_artifacts_20261117.py": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "model_run.py": "55ac58c42776a4fe2a32f2e1eb0109d8a6d7f08a42830fbab21ba4fa0f59c33c"
+    },
+    "prompt_sha256": {
+      "0a-1623": "2b19798744c74e944493c322833bf4e96865a1ec39bd2f665fadbea6d8a09a6e",
+      "0a-2630": "e8819f3852c7d5840b52fe844bae9924135714439aaa857888b65464c7a66115",
+      "0a-2828": "f3811be40f5c97ef6dbed839d9a633a0657803232b073593a68537a6bda2f7fa",
+      "0b-1623": "844c25480f5c27deff8d33736788557e0527867044f54f4a664152600a664b67",
+      "0b-2630": "2a0715891b19a965620ad3adca4bb3f127347f8b4eb552c47c2411a800fda0f1",
+      "0b-2828": "f3811be40f5c97ef6dbed839d9a633a0657803232b073593a68537a6bda2f7fa",
+      "6049": "4627c414aa2a9c147b4ed58994e96ad935aab553069182eb736176e66aeea8d9",
+      "6118-reverse": "6f68fb9f81f07b360d02ebfa3aab1844ea452d78bd5813d3550de71d14f71c56",
+      "6137-reverse": "c17a145c1a06f9cb0c7c500120af1f4def5c6f0e73a06111e082a7f0e0a95d3f",
+      "7098": "9295492767bde2436da787add89e41df1345aa28609b908857a5eb9db3da486b",
+      "7208": "5f0b75195279a8af07869305e202d0fbef4d31167ac910f72b691d5263ea2df5",
+      "7209": "6e6d435e5e636bfcadb105f571a17b537a62b557cbaa971498b5c7d30c2c1a7b",
+      "7293-reverse": "602b15b6ed20db4e21881855fd2f556eda0107ca028d7c83c5a57297537c549b",
+      "7412": "afb47d99df55adccd05f83083b0667c0009e3fc9c3c15fbdbe08874559539ae9",
+      "7414": "c272591c95d335aaae11900c87d253a99aab961a5834439e41a1d894ef2ce065",
+      "7416": "3cab5b20d492732c8f4de687e00f45129bf49893d6a468cde3c45201dedc4679",
+      "7475": "88df02bdd951bba98b9609218a5eaaecf3c63202c21ba69a8f7e1f4bb4ef11ba"
+    },
+    "requests": {
+      "cpu": "1",
+      "ephemeral-storage": "25Gi",
+      "memory": "26Gi",
+      "nvidia.com/gpu": "1"
+    },
+    "system_sha256": "b5e8b1876746db3782b9019f007e17dba36af09e6227a67b0e6f85224ac8b8e1"
+  },
+  "miw113-pairwave-student": {
+    "batch_size": 3,
+    "decoding_seeds": [
+      22103,
+      22109,
+      22111
+    ],
+    "image": "docker.io/pytorch/pytorch@sha256:417bd75df6365104c283ea4c1651fb3530d9eb5a4c2fafa51943cff2a94e6385",
+    "input_script_sha256": {
+      "bootstrap.py": "92527a554dfa1c5a1abcbe3734a961b4bc0add04a9cddf105a1f7d9e2b4cfcf6",
+      "kali_framed_artifacts_20261117.py": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "model_run.py": "55ac58c42776a4fe2a32f2e1eb0109d8a6d7f08a42830fbab21ba4fa0f59c33c"
+    },
+    "prompt_sha256": {
+      "1623": "2b19798744c74e944493c322833bf4e96865a1ec39bd2f665fadbea6d8a09a6e",
+      "2630": "e8819f3852c7d5840b52fe844bae9924135714439aaa857888b65464c7a66115",
+      "2828": "f3811be40f5c97ef6dbed839d9a633a0657803232b073593a68537a6bda2f7fa",
+      "3133": "cba47a207dd4acb6b294adae5f87c37924a5a849851810503b24e97308387781",
+      "3135": "dc745686b96a82723ec92d98cbb8d5fc2eaef50ec3459a773e5faee87dc9395d",
+      "3136": "66cee15f92d4d742c14d99b8b8e0abf8643e30c56e6f419f3659cb2742b50c5c",
+      "4536": "5e6c26fb6eb985a0ef7e15ff0ed68443e4fa3849a84f9ee5d5c7ba2bc067702c",
+      "5904": "8f38e91c76161cb47f5b581f3f159c07977fa0641423e839f78ca98b1fa2f288",
+      "5905": "3cf3e00f4c4849447384ee275f11585a0ac8f09fd08940b3f56577b15ac8de86",
+      "7101": "d1e0bb6cac29c5b8ddffbf800a653cc2379a7d33980b77bc8c8aec22c92dad1d",
+      "7210": "22ad79cb63816c13cfe60c3a35f4027c27a83149678bf2c3505e80ecba7b9290"
+    },
+    "requests": {
+      "cpu": "1",
+      "ephemeral-storage": "25Gi",
+      "memory": "26Gi",
+      "nvidia.com/gpu": "1"
+    },
+    "system_sha256": "b5e8b1876746db3782b9019f007e17dba36af09e6227a67b0e6f85224ac8b8e1"
+  },
+  "miw113-pairwave-student-llvm": {
+    "image": "docker.io/silkeh/clang@sha256:c6aa71a9ba7690719b72af62d1412d86c226e5367ff42d1b0ccca9750c4abd70",
+    "input_script_sha256": {
+      "fixture_pe.py": "a3311ef0c99b0f668397b28f0c4c0ccd29c4ab30f888d0f3e50249f37c47f9fd",
+      "kali_framed_artifacts_20261117.py": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "setup.py": "fc13201e6a32fc50bc9f1076a3f0bcdec9f3504ec88ad23d27df54f092f3913a",
+      "worker.py": "0cbd328e6ffaeb17d6c8ae44b0710ca8099111a1d491d379c6ecbc8633987c3e"
+    },
+    "requests": {
+      "cpu": "1",
+      "ephemeral-storage": "4Gi",
+      "memory": "2Gi"
+    }
+  },
+  "miw113-pairwave-student-tools": {
+    "image": "mirror.gcr.io/library/python@sha256:48d884813cf44e927cf64c5529dd630dd3b18338c6dc727991eef9b71e934a20",
+    "input_script_sha256": {
+      "fixture_pe.py": "a3311ef0c99b0f668397b28f0c4c0ccd29c4ab30f888d0f3e50249f37c47f9fd",
+      "kali_framed_artifacts_20261117.py": "8a7f2ad3f228576188aa43b71eaecc6e61fc918403f5acb133fcc8e1b4113190",
+      "setup.py": "fc13201e6a32fc50bc9f1076a3f0bcdec9f3504ec88ad23d27df54f092f3913a",
+      "worker.py": "0cbd328e6ffaeb17d6c8ae44b0710ca8099111a1d491d379c6ecbc8633987c3e"
+    },
+    "requests": {
+      "cpu": "1",
+      "ephemeral-storage": "4Gi",
+      "memory": "2Gi"
+    }
+  }
+}

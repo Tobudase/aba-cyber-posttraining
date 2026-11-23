@@ -1,0 +1,312 @@
+{
+  "6118-original": {
+    "D": "Preserving a control character means the decoded JSON string contains the original character. Replacing it with a space gives a different string even when both outputs are valid JSON.",
+    "E": "The example uses a table stored in a local database file. The reader can inspect the resulting text after the program finishes reading the local file as part of the inspection.",
+    "answer_sha256": "9a416b76ed52ca2fcf6ec123ea49c1805f5706f1a865aea55402c7c762fdc59e",
+    "author": "D/E written for this experiment, checked against paired native fixtures; B/C recorded teacher demonstrations.",
+    "aux_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "1d49c5f46da52f29517eae152089285e71061a97beba76f78f52e230f77b56a2",
+      "C": "48dfa25752bcfa605be56b579532aebb2c63da9b43862f2f4deb8a962db21410",
+      "D": "84906580c3e9872bc509a758e1578577b5d46e0144aa0a74dfd06a50f4d28d06",
+      "E": "2cfbd000f020a2ec58b2746592f3e36467d4e9f9f09a67a2299cddc26e6cd125"
+    },
+    "complete_five_arm_row": true,
+    "counts": {
+      "A": {
+        "answer": 6,
+        "format": 13,
+        "prompt": 216,
+        "visible": 22
+      },
+      "B": {
+        "answer": 6,
+        "aux": 495,
+        "format": 13,
+        "prompt": 216,
+        "visible": 22
+      },
+      "C": {
+        "answer": 6,
+        "aux": 241,
+        "format": 13,
+        "prompt": 216,
+        "visible": 22
+      },
+      "D": {
+        "answer": 6,
+        "aux": 33,
+        "format": 13,
+        "prompt": 216,
+        "visible": 22
+      },
+      "E": {
+        "answer": 6,
+        "aux": 33,
+        "format": 13,
+        "prompt": 216,
+        "visible": 22
+      }
+    },
+    "mask_equality": true,
+    "prompt_sha256": "930d715abb3bad6ae1320793d8add0f136505480811a77ca71eb28d5ee2ca486",
+    "visible_explanation": "The export must preserve the original control characters in the decoded JSON strings, so the replacement mode is left off."
+  },
+  "6118-reverse": {
+    "D": "Preserving a control character means the decoded JSON string contains the original character. Replacing it with a space gives a different string even when both outputs are valid JSON.",
+    "E": "The example uses a table stored in a local database file. The reader can inspect the resulting text after the program finishes reading the local file as part of the inspection.",
+    "answer_sha256": "108d117eee7b78ade8416967c22096f519773eac0d17d49ffcbb618f3a48ec59",
+    "author": "D/E written for this experiment, checked against paired native fixtures; B/C recorded teacher demonstrations.",
+    "aux_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "ccc75200cccfd1d1eb1c77632f8bb7647db8030f126700e2c4756ab93fff86ca",
+      "C": "fef9d216099b571191903b90d6b1a9b394cba5224aed08559d9b3769ceb5b1e3",
+      "D": "84906580c3e9872bc509a758e1578577b5d46e0144aa0a74dfd06a50f4d28d06",
+      "E": "2cfbd000f020a2ec58b2746592f3e36467d4e9f9f09a67a2299cddc26e6cd125"
+    },
+    "complete_five_arm_row": true,
+    "counts": {
+      "A": {
+        "answer": 11,
+        "format": 13,
+        "prompt": 194,
+        "visible": 19
+      },
+      "B": {
+        "answer": 11,
+        "aux": 251,
+        "format": 13,
+        "prompt": 194,
+        "visible": 19
+      },
+      "C": {
+        "answer": 11,
+        "aux": 96,
+        "format": 13,
+        "prompt": 194,
+        "visible": 19
+      },
+      "D": {
+        "answer": 11,
+        "aux": 33,
+        "format": 13,
+        "prompt": 194,
+        "visible": 19
+      },
+      "E": {
+        "answer": 11,
+        "aux": 33,
+        "format": 13,
+        "prompt": 194,
+        "visible": 19
+      }
+    },
+    "mask_equality": true,
+    "prompt_sha256": "6f68fb9f81f07b360d02ebfa3aab1844ea452d78bd5813d3550de71d14f71c56",
+    "visible_explanation": "The request calls for spaces in place of nonprintable characters, so the export enables replacement."
+  },
+  "6137-original": {
+    "D": "When field defaults are requested, their declarations must appear in the schema. When defaults are to be omitted, the declarations must disappear while other requested table definitions remain.",
+    "E": "The example concerns table definitions in a local relational database file. The reader can inspect the resulting text after the tool finishes reading the file as part of the inspection.",
+    "answer_sha256": "a72b52263cad6b0d555bbbeea679a0c8f016308e1eddc5257d1db8b62bcc9c06",
+    "author": "D/E written for this experiment, checked against paired native fixtures; B/C recorded teacher demonstrations.",
+    "aux_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "51153b75f0a5b4329b505cfccd300fac93f5da231a5a8e0a5723665e137fcc7e",
+      "C": "48c7dc5acc2a270f0def1f8ef7a68327dee01b6d562db6f8ef388166cf458449",
+      "D": "750d22fff786e7941c4a960be21de204afe55a3d1a7ea65e6d4e02a617d52b82",
+      "E": "7669158f1b5a9122922b59152d20e003623b2a344f40eeaa772bd89daf543496"
+    },
+    "complete_five_arm_row": true,
+    "counts": {
+      "A": {
+        "answer": 32,
+        "format": 13,
+        "prompt": 303,
+        "visible": 16
+      },
+      "B": {
+        "answer": 32,
+        "aux": 1027,
+        "format": 13,
+        "prompt": 303,
+        "visible": 16
+      },
+      "C": {
+        "answer": 32,
+        "aux": 430,
+        "format": 13,
+        "prompt": 303,
+        "visible": 16
+      },
+      "D": {
+        "answer": 32,
+        "aux": 32,
+        "format": 13,
+        "prompt": 303,
+        "visible": 16
+      },
+      "E": {
+        "answer": 32,
+        "aux": 32,
+        "format": 13,
+        "prompt": 303,
+        "visible": 16
+      }
+    },
+    "mask_equality": true,
+    "prompt_sha256": "1b445314b42265bd4deaaa34cdf2a8eb79e8cabb4f760b98fdd5bb1d1fc074a2",
+    "visible_explanation": "The requested minimal table definitions omit field defaults along with constraints, indexes and comments."
+  },
+  "6137-reverse": {
+    "D": "When field defaults are requested, their declarations must appear in the schema. When defaults are to be omitted, the declarations must disappear while other requested table definitions remain.",
+    "E": "The example concerns table definitions in a local relational database file. The reader can inspect the resulting text after the tool finishes reading the file as part of the inspection.",
+    "answer_sha256": "08c64ab43d452987d1ebd91f9e9deb3ac68201da2c37de545aee3be9641d8424",
+    "author": "D/E written for this experiment, checked against paired native fixtures; B/C recorded teacher demonstrations.",
+    "aux_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "acab86407605a701e2b82cf6ab3c849fc6a8e141401eca1fe479910e8df755eb",
+      "D": "750d22fff786e7941c4a960be21de204afe55a3d1a7ea65e6d4e02a617d52b82",
+      "E": "7669158f1b5a9122922b59152d20e003623b2a344f40eeaa772bd89daf543496"
+    },
+    "complete_five_arm_row": false,
+    "counts": {
+      "A": {
+        "answer": 31,
+        "format": 13,
+        "prompt": 301,
+        "visible": 21
+      },
+      "B": {
+        "answer": 31,
+        "aux": 640,
+        "format": 13,
+        "prompt": 301,
+        "visible": 21
+      },
+      "D": {
+        "answer": 31,
+        "aux": 32,
+        "format": 13,
+        "prompt": 301,
+        "visible": 21
+      },
+      "E": {
+        "answer": 31,
+        "aux": 32,
+        "format": 13,
+        "prompt": 301,
+        "visible": 21
+      }
+    },
+    "mask_equality": true,
+    "prompt_sha256": "c17a145c1a06f9cb0c7c500120af1f4def5c6f0e73a06111e082a7f0e0a95d3f",
+    "visible_explanation": "The output must retain field defaults while omitting constraints, indexes and comments, so defaults are explicitly enabled."
+  },
+  "7293-original": {
+    "D": "Functions and global variables are different kinds of module entries. List function entries when functions are requested, and list global entries when global variables are requested.",
+    "E": "This example concerns a compiler module stored in a local bitcode file. The reader can inspect the resulting text on screen as part of the inspection.",
+    "answer_sha256": "05f1bad81060abfe1ee406f569916db3fa7814289b0424cb00bbd5add8e6e873",
+    "author": "D/E written for this experiment, checked against paired native fixtures; B/C recorded teacher demonstrations.",
+    "aux_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "b21a3d93ea7160bfce32a2d9935a5139b8683ad46febfc0d7bb600efc01b6fe0",
+      "C": "444097f38966a4ba7aedf4d84df6d34a7044bb565215b8c7f375053b1ece7622",
+      "D": "6db35b74f49e28835683339e3c54d5147fd3632f1fb504a9ca0f76caf4e433d1",
+      "E": "08ee67f8f955c2ab0f4111a05826733c9acdd3e8592cbffde1d433703ecc957f"
+    },
+    "complete_five_arm_row": true,
+    "counts": {
+      "A": {
+        "answer": 7,
+        "format": 13,
+        "prompt": 368,
+        "visible": 22
+      },
+      "B": {
+        "answer": 7,
+        "aux": 359,
+        "format": 13,
+        "prompt": 368,
+        "visible": 22
+      },
+      "C": {
+        "answer": 7,
+        "aux": 187,
+        "format": 13,
+        "prompt": 368,
+        "visible": 22
+      },
+      "D": {
+        "answer": 7,
+        "aux": 29,
+        "format": 13,
+        "prompt": 368,
+        "visible": 22
+      },
+      "E": {
+        "answer": 7,
+        "aux": 29,
+        "format": 13,
+        "prompt": 368,
+        "visible": 22
+      }
+    },
+    "mask_equality": true,
+    "prompt_sha256": "12d15093264f747066c5830678a4ac773eaa231f7e1c24b5665915c82360ab59",
+    "visible_explanation": "The requested entries are functions, so the module reader selects the function listing for the bitcode on standard input."
+  },
+  "7293-reverse": {
+    "D": "Functions and global variables are different kinds of module entries. List function entries when functions are requested, and list global entries when global variables are requested.",
+    "E": "This example concerns a compiler module stored in a local bitcode file. The reader can inspect the resulting text on screen as part of the inspection.",
+    "answer_sha256": "ff92d448c7639284b2b33f6efb760a8d458ae77d29824189ddf052e8fd5b41a4",
+    "author": "D/E written for this experiment, checked against paired native fixtures; B/C recorded teacher demonstrations.",
+    "aux_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "d84f2eba89bc4e49abc5de144e85135e840269ae352aca4b600a3efb0b004bcc",
+      "C": "4a7ba936dbb299ba22e0ba2b219be0fbd906faab7722b0f3c54a2e8af739d4a7",
+      "D": "6db35b74f49e28835683339e3c54d5147fd3632f1fb504a9ca0f76caf4e433d1",
+      "E": "08ee67f8f955c2ab0f4111a05826733c9acdd3e8592cbffde1d433703ecc957f"
+    },
+    "complete_five_arm_row": true,
+    "counts": {
+      "A": {
+        "answer": 8,
+        "format": 13,
+        "prompt": 358,
+        "visible": 23
+      },
+      "B": {
+        "answer": 8,
+        "aux": 170,
+        "format": 13,
+        "prompt": 358,
+        "visible": 23
+      },
+      "C": {
+        "answer": 8,
+        "aux": 107,
+        "format": 13,
+        "prompt": 358,
+        "visible": 23
+      },
+      "D": {
+        "answer": 8,
+        "aux": 29,
+        "format": 13,
+        "prompt": 358,
+        "visible": 23
+      },
+      "E": {
+        "answer": 8,
+        "aux": 29,
+        "format": 13,
+        "prompt": 358,
+        "visible": 23
+      }
+    },
+    "mask_equality": true,
+    "prompt_sha256": "602b15b6ed20db4e21881855fd2f556eda0107ca028d7c83c5a57297537c549b",
+    "visible_explanation": "The requested entries are global variables, so the module reader selects the globals listing for the bitcode on standard input."
+  }
+}

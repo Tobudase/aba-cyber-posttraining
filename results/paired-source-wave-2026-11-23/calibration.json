@@ -1,0 +1,711 @@
+{
+  "repaired_reference_diagnostics": {
+    "7206": [
+      {
+        "digest": "9749d682cc49fcd52b064507a21769d09b2ead4087e389ffa214b0892cda7e2d",
+        "distinguishable": true,
+        "marker": true,
+        "rc": 0,
+        "wrong_digest": "b3755f0a93d8be8827198a5dad7c834e5a42bd1e40850ae7f1c959985ebfbd1b",
+        "wrong_marker": false,
+        "wrong_rc": 0
+      },
+      {
+        "digest": "9749d682cc49fcd52b064507a21769d09b2ead4087e389ffa214b0892cda7e2d",
+        "distinguishable": true,
+        "marker": true,
+        "rc": 0,
+        "wrong_digest": "b3755f0a93d8be8827198a5dad7c834e5a42bd1e40850ae7f1c959985ebfbd1b",
+        "wrong_marker": false,
+        "wrong_rc": 0
+      }
+    ],
+    "7212": [
+      {
+        "digest": "e12658a40cbf874cc739386687f607691fcfe54567c7395bf30fcf02b5f2a6ae",
+        "distinguishable": true,
+        "marker": true,
+        "rc": 0,
+        "wrong_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "wrong_marker": false,
+        "wrong_rc": 0
+      },
+      {
+        "digest": "3a22428a3947e0920f67232974f213592d43698aea24f0e3f2d13a23eb2ba478",
+        "distinguishable": true,
+        "marker": true,
+        "rc": 0,
+        "wrong_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "wrong_marker": false,
+        "wrong_rc": 0
+      }
+    ]
+  },
+  "sources": {
+    "1623": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "402597cb01795da66509ede36cf905bd6d9d1692c9a55f4cfaf1671af735d806",
+          "marker": true,
+          "negative": "0875b81c5eb571a5ed44b68104e43a53c4517b2ab8a2c3e2e3c57b55f84b8fbc",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "0c8bcc1638f8dbe70632dd4059445394a2c8de37c6a036244d2774790cdac7cc",
+          "marker": true,
+          "negative": "6a878fed8954da1673ed68fcb94214adadd52f3779dec6aece499551b6789062",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "file-summary"
+    },
+    "2630": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "41d2c1d229d8b8ad92dbeea788245ba6aff643ab2102fcb1e921a38801b33b45",
+          "marker": true,
+          "negative": "0875b81c5eb571a5ed44b68104e43a53c4517b2ab8a2c3e2e3c57b55f84b8fbc",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "4f655175a7cc208ca7a358b5c422f9afa7b699a8c3d0f398a4661878ec8913c8",
+          "marker": true,
+          "negative": "6a878fed8954da1673ed68fcb94214adadd52f3779dec6aece499551b6789062",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "file-summary"
+    },
+    "2828": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "c3a09cd44de1d67488bf71cf8fd02d8a425579d3312b4b323758e6e043e669c1",
+          "marker": true,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "58f8e135856449ac4757dc9133a0cdaef29d951ca3f7111f8019067109e84f7d",
+          "marker": true,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "python-doc"
+    },
+    "2837": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "f7bb1b301c785007ab7ee22e5e03a1938fbd8ab88d3ef2fc91d02c046cf8fae6",
+          "marker": true,
+          "negative": "991c4e4196b2ff05e26d0485aa4e3eae9d8cf888a5fc156c200080777384bff9",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 1
+        },
+        {
+          "gold": "f7bb1b301c785007ab7ee22e5e03a1938fbd8ab88d3ef2fc91d02c046cf8fae6",
+          "marker": true,
+          "negative": "efc4c5a53a5b62de3e74fbd444a7d3ce1d5df39858385b54a578e7b6db151053",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 1
+        }
+      ],
+      "cohort": "first",
+      "exclusion": "installed utility rejects the supplied IID type",
+      "group": "addr-type"
+    },
+    "3133": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "efbaca23eb1688fbfb2dbbf2765b909e6cf3e6551973179b10a946752de0af96",
+          "marker": true,
+          "negative": "3ed22ee0bb4c5f3801d7f829161b6a47a06f7b3cbc0dbab812176e40cb8adbc2",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "1ebd80fd9c48c1cc71f57ca1b4ee62a1cbfbee9f0accfaa4288e20aaad66a7fb",
+          "marker": true,
+          "negative": "f969d60d68c0784283c4a76541a3b5f12a444dbd1b8161384b1f02e9312d16b0",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "memory-graph"
+    },
+    "3135": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "f61a78d10961e6c884e98d908a9de670d44ffc1e871b108264786c40cff21fcf",
+          "marker": true,
+          "negative": "23a6914a01834aa3edbf38324c9bb64eca21e1228e2172f31250cf4c60828f19",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "93f33055295043f664d05aa6dae7e349906ca04c7f8c105829d1b538be344a9c",
+          "marker": true,
+          "negative": "fddc57ca49799e64e4e90b07bdd9e809043c9ead84d4014075c2bd52bd037edd",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "memory-graph"
+    },
+    "3136": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "6457067bb783fb0d2110cd5025894455d2cd7655d6ba919a5c774624567ca2c7",
+          "marker": true,
+          "negative": "69b7bf7654d622321b711d51936995eae4397d39191f9a98c4d85e6de8c476b3",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "91c1531a4dcd0025499a42a3166734f72bcccbc7e8be237a368e6138a6472877",
+          "marker": true,
+          "negative": "c02d99e3beb31c75fd8c64668e64e6f08a368d8d89b010e3d640634d47e1caf1",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "memory-graph"
+    },
+    "3137": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "5be392d530a0647c247fc807277af37dc738f78b5559d28d6c13c5b3c5803247",
+          "marker": false,
+          "negative": "0ac315bc027a10a4dfdf402d3db89f52dfecd1b931ce356734a8f1c830515de8",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 0
+        },
+        {
+          "gold": "8e58ab3e120fbf3e91ecdf807880d95fe96b0b5a729794fc37911ad5fc132996",
+          "marker": false,
+          "negative": "1b6a00154ad1de13c33ca71274e744c187cb1c79c0520cb81993d69443fccd0e",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": "PNG output despite the requested SVG",
+      "group": "memory-graph"
+    },
+    "4536": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "6d156e22925112961fbaaa9e4746aedb2200a9fd1f1575e025c91da27c67bfb5",
+          "marker": true,
+          "negative": "7cad6a9d65045edd6bd5683b5e3ade78a4f15cd9d7c540b7b4cac6faf944508f",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "97d7dd2a9e89f72aecc2a83663f05b4fa0fb4bffba6ce0e78f73559a3cfddc13",
+          "marker": true,
+          "negative": "5d5dcc9263250c88077f7cfa13620543f9ca33f974cdcacb11366c57f5f6bfae",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "file-index"
+    },
+    "5904": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "4db8fdd82e68de3d54acfe6862da685c60d12eb4cd4663b1de455aa8ec5bc8b6",
+          "marker": true,
+          "negative": "e8acc89116057f81b5743b9afc1b95047a19598ef49ee8eab288027930b49b3e",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "df7f7c6537331d8f1b391f9277c4fe24f9fc03275583ae06bc63f36be76d4541",
+          "marker": true,
+          "negative": "84f24d2735bdbee775b8fcc8c1a4f8987721a558823ccc8f9572aa0d98fba268",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "archive-output"
+    },
+    "5905": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "2ff87f832cec5556de8628b8d371a51df3a0bdd07838e3c891bb526b4047d418",
+          "marker": true,
+          "negative": "9652a6a2dbcc6e5c9da5c6536477c62aa148c7ed2caaaadaaa69e9dcb937611a",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "ada4959a84a7b8f35ae2e6e27548bc835a49f4d0aa8d199c8b5ae6f56b26fb78",
+          "marker": true,
+          "negative": "9652a6a2dbcc6e5c9da5c6536477c62aa148c7ed2caaaadaaa69e9dcb937611a",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "archive-output"
+    },
+    "6049": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "bbad1b081d71ea0939a8c8ba307a0ce76ae760e8869f9f12173b36dafb0be9da",
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "124e04266d930e554711de9409455037cc0f50b0a2a94ac643953799c9534e9e",
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "capture-catalog"
+    },
+    "7098": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "10fb3a87df0d4dbe6c8018334042597d76abca941d5bccf6a2737dd0eb704081",
+          "neg": "dedd89e5fefa78001f7b8d385c40e673fa1aa5c97a26906bbb14b743e2bcdd58",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "10fb3a87df0d4dbe6c8018334042597d76abca941d5bccf6a2737dd0eb704081",
+          "neg": "dedd89e5fefa78001f7b8d385c40e673fa1aa5c97a26906bbb14b743e2bcdd58",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "second",
+      "exclusion": null,
+      "group": "syntax-tree-export"
+    },
+    "7101": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "f82f3285f38486d701a9683e3a8806848352280b394b6792b6d9416117b32c88",
+          "marker": true,
+          "negative": "58866ab001187607ae37b287bad64f77ea0f00cd1ef680a044201980b26561a1",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "5cb3a2d6d6e7057d9f0c9df71256055dffda0a277b97e8a0f06d4d6d170236ca",
+          "marker": true,
+          "negative": "e0ce42420e8bb33e3293d78b4294b5bb1733cf465cb3b1063439c771f5120457",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "api-report"
+    },
+    "7206": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "neg": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 1,
+          "ok": false,
+          "rc": 1
+        },
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "neg": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 1,
+          "ok": false,
+          "rc": 1
+        }
+      ],
+      "cohort": "second",
+      "exclusion": "publisher argument separation invalid in this linker; corrected reference replayed separately",
+      "group": "link-map-folding"
+    },
+    "7208": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "9749d682cc49fcd52b064507a21769d09b2ead4087e389ffa214b0892cda7e2d",
+          "neg": "180c67426bd12add66bac48181939b7d9467d64a0a0eeea4604059a9af50c7d1",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "9749d682cc49fcd52b064507a21769d09b2ead4087e389ffa214b0892cda7e2d",
+          "neg": "180c67426bd12add66bac48181939b7d9467d64a0a0eeea4604059a9af50c7d1",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "second",
+      "exclusion": null,
+      "group": "library-name"
+    },
+    "7209": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "9749d682cc49fcd52b064507a21769d09b2ead4087e389ffa214b0892cda7e2d",
+          "neg": "0e08de844e654ddf5acec69cc551ff27ba05e93c6bb2cfa52224f30801f8779b",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "9749d682cc49fcd52b064507a21769d09b2ead4087e389ffa214b0892cda7e2d",
+          "neg": "0e08de844e654ddf5acec69cc551ff27ba05e93c6bb2cfa52224f30801f8779b",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "second",
+      "exclusion": null,
+      "group": "artifact-type"
+    },
+    "7210": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "4fcf23db7cd72c473685bcf739d792805c12cde6b11fd2aaa8830c8d88ed06e4",
+          "marker": true,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "4fcf23db7cd72c473685bcf739d792805c12cde6b11fd2aaa8830c8d88ed06e4",
+          "marker": true,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": null,
+      "group": "link-map"
+    },
+    "7212": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "marker": false,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 1
+        },
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "marker": false,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 1
+        }
+      ],
+      "cohort": "first",
+      "exclusion": "publisher argument separation invalid in this linker; corrected reference replayed separately",
+      "group": "build-id"
+    },
+    "7412": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "660debea0c1b0b281e79e5b0695eb1f20e32cf459ee72a778556f04c249ee905",
+          "neg": "a3d7865dacb76ca71aef7fc2b8932b41519a9841d7afff19f8168f7e80a2ea57",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "660debea0c1b0b281e79e5b0695eb1f20e32cf459ee72a778556f04c249ee905",
+          "neg": "a3d7865dacb76ca71aef7fc2b8932b41519a9841d7afff19f8168f7e80a2ea57",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "second",
+      "exclusion": null,
+      "group": "symbol-binding"
+    },
+    "7414": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "f3dd3517044de139a78dda9c4b8b5a6180f2f50ce560d9e0d8a023d48576210f",
+          "neg": "4593417e0d21427e5f04a06f4918d9183b0857b1e7b98ee74eef58b84205c812",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "f3dd3517044de139a78dda9c4b8b5a6180f2f50ce560d9e0d8a023d48576210f",
+          "neg": "4593417e0d21427e5f04a06f4918d9183b0857b1e7b98ee74eef58b84205c812",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "second",
+      "exclusion": null,
+      "group": "section-metadata"
+    },
+    "7416": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "3e180000609fb49e097f1daa87b89f38b8e202dd336b3fe405abdc3420680bbc",
+          "neg": "6bb7af957b9136f916054d91896c83f31499f49dd546235e2ef226a7982ae039",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "3e180000609fb49e097f1daa87b89f38b8e202dd336b3fe405abdc3420680bbc",
+          "neg": "6bb7af957b9136f916054d91896c83f31499f49dd546235e2ef226a7982ae039",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "second",
+      "exclusion": null,
+      "group": "symbol-binding"
+    },
+    "7475": {
+      "calibrated": true,
+      "checks": [
+        {
+          "gold": "f935fb4e30ecf45bc011ed9c33cc61c0a832b40082f832d317968bf867313939",
+          "neg": "dd8f4382cc94072378e4d026f5ba34959f94901c76a9800727adebdfcf973cc1",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        },
+        {
+          "gold": "2a13b818adf3b3be772598379eb328e0aac24d052230f528c7193f85edde36f6",
+          "neg": "bfdae3bdbb8d9cf27b6a94c94b353ab2c9127bd537e965032de8c628681da328",
+          "negative_rc": 0,
+          "ok": true,
+          "rc": 0
+        }
+      ],
+      "cohort": "second",
+      "exclusion": null,
+      "group": "module-partition"
+    },
+    "7552": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "marker": false,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 1,
+          "ok": false,
+          "rc": 1
+        },
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "marker": false,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 1,
+          "ok": false,
+          "rc": 1
+        }
+      ],
+      "cohort": "first",
+      "exclusion": "LLVM 14 rejects the reference switch",
+      "group": "yaml-preprocessor"
+    },
+    "7825": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "marker": false,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 125,
+          "ok": false,
+          "rc": 125
+        },
+        {
+          "gold": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "marker": false,
+          "negative": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "negative_rc": 125,
+          "ok": false,
+          "rc": 125
+        }
+      ],
+      "cohort": "first",
+      "exclusion": "hostname with DNS disabled; no unique offline input address",
+      "group": "no-dns-name"
+    },
+    "8000": {
+      "calibrated": false,
+      "checks": [],
+      "cohort": "first",
+      "exclusion": "native hash helper absent in pinned environment",
+      "group": "dns-hash"
+    },
+    "8002": {
+      "calibrated": false,
+      "checks": [],
+      "cohort": "first",
+      "exclusion": "native hash helper absent in pinned environment",
+      "group": "dns-hash"
+    },
+    "8067": {
+      "calibrated": false,
+      "checks": [],
+      "cohort": "first",
+      "exclusion": "single literal conversion lacks independent file controls",
+      "group": "address-encoding"
+    },
+    "8068": {
+      "calibrated": false,
+      "checks": [],
+      "cohort": "first",
+      "exclusion": "single literal conversion lacks independent file controls",
+      "group": "address-encoding"
+    },
+    "8070": {
+      "calibrated": false,
+      "checks": [],
+      "cohort": "first",
+      "exclusion": "single literal conversion lacks independent file controls",
+      "group": "address-encoding"
+    },
+    "981": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "991c4e4196b2ff05e26d0485aa4e3eae9d8cf888a5fc156c200080777384bff9",
+          "marker": false,
+          "negative": "636a59f764d2c096edfe94ef2d594737670b476f985d6e87f63a36fec34bb80a",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 0
+        },
+        {
+          "gold": "efc4c5a53a5b62de3e74fbd444a7d3ce1d5df39858385b54a578e7b6db151053",
+          "marker": false,
+          "negative": "ee4e9bca9693fcc0f8c445d59fe1cca5b85df168e9fd40c0148f0c22a48c056c",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 0
+        }
+      ],
+      "cohort": "first",
+      "exclusion": "installed utility rejects the prefix-length option",
+      "group": "addr-prefix"
+    },
+    "982": {
+      "calibrated": false,
+      "checks": [
+        {
+          "gold": "b8aa30e87565662629d37df71a42d0acdf5aea7905ca9e12f228847ecddcd7aa",
+          "marker": true,
+          "negative": "991c4e4196b2ff05e26d0485aa4e3eae9d8cf888a5fc156c200080777384bff9",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 1
+        },
+        {
+          "gold": "b8aa30e87565662629d37df71a42d0acdf5aea7905ca9e12f228847ecddcd7aa",
+          "marker": true,
+          "negative": "efc4c5a53a5b62de3e74fbd444a7d3ce1d5df39858385b54a578e7b6db151053",
+          "negative_rc": 0,
+          "ok": false,
+          "rc": 1
+        }
+      ],
+      "cohort": "first",
+      "exclusion": "installed utility rejects the supplied address type",
+      "group": "addr-type"
+    }
+  }
+}

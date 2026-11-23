@@ -1,0 +1,134 @@
+{
+  "6118": {
+    "deepseek-22103": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "be432e7b5cba2039004d54dac38e6872643b017974ede039dfccef30e1022b77",
+      "visible_parameter_explanation_checked": true
+    },
+    "deepseek-22109": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "36a2d352c6891ea2e19a361d1892af1740d1f68d99f4485e94503292b5a40434",
+      "visible_parameter_explanation_checked": true
+    },
+    "deepseek-22111": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "87c4f01e60f9ecb921858053acdea40eff9ef5f3fb6ec2c5dcc3cc3348f7d8d0",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22103": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "f25bad56bdad9120805beac62a1bb07ee39ddfad1251cd8a158133e5dccb6f4d",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22109": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "f8c0a172b048c523a3a26f281b53b00a013c35a36b51602ea9fecac3c87bc8be",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22111": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "b2ef2d5ed2fcb16a140c585ced44fe1da39e256f32459ee3a19c7051afa9c8f5",
+      "visible_parameter_explanation_checked": true
+    }
+  },
+  "6137": {
+    "deepseek-22103": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "5e7548eda81f5fa73522a28b9b054cbce169f17f0764f03d63f8958d8dd5053c",
+      "visible_parameter_explanation_checked": true
+    },
+    "deepseek-22109": {
+      "factual": false,
+      "native_pass": false,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "6fc578e07ae6f03f02645841578efcbede81dbcaac86e108494c993c54a714c2",
+      "visible_parameter_explanation_checked": true
+    },
+    "deepseek-22111": {
+      "factual": false,
+      "native_pass": false,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "6f689b018d670317a0168ee091f6e36643d32cf5f07541e27379325d05087810",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22103": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "b715aa27592fe9704aae125fc80f7c16723ae996b7151cddaf0a45fba4e13ced",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22109": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "7370e74fedcd8c5fefaff6eb71d1631a1a2ae020925836aa9eae1d3aa0e26d45",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22111": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "2af56fdb411726b9ddfef76fe4b68a50cc62c56ea095d4b5fb9b367e607be0c0",
+      "visible_parameter_explanation_checked": true
+    }
+  },
+  "7293": {
+    "deepseek-22103": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "8d4be5ebad709bf3cef2943be6e3986d3d9c4f89c4e77491bc6f294317104eda",
+      "visible_parameter_explanation_checked": true
+    },
+    "deepseek-22109": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "5f17516a5ea43a94240b97f58cac129ea9bda1ab73e9cf00f5cd2d5b5fa741fa",
+      "visible_parameter_explanation_checked": true
+    },
+    "deepseek-22111": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "visible_answer_sha256": "c666bad8a878799e6a333fe786d6197a28c302011f6b30bdeda99b86560c4bb8",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22103": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "72f72570646191cef7172f857e8dabf25adef39a9c595222408e8e87289d2bc7",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22109": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "fc477d619179bff4ff4c5b8f6b8163f80ea61020eb3f198f0f20b7c47d4df9f4",
+      "visible_parameter_explanation_checked": true
+    },
+    "qwen-22111": {
+      "factual": true,
+      "native_pass": true,
+      "provider_model": "Qwen/Qwen3.8-27B-FP8",
+      "visible_answer_sha256": "fa015725ac3d2c237f54fa02adbaa9b5d605399dfbd7de9fdeb7a2613ee75834",
+      "visible_parameter_explanation_checked": true
+    }
+  }
+}
