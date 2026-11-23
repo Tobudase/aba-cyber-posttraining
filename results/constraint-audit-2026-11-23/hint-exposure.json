@@ -1,0 +1,98 @@
+{
+  "a-6118": {
+    "chat_tokens": 194,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 0,
+    "original_help_has_option": true,
+    "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "a-6137": {
+    "chat_tokens": 301,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 0,
+    "original_help_has_option": true,
+    "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "a-7293": {
+    "chat_tokens": 358,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 0,
+    "original_help_has_option": true,
+    "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "b-6118": {
+    "chat_tokens": 219,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 25,
+    "original_help_has_option": true,
+    "suffix_sha256": "1714b1cbec58734ac1bb5e62eb67e3fb929f7cc4e203df48bed0febd7654347d"
+  },
+  "b-6137": {
+    "chat_tokens": 327,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 26,
+    "original_help_has_option": true,
+    "suffix_sha256": "1714b1cbec58734ac1bb5e62eb67e3fb929f7cc4e203df48bed0febd7654347d"
+  },
+  "b-7293": {
+    "chat_tokens": 383,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 25,
+    "original_help_has_option": true,
+    "suffix_sha256": "1714b1cbec58734ac1bb5e62eb67e3fb929f7cc4e203df48bed0febd7654347d"
+  },
+  "c-6118": {
+    "chat_tokens": 219,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 25,
+    "original_help_has_option": true,
+    "suffix_sha256": "be834e9aeccd75296d1e439511bf907c40202f429dc1e065f672b6c51258e5ff"
+  },
+  "c-6137": {
+    "chat_tokens": 327,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 26,
+    "original_help_has_option": true,
+    "suffix_sha256": "be834e9aeccd75296d1e439511bf907c40202f429dc1e065f672b6c51258e5ff"
+  },
+  "c-7293": {
+    "chat_tokens": 383,
+    "exact_option_in_added_text": false,
+    "executable_in_added_text": false,
+    "extra_tokens": 25,
+    "original_help_has_option": true,
+    "suffix_sha256": "be834e9aeccd75296d1e439511bf907c40202f429dc1e065f672b6c51258e5ff"
+  },
+  "d-6118": {
+    "chat_tokens": 231,
+    "exact_option_in_added_text": true,
+    "executable_in_added_text": false,
+    "extra_tokens": 37,
+    "original_help_has_option": true,
+    "suffix_sha256": "98e1f2b3daa0340420d6fd64dd55aadd3db2469e09becd80c375fabf9a0b308b"
+  },
+  "d-6137": {
+    "chat_tokens": 361,
+    "exact_option_in_added_text": true,
+    "executable_in_added_text": false,
+    "extra_tokens": 60,
+    "original_help_has_option": true,
+    "suffix_sha256": "595718645a35d68504dae1dd6c32aac205f3d7a1e889c03c8f98074742089d6f"
+  },
+  "d-7293": {
+    "chat_tokens": 399,
+    "exact_option_in_added_text": true,
+    "executable_in_added_text": false,
+    "extra_tokens": 41,
+    "original_help_has_option": true,
+    "suffix_sha256": "4e105a1c5928ab33ad785f826564f08f4791cf54a2bacad1f38355e542acc88c"
+  }
+}

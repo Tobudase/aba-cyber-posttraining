@@ -1,0 +1,266 @@
+{
+  "a-6118": {
+    "22103": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "8004217549a22bdc7e06b0b717057aa6082d88b37a309605a00ee28641559ecb"
+    },
+    "22109": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "c09befbf4ffc73aecfd368739ae8b47b1729b077374e57d518f05c7781b5517e"
+    },
+    "22111": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "adc94e6a35dd0791bb1b8c1ea56689f21eeb142932f2d60b0685c3de06291554"
+    }
+  },
+  "a-6137": {
+    "22103": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "547fa9d166569e026769ce01d2d70dcdd1f39be78ec6fab6318aabbb9257b39c",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22109": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "7a96ccb31c887db24ee2a5d560cccd2f847ec56dcb59819877c44aff3c4ea8a3",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22111": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "aabe6b8ebe348f57af3ff38dff4614a8d61e25074ae4d4a00c47e86f740b664a",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    }
+  },
+  "a-7293": {
+    "22103": {
+      "executable_named_in_explanation": false,
+      "executable_present": false,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "3ff3ea7171ac1c028f684a1bb99055a71022012c80a335a20d832eea54b84413"
+    },
+    "22109": {
+      "executable_named_in_explanation": false,
+      "executable_present": false,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "c9799554074cdcad5a4303e7e17f7c420e3a4a127434dc892119ae9c1ec287f8"
+    },
+    "22111": {
+      "executable_named_in_explanation": false,
+      "executable_present": false,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "505e2440ecddae65b7a2d5beec51ff8f3fadad991763ff388bdf53700426f73f"
+    }
+  },
+  "b-6118": {
+    "22103": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "181891cdd077508e804e6cd6ebb9669f892708c3b5a7cc5e83f2c3cb8ad8f73b"
+    },
+    "22109": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "1dcc340df1ba8bb2cfb97303d856b6867169739dc3c199c8ee2b0c4bc63cf9c9"
+    },
+    "22111": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "cee9df9918c9e77a0809df719f29361ec66b1cf11986f9c4fc3c2acd57cd0904"
+    }
+  },
+  "b-6137": {
+    "22103": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "64f77802c97e012bcf60f422edf67704f0396488e29a08113168ed69cbfb329b",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22109": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "dc82a45589920fff92c439bdb023788df44b5a1eac43ad39f8399b959f80d9bb",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22111": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "33824144af560369b4048df73731341c0ab21c17f7fd586d7f67ea5170e3b54b",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    }
+  },
+  "b-7293": {
+    "22103": {
+      "executable_named_in_explanation": false,
+      "executable_present": true,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "a23b14aae8ff8b89bda4c78c584a73659714329fd68585f0cd8d43e1da4889ab"
+    },
+    "22109": {
+      "executable_named_in_explanation": false,
+      "executable_present": false,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "30d84a79daac227c2125035a3db95531daf650c20615d3b440b453a97091b0d5"
+    },
+    "22111": {
+      "executable_named_in_explanation": false,
+      "executable_present": true,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "7f3e8e7502946b6f489aced68bfb9c91b5808b1c316b1e9de0858e9e4e69f354"
+    }
+  },
+  "c-6118": {
+    "22103": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "22c606f541e13780c52c0460a35f20be105b4ff1c0adcdcbbe46fd57e6d09c7a"
+    },
+    "22109": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "0c02e883a9a513dca9d5f54afc6fbca8b3f48c9df39564b3ad3fc64a41b0fca2"
+    },
+    "22111": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "53ef1c17abfea189fb3064e899f2f4a44e71b8a6f4776c78e60df6f07b98b7ac"
+    }
+  },
+  "c-6137": {
+    "22103": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "9375b8c181bb9f6e285844cad626d6b57be7066c832da303b42c72112e3f9f75",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22109": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "787569ff8d36ee3d9df0d1697d0c73062c960ce030b6af9d8933d98aacb481fb",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22111": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "24338ecc17de93b2c61d2877d50d6623e15adad7e9f9708cab50e0849a4c6f74",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    }
+  },
+  "c-7293": {
+    "22103": {
+      "executable_named_in_explanation": false,
+      "executable_present": true,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "45d6f0cc56526923436d28461f9d4f451bc48b2409308e261b5e92fe8623a97f"
+    },
+    "22109": {
+      "executable_named_in_explanation": false,
+      "executable_present": true,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "e251cb7c1beecfcfe0b41c874a98fe0c45cd0ddfb058b1b306a22bc10743e7e5"
+    },
+    "22111": {
+      "executable_named_in_explanation": false,
+      "executable_present": true,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "87d048b13eb0218e253aafa3d97d5585a320a2fd00f31b2124168abb8a65e07a"
+    }
+  },
+  "d-6118": {
+    "22103": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "bce9131a2d4cfc3d18cf1b09d41f7188d61f65ec6d5e4d0741a11700f890d215"
+    },
+    "22109": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "0b76fb7a9bd726ee6cac9b2c8fef42c29c7f45954caef1ae59ea82bade85d548"
+    },
+    "22111": {
+      "json": true,
+      "replace_option_in_command": true,
+      "sha256": "aaf63233799de269638a854416a5ddc7af6c60eb8ee273ffd8345a029baf73a1"
+    }
+  },
+  "d-6137": {
+    "22103": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "2d8452a2e20332c59c319aaa566f6905bb2bd43ee95eeb7787840b03938602e2",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22109": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "2d8452a2e20332c59c319aaa566f6905bb2bd43ee95eeb7787840b03938602e2",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    },
+    "22111": {
+      "correct_literal_in_command": false,
+      "default_requested_in_command": true,
+      "json": true,
+      "sha256": "d2670c2fed837c13f491a7826cce4bbed369be4950ef08b25e595cce04826fd1",
+      "wrong_literal_in_command": true,
+      "wrong_literal_in_explanation": true
+    }
+  },
+  "d-7293": {
+    "22103": {
+      "executable_named_in_explanation": false,
+      "executable_present": false,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "83489b7ee8bdb5e37930c0fd6d6571c9b3417e5b7e016d1f5443faa1d16a2551"
+    },
+    "22109": {
+      "executable_named_in_explanation": false,
+      "executable_present": false,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "736616f283c84c4e3b1ded44b1705ae602133f3e660083069d40f683a8a7a77a"
+    },
+    "22111": {
+      "executable_named_in_explanation": false,
+      "executable_present": false,
+      "globals_option_present": true,
+      "json": true,
+      "sha256": "83489b7ee8bdb5e37930c0fd6d6571c9b3417e5b7e016d1f5443faa1d16a2551"
+    }
+  }
+}

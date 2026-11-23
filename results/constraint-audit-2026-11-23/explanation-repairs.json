@@ -1,0 +1,75 @@
+{
+  "rows": {
+    "DeepSeek-6137-deepseek-22109": {
+      "judgment": "contradicted: repeats an option spelling rejected by the installed utility",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "6fc578e07ae6f03f02645841578efcbede81dbcaac86e108494c993c54a714c2",
+      "repaired_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-relations --no-indexes --no-comments --default-values catalog.mdb",
+      "reviewed_visible_explanation": "The requested table definitions retain field defaults and omit constraints, indexes and comments. The installed spelling for suppressing NOT EMPTY is --no-not_empty."
+    },
+    "DeepSeek-6137-deepseek-22111": {
+      "judgment": "contradicted: repeats an option spelling rejected by the installed utility",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "6f689b018d670317a0168ee091f6e36643d32cf5f07541e27379325d05087810",
+      "repaired_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-relations --no-indexes --no-comments --default-values catalog.mdb",
+      "reviewed_visible_explanation": "The requested table definitions retain field defaults and omit constraints, indexes and comments. The installed spelling for suppressing NOT EMPTY is --no-not_empty."
+    },
+    "student-6137-22103": {
+      "judgment": "contradicted: repeats an option spelling rejected by the installed utility",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "4121f30f03285d285af47d725b6a6b214bb8bb6bbb17af8b2298ad7fc7537039",
+      "repaired_command": "mdb-schema --no-not-null --no-not_empty --no-indexes --no-comments --no-relations --default-values catalog.mdb",
+      "reviewed_visible_explanation": "The requested table definitions retain field defaults and omit constraints, indexes and comments. The installed spelling for suppressing NOT EMPTY is --no-not_empty."
+    },
+    "student-6137-22109": {
+      "judgment": "contradicted: repeats an option spelling rejected by the installed utility",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "a434f2486041d25e5890915c3ddc7ac305e251b953ff9ff1763432554b467af9",
+      "repaired_command": "mdb-schema --no-indexes --no-comments --no-not-null --no-not_empty --no-relations --default-values catalog.mdb",
+      "reviewed_visible_explanation": "The requested table definitions retain field defaults and omit constraints, indexes and comments. The installed spelling for suppressing NOT EMPTY is --no-not_empty."
+    },
+    "student-6137-22111": {
+      "judgment": "contradicted: repeats an option spelling rejected by the installed utility",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "9375b8c181bb9f6e285844cad626d6b57be7066c832da303b42c72112e3f9f75",
+      "repaired_command": "mdb-schema --no-not-null --no-not_empty --no-relations --no-indexes --no-comments --default-values catalog.mdb",
+      "reviewed_visible_explanation": "The requested table definitions retain field defaults and omit constraints, indexes and comments. The installed spelling for suppressing NOT EMPTY is --no-not_empty."
+    },
+    "student-7208-22103": {
+      "judgment": "partial: describes the embedded SONAME but omits the requested on-disk filename",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "8012139837dd1ede926667c15bb663d7f464caf2f9dffe65698ebb36e80a44c9",
+      "repaired_command": "/usr/bin/ld.lld -shared -h libtest.so.1 test.o -o libtest.so",
+      "reviewed_visible_explanation": "The shared-library and SONAME options set the output type and its embedded name. The -o argument sets the separate on-disk filename to libtest.so."
+    },
+    "student-7293-22103": {
+      "judgment": "operation described; executable is absent and the word command is ambiguous",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "b70968dfb870787bf53771414b51aa1d4fbab9d0aa0b490c85938abee5cb14f8",
+      "repaired_command": "llvm-c-test --module-list-globals",
+      "reviewed_visible_explanation": "Use llvm-c-test to read bitcode from standard input. Its --module-list-globals option selects global variables."
+    },
+    "student-7293-22109": {
+      "judgment": "operation described; executable is absent and the word command is ambiguous",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "125f5256a1f2ad7f6ae679e0fa3d1ae8d9669414c5c6237c1f41ff8c7e576dbc",
+      "repaired_command": "llvm-c-test --module-list-globals",
+      "reviewed_visible_explanation": "Use llvm-c-test to read bitcode from standard input. Its --module-list-globals option selects global variables."
+    },
+    "student-7293-22111": {
+      "judgment": "operation described; executable is absent and the word command is ambiguous",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "9efce6dd0d2b0dee4fe2b074e504d84ea788103b852633d4be6513fbd4c72c89",
+      "repaired_command": "llvm-c-test --module-list-globals",
+      "reviewed_visible_explanation": "Use llvm-c-test to read bitcode from standard input. Its --module-list-globals option selects global variables."
+    },
+    "student-7475-22111": {
+      "judgment": "contradicted: asserts a default filename prefix that the native control disproves",
+      "native_repaired_command_pass": true,
+      "original_visible_sha256": "49d04f6e388e1ff98d23637c2b6dff172ff17115ddd7b058c55b0591f927a136",
+      "repaired_command": "llvm-split -j=4 --preserve-locals data.bc -o chunk",
+      "reviewed_visible_explanation": "The split count and local-definition option preserve the requested four-way partition. The output prefix must be set explicitly to chunk."
+    }
+  },
+  "rubric": "Post-hoc evidence review of ten saved failures. Original prose is checked separately from the previously verified command edit. Rewritten explanations are analyst-authored; they are not teacher generations or training data."
+}
