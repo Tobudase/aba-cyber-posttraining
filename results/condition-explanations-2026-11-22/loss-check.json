@@ -1,0 +1,120 @@
+{
+  "method": "Next-token cross-entropy, uniform synthetic seven-class logits, real tokenizer masks; mean over examples after segment normalization.",
+  "weights": {
+    "A": {
+      "sample_6137": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": -0.0,
+        "answer": 1.0
+      },
+      "sample_7293": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": -0.0,
+        "answer": 1.0
+      },
+      "sample_6118": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": -0.0,
+        "answer": 1.0
+      }
+    },
+    "B": {
+      "sample_6137": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_7293": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_6118": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      }
+    },
+    "C": {
+      "sample_6137": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_7293": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_6118": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      }
+    },
+    "D": {
+      "sample_6137": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_7293": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_6118": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      }
+    },
+    "E": {
+      "sample_6137": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_7293": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      },
+      "sample_6118": {
+        "prompt": -0.0,
+        "visible": -0.0,
+        "format": 0.1,
+        "trace": 0.5,
+        "answer": 1.0
+      }
+    }
+  }
+}

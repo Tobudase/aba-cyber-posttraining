@@ -1,0 +1,928 @@
+{
+  "previous": {
+    "screened": 19,
+    "accepted": [
+      "sample_7293",
+      "sample_6137"
+    ]
+  },
+  "new_sources": {
+    "6664": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "exclusion_basis": "Publisher reference combined mutually exclusive options; repaired invocation worked on both disk images."
+    },
+    "6666": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": true,
+      "draws": {
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "6441": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "exclusion_basis": "Pinned dmesg does not support JSON output."
+    },
+    "6443": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": true,
+      "draws": {
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "7371": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": true,
+      "draws": {
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "7369": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "replacement_fixture_verified": true,
+      "draws": {
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "1345": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "reader_initially_available": false,
+      "overlay_positive_and_negative_pass": true,
+      "exclusion_basis": "Publisher reference prints the settings explicitly configured; explicit full mode returns additional configuration sections."
+    },
+    "1443": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "reader_initially_available": false,
+      "exclusion_basis": "No validated registry-hive reader plus synthetic default-value witness in this run."
+    },
+    "1701": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "reader_initially_available": false,
+      "overlay_positive_and_negative_pass": true,
+      "draws": {
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "4556": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "reader_initially_available": false,
+      "overlay_positive_and_negative_pass": false,
+      "exclusion_basis": "LDIF transformed, but the padding manipulation did not alter the output format requested."
+    },
+    "4610": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "reader_initially_available": false,
+      "overlay_positive_and_negative_pass": false,
+      "exclusion_basis": "Restored utility rejects the reference filter user=john. The unfiltered synthetic session list did work."
+    },
+    "5348": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "reader_initially_available": false,
+      "exclusion_basis": "No calibrated valid/corrupt registry-hive pair with the required reader in this run."
+    },
+    "6684": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": true,
+      "reader_initially_available": true,
+      "draws": {
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "7991": {
+      "origin": "new TRAIN allocation",
+      "first_native_control": false,
+      "reader_initially_available": false,
+      "exclusion_basis": "No validated local journal reader and BIND journal fixtures in this run."
+    },
+    "6115": {
+      "origin": "previously allocated only to training",
+      "first_native_control": true,
+      "draws": {
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "6118": {
+      "origin": "previously allocated only to training",
+      "first_native_control": true,
+      "draws": {
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "format"
+          },
+          "22111": {
+            "result": "format"
+          }
+        },
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": true,
+      "skill": "mdb-json",
+      "gap_type": "output-protocol",
+      "semantic_gap": false,
+      "attributed_student_error": "Repeated illegal Unicode escape in the JSON explanation; command bytes were unchanged and correct on both fixtures.",
+      "reviewed_raw_traces": {
+        "qwen": {
+          "seed": "22103",
+          "sha256": "4603018c580a55b25f5a4fd33c71d5a743ae1b780d97ff2d11e986a540d248e4",
+          "checked_visible_seeds": [
+            "22103",
+            "22109",
+            "22111"
+          ],
+          "review": "Distinguishes default escaping from space substitution; terminal answer matches behavior on both synthetic databases. Both teachers explicitly handled the JSON escaping in the reviewed trace."
+        },
+        "deepseek": {
+          "seed": "22103",
+          "sha256": "48dfa25752bcfa605be56b579532aebb2c63da9b43862f2f4deb8a962db21410",
+          "checked_visible_seeds": [
+            "22103",
+            "22109",
+            "22111"
+          ],
+          "review": "Distinguishes default escaping from space substitution; terminal answer matches behavior on both synthetic databases. Both teachers explicitly handled the JSON escaping in the reviewed trace."
+        }
+      },
+      "escape_repair": {
+        "22103": {
+          "strict": true,
+          "explanation_escape_insertions": 0,
+          "parser_error": null,
+          "original_visible_sha256": "29084434cfa0786244d48f109553e8e5efdbd6ba5b1d00b57ea2c165750cc5a6",
+          "unchanged_command_sha256": "9a416b76ed52ca2fcf6ec123ea49c1805f5706f1a865aea55402c7c762fdc59e",
+          "identical_to_natively_verified_seed": "22103",
+          "behavior_matches": [
+            true,
+            true
+          ]
+        },
+        "22109": {
+          "strict": false,
+          "explanation_escape_insertions": 1,
+          "parser_error": "Invalid \\uXXXX escape",
+          "original_visible_sha256": "bad0225e0e11747073e578e8bfb8cfd01575f2c33b424837aa0784e0b7833612",
+          "unchanged_command_sha256": "9a416b76ed52ca2fcf6ec123ea49c1805f5706f1a865aea55402c7c762fdc59e",
+          "identical_to_natively_verified_seed": "22103",
+          "behavior_matches": [
+            true,
+            true
+          ]
+        },
+        "22111": {
+          "strict": false,
+          "explanation_escape_insertions": 1,
+          "parser_error": "Invalid \\uXXXX escape",
+          "original_visible_sha256": "fbc29d6fcd5e67b8e9c07533b85309e597dfc1d8e3a456e879dbb48f97bb96eb",
+          "unchanged_command_sha256": "9a416b76ed52ca2fcf6ec123ea49c1805f5706f1a865aea55402c7c762fdc59e",
+          "identical_to_natively_verified_seed": "22103",
+          "behavior_matches": [
+            true,
+            true
+          ]
+        }
+      }
+    },
+    "6234": {
+      "origin": "previously allocated only to training",
+      "first_native_control": true,
+      "draws": {
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    },
+    "6539": {
+      "origin": "previously allocated only to training",
+      "first_native_control": true,
+      "draws": {
+        "student": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "qwen": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22109": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          },
+          "22111": {
+            "result": "pass",
+            "fixture_matches": [
+              true,
+              true
+            ]
+          }
+        }
+      },
+      "admitted": false,
+      "exclusion_basis": "Student passed on at least two of three draws."
+    }
+  },
+  "screened_total": 29,
+  "qualified_total": 3,
+  "min_train_sources": 8,
+  "min_skills": 3,
+  "new_test_calls": 0,
+  "new_confirmation_calls": 0,
+  "new_training_runs": 0,
+  "paired_checkpoints": {
+    "base": {
+      "behavior": 0,
+      "strict": 0
+    },
+    "A16": {
+      "behavior": 2,
+      "strict": 2
+    },
+    "A64": {
+      "behavior": 2,
+      "strict": 2
+    },
+    "B64": {
+      "behavior": 2,
+      "strict": 2
+    },
+    "C64": {
+      "behavior": 1,
+      "strict": 1
+    }
+  },
+  "screen_generation_tokens": {
+    "student": 9138,
+    "qwen": 13188,
+    "deepseek": 8918
+  },
+  "screen_calls": {
+    "student": 30,
+    "qwen": 30,
+    "deepseek": 30
+  }
+}

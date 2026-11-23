@@ -1,0 +1,230 @@
+{
+  "original": {
+    "11341": {
+      "same": {
+        "tokens": 437,
+        "ended": true,
+        "format": true,
+        "behavior": false,
+        "strict": false,
+        "fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "native-error"
+      },
+      "opposite": {
+        "tokens": 930,
+        "ended": true,
+        "format": true,
+        "behavior": false,
+        "strict": false,
+        "fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "native-error"
+      },
+      "distractor": {
+        "tokens": 575,
+        "ended": true,
+        "format": true,
+        "behavior": false,
+        "strict": false,
+        "fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "native-error"
+      }
+    },
+    "11351": {
+      "same": {
+        "tokens": 431,
+        "ended": true,
+        "format": true,
+        "behavior": false,
+        "strict": false,
+        "fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "native-error"
+      },
+      "opposite": {
+        "tokens": 445,
+        "ended": true,
+        "format": true,
+        "behavior": false,
+        "strict": false,
+        "fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "native-error"
+      },
+      "distractor": {
+        "tokens": 613,
+        "ended": true,
+        "format": true,
+        "behavior": false,
+        "strict": false,
+        "fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "native-error"
+      }
+    }
+  },
+  "one_edit": {
+    "11341": {
+      "same": {
+        "tokens": 437,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      },
+      "opposite": {
+        "tokens": 930,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      },
+      "distractor": {
+        "tokens": 575,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    },
+    "11351": {
+      "same": {
+        "tokens": 431,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      },
+      "opposite": {
+        "tokens": 445,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      },
+      "distractor": {
+        "tokens": 613,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    }
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "initial": {
+    "6664": [
+      {
+        "gold": {
+          "rc": 1,
+          "out": "",
+          "err": "partx: mutually exclusive arguments: --pairs --add --delete --list --raw --show --update\n"
+        },
+        "negative": {
+          "rc": 1,
+          "out": "",
+          "err": "partx: mutually exclusive arguments: --pairs --add --delete --list --raw --show --update\n"
+        },
+        "verified": false
+      },
+      {
+        "gold": {
+          "rc": 1,
+          "out": "",
+          "err": "partx: mutually exclusive arguments: --pairs --add --delete --list --raw --show --update\n"
+        },
+        "negative": {
+          "rc": 1,
+          "out": "",
+          "err": "partx: mutually exclusive arguments: --pairs --add --delete --list --raw --show --update\n"
+        },
+        "verified": false
+      }
+    ],
+    "6666": [
+      {
+        "gold": {
+          "rc": 0,
+          "out": "NR START SIZE\n 1    32  32K\n 2   532  40K\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "NR START\n 1    32\n 2   532\n",
+          "err": ""
+        },
+        "verified": true
+      },
+      {
+        "gold": {
+          "rc": 0,
+          "out": "NR START SIZE\n 1    48  40K\n 2   548  48K\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "NR START\n 1    48\n 2   548\n",
+          "err": ""
+        },
+        "verified": true
+      }
+    ],
+    "6441": [
+      {
+        "gold": {
+          "rc": 1,
+          "out": "",
+          "err": "/bin/dmesg: unrecognized option '--json'\nTry 'dmesg --help' for more information.\n"
+        },
+        "negative": {
+          "rc": 1,
+          "out": "",
+          "err": "/bin/dmesg: unrecognized option '--json'\nTry 'dmesg --help' for more information.\n"
+        },
+        "verified": false
+      },
+      {
+        "gold": {
+          "rc": 1,
+          "out": "",
+          "err": "/bin/dmesg: unrecognized option '--json'\nTry 'dmesg --help' for more information.\n"
+        },
+        "negative": {
+          "rc": 1,
+          "out": "",
+          "err": "/bin/dmesg: unrecognized option '--json'\nTry 'dmesg --help' for more information.\n"
+        },
+        "verified": false
+      }
+    ],
+    "6443": [
+      {
+        "gold": {
+          "rc": 0,
+          "out": "[    1.000000] kernel_critical_0\n[    1.000001] kernel_error_0\n[    1.000003] mail_error_0\n[    1.000005] user_critical_0\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "[    1.000002] kernel_info_0\n[    1.000004] user_info_0\n",
+          "err": ""
+        },
+        "verified": true
+      },
+      {
+        "gold": {
+          "rc": 0,
+          "out": "[    1.000000] kernel_critical_1\n[    1.000001] kernel_error_1\n[    1.000003] mail_error_1\n[    1.000005] user_critical_1\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "[    1.000002] kernel_info_1\n[    1.000004] user_info_1\n",
+          "err": ""
+        },
+        "verified": true
+      }
+    ],
+    "7371": [
+      {
+        "gold": {
+          "rc": 0,
+          "out": "a.ir:\ncputype: 16777228\ncpusubtype: 0\nb.ir:\ncputype: 16777223\ncpusubtype: 3\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "b.ir:\ncputype: 16777223\ncpusubtype: 3\n",
+          "err": ""
+        },
+        "verified": true
+      },
+      {
+        "gold": {
+          "rc": 0,
+          "out": "a.ir:\ncputype: 16777228\ncpusubtype: 0\nb.ir:\ncputype: 16777223\ncpusubtype: 3\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "b.ir:\ncputype: 16777223\ncpusubtype: 3\n",
+          "err": ""
+        },
+        "verified": true
+      }
+    ],
+    "7369": [
+      {
+        "gold": {
+          "rc": 0,
+          "out": "Bitcode lib.objc.bc does not contain ObjC\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "Bitcode plain.bc does not contain ObjC\n",
+          "err": ""
+        },
+        "verified": false
+      },
+      {
+        "gold": {
+          "rc": 0,
+          "out": "Bitcode lib.objc.bc does not contain ObjC\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "Bitcode plain.bc does not contain ObjC\n",
+          "err": ""
+        },
+        "verified": false
+      }
+    ]
+  },
+  "supplemental": {
+    "1345": {
+      "available": false,
+      "verified": false
+    },
+    "1443": {
+      "available": false,
+      "verified": false
+    },
+    "1701": {
+      "available": false,
+      "verified": false
+    },
+    "4556": {
+      "available": false,
+      "verified": false
+    },
+    "4610": {
+      "available": false,
+      "verified": false
+    },
+    "5348": {
+      "available": false,
+      "verified": false
+    },
+    "6684": {
+      "available": true,
+      "verified": true
+    },
+    "7991": {
+      "available": false,
+      "verified": false
+    }
+  },
+  "historical": {
+    "6115": [
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "{\"label\":\"unit0 tail\"}\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "{\"label\":\"unit0\\u0001tail\"}\n",
+          "err": ""
+        }
+      },
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "{\"label\":\"unit1 tail\"}\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "{\"label\":\"unit1\\u0001tail\"}\n",
+          "err": ""
+        }
+      }
+    ],
+    "6118": [
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "{\"label\":\"unit0\\u0001tail\"}\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "{\"label\":\"unit0 tail\"}\n",
+          "err": ""
+        }
+      },
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "{\"label\":\"unit1\\u0001tail\"}\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "{\"label\":\"unit1 tail\"}\n",
+          "err": ""
+        }
+      }
+    ],
+    "6234": [
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "Ad!m0\nadmission\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "admission\n",
+          "err": ""
+        }
+      },
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "Ad!m1\nadmission\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "admission\n",
+          "err": ""
+        }
+      }
+    ],
+    "6539": [
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "48\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "96\n",
+          "err": ""
+        }
+      },
+      {
+        "verified": true,
+        "gold": {
+          "rc": 0,
+          "out": "52\n",
+          "err": ""
+        },
+        "negative": {
+          "rc": 0,
+          "out": "104\n",
+          "err": ""
+        }
+      }
+    ]
+  },
+  "restored": {
+    "1345": {
+      "available": true,
+      "verified": true
+    },
+    "1701": {
+      "available": true,
+      "verified": true
+    },
+    "4556": {
+      "available": true,
+      "verified": false
+    },
+    "4610": {
+      "available": true,
+      "verified": false
+    }
+  },
+  "debian_index_sha256": "1c3405444297ead864711c18e64bce4810db63b48340a2f9d81182d9f235ad71",
+  "packages": {
+    "libaudit1": {
+      "sha256": "e3aa1383e387dc077a1176f7f3cbfdbc084bcc270a8938f598d5cb119773b268",
+      "version": "1:3.0-2"
+    },
+    "libaio1": {
+      "sha256": "1397318eff697140d5a45363db04b95b6a42a382ef4568088cb8b275e8fc599b",
+      "version": "0.3.112-9"
+    },
+    "libcap-ng0": {
+      "sha256": "d34e29769b8ef23e9b9920814afb7905b8ee749db0814e6a8d937ccc4f309830",
+      "version": "0.7.9-2.2+b1"
+    },
+    "libgcrypt20": {
+      "sha256": "7a2e0eef8e0c37f03f3a5fcf7102a2e3dc70ba987f696ab71949f9abf36f35ef",
+      "version": "1.8.7-6"
+    },
+    "libgpg-error0": {
+      "sha256": "16a507fb20cc58b5a524a0dc254a9cb1df02e1ce758a2d8abde0bc4a3c9b7c26",
+      "version": "1.38-2"
+    },
+    "libsemanage1": {
+      "sha256": "d8f2835b22df58ba45d52eb3aab224190f193576caf05e3f80deb2e4f927fad6",
+      "version": "3.1-1+b2"
+    },
+    "libsepol1": {
+      "sha256": "b6057dc6806a6dfaef74b09d84d1f18716d7a6d2f1da30520cef555210c6af62",
+      "version": "3.1-1"
+    },
+    "libdevmapper-event1.02.1": {
+      "sha256": "2d29fcfa2bd56befb8c6a31deffde86b69ad8c686cfed15bd9f04527e6cff160",
+      "version": "2:1.02.175-2.1"
+    },
+    "libdevmapper1.02.1": {
+      "sha256": "74dfe455175a0181957ee2803f4810d26f4c6e00968b49cb67fe7a006e299eb1",
+      "version": "2:1.02.175-2.1"
+    },
+    "liblvm2cmd2.03": {
+      "sha256": "2f9d50c9c965e77f942bfadc47f6949b6095543d0fbad86023983b69ace34ca5",
+      "version": "2.03.11-2.1"
+    },
+    "lvm2": {
+      "sha256": "c1253ce30a11b5f87090e1c639778108ea11671e8b68b96262a0f6210758cbf3",
+      "version": "2.03.11-2.1"
+    },
+    "libtinfo6": {
+      "sha256": "96ed58b8fd656521e08549c763cd18da6cff1b7801a3a22f29678701a95d7e7b",
+      "version": "6.2+20201114-2+deb11u2"
+    },
+    "p7zip": {
+      "sha256": "7965acc3c5afef9ea1f0a86bee7813db7f7d8473e400340fdc1930af29b54135",
+      "version": "16.02+dfsg-8"
+    },
+    "p7zip-full": {
+      "sha256": "874c425cf9852356fdae688586c31dfc657d082094208b5a8cc6721e20738cc5",
+      "version": "16.02+dfsg-8"
+    },
+    "libpam0g": {
+      "sha256": "496771218fb585bb716fdae6ef8824dbfb5d544b4fa2f3cd4d0e4d7158ae2220",
+      "version": "1.4.0-9+deb11u1"
+    },
+    "libpcre2-8-0": {
+      "sha256": "ee192c8d22624eb9d0a2ae95056bad7fb371e5abc17e23e16b1de3ddb17a1064",
+      "version": "10.36-2+deb11u1"
+    },
+    "libreadline8": {
+      "sha256": "162ba9fdcde81b5502953ed4d84b24e8ad4e380bbd02990ab1a0e3edffca3c22",
+      "version": "8.1-1"
+    },
+    "sudo": {
+      "sha256": "c28221eb2f57998a5b645eb5c27ee74558705c8ae0dd62da436cbaa0b43a04b3",
+      "version": "1.9.5p2-3+deb11u1"
+    },
+    "libudev1": {
+      "sha256": "1db2b4498ae8fc80aaf06e3cf3adc479ae415d0ece1b475e86544de165931865",
+      "version": "247.3-7+deb11u5"
+    },
+    "libblkid1": {
+      "sha256": "be6ec9f14626174a34e27f8ca0c8be5531c07f22266fed4738c978af7f575ab2",
+      "version": "2.36.1-8+deb11u2"
+    }
+  },
+  "lvm_scope": {
+    "reference": {
+      "rc": 0,
+      "sections": [
+        "devices",
+        "log"
+      ],
+      "stdout_bytes": 77
+    },
+    "full": {
+      "rc": 0,
+      "sections": [
+        "activation",
+        "allocation",
+        "backup",
+        "config",
+        "devices",
+        "dmeventd",
+        "global",
+        "local",
+        "log",
+        "metadata",
+        "report",
+        "shell",
+        "tags"
+      ],
+      "stdout_bytes": 7304
+    }
+  },
+  "objc": [
+    {
+      "verified": true,
+      "positive": "Bitcode lib.objc.bc contains ObjC\n",
+      "negative": "Bitcode plain.bc does not contain ObjC\n"
+    },
+    {
+      "verified": true,
+      "positive": "Bitcode lib.objc.bc contains ObjC\n",
+      "negative": "Bitcode plain.bc does not contain ObjC\n"
+    }
+  ],
+  "partition_reference": [
+    {
+      "original": 1,
+      "repair": 0,
+      "discriminates": true,
+      "keep_original_excluded": true
+    },
+    {
+      "original": 1,
+      "repair": 0,
+      "discriminates": true,
+      "keep_original_excluded": true
+    }
+  ],
+  "swapped_architectures": [
+    {
+      "reversed_architectures": true
+    },
+    {
+      "reversed_architectures": true
+    }
+  ]
+}

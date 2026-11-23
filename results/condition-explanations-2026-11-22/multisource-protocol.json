@@ -1,0 +1,46 @@
+{
+  "status": "Prepared; starting new SFT requires passing the source screen.",
+  "student": "Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218",
+  "eligibility": {
+    "minimum_source_questions": 8,
+    "minimum_skills": 3,
+    "per_teacher": "At least 2 of 3 native successes with correct visible explanation and one reviewed trajectory.",
+    "per_student": "At least 2 of 3 with the same attributable failure. Record protocol-only errors separately from incorrect actions. Report source count by error category and group.",
+    "source_units": "An official TRAIN ID and its variants stay together. Report closely related source IDs in the same intent group. Do not count fixtures, seeds or wording variants as independent questions."
+  },
+  "arms": {
+    "A": "Verified answer only",
+    "B": "Same answer with Qwen teacher trajectory",
+    "C": "Same answer with DeepSeek teacher trajectory",
+    "D": "Same answer plus a factually verified short decisive explanation",
+    "E": "Same answer plus a matched true task description that omits the decisive condition"
+  },
+  "training": {
+    "seeds": [3407, 3413, 3433],
+    "checkpoints": [16, 32, 64],
+    "dtype": "bfloat16",
+    "lora_targets": ["q_proj", "v_proj"],
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "dropout": 0,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0,
+    "gradient_clip": 1,
+    "loss": "Mean next-token cross entropy within each segment, then mean over examples. Weights: answer 1.0, format including EOS 0.1, auxiliary text 0.5 when present, prompt and visible explanation 0. IDs for all nonauxiliary segments must be identical across arms for each source.",
+    "pairing": "Share example order, initialization within seed, answer text, answer placements relative to JSON keys, batch composition and generation settings. Save active adapter hashes."
+  },
+  "selection": {
+    "metric": "Source-macro paired behavior pass on DEV. Both original and reversed requirement must pass every discriminating fixture.",
+    "tie_break": "There is no new separate development-retention partition in this run. Use earliest checkpoint on tied DEV scores. Never use final retention for selection.",
+    "heldout": "Freeze the arms and selected checkpoint procedure before confirmation. Report paired wins/losses and source denominators across all seeds. Do not select a best seed on confirmation.",
+    "gates": "ABC: three seeds when data threshold met. D/E: begin with one matched seed; require all three before reporting a confirmatory mechanism comparison."
+  },
+  "evaluation": {
+    "seeds": [11341, 11351],
+    "token_caps": [4096, 1024],
+    "task_inputs": "Question and common tool help only.",
+    "scores": ["paired semantic pass", "paired strict JSON pass", "irrelevant-edit invariance", "behavior on novel sources", "retention", "format failures", "truncations", "generated tokens", "GPU allocation wall time"],
+    "official_test": "Unqueried during development."
+  }
+}

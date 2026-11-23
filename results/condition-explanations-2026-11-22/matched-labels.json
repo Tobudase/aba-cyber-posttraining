@@ -1,0 +1,143 @@
+{
+  "sample_6137": {
+    "labels": {
+      "A": {
+        "prompt": 303,
+        "visible": 43,
+        "answer": 32,
+        "trace": 0,
+        "format": 13
+      },
+      "D": {
+        "prompt": 303,
+        "visible": 43,
+        "answer": 32,
+        "trace": 22,
+        "format": 13
+      },
+      "E": {
+        "prompt": 303,
+        "visible": 43,
+        "answer": 32,
+        "trace": 22,
+        "format": 13
+      },
+      "B": {
+        "prompt": 303,
+        "visible": 43,
+        "answer": 32,
+        "trace": 1027,
+        "format": 13
+      },
+      "C": {
+        "prompt": 303,
+        "visible": 43,
+        "answer": 32,
+        "trace": 430,
+        "format": 13
+      }
+    },
+    "selected": {
+      "D": "Because some synthetic tables declare field defaults, applying the minimal schema requirement changes the emitted schema by excluding those defaults.",
+      "E": "This task reads metadata from the local relational database, not rows, while its table structures appear as rendered text."
+    },
+    "teacher": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "request_digest": "924bd4a63830518e64b943f3a30a1b8af44e0e268f05e66936438ab09ea78476",
+    "matched_nontrace_digest": "8c7a707f910d953d5e74583ea2eee0e0d63a1a0c50659f5655bec2059895d79e",
+    "trained": false
+  },
+  "sample_7293": {
+    "labels": {
+      "A": {
+        "prompt": 368,
+        "visible": 13,
+        "answer": 7,
+        "trace": 0,
+        "format": 13
+      },
+      "D": {
+        "prompt": 368,
+        "visible": 13,
+        "answer": 7,
+        "trace": 25,
+        "format": 13
+      },
+      "E": {
+        "prompt": 368,
+        "visible": 13,
+        "answer": 7,
+        "trace": 25,
+        "format": 13
+      },
+      "B": {
+        "prompt": 368,
+        "visible": 13,
+        "answer": 7,
+        "trace": 359,
+        "format": 13
+      },
+      "C": {
+        "prompt": 368,
+        "visible": 13,
+        "answer": 7,
+        "trace": 187,
+        "format": 13
+      }
+    },
+    "selected": {
+      "D": "The task requires a function inventory rather than the complete intermediate representation, so producing the broader representation would not satisfy the requested result.",
+      "E": "The available material includes compiler bitcode and a local stream, and the expected result is a textual report about the compiled artifact."
+    },
+    "teacher": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "request_digest": "7e1e0970ab015ff850bd69babf53b26cc164185210e2d4ea3d58cdc04e29b10e",
+    "matched_nontrace_digest": "c0cbf73e88e6993448f43f198d1dc1ba7921009b54286667287f3aa069916d28",
+    "trained": false
+  },
+  "sample_6118": {
+    "labels": {
+      "A": {
+        "prompt": 216,
+        "visible": 8,
+        "answer": 6,
+        "trace": 0,
+        "format": 13
+      },
+      "D": {
+        "prompt": 216,
+        "visible": 8,
+        "answer": 6,
+        "trace": 26,
+        "format": 13
+      },
+      "E": {
+        "prompt": 216,
+        "visible": 8,
+        "answer": 6,
+        "trace": 26,
+        "format": 13
+      },
+      "B": {
+        "prompt": 216,
+        "visible": 8,
+        "answer": 6,
+        "trace": 495,
+        "format": 13
+      },
+      "C": {
+        "prompt": 216,
+        "visible": 8,
+        "answer": 6,
+        "trace": 241,
+        "format": 13
+      }
+    },
+    "selected": {
+      "D": "Even when the database command is completely correct, the independent JSON grammar requires every literal backslash in the outer explanation to be escaped.",
+      "E": "Sample records are held in an offline database within the fixture, while the surrounding text offers broad context about the local table and evaluation."
+    },
+    "teacher": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "request_digest": "1b4cddb5400d57e1af7619647c3fb4a0ddf8e284dbb7bf591d9695e403d4809b",
+    "matched_nontrace_digest": "cc61f04468a18048f094de60d00058b0aa808fc451fd1556d4c6510cebcc8489",
+    "trained": false
+  }
+}

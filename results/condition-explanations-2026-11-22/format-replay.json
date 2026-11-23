@@ -1,0 +1,8 @@
+{
+  "source": "sample_6118",
+  "student_visible": {
+    "22103": "{\"command\": \"mdb-json network.mdb devices\", \"explanation\": \"The --no-unprintable flag is omitted to ensure unprintable characters are escaped as \\\\u00XX instead of being replaced with spaces, preserving original data integrity as required.\"}",
+    "22109": "{\"command\": \"mdb-json network.mdb devices\", \"explanation\": \"The absence of --no-unprintable ensures unprintable characters are escaped as \\u00XX. The requirement to preserve unprintable characters dictates keeping the default behavior.\"}",
+    "22111": "{\"command\": \"mdb-json network.mdb devices\", \"explanation\": \"The absence of --no-unprintable ensures unprintable characters are escaped as \\u00XX by default, preserving original data integrity per the requirement.\"}"
+  }
+}

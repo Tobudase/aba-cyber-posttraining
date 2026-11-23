@@ -1,0 +1,26 @@
+{
+  "11341-same": {
+    "original_command": "mdb-schema --no-not-null --no-not-empty --no-default-values --no-indexes --no-comments --no-relations catalog.mdb",
+    "repaired_command": "mdb-schema --no-not-null --no-not_empty --no-default-values --no-indexes --no-comments --no-relations catalog.mdb"
+  },
+  "11341-opposite": {
+    "original_command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-not-empty --default-values catalog.mdb",
+    "repaired_command": "mdb-schema --no-indexes --no-comments --no-relations --no-not-null --no-not_empty --default-values catalog.mdb"
+  },
+  "11341-distractor": {
+    "original_command": "mdb-schema --no-not-null --no-not-empty --no-indexes --no-comments --no-relations --default-values catalog.mdb",
+    "repaired_command": "mdb-schema --no-not-null --no-not_empty --no-indexes --no-comments --no-relations --default-values catalog.mdb"
+  },
+  "11351-same": {
+    "original_command": "mdb-schema --no-not-null --no-not-empty --no-default-values --no-indexes --no-comments catalog.mdb",
+    "repaired_command": "mdb-schema --no-not-null --no-not_empty --no-default-values --no-indexes --no-comments catalog.mdb"
+  },
+  "11351-opposite": {
+    "original_command": "mdb-schema --no-not-null --no-not-empty --no-comments --no-indexes --default-values catalog.mdb",
+    "repaired_command": "mdb-schema --no-not-null --no-not_empty --no-comments --no-indexes --default-values catalog.mdb"
+  },
+  "11351-distractor": {
+    "original_command": "mdb-schema --no-not-null --no-not-empty --no-relations --no-indexes --no-comments --default-values catalog.mdb",
+    "repaired_command": "mdb-schema --no-not-null --no-not_empty --no-relations --no-indexes --no-comments --default-values catalog.mdb"
+  }
+}

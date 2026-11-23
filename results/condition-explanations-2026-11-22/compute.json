@@ -1,0 +1,156 @@
+{
+  "miw113-cond-adapter-edits22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T01:22:59Z",
+    "end": "2026-11-23T01:23:32Z"
+  },
+  "miw113-cond-grade-adapters22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T01:21:31Z",
+    "end": "2026-11-23T01:21:40Z"
+  },
+  "miw113-cond-grade-archive22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T01:13:02Z",
+    "end": "2026-11-23T01:13:23Z"
+  },
+  "miw113-cond-grade-b22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:54:03Z",
+    "end": "2026-11-23T00:54:32Z"
+  },
+  "miw113-cond-grade-pilot22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T01:01:22Z",
+    "end": "2026-11-23T01:01:32Z"
+  },
+  "miw113-cond-grade-student22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:47:37Z",
+    "end": "2026-11-23T00:47:50Z"
+  },
+  "miw113-cond-grade-teachers22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:42:29Z",
+    "end": "2026-11-23T00:42:38Z"
+  },
+  "miw113-cond-json-pairs22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T01:02:53Z",
+    "end": "2026-11-23T01:03:17Z"
+  },
+  "miw113-cond-one-edit22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T01:22:19Z",
+    "end": "2026-11-23T01:22:38Z"
+  },
+  "miw113-cond-pilot-oracle22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:53:03Z",
+    "end": "2026-11-23T00:53:14Z"
+  },
+  "miw113-cond-reader-overlay22": {
+    "status": "FAILED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:50:08Z",
+    "end": "2026-11-23T00:50:27Z"
+  },
+  "miw113-cond-reader-overlayb22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:53:35Z",
+    "end": "2026-11-23T00:54:05Z"
+  },
+  "miw113-cond-reader-overlayc22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:54:51Z",
+    "end": "2026-11-23T00:55:04Z"
+  },
+  "miw113-cond-retained-adapters22": {
+    "status": "SUCCEEDED",
+    "gpu": true,
+    "released": true,
+    "start": "2026-11-23T01:13:09Z",
+    "end": "2026-11-23T01:21:18Z"
+  },
+  "miw113-condition-amend22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:46:39Z",
+    "end": "2026-11-23T00:46:47Z"
+  },
+  "miw113-condition-catalog22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:45:40Z",
+    "end": "2026-11-23T00:45:54Z"
+  },
+  "miw113-condition-oracle22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:37:18Z",
+    "end": "2026-11-23T00:37:45Z"
+  },
+  "miw113-condition-pairs22": {
+    "status": "SUCCEEDED",
+    "gpu": false,
+    "released": true,
+    "start": "2026-11-23T00:41:36Z",
+    "end": "2026-11-23T00:42:03Z"
+  },
+  "miw113-condition-student-b22": {
+    "status": "SUCCEEDED",
+    "gpu": true,
+    "released": true,
+    "start": "2026-11-23T00:47:47Z",
+    "end": "2026-11-23T00:53:54Z"
+  },
+  "miw113-condition-student-c22": {
+    "status": "SUCCEEDED",
+    "gpu": true,
+    "released": true,
+    "start": "2026-11-23T00:54:22Z",
+    "end": "2026-11-23T01:01:04Z"
+  },
+  "miw113-condition-student-d22": {
+    "status": "SUCCEEDED",
+    "gpu": true,
+    "released": true,
+    "start": "2026-11-23T01:01:16Z",
+    "end": "2026-11-23T01:12:58Z"
+  },
+  "miw113-condition-student22": {
+    "status": "SUCCEEDED",
+    "gpu": true,
+    "released": true,
+    "start": "2026-11-23T00:38:59Z",
+    "end": "2026-11-23T00:47:26Z"
+  }
+}

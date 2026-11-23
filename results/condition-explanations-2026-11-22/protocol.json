@@ -1,0 +1,48 @@
+{
+  "student": "Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218",
+  "teachers": [
+    "Qwen/Qwen3.8-27B-FP8",
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+  ],
+  "screen_seeds": [
+    22103,
+    22109,
+    22111
+  ],
+  "max_new_tokens": 4096,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "pairs_source": "sample_6137",
+  "paired_decode_seeds": [
+    11341,
+    11351
+  ],
+  "checkpoint_files": {
+    "base": null,
+    "A16": {
+      "folder": "miw113-json-triad-a6e70841c63c9b5d",
+      "weights": "3e171a98143790e35d5b8cb977ffdad231fcd38a7dff11df315bdb2a9384f9dd"
+    },
+    "A64": {
+      "folder": "miw113-json-triad-a6e70841c63c9b5d",
+      "weights": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255"
+    },
+    "B64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3"
+    },
+    "C64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d"
+    }
+  },
+  "paired_gpu": "NVIDIA L40",
+  "source_files_sha256": {
+    "freeze.json": "86ac7ef9e3bd1da469fe4560422a411b5928e49dd622336fd38b356690812638",
+    "extension-freeze.json": "4e977b9e08203475cc42b082cf4a47d91309356b55a1c97d912e2b20d1ed45e0",
+    "history-freeze.json": "5d8bd940ca7afa5a61f6d81deea2350b82a484b79712860becb48656e7e5fa83",
+    "paired-eval-freeze.json": "53ec43b3b3f2f9ec011ef4b3ee24766badde8db550dea9f68a51323a08e01cdc"
+  },
+  "official_train_sha256": "ca7cd7ef94073f13c9371a27392579dbda9e01d81f86a805dff4d9b87b132c7a",
+  "scope": "Only offline synthetic TRAIN-source diagnostics and frozen prior TRAIN allocations. No independent confirmation or retention examples queried."
+}

@@ -1,0 +1,178 @@
+{
+  "A16-11341-distractor-defaults": {
+    "11341": {
+      "distractor": {
+        "tokens": 93,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    }
+  },
+  "A16-11351-distractor-defaults": {
+    "11351": {
+      "distractor": {
+        "tokens": 109,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    }
+  },
+  "A64-11341-distractor-defaults": {
+    "11341": {
+      "distractor": {
+        "tokens": 103,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    }
+  },
+  "A64-11351-distractor-defaults": {
+    "11351": {
+      "distractor": {
+        "tokens": 107,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    }
+  },
+  "C64-11351-same-nullable": {
+    "11351": {
+      "same": {
+        "tokens": 297,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    }
+  },
+  "C64-11351-same-empty": {
+    "11351": {
+      "same": {
+        "tokens": 297,
+        "ended": true,
+        "format": true,
+        "behavior": false,
+        "strict": false,
+        "fixture_matches": [
+          false,
+          false,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "different-output"
+      }
+    }
+  },
+  "C64-11351-same-both": {
+    "11351": {
+      "same": {
+        "tokens": 297,
+        "ended": true,
+        "format": true,
+        "behavior": true,
+        "strict": true,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "pass"
+      }
+    }
+  },
+  "C64-11351-opposite-defaults": {
+    "11351": {
+      "opposite": {
+        "tokens": 425,
+        "ended": true,
+        "format": false,
+        "behavior": true,
+        "strict": false,
+        "fixture_matches": [
+          true,
+          true,
+          true
+        ],
+        "reversed_fixture_matches": [
+          false,
+          false,
+          false
+        ],
+        "issue": "format"
+      }
+    }
+  }
+}

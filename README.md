@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 22, 2026 — What did teacher supervision change on a matched pair?
+
+On a same-file schema task, the original Qwen3-8B passed **0/6** because of one misspelled option. Correcting one character in each saved command recovered **6/6**. At step 64, the Qwen trajectory checkpoint passed **6/6**, answer-only **4/6**, and DeepSeek trajectory **4/6**. The answer-only checkpoint passed both directions with both decoding seeds, then dropped the required option both times when an irrelevant sentence was added. These six responses come from one source.
+
+Across 10 additional read-only TRAIN sources, the teachers each passed **30/30** strictly and the student passed **28/30**. Both misses had a correct command and an invalid JSON escape in the explanation. The total is three verified gap sources across 29 screened, below the eight-source threshold for multi-source SFT.
+
+[Chinese report and figure](results/condition-explanations-2026-11-22/RESULT_ZH.md) · [One-character replay](results/condition-explanations-2026-11-22/one-edit-grades.json) · [Offline recount](results/condition-explanations-2026-11-22/recount.py)
+
 ## November 22, 2026 — Can Qwen3-8B learn a verified teacher example?
 
 On one read-only KaliBench TRAIN source and two same-source variations, the base student passed **0/3**. At step 16, answer-only SFT and DeepSeek trajectory SFT each passed **3/3**. Qwen teacher trajectory SFT passed **1/3**. At step 64, all three passed **2/3** under strict scoring. Both trajectory-trained students generated the correct command on all three prompts, with one JSON-format error each.

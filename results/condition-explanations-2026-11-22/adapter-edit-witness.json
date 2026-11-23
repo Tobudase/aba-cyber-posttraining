@@ -1,0 +1,59 @@
+{
+  "A16-11341-distractor-defaults": {
+    "modified_argv": [
+      "--default-values"
+    ],
+    "original_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "modified_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values catalog.mdb"
+  },
+  "A16-11351-distractor-defaults": {
+    "modified_argv": [
+      "--default-values"
+    ],
+    "original_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "modified_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values catalog.mdb"
+  },
+  "A64-11341-distractor-defaults": {
+    "modified_argv": [
+      "--default-values"
+    ],
+    "original_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "modified_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values catalog.mdb"
+  },
+  "A64-11351-distractor-defaults": {
+    "modified_argv": [
+      "--default-values"
+    ],
+    "original_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "modified_command": "mdb-schema --no-drop-table --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values catalog.mdb"
+  },
+  "C64-11351-same-nullable": {
+    "modified_argv": [
+      "--no-not-null"
+    ],
+    "original_command": "mdb-schema --no-drop-table --no-relations --no-indexes --no-comments --no-default-values catalog.mdb",
+    "modified_command": "mdb-schema --no-drop-table --no-relations --no-indexes --no-comments --no-default-values --no-not-null catalog.mdb"
+  },
+  "C64-11351-same-empty": {
+    "modified_argv": [
+      "--no-not_empty"
+    ],
+    "original_command": "mdb-schema --no-drop-table --no-relations --no-indexes --no-comments --no-default-values catalog.mdb",
+    "modified_command": "mdb-schema --no-drop-table --no-relations --no-indexes --no-comments --no-default-values --no-not_empty catalog.mdb"
+  },
+  "C64-11351-same-both": {
+    "modified_argv": [
+      "--no-not-null",
+      "--no-not_empty"
+    ],
+    "original_command": "mdb-schema --no-drop-table --no-relations --no-indexes --no-comments --no-default-values catalog.mdb",
+    "modified_command": "mdb-schema --no-drop-table --no-relations --no-indexes --no-comments --no-default-values --no-not-null --no-not_empty catalog.mdb"
+  },
+  "C64-11351-opposite-defaults": {
+    "modified_argv": [
+      "--default-values"
+    ],
+    "original_command": "mdb-schema --no-not-null --no-not_empty --no-comments --no-indexes --no-relations catalog.mdb",
+    "modified_command": "mdb-schema --no-not-null --no-not_empty --no-comments --no-indexes --no-relations --default-values catalog.mdb"
+  }
+}
