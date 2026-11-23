@@ -1,0 +1,790 @@
+{
+  "reference_checks": {
+    "2280": {
+      "Debian 11": [
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "Debian 13": [
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "joined_form_rc": 0
+        },
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "joined_form_rc": 0
+        }
+      ]
+    },
+    "1424": {
+      "Debian 11": [
+        {
+          "positive_rc": 0,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "717f2fc580478839c15e59c688ee9b8aec969d4a5328d333366f14be87548e5e"
+        },
+        {
+          "positive_rc": 0,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "551a319f3fd916d089e122166cd40459fafb49f20dc9c4594850aa21be96f0ac"
+        }
+      ],
+      "Debian 13": [
+        {
+          "positive_rc": 0,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "862d21950247210e69236398345944258a4d9fa4bfe66d4ad19ab129f96fbffc"
+        },
+        {
+          "positive_rc": 0,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "b50997d5268c222d8e0d9df2c7fd8931f218eed44e2d9b35864babb6f869e031"
+        }
+      ]
+    },
+    "2281": {
+      "Debian 11": [
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "Debian 13": [
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "joined_form_rc": 0
+        },
+        {
+          "positive_rc": 1,
+          "negative_rc": 0,
+          "verified": false,
+          "positive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "joined_form_rc": 0
+        }
+      ]
+    },
+    "4556": {
+      "Debian 11": [
+        {
+          "positive_rc": 0,
+          "negative_rc": 1,
+          "verified": false,
+          "positive_sha256": "fe0f08b62b8977b33cf6ca16b5e125c38dd09e5b85add69d3d4fe17c0d0fa3e5"
+        },
+        {
+          "positive_rc": 0,
+          "negative_rc": 1,
+          "verified": false,
+          "positive_sha256": "a9132cc396f55a4456408240cdbac9ea84ee162f0d1f686528930c19dc150a27"
+        }
+      ],
+      "Debian 13": [
+        {
+          "positive_rc": 0,
+          "negative_rc": 0,
+          "verified": true,
+          "positive_sha256": "fe0f08b62b8977b33cf6ca16b5e125c38dd09e5b85add69d3d4fe17c0d0fa3e5",
+          "padding_changes_observable_output": false
+        },
+        {
+          "positive_rc": 0,
+          "negative_rc": 0,
+          "verified": true,
+          "positive_sha256": "a9132cc396f55a4456408240cdbac9ea84ee162f0d1f686528930c19dc150a27",
+          "padding_changes_observable_output": false
+        }
+      ]
+    }
+  },
+  "models": {
+    "2280": {
+      "student": {
+        "22103": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "0d0ec45ff5696e81fa271d6412cd0acb97f13a349e5a99710292ad495729bbe7",
+          "observations": [
+            {
+              "outcome": "unreviewed-file"
+            },
+            {
+              "outcome": "unreviewed-file"
+            }
+          ],
+          "strict": false
+        },
+        "22109": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "5553271d2e50097e03cbba9855e30e686d14383e7b1627921ddd0ec670b930f4",
+          "observations": [
+            {
+              "outcome": "unreviewed-file"
+            },
+            {
+              "outcome": "unreviewed-file"
+            }
+          ],
+          "strict": false
+        },
+        "22111": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "fd7c820060629e5b3b5144edf4c286c9f1ddbe1e2ef4117dc3064663956e1a2b",
+          "observations": [
+            {
+              "outcome": "unreviewed-file"
+            },
+            {
+              "outcome": "unreviewed-file"
+            }
+          ],
+          "strict": false
+        }
+      },
+      "qwen": {
+        "22103": {
+          "ended": true,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "b2373b494fb0ec9bb5ef91c7d482bb553958177b466ea5022b27b8c44ea28297",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        },
+        "22109": {
+          "ended": false,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "observations": [
+            {
+              "outcome": "truncated"
+            },
+            {
+              "outcome": "truncated"
+            }
+          ],
+          "strict": false
+        },
+        "22111": {
+          "ended": false,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "observations": [
+            {
+              "outcome": "truncated"
+            },
+            {
+              "outcome": "truncated"
+            }
+          ],
+          "strict": false
+        }
+      },
+      "deepseek": {
+        "22103": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "53334e28b40379edf15ccb16b4dfa523eb4c814225d619769d16be33b447837f",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        },
+        "22109": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "48e09c298042c16791ef917ad6e2e9783cb4b762d8007b66354ddabe1ccb51e9",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        },
+        "22111": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "9ae285c89fe598a44b697713da54e55570e81f9c19dbb020a0a3d130d5a1e37b",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "<rules_file>",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "<rules_file>",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        }
+      }
+    },
+    "2281": {
+      "student": {
+        "22103": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "1a9c072b8ce227e69112a19d2756ae2a665ab2b8a895ada4c5260569e83d8494",
+          "observations": [
+            {
+              "outcome": "unreviewed-file"
+            },
+            {
+              "outcome": "unreviewed-file"
+            }
+          ],
+          "strict": false
+        },
+        "22109": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "6f6e39b588e371601a0b21a8edc5f58ac6fa7dd40c9c3c8688bdec77c9d423f6",
+          "observations": [
+            {
+              "outcome": "unreviewed-file"
+            },
+            {
+              "outcome": "unreviewed-file"
+            }
+          ],
+          "strict": false
+        },
+        "22111": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "d4f161b85818302f7345cb643882ad08c9c1e6b38823de4e717fcc9f112dd03f",
+          "observations": [
+            {
+              "outcome": "unreviewed-file"
+            },
+            {
+              "outcome": "unreviewed-file"
+            }
+          ],
+          "strict": false
+        }
+      },
+      "qwen": {
+        "22103": {
+          "ended": true,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "16b17687cbca414e16e800b8885a28d633750920fadb206cf923e5fa556e6588",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "<rules-file>",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "<rules-file>",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        },
+        "22109": {
+          "ended": true,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "2b7bd07cf410791c3d49cb85636574b8be1dac273205b33859bcca0d16312337",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        },
+        "22111": {
+          "ended": false,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "observations": [
+            {
+              "outcome": "truncated"
+            },
+            {
+              "outcome": "truncated"
+            }
+          ],
+          "strict": false
+        }
+      },
+      "deepseek": {
+        "22103": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "b014f3746f03fa4f99206107a4e2bf72a229afac976bdf0b2667862eebc63fab",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        },
+        "22109": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "093ef60a515de3adbf02aa2436e586806fa4eb9c0ce1c5e19ec8659c2279d8ab",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        },
+        "22111": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "8ca9c16601bf1b8797574fac2294ad804b3bce5d25aae30847424e58bb8aeee1",
+          "observations": [
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            },
+            {
+              "outcome": "unspecified-rule-filename",
+              "execution_rc": 0,
+              "matches": null,
+              "explicit": true,
+              "placeholder": "RULES_FILE",
+              "after_binding_fixture": true
+            }
+          ],
+          "strict": false
+        }
+      }
+    },
+    "4556": {
+      "student": {
+        "22103": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "357125aaa3c3ab4779317b2691731ace6400763cd04ace3b3b666c94e531121c",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        },
+        "22109": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "c28432693c51465675823eff6cb60ddaf1769e62b034883284e6118597061f42",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        },
+        "22111": {
+          "ended": true,
+          "model": "Qwen/Qwen3-8B (CPU BF16)",
+          "visible_sha256": "df4d3b24ada5e07916b716248e1c30546fce0c486ce587243fe15b33c03d6a5c",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        }
+      },
+      "qwen": {
+        "22103": {
+          "ended": true,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "0cb86fe5539619fe405c2935d554363ff440b56b78dce363987e360781dbe0fa",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        },
+        "22109": {
+          "ended": true,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "3f66e184795faec743117ad824f40078a8dc7de46e37c0827f2a944961c9b867",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        },
+        "22111": {
+          "ended": true,
+          "model": "Qwen/Qwen3.8-27B-FP8",
+          "visible_sha256": "b27dd04cf1440005abe39832bd1dd6340800c73757abeedcb56ce58be72f3bf4",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        }
+      },
+      "deepseek": {
+        "22103": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "6ca5fff5b58514ad50729c55753df4e8d1c8bf7942f61a336b2690d642de1b17",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        },
+        "22109": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "ce377c47ee2d924ae69df3700018fa54842e22a8be3c9f21d688450c1e26e0c0",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        },
+        "22111": {
+          "ended": true,
+          "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "visible_sha256": "d492b5201e6db82fde3a68afed1e438b508c23f5f7164ee74020781a1708612e",
+          "observations": [
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            },
+            {
+              "outcome": "pass",
+              "execution_rc": 0,
+              "matches": true,
+              "explicit": true,
+              "placeholder": null,
+              "after_binding_fixture": null
+            }
+          ],
+          "strict": true
+        }
+      }
+    }
+  },
+  "archives": {
+    "hashrat_1.25+ds-1_amd64.deb": "dc3f63e57455846f7bc6c5828d02be6651113ea543deffefa627b6d53a55e629",
+    "libapparmor1_4.1.0-1_amd64.deb": "4158976c77038b93021967f425b4cc505df18c4f5e3f444732399e7ed4af4419",
+    "libjansson4_2.14-2+b3_amd64.deb": "60707a62fe6c1228c3389b12a13ca4efd76defc5532473e547a29e99cf7d2a6e",
+    "libmagic-mgc_1%3a5.46-5_amd64.deb": "1368da7c4c7dd10fb2f9ee3ed8a70801650c0c1d249a4076af15e2ddfbb14b46",
+    "libmagic1t64_1%3a5.46-5_amd64.deb": "53f653873216b135570b42c423ea93825c008ac464780b4578e80ee424237a4e",
+    "libpng16-16t64_1.6.48-1+deb13u6_amd64.deb": "0f8034d1c2547760430c81e8d87e5d6acd533a3493c80cf76dbecd0343b6773c",
+    "libqrencode4_4.1.1-2_amd64.deb": "67607d8b6f03707abc388bc946c5e86ef9a9a415c26f765005ec6c71fd5211ed",
+    "libyara10_4.5.2-1_amd64.deb": "fcb41d8e1aaf6fffece2f40f71aff95f1892e26aeb6c40a6e7b07cc760c80e3c",
+    "qrencode_4.1.1-2_amd64.deb": "ddbebcdc0fc9308bb53816ccd533f8014e1a9b3709f2d4e363c98a5b2b21a521",
+    "sudo_1.9.16p2-3+deb13u5_amd64.deb": "fadefd6a81efae46d0fc5ba4299738a7335e53fd19e0c7bff1265b76c04efd50",
+    "yara_4.5.2-1_amd64.deb": "29bf4eae41a321d9d5bbb779a109626b94ace47694d4596319c3be868aedb4e6"
+  },
+  "jobs": [
+    {
+      "job": "miw113-local-toolref23",
+      "submitted_at": "2026-11-23T11:49:24.896991+00:00",
+      "start": "2026-11-23T11:49:24Z",
+      "end": "2026-11-23T11:49:44Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "512Mi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-offline-rule-ref23",
+      "submitted_at": "2026-11-23T11:51:40.171584+00:00",
+      "start": "2026-11-23T11:51:39Z",
+      "end": "2026-11-23T11:52:01Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "2Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-offline-rule-ref23-mirror",
+      "submitted_at": "2026-11-23T12:08:24.543008+00:00",
+      "start": "2026-11-23T12:08:24Z",
+      "end": "2026-11-23T12:08:35Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "2Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-rule-screen23-cpu",
+      "submitted_at": "2026-11-23T12:10:00.148048+00:00",
+      "start": "2026-11-23T12:09:59Z",
+      "end": "2026-11-23T12:32:32Z",
+      "resources": {
+        "cpu": "12",
+        "memory": "40Gi",
+        "ephemeral-storage": "25Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-rule-screen23-grade",
+      "submitted_at": "2026-11-23T12:32:47.445225+00:00",
+      "start": "2026-11-23T12:32:47Z",
+      "end": "2026-11-23T12:33:01Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "2Gi"
+      },
+      "released": true
+    }
+  ],
+  "withdrawn_before_execution": true
+}

@@ -1,0 +1,963 @@
+{
+  "training_source": "sample_6137",
+  "sources": {
+    "sample_6402": {
+      "prompt_sha256": "6234ea012f81f1e15c73434e614b33c99c6c119b79295ed9b91c1c7608d3aec3",
+      "models": {
+        "student": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "e2df58a016496c4a2641ea546b081ddec965fbf3039af2a60a8b0e10bf51fc4b",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "8d6851bbb2fd834795f7cf934cd5aadbd7c306a0c337f116856b9d113357c2a7",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22111": {
+            "results": [
+              "unreviewed",
+              "unreviewed"
+            ],
+            "strict": false,
+            "visible_sha256": "ee8085ad3aa5636ff73c2fff10f1c59529d7e603496c0297f806f4a6f262405c",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              null,
+              null
+            ]
+          }
+        },
+        "A64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "51b88364d618e15307cc272c353aad72ad718fc8d7b34f003965c0cbe3fc1a9b",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "51b88364d618e15307cc272c353aad72ad718fc8d7b34f003965c0cbe3fc1a9b",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "898afe4917d10b075914b15f096fdc4bd3c1aecd53456070c19375a2ef2bc3a7",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          }
+        },
+        "B64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "0169153e26a69211ceeec9e698f8d83e2a71733a884e9a753969e0a2b06b8192",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "2f3e6bd238abe4c0bbb70a877405637fb1e499b6205dc23e50db974b93cd59e4",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22111": {
+            "results": [
+              "unreviewed",
+              "unreviewed"
+            ],
+            "strict": false,
+            "visible_sha256": "58c86272b743e65507a247874f50923ef699aa5071e507cc46d22182ab3a06e1",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              null,
+              null
+            ]
+          }
+        },
+        "C64": {
+          "22103": {
+            "results": [
+              "unreviewed",
+              "unreviewed"
+            ],
+            "strict": false,
+            "visible_sha256": "f5101a6f5ce783edc86cdb77f6eacc60bc15ce276c916b5f8da50de72144862a",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              null,
+              null
+            ]
+          },
+          "22109": {
+            "results": [
+              "unreviewed",
+              "unreviewed"
+            ],
+            "strict": false,
+            "visible_sha256": "08cfd91f613c510ceb04a72feb8bd38570368cbaba4343febe6567016c4a1812",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              null,
+              null
+            ]
+          },
+          "22111": {
+            "results": [
+              "unreviewed",
+              "unreviewed"
+            ],
+            "strict": false,
+            "visible_sha256": "e29ecc4d35e6d4420311ee9c0307b75f145888e048f6c7a0c6f536e8556b73e3",
+            "truncated": false,
+            "model": "Qwen3-8B",
+            "literal_only_fields": [
+              null,
+              null
+            ]
+          }
+        },
+        "qwen": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "2bb58751d714f784ee8042dbec58f3f6443eab4ed35aefcc9d819a579966b642",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "5e765d173a91ded13d08e6815fc66a2d8c97310a8dcfe71830928031390f6453",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "ce0caf91d572d5c801598d2757356aca32bf871ca4d50ee6d8fe90983ef487a4",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "935c92a2d2f30f76bc03a7cc3fbc7fcacc61f0193e76aac78ac7901fd4a8c6a3",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "9274af8c61cc089ddeef47ddba625cbbd287a12c3b8df6eb43a636af67193f13",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "literal_only_fields": [
+              false,
+              false
+            ]
+          },
+          "22111": {
+            "results": [
+              "different-output",
+              "different-output"
+            ],
+            "strict": false,
+            "visible_sha256": "ffe3be58275ee6409f307fb02b161f199b0ae94cca6a227a2d4787840875a8ad",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "literal_only_fields": [
+              true,
+              true
+            ]
+          }
+        }
+      }
+    },
+    "sample_7538": {
+      "prompt_sha256": "8dc26842b8f0cb13be67eb47a2f814162883a0b1015aae687d078222b5d26c70",
+      "models": {
+        "student": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "a8adedef36ebc4814a14dd9bf764605394ee70c740390531652424e842df1c7e",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "ff1bc5efd6c06d7125d149232ba6d17974019a37e6ab4aedd2bc6b452b5f4842",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "635b900a2d236428dce210cdf90cbf24e4d5b371f8abf50d0825e6470df98a0a",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "A64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "397f7200ba82114cf62282302ec7befab2af07d34a752c76a6897e5153c54dac",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "744570e5dc9cad5714bd51c7a4a5c97d84dc0851a40465adc2afc34146bec216",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "73b48afa3491acefdf776f91d327dc8ccf4e61de6c50cd1539fb92e0e639a97b",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "B64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "5887d89ddb15712c537c85dd0d5593f3151da2f1931268436eba6a3523b0a0b4",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "524ae63998814644a27fb7edd2d1550e6ab466d27e87725c675e073837b5519d",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "a86dc92ebf903be919b716d5c037d28dabb87d2f911e9a690008ff639eb6e8e9",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "C64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "6de51801ce96e1ec2793e249fdefbe01fc82474cf627a6aaa7dbf87a012c7cf9",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "0ec25aa7490e4442eaff4952ae9c409b043670bccfc8f5e1eaded6a8b42cf752",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "d0360f6d258c80e3ebb0e36d8c502d571be3992aaf429c35a1441c1c32496017",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "qwen": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "cee9845edd23133936a6b944c14c4e91be955477c2c290a35e3b137963f8587f",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "cee9845edd23133936a6b944c14c4e91be955477c2c290a35e3b137963f8587f",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "5e409be0a0332f6986adb677964d597b0cadd1f61666b922e6f97685634984e4",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8"
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "7047aab71c2195dc64e9b1408b1d6f755a8e5c33979c2c921d8d0f5711d4e35c",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "230fa283547f7ef4c20e6a5fb3529f8fde2a806d8b2387b6c77546e5a188a758",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "fbe46c90bf1131acbf31a22d3405322609ef3d7742e2235fb8f26416a056a0ef",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          }
+        }
+      }
+    },
+    "sample_7395": {
+      "prompt_sha256": "e7dcd473bbaacaafaaa70c00a55d596e6775c17ff0a4f9b253e39a3e1cc879b2",
+      "models": {
+        "student": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "aa38d1e1924e8c3b0e9d16ed1dd5f79538ec71a8819d65aa7abe4dd6c356d29b",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "8a15b702a8e92669ddef89f2c9042615d6fa7e0842a82aa7235a38b7633b848b",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "632f06dfebdfad498c77f5252623440515e171464bc6310c7c11cb3ae71a9893",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "A64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "7c6cbd7753f1d85b937731440a0d62c7f848f7f08004055e3f77c45652b0f6dc",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "54f766c2a8efb7143a480983a6682bef69e3e37d267b779fbf5cc95a5abbf607",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "54f766c2a8efb7143a480983a6682bef69e3e37d267b779fbf5cc95a5abbf607",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "B64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "ee1d2c5437f1259c65d8b93f1035b52902255e7332cf86155aa9267407c9b087",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "530b813df1a75c05070c1cd8cdf08d1bb1bfad18a86c3fa5e2074c9ffb7ba314",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "unreviewed",
+              "unreviewed"
+            ],
+            "strict": false,
+            "visible_sha256": "fbfab2705d27e84f0860a2ef1504253830729b6b53147f709693fbaab4513d21",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "C64": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "349a30c4ac156ac2c0b40b7baac40eb3bb136e45c8fc78e7d47deced734de625",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "77360ebc649087fd5abb4104a10c0892dfe4abf718b0e68ad7102b2506297ab9",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "16a01507e4b95931b6127be6f7864fc8aca81454a12ff88e3dce14c05206c924",
+            "truncated": false,
+            "model": "Qwen3-8B"
+          }
+        },
+        "qwen": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "0636db629c6e4e6441612006dc68b7ff72315fa6530f52911ee9d67952e436d5",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "021de6e9b01d12c603db7d0002661613016e8e3bbb5582feed2f23d57426ee07",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "e3f637a1a7d5c8b2cdb6aa38d1bca83802060240fb8910405942a768564b3697",
+            "truncated": false,
+            "model": "Qwen/Qwen3.8-27B-FP8"
+          }
+        },
+        "deepseek": {
+          "22103": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "9ced49942b2945216fb3a6b9553410c63d0c8ed00bb24ae208bf7867238b936b",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          },
+          "22109": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "2beb448232c311c4ea25a714d5d7b54b7977ea3af14004fd71f0bdc3d9d1dd2e",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          },
+          "22111": {
+            "results": [
+              "pass",
+              "pass"
+            ],
+            "strict": true,
+            "visible_sha256": "92bc89d90ea21856f9342e8075bbc5fd8e55d3b92346d6dce1740ee9b9d10921",
+            "truncated": false,
+            "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          }
+        }
+      }
+    }
+  },
+  "calibration": {
+    "7279": {
+      "tool": "llvm-bcanalyzer",
+      "positive_hashes": [
+        "de069d12fadfb662bb1f6790be25861007ce02480a9306fa07169386cc8a5e05",
+        "de069d12fadfb662bb1f6790be25861007ce02480a9306fa07169386cc8a5e05"
+      ],
+      "passed": [
+        false,
+        false
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    "6402": {
+      "tool": "blkid",
+      "positive_hashes": [
+        "d8dbe1f4e1327177cf9a438882205d79fffb002f607e867375ba56dd4137415a",
+        "8783d0f9207add8222e0e1b0f23ede3ffa7b2e03f9ad86dca7c7ff8e80ae0e34"
+      ],
+      "passed": [
+        true,
+        true
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    "7259": {
+      "tool": "llvm-addr2line",
+      "positive_hashes": [
+        "b9c2a72a562c0b069a78974ab3afe0d0f338ecbf573f4f80aee3ea6cadd2c8a7",
+        "b9c2a72a562c0b069a78974ab3afe0d0f338ecbf573f4f80aee3ea6cadd2c8a7"
+      ],
+      "passed": [
+        false,
+        false
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    "6404": {
+      "tool": "blkid",
+      "positive_hashes": [
+        "617acb19a7eb1221cb1a74a4b188667081e81860fac725854bd75f9c7c294eb7",
+        "00e1e42fef8ece899f0f10d1db9add81ea29dd4a0115a39dada7588f78d61273"
+      ],
+      "passed": [
+        false,
+        false
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    "7282": {
+      "tool": "llvm-bcanalyzer",
+      "positive_hashes": [
+        "fb82dd323f98cff97caa136131a22245758a1fb97e2aa61c312f23c4ea8d5133",
+        "fb82dd323f98cff97caa136131a22245758a1fb97e2aa61c312f23c4ea8d5133"
+      ],
+      "passed": [
+        false,
+        false
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    "7538": {
+      "tool": "sanstats",
+      "positive_hashes": [
+        "5d73ce2facb23743722e2666a3c8781959d2ea562e80ee2f63920d7c68f631dd",
+        "2bc1337b4bb0dc8ac594d313b51adf01298572727430eda2b8e8f305b0a01149"
+      ],
+      "passed": [
+        true,
+        true
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    "7395": {
+      "tool": "llvm-mca",
+      "positive_hashes": [
+        "3e644f56e58d6960dc022daab67e5e0b5dc1576544b2a8d8c5f9dca868f4af7c",
+        "b03aeb7c7e6a64606e1d83c08f64ac2a5968c151884ffb640411fc9f3c831ecd"
+      ],
+      "passed": [
+        true,
+        true
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    "7539": {
+      "tool": "sanstats",
+      "positive_hashes": [
+        "5d73ce2facb23743722e2666a3c8781959d2ea562e80ee2f63920d7c68f631dd",
+        "2bc1337b4bb0dc8ac594d313b51adf01298572727430eda2b8e8f305b0a01149"
+      ],
+      "passed": [
+        true,
+        true
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    }
+  },
+  "seeds": [
+    22103,
+    22109,
+    22111
+  ],
+  "adapters": {
+    "base": null,
+    "A64": {
+      "folder": "miw113-json-triad-a6e70841c63c9b5d",
+      "weights": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255"
+    },
+    "B64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3"
+    },
+    "C64": {
+      "folder": "miw113-json-triad-8242cd82b918a98e",
+      "weights": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d"
+    }
+  },
+  "jobs": [
+    {
+      "job": "miw113-local-ref23-a",
+      "submitted_at": "2026-11-23T11:33:35.062147+00:00",
+      "start": "2026-11-23T11:33:34Z",
+      "end": "2026-11-23T11:33:50Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-local-ref23-b",
+      "submitted_at": "2026-11-23T11:35:34.728807+00:00",
+      "start": "2026-11-23T11:35:34Z",
+      "end": "2026-11-23T11:35:53Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-local-ref23-c",
+      "submitted_at": "2026-11-23T11:36:54.648809+00:00",
+      "start": "2026-11-23T11:36:54Z",
+      "end": "2026-11-23T11:37:02Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-address-ref23",
+      "submitted_at": "2026-11-23T11:44:09.710971+00:00",
+      "start": "2026-11-23T11:44:09Z",
+      "end": "2026-11-23T11:44:31Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-address-ref23-dwarf",
+      "submitted_at": "2026-11-23T11:45:20.191978+00:00",
+      "start": "2026-11-23T11:45:19Z",
+      "end": "2026-11-23T11:46:00Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-schema-screen23-bf16",
+      "submitted_at": "2026-11-23T12:38:57.923818+00:00",
+      "start": "2026-11-23T12:38:57Z",
+      "end": "2026-11-23T12:48:08Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "26Gi",
+        "ephemeral-storage": "25Gi",
+        "nvidia.com/gpu": "1"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-schema-screen23-grade",
+      "submitted_at": "2026-11-23T12:48:14.064837+00:00",
+      "start": "2026-11-23T12:48:13Z",
+      "end": "2026-11-23T12:48:38Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    }
+  ],
+  "address_fixture_recheck": {
+    "0": {
+      "publisher": {
+        "rc": 0,
+        "out": "fixture.c:3\n2  : \n3 >: int anchor(void) {\n4  :     return 17;\n",
+        "err": ""
+      },
+      "joined": {
+        "rc": 0,
+        "out": "fixture.c:3\n2  : \n3 >: int anchor(void) {\n4  :     return 17;\n",
+        "err": ""
+      },
+      "simple": {
+        "rc": 0,
+        "out": "/scratch/0/fixture.c:3\n",
+        "err": ""
+      },
+      "simple_context": {
+        "rc": 0,
+        "out": "/scratch/0/fixture.c:3\n2  : \n3 >: int anchor(void) {\n4  :     return 17;\n",
+        "err": ""
+      },
+      "joined_llvm_format": {
+        "rc": 0,
+        "out": "fixture.c:3:0\n2  : \n3 >: int anchor(void) {\n4  :     return 17;\n\n",
+        "err": ""
+      },
+      "gnu": {
+        "rc": 0,
+        "out": "/scratch/0/fixture.c:3\n",
+        "err": ""
+      }
+    },
+    "1": {
+      "publisher": {
+        "rc": 0,
+        "out": "fixture.c:3\n2  : \n3 >: int anchor(void) {\n4  :     return 18;\n",
+        "err": ""
+      },
+      "joined": {
+        "rc": 0,
+        "out": "fixture.c:3\n2  : \n3 >: int anchor(void) {\n4  :     return 18;\n",
+        "err": ""
+      },
+      "simple": {
+        "rc": 0,
+        "out": "/scratch/1/fixture.c:3\n",
+        "err": ""
+      },
+      "simple_context": {
+        "rc": 0,
+        "out": "/scratch/1/fixture.c:3\n2  : \n3 >: int anchor(void) {\n4  :     return 18;\n",
+        "err": ""
+      },
+      "joined_llvm_format": {
+        "rc": 0,
+        "out": "fixture.c:3:0\n2  : \n3 >: int anchor(void) {\n4  :     return 18;\n\n",
+        "err": ""
+      },
+      "gnu": {
+        "rc": 0,
+        "out": "/scratch/1/fixture.c:3\n",
+        "err": ""
+      }
+    }
+  }
+}

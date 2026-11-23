@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 23, 2026 — What did the student learn from a teacher explanation?
+
+All five Qwen3-8B training conditions passed the original database question in **6/6** draws. On three variants of that question, repeated across three training seeds, answer-only SFT passed **17/18**. Adding a 59-token target explaining why the original question required suppressing field defaults gave **8/18**. When the request explicitly reversed that condition, answer-only passed **6/6** and the explanation arm **0/6**. Changing just the defaults option restored correct execution in four of those six failures.
+
+On three further KaliBench TRAIN questions chosen before generating the student outputs, the previous answer-only checkpoint passed **9/9**, the base **8/9**, the Qwen trajectory checkpoint **7/9**, and the DeepSeek trajectory checkpoint **6/9**. Each question had three sampled responses and two native test fixtures. These counts measure diagnostic transfer on three sources. The official test split remains sealed.
+
+[Chinese report](results/schema-factor-2026-11-23/RESULT_ZH.md) · [Results figure](results/schema-factor-2026-11-23/diagnostics.png) · [Frozen protocol](results/schema-factor-2026-11-23/PROTOCOL.md) · [Per-draw audit](results/schema-factor-2026-11-23/audit.py)
+
 ## November 22, 2026 — Single-example recall and cross-tool transfer
 
 Qwen3-8B reproduced the full Qwen and DeepSeek teacher trajectories on the original training prompt at step 64 (1,027 and 430 tokens). On two other previously screened TRAIN questions, the DeepSeek-trained checkpoint passed **5/6** strict checks, the base model **2/6**, the Qwen-trained checkpoint **1/6**, and answer-only **0/6**. The DeepSeek gain came entirely from one LLVM question where it supplied the missing executable in all three draws. Each draw was checked on two files. These are diagnostic results from one training source and one training seed.

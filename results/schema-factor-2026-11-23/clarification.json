@@ -1,0 +1,430 @@
+{
+  "source": "sample_2280",
+  "additional_sentence": "The rule file is rules.yar.",
+  "prompt_sha256": {
+    "original": "478d9a6fed657bcd8cae88d3a8cc8059290f4573847b23f6a437ef74703cd577",
+    "named_file": "c51d0d8ab1b0fd6e3bef93e4ec3b68150606e13e0e065e308b9c58f2ceb541e4"
+  },
+  "draws": {
+    "original/student": {
+      "22103": {
+        "model": "Qwen/Qwen3-8B (CPU BF16)",
+        "visible_sha256": "d79fb6e81b401309bbac16d8869780b2542f058686ae2fa5967405330cc7cb72",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "unreviewed-file"
+          },
+          {
+            "outcome": "unreviewed-file"
+          }
+        ],
+        "strict": false
+      },
+      "22109": {
+        "model": "Qwen/Qwen3-8B (CPU BF16)",
+        "visible_sha256": "ba4065d335a8c90fd7399e551771474e76c84946a26e60cd9d93f074ad6b367b",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "unreviewed-file"
+          },
+          {
+            "outcome": "unreviewed-file"
+          }
+        ],
+        "strict": false
+      },
+      "22111": {
+        "model": "Qwen/Qwen3-8B (CPU BF16)",
+        "visible_sha256": "464f0f274fbd8e7bf77545a51ce59967e1e53bad6ad20a7d168a06c1f491d59e",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "unreviewed-file"
+          },
+          {
+            "outcome": "unreviewed-file"
+          }
+        ],
+        "strict": false
+      }
+    },
+    "original/qwen": {
+      "22103": {
+        "model": "Qwen/Qwen3.8-27B-FP8",
+        "visible_sha256": "b2373b494fb0ec9bb5ef91c7d482bb553958177b466ea5022b27b8c44ea28297",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "RULES_FILE",
+            "after_binding_fixture": true
+          },
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "RULES_FILE",
+            "after_binding_fixture": true
+          }
+        ],
+        "strict": false
+      },
+      "22109": {
+        "model": "Qwen/Qwen3.8-27B-FP8",
+        "visible_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "truncated": true,
+        "native": [
+          {
+            "outcome": "truncated"
+          },
+          {
+            "outcome": "truncated"
+          }
+        ],
+        "strict": false
+      },
+      "22111": {
+        "model": "Qwen/Qwen3.8-27B-FP8",
+        "visible_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "truncated": true,
+        "native": [
+          {
+            "outcome": "truncated"
+          },
+          {
+            "outcome": "truncated"
+          }
+        ],
+        "strict": false
+      }
+    },
+    "original/deepseek": {
+      "22103": {
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "visible_sha256": "53334e28b40379edf15ccb16b4dfa523eb4c814225d619769d16be33b447837f",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "RULES_FILE",
+            "after_binding_fixture": true
+          },
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "RULES_FILE",
+            "after_binding_fixture": true
+          }
+        ],
+        "strict": false
+      },
+      "22109": {
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "visible_sha256": "48e09c298042c16791ef917ad6e2e9783cb4b762d8007b66354ddabe1ccb51e9",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "RULES_FILE",
+            "after_binding_fixture": true
+          },
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "RULES_FILE",
+            "after_binding_fixture": true
+          }
+        ],
+        "strict": false
+      },
+      "22111": {
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "visible_sha256": "9ae285c89fe598a44b697713da54e55570e81f9c19dbb020a0a3d130d5a1e37b",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "<rules_file>",
+            "after_binding_fixture": true
+          },
+          {
+            "outcome": "unspecified-rule-filename",
+            "execution_rc": 0,
+            "matches": null,
+            "explicit": true,
+            "placeholder": "<rules_file>",
+            "after_binding_fixture": true
+          }
+        ],
+        "strict": false
+      }
+    },
+    "named_file/student": {
+      "22103": {
+        "model": "Qwen/Qwen3-8B (CPU BF16)",
+        "visible_sha256": "01e3fe76f1c36ffd9e4a07f2d5fdefa62c3c9f8d865d8167173048ab5760bf01",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      },
+      "22109": {
+        "model": "Qwen/Qwen3-8B (CPU BF16)",
+        "visible_sha256": "184293067e1d696209d6e7c0beb0523a21e633e155621e86a48c28be217bc805",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      },
+      "22111": {
+        "model": "Qwen/Qwen3-8B (CPU BF16)",
+        "visible_sha256": "487148e017a4ab14a2e92bd1469cf44040250c04f858e0087725d7224a089b94",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      }
+    },
+    "named_file/qwen": {
+      "22103": {
+        "model": "Qwen/Qwen3.8-27B-FP8",
+        "visible_sha256": "8f74c95fa0cb777de225423d71d7fb6c840226e000e081147b8fb928575ac225",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      },
+      "22109": {
+        "model": "Qwen/Qwen3.8-27B-FP8",
+        "visible_sha256": "3d58a1032a58866ae4aa75af4968e56243098d18076f90ddc61fab25bb55bb88",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      },
+      "22111": {
+        "model": "Qwen/Qwen3.8-27B-FP8",
+        "visible_sha256": "3e3e3df41ac7ba42e41f12b71b892163d5ade691ef2d9b1dfa1ee8a4875ff10e",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      }
+    },
+    "named_file/deepseek": {
+      "22103": {
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "visible_sha256": "9bc48f93db10984d8b6b183d897ffd2bca5387a8ac95322b6b6c40d6bd1a2a84",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      },
+      "22109": {
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "visible_sha256": "97cb151145b14b6e15886daaa4e90eb4edaab4360082c286f7eae5bbd929ddeb",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      },
+      "22111": {
+        "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "visible_sha256": "5593b99cc952abf1ee7bd99aedb1eda8d91be807c61830e9fa85407ba5345126",
+        "truncated": false,
+        "native": [
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          },
+          {
+            "outcome": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "explicit": true,
+            "placeholder": null,
+            "after_binding_fixture": null
+          }
+        ],
+        "strict": true
+      }
+    }
+  },
+  "jobs": [
+    {
+      "job": "miw113-rule-clarify23-cpu",
+      "submitted_at": "2026-11-23T12:32:45.859893+00:00",
+      "start": "2026-11-23T12:32:45Z",
+      "end": "2026-11-23T12:59:55Z",
+      "resources": {
+        "cpu": "12",
+        "memory": "40Gi",
+        "ephemeral-storage": "25Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-rule-clarify23-grade",
+      "submitted_at": "2026-11-23T13:00:12.051927+00:00",
+      "start": "2026-11-23T13:00:18Z",
+      "end": "2026-11-23T13:00:33Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "2Gi"
+      },
+      "released": true
+    }
+  ]
+}

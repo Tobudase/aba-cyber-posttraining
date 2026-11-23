@@ -1,0 +1,66 @@
+{
+  "previous_model_screened": [
+    "1701",
+    "2632",
+    "2634",
+    "6106",
+    "6115",
+    "6118",
+    "6137",
+    "6139",
+    "6144",
+    "6234",
+    "6241",
+    "6442",
+    "6443",
+    "6539",
+    "6643",
+    "6666",
+    "6684",
+    "7106",
+    "7109",
+    "7122",
+    "7138",
+    "7139",
+    "7140",
+    "7293",
+    "7369",
+    "7371",
+    "7376",
+    "7543",
+    "7546"
+  ],
+  "new_model_screened": {
+    "6402": {
+      "original_student": 2,
+      "qwen_teacher": 3,
+      "deepseek_teacher": 2,
+      "admission": "Original student passed at least two of its three draws; the repeated-error requirement was not met."
+    },
+    "7538": {
+      "original_student": 3,
+      "qwen_teacher": 3,
+      "deepseek_teacher": 3,
+      "admission": "Original student passed at least two of its three draws; the repeated-error requirement was not met."
+    },
+    "7395": {
+      "original_student": 3,
+      "qwen_teacher": 3,
+      "deepseek_teacher": 3,
+      "admission": "Original student passed at least two of its three draws; the repeated-error requirement was not met."
+    }
+  },
+  "primary_total": 32,
+  "qualified_sources": [
+    "7293",
+    "6137",
+    "6118"
+  ],
+  "required_sources": 8,
+  "additional_diagnostic_sources": [
+    "2280",
+    "2281",
+    "4556"
+  ],
+  "note": "The two under-specified rule prompts and the format-conversion probe are supplementary. Variant prompts and files do not add independent sources. Source 6118 concerns output formatting."
+}

@@ -1,0 +1,1195 @@
+{
+  "job": {
+    "job": "miw113-schema-option-canon23",
+    "submitted_at": "2026-11-23T12:39:41.048416+00:00",
+    "start": "2026-11-23T12:39:40Z",
+    "end": "2026-11-23T12:39:56Z",
+    "resources": {
+      "cpu": "1",
+      "memory": "1Gi",
+      "ephemeral-storage": "1Gi"
+    },
+    "released": true
+  },
+  "results": {
+    "3407-answer_only": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3407-background": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "incomplete"
+        },
+        "opposite": {
+          "status": "incomplete"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "incomplete"
+        },
+        "opposite": {
+          "status": "incomplete"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3407-rule": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "incomplete"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "incomplete"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3407-background_copy": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 5,
+          "forms": {
+            "literal": false,
+            "spelling": true,
+            "condition": false,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 5,
+          "forms": {
+            "literal": false,
+            "spelling": true,
+            "condition": false,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 5,
+          "forms": {
+            "literal": false,
+            "spelling": true,
+            "condition": false,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3407-rule_copy": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 0,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": false,
+            "both": false
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "incomplete"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3413-answer_only": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3413-background": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "incomplete"
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3413-rule": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3413-background_copy": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3413-rule_copy": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "incomplete"
+        },
+        "opposite": {
+          "status": "outside-replay"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "outside-replay"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3433-answer_only": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3433-background": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3433-rule": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "no-command"
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": false,
+            "spelling": false,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "outside-replay"
+        }
+      }
+    },
+    "3433-background_copy": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    },
+    "3433-rule_copy": {
+      "11341": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "incomplete"
+        },
+        "opposite": {
+          "status": "incomplete"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      },
+      "11351": {
+        "original": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "same": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        },
+        "opposite": {
+          "status": "incomplete"
+        },
+        "distractor": {
+          "status": "replayed",
+          "underscore_tokens": 1,
+          "forms": {
+            "literal": true,
+            "spelling": true,
+            "condition": true,
+            "both": true
+          }
+        }
+      }
+    }
+  },
+  "spelling_rule": "Use the spelling documented by the installed reader, including its literal --no-not_empty option."
+}

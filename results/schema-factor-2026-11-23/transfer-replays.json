@@ -1,0 +1,186 @@
+{
+  "job": {
+    "job": "miw113-tag-argument-check23",
+    "submitted_at": "2026-11-23T12:49:51.916179+00:00",
+    "start": "2026-11-23T12:49:51Z",
+    "end": "2026-11-23T12:50:15Z",
+    "resources": {
+      "cpu": "1",
+      "memory": "1Gi",
+      "ephemeral-storage": "1Gi"
+    },
+    "released": true
+  },
+  "results": {
+    "6402": {
+      "student/22111": {
+        "raw": [
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          },
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          }
+        ],
+        "split_upper": [
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          },
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          }
+        ]
+      },
+      "B64/22111": {
+        "raw": [
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          },
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          }
+        ],
+        "split_upper": [
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          },
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          }
+        ]
+      },
+      "C64/22103": {
+        "raw": [
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          },
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          }
+        ],
+        "split_upper": [
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          },
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          }
+        ]
+      },
+      "C64/22109": {
+        "raw": [
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          },
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          }
+        ],
+        "split_upper": [
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          },
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          }
+        ]
+      },
+      "C64/22111": {
+        "raw": [
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          },
+          {
+            "status": "different-output",
+            "execution_rc": 0,
+            "matches": false,
+            "literal_only_fields": false
+          }
+        ],
+        "split_upper": [
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          },
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": false
+          }
+        ]
+      }
+    },
+    "7395": {
+      "B64/22111": {
+        "as_input": [
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": null
+          },
+          {
+            "status": "pass",
+            "execution_rc": 0,
+            "matches": true,
+            "literal_only_fields": null
+          }
+        ]
+      }
+    }
+  }
+}

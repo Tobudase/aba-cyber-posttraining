@@ -1,0 +1,129 @@
+{
+  "job": {
+    "job": "miw113-local-rule-filename23",
+    "submitted_at": "2026-11-23T12:33:53.548643+00:00",
+    "start": "2026-11-23T12:33:53Z",
+    "end": "2026-11-23T12:34:06Z",
+    "resources": {
+      "cpu": "1",
+      "memory": "1Gi",
+      "ephemeral-storage": "2Gi"
+    },
+    "released": true
+  },
+  "results": {
+    "2280": {
+      "22103": [
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        },
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        }
+      ],
+      "22109": [
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        },
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        }
+      ],
+      "22111": [
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        },
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        }
+      ]
+    },
+    "2281": {
+      "22103": [
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        },
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        }
+      ],
+      "22109": [
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        },
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        }
+      ],
+      "22111": [
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        },
+        {
+          "outcome": "pass",
+          "execution_rc": 0,
+          "matches": true,
+          "explicit": true,
+          "placeholder": null,
+          "after_binding_fixture": null
+        }
+      ]
+    }
+  },
+  "edit": "Insert one positional operand, rules.yar, immediately before the scan target. Preserve every generated option."
+}

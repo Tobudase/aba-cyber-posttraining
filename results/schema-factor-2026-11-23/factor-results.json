@@ -1,0 +1,3468 @@
+{
+  "source": "sample_6137",
+  "training_seeds": [
+    3407,
+    3413,
+    3433
+  ],
+  "decoding_seeds": [
+    11341,
+    11351
+  ],
+  "steps": [
+    16,
+    32,
+    64
+  ],
+  "primary_step": 64,
+  "cap": 4096,
+  "auxiliary": {
+    "answer_only": "",
+    "background": "This task reads metadata from the local relational database, not rows, while its table structures appear as rendered text.\nThe example concerns a file stored locally on disk. The text output can be read directly after the program has finished reading the file at the end of the run for this local database file.",
+    "rule": "Because some synthetic tables declare field defaults, applying the minimal schema requirement changes the emitted schema by excluding those defaults.\nThe example concerns a file stored locally on disk. The text output can be read directly after the program has finished reading the file at the end of the run for this local database file.",
+    "background_copy": "This task reads metadata from the local relational database, not rows, while its table structures appear as rendered text.\nThe complete command is mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations temp.mdb.",
+    "rule_copy": "Because some synthetic tables declare field defaults, applying the minimal schema requirement changes the emitted schema by excluding those defaults.\nThe complete command is mdb-schema --no-drop-table --no-not-null --no-default-values --no-not_empty --no-comments --no-indexes --no-relations temp.mdb."
+  },
+  "common_aux_tokens": 59,
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "estimand": "Replace topical context with the decisive condition, and neutral filler with one verbatim answer. All four auxiliary segments have the same length. Report within-seed changes for all cells; answer-only is an unbalanced reference.",
+  "endpoint": "Strict fixture pass for the three catalog probes at step 64; original separately. No checkpoint selection.",
+  "prompts": {
+    "original": "1b445314b42265bd4deaaa34cdf2a8eb79e8cabb4f760b98fdd5bb1d1fc074a2",
+    "same": "76f83a1795afa86fa24647ba96b4a82f173f7bd31f128d8aea58496fe4a451f3",
+    "opposite": "c17a145c1a06f9cb0c7c500120af1f4def5c6f0e73a06111e082a7f0e0a95d3f",
+    "distractor": "0aedc28f720760e80677255c9a399549a7121d16368c1a77057cbfe57238277e"
+  },
+  "model": "Qwen/Qwen3-8B@b968826d9c46dd6066d109eabc6255188de91218",
+  "system_sha256": "b5e8b1876746db3782b9019f007e17dba36af09e6227a67b0e6f85224ac8b8e1",
+  "job_records": [
+    {
+      "job": "miw113-schema-factor23-3407",
+      "submitted_at": "2026-11-23T11:30:54.962187+00:00",
+      "start": "2026-11-23T11:30:54Z",
+      "end": "2026-11-23T12:04:19Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "26Gi",
+        "ephemeral-storage": "25Gi",
+        "nvidia.com/gpu": "1"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-schema-factor23-3413",
+      "submitted_at": "2026-11-23T12:04:32.906814+00:00",
+      "start": "2026-11-23T12:04:32Z",
+      "end": "2026-11-23T12:20:40Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "26Gi",
+        "ephemeral-storage": "25Gi",
+        "nvidia.com/gpu": "1"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-schema-factor23-3433",
+      "submitted_at": "2026-11-23T12:20:49.443728+00:00",
+      "start": "2026-11-23T12:20:49Z",
+      "end": "2026-11-23T12:37:43Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "26Gi",
+        "ephemeral-storage": "25Gi",
+        "nvidia.com/gpu": "1"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-schema-factor23-grade",
+      "submitted_at": "2026-11-23T12:37:59.348832+00:00",
+      "start": "2026-11-23T12:37:59Z",
+      "end": "2026-11-23T12:38:21Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-schema-factor23-controls",
+      "submitted_at": "2026-11-23T12:00:54.096268+00:00",
+      "start": "2026-11-23T12:00:53Z",
+      "end": "2026-11-23T12:01:04Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    },
+    {
+      "job": "miw113-schema-factor23-first",
+      "submitted_at": "2026-11-23T12:04:34.169833+00:00",
+      "start": "2026-11-23T12:04:33Z",
+      "end": "2026-11-23T12:04:53Z",
+      "resources": {
+        "cpu": "1",
+        "memory": "1Gi",
+        "ephemeral-storage": "1Gi"
+      },
+      "released": true
+    }
+  ],
+  "training": {
+    "3407": {
+      "device": "NVIDIA A10",
+      "arms": {
+        "answer_only": {
+          "init_sha256": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.5730758309364319,
+                "format": 3.3705625534057617
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 0.00010847397788893431,
+                "format": 0.00022614757472183555
+              },
+              "weights": "fa821a716996be20fa070e9394d9a7a6cd7bb80c8950a4f021b06121448fc754"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 4.5295913878362626e-05,
+                "format": 0.0002527309989091009
+              },
+              "weights": "0eead5077c7d0d08bb111054721e9155eb2213bf1a843746a9a0a21a9fc735d6"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.4608682249672711e-05,
+                "format": 9.675458568381146e-05
+              },
+              "weights": "b93c92691f17aa34252dfdb8f30e7bdeae513028fea38fa81eae21ee59f1d763"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 103,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "fd615a5edbf7834f0868e33c581861b130d7ecc09f6cc0149787b913d0a2f422",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 104,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "caa8ef33b5dd4ddb535f755e680b8bd227fa9179e5234375863c31559b82855c",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 99,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "fb1b61f6b345c6e215182c3fa3b0295d13fa06a6d24dd669b121afdea1e0713d",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 99,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "152b49716097223a7d1dbac63749c1da58da40a839a56b11629e66aa619ef2d6",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 101,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "e780dac4118f826d590f799607d1327088856b35ef112df04e065430b214d9bf",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 104,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "caa8ef33b5dd4ddb535f755e680b8bd227fa9179e5234375863c31559b82855c",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 90,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "6884eb1cb3994f61d82e599bf091df27d4b4b761033f9f9e099719237a5528b9",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 114,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": true,
+                "visible_sha256": "3cbaa1bcc27146562a0a55ed85a47d8282d6e6371fa380227d908a1d1ee10bcf",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "background": {
+          "init_sha256": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.5954363346099854,
+                "format": 0.5737408995628357,
+                "trace": 4.927578926086426
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 0.0007012576097622514,
+                "format": 0.18180184066295624,
+                "trace": 3.1632540225982666
+              },
+              "weights": "2a4e9c5080888093338a6ce3dfcd7c33d97cbc7d60950ff6d7a3d3b64f99949a"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 0.00025856529828161,
+                "format": 0.008325519040226936,
+                "trace": 0.8549748063087463
+              },
+              "weights": "71863dda5d797bcb2213ad4e4a78484b64185c984fed0e7e02e4fc6374670511"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.2549755410873331e-05,
+                "format": 5.9422840422485024e-05,
+                "trace": 7.316821574931964e-05
+              },
+              "weights": "709c2b13f0399bbb012d1ec97b30147bf5c213fa9239c812342bb0807e6d755f"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 154,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "bd96f075e4e27bbb2a161ccbf37de7e34617b82456387adf413a344fcfb89291",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "11b58a908951ab038f02f3eb192697907343c5e81a44a3b860977c1ab182728e"
+              },
+              "opposite": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "11b58a908951ab038f02f3eb192697907343c5e81a44a3b860977c1ab182728e"
+              },
+              "distractor": {
+                "tokens": 115,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "c5a8946b0bfcc0c0d29559498da7de18abeffff411c9cc7de7e0bf3bd88b43cc",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 156,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "82ebcf22ff7a4a5e9df75d0b81ed6630d033331f98b959953c5126d9fbe8dd8e",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "11b58a908951ab038f02f3eb192697907343c5e81a44a3b860977c1ab182728e"
+              },
+              "opposite": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "12812951f9eab994b9b8deeb61a98c2cbd79fa6ea7739168e6d5cae0dc2a146e"
+              },
+              "distractor": {
+                "tokens": 100,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "2a05f634e5b8065379ee7097ce82dd96c67b700201d52d4bc6a3f5aeaca92db3",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "rule": {
+          "init_sha256": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.6364009976387024,
+                "format": 0.46737155318260193,
+                "trace": 5.37579345703125
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 0.004199028946459293,
+                "format": 0.10444962233304977,
+                "trace": 3.5206644535064697
+              },
+              "weights": "15ccbd4b8efd57027f2cd27c3e798e4ab4bd0753371920538ccef3b11bd4d7f4"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 0.00012754004274029285,
+                "format": 0.0012578789610415697,
+                "trace": 1.2284774780273438
+              },
+              "weights": "af74871ea1e52aa9a8ac4226543b7fdf8001277c3de7d2908bfc26ca157812fb"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.7314065189566463e-05,
+                "format": 8.839438669383526e-05,
+                "trace": 9.582902566762641e-05
+              },
+              "weights": "b5a4a4881964cdf1127a89d84e0f769ca6c9591e00b83f80ae1a0cd641d7be1f"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 154,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "05c6ba578553f01bdd15af964d3022330af02090cba6d5f229c707a2549fe69c",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 130,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "824e1941638ec8b4b92b849a86d4315c191952bce54379669938fcae094ccd6e",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "8324f74da0e3fd40b100b7c9ee8fc00e26acf6fc63ff1e67cceb3a1b47d348ea"
+              },
+              "distractor": {
+                "tokens": 125,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "0e4626efade78d3fd712914a8565a67ad2a371a18ec3b343a9ecc090061a4f8c",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 154,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "05c6ba578553f01bdd15af964d3022330af02090cba6d5f229c707a2549fe69c",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 180,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "67054b1be6498f982759621ae2aa7a151f87868848b758b34157328710058f3a",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 129,
+                "ended": true,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "no-unambiguous-command",
+                "auxiliary_exact": false,
+                "visible_sha256": "233639ef31eb431dbd57b11edef2b74ae9f91e12e8608ba0474c8bb214e9fb01"
+              },
+              "distractor": {
+                "tokens": 125,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "85dd72c586ec1e1fedab6b3afc4e25d5fe2de60268062d332654a1f1582253b0",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "background_copy": {
+          "init_sha256": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.16422690451145172,
+                "format": 0.6003437042236328,
+                "trace": 3.2334327697753906
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 4.362073468655581e-06,
+                "format": 0.017293032258749008,
+                "trace": 1.5122125148773193
+              },
+              "weights": "fb8096394a508e4d95135220b5fb2071676e9ee47a953025886d56ed063d0a71"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 1.6924526789807715e-05,
+                "format": 4.94494779559318e-05,
+                "trace": 0.008740386925637722
+              },
+              "weights": "6949784f50f6d25336963bf7f7a70b10c7bf88da94f2a57bd5c0065dc267c46e"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.3078040865366347e-05,
+                "format": 0.00012937681458424777,
+                "trace": 5.167493873159401e-05
+              },
+              "weights": "c80541baac501df27a9121eb17871ebb7d26beb354d82de0b30deda299da50b0"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 131,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "3b514e984bf7674d8e8a77928b03e833aa23438511d2e85d3812f35fa9317e2b",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 138,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "issue": "unreviewed",
+                "argv": [
+                  "mdb-schema",
+                  "--no-drop-table",
+                  "--no-not-null",
+                  "--no_not_empty",
+                  "--no_comments",
+                  "--no_default_values",
+                  "--no_indexes",
+                  "--no_relations",
+                  "catalog.mdb"
+                ],
+                "auxiliary_exact": false,
+                "visible_sha256": "d5b6a0a76412d888bc3a9f2582553b5a890f2687388211905eae83945e62ae70",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              },
+              "opposite": {
+                "tokens": 141,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "9750e8257908c3808e3e02ef79cf73b562b56e00314f0c5219e616f53e9a4f90",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 132,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "33c596b460afc68851139b1994d5b3c42b276a070010ad134e0b000685f9cd05",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 131,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "3b514e984bf7674d8e8a77928b03e833aa23438511d2e85d3812f35fa9317e2b",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 155,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "issue": "unreviewed",
+                "argv": [
+                  "mdb-schema",
+                  "--no-drop-table",
+                  "--no-not-null",
+                  "--no_not_empty",
+                  "--no_comments",
+                  "--no_indexes",
+                  "--no_relations",
+                  "--no_default_values",
+                  "catalog.mdb"
+                ],
+                "auxiliary_exact": false,
+                "visible_sha256": "7bf993fd406080d896a8d0885fe2378e969a8cbd84ef49cf14b1c3bb53ac4e29",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              },
+              "opposite": {
+                "tokens": 130,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "issue": "unreviewed",
+                "argv": [
+                  "mdb-schema",
+                  "--no-drop-table",
+                  "--no-not-null",
+                  "--no_not_empty",
+                  "--no_comments",
+                  "--no_indexes",
+                  "--no_relations",
+                  "--default_values",
+                  "catalog.mdb"
+                ],
+                "auxiliary_exact": false,
+                "visible_sha256": "fda42885175cc2ccbeb8eac3d0c2c90fc0a6039de7180fad1b7e165245d7c35a",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 144,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "22d3f1fcaa296c9324add6076f30bb02d59da7cbf1a9f5f8eac8d69d0d6df8f2",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "rule_copy": {
+          "init_sha256": "0fab01e4b5c57d46442896afdbefd8edd19e88ec8cc4af06503f0da815d11df1",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.17200319468975067,
+                "format": 0.479976087808609,
+                "trace": 3.3766324520111084
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 2.6076152153109433e-06,
+                "format": 0.057634543627500534,
+                "trace": 1.6347335577011108
+              },
+              "weights": "46fbafcf678403351da326a1eca7e6ab5897979d298a8da682f556a7127a0867"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 2.8743759685312398e-05,
+                "format": 0.0001011817148537375,
+                "trace": 0.18210911750793457
+              },
+              "weights": "4b34211f3aa277bc5517d052186f179768d4306ce8ded80fce9adc6abda3dc9e"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 2.21717418753542e-05,
+                "format": 6.639727507717907e-05,
+                "trace": 0.0001016736714518629
+              },
+              "weights": "50877392b979fe31392fe275fd5fc0bd6a87847c939b790e4fa2d3480ccb7092"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 124,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "8f1b91810aaf6e97d00fc4b4f37c089a79c261a19f8facd7c11e62260e209f67",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 124,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "ca7527083ac8dd08a95dd67a7ffa8a47a79c66c8ef6fb0024979a3b9af5d4580",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 72,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "402485b0249cd61234fe386de904a3188398410709f940aebc2ecb517e22a7fd",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 126,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "c106b77e99ffb36172285ee1e2cceddd44614c12842c9984bb4f87bf69283974",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 124,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "8f1b91810aaf6e97d00fc4b4f37c089a79c261a19f8facd7c11e62260e209f67",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 128,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "2df0c6a930b4090b9049c0280737b2313773cf78cabc7c944a22ba2825053033",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "ead8df419e9cdbd5678009bd28e719f5336f491d1baedd8bb17be0b43c077edc"
+              },
+              "distractor": {
+                "tokens": 119,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "238a159e0264a17b07b405683a6f24d6767f609824ec53a3a9a3057faac744bd",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "3413": {
+      "device": "NVIDIA GeForce RTX 3090",
+      "arms": {
+        "answer_only": {
+          "init_sha256": "263f4e36dbc222aaf42a8f913a29caacd99834051080c32d1c2d302b67ebe710",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.5730758309364319,
+                "format": 3.3705625534057617
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 8.489398169331253e-05,
+                "format": 0.0003441855951678008
+              },
+              "weights": "9c021efc0c36eba378cf3479fda6ef6eb0f4fbd317eb37d34ca4586cf14494c4"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 3.719448795891367e-05,
+                "format": 0.00023347805836237967
+              },
+              "weights": "f84795cf9845929118f5a43b83de861d379fc721306e639da451b7a1e82971db"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.213209361594636e-05,
+                "format": 0.00011866823479067534
+              },
+              "weights": "d60f966f06efd7d410c692f0ec49b31dad66dd63c4c3f1ab592350536b282ffc"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 103,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "fd615a5edbf7834f0868e33c581861b130d7ecc09f6cc0149787b913d0a2f422",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 104,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "caa8ef33b5dd4ddb535f755e680b8bd227fa9179e5234375863c31559b82855c",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 92,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "e15cf0f03c0e32c4b5fa3faf227aa85d5f255c32a94aab01cbb0def8bc4868ad",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 99,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "28e47d0511ee6465765cea6ed27bbf02797d9de22225e630108989d7b8abb8c9",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 101,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "e780dac4118f826d590f799607d1327088856b35ef112df04e065430b214d9bf",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 106,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "f6283c7173aa2f429cb659fef49012002acf8c2abc6a6f26d6f059869921fe34",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 98,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "0efafb8c950baf572de81b73a28497dc4161ebba937c5df85cc8749685f1ca9c",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 99,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "28e47d0511ee6465765cea6ed27bbf02797d9de22225e630108989d7b8abb8c9",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "background": {
+          "init_sha256": "263f4e36dbc222aaf42a8f913a29caacd99834051080c32d1c2d302b67ebe710",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.5954363346099854,
+                "format": 0.5737408995628357,
+                "trace": 4.927578926086426
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 0.000612695119343698,
+                "format": 0.1765921413898468,
+                "trace": 3.1314024925231934
+              },
+              "weights": "a3d648768d5d911d084ef3d467e2a2f32e233803e64885901fbc1d5b30d271b1"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 0.0002699837205000222,
+                "format": 0.003797817276790738,
+                "trace": 0.8168125748634338
+              },
+              "weights": "de2e041699782e64f9647a130d2377ecf674d298b8b6ac0ed918981dfda0b9a6"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.372691804135684e-05,
+                "format": 8.090843766694888e-05,
+                "trace": 6.884642789373174e-05
+              },
+              "weights": "59582178bb617b311d11c5ff4af0aa49c3926addf0c3ecfba5db26b9175e9554"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 140,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "66e852b5fb319440c110fb6def5877e83ea019e97b4dd20a22c5ac40b128b094",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 136,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "134fbe2f449386a5e2133a8592f6e1bdc6c5bd5ecd6fa26a99817e112e91d645",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 126,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "02f35357291ece6ced6ddb732321042c771219642dc2f233db71833bcb516ad8",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "4f8093cd2d78fd18776ebe8d0932d675badbd7adbe74626a0482cebb77084421"
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 136,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "5a5daaa07604de0ef543bbae83242d1f53df7dca073ae90f3e1b55f278bc5bf8",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 116,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "75221901114737f81e5e96a39bb2d8870e1b9ff22a95efeba2f06a457c44200a",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 128,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "5f32c105007b5112171de72b8b4ba05dd58d7d500ca2ab021953e12153fb3225",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 139,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "c1ef246cab0575f4d7b41bee501960b91f71df33fbeee50cc335cba8e81049e9",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "rule": {
+          "init_sha256": "263f4e36dbc222aaf42a8f913a29caacd99834051080c32d1c2d302b67ebe710",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.6364009976387024,
+                "format": 0.46737155318260193,
+                "trace": 5.37579345703125
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 0.0031341426074504852,
+                "format": 0.0902743935585022,
+                "trace": 3.5109975337982178
+              },
+              "weights": "8b57d400f7a2594dbce2450fccf51a71c02a591ba99bae65ec6776a0e3b601fe"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 0.00020799001504201442,
+                "format": 0.0006968083907850087,
+                "trace": 1.1891652345657349
+              },
+              "weights": "1261a733c0b5b4536cfb8278e8a3c844447ee9aa4114c73d6deb1d0000a1aab7"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 2.5870249373838305e-05,
+                "format": 3.771324554691091e-05,
+                "trace": 6.463134195655584e-05
+              },
+              "weights": "a556bbca85dfb41cf5e3ec176aae9da9011f10a8215abaae008312be1cb2b492"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 154,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "05c6ba578553f01bdd15af964d3022330af02090cba6d5f229c707a2549fe69c",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 131,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "4e469c71a837f70a8ef92ac8c9bb213a7095a24b25c3c7bbdb28652b4444be45",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 176,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "220af94259d7374c69026a876ea8152a08dda86fdc083efa7344f9969d40af0f",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "distractor": {
+                "tokens": 161,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "d3f77e6424bbad5552ccb8df7f3f6b1143d5866f566706a35df7e117d500539e",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 154,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "05c6ba578553f01bdd15af964d3022330af02090cba6d5f229c707a2549fe69c",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 160,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "b0f8a15537970b133a942327c31f805ed9b231f82a52c6e5b4f6e0c9944664d6",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 124,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "0f4875c0859d2f31e931f09c5ad7838d8101c8e93272697e90a584dfe1df2e16",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "distractor": {
+                "tokens": 173,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "1add3eae92409fe46a2e941b602f1e25bd4ad4e27a084966a69158e8d4adaa1d",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              }
+            }
+          }
+        },
+        "background_copy": {
+          "init_sha256": "263f4e36dbc222aaf42a8f913a29caacd99834051080c32d1c2d302b67ebe710",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.16422690451145172,
+                "format": 0.6003437042236328,
+                "trace": 3.2334327697753906
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 4.38069992014789e-06,
+                "format": 0.01201021671295166,
+                "trace": 1.500786304473877
+              },
+              "weights": "69d7eb7c5ee9a3da7f303876063851b52f6db3d52b34adabdb4e60f95c66dbe6"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 2.6858257115236484e-05,
+                "format": 7.352273678407073e-05,
+                "trace": 0.008456981740891933
+              },
+              "weights": "2bbf2d557f30381197b97911296b6d10488d6a3f07eaf32652e3a361b6773b07"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.3446206139633432e-05,
+                "format": 9.702327952254564e-05,
+                "trace": 5.18959277542308e-05
+              },
+              "weights": "24537881fa2dee4a8fcd2ffd1dbecaedf1bfe315a1b48e73b74d5b3c08c8be33"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 125,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "37f7092b947c7d2744d0cab62929e615a346fc7fc295318bbc2bd0762c083a07",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 106,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "ca4dde41377291e6a2e6eb2e79a78f61e8be95855124ff4a3215e9530acc50b5",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 123,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "e19c54de2028a68b3d04ec908261a0da8ecdb7572e53128702855cb216cbddb7",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 132,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "33c596b460afc68851139b1994d5b3c42b276a070010ad134e0b000685f9cd05",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 125,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "10085cc72b83ae881622aa135108959b1885b85f37e0333a51af6e2a13282e85",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 128,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "d1126043aa9f4d2bdccbdf8fce82c710b5f6968a1f2629ef80b7f4362e7077cb",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 122,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "9d835f73dae487a3f933c7a0d5bdbc610c876c3c5a4a5c4bd74bc5263f4ba6fc",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 132,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "33c596b460afc68851139b1994d5b3c42b276a070010ad134e0b000685f9cd05",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "rule_copy": {
+          "init_sha256": "263f4e36dbc222aaf42a8f913a29caacd99834051080c32d1c2d302b67ebe710",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.17200319468975067,
+                "format": 0.479976087808609,
+                "trace": 3.3766324520111084
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 2.637417310324963e-06,
+                "format": 0.06282489001750946,
+                "trace": 1.6291887760162354
+              },
+              "weights": "15e4dc4c0d7766618434dfc055993d172ec5c1e75157013218634186b7399040"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 0.00013483662041835487,
+                "format": 5.882698678760789e-05,
+                "trace": 0.1563980132341385
+              },
+              "weights": "6c456e78fc3e2e03f1d121e034f35d46d7ff7b8a7cf94ae576abb8ac30c69e76"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.2232704648340587e-05,
+                "format": 7.510826253565028e-05,
+                "trace": 7.499018829548731e-05
+              },
+              "weights": "30dc0e72080c2595669a66e23d855fe47f8ffb292957d7a2b3576f378d2b8ebd"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 135,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "093ec616e0fa72d2281cc2186bec70ba38b6814e86f05be09c9e238f97a8684b",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "d1f1c58f604063443b814d729f6da0704393fe800c7b5ebb84481dfbaf753f57"
+              },
+              "opposite": {
+                "tokens": 114,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "native-error",
+                "auxiliary_exact": false,
+                "visible_sha256": "ab81344e8bdca7067b8211dea1dd454bbd30a15d717095acda8b38d98f5ae18d",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 123,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "169e84a347a6ec0676df9c41f868f2712da9ffb099eb22360ae9df34ffe4b5ef",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 131,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "eb3f758650f49e5c4e32b563c839f8ea0f68dbb0f43640aa1c3a9df9236cd252",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 105,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "4640627d66608343a0b26eb261a1c2c1193df80d678f27a544c73e38411945e6",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 112,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "issue": "unreviewed",
+                "argv": [
+                  "mdb-schema",
+                  "--no-drop-table",
+                  "--no-not-null",
+                  "--no_empty",
+                  "--no_comments",
+                  "--no_indexes",
+                  "--no_relations",
+                  "--default_values",
+                  "catalog.mdb"
+                ],
+                "auxiliary_exact": false,
+                "visible_sha256": "43d77cd2fa43240b921dd8a52b6fd323c976ef6e4f206fb57a2d27665658c911",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 114,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "e1f930bf0f23c76f7c1ad45501166857c2415e628b797e399f12ce44c9cdb237",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "3433": {
+      "device": "NVIDIA GeForce RTX 3090",
+      "arms": {
+        "answer_only": {
+          "init_sha256": "c0c60302df17bb53e0a03efa650bfb865bf86e442a2ecc07201a74b866b263af",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.5730758309364319,
+                "format": 3.3705625534057617
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 5.9722693549701944e-05,
+                "format": 0.00026432625600136817
+              },
+              "weights": "d2f4d35bacfaab5368d569325a46d0f8a6f898d5fd24a5a104acef5903031734"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 3.5778997698798776e-05,
+                "format": 0.0002203378244303167
+              },
+              "weights": "91cbf6a12fe776e9f3c2b1b021d0b9466ad9cea1c717a933fe19c3cef45c3085"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.4672038560092915e-05,
+                "format": 8.3893486589659e-05
+              },
+              "weights": "425b6c99e51c69b5448f4d797572e7bf8c234972e24661e553463a9fd8ec3e25"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 103,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "fd615a5edbf7834f0868e33c581861b130d7ecc09f6cc0149787b913d0a2f422",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 100,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "e8af731b5995b2e3b285a7fca637a63ee6ebe7ed3ada48fa1b0d1a54aa0e2e69",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 92,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "e15cf0f03c0e32c4b5fa3faf227aa85d5f255c32a94aab01cbb0def8bc4868ad",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 99,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "28e47d0511ee6465765cea6ed27bbf02797d9de22225e630108989d7b8abb8c9",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 101,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "e780dac4118f826d590f799607d1327088856b35ef112df04e065430b214d9bf",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 106,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "f6283c7173aa2f429cb659fef49012002acf8c2abc6a6f26d6f059869921fe34",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 96,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "c6de5ac65fa1c8ab5b92dc38409d9b8bc24e66ba8f8911b912be21acf405118d",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 99,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "28e47d0511ee6465765cea6ed27bbf02797d9de22225e630108989d7b8abb8c9",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "background": {
+          "init_sha256": "c0c60302df17bb53e0a03efa650bfb865bf86e442a2ecc07201a74b866b263af",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.5954363346099854,
+                "format": 0.5737408995628357,
+                "trace": 4.927578926086426
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 0.0008593670791015029,
+                "format": 0.18574649095535278,
+                "trace": 3.14632511138916
+              },
+              "weights": "876abfbeacf30a368186800fc0051b16b1f21d868b375b4db577ac03d9863a70"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 0.00034394871909171343,
+                "format": 0.007266995031386614,
+                "trace": 0.8275454044342041
+              },
+              "weights": "cd03bdbc79985f544a32cd0353e04a9644b2a2ca57e1e39a982e999150576438"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.3101276636007242e-05,
+                "format": 5.6343884352827445e-05,
+                "trace": 9.51900365180336e-05
+              },
+              "weights": "72f39dd7ef54e01cd94303c435f0d76235f974e03dd843175da5794acad13428"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 140,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "66e852b5fb319440c110fb6def5877e83ea019e97b4dd20a22c5ac40b128b094",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 125,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "a19a764cb90444dacff9e7a262b266ce656e58356eec87f61447c13e1facdd17",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 147,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "1d1a61eac1574108b5c9da8a5bec64b557888b477457a24da89036864696f902",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 133,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "6ac2d1c112f7f53ae8f0aa9a5085be019c0fc4a31954f46a986312b83bc6ddca",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 140,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "66e852b5fb319440c110fb6def5877e83ea019e97b4dd20a22c5ac40b128b094",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 133,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "def6669a892335716348450449ebdadc13ac076104898c358cd1acd20feba76c",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 137,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "1d1a61eac1574108b5c9da8a5bec64b557888b477457a24da89036864696f902",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 110,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "a12dcf8babd20933644d0613b270d5fbf64c73db9c56b1de86f0b0dc6381e94d",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "rule": {
+          "init_sha256": "c0c60302df17bb53e0a03efa650bfb865bf86e442a2ecc07201a74b866b263af",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.6364009976387024,
+                "format": 0.46737155318260193,
+                "trace": 5.37579345703125
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 0.0031224519480019808,
+                "format": 0.10373199731111526,
+                "trace": 3.5139527320861816
+              },
+              "weights": "e2642230338c928a4b3613f823606e53116dd013a9f91f5289322224677ed84a"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 0.0001827690430218354,
+                "format": 0.0008379625505767763,
+                "trace": 1.262886643409729
+              },
+              "weights": "385b6e2f939719def510659f2e0f483bdb56a7aacb65c74098c45ddd24ef3490"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 2.3002237867331132e-05,
+                "format": 7.536780321970582e-05,
+                "trace": 8.913775673136115e-05
+              },
+              "weights": "8a4306222e4324329e96f8809b9c8414e5439d46c6e69b0ceaf62b39a01ec2ff"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 134,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "24ec548b600f103cbca67f7edeebe013c50d3e83c86afa218d8b907e165e0fd3",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 142,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "57e91f651c6cd5439255b86aa197e7a68dc8438f0522b4ab5c06d91a253517de",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 122,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "36dd3a1053585fc20b4ac252f8e520ee74dc91a7f5c31581609f1e4fafff1b9a",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "distractor": {
+                "tokens": 215,
+                "ended": true,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "no-unambiguous-command",
+                "auxiliary_exact": false,
+                "visible_sha256": "cccf974bea032ff2512d6a96859f233b9becd0dac8065830be042aa691e5d714"
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 140,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "d1714650d4f0601393e891fe221709e9f8947d942aa244762cf1b94166d68c9b",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 144,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "4c72cdae958b7f822948ae06756f54b6c6fd5e7d90fab7fc23737e1592262149",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 194,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "reversed_fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "issue": "different-output",
+                "auxiliary_exact": false,
+                "visible_sha256": "015ebe18f80a6afca7ac5d1d5fca3626a36d2f7332f7c0c804e10201ba0e790e",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "distractor": {
+                "tokens": 134,
+                "ended": true,
+                "format": true,
+                "behavior": false,
+                "strict": false,
+                "issue": "unreviewed",
+                "argv": [
+                  "mdb-schema",
+                  "--no-drop-table",
+                  "--no-not-null",
+                  "--no-default-values",
+                  "--no-not_empty",
+                  "--no-comments",
+                  "--no-indexes",
+                  "<file>"
+                ],
+                "auxiliary_exact": false,
+                "visible_sha256": "6750ef554d1813d1f6276532e315e09aa68c7edb97b125d05660a0ab6f4755b6",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              }
+            }
+          }
+        },
+        "background_copy": {
+          "init_sha256": "c0c60302df17bb53e0a03efa650bfb865bf86e442a2ecc07201a74b866b263af",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.16422690451145172,
+                "format": 0.6003437042236328,
+                "trace": 3.2334327697753906
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 4.384425210446352e-06,
+                "format": 0.019369300454854965,
+                "trace": 1.4960415363311768
+              },
+              "weights": "fa8d84101d6ebdbf3eb09c94bfa22a61dd7d35e9eab82875e96e34600c5bf8a1"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 2.719351505220402e-05,
+                "format": 7.82128845457919e-05,
+                "trace": 0.004484949167817831
+              },
+              "weights": "27a1e42d1a464fdecf8527118e177dcd0b5ca04ccdd0a5d38dee043466fbc2d8"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 1.128255644289311e-05,
+                "format": 6.388857582351193e-05,
+                "trace": 5.61530796403531e-05
+              },
+              "weights": "4082f33d7ed0734f1153e8ab19786e598363518a6967524ea2002b6c9efeef05"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 145,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "fc3ebf2954bd2c2c1c8b4601f024f3d2b3ded8ed4f94dfb5390a3360f72976f4",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 197,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "fe02d4b414afdc8bca4a7919a1cd82374abf723e5cf23f1c352c0ed9c85a5e5f",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 122,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "85cb8717240314b5220061d3319609b26be8b4add2be10da5a3cf38bac093625",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 155,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "8c43fa93fab0726dd0f9760a6e0027831178bb6caf2fed334f71ca39dedac16b",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 145,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "fc3ebf2954bd2c2c1c8b4601f024f3d2b3ded8ed4f94dfb5390a3360f72976f4",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 121,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "898149f8c392bef101f6e70adf919d89aaeb463a44fbc196449d8e98d6e5e122",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 116,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "2e531ec4820e25fcd6c8db14b0bfef7c44314b373f76ce5f58c5e88fc1e6b125",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              },
+              "distractor": {
+                "tokens": 170,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "33e89388784b26c45a2d7a3603325bda54d8da73c658d3dfd0df2192723df149",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        },
+        "rule_copy": {
+          "init_sha256": "c0c60302df17bb53e0a03efa650bfb865bf86e442a2ecc07201a74b866b263af",
+          "checkpoints": {
+            "1": {
+              "loss_before_update": {
+                "answer": 0.17200319468975067,
+                "format": 0.479976087808609,
+                "trace": 3.3766324520111084
+              }
+            },
+            "16": {
+              "loss_before_update": {
+                "answer": 3.300462594779674e-06,
+                "format": 0.05755435302853584,
+                "trace": 1.6420025825500488
+              },
+              "weights": "fdf2978ae2a0c86a76b00b5656161cab6aa32a152c46f41283dc663531c5e738"
+            },
+            "32": {
+              "loss_before_update": {
+                "answer": 2.3466183847631328e-05,
+                "format": 7.239527622004971e-05,
+                "trace": 0.18967106938362122
+              },
+              "weights": "a8efd2a025b933b995856c7d68afda085fb41d5bdd9aa152fc7575db881f2367"
+            },
+            "64": {
+              "loss_before_update": {
+                "answer": 2.511447382858023e-05,
+                "format": 6.04027409281116e-05,
+                "trace": 7.738549174973741e-05
+              },
+              "weights": "74cbfdbdc3211b96b7fee01a8eaec649679ec9151936a5769a1ec0534a6f179f"
+            }
+          },
+          "evaluations": {
+            "11341": {
+              "original": {
+                "tokens": 124,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "8f1b91810aaf6e97d00fc4b4f37c089a79c261a19f8facd7c11e62260e209f67",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "91a6d40a163fa777e34aedb45e37dd7f92c09169a574f86f762c6fc77ab1944b"
+              },
+              "opposite": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "b6750e526e4cc911ca772bf80a3cf55dec5a8c45598fb90d4af316f7fae99f1d"
+              },
+              "distractor": {
+                "tokens": 122,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "1f4f5ec895b125d7ba56c6aaf71dbc6e4cd870977b2918c940a6af5972af4ce5",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            },
+            "11351": {
+              "original": {
+                "tokens": 124,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": true,
+                "visible_sha256": "8f1b91810aaf6e97d00fc4b4f37c089a79c261a19f8facd7c11e62260e209f67",
+                "uses_training_filename": true,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "same": {
+                "tokens": 123,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "fa432ee00955e3dda820c79ba704de4cca2a007b3a7f1290ea16e9f334dff509",
+                "uses_training_filename": false,
+                "emits_keep_defaults": false,
+                "emits_omit_defaults": true
+              },
+              "opposite": {
+                "tokens": 4096,
+                "ended": false,
+                "format": false,
+                "behavior": false,
+                "strict": false,
+                "issue": "truncated",
+                "auxiliary_exact": false,
+                "visible_sha256": "6d14f5d64b14b472f7932425041df0f79437f0351330edc7414bb073e5ece3ef"
+              },
+              "distractor": {
+                "tokens": 120,
+                "ended": true,
+                "format": true,
+                "behavior": true,
+                "strict": true,
+                "fixture_matches": [
+                  true,
+                  true,
+                  true
+                ],
+                "reversed_fixture_matches": [
+                  false,
+                  false,
+                  false
+                ],
+                "issue": "pass",
+                "auxiliary_exact": false,
+                "visible_sha256": "bbc3b6760cc9dd95f98e12a71172b3c3789f0703ce8539b613ca64c0b7c6c58e",
+                "uses_training_filename": false,
+                "emits_keep_defaults": true,
+                "emits_omit_defaults": false
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "training_data_sha256": {
+    "answer_only": "3532d520d5b6408d36221381094a8f3f85707795ef5e213b698df64e72f19f1b",
+    "background": "91e31a8224206c1f573c8c8c370adb4f2a2ad97010503a1436a405567d3c4cc3",
+    "rule": "34852ba717a82713105a1bd0b0bb3e817a1931ebca45e3e1150784820ccd2b8b",
+    "background_copy": "3ea660d0516a80e4899b854a770657f3cb14d4f4f630f81dca58c29b0a3fdc54",
+    "rule_copy": "6f197c176316bd2db736c248db71f11d42025804aa54b8fa9e34bf3e8d82cc8e"
+  },
+  "historical_answer_only_comparison": {
+    "initial_state_equal": true,
+    "initial_segment_losses_equal": true,
+    "adapter_file_equal": {
+      "16": false,
+      "32": false,
+      "64": false
+    },
+    "differences": "Earlier aligned training enabled nonreentrant activation checkpointing. Current matched arms all leave it disabled. Generation batches include an additional original prompt here. Repeated runs can also differ numerically. No isolated causal assignment."
+  },
+  "native_controls": {
+    "gold": {
+      "original": {
+        "strict": true,
+        "behavior": true,
+        "format": true,
+        "issue": "pass"
+      },
+      "same": {
+        "strict": true,
+        "behavior": true,
+        "format": true,
+        "issue": "pass"
+      },
+      "opposite": {
+        "strict": true,
+        "behavior": true,
+        "format": true,
+        "issue": "pass"
+      },
+      "distractor": {
+        "strict": true,
+        "behavior": true,
+        "format": true,
+        "issue": "pass"
+      }
+    },
+    "reverse": {
+      "original": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "different-output"
+      },
+      "same": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "different-output"
+      },
+      "opposite": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "different-output"
+      },
+      "distractor": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "different-output"
+      }
+    },
+    "bad_format": {
+      "original": {
+        "strict": false,
+        "behavior": true,
+        "format": false,
+        "issue": "format"
+      },
+      "same": {
+        "strict": false,
+        "behavior": true,
+        "format": false,
+        "issue": "format"
+      },
+      "opposite": {
+        "strict": false,
+        "behavior": true,
+        "format": false,
+        "issue": "format"
+      },
+      "distractor": {
+        "strict": false,
+        "behavior": true,
+        "format": false,
+        "issue": "format"
+      }
+    },
+    "wrong_file": {
+      "original": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "unreviewed"
+      },
+      "same": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "unreviewed"
+      },
+      "opposite": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "unreviewed"
+      },
+      "distractor": {
+        "strict": false,
+        "behavior": false,
+        "format": true,
+        "issue": "unreviewed"
+      }
+    }
+  }
+}
