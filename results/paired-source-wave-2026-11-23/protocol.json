@@ -1,0 +1,161 @@
+{
+  "cases": {
+    "1623": {
+      "group": "file-summary",
+      "question_sha256": "acda5b2a36cf4fc8ddfa1e5755ad731f524d8a4f7e3f6f982bf990091fe52956",
+      "ref_sha256": "409a693a4d81b12554c87b5d11dfe72b11ea153562d28ff865f79131e73668e2",
+      "tool": "pescan"
+    },
+    "2630": {
+      "group": "file-summary",
+      "question_sha256": "bba0f83a43f6961f544daf5267c3148f75ffc22359513bf6feac29e3fc51989a",
+      "ref_sha256": "1a02f6fece11d242392a65aa77f903a6fae43a34b606bc766a22c66bcdd5147c",
+      "tool": "pescan"
+    },
+    "2828": {
+      "group": "python-doc",
+      "question_sha256": "db3e69376ef1dc9af7fc84712641432a0c9809377e0ec559b3cc2c1c4dd4d1c2",
+      "ref_sha256": "c340be350e31550f71cdc3e8081382c2a891e6e23b1ea7888849be02e3cf11b0",
+      "tool": "pydoc"
+    },
+    "2837": {
+      "group": "addr-type",
+      "question_sha256": "64e0dd26ca46c412b03cdc8c13a2738b2273f9b1bdfb9a91f499654e6031b12e",
+      "ref_sha256": "075c13c7aa3a479a2e42747931053198bb0b10a3e0b9415b193cb20ff0dc9f38",
+      "tool": "addr6"
+    },
+    "3133": {
+      "group": "memory-graph",
+      "question_sha256": "4d04f95959ecdd132e1719d776671cff91a67458cef503633beae8dd08d14148",
+      "ref_sha256": "35c8c16a4faeaaeda3391c184739ad833cc31bfdb4247025f1b98bde232f4a87",
+      "tool": "memusagestat"
+    },
+    "3135": {
+      "group": "memory-graph",
+      "question_sha256": "cdc80d70bd9d6944f7ab264362d26624d4f31d8c41dcdd177f91d5e7d1be6a84",
+      "ref_sha256": "70ce3e62a82a373302453dd7949ee55e0f3a186598b6f55296061d920a681aa8",
+      "tool": "memusagestat"
+    },
+    "3136": {
+      "group": "memory-graph",
+      "question_sha256": "234acd04cf14e4e8e5357b10a74818d5afe5d0dd41200e528f8d685fa8f24d68",
+      "ref_sha256": "da6de4284f260d93d751730c38cfa638315a4c50ac5b45ba72497ac76698ea47",
+      "tool": "memusagestat"
+    },
+    "3137": {
+      "group": "memory-graph",
+      "question_sha256": "e18fea7ff175837315e5bed9d2f1a75e8f0e57348301c458076366795ffe7c15",
+      "ref_sha256": "a4b82caf877b00a041ec819f3161c86ce35849fcd1c970a75a23bce3f9d23e5b",
+      "tool": "memusagestat"
+    },
+    "4536": {
+      "group": "file-index",
+      "question_sha256": "3b27ef246e44315a7ebbc83cbdd4fea6936437a299267873ad4d7ab104afaaa4",
+      "ref_sha256": "b947c971d6924d1f511b1efa590124d14a7753777c35ddd69bbe002ba2bf2788",
+      "tool": "plocate"
+    },
+    "5904": {
+      "group": "archive-output",
+      "question_sha256": "ad8f4c3879b7f907a4fd5a3df0baed9cab5dd39d134595af414a89c45a3d112c",
+      "ref_sha256": "b83d3c39d5d154ea97f47c42ca0c2ef3aceee482c31351471318fc689bafb949",
+      "tool": "unar"
+    },
+    "5905": {
+      "group": "archive-output",
+      "question_sha256": "9e4515fd1a5051553f78e612daa96e8131bc60532207451600979ee77b2d4078",
+      "ref_sha256": "3179377e25c295afea205abb17411be0890e5ee03c8817724e6b3075fa05f02a",
+      "tool": "unar"
+    },
+    "6049": {
+      "group": "capture-catalog",
+      "question_sha256": "05a716d0a3432a796324e0e140cc03fc90209554bc9f1969c259bca5cad73d11",
+      "ref_sha256": "c8ffa29b129da8442701e97a30b2bdfec5edef511bebf5b088d2f70c714a43be",
+      "tool": "kismetdb_to_pcap"
+    },
+    "7101": {
+      "group": "api-report",
+      "question_sha256": "c6f785f63b4da9435e13c3d862b9c7487ddd4c8b3c9bd275801d9d05254e4f61",
+      "ref_sha256": "9856f4488bc8dfc9ef3836f6501c26cc703e339f90aad1a313df233874f01a26",
+      "tool": "clang++"
+    },
+    "7210": {
+      "group": "link-map",
+      "question_sha256": "8d857a182b34c81d16973a4381b37126df9bddc02253bbd7d27a7f567eba5605",
+      "ref_sha256": "b75f2ef5f1c86f1efcb47d33f0d0538fe5550ea13a921df480d5ce260aabaa3f",
+      "tool": "ld.lld"
+    },
+    "7212": {
+      "group": "build-id",
+      "question_sha256": "41355ca15de894e54f154d01693869cd6a5c9a70fd562ec29ee39d105e879f03",
+      "ref_sha256": "18945bca90a5229ff9b6a2e615661ca67e04a35361c5ee5a56c196435385bcf7",
+      "tool": "ld.lld"
+    },
+    "7552": {
+      "group": "yaml-preprocessor",
+      "question_sha256": "06da312a031a4bdf0b3de3dd47525031acb4eb56a4bec26e04fb61c686641dc9",
+      "ref_sha256": "c66548b1a5df8004fd5b14654e6a8e1010c96d6f152ebc041640206b09956188",
+      "tool": "yaml2obj"
+    },
+    "7825": {
+      "group": "no-dns-name",
+      "question_sha256": "72684999c2fddc3ade291beeada730b93da5e28427fe56770ce3c797950ff4c5",
+      "ref_sha256": "6b74861b6f5a8bc8600e64cbbd81727031e54446e747c6b3d87690799ab0293e",
+      "tool": "netmask"
+    },
+    "8000": {
+      "group": "dns-hash",
+      "question_sha256": "a5f2a257e0422aeeaf17c375854c502c6f228530c537e612a204b9d80ad9f6df",
+      "ref_sha256": "eddb3a2971253fc55bda5f132856e2b99aad5c8830a0c5e4a5297d1eb2435208",
+      "tool": "nsec3hash"
+    },
+    "8002": {
+      "group": "dns-hash",
+      "question_sha256": "58159357e34cbacbd5cfb901b59f38a92687a5e5606cfe67d523d3357c3f77da",
+      "ref_sha256": "b91137164377a2be33125c852116f5d1fa7047f8991d87ab8b2bb80f3f66866b",
+      "tool": "nsec3hash"
+    },
+    "8067": {
+      "group": "address-encoding",
+      "question_sha256": "da697a19d9a64607efc5545808d9a93e5491cc6f6d5dae96582f3f9b37e31c50",
+      "ref_sha256": "f4a92ffebca1e69016dde957b7a0927f1ab661dfbc456c8ed827748ba68d3895",
+      "tool": "atk6-address6"
+    },
+    "8068": {
+      "group": "address-encoding",
+      "question_sha256": "31e5d2681f3b3bd53a0967aa8567589aa3f60596b26014b6e4ba3cd25898f64d",
+      "ref_sha256": "7946d316161aba0df6114c24127f9f3c00cf474adf041e79e9e3bd0974ec10db",
+      "tool": "atk6-address6"
+    },
+    "8070": {
+      "group": "address-encoding",
+      "question_sha256": "dfb973ede2b7b7a49525c111d93b498671d8f1b51ad314ebde9318ac7dc6367f",
+      "ref_sha256": "8a49215b34f57ca71f7a7a7a6b6f38d8df0628c077e905274188ea18897994be",
+      "tool": "atk6-address6"
+    },
+    "981": {
+      "group": "addr-prefix",
+      "question_sha256": "d9502736296e8ce4a889e81f2290bf4e27809aba8dcafaa58406bd87ceb85b67",
+      "ref_sha256": "fc229dff7f252ddc0aff27337e9e1df06a5cbdf828fb03adfa7e1dcc68bc6b3d",
+      "tool": "addr6"
+    },
+    "982": {
+      "group": "addr-type",
+      "question_sha256": "72f1d9c9136dd827b16a344314ab2370f9924fb9e832701bf805d0258ad84a34",
+      "ref_sha256": "a199a485b7636890b9e103d01c30d0be10ab72d51788b4dfa09047498d2a9818",
+      "tool": "addr6"
+    }
+  },
+  "policy": "Screen only the 24 listed TRAIN origins; preserve earlier DEV, confirmation and retention IDs. Student original three draws; teachers only for repeated attributable student failures. Near-duplicate groups are kept together. No official TEST access.",
+  "reserved": {
+    "sample_6323": "retention",
+    "sample_6324": "retention",
+    "sample_6644": "confirmation",
+    "sample_7123": "confirmation",
+    "sample_7142": "dev",
+    "sample_7185": "dev",
+    "sample_7186": "confirmation",
+    "sample_7294": "confirmation",
+    "sample_7431": "dev"
+  },
+  "train_sha256": "ca7cd7ef94073f13c9371a27392579dbda9e01d81f86a805dff4d9b87b132c7a"
+}

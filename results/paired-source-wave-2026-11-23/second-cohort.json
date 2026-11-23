@@ -1,0 +1,50 @@
+{
+  "7098": {
+    "group": "syntax-tree-export",
+    "prompt_sha256": "461dce016afefc9ce06b9103b0b6d8ec920068eb41bb3832a87cfad89374083e",
+    "reference_sha256": "e11dc03acc8e0cf7c874eb25b1b601e68371b0fe4785b3fbd2b360f131ab416a",
+    "tool": "clang++"
+  },
+  "7206": {
+    "group": "link-map-folding",
+    "prompt_sha256": "ac8807ada81a6561c1b159557d0f0de5505a72684d26010d7a9401160a37a81e",
+    "reference_sha256": "a158261705ea28287c07db4e5e754e5bbfd95e818b66077607647b1b68e3e5cd",
+    "tool": "ld.lld"
+  },
+  "7208": {
+    "group": "library-name",
+    "prompt_sha256": "4d6d2aac1fc39166fa8147ce6bbf426a604396b3ce7ecee263adf576f92812fc",
+    "reference_sha256": "cc8c9f152140b379ef32a3aad237397e057cb02c71f05ac758e6890d6b00b6d2",
+    "tool": "ld.lld"
+  },
+  "7209": {
+    "group": "artifact-type",
+    "prompt_sha256": "669159163f7dbd17310a14c1b2d595f910260907af1d0a3079fd98d00919a024",
+    "reference_sha256": "f8e645badeabaea86ff111535a6115d8ed91c88383d21fe2cadaae4af06f31ae",
+    "tool": "ld.lld"
+  },
+  "7412": {
+    "group": "symbol-binding",
+    "prompt_sha256": "377435530f97e2864d7a152b4e620a4b4200e22ca896d553f2cee3bd5e34991a",
+    "reference_sha256": "5ed8506cc4b8bf2c5523b842f4e26f8bf510ded72f2b46a69dac5bee7320dc77",
+    "tool": "llvm-objcopy"
+  },
+  "7414": {
+    "group": "section-metadata",
+    "prompt_sha256": "3b409be299a8c5647e20a1c9bd1ee3378039bdf66d59759f46c72ebf1d1a9155",
+    "reference_sha256": "0545ffca130bdf91346b5018c4d58732cee995ea44eda115e1cddb842d5684b0",
+    "tool": "llvm-objcopy"
+  },
+  "7416": {
+    "group": "symbol-binding",
+    "prompt_sha256": "2a445c6b3dcbd890667f48e182e624b5da546ea2921d2f071a061a8048003a0c",
+    "reference_sha256": "ed1fed223077fa90af318014c3f8df193a9218e995b276244c61fdd781128381",
+    "tool": "llvm-objcopy"
+  },
+  "7475": {
+    "group": "module-partition",
+    "prompt_sha256": "23bedbc443f16821a9de118c277842a543cf851b94187a6b4e9f65a01f3e6fa9",
+    "reference_sha256": "a853241bd82b6626721cf22cffee06e50e2834492d8fe50dc65b5a68ab07146a",
+    "tool": "llvm-split"
+  }
+}
