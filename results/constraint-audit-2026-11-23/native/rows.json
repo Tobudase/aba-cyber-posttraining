@@ -1,0 +1,11 @@
+{
+  "7411": {
+    "gold": "llvm-objcopy --add-gnu-debuglink=debug.info main.exe main_with_debuglink.exe"
+  },
+  "7413": {
+    "gold": "llvm-objcopy --split-dwo debug.dwo combined.o"
+  },
+  "7500": {
+    "gold": "llvm-strip --discard-locals --keep-section=.text obj.o"
+  }
+}

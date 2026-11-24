@@ -1,5 +1,13 @@
 # ABA Cybersecurity Post-training Research
 
+## November 23, 2026 — Do teacher trajectories improve transfer or change the answer format?
+
+On five new KaliBench TRAIN sources, original Qwen3-8B passed **15/15**, answer-only SFT **12/15**, Qwen trajectory SFT **11/15**, and DeepSeek trajectory SFT **11/15** under the single-command JSON protocol. Replaying equivalent two-step operations and unambiguously recoverable answers changed the two trajectory results to **15/15** and **12/15**, respectively. Across all eight prospectively chosen sources, primary scores were **23/24**, **21/24**, **18/24**, and **17/24**. Three decoding seeds were used per source.
+
+On the historical module-list request, explicitly asking the original student to check the executable yielded **3/3**, a length-matched neutral note **2/3**, and the teacher's same-question explanation **0/3**. On the schema request all four prompts reproduced the same misspelling; a one-character command edit restored **12/12**. The source screen now covers **56** origins, with **3** meeting the training criterion.
+
+[Chinese report](results/constraint-audit-2026-11-23/RESULT_ZH.md) · [Results figure](results/constraint-audit-2026-11-23/comparison.png) · [Per-draw scores](results/constraint-audit-2026-11-23/transfer.json) · [Recount](results/constraint-audit-2026-11-23/recount.py)
+
 ## November 23, 2026 — Screening new KaliBench TRAIN sources
 
 Original Qwen3-8B passed **55/57** draws on **19 newly screened sources**. On two static file-report questions, replacing a plugin error with the actual installed help changed the student's score from **0/6 to 6/6** with matched seeds. The unchanged control passed **3/3 in both conditions**. The two remaining errors on new sources both omitted an output name and each recovered with that single edit.

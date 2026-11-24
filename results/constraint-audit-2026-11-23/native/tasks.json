@@ -1,0 +1,11 @@
+{
+  "1605": {
+    "gold": "pepack --database packers.txt --format csv game.exe"
+  },
+  "2289": {
+    "gold": "yarac --define os=linux --define arch=x64 custom.yar custom.yarc"
+  },
+  "2617": {
+    "gold": "pepack --database signatures.txt --format xml trojan.dll"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "definition": "Secondary endpoint: also accept semantically equivalent two-utility invocations and unambiguous command extraction from malformed output when native replay succeeds. Primary endpoint is unchanged.",
+  "elf": {
+    "7413": {
+      "B64-22103": [
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        },
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        }
+      ],
+      "B64-22109": [
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        },
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        }
+      ],
+      "B64-22111": [
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        },
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        }
+      ],
+      "C64-22103": [
+        {
+          "features": [
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "pass": false,
+          "status": 1
+        },
+        {
+          "features": [
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "pass": false,
+          "status": 1
+        }
+      ],
+      "C64-22109": [
+        {
+          "features": [
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "pass": false,
+          "status": 1
+        },
+        {
+          "features": [
+            false,
+            false,
+            false,
+            false,
+            true
+          ],
+          "pass": false,
+          "status": 1
+        }
+      ]
+    },
+    "7500": {
+      "C64-22111": [
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        },
+        {
+          "features": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "pass": true,
+          "status": 0
+        }
+      ]
+    }
+  },
+  "relaxed_behavior": {
+    "1605": {
+      "B64-22103": true
+    },
+    "2617": {
+      "C64-22103": true
+    },
+    "7413": {
+      "B64-22103": true,
+      "B64-22109": true,
+      "B64-22111": true,
+      "C64-22103": false,
+      "C64-22109": false
+    }
+  },
+  "repackaged_output": {
+    "1605": {
+      "B64-22103": "pass"
+    },
+    "2617": {
+      "C64-22103": "pass"
+    }
+  }
+}

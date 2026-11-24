@@ -1,0 +1,31 @@
+{
+  "cumulative_count": 56,
+  "new_decisions": {
+    "new_teacher_queries": 0,
+    "newly_qualified": [],
+    "reason": "Base passed all three seeds on every new eligible source. Teacher-gap selection not triggered.",
+    "student_passed": {
+      "1605": 3,
+      "2617": 3,
+      "7411": 3,
+      "7413": 3,
+      "7500": 3
+    },
+    "threshold_skills": 3,
+    "threshold_sources": 8
+  },
+  "new_screened": [
+    "1605",
+    "2617",
+    "7411",
+    "7413",
+    "7500"
+  ],
+  "official_test_accessed": false,
+  "prior_admitted": [
+    "7293",
+    "6137",
+    "6118"
+  ],
+  "prior_count": 51
+}

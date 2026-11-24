@@ -1,0 +1,7 @@
+# Native validation fixtures
+
+The ELF worker generates two small objects with different named symbols and data bytes. It checks the requested metadata changes, the retained bytes and the validity of a debug-link CRC. Files produced by the fixture are inspected with LLVM tools. The signature worker reads two inert PE headers containing distinct marker bytes. Its two custom databases yield different report field values. The YARA check compiles a locally authored plain-text marker rule.
+
+The workers follow the repository's existing batch-job layout. Mount the selected worker, its matching JSON file and the shared framed-results module under `/input`, with a writable `/scratch`. For the signature worker also include `fixture_pe.py`. The ELF environment uses the pinned LLVM 14 toolchain recorded in the batch evidence. The signature worker stages Debian trixie packages. Run `python3 /input/fixture_worker.py` with `rows.json`, or `python3 /input/defense_worker.py` with `tasks.json`. With no `answers.json` they exercise references and negative controls; with per-source and per-seed answers they replay the restricted commands against the same fixtures. The locally generated YARA negative case must compile successfully and yield the wrong match set.
+
+[Shared framed-results module](../../../code-snapshots/teacher-sft-20261117/kali_framed_artifacts_20261117.py) · [Published results of calibration](../controls.json)

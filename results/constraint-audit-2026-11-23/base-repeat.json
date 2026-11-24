@@ -1,0 +1,62 @@
+{
+  "7411": {
+    "22103": {
+      "first_score": "pass",
+      "first_visible_sha256": "373aa115c06810b5b0b54a6f2da94df76775f9d98d84fcb19d475cfeeac5fa7a",
+      "same_visible": true,
+      "second_score": "pass"
+    },
+    "22109": {
+      "first_score": "pass",
+      "first_visible_sha256": "b0841ba3377b4d82740de4cd2d90599e133ad039797d9c0b537c54125b651914",
+      "same_visible": true,
+      "second_score": "pass"
+    },
+    "22111": {
+      "first_score": "pass",
+      "first_visible_sha256": "923ef405abf41b915ebd7e29636b59bdde7fa6e7ce5b6fccf0c1de73800e1b3f",
+      "same_visible": true,
+      "second_score": "pass"
+    }
+  },
+  "7413": {
+    "22103": {
+      "first_score": "pass",
+      "first_visible_sha256": "84b9ea3f563162040ed3757600f9a13141c4862f3078591ff67b40111c7e6108",
+      "same_visible": true,
+      "second_score": "pass"
+    },
+    "22109": {
+      "first_score": "pass",
+      "first_visible_sha256": "c8e35dbc09979b68e7ebab6666d7c574a0b8ec00d54239cdd9058052b920a927",
+      "same_visible": true,
+      "second_score": "pass"
+    },
+    "22111": {
+      "first_score": "pass",
+      "first_visible_sha256": "0531b3a3500c4ffb0939b3e2a42be37affbd21305a31afcfaab5942d8fcd6ee9",
+      "same_visible": true,
+      "second_score": "pass"
+    }
+  },
+  "7500": {
+    "22103": {
+      "first_score": "pass",
+      "first_visible_sha256": "91388dbd95e691f362667f1ec3cb325de494046a87b91d8c95fe678d68cb75cd",
+      "same_visible": true,
+      "second_score": "pass"
+    },
+    "22109": {
+      "first_score": "pass",
+      "first_visible_sha256": "e9a7e54fc290d912fa508d3080c74deeb7bac3a5675ffbde6bd94c2789c3f257",
+      "same_visible": true,
+      "second_score": "pass"
+    },
+    "22111": {
+      "first_score": "pass",
+      "first_visible_sha256": "744d2b2d782eb6f1734fff73d3c839815fafd7410716de70ddccf6df5beb5878",
+      "same_visible": true,
+      "second_score": "pass"
+    }
+  }
+}

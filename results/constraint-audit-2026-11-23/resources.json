@@ -1,0 +1,110 @@
+{
+  "miw113-constraint-defense-controls": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "9c36f734-5ea0-44c4-93b1-e6f94b59cbdd"
+  },
+  "miw113-constraint-defense-grade": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "34d36bf1-7cb6-45b5-bccb-99fa9467d70f"
+  },
+  "miw113-constraint-format-audit": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "6a287e93-2eb9-4d36-92c8-1c2eb72e07de"
+  },
+  "miw113-constraint-format-only-replay": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "4da06b11-fd48-45c4-adf6-4dff087f4fc4"
+  },
+  "miw113-constraint-format-replay": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "c8c1b54c-696c-4e7c-85c9-82fbdb504c5c"
+  },
+  "miw113-constraint-grade": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "fce1b5bb-f0b2-4187-9c30-05c9d68c5c4e"
+  },
+  "miw113-constraint-literal-replay": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "7beca65f-c21f-4886-9654-772eccba38da"
+  },
+  "miw113-constraint-native": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "0d336e89-b6b1-4433-9f16-fe3dcc714ab2"
+  },
+  "miw113-constraint-pe-draws": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "fa4907c9-71f0-49db-b09c-7bb9943f3657"
+  },
+  "miw113-constraint-protected-local-controls": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "50e5e3c1-5c79-4f2a-8d71-07cb7f58029f"
+  },
+  "miw113-constraint-rule-reference-replay": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "edd5427d-0c43-4eae-b34e-874dd2d5403f"
+  },
+  "miw113-constraint-structured-controls": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "cfdfa2f7-4aed-4893-a00d-343847288574"
+  },
+  "miw113-constraint-transfer": {
+    "cleaned": true,
+    "gpu": true,
+    "job_completed_utc": "2026-11-24T00:00:10Z",
+    "job_started_utc": "2026-11-23T23:33:17Z",
+    "requested_gpus": "1",
+    "status": "SUCCEEDED",
+    "uid": "2b150c9f-b14d-4371-a671-69a4d8d2d506"
+  },
+  "miw113-constraint-transfer-grade": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "9a8d5923-83b0-4799-a8d6-d97d3a079220"
+  },
+  "miw113-pairwave-constraint-history": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "67a217df-4e57-4092-80cf-5e708eec5fdf"
+  },
+  "miw113-pairwave-constraint-spelling": {
+    "cleaned": true,
+    "gpu": false,
+    "status": "SUCCEEDED",
+    "uid": "f24073e9-04c6-48ff-b9b8-c058345849ef"
+  },
+  "miw113-pairwave-constraints23": {
+    "cleaned": true,
+    "gpu": true,
+    "job_completed_utc": "2026-11-23T23:33:05Z",
+    "job_started_utc": "2026-11-23T23:09:28Z",
+    "requested_gpus": "1",
+    "status": "SUCCEEDED",
+    "uid": "917414fc-c150-477a-a507-f6dc791f771c"
+  }
+}

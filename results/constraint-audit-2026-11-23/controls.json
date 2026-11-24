@@ -1,0 +1,607 @@
+{
+  "elf": {
+    "7411": {
+      "checks": [
+        {
+          "gold": {
+            "features": [
+              true,
+              true
+            ],
+            "pass": true,
+            "status": 0
+          },
+          "wrong": {
+            "features": [
+              false,
+              true
+            ],
+            "pass": false,
+            "status": 0
+          }
+        },
+        {
+          "gold": {
+            "features": [
+              true,
+              true
+            ],
+            "pass": true,
+            "status": 0
+          },
+          "wrong": {
+            "features": [
+              false,
+              true
+            ],
+            "pass": false,
+            "status": 0
+          }
+        }
+      ],
+      "ok": true
+    },
+    "7413": {
+      "checks": [
+        {
+          "gold": {
+            "features": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass": true,
+            "status": 0
+          },
+          "wrong": {
+            "features": [
+              true,
+              true,
+              false,
+              false,
+              true
+            ],
+            "pass": false,
+            "status": 0
+          }
+        },
+        {
+          "gold": {
+            "features": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass": true,
+            "status": 0
+          },
+          "wrong": {
+            "features": [
+              true,
+              true,
+              false,
+              false,
+              true
+            ],
+            "pass": false,
+            "status": 0
+          }
+        }
+      ],
+      "ok": true
+    },
+    "7500": {
+      "checks": [
+        {
+          "gold": {
+            "features": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass": true,
+            "status": 0
+          },
+          "wrong": {
+            "features": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "pass": false,
+            "status": 0
+          }
+        },
+        {
+          "gold": {
+            "features": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "pass": true,
+            "status": 0
+          },
+          "wrong": {
+            "features": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "pass": false,
+            "status": 0
+          }
+        }
+      ],
+      "ok": true
+    }
+  },
+  "elf_worker_sha256": "90d646b6a5247a232bc0e576ed655bab31d4cb7795cff74fe42f042e5bc294d9",
+  "pe_and_rules": {
+    "1605": {
+      "checks": [
+        {
+          "gold": {
+            "diagnostic": "",
+            "output": "packer,OfflineMarker0\n",
+            "pass": true,
+            "rc": 0
+          },
+          "wrong": {
+            "diagnostic": "",
+            "output": "packer,OtherMarker0\n",
+            "pass": false,
+            "rc": 0
+          }
+        },
+        {
+          "gold": {
+            "diagnostic": "",
+            "output": "packer,OfflineMarker1\n",
+            "pass": true,
+            "rc": 0
+          },
+          "wrong": {
+            "diagnostic": "",
+            "output": "packer,OtherMarker1\n",
+            "pass": false,
+            "rc": 0
+          }
+        }
+      ],
+      "valid": true
+    },
+    "2289": {
+      "checks": [
+        {
+          "gold": {
+            "pass": false,
+            "rc": 1
+          },
+          "wrong": {
+            "pass": false,
+            "rc": 1
+          }
+        },
+        {
+          "gold": {
+            "pass": false,
+            "rc": 1
+          },
+          "wrong": {
+            "pass": false,
+            "rc": 1
+          }
+        }
+      ],
+      "valid": false
+    },
+    "2617": {
+      "checks": [
+        {
+          "gold": {
+            "diagnostic": "",
+            "output": "<document cmdline=\"pepack --database signatures.txt --format xml trojan.dll\">\n    <attribute name=\"packer\">OfflineMarker0</attribute>\n</document>\n",
+            "pass": true,
+            "rc": 0
+          },
+          "wrong": {
+            "diagnostic": "",
+            "output": "<document cmdline=\"pepack --database other.txt --format xml trojan.dll\">\n    <attribute name=\"packer\">OtherMarker0</attribute>\n</document>\n",
+            "pass": false,
+            "rc": 0
+          }
+        },
+        {
+          "gold": {
+            "diagnostic": "",
+            "output": "<document cmdline=\"pepack --database signatures.txt --format xml trojan.dll\">\n    <attribute name=\"packer\">OfflineMarker1</attribute>\n</document>\n",
+            "pass": true,
+            "rc": 0
+          },
+          "wrong": {
+            "diagnostic": "",
+            "output": "<document cmdline=\"pepack --database other.txt --format xml trojan.dll\">\n    <attribute name=\"packer\">OtherMarker1</attribute>\n</document>\n",
+            "pass": false,
+            "rc": 0
+          }
+        }
+      ],
+      "valid": true
+    }
+  },
+  "pe_draw_checks": {
+    "A64-22103": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "A64-22109": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "A64-22111": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "B64-22103": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "B64-22109": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "B64-22111": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "C64-22103": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "C64-22109": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "C64-22111": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "base-22103": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "base-22109": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ],
+    "base-22111": [
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      },
+      {
+        "diagnostic": "",
+        "extractor_exact_match": false,
+        "header_verified_section": true,
+        "names": [
+          ".data",
+          ".gnu_debuglink"
+        ],
+        "status": 0
+      }
+    ]
+  },
+  "pe_header_evidence": [
+    {
+      "diagnostic": "",
+      "extractor_exact_match": false,
+      "header_verified_section": true,
+      "names": [
+        ".data",
+        ".gnu_debuglink"
+      ],
+      "status": 0
+    },
+    {
+      "diagnostic": "",
+      "extractor_exact_match": false,
+      "header_verified_section": true,
+      "names": [
+        ".data",
+        ".gnu_debuglink"
+      ],
+      "status": 0
+    }
+  ],
+  "rule_reference": {
+    "alias_checks": [
+      {
+        "form": "-d",
+        "positive": [
+          {
+            "pass": true,
+            "rc": 0
+          },
+          {
+            "pass": true,
+            "rc": 0
+          }
+        ],
+        "wrong_value": [
+          {
+            "pass": false,
+            "rc": 0
+          },
+          {
+            "pass": false,
+            "rc": 0
+          }
+        ]
+      },
+      {
+        "form": "--define=os=linux",
+        "positive": [
+          {
+            "pass": true,
+            "rc": 0
+          },
+          {
+            "pass": true,
+            "rc": 0
+          }
+        ],
+        "wrong_value": [
+          {
+            "pass": false,
+            "rc": 0
+          },
+          {
+            "pass": false,
+            "rc": 0
+          }
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "gold": {
+          "diagnostic": "option `--define` requires a string argument\n",
+          "pass": false,
+          "rc": 1
+        },
+        "wrong": {
+          "diagnostic": "option `--define` requires a string argument\n",
+          "pass": false,
+          "rc": 1
+        }
+      },
+      {
+        "gold": {
+          "diagnostic": "option `--define` requires a string argument\n",
+          "pass": false,
+          "rc": 1
+        },
+        "wrong": {
+          "diagnostic": "option `--define` requires a string argument\n",
+          "pass": false,
+          "rc": 1
+        }
+      }
+    ],
+    "valid": false
+  },
+  "signature_worker_sha256": "fbc03061756a3b4a85b38678f7ed609bcd3e26ac662b336446273cb491a667e4"
+}

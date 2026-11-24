@@ -1,0 +1,561 @@
+{
+  "checkpoint_sha256": {
+    "A64": "68f49e6edd81ca2485e53b6fbae957487961c4ba96276f99537b428bb6783255",
+    "B64": "606af4ee9d44dfad7a847dd46601de6a510955e6e6e082b03d36aa1726221dd3",
+    "C64": "72c2344d9cfe5c239339be2a54028893c4b6869009ecafaaf06937d41cca9f9d",
+    "base": null
+  },
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "sources": {
+    "1605": {
+      "A64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 45,
+        "visible_sha256": "2223fe40c044306052b48905c8a799565447c8b54bd9c61ff282f96fc56d47df"
+      },
+      "A64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 45,
+        "visible_sha256": "2223fe40c044306052b48905c8a799565447c8b54bd9c61ff282f96fc56d47df"
+      },
+      "A64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 45,
+        "visible_sha256": "2223fe40c044306052b48905c8a799565447c8b54bd9c61ff282f96fc56d47df"
+      },
+      "B64-22103": {
+        "closed": false,
+        "ended": true,
+        "final": "missing-delimiter",
+        "native_initial": "format",
+        "review_note": "JSON extracted at the end, but the expected thinking delimiter was missing.",
+        "tokens": 156,
+        "visible_sha256": "288585b063f461675075c521e361a1ac1a0a9dc234b99bf39fac23f6555b2e83"
+      },
+      "B64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 417,
+        "visible_sha256": "eef47da1356b3de39675c227398dc271adb1cec60bf3b0431ec4c71af8b817b9"
+      },
+      "B64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 314,
+        "visible_sha256": "0ffa05a8de8e188d23a667bd713b6dbc89765d87149ef9f34a92ebac14d359e0"
+      },
+      "C64-22103": {
+        "closed": false,
+        "ended": false,
+        "final": "truncated",
+        "native_initial": "format",
+        "review_note": "Reached 4096 tokens without a closed trajectory or a JSON command object.",
+        "tokens": 4096,
+        "visible_sha256": "c57b22e20321829a541f88bfd3a9cfc865d579b08bb48c8e62cfa1fbb3a1cb5b"
+      },
+      "C64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 411,
+        "visible_sha256": "ee0628a5533de803c2eb7db19297ba6cdb0bd1fefbaf646b2b0ab10e007809b8"
+      },
+      "C64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 160,
+        "visible_sha256": "2a5bf87b6386c7121742f4c2c2b175be3a610048a80a7a134346b5c14b56feff"
+      },
+      "base-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 201,
+        "visible_sha256": "b328d0f009bbb073a84669a5360e8bb354e559d2df8fffd199d27d42e726ee5e"
+      },
+      "base-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 335,
+        "visible_sha256": "cb6ab6039d44af0a5a16f9570bad8f82707aa10bf353561d56bc6ea5df8b4c34"
+      },
+      "base-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 261,
+        "visible_sha256": "b219fa746f6f437ee4758f19fc0f28d1fbca03d9e76c6208f42ab39676757620"
+      }
+    },
+    "2617": {
+      "A64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 44,
+        "visible_sha256": "34094de5d39283262ecce92142c71ec22f28a779dd18e5083f9a04cededf96c1"
+      },
+      "A64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 59,
+        "visible_sha256": "74430840829caff5d48f1ccd5e82e5f4b9b435c315be1bf39810ba71f0e04bed"
+      },
+      "A64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 44,
+        "visible_sha256": "34094de5d39283262ecce92142c71ec22f28a779dd18e5083f9a04cededf96c1"
+      },
+      "B64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 375,
+        "visible_sha256": "4fd1853d8de94dee2e6af9b6947e8e7f6c9a36d4c4b79a7844d076dfc0e9b31b"
+      },
+      "B64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 519,
+        "visible_sha256": "1487ae09d5d42ad6b649692c9015cb78b84ae4fa7964fe181590a187d920210e"
+      },
+      "B64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 200,
+        "visible_sha256": "c76bab8eefee220f3a4e771d98be755f07d402c4434955691c4e6bc816436033"
+      },
+      "C64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "format",
+        "native_initial": "format",
+        "review_note": "Two quoted strings were delivered in place of a JSON object; the original command passes after packaging.",
+        "tokens": 278,
+        "visible_sha256": "cabd7e68d677f3a07475c1c49b69cb392cf2ef015b9893259fc07361967b6a9b"
+      },
+      "C64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 185,
+        "visible_sha256": "f360b76a219445550ae40fd2fa781ee67cac0f317b43dc0844cce033fed9f505"
+      },
+      "C64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 250,
+        "visible_sha256": "4bb5ab69a061eef90b410cccb7ab7e274d1ce5c6cee1dd8de8e21e2cd31cfb9f"
+      },
+      "base-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 346,
+        "visible_sha256": "98e1b67f6e0c326e9a22df7c881971198161f25d48a9b824dbdabb421700ec68"
+      },
+      "base-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 383,
+        "visible_sha256": "98e1b67f6e0c326e9a22df7c881971198161f25d48a9b824dbdabb421700ec68"
+      },
+      "base-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 318,
+        "visible_sha256": "052f1ebb6e4d91a1c887b877375b75b680711d904f99c2d82b7fa17089ec205b"
+      }
+    },
+    "7411": {
+      "A64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 63,
+        "visible_sha256": "29df93700e6c806d89c3b4e62f5eef08d3d784b842237fd19f735416f82da1e7"
+      },
+      "A64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 63,
+        "visible_sha256": "c34da4cdda7d4e4f2014ebdbb417cb59f2080030b9bad42ebcc47b7561a8ff2e"
+      },
+      "A64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 63,
+        "visible_sha256": "29df93700e6c806d89c3b4e62f5eef08d3d784b842237fd19f735416f82da1e7"
+      },
+      "B64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 190,
+        "visible_sha256": "58b61d20df59fc6666d656f165938de46caef4e227239c361380b935383b7b71"
+      },
+      "B64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 200,
+        "visible_sha256": "e7363a49b4e73abba73b49eaff8457f29e0207cd50c25cd06d19933bb74302f6"
+      },
+      "B64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 203,
+        "visible_sha256": "0cdf3719d23f7d9400c3558e2f695dbb12eab3942b972aacd8474468815357ae"
+      },
+      "C64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 228,
+        "visible_sha256": "5a163fe7c7cc1485b7e23b68873732b78c12c99408d4d24ceeb720538cc5877e"
+      },
+      "C64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 166,
+        "visible_sha256": "dcf5a58aceca30fefece485641b7b8849b29d52d83f9326c5bd3a5f693dbd68e"
+      },
+      "C64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 259,
+        "visible_sha256": "0318d525dd82159ff251f8ff37cc32eea23b7e1c2e12ab15a8f51489f66a58ec"
+      },
+      "base-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 325,
+        "visible_sha256": "373aa115c06810b5b0b54a6f2da94df76775f9d98d84fcb19d475cfeeac5fa7a"
+      },
+      "base-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 361,
+        "visible_sha256": "b0841ba3377b4d82740de4cd2d90599e133ad039797d9c0b537c54125b651914"
+      },
+      "base-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 321,
+        "visible_sha256": "923ef405abf41b915ebd7e29636b59bdde7fa6e7ce5b6fccf0c1de73800e1b3f"
+      }
+    },
+    "7413": {
+      "A64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "different-behavior",
+        "native_initial": "different-behavior",
+        "review_note": "",
+        "tokens": 61,
+        "visible_sha256": "06b94a97cc0c0d1ce91934a2d01463d822832d185b42e395e35fe477d6c13c3f"
+      },
+      "A64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "different-behavior",
+        "native_initial": "different-behavior",
+        "review_note": "",
+        "tokens": 67,
+        "visible_sha256": "1bec5a9345f57e8f6418e6ec5490a779aab09ea90f517914ebf4f00194ab9a06"
+      },
+      "A64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "different-behavior",
+        "native_initial": "different-behavior",
+        "review_note": "",
+        "tokens": 68,
+        "visible_sha256": "fcfc231c9ff3caec907562c2078c58d42b8422a65b677a5acdb636ec4b6775c4"
+      },
+      "B64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "two-invocations",
+        "native_initial": "unreviewed",
+        "review_note": "Two native invocations: checked sequentially on both files. Both outcome changes match; the one-command contract excludes the answer.",
+        "tokens": 72,
+        "visible_sha256": "f09dc49517a2b98fefd64db81b3350507473ebb60c1f40faf1a440960b2f512b"
+      },
+      "B64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "two-invocations",
+        "native_initial": "unreviewed",
+        "review_note": "Two native invocations: checked sequentially on both files. Both outcome changes match; the one-command contract excludes the answer.",
+        "tokens": 72,
+        "visible_sha256": "f09dc49517a2b98fefd64db81b3350507473ebb60c1f40faf1a440960b2f512b"
+      },
+      "B64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "two-invocations",
+        "native_initial": "unreviewed",
+        "review_note": "Two native invocations: checked sequentially on both files. Both outcome changes match; the one-command contract excludes the answer.",
+        "tokens": 72,
+        "visible_sha256": "f09dc49517a2b98fefd64db81b3350507473ebb60c1f40faf1a440960b2f512b"
+      },
+      "C64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "different-behavior",
+        "native_initial": "unreviewed",
+        "review_note": "Two native invocations: checked sequentially on both files. The first invocation reverses the input and output and fails before the second command.",
+        "tokens": 308,
+        "visible_sha256": "98612c364a3b422c568b438006981380b79cc911d17ac113e29046c9055d32b2"
+      },
+      "C64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "different-behavior",
+        "native_initial": "unreviewed",
+        "review_note": "Two native invocations: checked sequentially on both files. The first invocation reverses the input and output and fails before the second command.",
+        "tokens": 258,
+        "visible_sha256": "b054469b9f12892e7a8da83b6641a5e4c3e1dfa101840883bcab7ade2ab55f80"
+      },
+      "C64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 279,
+        "visible_sha256": "fec4243400e39ec8c7dd637f0a08a380858cb409b24567d1cfd0598a8060ec6e"
+      },
+      "base-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 388,
+        "visible_sha256": "84b9ea3f563162040ed3757600f9a13141c4862f3078591ff67b40111c7e6108"
+      },
+      "base-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 1138,
+        "visible_sha256": "c8e35dbc09979b68e7ebab6666d7c574a0b8ec00d54239cdd9058052b920a927"
+      },
+      "base-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 573,
+        "visible_sha256": "0531b3a3500c4ffb0939b3e2a42be37affbd21305a31afcfaab5942d8fcd6ee9"
+      }
+    },
+    "7500": {
+      "A64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 53,
+        "visible_sha256": "048b5699818dd3fc4b3d30c092738596e339b8dfcd2b730472e444faceadd603"
+      },
+      "A64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 49,
+        "visible_sha256": "505929a1ffa81930b1ac0ec0b559d5defa62f8ba3176ee85b8f02c68308117e1"
+      },
+      "A64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 50,
+        "visible_sha256": "e46355b353c9509dd90e65cddd8e764b2fb7d079d827288c08b86bac9c018451"
+      },
+      "B64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 169,
+        "visible_sha256": "b1e93ba8c19e4b8c489882eb04dbdfd32c741d9acdf11ed879d87da07a864600"
+      },
+      "B64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 190,
+        "visible_sha256": "dcfdca62486d3f36edd21e24f154a2febf4f342b900276e19a0ea771bf75501d"
+      },
+      "B64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 536,
+        "visible_sha256": "84ec3f5634e15d6c47c24e913e9161afad263ec13026f1a2878cac3aedf00329"
+      },
+      "C64-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 174,
+        "visible_sha256": "9e7f59eed661c507952e46e619466c5c9ebfe8a2c8d67396f82acbe6f3669db3"
+      },
+      "C64-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 554,
+        "visible_sha256": "e61c740b1fa13777c79216e9f6c7156c14cf61a1af9483c49c51eec6d039a66f"
+      },
+      "C64-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "unreviewed",
+        "review_note": "The argument names text rather than .text. The measured behavior of the binary on two inputs determined the outcome; the literal option value was incorrect.",
+        "tokens": 254,
+        "visible_sha256": "7582c56f795aa67d3014adb161a78bfa98c5b92152eb3076e5239ad774d2660c"
+      },
+      "base-22103": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 412,
+        "visible_sha256": "91388dbd95e691f362667f1ec3cb325de494046a87b91d8c95fe678d68cb75cd"
+      },
+      "base-22109": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 274,
+        "visible_sha256": "e9a7e54fc290d912fa508d3080c74deeb7bac3a5675ffbde6bd94c2789c3f257"
+      },
+      "base-22111": {
+        "closed": true,
+        "ended": true,
+        "final": "pass",
+        "native_initial": "pass",
+        "review_note": "",
+        "tokens": 326,
+        "visible_sha256": "744d2b2d782eb6f1734fff73d3c839815fafd7410716de70ddccf6df5beb5878"
+      }
+    }
+  }
+}
