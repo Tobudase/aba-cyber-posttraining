@@ -1,4 +1,6 @@
-# Current status — November 2, 2026
+# Project status on November 2, 2026
+
+For subsequent experiments and the current model decision, see the [research overview](../README.md) and [experiment log](../EXPERIMENT_LOG.md).
 
 **Latest in-family diagnostic:** all three Qwen arms scored **12/16** on the frozen strict metric for 16 self-authored same-operation/new-filename questions. A post hoc, safe Linux execution check on the pre-frozen files found **16/16 base, 14/16 matched control, 13/16 ABA treatment**. The treatment used `grep -w` in three cases where embedded substrings were required. The two admitted ABA `grep` TRAIN questions are quarantined for future work due to ambiguous “literal word” wording; this is a plausible mechanism, not a causal finding. The earlier strict and SFT results are unchanged. No independent gold, official TEST or model promotion; owned GPU/CPU resources were deleted. [Chinese report](KALI_QWEN_NATIVE_INFAMILY16_DIAGNOSTIC_ZH_2026-11-02.md) · [Aggregate](../results/kali-qwen-native-infamily16-2026-11-02/aggregate.json).
 

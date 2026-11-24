@@ -1,0 +1,784 @@
+# Experiment log
+
+[Research overview](README.md) · [Latest results in Chinese](results/teacher-transfer-2026-11-23/RESULT_ZH.md)
+
+Entries record the evidence and decisions available at the time. For the current model decision, see the research overview.
+
+## November 23, 2026 — Replicating teacher SFT on a second training example
+
+On a function-listing example and its three variants, the original Qwen3-8B chose the correct option but omitted the program name in all eight responses. Answer-only and Qwen trajectory SFT each passed 8/8. Both teacher-trained models reproduced their own demonstration twice on the original prompt. On two other compiler tasks, Qwen trajectory SFT preserved the base model’s 4/4, while answer-only and DeepSeek trajectory SFT each passed 2/4. Eight more sources were screened, taking the cumulative count to 64, of which three qualify. [Full protocol, scores and figures](results/teacher-transfer-2026-11-23/RESULT_ZH.md)
+
+## November 23, 2026 — Do teacher trajectories improve transfer or change the answer format?
+
+On five new KaliBench TRAIN sources, original Qwen3-8B passed **15/15**, answer-only SFT **12/15**, Qwen trajectory SFT **11/15**, and DeepSeek trajectory SFT **11/15** under the single-command JSON protocol. Replaying equivalent two-step operations and unambiguously recoverable answers changed the two trajectory results to **15/15** and **12/15**, respectively. Across all eight prospectively chosen sources, primary scores were **23/24**, **21/24**, **18/24**, and **17/24**. Three decoding seeds were used per source.
+
+On the historical module-list request, explicitly asking the original student to check the executable yielded **3/3**, a length-matched neutral note **2/3**, and the teacher's same-question explanation **0/3**. On the schema request all four prompts reproduced the same misspelling; a one-character command edit restored **12/12**. The source screen now covers **56** origins, with **3** meeting the training criterion.
+
+[Chinese report](results/constraint-audit-2026-11-23/RESULT_ZH.md) · [Results figure](results/constraint-audit-2026-11-23/comparison.png) · [Per-draw scores](results/constraint-audit-2026-11-23/transfer.json) · [Recount](results/constraint-audit-2026-11-23/recount.py)
+
+## November 23, 2026 — Screening new KaliBench TRAIN sources
+
+Original Qwen3-8B passed **55/57** draws on **19 newly screened sources**. On two static file-report questions, replacing a plugin error with the actual installed help changed the student's score from **0/6 to 6/6** with matched seeds. The unchanged control passed **3/3 in both conditions**. The two remaining errors on new sources both omitted an output name and each recovered with that single edit.
+
+On reversed requests for three previously identified sources, the student passed **3/9**, the Qwen teacher **9/9**, and the DeepSeek teacher **7/9**. The study now has **3 qualifying original sources across 51 screened**. Two have matched labels for both directions in all five arms. The eight-source threshold for multi-source SFT remains unmet.
+
+[Results figure](results/paired-source-wave-2026-11-23/screening-results.png) · [Chinese report](results/paired-source-wave-2026-11-23/RESULT_ZH.md) · [Paired help experiment](results/paired-source-wave-2026-11-23/help-replay.json) · [Recount](results/paired-source-wave-2026-11-23/recount.py)
+
+## November 23, 2026 — What did the student learn from a teacher explanation?
+
+All five Qwen3-8B training conditions passed the original database question in **6/6** draws. On three variants of that question, repeated across three training seeds, answer-only SFT passed **17/18**. Adding a 59-token target explaining why the original question required suppressing field defaults gave **8/18**. When the request explicitly reversed that condition, answer-only passed **6/6** and the explanation arm **0/6**. Changing just the defaults option restored correct execution in four of those six failures.
+
+On three further KaliBench TRAIN questions chosen before generating the student outputs, the previous answer-only checkpoint passed **9/9**, the base **8/9**, the Qwen trajectory checkpoint **7/9**, and the DeepSeek trajectory checkpoint **6/9**. Each question had three sampled responses and two native test fixtures. These counts measure diagnostic transfer on three sources. The official test split remains sealed.
+
+[Chinese report](results/schema-factor-2026-11-23/RESULT_ZH.md) · [Results figure](results/schema-factor-2026-11-23/diagnostics.png) · [Frozen protocol](results/schema-factor-2026-11-23/PROTOCOL.md) · [Per-draw audit](results/schema-factor-2026-11-23/audit.py)
+
+## November 22, 2026 — Single-example recall and cross-tool transfer
+
+Qwen3-8B reproduced the full Qwen and DeepSeek teacher trajectories on the original training prompt at step 64 (1,027 and 430 tokens). On two other previously screened TRAIN questions, the DeepSeek-trained checkpoint passed **5/6** strict checks, the base model **2/6**, the Qwen-trained checkpoint **1/6**, and answer-only **0/6**. The DeepSeek gain came entirely from one LLVM question where it supplied the missing executable in all three draws. Each draw was checked on two files. These are diagnostic results from one training source and one training seed.
+
+[Chinese report and figure](results/teacher-recall-2026-11-22/RESULT_ZH.md) · [Per-draw scores and replay](results/teacher-recall-2026-11-22/transfer.json) · [Recount](results/teacher-recall-2026-11-22/recount.py)
+
+## November 22, 2026 — What did teacher supervision change on a matched pair?
+
+On a same-file schema task, the original Qwen3-8B passed **0/6** because of one misspelled option. Correcting one character in each saved command recovered **6/6**. At step 64, the Qwen trajectory checkpoint passed **6/6**, answer-only **4/6**, and DeepSeek trajectory **4/6**. The answer-only checkpoint passed both directions with both decoding seeds, then dropped the required option both times when an irrelevant sentence was added. These six responses come from one source.
+
+Across 10 additional read-only TRAIN sources, the teachers each passed **30/30** strictly and the student passed **28/30**. Both misses had a correct command and an invalid JSON escape in the explanation. The total is three verified gap sources across 29 screened, below the eight-source threshold for multi-source SFT.
+
+[Chinese report and figure](results/condition-explanations-2026-11-22/RESULT_ZH.md) · [One-character replay](results/condition-explanations-2026-11-22/one-edit-grades.json) · [Offline recount](results/condition-explanations-2026-11-22/recount.py)
+
+## November 22, 2026 — Can Qwen3-8B learn a verified teacher example?
+
+On one read-only KaliBench TRAIN source and two same-source variations, the base student passed **0/3**. At step 16, answer-only SFT and DeepSeek trajectory SFT each passed **3/3**. Qwen teacher trajectory SFT passed **1/3**. At step 64, all three passed **2/3** under strict scoring. Both trajectory-trained students generated the correct command on all three prompts, with one JSON-format error each.
+
+Across 19 screened TRAIN sources, **two** had verified examples from both teachers and a repeatable student error. This fell below the prespecified eight-source threshold for multi-source training. The official test set remains untouched.
+
+![Execution and format checks at three SFT checkpoints](results/readonly-teacher-match-2026-11-22/matched-checkpoints.png)
+
+[Chinese report](results/readonly-teacher-match-2026-11-22/RESULT_ZH.md) · [Per-source evidence](results/readonly-teacher-match-2026-11-22/screen-summary.json) · [Offline recount](results/readonly-teacher-match-2026-11-22/recount.py)
+
+## November 22, 2026 — Which repair preserves both directions of a schema request?
+
+On three new pairs of prompts, sampled twice and scored on three databases, the existing answer-only step-16 adapter passed **12/12** responses. Adding an opposite-direction example at the same 16-step budget passed **8/12**. Adding a separate short teacher-explanation task passed **6/12** at a 1,024-token cap and **11/12** at 4,096. All four failures of paired answer-only training passed after correcting a single constraint flag. On a matched A10 inference run, disabling thinking removed both truncations and changed correctness from 10/12 to 9/12. These probes cover one read-only tool.
+
+[Chinese report and sources](results/access-paired-repair-2026-11-22/RESULT_ZH.md) · [Per-response checks](results/access-paired-repair-2026-11-22/results.json) · [Offline recount](results/access-paired-repair-2026-11-22/verify.py)
+
+## November 22, 2026 — Reproduced a documented Access schema error
+
+On one read-only KaliBench TRAIN question with the same installed-tool help, original Qwen3-8B passed **0/3**, Qwen3.8-27B-FP8 **3/3**, and DeepSeek 4.1 Flash **2/3**. Fixing one character in each historical student response restored the reference output on all three database fixtures. These are repeated draws on one question.
+
+Single-example Qwen3-8B SFT fixed the error. Answer-only training passed all three prompts at step 16. At step 64 both arms passed the training prompt and a new-file prompt, and both failed the request to retain defaults. Each cell below is one sampled response evaluated against three databases.
+
+![Checkpoint outcomes across three Access schema prompts](results/access-schema-2026-11-22/checkpoint-probes.png)
+
+[Chinese report](results/access-schema-2026-11-22/RESULT_ZH.md) · [Training losses and checkpoint results](results/access-schema-2026-11-22/sft.json) · [Verification script](results/access-schema-2026-11-22/verify.py)
+
+## November 21, 2026 — DeepSeek 4.1 Flash blind teacher screen
+
+On four selected read-only KaliBench TRAIN questions, DeepSeek passed **3/12** blind attempts at a 1,200-token cap and **2/12** at 4,096. Only the explicit-text question met the two-of-three threshold. All five correct responses contained unsupported option claims in the raw trace. The final answers and visible explanations passed on those draws. No raw-trace SFT was started.
+
+The original Qwen3-8B passed **1/12 blind** and **8/12 with tool help** on fresh seeds. On the one confirmed blind gap (PE text), documentation took the student from 0/3 to 3/3.
+
+[Chinese report](results/deepseek41-blind-readonly/RESULT_ZH.md) · [Per-response checks and token audit](results/deepseek41-blind-readonly/teacher-summary.json)
+
+## November 20, 2026 — Blind teacher versus the same teacher with tool help
+
+On four selected KaliBench TRAIN questions where Qwen3-8B repeatedly used invalid parameters, the same-family teacher passed both execution and explanation checks on **2/12 blind responses** and **12/12 with the installed tools’ help**. None of the four reached the blind threshold of two passes in three attempts. No student retraining was triggered. Both PE questions test the same output-format skill.
+
+[Results and paired comparison figure](results/qwen-parameter-gap-pilot/RESULT_ZH.md) · [Per-response checks](results/qwen-parameter-gap-pilot/summary.json) · [Offline recount](results/qwen-parameter-gap-pilot/verify.py)
+
+## November 20, 2026 — Official TRAIN inventory screening
+
+Two rounds of source review produced 12 offline, read-only questions with verified positive and negative controls. Original Qwen3-8B passed 6/36 generations. One question met the initial repeated semantic-error criterion. The same-family teacher passed 0/3 blind draws on that question. No new example met the full teacher–student gap criterion, so the original checkpoint was retained and no new SFT or ABA run was started. These are selected TRAIN questions; official TEST remained sealed.
+
+[Chinese report and error analysis](results/official-train-inventory-2026-11-20/RESULT_ZH.md) · [Per-question results and offline recount](results/official-train-inventory-2026-11-20/summary.json)
+
+![Screening decisions and the 36 original-student draws](results/official-train-inventory-2026-11-20/screening.png)
+
+## November 20, 2026 — Matched answer-prefix SFT on paired inventory tasks
+
+Three Qwen3-8B adapters learned the same four inventory prompts for 64 updates. On 12 independent development prompts sampled three times each in thinking mode, the original model passed **17/36**. At step 64, answer-only SFT passed **30/36**, inline-explanation SFT **28/36**, and separate-explanation SFT **30/36**. The separate-explanation arm used exactly the same direct-answer inputs and labels as the answer-only arm. On paired draws it gained 0 passes and lost 0 relative to answer-only at step 64. All nine adapters were saved, reloaded, and verified. The curves show internal development results from one training seed.
+
+[Chinese report and regression analysis](results/readelf-prefix-control-2026-11-20/RESULT_ZH.md) · [Checkpoint metrics and weight hashes](results/readelf-prefix-control-2026-11-20/summary.json)
+
+![Development outcomes at 0, 16, 32, and 64 updates](results/readelf-prefix-control-2026-11-20/development-curves.png)
+
+## November 19, 2026 — Can Qwen3-8B transfer a one-example teacher demonstration?
+
+After 32 updates, Qwen3-8B reproduced the teacher’s short explanation and answered the training question correctly. On 12 held-out read-only inventory prompts sampled three times each in thinking mode, the original model passed **12/36**, answer-only SFT **18/36**, and explanation-plus-answer SFT **17/36**. Both trained models passed **12/12** on questions about the tool’s own version and **0/12** when asked for version records inside the file.
+
+A separate screen of 48 official KaliBench TRAIN candidates yielded no new cases meeting the repeated semantic-error criterion. The original model was retained. [Chinese report](results/readelf-transfer-2026-11-19/RESULT_ZH.md) · [Aggregate results](results/readelf-transfer-2026-11-19/summary.json)
+
+![Functional outcomes by query target and decoding mode](results/readelf-transfer-2026-11-19/paired-outcomes.png)
+
+## November 19, 2026 — Qwen3 teacher–student screening on read-only ELF inventory
+
+Across **72 internal candidate prompts**, Qwen3-8B repeatedly made a semantic error on 9. The Qwen3.8-27B-FP8 teacher produced verified answers on at least two of three attempts for 4 of those prompts. **Three** also passed explanation review and a fresh student retest. All three concerned the distinction between the reader’s own version and version information inside a library. The study required 8 prompts across 3 task types to start training, so it ended at screening. The official KaliBench test set stayed sealed.
+
+[Chinese report](results/readelf-screening-2026-11-19/RESULT_ZH.md) · [Aggregate results](results/readelf-screening-2026-11-19/summary.json)
+
+![Screening outcomes for 72 read-only inventory prompts](results/readelf-screening-2026-11-19/verified-screening.png)
+
+On 24 fresh SQLite evidence files, original Qwen3-8B, answer SFT and evidence SFT scored **0/24, 0/24 and 0/24**. [Paired experiment and training-data verification](results/defensive-sqlite-metadata-2026-11-18/README_ZH.md).
+
+## Verified teacher reasoning: completed internal study (started 2026-11-17)
+
+Completed the independent-teacher data → paired SFT → native completion of two original-native-trained checkpoints (0 new completion steps) → once-frozen internal confirmation cycle on original Qwen3-8B. Only 23 primary traces; 3 low-success gap candidates, of which just 1 has repeated certified student failures in both modes (2 remain uncertain); one training seed. Retained model: **E0**. No trained adapter met the predefined retention gate. Thinking confirmation reasoning-minus-answer: **+4.17 pp**. This is **not an official KaliBench/CyberGym score**. [Audited final report](results/kali-verified-teacher-stage-2026-11-17/FINAL_RESULT_ZH.md) · [Results figure](results/kali-verified-teacher-stage-2026-11-17/final-results.png).
+
+![Audited internal results](results/kali-verified-teacher-stage-2026-11-17/final-results.png)
+
+
+
+
+
+Research code and traceable experiment summaries for adapting open-weight language models to cybersecurity tasks. Minhao's current experiment is **KaliBench**; AthenaBench preparation and an eventual CyberGym transfer are separate work.
+
+## November 17, 2026 — historical independent-teacher preparation checkpoint
+
+Verified **23 independent-U teacher reasoning tasks / 8 tools**, plus **6 verified publisher TRAIN replay rows**. Only **3** tasks meet the three-sample teacher-pass/student-low-pass gap rule. The broader64-task/32-gap target was not reached; this is a limited feasibility study. On the separate67-task authored TRAIN candidate pool, untrained Qwen3-8B passes **30/67 thinking** and **14/67 non-thinking**, versus teacher **42/67** on the first independent attempt. These are scoped fixture checks, not official KaliBench accuracy.
+
+**Evidence correction:** the three low-success-rule candidates contain **only one gap with repeated certified student failures in both modes**; two remain limited by UNKNOWN checks. Training rows and scoring are unchanged. [Correction and counts](results/kali-verified-teacher-stage-2026-11-17/CORRECTION_ZH.md). The preparation figure’s gap count refers to the original rule, not three certified failures.
+
+At this historical preparation checkpoint, full execution was still pending. The completed audited study is now reported above; the original preparation figures and aggregates below are preserved. Official TEST stays untouched.
+
+![Verified teacher-data stage](results/kali-verified-teacher-stage-2026-11-17/preparation.png)
+
+[Chinese protocol and limitations](results/kali-verified-teacher-stage-2026-11-17/RESULT_ZH.md) · [Verified preparation aggregates](results/kali-verified-teacher-stage-2026-11-17/preparation-summary.json) · [Execution status](results/kali-verified-teacher-stage-2026-11-17/STATUS.md) · [Core code snapshots](code-snapshots/teacher-sft-20261117/README.md).
+
+## November 17, 2026 — matched SFT pair completed; no validated improvement
+
+Completed **both original-Qwen3-8B SFT arms (48 updates each)**, **264 paired evaluation responses**, and **88 additional untrained-base non-thinking control responses** on one **A100 80GB**. Initialization, data/order, gradients, saved adapters, reloads and local re-scoring were verified. GPU resources are cleaned. These are internal panels, not official KaliBench leaderboard results.
+
+| Model state | Frozen DEV strict /24 | Exposed old-panel strict /64 | Truncated /88 | Retained base-correct old cases |
+|---|---:|---:|---:|---:|
+| Original base, thinking enabled | 2 | 11 | 31 | reference |
+| Answer-only-target SFT, thinking enabled | 2 | 10 | 30 | 9/11 |
+| Brief-rationale-target SFT, thinking enabled | 1† | 12 | 24 | 10/11 |
+| Untrained base, non-thinking control | 1 | 10 | 2 | separate diagnostic |
+
+† The sole DEV decrease is a **source-verified valid option alias omitted by the frozen scorer**. A separately reported, post-hoc alias sensitivity gives **2/24 for all three main arms**; frozen scores remain unchanged. Neither adapter passes the predeclared 95% old-case retention guard, so **the original base is retained**.
+
+Both training losses decreased, but new-task accuracy did not improve. Answer-only training did **not** make the model emit empty thinking blocks on these evaluation prompts. Disabling thinking without training greatly reduced truncation without improving strict correctness. The 48 solution-conditioned short explanations cover only six schemas; this does **not** test the full benefit of independently solved teacher reasoning traces. Greedy thinking decoding with a 1,024-token cap is also a limitation relative to Qwen's recommended settings.
+
+![Completed fixed SFT comparison](results/kali-rationale-sft-results-2026-11-17/comparison.png)
+
+[Detailed Chinese report and cause analysis](results/kali-rationale-sft-results-2026-11-17/RESULT_ZH.md) · [Aggregate results and alias sensitivity](results/kali-rationale-sft-results-2026-11-17/summary.json) · [Training diagnostics](results/kali-rationale-sft-results-2026-11-17/training.png). Run `python3 scripts/verify-kali-rationale-results-20261117.py` to check public aggregate math and artifact hashes. Raw data and per-case evidence remain private. Confirmation24 and official TEST remain unqueried; this completed fixed SFT pilot is not a new ABA search.
+
+## November 17, 2026 — grounded rationale data and matched SFT pilot prepared
+
+Prepared **48 source-grounded, solution-conditioned teacher explanations** across six TRAIN schemas/five offline-analysis tools. All **48 positive commands and 48 negative controls** passed the intended acceptance checks on benign fixtures. Two earlier explanations were corrected; **36 new explanations remain unchanged and 12 are explicitly AI-edited**. This is a narrow AI-reviewed pilot, not independent teacher-solved benchmark success or raw native reasoning traces.
+
+Both original-Qwen3-8B arms now have the same questions, final commands, prompts, initialization plan and row order: **answer-only versus short rationale + answer**, each planned for **4 epochs / 48 updates**. Official-template encoding, prompt masking and EOS checks passed for **96 rows**. Five CPU tests and both training/evaluation preflights passed. **At this preparation checkpoint, student SFT had not yet run; the completed execution is reported above.**
+
+The arms are matched on example exposure, not compute: supervised tokens per epoch are **1,296 versus 4,936**. DEV24 and exposed old64 evaluation are prepared for base plus two final adapters; confirmation24 and official TEST remain unqueried. The CPU fixture job is cleaned and no GPU job was submitted in this preparation stage.
+
+![Verified preparation counts and token exposure](results/kali-rationale-sft-prep-2026-11-17/preparation.png)
+
+[Chinese protocol, provenance and limitations](results/kali-rationale-sft-prep-2026-11-17/RESULT_ZH.md) · [Sanitized preparation summary](results/kali-rationale-sft-prep-2026-11-17/summary.json) · [Frozen training configuration](results/kali-rationale-sft-prep-2026-11-17/protocol.json).
+
+## November 16, 2026 — student baselines and teacher-gap verification completed
+
+Completed both **original Qwen3-8B** modes on one **A10** and collected all **268 teacher/student responses** on the isolated 67-row offline-analysis TRAIN screen. No SFT/ABA training or DEV/confirmation/official TEST query occurred.
+
+| Arm | Native partial ×100 | Native exact | Supplemental strict | Truncated |
+|---|---:|---:|---:|---:|
+| Qwen3.8-27B-FP8 teacher | 60.86 | 6/67 | 6/67 | 0 |
+| Gemma 4 12B QAT teacher | 43.74 | 9/67 | 8/67 | 28 |
+| Original Qwen3-8B non-thinking | 57.61 | 5/67 | 5/67 | 0 |
+| Original Qwen3-8B thinking | 59.63 | 5/67 | 4/67 | 0 |
+
+Thinking rescued 3 strict matches but lost 4, using about **10× inference time**. Among **6 unique teacher-pass / both-student-fail score gaps**, controlled benign-file checks confirmed **4 local task gaps**; **1 reference-scope ambiguity and 1 tool XML-output defect remain held**. Checks repeated on two tool versions; none of the generated binaries was executed. All student/review resources are cleaned.
+
+Of the four supported gaps, **2 brief explanations are useful seeds and 2 require correction**. No full native reasoning trace is admitted to SFT. Source records all carry publisher `PASS_RUNTIME_ERROR`; neither these labels nor reference matching certify functional correctness. This custom small TRAIN screen is **not an official KaliBench score or proof of a dominant teacher**.
+
+![Completed screening comparison](results/kali-teacher-screen-2026-11-16/screening.png)
+
+[Chinese results, checks and limitations](results/kali-teacher-screen-2026-11-16/RESULT_ZH.md) · [Sanitized aggregate metrics](results/kali-teacher-screen-2026-11-16/aggregate.json). Individual questions, outputs and provenance remain private.
+
+## November 16, 2026 — three diagnostic studies completed and verified
+
+Completed the matched objective comparison (v11), directory/batch/cache probe (v12), and replay-content comparison (v13). These are **fixed operator-run RedSage 8B continuation diagnostics, not a new native ABA search or official KaliBench evaluation**. The earlier native Qwen ABA study is documented separately below.
+
+| Current replay study | Frozen CE source | More existing-intent replay | Missing-intent replay |
+|---|---:|---:|---:|
+| Actual continuation updates | 0 in v13 | 96 | 96 |
+| Full TRAIN functional PASS | 379/384 from v11 | 379/384 | 379/384 |
+| Previously correct original old cases retained | 19/20 | 19/20 | **20/20** |
+| Old64 strict correctness | 24/64 | 23/64 | **25/64** |
+| Legacy functional fixtures PASS | 62/64 | 63/64 | 62/64 |
+| Exposed DEV32 PASS | 30/32 | 30/32 | **31/32** |
+| Shifted exposed DEV64 PASS | 52/64 | 48/64 | **50/64** |
+
+Adding missing intent coverage recovered the old port-setting case and preserved all 24 source-correct old cases. Parser-only auxiliary TRAIN fit increased from **4/24 to 24/24**, while existing replay stayed at 4/24. However, both continuations lost two previously passing shifted PyInstaller cases by omitting `--noupx`; missing-intent replay still fails the frozen legacy and shifted-development gates. **This is a targeted recovery, not a complete solution or independent generalization gain. Neither endpoint is promoted.** UNKNOWN cases remain unresolved, not counted as known failures or successes.
+
+The earlier objective comparison improved TRAIN fit **353→379/384** with direct CE, but shifted DEV declined **56→52/64**. The no-training root substitution study found **0/12 versus 8/12 confirmed PASS** on selected shared-template cases, across four batch/cache settings; original-root outcomes include 10 UNKNOWN. This sensitivity predates the later continuation and is not proof of training-induced directory memorization.
+
+All 576 updates across v11/v13, exported adapter hashes, paired outcomes and resource cleanup were checked. The batch's 14 owned Jobs are terminal and cleaned (13 successful, one zero-update failed preflight retained in the audit); GPU containers ran sequentially, totaling **3.70 container-hours**, including staging/inference/waits. Official TEST and this phase's fresh confirmation64 queries stayed at **0**.
+
+![Replay content, fitting and retention](results/kali-mode-repair-2026-11-16/replay-content-comparison.png)
+
+[Full Chinese results, figures and causal limitations](results/kali-mode-repair-2026-11-16/RESULT_ZH.md) · [Verified per-arm results](results/kali-mode-repair-2026-11-16/v13-analysis.json) · [Completed status and next research step](results/kali-mode-repair-2026-11-16/remaining-status.json) · [Resource and export audit](results/kali-mode-repair-2026-11-16/v13-batch-resource-audit.json).
+
+## November 16, 2026 — full-TRAIN fitting and retention diagnosis
+
+Two RedSage continuation arms completed 192 updates each. Fixed-prefix and student-prefix distillation passed **352/384** and **338/384** full TRAIN fixtures, respectively; both retained **19/20** originally correct old cases. Neither passed all gates. New PyInstaller mode contrasts remain underfit; hardlink fits TRAIN but is sensitive to directory/context changes. **44→56/64 on the exposed combination development panel is adaptive development gain, not independent generalization.**
+
+The single-GPU direct-CE diagnosis completed 128 updates on 16 balanced TRAIN rows. Final microfit functional PASS was **16/16**, and full TRAIN-panel PASS was **64/64**. These are fitting diagnostics, with no old-retention or independent-test claim. [Verified results, figure and next-stage protocol](results/kali-mode-repair-2026-11-16/RESULT_ZH.md).
+
+## November 15, 2026 — native Qwen3-8B ABA versus fixed SFT completed
+
+Expanded selection DEV to **46 tasks / 26 groups / 9 tools** and strengthened old-capability retention with both historical and paired-base correct-case checks. The actual native ABA framework completed **Setup → Designer → two real GPU candidates → scoring → Finalizer**, selecting learning rates `1e-5` and `3e-5`. Both candidates started from original **Qwen3-8B** and trained **128 updates each**; their combined 256 updates and 31,100 target tokens match the previous fixed SFT's total exposure, rather than its per-candidate steps or end-to-end compute. The fixed adapter was reused and reevaluated, not retrained in this round.
+
+**No adapter passed all frozen DEV gates; original Qwen3-8B remains retained.** Fixed SFT and A2 each retained only **11/14** paired-base correct old cases, below the required 12/14; A1 retained 12/14 but still truncated one old response. All three adapters had one truncation on DEV46+old64. Native ABA selected A1 using penalties among ineligible candidates; that selection is **not evidence that A1 beats fixed SFT**.
+
+After freezing selection, all four model states were evaluated once on **384 internal confirmation tasks / 197 groups**, with a stronger full-style oracle. No retraining or reselection used confirmation:
+
+| Frozen model | Internal confirm384 native points | Strict matches | Confirmed group utility | Frozen DEV eligibility |
+|---|---:|---:|---:|---|
+| Original Qwen3-8B | 55.58 | 0/384 | 0.00 | Pass |
+| Fixed SFT, 256 steps | 88.20 | 209/384 | 54.57 | Fail |
+| ABA A1, 128 steps | 70.04 | 20/384 | 7.36 | Fail |
+| ABA A2, 128 steps | 89.39 | 207/384 | 53.05 | Fail |
+
+A2's slightly higher native partial score did **not** translate into better strict matches or confirmed group utility than fixed SFT. Baseline has 383 unresolved behavior cases and one invalid output; **zero confirmed utility or strict matches does not mean zero semantic ability**. The holdout shares its author/generator and is dominated by PyInstaller and clang-format (308/384); it is **not official KaliBench TEST or an external expert test**. Confirmation truncations were 1/1/2/1 for base/fixed/A1/A2, so retaining the base does not claim error-free outputs.
+
+Completed **2,244 subject-model responses**, including DEV base repeats/reload checks, 1,536 confirmation responses and 32 adaptive DEV decoding diagnostics; native controller turns and CPU checks are separate. Official TEST queries and old final64 requeries stayed at **0**. Sixteen CPU regression tests passed; actual updates, hashes, adapter reloads and delivered native artifacts were verified. One A10 was used sequentially; GPU/CPU Jobs and the native CPU VM are cleaned, with persistent caches and private adapters retained.
+
+![Expanded development scoring and old-capability retention](results/kali-qwen-native-aba-2026-11-15/comparison.png)
+
+![Post-selection internal confirmation](results/kali-qwen-native-aba-2026-11-15/confirmation.png)
+
+[Chinese result, failure analysis and limitations](results/kali-qwen-native-aba-2026-11-15/RESULT_ZH.md) · [Machine-readable results](results/kali-qwen-native-aba-2026-11-15/summary.json) · [Code and reproduction conditions](docs/KALI_QWEN_NATIVE_ABA_2026-11-15_ZH.md) · [Private-generator/public-runtime dependency audit](results/kali-qwen-native-aba-2026-11-15/dependency-audit.json).
+
+## November 15, 2026 — original-model SFT comparison completed
+
+Completed the repaired-oracle pilot on **one RTX 3090**, with **256 actual updates per original model**, four verified exported checkpoints, and **912 generation tasks**. On exposed four-tool DEV32, final **Qwen3-8B passed 32/32 fixtures** and **RedSage-K passed 29/32 with 3 UNKNOWN**. Old64 native partial scores changed **63.44→67.64 for Qwen** and **75.20→71.73 for RedSage**; previously strict-correct retention was **11/13** and **16/20**, respectively. Neither model is free of per-case regression.
+
+Qwen is a useful next ABA starting-point candidate under this pilot recipe, while RedSage remains the stronger old-panel reference in absolute score. **Qwen baseline fixture outcomes are all UNKNOWN, not 0% semantic success**; this prevents claiming a proven 32-case behavioral gain. The comparison is one seed, shared four-tool fixtures and model-specific serialization, with **no official TEST, independent confirmation or model promotion**. Pilot compute/scoring Jobs are cleaned; a dedicated 8Gi cache is retained.
+
+![Original-model comparison with unresolved cases shown](results/kali-two-model-sft-2026-11-15/comparison.png)
+
+[Results, interpretation and limitations](results/kali-two-model-sft-2026-11-15/RESULT_ZH.md) · [Machine-readable results](results/kali-two-model-sft-2026-11-15/summary.json) · [Frozen numerical protocol and pre-output infrastructure amendments](results/kali-two-model-sft-2026-11-15/protocol.json).
+
+## November 15, 2026 — dry-run oracle fixed; two-model pilot prepared
+
+Validated a versioned **hardlink dry-run oracle v6** on util-linux 2.37.2 and uniformly rescored **1,536 saved responses**, with no new model calls. Six Linux regression controls and five local unit tests passed. All eight main replay/KL-stage outcomes were unchanged relative to v5; historical scores are preserved. [Repair and review](results/kali-preview-v6-review-2026-11-15/RESULT_ZH.md).
+
+Prepared a fixed **original RedSage-K 8B versus original Qwen3-8B** pilot: fresh LoRA, the same 256 TRAIN rows and update order, 256 planned updates per model, model-specific serialization. **No new model-training result exists at this publication snapshot**; the controller waits for another authorized GPU task. [Frozen protocol](results/kali-two-model-sft-2026-11-15/protocol.json) · [Current pilot status](results/kali-two-model-sft-2026-11-15/status.json).
+
+## November 15, 2026 — replay/KL diagnostic and implementation review
+
+Three bounded 256-update controls on four authored tool domains completed training and development scoring. Replay-only scored **69.34** on the old native panel with **30/32** new DEV fixture passes; replay+KL scored **75.88** with **29/32**, and stronger KL **77.01** with **28/32**. E0 old native score was **75.20**. The KL arms retained **18/20** previously strict-correct old cases; no arm passed all frozen gates, and the conditional decision is **stop / no promotion**. These are operator controls, not a new native ABA search or official benchmark scores.
+
+Read-only review reproduced **1,152 saved primary-stage predictions' scores** and checked **512 update traces**. It also identified a **dry-run oracle blind spot**: unchanged files and a successful return do not establish correct preview behavior. Existing fixture PASS counts are disclosed with that limitation; frozen scores were not silently rewritten. [Chinese review and next steps](docs/KALI_EXPERIMENT_REVIEW_2026-11-15_ZH.md) · [Aggregate results](results/kali-functional-review-2026-11-15/summary.json) · [Implementation audit](results/kali-functional-review-2026-11-15/implementation-audit.json).
+
+## November 13, 2026 — append versus replay follow-up
+
+Completed the four-arm append-versus-replay diagnostic: all original 733 TRAIN rows retained, 797 actual updates and 19,065 supervised tokens per arm. The appended verified64 effect was -2.417 native points at seed42 and +0.421 at seed43; strict changes were -3 and 0. All four arms failed the frozen DEV panel retention gate, so no model is promoted. A18 completed after an explicitly requested retry of its queue-only failure, preserving numerical protocols and matching A17’s A100 80GB PCIe product. Only exposed DEV128 was evaluated; no official TEST or final64 re-query. [Frozen design](results/kali-8b-append64-study-2026-11-13/DESIGN_ZH.md) · [Completed status](results/kali-8b-append64-study-2026-11-13/status.json) · [Actual results](results/kali-8b-append64-study-2026-11-13/RESULT_ZH.md).
+
+## November 12, 2026 — completed bounded 8B study
+
+Completed **four unique real 8B SFT arms**, with 733 nonzero-gradient updates each, **two native-scored ABA candidates**, and **one frozen 64-example internal confirmation**. Recovery reused previously native-trained, scored and finalized P13 with **0 new updates**; only P14 was freshly trained in the final native run. The native winner was **P13**, while the predeclared DEV retention rules kept **E0**.
+
+On the previously unqueried internal 64-example panel, E0 scored **24/64 strict and 76.11 native points**; P13 scored **27/64 and 75.96**. Strict correctness increased, but native score did not. No trained candidate is promoted, and **reliable improvement has not been established**. Official TEST queries: **0**. These are publisher-TRAIN/silver internal results, not leaderboard scores.
+
+![Complete bounded study](results/kali-8b-verified64-study-2026-11-12/study-results.png)
+
+[Detailed results and limitations](docs/KALI_VERIFIED64_8B_RESULT_2026-11-12_ZH.md) · [Machine-readable results](results/kali-8b-verified64-study-2026-11-12/summary.json). Resource amendment and controller recovery remain disclosed in the frozen protocol.
+
+The dated entries below are historical snapshots; earlier statements about pending work describe their status at that time. The completed study and current decision are reported above.
+
+## November 12, 2026 — behavior-verified TRAIN supplement
+
+I froze **64 new authored TRAIN rows across 32 task families and four tools** after actual Linux behavior checks and paired wrong-command checks. Four of 68 candidates remain quarantined. All 64 admitted labels self-score 1.0 with the pinned native scorer and pass RedSage prompt masking, think-prefix/EOS round-trip and no-truncation checks. These are exploratory, AI-authored local-runtime silver labels; no new LLM training or independent gain is claimed. [Chinese report and reproduction](docs/KALI_BEHAVIOR_TRAIN_2026-11-12_ZH.md) · [TRAIN data](data/kali-behavior-train-2026-11-12/train.jsonl) · [Manifest](results/kali-behavior-train-2026-11-12/manifest.json).
+
+A single native ABA run now completed **Worker → real GPU Job → native scoring → Finalizer delivery**, with **256 CUDA updates** on a synthetic eight-token model. Local rescoring matches the native result, delivered files match the trusted client output, 64 MiB artifact recovery passed, and all owned run resources were cleaned. This verifies the engineering path; new 8B SFT and KaliBench gains remain for the next stage. [Verified runtime report and reproduction](docs/ABA_RUNTIME_REPAIR_2026-11-12_ZH.md) · [Receipt](results/aba-native-gpu-smoke-2026-11-12/verified-summary.json).
+
+## November 12, 2026 — remaining TRAIN source survey
+
+A read-only, split-safe check found only **3** publisher TRAIN records matching option groups absent from P07 training on repeatedly harmed development tools; all three have `PASS_RUNTIME_ERROR` rather than successful execution, so **none is directly admitted**. Three existing authored pools (108, 156, and 32 rows) have zero matching tool-and-option-group overlap. This narrows the next step to new behaviorally verified, diverse TRAIN data before another GPU comparison. No official TEST, new model output, or GPU was used. [Chinese audit](docs/KALI_PUBLISHER_REMAINDER_AUDIT_2026-11-12_ZH.md) · [Aggregate](results/kali-publisher-remainder-2026-11-12/aggregate.json).
+
+A separate bounded CPU-only namespace probe found 5 of the 19 repeatedly harmed tools in the pinned training image; 14 need a different validation runtime. Its Job and ConfigMap were cleaned. [Tool availability](results/kali-publisher-remainder-2026-11-12/tool-availability.json).
+
+## November 12, 2026 — P10 label disposition frozen
+
+A bounded CPU-only check identified the pinned runtime as util-linux 2.37.2 and tested `hardlink --dry-run --exclude` against harmless duplicate files. Of 16 AI-authored source-silver rows, **2** now have local-runtime behavioral fixture support and are eligible only for exploratory training; **14** remain quarantined for ambiguous task scope, missing behavioral evidence, unsupported options, semantic mismatch, or an absent tool. Two related rows are too narrow for a useful GPU comparison, so no new model was trained or promoted. Official TEST remains untouched. [Chinese audit](docs/KALI_P10_SEMANTIC_QA_2026-11-12_ZH.md) · [Aggregate](results/kali-p10-semantic-qa-2026-11-12/summary.json).
+
+## November 11, 2026 — ABA controller recovery check
+
+The persistent ABA VM is blocked by a cluster storage-controller error. A bounded, PVC-free Linux VM successfully installed the pinned ABA source, completed its owned-tool setup, and passed the systemd/cgroup and bubblewrap prerequisites. A separate pinned-image probe copied and checksum-verified a harmless artifact before VM deletion; all temporary resources were cleaned. These are **environment checks**, with no GPU training, model output, or official TEST use. The next run still needs working model-control and GPU-worker connections plus durable collection of full-size artifacts. I also confirmed in the upstream KaliBench verifier that `PASS_EXECUTED` certifies successful command exit, not semantic correctness, so the P10 source-silver labels remain quarantined. [Recovery note](docs/ABA_CONTROLLER_RECOVERY_2026-11-11.md).
+
+## November 11, 2026 — P10 source-label quality gate
+
+P09 timed out while waiting for A100 scheduling, with no training or model outputs. P10 pre-froze a matched 733-step control replacing 14 publisher TRAIN rows with 14 AI-authored source-silver rows while keeping supervised target-token count equal. A bounded Linux CPU check then found only **8/14** commands executable in the available runtime: two `hardlink --cache-size` and four `more --exit-on-eof` labels used options that its installed utilities rejected. AI review also found that two of the `more` labels used the wrong flag for the prompt's form-feed requirement. I cancelled P10 **before GPU scheduling** and cleaned all owned resources. **No P09/P10 model score exists; E0 remains the default; official TEST remains untouched.** None of the 16 AI-authored source-silver rows are admitted to the next GPU run without version and semantic review. [Chinese audit](docs/KALI_P10_LABEL_QA_ABORT_ZH_2026-11-11.md) · [Sanitized summary](results/kali-p10-label-qa-2026-11-11/summary.json).
+
+## November 11, 2026 — P08 exact-repeat result
+
+P08 repeated P07 with byte-identical 733-row TRAIN payload, the same A100-SXM4 model, optimizer and seeds. It completed **733/733 nonzero-gradient updates** and passed adapter reload checks; all owned GPU resources were cleaned. On the exposed, official-TRAIN-sourced DEV128, native mean was **0.75499 E0 / 0.76543 P07 / 0.76768 P08**, and strict correctness **47 / 55 / 54 of 128**. P07/P08 outputs matched on 119/128 cases, so the small positive direction repeated once, but DEV2 declined in both runs and P08 still lost to E0 on 28/29 previously identified harm cases. The descriptive paired interval includes zero. These are operator controls, not ABA-selected or independent/official TEST gains; **E0 remains the default**. [Chinese result](docs/KALI_P08_EXACT_REPLICA_RESULT_ZH_2026-11-11.md) · [Sanitized aggregate](results/kali-p08-replica-2026-11-11/aggregate.json).
+
+## November 11, 2026 — P08 exact-repeat protocol frozen
+
+Before any P08 model output, a one-A100 repeat of P07 was frozen with byte-identical training payload and encoded rows, plus the same model, optimizer and inference settings. The only protocol differences are candidate ID and metadata. It will test whether P07's small positive internal-DEV result is reproducible; it remains an operator control on exposed publisher-silver TRAIN development data, with no official TEST or sealed final64 use and no model promotion. The server-side Kubernetes dry run passed. [Chinese pre-run record](docs/KALI_P08_EXACT_REPLICA_PREP_ZH_2026-11-11.md).
+
+## November 11, 2026 — repeatable regression mechanism audit
+
+A read-only, aggregate audit identified a concrete interaction behind the recurring positional-score losses. In the 638 original SFT targets, known value-taking flags used a space **432 times** versus an equals sign **9 times**. After training, outputs with out-of-reference flags followed by a space and value rose from **10/128 for E0** to **35–37/128** across P04–P07. The frozen scorer treats the value after an unrecognized flag as an extra positional argument, while `--flag=value` does not create that extra positional token. On **four matched cases**, E0 and every trained arm differ only in this surface syntax after token normalization, with the same score loss in all four trained arms. On the 29 cases harmed in all three prior runs, P07 still produced out-of-reference flags on 25 and extra parsed positionals on 24. Many reference flag groups were absent from same-tool training examples, so this is a combined syntax/scoring and option-coverage problem, not a corrected model. A hypothetical parser counterfactual is diagnostic only; all official and frozen scores remain unchanged. [Chinese cause report](docs/KALI_SFT_SYNTAX_ROOT_CAUSE_ZH_2026-11-11.md) · [Aggregate](results/kali-sft-syntax-audit-2026-11-11/aggregate.json).
+
+A follow-up source audit found no ready-to-admit new rows in the current screened, publisher-verified TRAIN pool: 925 of 936 rows are already in P07 training/internal DEV/sealed final, while the remaining 11 were excluded by predeclared command-group rules. Eighteen publisher-verified rows outside the screened pool remain held for nonperfect reference/scorer roundtrips and cover none of the missing required flag groups in the recurring harm subset. [Sanitized source-gap aggregate](results/kali-source-gap-2026-11-11/aggregate.json).
+
+## November 11, 2026 — P07 exploratory coverage result
+
+The operator-prepared P07 control completed **733/733 nonzero-gradient A100 updates** on 733 publisher-verified TRAIN rows. On the already exposed, official-TRAIN-sourced internal DEV128, strict correctness changed **47 → 55/128** and native mean **0.75499 → 0.76543**; DEV1 improved while DEV2 declined. The descriptive paired interval for the mean difference includes zero, and all 29 cases that had declined in P04/P05/P06 still declined under P07. P07 passed its frozen internal gates but is neither ABA-selected nor independently validated, so **E0 remains the default**. Official TEST and sealed final64 were untouched. [Chinese result and limitations](docs/KALI_P07_COVERAGE_RESULT_ZH_2026-11-11.md) · [Sanitized scores](results/kali-p07-coverage-2026-11-11/score.json).
+
+## November 11, 2026 — P07 coverage control frozen
+
+After P05 and P06 failed the native-score gate, an operator-prepared P07 control was frozen before any P07 outputs: the prior 638 verified publisher TRAIN examples plus **95** additional verified, command-group-screened examples covering **31 new tools**. All 638 old tokenizations reproduced exactly; all 95 new targets self-scored full under the locked native and strict checks. P07 is limited to one A100 and the already exposed 128-row internal DEV, with official TEST and sealed final64 untouched. It is an exploratory data-coverage control, not an ABA-selected candidate or an independent validation. [Pre-run protocol](docs/KALI_P07_COVERAGE_CONTROL_PREP_ZH_2026-11-11.md).
+
+## November 11, 2026 — P06 seed control
+
+The pre-frozen P06 operator control completed **638/638 nonzero-gradient A100 updates** and 128 internal DEV predictions; its adapter reload was exact and all owned resources were cleaned. Changing the data-order seed from 42 to 43 did not recover the native score: E0 **0.75499**, P04 operator control **0.77569**, ABA-selected P05 **0.75252**, and P06 **0.73916**. P06 strict correctness was **48/128** versus E0's **47/128**, but its predeclared native-score gate failed. P04's one-run positive DEV result is not stable evidence; P06 is not ABA-selected, and none of these scores use official TEST. [Chinese report](docs/KALI_ABA_P06_SEED_CONTROL_ZH_2026-11-11.md) · [Aggregate](results/kali-aba-seed-control-2026-11-11/aggregate.json).
+
+## November 11, 2026 — P05 regression cause audit
+
+A read-only paired audit isolated the observed score regression: relative to the base, P05 improved mean tool score by **0.03906** and option F1 by **0.01018**, but positional F1 fell by **0.05667**, leaving native total **0.75499 → 0.75252**. In 27 of 28 cases with a positional-score decline, the scorer parsed additional positional tokens, often because unrecognized options leave their following values as positionals. P04 and P05 shared the same data, optimizer, model and inference settings, and their base outputs matched 128/128; their trained outputs differed on 18/128, accounting for their entire score difference. Their logged first-step gradient norms already differed, so the exact source of training divergence remains unproven. The 638 supervised targets all self-score 1.0 under the pinned native scorer. E0 remains selected; none of these results are an official TEST score. [Chinese cause audit](docs/KALI_ABA_P05_CAUSE_AUDIT_ZH_2026-11-11.md) · [Aggregate](results/kali-aba-p05-cause-2026-11-11/aggregate.json).
+
+## November 11, 2026 — native ABA P05 training and frozen development score
+
+After native Setup and reviewer gates passed, ABA selected P05 and its Worker submitted one real A100-SXM4-80GB Job. P05 completed **638/638 nonzero-gradient optimizer steps** and changed 144 LoRA tensors. On two official-TRAIN-sourced internal development panels (128 questions total), strict correctness rose **47/128 → 51/128**, but mean native score fell **0.75499 → 0.75252**. The predeclared native-score-improvement gate failed, so **E0 remains selected and P05 is not promoted**. A separate CPU-only native recovery scored the existing P05 at **−1**, selected E0 at **0**, and delivered four E0 files with exact baseline byte matches; it launched no new GPU Job. The original GPU run and recovery were separate because of a Broker receipt-field error, so this was not one uninterrupted run. P04, an earlier operator-run matched-learning-rate control, reached 54/128 and 0.77569; it was not ABA-selected, and the difference between P04 and P05 has not been isolated. Official TEST and sealed final64 were untouched. These are publisher-silver TRAIN development results, not an official benchmark score or independent validation. [Chinese audit](docs/KALI_ABA_PUBLISHER_P05_2026-11-11_ZH.md) · [Sanitized aggregate](results/kali-aba-p05-2026-11-11/summary.json) · [Native recovery audit](results/kali-aba-p05-2026-11-11/native-recovery.json).
+
+## November 10, 2026 — publisher-TRAIN ABA candidate results
+
+A new operator-run RedSage-K 8B candidate P01 completed 505 real BF16 LoRA updates on publisher-verified KaliBench TRAIN. On two internal TRAIN-sourced DEV panels combined, strict correctness fell **47/128 → 0/128**, native mean total score **0.7550 → 0.2161**, and all 128 P01 responses were a single newline. P01 fails the frozen guard gates and is **not adopted**. [Chinese audit](docs/KALI_ABA_PUBLISHER_P01_2026-11-10_ZH.md) · [Sanitized aggregate](results/kali-redsage-aba-publisher-p01-2026-11-10/summary.json).
+
+Native ABA then selected P02 (`638` publisher-TRAIN rows, learning rate `5e-6`) and its Worker submitted one real A100 Job after Setup gates passed. The candidate completed **638/638 nonzero-gradient updates**, but internal DEV strict correctness fell **47/128 → 2/128**, native mean total score **0.7550 → 0.2292**, and format errors rose **5 → 126**. P02 is **not adopted**. A Broker receipt-field mismatch stopped that original native run after successful GPU collection. A separate **CPU-only native ABA recovery** revalidated the existing P02 receipt, scored P02 at −1, completed Setup and finalizer verification, and delivered the original E0 zero-step baseline with four byte-identical artifacts. It launched **no new GPU Job**; this is recovery of the earlier trained candidate, not a single clean end-to-end native run or evidence of a training gain. The regression was traced to premature EOS after one newline token. A matched operator-run P04 control changed only the training learning rate to `1e-5`; after an initial unscheduled attempt, it completed 638 updates on an A100-SXM4 and restored the expected output prefix in **128/128** internal DEV responses. P04 strict correctness was **54/128**, native mean **0.7757**, with zero format errors; all five development gates passed. This strongly supports low learning rate as P02's format-collapse trigger, but P04 was **not agent-selected or promoted**, and the modest score gain lacks independent validation. Official TEST and sealed final64 remain untouched. [Chinese result audit](docs/KALI_ABA_PUBLISHER_P02_2026-11-10_ZH.md) · [Cause investigation and P04 control](docs/KALI_P02_COLLAPSE_CAUSE_AUDIT_ZH_2026-11-10.md) · [Sanitized aggregate](results/kali-p02-collapse-cause-audit-2026-11-10/summary.json).
+
+## November 10, 2026 — fresh 64-row RedSage confirmation found mixed results
+
+After the 638-step publisher SFT showed a small gain on one 64-row internal panel, I froze a second disjoint 64-row publisher-TRAIN panel before querying the model on those rows. On the **same A100**, strict option-value correctness was **19/64 base → 22/64 SFT638** (seven gains, four losses), while the official native scoring code's mean total score **fell 0.7537 → 0.7197**. Across the two panels combined descriptively, strict correctness was **47/128 → 52/128** but native mean score was **0.7550 → 0.7510**, with unseen-tool strict correctness **4/12 → 3/12**. Format errors fell **5 → 0**. The second panel was selected after the first result was known; both panels are publisher silver TRAIN, not official TEST or independent expert gold. These mixed metrics do **not** justify promoting the SFT model, and E0 remains the formal default. All personal GPU resources were cleaned. [Chinese result and case audit](docs/KALI_REDSAGE_PUBLISHER_CONFIRM64_RESULT_ZH_2026-11-10.md) · [Sanitized aggregate](results/kali-redsage-publisher-confirm64-2026-11-10/summary.json).
+
+## November 10, 2026 — publisher-aligned RedSage SFT completed
+
+After finding that C13's eight generic CLI training tools have **zero** screened publisher-verified `PASS_EXECUTED` examples in KaliBench TRAIN, I canceled the pending CyBashBench Job before GPU allocation and switched to the target benchmark. A deterministic 64-row internal holdout was frozen from publisher-verified KaliBench TRAIN before any RedSage output on those rows. It excludes all 638 prospective SFT TRAIN rows and the earlier DEV64 by ID; command groups do not overlap the 638 training rows. The panel has 56 examples with tools represented in the 638-row training set and eight with unseen tools. Gold references are absent from the worker input; all 64 gold commands pass pinned native and strict scorer checks. On the same A100, **base strict correctness was 28/64 and C13 was 23/64** (one gain, six losses); native mean score fell **0.7563 → 0.6452**. The completed Job and all owned resources were cleaned. C13 is **not promoted**. [Detailed Chinese result](docs/KALI_REDSAGE_PUBLISHER_HOLDOUT_RESULT_ZH_2026-11-10.md) · [Sanitized aggregate](results/kali-redsage-publisher-holdout64-2026-11-10/summary.json) · [Attempt ledger](results/kali-redsage-publisher-holdout64-prep-2026-11-10/attempts.json).
+
+The same 638 publisher `PASS_EXECUTED` / `ACCURATE` TRAIN rows were encoded with the pinned RedSage tokenizer and native empty-think completion format: 15,142 supervised tokens, maximum sequence length 520. A separately frozen BF16 LoRA run completed **638 real optimizer steps** on one A100, with 638 nonzero-gradient steps and exact adapter reload probe. On the same 64-row internal holdout, strict correctness was **28/64 base → 30/64 publisher SFT** (three gains, one loss); unseen-tool strict correctness stayed **3/8**. Native mean score rose **0.7563 → 0.7823**, and format errors fell **3 → 0**. The gain is small and comes from publisher silver TRAIN internal holdout selected after earlier development findings; it is not official TEST, independent expert validation, a leaderboard score, or native ABA multi-candidate search. Both A100 Jobs were cleaned; E0 remains the formal default. [Chinese SFT result and case audit](docs/KALI_REDSAGE_PUBLISHER_SFT638_RESULT_ZH_2026-11-10.md) · [Sanitized aggregate](results/kali-redsage-publisher-sft638-2026-11-10/summary.json) · [Preparation protocol](docs/KALI_REDSAGE_PUBLISHER_HOLDOUT_PREP_ZH_2026-11-10.md).
+
+## November 10, 2026 — C13 case audit and canceled external transfer diagnostic
+
+A paired audit of the already exposed DEV72 found **18 gains and 3 losses**. Twelve gains are concentrated in two six-variant `tcpdump` and `wc` groups; all three losses omit required fixed-string `grep -F`. TRAIN and DEV have zero exact normalized question or named template-group overlap, but share the same eight tools and project-authored construction. The frozen C13 gate still fails and E0 remains selected. [Chinese case audit](docs/KALI_ABA_C13_PAIRED_AUDIT_ZH_2026-11-10.md) · [Sanitized group counts](results/kali-aba-c13-paired-audit-2026-11-10/aggregate.json).
+
+For a separate transfer check, 26 source-separated CyBashBench cases with **provisional AI-screened publisher references** were frozen before RedSage outputs. One inference-only GPU attempt was stopped during slow weight staging, and a west-only attempt waited its 15-minute scheduling limit without a GPU. A third ordinary-priority west-only Job was canceled **before GPU allocation or model output** after a dataset-alignment audit: C13's eight generic CLI training tools have no `PASS_EXECUTED` examples in the screened KaliBench publisher TRAIN source. All three attempts were cleaned. These cases are not independently certified gold and cannot satisfy the project's formal 32-case validation gate. No official KaliBench TEST rows or new optimizer steps were used. The next diagnostic will use a frozen internal holdout from publisher-verified KaliBench TRAIN.
+
+## November 9, 2026 — C13 trained and scored; frozen gate failed
+
+The queued C13 Job eventually ran on one L40S. The frozen RedSage-K 8B recipe completed **240 real optimizer steps**; adapter save/reload matched, and the safe CPU fixture scorer evaluated all 176 development-arm records. On historically exposed DEV72, strict correctness changed **29/72 → 44/72**; retention24 changed **12/24 → 13/24**, with no output truncations. The **pre-frozen conservative gate failed**: its lower-bound DEV gain was **−4** after accounting for 19 unsupported base commands, and only **1** template group passed the conservative positive-gain test (2 required). This promising raw development gain is not independent validation or an official KaliBench score. **E0 remains the default; C13 is not promoted.** The CPU scorer needed an infrastructure-only retry using the official Ubuntu HTTPS base repository; the frozen worker and scoring input were unchanged. All owned GPU and CPU Job resources were cleaned; official TEST use stayed at zero. [Chinese result and limitations](docs/KALI_ABA_C13_RESULT_ZH_2026-11-09.md) · [Sanitized aggregate](results/kali-aba-c13-2026-11-09/summary.json).
+
+## November 9, 2026 — historical C13 queue submission
+
+After the bounded scheduling diagnostics below, one ordinary-priority C13 training Job was submitted to Nautilus and initially stayed Pending for a compatible GPU. The queue wait was bounded to seven days; actual Pod runtime was capped at one hour, and logs were saved to private persistent storage. At this snapshot it was a resource request without a new result. Its completed outcome is reported above.
+
+## November 9, 2026 — review gate and GPU scheduling follow-up
+
+Two more bounded native ABA attempts reached Setup verification; the reviewer did not finish within its effective time budget, so the independent reviewer gate prevented new training. A short central RTX 4090 probe ran successfully with the same cache PVC, but subsequent C13 training Jobs stayed Pending despite an audited allocation-only revision across compatible GPUs. Two broad C13 attempts each timed out after about 15 minutes; a separate single-A100 100-second probe also remained Pending. **No new optimizer steps, adapter, development score, or official TEST query resulted**. All owned cluster resources were cleaned, the controller VM stopped, and E0 remains the default. [Chinese diagnosis and next conditions](docs/KALI_ABA_RESOURCE_AND_REVIEW_FOLLOWUP_2026-11-09_ZH.md).
+
+## November 9, 2026 — controller restored; native ABA blocked by GPU scheduling
+
+A newly created NRP credential passed both model listing and a minimal generation request. A fresh bounded native ABA run passed Setup verification and review, and its designer selected the frozen C13 recipe. The Worker successfully used short `submit` and `wait` calls, resolving the earlier two-minute tool-call mismatch. C13's ordinary-priority A100 Pod remained unschedulable for the 15-minute wait window, so **no new training, candidate score, or official TEST evaluation occurred**. The run was stopped after the failure; all owned Jobs and Pods were removed and the VM stopped. The original E0 model remains selected. [Chinese follow-up](docs/KALI_NATIVE_ABA_ASYNC_ATTEMPT_2026-11-09_ZH.md).
+
+## November 9, 2026 — ABA multi-candidate smoke and controller access
+
+Two distinct RedSage-K 8B recipes completed real one-GPU training and safe development scoring. C02 changed DEV strict correctness **28/72 → 29/72** and C04 **28/72 → 26/72**; neither passed the frozen exploratory adoption gate, so the original base remains selected. Both adapters reloaded correctly and all owned cluster jobs were cleaned. A bounded native ABA three-evaluation pilot was prepared, but its first Setup failed before proposing a new candidate because the NRP controller-model generation API returned **HTTP 403**. The token could list models, while minimal generation requests to three aliases were denied. There is **no native multi-candidate search or official TEST result yet**. [Chinese report](docs/KALI_ABA_SEARCH_SMOKE_2026-11-09_ZH.md) · [Sanitized aggregate](results/kali-aba-search-smoke-2026-11-09/summary.json).
+
+## November 2, 2026 — native ABA recovery audit
+
+A read-only replay of the raw predictions confirmed the prior 8/16 primary strict score for base/control/treatment and 66/108 for both SFT arms on the exposed CLI panel. The same two validation questions drove both SFT arms into 512-token unclosed option loops while the base ended normally; this does not identify a unique cause. A historical 638-row SFT had already produced the same six `grep` utility truncations (base zero), showing the 14 new ABA rows were not necessary for those six failures. All four raw native-ABA `grep` candidate questions used ambiguous “literal word” wording for substring intent, and two entered SFT. A separate, explicitly **posthoc operator-reworded** 16-row diagnostic copy passed 32/32 local safe fixture checks, but has only four templates and **zero rows admitted for future training**. No new model calls, GPU training, independent gold, or official TEST. [Chinese audit and next-run gates](docs/KALI_ABA_RECOVERY_AUDIT_ZH_2026-11-02.md) · [Sanitized aggregate](results/kali-aba-recovery-audit-2026-11-02/aggregate.json).
+
+## November 2, 2026 — native ABA SFT in-family diagnostic
+
+An adaptive 16-question, same-operation/new-filename CLI diagnostic was frozen before its own model outputs, after the matched SFT result below was known. Base, matched control, and ABA-data treatment each scored **12/16** on the pre-frozen strict metric. A separate **post hoc** CPU-only Linux fixture execution of all 48 generated commands found **16/16 base, 14/16 control, 13/16 treatment** on these specific benign files. The treatment's three `grep -w` outputs missed embedded substrings; two control outputs used invalid `grep` options. The strict score is unchanged. The two frozen-admitted ABA `grep` TRAIN questions used ambiguous “literal word” wording for a substring task; they are quarantined from future training, without asserting causation or rewriting this completed run. This is adaptive, same-family evidence with no independent gold or official TEST; **do not promote the treatment adapter or reuse this 14-row batch as-is**. The existing formal default model choice is unchanged. All GPU and CPU jobs were cleaned. [Chinese report](docs/KALI_QWEN_NATIVE_INFAMILY16_DIAGNOSTIC_ZH_2026-11-02.md) · [Sanitized aggregate](results/kali-qwen-native-infamily16-2026-11-02/aggregate.json).
+
+![Pre-frozen strict score and posthoc Linux fixture behavior](results/kali-qwen-native-infamily16-2026-11-02/strict-vs-fixture.png)
+
+## November 2, 2026 — native ABA data entered matched Qwen3-8B SFT
+
+After the native ABA TRAIN candidate pilot below, the **14/16 rows accepted by its frozen fixture** entered a real, matched Qwen3-8B A40 SFT comparison. Both arms shared 638 publisher TRAIN rows and completed 652 optimizer steps from the same initial LoRA weights; control added 14 length-matched publisher repeats, treatment added 14 ABA-generated new-operation rows. Added input tokens were 5,551 vs 5,552 and supervised target tokens were 211 in each arm. On historically exposed development data, strict correctness was **8/16 vs 8/16** on the primary family holdout, **21/64 vs 22/64** on old domain DEV, and **66/108 vs 66/108** on the utility panel. Both arms had two holdout and six utility truncations. The pre-frozen exploratory gain gate failed; **do not promote the treatment adapter**. This closes one data-generation-to-training engineering loop, with no independent gold, official TEST score, or ABA-controlled hyperparameter search. The GPU job was cleaned. [Chinese report](docs/KALI_QWEN_NATIVE_ABA652_RESULT_ZH_2026-11-02.md) · [Sanitized aggregate](results/kali-qwen-native-aba652-2026-11-02/aggregate.json).
+
+![Matched Qwen3-8B SFT strict accuracy on exposed development sets](results/kali-qwen-native-aba652-2026-11-02/strict-accuracy.png)
+
+## November 2, 2026 — native ABA TRAIN task-generation pilot
+
+The native ABA controller completed a bounded, CPU-only run in an ephemeral Nautilus VM and delivered **16 new-operation CLI question/command candidates** across `head`, `tail`, `wc`, and `grep`. The operations differ from the eight TRAIN source examples (lines rather than bytes/words; case-insensitive substring rather than case-sensitive whole-line matching). The **frozen TRAIN fixture accepted 14/16**. A separate, explicitly **post hoc** two-fixture audit found that the other two `grep -i -F` commands also behave as requested: the frozen scorer demanded lowercase pattern-token spelling even though `-i` ignores case. The frozen 14/16 score is unchanged. The generated rows still cover only **four tightly constrained intent templates**. At this pilot stage they had not entered SFT; the later matched Qwen3-8B experiment above used the 14 frozen-accepted rows. This data-generation pilot itself did not use official TEST, independent validation, or GPU training and did not establish model improvement. The VM was deleted after artifact collection. [Chinese report](docs/KALI_NATIVE_ABA_NOVEL_DATA_PILOT_ZH_2026-11-02.md) · [Sanitized aggregate](results/kali-native-aba-novel-2026-11-02/aggregate.json).
+
+## November 2, 2026 — hosted-model TRAIN paraphrase pilot
+
+A hosted model proposed 64 paraphrases of 16 fixture-checked TRAIN seeds across eight CLI tools. After static and semantic-form screening, **42** were used in a matched 680-update Qwen3-8B SFT comparison. On 16 pre-frozen, same-source family-held-out questions, strict correctness was **8/16 base, 10/16 matched control, 10/16 model-paraphrase treatment**; old DEV64 remained **22/64** for both SFT arms, and exposed utility108 remained **72/108**. Treatment reduced utility108 truncations from 6 to 1, but produced one truncation on the 16-question holdout. The predeclared primary gain gate failed, so the adapter was not promoted. A narrow **posthoc**, CPU-only synthetic-fixture check of six strict misses per arm found **4/6 control vs 5/6 treatment** functionally matched fixture output; it does not revise the frozen strict score. This is hosted-model paraphrase data plus fixed SFT, **not autonomous agent search, native ABA automation, or an official benchmark score**. Two bounded native ABA CPU VM starts were blocked by a LINSTOR volume-attach timeout before the controller ran; the VM is stopped. [Chinese report](docs/KALI_QWEN_AGENT_DATA680_ZH_2026-11-02.md) · [Main aggregate](results/kali-qwen-agent-data680-2026-11-02/aggregate.json) · [Posthoc fixture aggregate](results/kali-qwen-agent-data680-2026-11-02/semantic-posthoc.json).
+
+![Matched 680-update agent-data pilot](results/kali-qwen-agent-data680-2026-11-02/strict-counts.png)
+
+## November 2, 2026 — source-separated AI-only diagnostic
+
+The Qwen3-8B base and both matched 734-step SFT adapters were compared on **26 source-separated CyBashBench CLI questions covering 20 tools**. The provisional publisher references were AI-screened, with no independent human gold signoff. Tokenized exact-reference matches were **9/26 base, 7/26 control, 8/26 treatment**; on the eight cases with some safe-fixture evidence, they were **2/8, 1/8, 1/8**. Treatment recovered the control's one truncated output, but this panel gives **no reliable evidence of cross-tool transfer**. These are lexical, nonofficial diagnostics; no generated commands were executed, no optimizer steps were run, and neither adapter was promoted. [Chinese report](docs/KALI_QWEN_EXTERNAL26_AI_DIAGNOSTIC_ZH_2026-11-02.md) · [Aggregate](results/kali-qwen-external26-ai-diagnostic-2026-11-02/aggregate.json).
+
+![Source-separated AI-only 26-row CLI diagnostic](results/kali-qwen-external26-ai-diagnostic-2026-11-02/external26.png)
+
+## November 1, 2026 — source-quality correction and larger SFT data dose
+
+An attempted fresh 96-item internal KaliBench TRAIN development panel was **invalidated before any model query**: its publisher terminal labels were 88 runtime errors and 8 timeouts, with zero successful executions. All 936 successful-execution items in our 3,376-item screened TRAIN file were already in the earlier Qwen training/development split. The dependent first 734-step evaluation protocol was canceled, and its GPU attempts produced no model outputs or optimizer steps.
+
+Separately, 96 self-authored `grep`/offline `tshark` training candidates across six correlated intent families passed 96/96 benign Linux fixtures on Nautilus. A revised, explicitly exploratory study compares 734-step Qwen3-8B SFT arms: the same original 638 rows plus 96 length-matched publisher TRAIN repeats, versus plus 96 fixture-checked utility rows. The primary utility and old domain sets are already exposed development data; there is no independent or official TEST evaluation, and no automatic model promotion. [Chinese report and protocol](docs/KALI_QWEN_DATA_QUALITY_DOSE_ZH_2026-11-01.md) · [Sanitized aggregate](results/kali-qwen-data-quality-2026-11-01/summary.json).
+
+**Completed matched result:** both arms finished 734 updates on one A40. Strict utility confirm improved **18/36 → 24/36** and all utility **72/108 → 87/108**, while old domain DEV64 stayed **22/64 → 22/64** and truncations decreased. The predeclared exploratory gate passed. **All 15 gained utility items fall in three exposed, self-authored template families** that overlap the added training data; this is local template improvement, not independent or official KaliBench generalization. A CPU-only offline command audit found reference-output matches of **0→6/6** for log line numbers, **1→6/6** for log counts, and **0→3/6** for offline TLS, including one control answer the strict scorer missed. No adapter was promoted. [Chinese result and limitations](docs/KALI_QWEN_DIVERSE_734_RESULT_ZH_2026-11-01.md) · [Paired aggregate](results/kali-qwen-diverse-734-2026-11-01/comparison.json) · [Offline audit](results/kali-qwen-diverse-734-2026-11-01/semantic-audit.json).
+
+![Matched 734-step exploratory Qwen3-8B result](results/kali-qwen-diverse-734-2026-11-01/control-treatment.png)
+
+## Previous controlled result — October 31, 2026
+
+**Latest controlled SFT result:** a one-A40, 650-step-per-arm comparison kept the same 638 original KaliBench TRAIN rows and initial Qwen3-8B LoRA state. The control added 12 length-matched repeats of domain TRAIN rows; treatment added 12 self-authored, documentation-grounded CLI rows that passed fixed Linux fixtures. On **previously exposed development sets**, treatment scored **21/64 vs control 22/64** strict on domain DEV64 and **18/36 vs 18/36** on the primary CLI panel. Both arms had zero truncations and the three previously regressed CLI families remained **0/6 each**. Read-only failure audit found matching prompt templates and correctly encoded targets; targeted examples contributed only 1.85% of updates, a possible but unproven explanation for the missing gain. The predeclared exploratory gate **failed**; neither adapter is promoted. This is fixed-data SFT, not ABA, independent cyber validation or official KaliBench evaluation. [Chinese report](docs/KALI_QWEN_TARGETED_REPLAY_650_ZH_2026-10-31.md) · [Aggregate and chart](results/kali-qwen-targeted-650-2026-10-31/summary.json).
+
+**Scorer versus execution audit:** on one fixed offline Linux fixture, all 18 references executed successfully. The strict scorer assigned 0/6 to `grep` log counting for both arms, but the control produced the reference output on **6/6** cases while treatment produced it on **0/6**; treatment used an unrecognized `--literal` flag. The other two previously regressed families produced the reference output on 0/6 in both arms. This narrow fixture does not replace benchmark scoring; the SFT gate remains failed. [Sanitized execution aggregate](results/kali-qwen-targeted-650-2026-10-31/semantic-audit.json).
+
+![Matched 650-step Qwen3-8B SFT control and targeted treatment](results/kali-qwen-targeted-650-2026-10-31/control-treatment.svg)
+
+**Earlier Qwen utility retention check:** a frozen, self-authored 108-question CLI development panel was run on one A40 using the same Qwen3-8B base and saved 638-row SFT adapter. On the primary 36-question subset, strict correctness **fell from 22/36 to 18/36**; six correlated `grep -n` cases ran to the 512-token cap without closing the output. Across all 108 questions strict correctness rose only **66→69**, while the native diagnostic total **fell 87.35→79.94**. This is a narrow exploratory development check, not independent-source cybersecurity validation or an official KaliBench score; the adapter remains unpromoted. That earlier check used inference only and no official TEST. [Chinese result](docs/KALI_QWEN_UTILITY_RETENTION_ZH_2026-10-31.md) · [Aggregate and chart](results/kali-qwen-utility-retention-2026-10-31/aggregate.json).
+
+**External validation gate:** a private 31-case CyBashBench review packet and blank independent-review form are ready. Six cases still depend on context or tool version; no cases have independent human signoff, and the 32-case minimum remains unmet. A pinned 300-question NL2SH-ALFA test file was examined only for provenance and exact overlaps; it is reserved as a future general Bash retention check, not used for model selection or cybersecurity validation. [Chinese next-stage report](docs/KALI_EXTERNAL_VALIDATION_GATE_ZH_2026-10-31.md) · [Sanitized summary](results/kali-external-validation-gate-2026-10-31/summary.json).
+
+**External review V2:** one lower-provenance, same-source CyBashBench `nl2bash` item was added to the **review queue**, bringing it to 32 candidates. It is explicitly an adaptive supplement; it adds no source diversity. The merged blank-review gate reports **0 independent human signoffs, 0 verified tool versions, and NOT_ADMITTED**. No model queried these items. [Chinese review status](docs/KALI_EXTERNAL_REVIEW_V2_ZH_2026-10-31.md) · [Aggregate](results/kali-external-review-v2-2026-10-31/summary.json).
+
+**External review V3 (November 1):** documentation-aided AI review of V2 found two more clear question/reference mismatches and nine cases needing context. After removing the two, six security-adjacent `misc` cases from the same pinned source were added to a **36-case adaptive review queue**. This is still **NOT_ADMITTED**: 0 independent human signoffs and 0 verified target tool versions. The initial static triage used no model, training, official TEST, GPU, or publisher-command execution. [Chinese case audit](docs/KALI_EXTERNAL_CYBASH_REVIEW_V3_ZH_2026-11-01.md) · [Sanitized aggregate](results/kali-external-review-v3-2026-11-01/summary.json).
+
+**Safe Linux spot checks:** the first bounded CPU-only Nautilus Job passed 10/10 synthetic tool-behavior checks and was cleaned up. These support narrow observations for 11 review items, including the `strings` length boundary and `sort` chronology error; none constitutes independent semantic signoff. No GPU, model, official TEST, live capture, external scan, or untrusted `ldd` was used. [Sanitized receipt](results/kali-external-review-v3-2026-11-01/linux-safe-fixtures.json).
+
+**AI-only diagnostic branch:** at Minhao's request, all 36 V3 cases received AI-assisted triage without human review. Ten ambiguous cases were excluded from a **26-case, 20-tool provisional diagnostic**. Two bounded CPU-only Jobs passed **20/20** synthetic checks; 13/26 provisional cases have some narrow fixture evidence. These labels remain unverified publisher references, so this derivative is for qualitative debugging, not formal validation or model selection. No candidate model or official TEST was queried. [Chinese protocol and result](docs/KALI_CYBASH_AI_ONLY_DIAGNOSTIC_ZH_2026-11-01.md) · [Sanitized aggregate](results/kali-external-review-v3-2026-11-01/ai-only-diagnostic.json) · [Second CPU receipt](results/kali-external-review-v3-2026-11-01/linux-safe-fixtures-extended.json).
+
+**Publisher TRAIN coverage:** a read-only audit of all 3,504 official KaliBench TRAIN rows found zero direct examples of 12 common CLI tools examined in the utility-retention study, including `grep`, `tshark`, `openssl`, and `nmap`, under both publisher `tool_name` and executable-first-token counts. This is a coverage observation, not a causal diagnosis or official TEST result. A limited second-source survey found no immediately admissible, task-matched external cyber panel among the sources checked. [Chinese report](docs/KALI_TRAIN_COVERAGE_AND_SOURCE_SURVEY_ZH_2026-11-01.md) · [Coverage aggregate](results/kali-train-tool-coverage-2026-11-01/summary.json).
+
+**Expanded Qwen result:** after unsuccessful bounded GPU scheduling attempts, one A40 Job completed the frozen 638-row/359-tool SFT with 638 optimizer steps. On a fresh, same-publisher official-TRAIN internal DEV64, strict tool/option correctness changed **19/64 → 22/64** (4 gained, 1 lost); exact reference command changed **13/64 → 17/64**. This is a modest, one-seed silver-label development result, **not an official KaliBench score or independent-source validation**. No official TEST or ABA-generated training data were used; the adapter is not automatically promoted. [Chinese result and limitations](docs/KALI_QWEN_EXPANDED_A40_RESULT_ZH_2026-10-30.md) · [Aggregate](results/kali-qwen-expanded-a40-2026-10-30/summary.json) · [Earlier scheduling report](docs/KALI_QWEN_EXPANDED_TRAIN_PREP_ZH_2026-10-30.md).
+
+![Qwen3-8B expanded SFT on internal DEV64](results/kali-qwen-expanded-a40-2026-10-30/before-after.svg)
+
+**External validation intake update:** case-by-case AI static triage of the 36 proposed CyBashBench-source questions found five clear task/reference mismatches and six context-dependent cases. Removing only the five clear mismatches leaves **31 questions**, below the predeclared 32-question minimum; the unchanged gate returns **NOT_ADMITTED**. This subset will not be treated as a frozen holdout. AI review is not independent human signoff; no model queries, GPU jobs, command executions or official TEST access occurred. Existing model decisions are unchanged. [Chinese audit](docs/KALI_QWEN_EXTERNAL_LABEL_AUDIT_ZH_2026-10-30.md) · [Sanitized aggregate](results/kali-qwen-external-ai-audit-2026-10-30/summary.json).
+
+A fixed 512-step NF4 QLoRA SFT run adapted **Qwen3-8B** using 512 publisher-verified KaliBench official-TRAIN examples. The same saved adapter was then compared with the unchanged base under a matched inference protocol. All sets below are **internal splits of official TRAIN**, with publisher silver labels; these are **not official benchmark or leaderboard scores**.
+
+| Strict tool + option-value diagnostic | Original Qwen3-8B | After fixed SFT | Reading |
+| --- | ---: | ---: | --- |
+| Initial internal DEV | 29/128 | 43/128 | Positive pilot signal |
+| Previously unqueried, command-group-separated primary DEV | 18/87 | 26/87 | 9 gained, 1 lost |
+| TRAIN-unseen tools within the primary 87 | 5/22 | 5/22 | No net cross-tool gain |
+
+![Qwen3-8B internal KaliBench SFT results: paired correctness and failure counts](results/kali-qwen-confirmation-2026-10-28/before-after.png)
+
+**Reliability limit:** three post-SFT outputs among all 93 previously unqueried inputs hit the 512-token cap and repeated content; the base had none. This is one training seed, with no independent-source blind validation or official TEST use. ABA automated data generation/search has **not** been run in this Qwen study. The original RedSage-K remains the formal default; the Qwen adapter is a candidate under review.
+
+One initial DEV prompt contained its reference command; excluding it leaves strict correctness **28/127 → 42/127**. The separately selected 87-row primary set has no prompt-embedded reference commands or exact normalized tool-plus-command overlap with the prior TRAIN/DEV sets. Semantic near-duplicates remain possible.
+
+**Preliminary source review:** of the nine automatically scored gains on the primary set, seven are supported by tool documentation, one reference (`lvmconfig`) conflicts with its tool manual, and one (`hardlink`) needs task interpretation. Excluding only the disputed reference yields **18/86 → 25/86** as a sensitivity check; it does not replace the frozen automatic **18/87 → 26/87** result. No independent human semantic signoff has occurred. [Review summary](results/kali-qwen-confirmation-2026-10-28/source-review-summary.json).
+
+**TRAIN data audit:** all 512 SFT records match the frozen publisher-verified files and target format. They span 275 tools, but 165 tools have only one example; 14 records share five normalized tool-command groups. This is a read-only static audit, with **0 independently human-reviewed labels** and no new model run. [Chinese audit](docs/KALI_QWEN_TRAIN512_DATA_AUDIT_ZH_2026-10-28.md) · [Sanitized aggregate](results/kali-qwen-train512-audit-2026-10-28/summary.json) · [Next experiment draft](docs/KALI_QWEN_NEXT_EXPERIMENT_PROTOCOL_DRAFT_ZH_2026-10-28.md).
+
+An exploratory breakdown of the already queried 87-row set shows strict correctness **5→5** for 22 tools unseen in training, **9→12** for 37 rows whose tool appeared once, and **4→9** for 28 rows whose tool appeared at least twice. This is post hoc and cannot establish a causal coverage effect. [Aggregate breakdown](results/kali-qwen-train512-audit-2026-10-28/coverage-posthoc.json).
+
+**October 29 receipt-screen ablation:** a TRAIN-only check found 111/512 publisher `PASS_EXECUTED` receipts with environment-failure text or truncated output, despite zero exit codes. This is a review cue, not proof of bad command labels. A separate 401-unique-row, 512-step SFT candidate completed on one RTX3090 but scored **39/128** versus the original adapter's **43/128** on the same already exposed internal DEV; its post-training exact-command count was **32 vs 36**, with **1 vs 0** truncations. Screening removed all examples for 43 tools. Keep the original adapter; do not promote the screened candidate. [Chinese report](docs/KALI_QWEN_RECEIPT_SCREEN_ZH_2026-10-29.md) · [Aggregate comparison](results/kali-qwen-receipt-screen-2026-10-29/comparison.json).
+
+**October 29 AI source-review pilot:** seven TRAIN references with documented task/command conflicts were provisionally quarantined; 505 unique publisher-TRAIN rows then entered a real 512-step Qwen SFT run. On the same exposed internal DEV128, strict correctness was **44/128**, versus **43/128** for the original adapter and **39/128** for the blanket receipt screen. Exact gold-command matching was **36/128** for both the new and original adapters; native total score was slightly lower for the new one (**68.74 vs 69.10**). The remaining 42 receipt-flagged and 401 other rows are uncertified publisher silver, human signoffs remain **zero**, and there is no blind-source result. This is a development ablation, not a model promotion or official benchmark score. [Chinese review and result](docs/KALI_QWEN_AI_REVIEW_ZH_2026-10-29.md) · [Aggregate comparison](results/kali-qwen-ai-review-2026-10-29/comparison.json).
+
+**Next-stage preparation:** a private 52-case independent-review packet is ready (10 priority, 42 follow-up). A pinned, external CyBashBench source yielded 36 deduplicated command-generation review candidates across 24 tools, with no detected exact or high-similarity overlap against prior Qwen TRAIN/DEV records. All 36 still lack independent command-label review and target-version checks, so the gate reports **NOT_ADMITTED**: this is not a frozen blind holdout or a new model result. No additional model calls, GPU jobs or KaliBench official TEST use. [Chinese intake report](docs/KALI_QWEN_NEXT_GATE_ZH_2026-10-29.md) · [Aggregate](results/kali-qwen-next-gate-2026-10-29/summary.json).
+
+[Full Chinese result and error audit](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Public aggregate](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Figure source](scripts/plot-kali-qwen-confirmation.py) · [Reproduction scope](docs/REPRODUCTION.md). Check the public arithmetic and figure hashes with `python3 scripts/verify-kali-qwen-confirmation-public.py`. Raw questions, predictions, labels, model weights and the adapter are not in this repository.
+
+## Experiment log (newest first)
+
+The dated entries below preserve earlier engineering work and negative results. Read the current result above for the latest model decision.
+
+## October 30 — expanded Qwen SFT frozen, GPU scheduling unsuccessful
+
+Prepared 638 unique publisher-TRAIN rows and a new internal DEV64 before any new model output. Three sequential bounded single-GPU requests remained Pending and were cleaned; training and evaluation did not execute. [中文报告](docs/KALI_QWEN_EXPANDED_TRAIN_PREP_ZH_2026-10-30.md) · [Aggregate](results/kali-qwen-expanded-prep-2026-10-30/summary.json).
+
+## October 30 — external candidate label audit
+
+Audited all 36 fixed CyBashBench-source candidate labels without executing their commands or querying a model. Five clear mismatches make the original 32+ row external panel infeasible without new reviewed source data. The 31-row exclusion derivative still fails admission; no blind holdout was frozen. [中文报告](docs/KALI_QWEN_EXTERNAL_LABEL_AUDIT_ZH_2026-10-30.md) · [Aggregate](results/kali-qwen-external-ai-audit-2026-10-30/summary.json).
+
+## October 29 — independent-review packet and external-source intake gate
+
+Prepared a private 52-case evidence packet and blank human review form; no signatures were inferred. Screened a pinned public CyBashBench task file down to 36 external-source NL-to-command candidates and ran a static, no-execution overlap gate against existing Qwen TRAIN512, DEV128 and exposed DEV93. No exact or thresholded near overlaps were found, but all 36 remain unadmitted because command semantics/tool versions have not been independently reviewed. This panel is a potential secondary transfer check, not a KaliBench domain blind set. [中文报告](docs/KALI_QWEN_NEXT_GATE_ZH_2026-10-29.md) · [Aggregates](results/kali-qwen-next-gate-2026-10-29/summary.json).
+
+## October 29 — AI source review and 505-row development SFT
+
+Reviewed the 111 receipt-flagged TRAIN records against primary tool documentation without running benchmark commands. Kept 62 under a tool-name-to-documentation screen (not per-case semantic certification), provisionally quarantined seven with case-specific source conflicts, and left 42 environment-confounded cases unresolved; the other 401 records were not independently reviewed. A bounded one-RTX3090 512-step SFT on the 505-row derivative completed and cleaned its GPU resources. Exposed internal DEV strict correctness was **29/128 before → 44/128 after**, one more than the original 512-row adapter, but exact gold-command matching stayed **36/128** and native total score was lower. No independent human signoff, official TEST use, blind validation, automatic promotion, or ABA data generation. [中文报告](docs/KALI_QWEN_AI_REVIEW_ZH_2026-10-29.md) · [Aggregates](results/kali-qwen-ai-review-2026-10-29/comparison.json).
+
+## October 29 — terminal-receipt screen and negative SFT ablation
+
+Audited publisher TRAIN terminal receipts without executing their commands. Kept 401/512 records lacking specified environment-failure cues and held 111 for effect review; zero independent human verdicts. The resulting finite 512-step Qwen SFT run used 401 unique rows, with 111 repeated once. It reduced tool coverage from 275 to 232 and scored **39/128** strict on reused internal DEV, below the original 512-unique-row adapter's **43/128**. Baseline responses were identical. Five rows favored the original adapter and one the screened adapter; source-level AI checks suggest the sole screened gain may be an automatic-scoring false positive. No official TEST, independent-source validation or model promotion. [中文报告](docs/KALI_QWEN_RECEIPT_SCREEN_ZH_2026-10-29.md) · [Aggregates](results/kali-qwen-receipt-screen-2026-10-29/comparison.json).
+
+## October 28 — Qwen3-8B TRAIN512 static audit and review preparation
+
+Rechecked the frozen 512-row publisher-verified official-TRAIN SFT set without running commands or model inference. All targets have the expected envelope; 512 normalized questions are unique, with 503 normalized tool-command groups. Five questions explicitly contain their reference command; these are review cues rather than proven leakage. A private all-row review queue, priority 64, deterministic sample 32, and blank independent 13-case adjudication form are ready. No human signoff, new SFT, official TEST, or independent-source result occurred. [中文数据审计](docs/KALI_QWEN_TRAIN512_DATA_AUDIT_ZH_2026-10-28.md) · [Aggregate](results/kali-qwen-train512-audit-2026-10-28/summary.json) · [Protocol draft](docs/KALI_QWEN_NEXT_EXPERIMENT_PROTOCOL_DRAFT_ZH_2026-10-28.md).
+
+## October 28 — Qwen3-8B unqueried internal DEV confirmation
+
+Froze 93 previously unqueried KaliBench official-TRAIN internal DEV inputs before generating any outputs. The predeclared primary 87 exclude six normalized tool+gold-command groups shared with earlier DEV and contain no prompt-embedded gold commands. With the same Qwen3-8B base and saved adapter, strict correctness rose **18/87 → 26/87** (9 gained, 1 lost); exact command matching rose **14/87 → 22/87**. Among 22 primary rows whose tools were absent from the 512-row TRAIN set, strict correctness stayed **5/22 → 5/22**. Mechanical case triage found three new 512-token repetitive truncations; independent semantic review is pending. This is a one-seed silver-label internal holdout result, not official TEST, external validation, or ABA. The original formal default remains unchanged. [中文复测与误差审计报告](docs/KALI_QWEN_UNQUERIED_CONFIRMATION_ZH_2026-10-28.md) · [Aggregate results](results/kali-qwen-confirmation-2026-10-28/summary.json) · [Mechanical triage](results/kali-qwen-confirmation-2026-10-28/mechanical-triage.json). Offline check: `python3 scripts/verify-kali-qwen-confirmation-public.py`.
+
+## October 28 — Qwen3-8B publisher-TRAIN SFT cycle completed
+
+Ran a matched, one-RTX3090 NF4 QLoRA baseline → 512-step SFT → internal-DEV evaluation on 512/128 publisher-verified KaliBench TRAIN rows. Strict option-value correctness rose **29/128 → 43/128**; exact command matching rose **25/128 → 36/128**. Paired strict transitions: 17 gained, 3 lost. One DEV prompt embeds its gold command; excluding it gives 28/127 → 42/127 strict. The saved adapter was SHA-256 verified on the PVC and all owned Jobs/Pods/ConfigMaps were cleaned. This is a one-seed **official-TRAIN internal development** result, not official TEST, external validation, an ABA search, or a promotion decision. [中文结果报告](docs/KALI_QWEN_OFFICIAL_SFT_RESULT_ZH_2026-10-28.md) · [Aggregate results](results/kali-qwen-official-executed-pilot-2026-10-28/cycle-summary.json).
+
+## October 28 — publisher-verified KaliBench TRAIN pilot for Qwen3-8B
+
+Replaced the pending-review synthetic rows for this second-base pilot with publisher-verified KaliBench TRAIN records. After the existing scorer-consistency screen, 936 records have the stronger terminal `PASS_EXECUTED` label; a fixed group split selected 512 TRAIN and 128 internal DEV rows with no exact query or canonical-command overlap. Qwen-native encoding passed 512/512 prompt-masking and target/EOS checks; DEV inputs contain no gold. These are publisher-verified **silver** labels, not independent expert gold. **No weights were downloaded, model run, GPU job, optimizer step or official TEST evaluation occurred in this preparation.** [中文报告](docs/KALI_QWEN_OFFICIAL_TRAIN_PILOT_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-qwen-official-executed-pilot-2026-10-28/summary.json).
+
+## October 28 — Qwen3-8B TRAIN encoding and review packet
+
+Prepared Qwen-native, nonthinking TRAIN encodings for all 240 prior synthetic rows: prompt labels masked 240/240, target/EOS labels supervised 240/240, six negative controls rejected. The private encoded rows are explicitly **not approved for training**; an independent 40-group review packet is pending. The pinned model has five published weight shards totaling ~15.26 GiB, but no weights were downloaded, GPU Job submitted, or model call made. [中文准备报告](docs/KALI_QWEN_SECOND_BASE_PREP_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-qwen-second-base-prep-2026-10-28/summary.json). Offline check: `python3 scripts/verify-kali-qwen-second-base-prep-public.py`.
+
+## October 28 — second-base decision and Qwen3-8B preflight
+
+Selected public, Apache-2.0-labelled `Qwen/Qwen3-8B` as a future general-model control alongside the specialized RedSage-K. Tokenizer-only checks passed on all 240 existing TRAIN prompts. Qwen's native prompt does **not** end at the open `<think>` token required by the prior RedSage worker, so swapping model IDs would invalidate that run. A full second-base training cycle is deferred until data review and a separate model-native protocol are complete. No weights, model inference, GPU job, optimizer step or official TEST were used. [中文决策与预检](docs/KALI_SECOND_BASE_DECISION_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-qwen3-8b-second-base-2026-10-28/summary.json). Offline check: `python3 scripts/verify-kali-second-base-preflight-public.py`.
+
+## October 28 — external utility candidate intake
+
+Pinned an Apache-2.0-labelled public Linux command dataset and screened 8,669 pairs into 23 **review-pending** generic utility candidates. Fifteen have automatic risk flags; two may run indefinitely. None is training gold or a blind test. No dataset command, model, GPU, ABA generation or official TEST was run. The original base remains the formal default. [中文审核报告](docs/KALI_EXTERNAL_UTILITY_INTAKE_ZH_2026-10-28.md) · [Aggregate receipt](results/kali-external-utility-intake-2026-10-28/summary.json). Verify with `python3 scripts/verify-kali-external-utility-intake-public.py`.
+
+## October 26 — 240-row matched-BF16 SFT
+
+Completed one frozen 480-update SFT candidate and 224 before/after generations. Verified authored DEV: **29/72 → 62/72**; historical retention strict: **12/24 → 15/24**. Conservative DEV gain lower bound **+13** after accounting for unreviewed baseline syntax. Predeclared development gate: **PASS**. **Original base retained; no official/independent-source gain, protected-confirmation query or new ABA search claimed.**
+
+[中文完整报告与逐组结果](docs/KALI_BF16_240_SFT_ZH_2026-10-26.md) · [Aggregate evidence](results/kali-bf16-240-sft-2026-10-26/summary.json). Offline check: `python3 scripts/verify-kali-bf16-240-result.py`.
+
+![BF16 SFT before/after: authored DEV and historical retention](results/kali-bf16-240-sft-2026-10-26/before-after.png)
+
+## October 26 — matched training / inference precision
+
+Completed a frozen TRAIN-only 2x2 precision study: 256 real optimizer updates and 48 generations, same initial LoRA state, same eight BPE-target training rows. Both matched-diagonal gate: **PASS**. All cross-precision outputs are reported. **Keep the original base; no held-out gain or new 240-row SFT/ABA claim.** Batch4 inference uses fresh same-job baselines; the older failed cross-precision gate is unchanged.
+
+[中文完整对照](docs/KALI_MATCHED_PRECISION_ZH_2026-10-26.md) · [All six readouts](results/kali-matched-precision-2026-10-26/summary.json). Offline check: `python3 scripts/verify-kali-matched-precision.py`.
+
+![Matched precision TRAIN-only results: both diagonals 8/8, cross-precision 5/8 and 4/8](results/kali-matched-precision-2026-10-26/precision-matrix.png)
+
+## Results figures — October 26, 2026
+
+[中文结果图解与限制](docs/KALI_RESULTS_FIGURES_ZH_2026-10-26.md) · [TRAIN-only diagnostic](results/kali-results-figures-2026-10-26/02-train-segmentation-control.svg) · [Earlier DEV and transfer](results/kali-results-figures-2026-10-26/01-development-and-transfer.svg). These are separate diagnostic studies, not official benchmark scores. The original base remains the default; the full reliability gate has not passed.
+
+![Latest TRAIN-only target segmentation control: local NF4 recovery, BF16 limitations remain](results/kali-results-figures-2026-10-26/02-train-segmentation-control.png)
+
+## October 26 later results — target representation and precision limits
+
+Completed **512 additional real 8B optimizer updates and 96 generations** across two matched TRAIN-only controls. Critical-prefix loss weighting did not fix premature EOS. In a separate same-card target-representation control, keeping **all decoded training text and inference inputs unchanged**, an explicit experimental BPE target segmentation increased NF4 TRAIN correctness from **0/8 to 8/8**, with all eight closing/output tags complete.
+
+The same adapter evaluated in BF16 achieved **5/8**, with **one truncated response** and incomplete tag closure. **The full predeclared gate still failed. Keep the original base; no new 240-row SFT, ABA search, official TEST, sealed validation, confirmation or external teacher calls.** These are selected training questions, not held-out performance or a universal root-cause proof. The target segmentation is noncanonical and is not yet an adopted deployment recipe.
+
+All jobs, Pods, ConfigMaps and Secrets were cleaned. CPU row inspection excluded simple all-zero or exact-EOS-duplicate closing-token rows; it does not prove corruption. Eight grounded short-rationale targets were prepared and schema-checked but remain untrained. Recorded GPU utilization includes loading overhead and the inefficient 0.5-CPU RTX3090 run; the next matched-precision design proposes more CPU and batched inference and has not executed.
+
+[中文完整结果与限制](docs/KALI_PREFIX_CONTROL_RESULT_ZH_2026-10-26.md) · [Stage status](results/kali-prefix-control-2026-10-26/stage-status.json) · [Next design, not executed](results/kali-prefix-control-2026-10-26/next-matched-precision-design.json). Offline check: `python3 scripts/verify-kali-prefix-control-result.py`.
+
+## October 26 follow-up — fixed-weight prefix diagnosis
+
+Completed **56 additional TRAIN-only generations and zero new optimizer steps** on one L4. Cache on/off and two adapter loading paths produce identical token sequences on all eight rows. At the required closing-think position, the NF4 adapter assigns only **0.72%** mean probability to the target token versus **46.85%** to EOS. This localizes the premature-ending decision; it does not establish every upstream cause.
+
+Prepared a matched uniform-versus-critical-prefix-weight SFT control and checked its causal loss/mask mathematics on CPU. **Repair training has not executed:** ordinary GPU and approved single-A100 attempts reached bounded scheduling waits without allocation, then cleaned all objects. No larger 240-row SFT or new ABA search has started; keep the original base. Official, sealed, confirmation and external teacher calls remain zero.
+
+[中文诊断与修复状态](docs/KALI_PREFIX_FOLLOWUP_ZH_2026-10-26.md) · [Recorded status](results/kali-prefix-followup-2026-10-26/stage-status.json). Offline evidence check: `python3 scripts/verify-kali-prefix-followup.py`. This is a TRAIN diagnostic, not an official benchmark score.
+
+## October 26, 2026 — training recall, microfit controls and verified SFT data
+
+Completed a real TRAIN-recall diagnostic (168 generations) and two matched eight-example 8B microfit arms (256 optimizer updates, 48 generations). Existing-adapter NF4 corrections improve only **4/22→5/22**. The higher-rate microfit reduces TRAIN NLL by **92%**, yet emits newline then EOS for all eight NF4 tasks. **Both predeclared training-sanity gates failed. Keep the original base; the new 240-row SFT and new ABA search have not started.** Fixed-weight cache/prefix diagnosis is prepared; see its recorded status rather than assuming a root cause.
+
+Prepared **240 TRAIN / 72 DEV / 72 protected confirmation** examples across **40 / 12 / 12 intent groups**. All **384 gold commands and 448 negative checks** passed Linux execution. Six variants per intent are correlated; independent human review remains absent. Released authored TRAIN/DEV, eight byte-matched audited input fixtures, a strict configuration-driven optimizer, native input encoder, local-weight training CLI and aggregate evidence. Official TEST, old sealed validation, new confirmation and external teacher calls remain zero.
+
+[中文执行报告](docs/KALI_SFT_PROGRESS_ZH_2026-10-26.md) · [English report](docs/KALI_SFT_PROGRESS_2026-10-26.md) · [Data and limitations](data/benchkit/kali-verified-sft-v1/README.md) · [Stage status](results/kali-sft-progress-2026-10-26/stage-status.json). Offline check: `python3 scripts/verify-kali-sft-progress.py`. These public checks do not independently reproduce private model outputs or prove generalization.
+
+## October 25, 2026 — scoring repair and matched learning diagnosis
+
+Fixed two reviewed OpenSSL option-order false negatives: the prior12-row developer result is **4→4** under contract-v2, with historical scores/gates preserved. Old training NLL decreases in NF4 but not BF16; this alone does not explain DEV outcomes.
+
+Two fresh matched42-step arms completed on one NVIDIA L4. BF16/native DEV: original **4/12**, style control **5/12**, corrected-data mix **4/12**. Retention strict: **12/24 → 13/24 / 13/24** respectively. These small exposed diagnostics do not establish generalization; **keep the original base**. No sealed-validation/official TEST or external teacher calls. Owned GPU jobs cleaned.
+
+Released a reviewed command contract, explicit future DEV entrypoint, opt-in native completion encoder,43 generic regression checks and aggregate causal evidence. This is an operator-fixed diagnostic, not a new ABA search. [中文原因分析](docs/KALI_LEARNING_DIAGNOSIS_ZH_2026-10-25.md) · [English report](docs/KALI_LEARNING_DIAGNOSIS_2026-10-25.md) · [Aggregates](results/kali-learning-diagnosis-2026-10-25/summary.json). Check: `python3 scripts/verify-kali-learning-publication.py`.
+
+## October 25, 2026 — native inference and 42-step ABA pilot
+
+Completed one actual 42-step LoRA candidate with BF16/native-prompt before/after evaluation. **Retention strict: 13/24 → 13/24.** The new developer exact-argv count changed **4/12 → 2/12**; offline checks verified that both apparent losses are equivalent OpenSSL option ordering. Each model has **4/12 fixture-verified passes, with 9 commands executed and 3 not executed**. These checks show no improvement. **Keep the original base; sealed validation and official TEST queries remain zero.**
+
+Separately, changing the untrained base's inference protocol on the same exposed 24 tasks gives 8/24 under the historical NF4/final-only setup vs 13/24 with model-card-aligned BF16/native usage. **That difference is not a training gain or a single-factor causal result.** All results are small self-authored development diagnostics, not official KaliBench scores.
+
+Independent checks rejected an initial Finalizer delivery of task inputs. A cached native controller replay produced the required four baseline model artifacts, without additional optimizer steps or GPU jobs. Native gates, adapter reload, exact delivery bytes and final cleanup were independently checked. Training data/scaffold were operator-provided; no autonomous data-search claim. Historical scientific records below remain unchanged.
+
+[Full report](docs/KALI_NATIVE_FAMILY_PILOT_2026-10-25.md) · [中文报告](docs/KALI_NATIVE_FAMILY_PILOT_ZH_2026-10-25.md) · [Aggregates](results/kali-native-family-2026-10-25/summary.json) · [Native supervision helper](scripts/kali_native_completion.py). Offline consistency check: `python3 scripts/verify-kali-native-publication.py` (does not rerun private model inference).
+
+## October25,2026 — second-seed replication and transfer limits
+
+Seed43 repeated the retention recovery **36/72→54/72**, with domain strict **3/36→4/36** (seed42:3/36→5/36). Both compact/newline arms completed128 steps. A newly frozen24row transfer panel showed **8/24strict and10/24verified execution for both repaired models, equal to the base**; certificate, filename/quoting and offline-capture constraints remain. **Keep the original base as formal default; do not claim broad improvement.**
+
+Completed450 generations,256 new optimizer steps,24gold prevalidation executions and144 postvalidation records (133executed,11not executed). The panel was authored after prior errors were known, not independent expert/official validation. No tuning or extra candidates followed. Resources were cleaned. Historical results below remain unchanged.
+
+[Replication report](docs/KALI_SEED43_REPLICATION_2026-10-25.md) · [中文说明](docs/KALI_SEED43_REPLICATION_ZH_2026-10-25.md) · [Aggregates](results/kali-seed43-replication-2026-10-25/summary.json) · [Opt-in target formatter](scripts/kali_target_envelope.py). Offline check: `python3 scripts/verify-kali-seed43-publication.py`.
+
+## October 25, 2026 — causal investigation and recovery candidate
+
+Changing only the TRAIN target envelope to use internal newlines recovered retention **36/72 → 54/72** and domain strict **3/36 → 5/36**, compared with V3. All18 original new strict regressions recovered;579 fresh CPU checks supported the execution conclusions. A separate fixed-weight, bidirectional output-prefix intervention (18 generations, zero training;108 fresh Linux checks) reproduced and removed the same filename error in three correlated counting variants.
+
+These are one-seed exposed-development diagnostics, **not official KaliBench scores or independent validation**. Target token count/loss weighting also changed. The prefix mechanism was tested on one counting family, not all tasks. The candidate passes the development gate; keep the original base as the formal default pending independent replication. Later cause studies are operator-fixed experiments, not new native ABA search cycles. Historical results below remain unchanged.
+
+[Full findings](docs/KALI_CAUSAL_FINDINGS_2026-10-25.md) · [中文说明](docs/KALI_CAUSAL_FINDINGS_ZH_2026-10-25.md) · [Aggregate evidence](results/kali-causal-findings-2026-10-25/summary.json). Offline check: `python3 scripts/verify-kali-causal-findings.py`.
+
+## October 24, 2026 — V3 tool-aware replay completed
+
+Replaced the previous 32 unrelated utility replay rows with 32 Linux-validated tool-aware rows, keeping the 96 domain rows and numerical recipe fixed. Completed a fresh matched baseline, native ABA orchestration, 128 optimizer steps and 108 post-training development predictions on one RTX A6000. **Domain strict: 2/36 → 3/36; retention: 52/72 → 36/72. Keep the original base.** These strict counts match the previous V1 adapter; all 72 extracted retention commands are identical across the two adapters, despite verified new training data, changed losses and a different adapter hash.
+
+This is an exposed source-silver development experiment, not an official KaliBench result or independent holdout validation. Operator-authored data; no autonomous ABA data-generation claim. A metric-name mismatch caused one zero-update control failure before a fresh successful native run; guards and scoring were retained. Official TEST and old confirmation queries: zero. Owned GPU jobs were cleaned and the CPU VM stopped. Inference GPU utilization was low and needs optimization before repeated runs.
+
+[V3 report](docs/KALI_REPLAY_V3_RESULT_2026-10-24.md) · [Public evidence and offline verification](docs/KALI_REPLAY_V3_PUBLICATION_2026-10-24.md) · [V3 comparison](results/kali-replay-v3-2026-10-24/comparison.json).
+
+The V1 scientific records below remain historical. Neither completed experiment should be relaunched automatically.
+
+## October 24, 2026 — native ABA post-training completed
+
+Completed real128-step LoRA post-training of `RISys-Lab/RedSage-K-SFT-GRPO` (~8.19B) on one RTX A6000, matched108-row before/after development evaluation, and native ABA delivery verification. Domain strict correctness **2/36 → 3/36**; utility retention **52/72 → 36/72**. **Keep the original base; do not promote this adapter.** This is a fixed-recipe engineering result on exposed source-silver development data, not an official benchmark score or autonomous data-generation result. Official tests and new confirmation data remain untouched. All owned GPU jobs were removed and the CPU VM stopped; private adapter data retained.
+
+[Full report](docs/KALIBENCH_CUDA_POSTTRAIN_REPORT_2026-10-24.md) · [Published evidence and verification](docs/KALI_CUDA_PUBLICATION_2026-10-24.md) · [Aggregate comparison](results/kali-cuda-2026-10-24/comparison.json).
+
+This completion supersedes historical pending/running statements below. Do not relaunch the completed experiment. Published files contain general source, aggregate results and numerical receipt excerpts. Internal operational scripts, cluster metadata, weights, credentials, raw predictions and protected evaluation data are excluded.
+
+## Historical project snapshot — October 23, 2026
+
+## October 23: CUDA/ABA preflight ready; baseline waiting for hardware
+
+Prepared a separate frozen CUDA study and native ABA task for RedSage8B. The
+native ABA configuration and a loopback connection through its pinned bwrap
+emitter passed;48 workspace tests pass. A CPU-only dependency archive is ready,
+but its GPU staging speed benefit is not measured.
+
+The CUDA baseline was submitted but never allocated: ordinary L4 and A10 attempts
+stayed Pending because matching GPU/memory resources were unavailable. Global
+ordinary Job admission has recovered to200pods. **No new CUDA scores, optimizer
+updates, model API calls or native ABA domain run were produced this round.**
+Jobs/Pods/ConfigMaps were cleaned up, CPU VM stopped, model cache retained.
+
+Next: collect a verified matched E0 baseline, then run one fixed-recipe native
+ABA candidate and independently check journal/artifact provenance. This first
+integration does not enable adaptive data generation/search. New confirmation
+and official tests remain untouched. Read the [exact state and commands](docs/KALI_CUDA_ABA_PREPARATION_2026-10-23.md).
+
+This section preserves the earlier preparation state; later results appear above.
+
+## October 23: expanded data and frozen replay ablation completed
+
+Expanded the domain pool to **156 source-silver rows / 80 correlated families**, added **32 independent-source general utility replay rows**, and verified all32 replay fixtures plus four selected semantic checks on Linux. Mandatory-option coverage gaps fell from34/36to12/36 in the exposed domain development set.
+
+Two predeclared128-step LoRA arms started from the original RedSage-K8B base. Both used the same96-row domain core; control repeated32domain records, treatment replaced those32presentations with replay. Equal steps do not mean equal tokens or domain exposure.
+
+| Matched development | Original base | Domain control | Domain + replay |
+| --- | ---: | ---: | ---: |
+| Domain Exact / option diagnostic |6/36|5/36|5/36|
+| CLI retention Exact / option diagnostic |66/72|54/72|54/72|
+| Retention native Total |97.22|89.63|80.37|
+
+**Keep the original base.** Neither candidate passed the frozen rule; this replay did not solve the regression. These are exposed development results from manual local SFT. Actual ABA, fresh independent validation and official benchmark evaluation remain pending.
+
+Read the [full ablation report](docs/KALI_REPLAY_ABLATION_REPORT_2026-10-23.md) and [paired evidence](docs/verification/kali-replay-v2/comparison.json). Nautilus now also passed a **real 20-step 8B NF4 LoRA runtime check on one L4**, including genuine parameter changes and adapter save/reload with zero logit difference. The finished job was cleaned up; this is training/persistence validation on two TRAIN records, not benchmark evaluation or actual ABA. Startup staging still needs optimization before repeated runs. The [resource report](docs/KALI_RESOURCE_VALIDATION_2026-10-23.md) records the precise stage reached.
+
+## October 23: fixed document-data SFT — negative result
+
+Completed a single frozen 108-step LoRA experiment on RedSage-K-SFT-GRPO (8B, local MLX affine4, M2 Pro/16GiB), using 108 source-silver rows across 55 correlated intent families. Matched inference used the SFT-aligned prefix without tool help.
+
+| Authored development set | Original base | New adapter |
+| --- | ---: | ---: |
+| Domain Exact / option diagnostic | 6/36 | 5/36 |
+| General CLI retention Exact / option diagnostic | 66/72 | 54/72 |
+
+**Keep the original base; do not promote the adapter.** Domain Total rose from 73.41 to 76.45, but the frozen acceptance rule failed. The 12 retention regressions belong to two correlated tshark families. These are development engineering results, not official KaliBench scores or actual ABA results.
+
+A preceding prefix control brought the earlier base and 20-step adapter to the same 66/72, so the older 61→62 comparison below is historical and does not establish training gains. Domain inference controls were native 4/36, aligned 6/36, and aligned with tool help 25/36; tool-help gains are inference assistance, not learning.
+
+Read the [full report](docs/KALI_DOC_SFT_REPORT_2026-10-23.md), [frozen comparison](docs/verification/kali-doc-sft-v1-2026-10-22/comparison.json), and [public reproduction instructions](docs/REPRODUCTION.md). Released: training data, 36 search-dev rows, scripts, predictions and receipts. New confirmation bodies and all tensors remain excluded. Actual ABA/CUDA integration and independent semantic validation are pending.
+
+**October 21 preparation snapshot (historical):** the current preparation covers **AthenaBench and KaliBench**, sharing training and evaluation interfaces before an eventual return to CyberGym. **At that point, formal BF16 baselines, actual 8B domain post-training, and ABA domain experiments had not run.** GPU job admission remains blocked; no cluster GPU jobs were launched during this preparation.
+
+## October 22: KaliBench real 8B pilot
+
+Minhao's current track is **KaliBench**; AthenaBench is handled by the collaborator. Using hash-verified official RedSage-K-SFT-GRPO weights, locally quantized to MLX affine4/group64, the following cycle actually ran on an Apple M2 Pro with 16GiB memory:
+
+| Same 72 external dev examples | E0 unchanged base | E1 continued SFT, 20 steps |
+| --- | ---: | ---: |
+| Native Exact / option-value diagnostic | 61/72 (84.72%) | 62/72 (86.11%) |
+| Native Total Score | 93.75 | 93.52 |
+| Runtime failures / truncations | 0 / 0 | 0 / 0 |
+
+**This is not reliable improvement:** five cases improved and four regressed; the gains mainly canonicalize a `head` pipeline while the certificate task drops `openssl` in four cases. Total Score decreased. The 72 examples are correlated variants of 12 authored families. Keep the original base; the tiny adapter is not promoted as the final model.
+
+The model completed **20 real supervised optimizer updates**, changing 16 LoRA tensors (425,984 trainable parameters, last four layers q/v); persisted-adapter reload had zero logit difference. Training peak Metal memory was 5.72GB. These are actual pretrained 8B updates, distinct from earlier random tiny checks. No official tests or the 36 reserved confirmation examples were queried. This is a local quantized engineering pilot, **not official BF16 evaluation and not ABA**.
+
+Start with [Kali pilot results and reproduction](docs/KALI_MLX_PILOT.md), [paired results](results/kali-mlx/kali-mlx-pilot-comparison-2026-10-22.json), and [code](scripts/run-kali-mlx-pilot.py). Raw authored-dev predictions and text receipts are included; model and adapter tensors, account settings and private logs are excluded.
+
+## October 21 preparation evidence
+
+| Component | Actual result | Limits |
+| --- | --- | --- |
+| Athena external RCM data | [161 train / 22 dev / 9 reserved confirmation](data/benchkit/athena-v3/) | AI-reviewed source-silver, eight training classes; not official Athena data or expert gold |
+| Additional candidate review | 177 candidates dispositioned: 133 accepted, 9 ambiguous holds, 35 structural/source holds | 142 complete descriptions reviewed; accepted rows undergo separate grouping/deduplication before splitting |
+| Kali training audit | 3,504 original train rows; 128 held, 3,376 screened | Original third-party train records are not redistributed; screening is not semantic gold validation |
+| Kali external dev | [72 search / 36 confirmation](data/benchkit/kali-external-dev/) | 18 authored template families, nine basic tools; not representative full-task evaluation |
+| Real local inference | Cisco official 8B Q4: native prefix 19/22 source-label matches; without opening `<think>` 20/22 | Same exposed RCM dev, no new training; not an official benchmark score or evidence of general improvement |
+| Training plumbing | Random tiny Llama and Qwen models: 2 optimizer steps, changed tensors, adapter save/reload delta 0 | Not pretrained 8B domain training |
+| Data/tokenizer/package checks | 192 Athena and 3,484 Kali rows tokenized; 23 targeted tests passed in the original workspace | Full original test suite depends on local audit inputs; candidate GPU environment remains unvalidated |
+| ABA domain setup | Draft protocols and worker interfaces prepared | Controlled GPU submission/private evaluator bridge has not run end to end |
+
+**Scoring caveat:** the pinned Kali scorer can give full Exact/Total credit to a prediction with an incorrect option value. We retain native metrics and add a separate diagnostic; it is not an official replacement or complete shell semantic checker. The audit does not establish the impact on published model rankings. Athena VSP also needs explicit valid-output coverage reporting.
+
+Start with the [current experiment preparation](docs/ATHENA_KALI_PROGRESS.md), [reproduction instructions](docs/REPRODUCTION.md), and [status](docs/STATUS.md). See [local prefix comparison](results/athena-prefix-comparison-2026-10-21.json) and [scoring evidence](results/benchkit-scorer-audit-summary.json).
+
+## Earlier provisional model pairs (historical)
+
+- Athena: [fdtn-ai/Foundation-Sec-8B-Reasoning](https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Reasoning), revision `63c930c82d7646226d33502bec5870019738400e`.
+- Kali: [RISys-Lab/RedSage-K-SFT-GRPO](https://huggingface.co/RISys-Lab/RedSage-K-SFT-GRPO), revision `843e2e3096e7de68f5c35eb16238f4909f21695a`.
+
+Both are already specialized models; their additional training headroom is unproven. RedSage trained on the official 3,504 training examples, so a new split of those records is not unseen validation. Its model card did not declare a license field at the pinned revision; no unrestricted redistribution permission is inferred. No model tensors or derived adapters are released here.
+
+The [protocols](configs/benchkit/) are explicitly drafts. Plan: matched E0 pretrained baseline → E1 fixed SFT → E2 bounded ABA search, select using external dev only, freeze the protocol, then separately evaluate official tests. The official final-evaluation switch remains disabled. Athena preparation currently covers RCM only, not all six tasks.
+
+## Historical CTI pilot and earlier evidence
+
+The following sections preserve the October 17 pilot and earlier engineering work. Their defaults and next-step suggestions are historical, not the current Athena/Kali protocol.
+
+## Public pilot data
+
+The released [pilot](data/raw/cti-pilot-v1/) contains 63 derived examples from pinned public CVE CNA records. The training file has 47 rows; the development file has 16. Classes: CWE-787, 125, 502, 78, 918, 89, 22 and 79.
+
+- Descriptions and labels come from the pinned CNA source, with individual source URL and SHA256.
+- Semantic decisions and split hashes are in the [manifest](data/manifests/cti-source-pilot-v1.json).
+- Conservative grouping combines earlier reference/text groups with vendor/product identity. It intentionally overmerges some products and may miss hidden aliases.
+- Prior debug records and their conservative linked groups were excluded. Selection did not use model predictions.
+- CNA/NVD agreement is source consistency, not independent validation. The semantic reviewer was an AI assistant, not an independent expert. This is a narrow convenience pilot, not a representative CTI-Bench dataset.
+- The original 1,977-record external intake remains held; this release does not approve that entire pool for training.
+
+[CVE copyright, complete license and notices](data/raw/cti-pilot-v1/NOTICE.md) accompany the derived data. Official CTI test data are not included.
+
+## Model roles
+
+The [pinned candidate metadata](configs/cti-candidates.lock.json) separates a strong public reference, Foundation-Sec-8B-Reasoning, from general models intended for adaptation: Qwen3-8B, Qwen3-14B and Qwen3.8-27B. The GPU runner defaults to Qwen3-14B as an exploratory starting point, not a finalized selection.
+
+Qwen3.8-27B has 27,781,427,952 actual parameters despite its nominal 27B name. Its configuration uses `qwen3_5`; the model runtime requires newer Transformers support than the pinned FAITH grading environment. The two environments exchange JSON results.
+
+The Cisco official Q4 model was hash-verified and run locally on authored examples. A 512-token output budget truncated many responses. Three selected failed cases completed with a 1,024-token budget; that selected follow-up is not an independent test and is not merged into the original cohort. See the [diagnostic summary](docs/verification/cti-local-checks-summary.json). None of these checks reproduces a published benchmark score.
+
+## ABA integration evidence
+
+Pinned ABA commit `c8bd734cafd5a7cd609efb5f561594bde4107d5b`, with the disclosed [one-line compatibility patch](patches/aba-nb-tree-no-request.patch), completed a synthetic bigram task. It performed 8,192 SGD updates, reducing frozen toy development NLL from 4.537171 to 0.768565. Independent reproduction matched weights within 1.8e-15.
+
+The [result summary](results/aba-synthetic-validation.json) and [exact generated trainer](examples/aba-bigram/) are included. This verifies a controller/training/scoring/delivery chain. It does not establish LLM adaptation or cybersecurity performance. ABA has not yet been integrated with the CTI training task.
+
+## Earlier engineering work
+
+CyberGym neutral-input tool checks, VulnLLM-R-7B CPU inference, Feyospace BF16 inference and two synthetic QLoRA steps remain available as historical engineering evidence. Their limitations are documented in [status](docs/STATUS.md) and the earlier reports. They are not current CTI baselines or domain-training results.
+
+## Initial experiment plan (historical)
+
+1. Verify the available GPU, CUDA runtime and disk capacity; choose and pin the actual model/protocol.
+2. Run the unchanged pretrained checkpoint on the fixed external development file.
+3. Run the bounded fixed-data SFT pilot and compare under the same inference settings.
+4. Expand and review external training data; integrate the same task into ABA and compare against fixed-data SFT.
+5. Use official testing only at predefined evaluation points, without feeding test content into tuning or data generation.
+
+## Repository scope
+
+This is a curated research snapshot, not a complete one-command benchmark reproduction. It contains code, selected results, authored integration examples and the explicitly licensed public CVE-derived pilot. It excludes credentials, private correspondence, account/cluster configuration, raw operational logs, other raw dataset pools and model tensors. See [Notices](NOTICE.md).
+
+Upstream: [ABA](https://github.com/aibuildai-inc/aibuildai-llm-posttrain-agent), [CTI-Bench](https://github.com/maveryn/cti-bench), [FAITH](https://github.com/cisco-foundation-ai/faith), [CyberGym](https://github.com/sunblaze-ucb/cybergym).

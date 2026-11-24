@@ -1,4 +1,10 @@
-# Latest CUDA/ABA preparation
+# Reproducing the reported results
+
+For the November 23 teacher study, run `python3 results/teacher-transfer-2026-11-23/verify.py` from the repository root to recount the published outcomes. [Study design, figures and verification scope](../results/teacher-transfer-2026-11-23/RESULT_ZH.md)
+
+The sections below document earlier experiments and their original environments.
+
+# October 23 CUDA/ABA preparation
 
 Read [the current report](KALI_CUDA_ABA_PREPARATION_2026-10-23.md) before execution.
 The frozen protocol and code are included for review. Cluster-account config,
@@ -8,7 +14,7 @@ config only for your own approved resources. No tensor redistribution is implied
 The48tests count is from the original workspace; the public suite is smaller.
 No GPU is required to run public boundary tests after restoring pinned sources.
 
-# Latest V2 score replay — October 23
+# V2 score replay — October 23
 
 Follow the environment/source-restoration commands below, then run:
 
