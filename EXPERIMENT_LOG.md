@@ -6,6 +6,7 @@ The chapters below preserve the original dated entries, figures, amendments and 
 
 | Period in 2026 | Research question and records |
 | --- | --- |
+| Nov 25 | [Offline checkpoint confirmation and blind teacher comparison](results/offline-utility-confirmation-2026-11-25/RESULT_ZH.md). Five models, 37 paired evaluations per model, plus repeated draws on the screened teacher–student gaps. |
 | Nov 19–23 | [Teacher traces and transfer](docs/log/teacher-transfer.md). The student could copy verified teacher demonstrations. On other sources, the advantage varied with the task and how responses were scored. |
 | Nov 16–18 | [Student baselines and teacher supervision](docs/log/teacher-baselines.md). Paired answer-only and reasoning experiments established what the student could already solve, which teacher examples qualified, and how often the trained models retained earlier skills. |
 | Nov 12–15 | [ABA candidates versus fixed training](docs/log/aba-comparison.md). Fixed SFT and ABA candidates were evaluated against frozen retention criteria. Confirmation results and negative findings are recorded alongside the original selection rules. |

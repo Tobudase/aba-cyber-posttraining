@@ -6,6 +6,8 @@ Can post-training help a small open-weight model solve new cybersecurity-related
 
 **Current decision: retain the original Qwen3-8B.** Fixed SFT improved one internal development set. ABA candidates missed the retention criteria, and teacher demonstrations produced mixed transfer. All scores below are internal. The official KaliBench test set remains sealed.
 
+On 24 new offline utility tasks, the base, ABA-selected checkpoint and fixed continuation scored **2/24, 4/24 and 3/24**. Both trained checkpoints lost one previously correct retention item. [Five-model confirmation and blind teacher comparison](results/offline-utility-confirmation-2026-11-25/RESULT_ZH.md)
+
 ## What the experiments found
 
 | Research question | Finding | Read the study |

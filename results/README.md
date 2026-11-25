@@ -23,6 +23,8 @@
 
 </details>
 
+[November 25 paired confirmation](offline-utility-confirmation-2026-11-25/RESULT_ZH.md) compares five checkpoints on 37 questions and reports repeated teacher and student draws.
+
 ## All result collections
 
 Expand a research topic to find its study folders and stand-alone result files. A date identifies the corresponding record.
